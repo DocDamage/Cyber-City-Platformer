@@ -1,0 +1,127 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://scripts/Level.gd" id="1_level"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="2_player"]
+[ext_resource type="Texture2D" path="res://assets/Stages/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png" id="3_sunset"]
+[ext_resource type="Texture2D" path="res://assets/Stages/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png" id="4_silhouette"]
+[ext_resource type="Texture2D" path="res://assets/Stages/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png" id="5_skyline"]
+[ext_resource type="Texture2D" path="res://assets/Stages/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png" id="6_city"]
+[ext_resource type="Texture2D" path="res://assets/Stages/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png" id="7_water"]
+[ext_resource type="TileSet" path="res://scenes/RooftopTileSet.tres" id="8_rooftop"]
+[ext_resource type="PackedScene" path="res://scenes/EnemyBase.tscn" id="9_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="10_hud"]
+[ext_resource type="PackedScene" path="res://scenes/Collectible.tscn" id="11_collectible"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="12_checkpoint"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="13_death_zone"]
+
+[sub_resource type="Gradient" id="Gradient_magenta"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(0.7, 0.15, 1, 0.8, 0.7, 0.15, 1, 0.2, 0.7, 0.15, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_magenta"]
+gradient = SubResource("Gradient_magenta")
+width = 220
+height = 220
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_death_zone"]
+size = Vector2(1800, 120)
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_level")
+layout_variant = 1
+level_id = &"factory_approach_02"
+music_path = "res://assets/Music/Robot Factory/Mega Robot Factory – 1 .mp3"
+
+[node name="Background Skyline" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.24, 0.3)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="Cyberpunk City Sunset" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("3_sunset")
+modulate = Color(0.72, 0.62, 0.95, 1)
+
+[node name="Distant Silhouette" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("4_silhouette")
+
+[node name="Neon Skyline" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("5_skyline")
+
+[node name="Near City" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("6_city")
+
+[node name="Reflections" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("7_water")
+
+[node name="Rooftop Terrain" type="TileMapLayer" parent="."]
+tile_set = ExtResource("8_rooftop")
+
+[node name="Factory Glow" type="PointLight2D" parent="."]
+position = Vector2(860, 250)
+energy = 1.6
+texture = SubResource("GradientTexture_magenta")
+texture_scale = 2.0
+color = Color(0.65, 0.15, 1, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.13, 0.12, 0.23, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(145, 380)
+
+[node name="Factory Guard 01" parent="." instance=ExtResource("9_enemy")]
+position = Vector2(395, 414)
+
+[node name="Factory Guard 02" parent="." instance=ExtResource("9_enemy")]
+position = Vector2(915, 318)
+starting_direction = 1
+
+[node name="Coin 01" parent="." instance=ExtResource("11_collectible")]
+position = Vector2(315, 390)
+pickup_id = &"factory_coin_01"
+
+[node name="Coin 02" parent="." instance=ExtResource("11_collectible")]
+position = Vector2(520, 390)
+pickup_id = &"factory_coin_02"
+
+[node name="Coin 03" parent="." instance=ExtResource("11_collectible")]
+position = Vector2(650, 294)
+pickup_id = &"factory_coin_03"
+
+[node name="Coin 04" parent="." instance=ExtResource("11_collectible")]
+position = Vector2(850, 294)
+pickup_id = &"factory_coin_04"
+
+[node name="Coin 05" parent="." instance=ExtResource("11_collectible")]
+position = Vector2(1080, 198)
+pickup_id = &"factory_coin_05"
+
+[node name="Factory Terminal" parent="." instance=ExtResource("12_checkpoint")]
+position = Vector2(720, 318)
+checkpoint_id = &"factory_terminal"
+
+[node name="Death Zone" type="Area2D" parent="."]
+position = Vector2(704, 625)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("13_death_zone")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Zone"]
+shape = SubResource("RectangleShape_death_zone")
+
+[node name="HUD" parent="." instance=ExtResource("10_hud")]

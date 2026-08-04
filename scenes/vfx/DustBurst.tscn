@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/VFXBurst.gd" id="1_vfx"]
+
+[sub_resource type="Gradient" id="Gradient_dust"]
+offsets = PackedFloat32Array(0, 0.3, 1)
+colors = PackedColorArray(0.65, 0.95, 1, 0.75, 0.28, 0.65, 0.75, 0.5, 0.08, 0.2, 0.25, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture_dust"]
+gradient = SubResource("Gradient_dust")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dust"]
+direction = Vector3(0, -1, 0)
+spread = 68.0
+gravity = Vector3(0, 115, 0)
+initial_velocity_min = 35.0
+initial_velocity_max = 95.0
+damping_min = 20.0
+damping_max = 55.0
+scale_min = 1.8
+scale_max = 4.5
+color_ramp = SubResource("GradientTexture_dust")
+
+[sub_resource type="Gradient" id="Gradient_dust_texture"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(0.8, 1, 1, 0, 0.8, 1, 1, 0.8, 0.8, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_dust_texture"]
+gradient = SubResource("Gradient_dust_texture")
+width = 12
+height = 12
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="DustBurst" type="GPUParticles2D"]
+emitting = false
+amount = 11
+lifetime = 0.42
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_dust")
+texture = SubResource("GradientTexture_dust_texture")
+visibility_rect = Rect2(-80, -80, 160, 160)
+script = ExtResource("1_vfx")

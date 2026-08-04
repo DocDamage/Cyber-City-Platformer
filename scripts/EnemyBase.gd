@@ -9,6 +9,7 @@ const FRAME_SIZE := 60
 const IDLE_ROW := 14
 const RUN_ROW := 15
 const DEATH_ROW := 19
+const SMOKE_VFX := preload("res://scenes/vfx/SmokeBurst.tscn")
 
 @export var patrol_speed := 70.0
 @export var max_health := 3
@@ -21,7 +22,7 @@ var is_dead := false
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
-@onready var hurtbox: Area2D = $Hurtbox
+@onready var hurtbox: Hurtbox = $Hurtbox
 @onready var floor_check: RayCast2D = $FloorCheck
 @onready var wall_check: RayCast2D = $WallCheck
 
@@ -82,13 +83,29 @@ func _flash_damage() -> void:
 func _die() -> void:
 	is_dead = true
 	died.emit()
+	_spawn_explosion_vfx()
+	var sound_manager := get_node_or_null("/root/SoundManager")
+	if sound_manager != null:
+		sound_manager.call(&"play_sfx", &"explosion", global_position, -2.0)
+	var feedback := get_node_or_null("/root/CombatFeedback")
+	if feedback != null:
+		feedback.call(&"camera_shake", 8.0, 0.22)
 	velocity = Vector2.ZERO
 	set_physics_process(false)
 	body_collision.set_deferred("disabled", true)
-	hurtbox.set_deferred("monitorable", false)
+	hurtbox.set_invincible(true)
 	sprite.play(&"death")
 	await sprite.animation_finished
 	queue_free()
+
+
+func _spawn_explosion_vfx() -> void:
+	var smoke := SMOKE_VFX.instantiate()
+	smoke.global_position = global_position + Vector2(0.0, -22.0)
+	var parent := get_tree().current_scene
+	if parent == null:
+		parent = get_parent()
+	parent.add_child(smoke)
 
 
 func _build_sprite_frames() -> void:
