@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_player"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape_player"]
+radius = 13.0
+height = 54.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_melee"]
+size = Vector2(36, 40)
+
+[sub_resource type="Gradient" id="Gradient_player_light"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(0, 0.952941, 1, 0.65, 0, 0.952941, 1, 0.2, 0, 0.952941, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_player_light"]
+gradient = SubResource("Gradient_player_light")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 1
+floor_snap_length = 6.0
+floor_max_angle = 0.872665
+script = ExtResource("1_player")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_player")
+centered = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape_player")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+target_position = Vector2(10, 0)
+collision_mask = 1
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(28, -14)
+
+[node name="MeleeHitbox" type="Area2D" parent="."]
+position = Vector2(26, -10)
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeHitbox"]
+shape = SubResource("RectangleShape_melee")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -10)
+energy = 0.65
+texture = SubResource("GradientTexture_player_light")
+texture_scale = 1.2
+color = Color(0, 0.952941, 1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, -130)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+limit_left = 0
+limit_top = 0
+limit_right = 1408
+limit_bottom = 540

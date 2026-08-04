@@ -1,0 +1,53 @@
+extends SceneTree
+
+const LEVEL_SCENE := preload("res://scenes/Level.tscn")
+const ENEMY_SCENE := preload("res://scenes/EnemyBase.tscn")
+
+
+func _initialize() -> void:
+	_run.call_deferred()
+
+
+func _run() -> void:
+	var level := LEVEL_SCENE.instantiate()
+	root.add_child(level)
+
+	for frame in range(20):
+		await physics_frame
+
+	var player: CharacterBody2D = level.get_node("Player")
+	var patrol_enemy: CharacterBody2D = level.get_node("Cyber Guard")
+	assert(player.is_on_floor(), "Player did not settle on the rooftop TileMap collision.")
+	assert(patrol_enemy.is_on_floor(), "Enemy did not settle on the rooftop TileMap collision.")
+
+	var melee_target := ENEMY_SCENE.instantiate()
+	level.add_child(melee_target)
+	melee_target.global_position = Vector2(player.global_position.x + 40.0, 320.0)
+	await physics_frame
+	player.perform_melee_attack()
+	assert(melee_target.health == melee_target.max_health - 1, "Melee hitbox did not damage the enemy hurtbox.")
+	melee_target.queue_free()
+
+	player.shoot_projectile()
+	player.shoot_projectile()
+	player.shoot_projectile()
+	for frame in range(60):
+		await physics_frame
+
+	assert(not is_instance_valid(patrol_enemy), "Bullets did not finish the enemy death sequence.")
+
+	var edge_patrol := ENEMY_SCENE.instantiate()
+	level.add_child(edge_patrol)
+	edge_patrol.global_position = Vector2(384.0, 318.0)
+	var wall_patrol := ENEMY_SCENE.instantiate()
+	wall_patrol.starting_direction = 1
+	level.add_child(wall_patrol)
+	wall_patrol.global_position = Vector2(850.0, 446.0)
+	for frame in range(180):
+		await physics_frame
+
+	assert(edge_patrol.is_on_floor(), "Edge patrol fell off its rooftop.")
+	assert(edge_patrol.direction == 1, "Edge floor check did not reverse patrol direction.")
+	assert(wall_patrol.direction == -1, "Wall check did not reverse patrol direction.")
+	print("GOAL_SMOKE_TEST_OK player=", player.global_position)
+	quit()
