@@ -17,7 +17,6 @@ const DASH_DURATION := 0.16
 const DASH_COST := 30.0
 const SHOT_COST := 12.0
 const ENERGY_REGENERATION := 22.0
-const PLAYER_SHEET := preload("res://assets/Characters/Heroes/Female Fighter/Player 96X96 (1).png")
 const BULLET_SCENE := preload("res://scenes/Bullet.tscn")
 const DUST_VFX := preload("res://scenes/vfx/DustBurst.tscn")
 
@@ -37,6 +36,7 @@ var is_dead := false
 var dash_time_remaining := 0.0
 var _level_scene_path := ""
 var _default_spawn := Vector2.ZERO
+var _player_sheet: Texture2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hurtbox: Hurtbox = $Hurtbox
@@ -58,6 +58,7 @@ func _ready() -> void:
 	else:
 		health = max_health
 		energy = max_energy
+	_player_sheet = _get_character_texture("Player", "Player 96X96 (1)")
 	_build_sprite_frames()
 	sprite.play("Idle")
 	game_camera.set_facing_direction(facing_direction)
@@ -322,6 +323,14 @@ func _add_animation(
 	frames.set_animation_loop(animation_name, loops)
 	for column in range(first_column, last_column + 1):
 		var frame := AtlasTexture.new()
-		frame.atlas = PLAYER_SHEET
+		frame.atlas = _player_sheet
 		frame.region = Rect2(column * 96, row * 96, 96, 96)
 		frames.add_frame(animation_name, frame)
+
+
+func _get_character_texture(character_folder: String, texture_name: String) -> Texture2D:
+	var registry := get_node_or_null("/root/AssetRegistry")
+	if registry == null:
+		push_error("Player requires the AssetRegistry autoload.")
+		return null
+	return registry.call(&"get_character_texture", character_folder, texture_name) as Texture2D

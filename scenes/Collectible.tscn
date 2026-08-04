@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scripts/Collectible.gd" id="1_collectible"]
-[ext_resource type="Texture2D" path="res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin1.png" id="2_coin"]
 
 [sub_resource type="CircleShape2D" id="CircleShape_coin"]
 radius = 17.0
@@ -28,7 +27,6 @@ monitorable = false
 script = ExtResource("1_collectible")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_coin")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape_coin")

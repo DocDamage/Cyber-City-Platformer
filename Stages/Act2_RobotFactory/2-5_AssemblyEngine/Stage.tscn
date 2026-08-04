@@ -1,0 +1,250 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_818rw"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/back.png" id="2_nm3ma"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/middle.png" id="3_hm4c8"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/front.png" id="4_ww87x"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act2_RobotFactory_Palette.tres" id="5_y1jhs"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/minotaur.tscn" id="6_st05x"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="7_81wcc"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/minotaur.tres" id="8_mhgpu"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="9_mn1ur"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="10_h6x2v"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="11_0acvs"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="12_pph5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_ground"]
+size = Vector2(2048, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_platform_a"]
+size = Vector2(260, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_platform_b"]
+size = Vector2(220, 24)
+
+[sub_resource type="Gradient" id="Gradient_prototype_light"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
+gradient = SubResource("Gradient_prototype_light")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_death"]
+size = Vector2(2400, 120)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
+bg_color = Color(0.025, 0.035, 0.09, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.85, 1, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
+bg_color = Color(0.05, 0.15, 0.28, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.9, 1, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="AssemblyEngine" type="Node2D" unique_id=1794579497]
+script = ExtResource("1_818rw")
+campaign_act = 2
+stage_id = &"2-5"
+stage_title = "Assembly Engine"
+design_notes = "Prototype goals: Moving machinery, background gears, Act 2 boss
+Replace blockout pieces as the stage design develops."
+music_path = "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg"
+far_background = ExtResource("2_nm3ma")
+middle_background = ExtResource("3_hm4c8")
+front_background = ExtResource("4_ww87x")
+background_tint = Color(0.92, 0.78, 1, 1)
+
+[node name="Background" type="Node2D" parent="." unique_id=1113573523]
+
+[node name="Far" type="Parallax2D" parent="Background" unique_id=226395520]
+z_index = -30
+scroll_scale = Vector2(0.1, 0.15)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=777119014]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("2_nm3ma")
+
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=684925960]
+z_index = -25
+scroll_scale = Vector2(0.28, 0.35)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=654216067]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("3_hm4c8")
+
+[node name="Front" type="Parallax2D" parent="Background" unique_id=689117210]
+z_index = -20
+scroll_scale = Vector2(0.55, 0.65)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=1232984458]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(5.4545455, 5.4545455)
+texture = ExtResource("4_ww87x")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=2078893514]
+tile_set = ExtResource("5_y1jhs")
+
+[node name="Blockout" type="Node2D" parent="." unique_id=125445294]
+
+[node name="Ground" type="StaticBody2D" parent="Blockout" unique_id=739234895]
+position = Vector2(960, 500)
+
+[node name="Visual" type="Polygon2D" parent="Blockout/Ground" unique_id=2132952655]
+color = Color(0.06, 0.16, 0.24, 1)
+polygon = PackedVector2Array(-1024, -32, 1024, -32, 1024, 32, -1024, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/Ground" unique_id=1660193344]
+shape = SubResource("RectangleShape_ground")
+
+[node name="PlatformA" type="StaticBody2D" parent="Blockout" unique_id=1287210251]
+position = Vector2(620, 390)
+
+[node name="Visual" type="Polygon2D" parent="Blockout/PlatformA" unique_id=1501924006]
+color = Color(0.08, 0.34, 0.42, 1)
+polygon = PackedVector2Array(-130, -12, 130, -12, 130, 12, -130, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/PlatformA" unique_id=346935034]
+shape = SubResource("RectangleShape_platform_a")
+
+[node name="PlatformB" type="StaticBody2D" parent="Blockout" unique_id=2083980164]
+position = Vector2(1040, 300)
+
+[node name="Visual" type="Polygon2D" parent="Blockout/PlatformB" unique_id=1154010567]
+color = Color(0.16, 0.22, 0.46, 1)
+polygon = PackedVector2Array(-110, -12, 110, -12, 110, 12, -110, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/PlatformB" unique_id=1814159454]
+shape = SubResource("RectangleShape_platform_b")
+
+[node name="Props" type="Node2D" parent="." unique_id=1682970220]
+
+[node name="Hazards" type="Node2D" parent="." unique_id=2016115520]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=94332962]
+
+[node name="Minotaur" type="CharacterBody2D" parent="Enemies" unique_id=286476364 instance=ExtResource("6_st05x")]
+position = Vector2(560, 452)
+collision_layer = 0
+floor_snap_length = 4.0
+script = ExtResource("7_81wcc")
+enemy_id = &"minotaur"
+animation_library = ExtResource("8_mhgpu")
+starting_direction = 1
+movement_animation = &"walk"
+death_animation = &"death"
+sprite_visual_scale = Vector2(0.875, 0.875)
+
+[node name="VFX" type="Node2D" parent="." unique_id=1695603504]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=412368285]
+
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=622463011]
+position = Vector2(720, 310)
+color = Color(0.1, 0.65, 1, 1)
+energy = 0.8
+texture = SubResource("GradientTexture_prototype_light")
+texture_scale = 2.0
+
+[node name="Markers" type="Node2D" parent="." unique_id=1763304666]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=1653042161]
+position = Vector2(120, 438)
+gizmo_extents = 24.0
+
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=171278033]
+
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=1650662090]
+position = Vector2(1760, 438)
+gizmo_extents = 28.0
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=288041155 instance=ExtResource("9_mn1ur")]
+position = Vector2(120, 438)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("10_h6x2v")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=1814805376]
+position = Vector2(960, 650)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_0acvs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=579306531]
+shape = SubResource("RectangleShape_death")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1841969072 instance=ExtResource("12_pph5q")]
+layer = 20
+
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=302014668]
+layer = 90
+
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=215288970]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBox_guide")
+
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=1671631069]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1650775148]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=691663242]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "2-5  |  Assembly Engine"
+
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1918801240]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Prototype goals: Moving machinery, background gears, Act 2 boss
+Replace blockout pieces as the stage design develops."
+autowrap_mode = 2
+
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1996483554]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBox_tag")
+text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
+horizontal_alignment = 1

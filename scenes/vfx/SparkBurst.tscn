@@ -1,6 +1,57 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/VFXBurst.gd" id="1_vfx"]
+[ext_resource type="Texture2D" path="res://VFX/SourceArt/Pack 6/PNG sheet/Effect (1)-Sheet.png" id="2_impact"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impact_0"]
+atlas = ExtResource("2_impact")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impact_1"]
+atlas = ExtResource("2_impact")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impact_2"]
+atlas = ExtResource("2_impact")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impact_3"]
+atlas = ExtResource("2_impact")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impact_4"]
+atlas = ExtResource("2_impact")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_impact_5"]
+atlas = ExtResource("2_impact")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_impact"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impact_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impact_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impact_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impact_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impact_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_impact_5")
+}],
+"loop": false,
+"name": &"impact",
+"speed": 14.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_sparks"]
 offsets = PackedFloat32Array(0, 0.28, 1)
@@ -40,3 +91,8 @@ process_material = SubResource("ParticleProcessMaterial_sparks")
 texture = SubResource("GradientTexture_spark_texture")
 visibility_rect = Rect2(-80, -80, 160, 160)
 script = ExtResource("1_vfx")
+
+[node name="LibraryImpact" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_impact")
+animation = &"impact"
+autoplay = "impact"

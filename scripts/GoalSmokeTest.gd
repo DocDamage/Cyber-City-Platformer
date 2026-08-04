@@ -76,5 +76,7 @@ func _run() -> void:
 	assert(edge_patrol.is_on_floor(), "Edge patrol fell off its rooftop.")
 	assert(edge_patrol.direction == 1, "Edge floor check did not reverse patrol direction.")
 	assert(wall_patrol.direction == -1, "Wall check did not reverse patrol direction.")
+	root.get_node("SoundManager").queue_free()
+	await create_timer(0.2, true, false, true).timeout
 	print("GOAL_SMOKE_TEST_OK player=", player.global_position)
 	quit()

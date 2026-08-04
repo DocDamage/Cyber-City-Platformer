@@ -2,7 +2,17 @@ extends Node
 
 const SAMPLE_RATE := 22050
 const EFFECT_POOL_SIZE := 8
-const DEFAULT_MUSIC := "res://assets/Music/Rooftops/Cyberpunk Rooftops.mp3"
+const DEFAULT_MUSIC := "res://Music/Library/Rooftops/Cyberpunk Rooftops.ogg"
+const LIBRARY_EFFECT_PATHS := {
+	&"laser": "FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
+	&"melee": "FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
+	&"jump": "FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
+	&"dash": "FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
+	&"explosion": "FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
+	&"pickup": "FREE Retro Action Platformer Sound Effects/sucess1.mp3",
+	&"checkpoint": "FREE Retro Action Platformer Sound Effects/Transition.ogg",
+	&"hurt": "FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
+}
 
 var _music_player: AudioStreamPlayer
 var _effect_players: Array[AudioStreamPlayer2D] = []
@@ -33,12 +43,20 @@ func play_music(stream_path := DEFAULT_MUSIC, volume_db := -9.0) -> void:
 	if _music_player.playing and _music_player.stream != null \
 			and _music_player.stream.resource_path == stream_path:
 		return
-	var stream := load(stream_path)
+	var stream: AudioStream
+	if stream_path.begins_with("res://"):
+		stream = load(stream_path) as AudioStream
+	else:
+		var registry := get_node_or_null("/root/AssetRegistry")
+		if registry != null:
+			stream = registry.call(&"get_music_stream", stream_path) as AudioStream
 	if stream == null:
 		push_warning("SoundManager could not load music: %s" % stream_path)
 		return
 	if stream is AudioStreamMP3:
 		(stream as AudioStreamMP3).loop = true
+	elif stream is AudioStreamOggVorbis:
+		(stream as AudioStreamOggVorbis).loop = true
 	_music_player.stream = stream
 	_music_player.volume_db = volume_db
 	_music_player.play()
@@ -69,21 +87,34 @@ func _exit_tree() -> void:
 	if _music_player != null:
 		_music_player.stop()
 		_music_player.stream = null
-	for player in _effect_players:
-		player.stop()
-		player.stream = null
+	stop_all_sfx()
 	_effect_streams.clear()
 
 
+func stop_all_sfx() -> void:
+	for player in _effect_players:
+		player.stop()
+		player.stream = null
+
+
 func _build_effects() -> void:
-	_effect_streams[&"laser"] = _make_effect(&"laser", 0.14)
-	_effect_streams[&"melee"] = _make_effect(&"melee", 0.12)
-	_effect_streams[&"jump"] = _make_effect(&"jump", 0.11)
-	_effect_streams[&"dash"] = _make_effect(&"dash", 0.16)
-	_effect_streams[&"explosion"] = _make_effect(&"explosion", 0.34)
-	_effect_streams[&"pickup"] = _make_effect(&"pickup", 0.18)
-	_effect_streams[&"checkpoint"] = _make_effect(&"checkpoint", 0.36)
-	_effect_streams[&"hurt"] = _make_effect(&"hurt", 0.16)
+	var fallback_durations := {
+		&"laser": 0.14,
+		&"melee": 0.12,
+		&"jump": 0.11,
+		&"dash": 0.16,
+		&"explosion": 0.34,
+		&"pickup": 0.18,
+		&"checkpoint": 0.36,
+		&"hurt": 0.16,
+	}
+	var registry := get_node_or_null("/root/AssetRegistry")
+	for effect_value: Variant in LIBRARY_EFFECT_PATHS:
+		var effect := effect_value as StringName
+		var stream: AudioStream
+		if registry != null:
+			stream = registry.call(&"get_sfx_stream", String(LIBRARY_EFFECT_PATHS[effect])) as AudioStream
+		_effect_streams[effect] = stream if stream != null else _make_effect(effect, float(fallback_durations[effect]))
 
 
 func _make_effect(kind: StringName, duration: float) -> AudioStreamWAV:

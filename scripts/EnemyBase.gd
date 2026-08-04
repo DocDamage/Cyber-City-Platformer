@@ -4,21 +4,24 @@ extends CharacterBody2D
 signal damaged(amount: int, health_remaining: int)
 signal died
 
-const GUARD_SHEET := preload("res://assets/Characters/Heroes/Spaceman/Character 60x60(2).png")
-const FRAME_SIZE := 60
-const IDLE_ROW := 14
-const RUN_ROW := 15
-const DEATH_ROW := 19
 const SMOKE_VFX := preload("res://scenes/vfx/SmokeBurst.tscn")
 
+@export var enemy_id: StringName = &"goblin"
+@export var animation_library: SpriteFrames
 @export var patrol_speed := 70.0
+@export_range(32.0, 1200.0, 1.0) var patrol_distance := 220.0
 @export var max_health := 3
 @export_enum("Left:-1", "Right:1") var starting_direction := -1
+@export var uses_gravity := true
+@export var movement_animation: StringName
+@export var death_animation: StringName
+@export var sprite_visual_scale := Vector2.ONE
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health := 0
 var direction := -1
 var is_dead := false
+var _patrol_origin_x := 0.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
@@ -30,24 +33,34 @@ var is_dead := false
 func _ready() -> void:
 	health = max_health
 	direction = starting_direction
-	_build_sprite_frames()
+	_patrol_origin_x = global_position.x
+	if animation_library == null:
+		animation_library = _get_enemy_sprite_frames(enemy_id)
+	if animation_library != null:
+		sprite.sprite_frames = animation_library
+	sprite.scale = sprite_visual_scale
 	_face_direction()
-	sprite.play(&"run")
+	_play_first_available(_movement_candidates())
 
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
+	if uses_gravity and not is_on_floor():
 		velocity.y += gravity * delta
 
-	if is_on_floor() and not floor_check.is_colliding():
+	if not uses_gravity and (
+		(direction > 0 and global_position.x >= _patrol_origin_x + patrol_distance)
+		or (direction < 0 and global_position.x <= _patrol_origin_x - patrol_distance)
+	):
 		_turn_around()
-	elif wall_check.is_colliding():
+	elif uses_gravity and is_on_floor() and not floor_check.is_colliding():
+		_turn_around()
+	elif uses_gravity and wall_check.is_colliding():
 		_turn_around()
 
 	velocity.x = direction * patrol_speed
 	move_and_slide()
 
-	if is_on_wall():
+	if uses_gravity and is_on_wall():
 		_turn_around()
 
 
@@ -94,8 +107,9 @@ func _die() -> void:
 	set_physics_process(false)
 	body_collision.set_deferred("disabled", true)
 	hurtbox.set_invincible(true)
-	sprite.play(&"death")
-	await sprite.animation_finished
+	var selected_death := _play_first_available(_death_candidates())
+	if not selected_death.is_empty() and not sprite.sprite_frames.get_animation_loop(selected_death):
+		await sprite.animation_finished
 	queue_free()
 
 
@@ -108,29 +122,44 @@ func _spawn_explosion_vfx() -> void:
 	parent.add_child(smoke)
 
 
-func _build_sprite_frames() -> void:
-	var frames := SpriteFrames.new()
-	frames.remove_animation(&"default")
-	_add_animation(frames, &"idle", IDLE_ROW, 0, 7, 8.0, true)
-	_add_animation(frames, &"run", RUN_ROW, 0, 11, 12.0, true)
-	_add_animation(frames, &"death", DEATH_ROW, 0, 8, 14.0, false)
-	sprite.sprite_frames = frames
+func _movement_candidates() -> Array[StringName]:
+	var candidates: Array[StringName] = []
+	if not movement_animation.is_empty():
+		candidates.append(movement_animation)
+	for candidate: StringName in [&"run", &"walk", &"move", &"flying", &"idle"]:
+		if not candidates.has(candidate):
+			candidates.append(candidate)
+	return candidates
 
 
-func _add_animation(
-		frames: SpriteFrames,
-		animation_name: StringName,
-		row: int,
-		first_column: int,
-		last_column: int,
-		fps: float,
-		loops: bool
-) -> void:
-	frames.add_animation(animation_name)
-	frames.set_animation_speed(animation_name, fps)
-	frames.set_animation_loop(animation_name, loops)
-	for column in range(first_column, last_column + 1):
-		var frame := AtlasTexture.new()
-		frame.atlas = GUARD_SHEET
-		frame.region = Rect2(column * FRAME_SIZE, row * FRAME_SIZE, FRAME_SIZE, FRAME_SIZE)
-		frames.add_frame(animation_name, frame)
+func _death_candidates() -> Array[StringName]:
+	var candidates: Array[StringName] = []
+	if not death_animation.is_empty():
+		candidates.append(death_animation)
+	for candidate: StringName in [&"death", &"die", &"hurt", &"idle"]:
+		if not candidates.has(candidate):
+			candidates.append(candidate)
+	return candidates
+
+
+func _play_first_available(candidates: Array[StringName]) -> StringName:
+	if sprite.sprite_frames == null:
+		return &""
+	for candidate: StringName in candidates:
+		if sprite.sprite_frames.has_animation(candidate):
+			sprite.play(candidate)
+			return candidate
+	var names := sprite.sprite_frames.get_animation_names()
+	if not names.is_empty():
+		var first: StringName = names[0]
+		sprite.play(first)
+		return first
+	return &""
+
+
+func _get_enemy_sprite_frames(requested_enemy_id: StringName) -> SpriteFrames:
+	var registry := get_node_or_null("/root/AssetRegistry")
+	if registry == null:
+		push_error("EnemyBase requires the AssetRegistry autoload.")
+		return null
+	return registry.call(&"get_enemy_sprite_frames", requested_enemy_id) as SpriteFrames

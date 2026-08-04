@@ -1,0 +1,250 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_nifis"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Moonlight City/Assets/layers/back.png" id="2_70i77"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Moonlight City/Assets/layers/middle.png" id="3_mtxgs"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Moonlight City/Assets/layers/front.png" id="4_1lrx3"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act3_NeonMoon_Palette.tres" id="5_ublee"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/medusa.tscn" id="6_ynu25"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="7_2yh1q"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/medusa.tres" id="8_4pglj"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="9_yu077"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="10_qgdog"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="11_e3onl"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="12_wgkwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_ground"]
+size = Vector2(2048, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_platform_a"]
+size = Vector2(260, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_platform_b"]
+size = Vector2(220, 24)
+
+[sub_resource type="Gradient" id="Gradient_prototype_light"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
+gradient = SubResource("Gradient_prototype_light")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_death"]
+size = Vector2(2400, 120)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
+bg_color = Color(0.025, 0.035, 0.09, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.85, 1, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
+bg_color = Color(0.05, 0.15, 0.28, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.9, 1, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="OrbitalCommand" type="Node2D" unique_id=1331603173]
+script = ExtResource("1_nifis")
+campaign_act = 3
+stage_id = &"3-5"
+stage_title = "Orbital Command"
+design_notes = "Prototype goals: High glass platform, lunar horizon, Act 3 boss
+Replace blockout pieces as the stage design develops."
+music_path = "res://Music/Library/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg"
+far_background = ExtResource("2_70i77")
+middle_background = ExtResource("3_mtxgs")
+front_background = ExtResource("4_1lrx3")
+background_tint = Color(0.7, 0.86, 1, 1)
+
+[node name="Background" type="Node2D" parent="." unique_id=807512772]
+
+[node name="Far" type="Parallax2D" parent="Background" unique_id=1518130675]
+z_index = -30
+scroll_scale = Vector2(0.1, 0.15)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=903301315]
+modulate = Color(0.7, 0.86, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(3.5294118, 3.5294118)
+texture = ExtResource("2_70i77")
+
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=1021652451]
+z_index = -25
+scroll_scale = Vector2(0.28, 0.35)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=1380982096]
+modulate = Color(0.7, 0.86, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(10, 10)
+texture = ExtResource("3_mtxgs")
+
+[node name="Front" type="Parallax2D" parent="Background" unique_id=1852353351]
+z_index = -20
+scroll_scale = Vector2(0.55, 0.65)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=1817950897]
+modulate = Color(0.7, 0.86, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(10, 10)
+texture = ExtResource("4_1lrx3")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=1674983963]
+tile_set = ExtResource("5_ublee")
+
+[node name="Blockout" type="Node2D" parent="." unique_id=104572437]
+
+[node name="Ground" type="StaticBody2D" parent="Blockout" unique_id=95258685]
+position = Vector2(960, 500)
+
+[node name="Visual" type="Polygon2D" parent="Blockout/Ground" unique_id=1711224601]
+color = Color(0.06, 0.16, 0.24, 1)
+polygon = PackedVector2Array(-1024, -32, 1024, -32, 1024, 32, -1024, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/Ground" unique_id=1472090342]
+shape = SubResource("RectangleShape_ground")
+
+[node name="PlatformA" type="StaticBody2D" parent="Blockout" unique_id=239579190]
+position = Vector2(620, 390)
+
+[node name="Visual" type="Polygon2D" parent="Blockout/PlatformA" unique_id=212932067]
+color = Color(0.08, 0.34, 0.42, 1)
+polygon = PackedVector2Array(-130, -12, 130, -12, 130, 12, -130, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/PlatformA" unique_id=1147256706]
+shape = SubResource("RectangleShape_platform_a")
+
+[node name="PlatformB" type="StaticBody2D" parent="Blockout" unique_id=792886628]
+position = Vector2(1040, 300)
+
+[node name="Visual" type="Polygon2D" parent="Blockout/PlatformB" unique_id=2040774539]
+color = Color(0.16, 0.22, 0.46, 1)
+polygon = PackedVector2Array(-110, -12, 110, -12, 110, 12, -110, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/PlatformB" unique_id=832416684]
+shape = SubResource("RectangleShape_platform_b")
+
+[node name="Props" type="Node2D" parent="." unique_id=1912477522]
+
+[node name="Hazards" type="Node2D" parent="." unique_id=97845070]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1862476855]
+
+[node name="Medusa" type="CharacterBody2D" parent="Enemies" unique_id=206791651 instance=ExtResource("6_ynu25")]
+position = Vector2(560, 452)
+collision_layer = 0
+floor_snap_length = 4.0
+script = ExtResource("7_2yh1q")
+enemy_id = &"medusa"
+animation_library = ExtResource("8_4pglj")
+starting_direction = 1
+movement_animation = &"move"
+death_animation = &"death"
+sprite_visual_scale = Vector2(0.896, 0.896)
+
+[node name="VFX" type="Node2D" parent="." unique_id=1528393893]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=1080536330]
+
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=37256039]
+position = Vector2(720, 310)
+color = Color(0.1, 0.65, 1, 1)
+energy = 0.8
+texture = SubResource("GradientTexture_prototype_light")
+texture_scale = 2.0
+
+[node name="Markers" type="Node2D" parent="." unique_id=125315527]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=710944375]
+position = Vector2(120, 438)
+gizmo_extents = 24.0
+
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=1211692191]
+
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=1348092954]
+position = Vector2(1760, 438)
+gizmo_extents = 28.0
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1537122075 instance=ExtResource("9_yu077")]
+position = Vector2(120, 438)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("10_qgdog")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=356203284]
+position = Vector2(960, 650)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_e3onl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=1416956658]
+shape = SubResource("RectangleShape_death")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1341023985 instance=ExtResource("12_wgkwn")]
+layer = 20
+
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=446043988]
+layer = 90
+
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=419253664]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBox_guide")
+
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=1316527817]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=153349553]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=602671027]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "3-5  |  Orbital Command"
+
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=307165963]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Prototype goals: High glass platform, lunar horizon, Act 3 boss
+Replace blockout pieces as the stage design develops."
+autowrap_mode = 2
+
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=559073464]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBox_tag")
+text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
+horizontal_alignment = 1

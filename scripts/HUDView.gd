@@ -1,16 +1,5 @@
 extends Control
 
-const COIN_FRAMES: Array[Texture2D] = [
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin1.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin2.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin3.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin4.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin5.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin6.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin7.png"),
-	preload("res://assets/Stages/Cyber City/Cyber City/Prop/Coin/coin8.png"),
-]
-
 var _health := 1
 var _max_health := 1
 var _energy := 0.0
@@ -21,10 +10,12 @@ var _coin_frame := 0
 var _checkpoint_message := ""
 var _checkpoint_message_time := 0.0
 var _damage_flash := 0.0
+var _coin_frames: Array[Texture2D] = []
 
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_coin_frames = _load_prop_frames(1, "coin", 8)
 	var manager := get_node_or_null("/root/GameManager")
 	if manager == null:
 		return
@@ -41,7 +32,8 @@ func _process(delta: float) -> void:
 	_elapsed += delta
 	_damage_flash = maxf(_damage_flash - delta, 0.0)
 	_checkpoint_message_time = maxf(_checkpoint_message_time - delta, 0.0)
-	_coin_frame = int(_elapsed * 12.0) % COIN_FRAMES.size()
+	if not _coin_frames.is_empty():
+		_coin_frame = int(_elapsed * 12.0) % _coin_frames.size()
 	queue_redraw()
 
 
@@ -87,8 +79,9 @@ func _draw_status_panel(font: Font) -> void:
 func _draw_score_panel(font: Font) -> void:
 	var panel := Rect2(size.x - 224.0, 18.0, 204.0, 70.0)
 	_draw_panel(panel, Color("ff2f91"))
-	var texture := COIN_FRAMES[_coin_frame]
-	draw_texture_rect(texture, Rect2(panel.position + Vector2(15.0, 15.0), Vector2(40.0, 40.0)), false)
+	if not _coin_frames.is_empty():
+		var texture := _coin_frames[_coin_frame]
+		draw_texture_rect(texture, Rect2(panel.position + Vector2(15.0, 15.0), Vector2(40.0, 40.0)), false)
 	draw_string(font, panel.position + Vector2(65.0, 28.0), "CREDITS", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color("ff91c2"))
 	draw_string(font, panel.position + Vector2(65.0, 52.0), "%06d" % _score, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, Color.WHITE)
 	_draw_scanline(panel)
@@ -112,6 +105,19 @@ func _draw_panel(rect: Rect2, accent: Color) -> void:
 func _draw_scanline(rect: Rect2) -> void:
 	var y := rect.position.y + fmod(_elapsed * 23.0, rect.size.y)
 	draw_line(Vector2(rect.position.x + 2.0, y), Vector2(rect.end.x - 2.0, y), Color(0.3, 0.95, 1.0, 0.08), 1.0)
+
+
+func _load_prop_frames(act_number: int, frame_prefix: String, frame_count: int) -> Array[Texture2D]:
+	var result: Array[Texture2D] = []
+	var registry := get_node_or_null("/root/AssetRegistry")
+	if registry == null:
+		push_error("HUDView requires the AssetRegistry autoload.")
+		return result
+	for frame_number in range(1, frame_count + 1):
+		var texture := registry.call(&"get_prop_texture", act_number, "%s%d" % [frame_prefix, frame_number]) as Texture2D
+		if texture != null:
+			result.append(texture)
+	return result
 
 
 func _on_health_changed(current: int, maximum: int) -> void:

@@ -75,5 +75,7 @@ func _run() -> void:
 	for frame in range(8):
 		await physics_frame
 	assert(current_scene != null and current_scene.scene_file_path == "res://scenes/Level2.tscn", "Level exit did not transition to Level 2.")
+	sound_manager.queue_free()
+	await create_timer(0.2, true, false, true).timeout
 	print("SYSTEMS_SMOKE_TEST_OK score=", game_manager.current_score, " checkpoint=", game_manager.current_checkpoint)
 	quit()

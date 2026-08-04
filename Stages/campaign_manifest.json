@@ -1,0 +1,358 @@
+{
+  "acts": [
+    {
+      "character_folder": "Enemies",
+      "folder": "Act1_CyberCity",
+      "legacy_prop_roots": [
+        "res://assets/Stages/Cyber City/Cyber City/Prop",
+        "res://assets/Stage Props/Space Props"
+      ],
+      "legacy_stage_roots": [
+        "res://assets/Stages/Cyber City",
+        "res://assets/Stages/Rooftops"
+      ],
+      "name": "Cyber City",
+      "number": 1.0,
+      "prop_folder": "CyberCityProps",
+      "stages": [
+        {
+          "assets": [
+            "Basic rooftop tileset",
+            "TV antennas",
+            "flat bridges"
+          ],
+          "directory": "1-1_RooftopAlley",
+          "id": "1-1",
+          "name": "Rooftop Alley",
+          "number": 1.0,
+          "scene": "res://Stages/Act1_CyberCity/1-1_RooftopAlley/Stage.tscn",
+          "slug": "RooftopAlley",
+          "status": "playable"
+        },
+        {
+          "assets": [
+            "Animated neon billboards",
+            "holographic signs",
+            "glowing lights"
+          ],
+          "directory": "1-2_BillboardHighway",
+          "id": "1-2",
+          "name": "Billboard Highway",
+          "number": 2.0,
+          "scene": "res://Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
+          "slug": "BillboardHighway",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Satellite dishes",
+            "communication towers",
+            "industrial ladders"
+          ],
+          "directory": "1-3_CommunicationSpire",
+          "id": "1-3",
+          "name": "Communication Spire",
+          "number": 3.0,
+          "scene": "res://Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
+          "slug": "CommunicationSpire",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Rooftop bridges",
+            "industrial pipes",
+            "control panels",
+            "spring platforms"
+          ],
+          "directory": "1-4_SkybridgeJunction",
+          "id": "1-4",
+          "name": "Skybridge Junction",
+          "number": 4.0,
+          "scene": "res://Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
+          "slug": "SkybridgeJunction",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Clean rooftop terrain",
+            "massive neon backdrop",
+            "Act 1 boss"
+          ],
+          "directory": "1-5_ExecutiveHelipad",
+          "id": "1-5",
+          "name": "Executive Helipad",
+          "number": 5.0,
+          "scene": "res://Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
+          "slug": "ExecutiveHelipad",
+          "status": "prototype"
+        }
+      ]
+    },
+    {
+      "character_folder": "Enemies",
+      "folder": "Act2_RobotFactory",
+      "legacy_prop_roots": [
+        "res://assets/Stages/Mega Robot Factory",
+        "res://assets/Stage Props/Space Props"
+      ],
+      "legacy_stage_roots": [
+        "res://assets/Stages/Mega Robot Factory"
+      ],
+      "name": "Mega Robot Factory",
+      "number": 2.0,
+      "prop_folder": "FactoryProps",
+      "stages": [
+        {
+          "assets": [
+            "Dark steel tilemaps",
+            "industrial steam pipes",
+            "terminal stations"
+          ],
+          "directory": "2-1_SubLevelIntake",
+          "id": "2-1",
+          "name": "Sub-Level Intake",
+          "number": 1.0,
+          "scene": "res://Stages/Act2_RobotFactory/2-1_SubLevelIntake/Stage.tscn",
+          "slug": "SubLevelIntake",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Conveyor platforms",
+            "assembly machinery",
+            "drop hazards"
+          ],
+          "directory": "2-2_ConveyorAssembly",
+          "id": "2-2",
+          "name": "Conveyor Assembly",
+          "number": 2.0,
+          "scene": "res://Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
+          "slug": "ConveyorAssembly",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Laser grids",
+            "steam vents",
+            "orange PointLight2D nodes"
+          ],
+          "directory": "2-3_SmeltingCore",
+          "id": "2-3",
+          "name": "Smelting Core",
+          "number": 3.0,
+          "scene": "res://Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
+          "slug": "SmeltingCore",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Damaged control panels",
+            "broken machinery",
+            "vertical drop shafts"
+          ],
+          "directory": "2-4_RoboticMaintenance",
+          "id": "2-4",
+          "name": "Robotic Maintenance",
+          "number": 4.0,
+          "scene": "res://Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
+          "slug": "RoboticMaintenance",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Moving machinery",
+            "background gears",
+            "Act 2 boss"
+          ],
+          "directory": "2-5_AssemblyEngine",
+          "id": "2-5",
+          "name": "Assembly Engine",
+          "number": 5.0,
+          "scene": "res://Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
+          "slug": "AssemblyEngine",
+          "status": "prototype"
+        }
+      ]
+    },
+    {
+      "character_folder": "Enemies",
+      "folder": "Act3_NeonMoon",
+      "legacy_prop_roots": [
+        "res://assets/Stage Props/Space Props",
+        "res://assets/Stages/Neon Moon Protocol"
+      ],
+      "legacy_stage_roots": [
+        "res://assets/Stages/Neon Moon Protocol"
+      ],
+      "name": "Neon Moon Protocol",
+      "number": 3.0,
+      "prop_folder": "LunarProps",
+      "stages": [
+        {
+          "assets": [
+            "Lunar terrain",
+            "space horizon parallax",
+            "low-gravity triggers"
+          ],
+          "directory": "3-1_LunarSurfaceArrival",
+          "id": "3-1",
+          "name": "Lunar Surface Arrival",
+          "number": 1.0,
+          "scene": "res://Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
+          "slug": "LunarSurfaceArrival",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "High-tech lab tiles",
+            "glowing glass panels",
+            "pristine computers"
+          ],
+          "directory": "3-2_ResearchCleanrooms",
+          "id": "3-2",
+          "name": "Research Cleanrooms",
+          "number": 2.0,
+          "scene": "res://Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
+          "slug": "ResearchCleanrooms",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Laser barriers",
+            "defense turrets",
+            "wall-jump shafts"
+          ],
+          "directory": "3-3_SecurityGridShaft",
+          "id": "3-3",
+          "name": "Security Grid Shaft",
+          "number": 3.0,
+          "scene": "res://Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
+          "slug": "SecurityGridShaft",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Containment tanks",
+            "glowing terminals",
+            "low-gravity zones"
+          ],
+          "directory": "3-4_BioTechLabs",
+          "id": "3-4",
+          "name": "Bio-Tech Labs",
+          "number": 4.0,
+          "scene": "res://Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
+          "slug": "BioTechLabs",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "High glass platform",
+            "lunar horizon",
+            "Act 3 boss"
+          ],
+          "directory": "3-5_OrbitalCommand",
+          "id": "3-5",
+          "name": "Orbital Command",
+          "number": 5.0,
+          "scene": "res://Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
+          "slug": "OrbitalCommand",
+          "status": "prototype"
+        }
+      ]
+    },
+    {
+      "character_folder": "Enemies",
+      "folder": "Act4_AbyssalNight",
+      "legacy_prop_roots": [
+        "res://assets/Stages/Abyssal Night",
+        "res://assets/Stage Props/Space Props"
+      ],
+      "legacy_stage_roots": [
+        "res://assets/Stages/Abyssal Night"
+      ],
+      "name": "Abyssal Night",
+      "number": 4.0,
+      "prop_folder": "VoidProps",
+      "stages": [
+        {
+          "assets": [
+            "Clean-tech tiles",
+            "bio-cyber roots"
+          ],
+          "directory": "4-1_CorruptedOutpost",
+          "id": "4-1",
+          "name": "Corrupted Outpost",
+          "number": 1.0,
+          "scene": "res://Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
+          "slug": "CorruptedOutpost",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Floating void platforms",
+            "bottomless pits"
+          ],
+          "directory": "4-2_TheDarkChasm",
+          "id": "4-2",
+          "name": "The Dark Chasm",
+          "number": 2.0,
+          "scene": "res://Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
+          "slug": "TheDarkChasm",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Organic root clusters",
+            "computer terminals"
+          ],
+          "directory": "4-3_BioMechanicalNest",
+          "id": "4-3",
+          "name": "Bio-Mechanical Nest",
+          "number": 3.0,
+          "scene": "res://Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
+          "slug": "BioMechanicalNest",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Gothic sci-fi tiles",
+            "toxic red lighting"
+          ],
+          "directory": "4-4_AbyssalSanctuary",
+          "id": "4-4",
+          "name": "Abyssal Sanctuary",
+          "number": 4.0,
+          "scene": "res://Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
+          "slug": "AbyssalSanctuary",
+          "status": "prototype"
+        },
+        {
+          "assets": [
+            "Open arena",
+            "dynamic lighting",
+            "final boss"
+          ],
+          "directory": "4-5_HeartOfTheVoid",
+          "id": "4-5",
+          "name": "Heart of the Void",
+          "number": 5.0,
+          "scene": "res://Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
+          "slug": "HeartOfTheVoid",
+          "status": "prototype"
+        }
+      ]
+    }
+  ],
+  "characters": {
+    "Enemies": {
+      "library": "res://Characters/Enemies/enemy_library.json",
+      "scene_root": "res://Characters/Enemies/Scenes",
+      "sprite_frames_root": "res://Characters/Enemies/SpriteFrames"
+    },
+    "Player": {
+      "legacy_roots": [
+        "res://assets/Characters/Heroes"
+      ]
+    }
+  }
+}
