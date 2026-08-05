@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bro3mv38gmqyi"
+path="res://.godot/imported/Cyberpunk Rooftops.ogg-3395c9558748d75e9d37c29a6f34374a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/runtime/audio/music/Rooftops/Cyberpunk Rooftops.ogg"
+dest_files=["res://.godot/imported/Cyberpunk Rooftops.ogg-3395c9558748d75e9d37c29a6f34374a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

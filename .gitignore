@@ -1,9 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+__pycache__/
+*.py[cod]
 
-# Original bulk asset library retained as a local source mirror.
-/assets/
+# Original bulk asset library retained as a local source mirror. The curated
+# runtime subtree is intentionally tracked and is the only shippable content
+# under this legacy mirror.
+/assets/*
+!/assets/runtime/
+!/assets/runtime/**
 
 # Canonical mirrors are populated from the supplied local libraries; generated
 # Godot scenes, SpriteFrames, TileSets, manifests, and documentation stay tracked.

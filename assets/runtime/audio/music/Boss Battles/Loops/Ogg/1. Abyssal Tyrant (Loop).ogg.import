@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1hhyxu8rvgek"
+path="res://.godot/imported/1. Abyssal Tyrant (Loop).ogg-0e215d19037a67d2aeb7e9fc53cf82cf.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg"
+dest_files=["res://.godot/imported/1. Abyssal Tyrant (Loop).ogg-0e215d19037a67d2aeb7e9fc53cf82cf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

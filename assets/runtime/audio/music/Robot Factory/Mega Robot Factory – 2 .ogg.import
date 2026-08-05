@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch7sp7cdlcesp"
+path="res://.godot/imported/Mega Robot Factory – 2 .ogg-dc1919cfba3df6b0c9cca5fe11e03bfd.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 2 .ogg"
+dest_files=["res://.godot/imported/Mega Robot Factory – 2 .ogg-dc1919cfba3df6b0c9cca5fe11e03bfd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,2 +1,12 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+
+# Curated runtime binaries are stored with Git LFS. Source packs remain local
+# and ignored; only files referenced by production resources are curated here.
+assets/runtime/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/runtime/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/runtime/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+assets/runtime/**/*.webp filter=lfs diff=lfs merge=lfs -text
+assets/runtime/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+assets/runtime/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+assets/runtime/**/*.wav filter=lfs diff=lfs merge=lfs -text

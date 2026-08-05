@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://86ovsywq8k53"
+path="res://.godot/imported/sucess1.mp3-dd98e259e7681e2163b873c087f4eed6.mp3str"
+
+[deps]
+
+source_file="res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/sucess1.mp3"
+dest_files=["res://.godot/imported/sucess1.mp3-dd98e259e7681e2163b873c087f4eed6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

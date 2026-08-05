@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bw6r2c8i1n4mf"
+path="res://.godot/imported/3. Veil of the Forsaken (Loop).ogg-b92b664007be29893eb715bb784004c1.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg"
+dest_files=["res://.godot/imported/3. Veil of the Forsaken (Loop).ogg-b92b664007be29893eb715bb784004c1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

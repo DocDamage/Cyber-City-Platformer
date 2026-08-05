@@ -1,0 +1,1287 @@
+{
+  "schema_version": 1,
+  "strategy": "Curated runtime files tracked with Git LFS; bulk source packs remain ignored.",
+  "assets": [
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "sha256": "af3df71869fe7c46fbae7a8cf4a959bb6cbcc8c74dc2bd8a9aa9b422205b1ee4",
+      "bytes": 12100,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "27f0abcf1a26e67f0d92bbcfd5732d68397c2d99476712e9f4294db02f4dc82b",
+      "bytes": 8976,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "2f629af41a5614de54925ca16bf35c054b487a3529de0c12bc188f1935648b5c",
+      "bytes": 6946,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "ed280b760c1d7b52906ebd8cdbd96428c7f5452724f482041b49f09ab8a38133",
+      "bytes": 6641,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/RUN.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/RUN.png",
+      "sha256": "2bcd01c3442de29757d1e680d9ebefd7f227ede6b8bc62d682719af168f7e7db",
+      "bytes": 8098,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "sha256": "9604c60e545a78c96c1dd581c19dbebfe7d3dcb8b4fafbadb17c35c7b043d5cd",
+      "bytes": 15652,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "79d32ff9cea7e144e5b751c92a34077e6f1a7ff0c4cf48fe9811689be5738379",
+      "bytes": 13287,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "12a15a8f2eac789e718aadaf04784cc2135b10f447819ae24b7917c28e91ce09",
+      "bytes": 8016,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "fe14236ca417961926eadc464355ea405e747e5ee087f017957d0bf5de2d2d55",
+      "bytes": 12795,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/RUN.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline/RUN.png",
+      "sha256": "ea20fa21fcf519638f06c539cc4d1981527fab435fc0261be0ea3282021db80f",
+      "bytes": 11434,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 1.png",
+      "sha256": "9826c9d00c28c6389bb004445f7dcbe008c717cbf34e322946d3846cd71e806c",
+      "bytes": 21068,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 2.png",
+      "sha256": "8f2202c7bb8e20854246b2c363ba9297655a8e2dad9f5c31b113dd3e940c0335",
+      "bytes": 21039,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "838ebd64615108736da5cc84e96ca77d1c82d0fc328252a6e901d82f57ce027b",
+      "bytes": 12445,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "56b64f8941cc8c7253f3b5817e6419d889b5e5161f630ecf79ffbef2d23fa362",
+      "bytes": 6688,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "a79764d4587a0eed6ee89caeb4d72a381e9feab279a0a78bd06d6738b85f7ac0",
+      "bytes": 9837,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "sha256": "d1e729216bbbd11e116170b870911d5a9689c5da81afee2f41ae52b7c3100ac2",
+      "bytes": 9266,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/ATTACK.png",
+      "sha256": "dc3ed047d1594042b87d24b4bd7694342202a5c0cc15af486d728c2e65ea0d1c",
+      "bytes": 14731,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "sha256": "39284af694abbe042f045434420138276e0fa14015be124a2348337662844535",
+      "bytes": 17994,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/FLYING.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/FLYING.png",
+      "sha256": "6a861d595960f7db2b5e338e5e6cdf8bf7fcf8fe2fb6f115fcef6ecb771bb995",
+      "bytes": 9670,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "sha256": "c0763fd90e910884d7618c447d3b63cfa64287fc461cf843adb3ab0a7d137226",
+      "bytes": 6448,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/IDLE.png",
+      "sha256": "18e83053af131b0e6b6462e24865d96569161d66b87297c3264c577afc3f9fdd",
+      "bytes": 8930,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/TRANSITION.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/TRANSITION.png",
+      "sha256": "1cb4f61837903b78f00ecfe65ac996444ee682109a257b6220092b107e13e665",
+      "bytes": 8581,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/ATTACK.png",
+      "sha256": "340a3452c8715a3630331a7393306fc19f948463a0f062c50d5d1d726e80f446",
+      "bytes": 8641,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "sha256": "23ef40bf850560d85b9717031e29e6df39e2cfe269cc22714055a48004b90175",
+      "bytes": 4792,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "sha256": "3ba168ea8d6c4f929add85ceb4a215158fdc242fc4f3f157f8edd68befd5f4a3",
+      "bytes": 6355,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/MOVE.png",
+      "sha256": "487bdf667debd779800f6a4632ba77ce877693fb59abdcbdaadbb45872e86845",
+      "bytes": 8122,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 1.png",
+      "sha256": "18320ce69d34ef0206dffc3aeb59b430743189fa1fc36bcdda6e4a7a34f9eb78",
+      "bytes": 14031,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 2.png",
+      "sha256": "63f77a488262bb6ea6e4ef381d8cf2de29bb4c70742c5aa84508c76e35368c94",
+      "bytes": 13632,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "efb6345df9999de9306b2a6ae3d002f5cc996f650c3af0d513d7f8d849dc72d9",
+      "bytes": 4639,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "6087267657e63f7260cc1920bd2a962ced791c21041b9e32d985c71e3ed54517",
+      "bytes": 9995,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "70e33549bfa27fc3fe12c9f797d1db80c237bcf380983f3e8e778d4f89059b79",
+      "bytes": 9368,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline/MOVE.png",
+      "sha256": "38ef7c74e1c06cde53b4b013a9ec9a49b6207bf2509d205d26fd477b4c509530",
+      "bytes": 9112,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline/ATTACK1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline/ATTACK1.png",
+      "sha256": "2d02cef3d934d338ddd64f1e3294724b127f3ed289b25eced2f33b2000ac3e66",
+      "bytes": 4838,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline/ATTACK2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline/ATTACK2.png",
+      "sha256": "d75149f15e4015e60bd6c038ac0aa4ed051f057e85644da0d5a65ef070ccce6b",
+      "bytes": 5126,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline/DEATH.png",
+      "sha256": "621b0a55b1fc48a174f2933cf2afdc1d3c1fc8dbb7b8b793242abb5611fa34b0",
+      "bytes": 3636,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline/HURT.png",
+      "sha256": "e55a96bcaad3e82cab7a4acc2154e1989cdcfd6da8cd6a6fbb9a0cc944499415",
+      "bytes": 2830,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline/IDLE.png",
+      "sha256": "eaa9e411329556748651411b1c374122bc7f2cffb646bab178faf7fbd947510e",
+      "bytes": 2914,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline/RUN.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline/RUN.png",
+      "sha256": "74d96981b8259c504bfcddb8ef753e811f4e9fcf2f97da3e87c80a86a1db2ff2",
+      "bytes": 4092,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/ATTACK 1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/ATTACK 1.png",
+      "sha256": "166b3982f5e3a6d31a6516e6fdc19f1cf9b1eec6742f5e66afce153c74d7668a",
+      "bytes": 8383,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/ATTACK 2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/ATTACK 2.png",
+      "sha256": "89b63dea23fbb8030a5ec30c3d068ece09da357c004bc397ec44d68c92de9b75",
+      "bytes": 7178,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/DEATH.png",
+      "sha256": "742b915a51b32c333fe5dd3fcc2883c421f1c68a3219ded8d8096254150e8f0f",
+      "bytes": 8411,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/HURT.png",
+      "sha256": "2351884f9387d1e1ddbffa87a0c857b0bd09d2802ec9fbdcae8550fdbd6cb5c3",
+      "bytes": 5804,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/IDLE.png",
+      "sha256": "39eb23a5e50783b82f0e2c25475b9b6e15ecb529fbad3c773477bc586f478c91",
+      "bytes": 5477,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline/MOVE.png",
+      "sha256": "53757624f67005749f02e8abf0e3ea328ccb7dc095bccf8e909d035d98ee52a7",
+      "bytes": 5286,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "sha256": "bb908fac708dcb3870e57277f28c24a93af0bdfb002fd0a4240571569b277795",
+      "bytes": 9522,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "dff55b2bd0ea4158b70cc119dcc5036ff5b221465282d87685ac6ce7fd9e86af",
+      "bytes": 2515,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "51ec5b0ad1396264beb1034f3a4d928023fd65cdd13e3df058558b3debfa9c25",
+      "bytes": 6198,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "6ece09a46d2895b3cd008081ede39c7bb0eb29a2b2527468b92a09b895980286",
+      "bytes": 5619,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline/MOVE.png",
+      "sha256": "4f35353ba30eb7782b8e6d83a6c5eff92c61e449a6ec9881b0e1395bed14c4f9",
+      "bytes": 5683,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/ATTACK.png",
+      "sha256": "6238b3cd282eafc8ae68bcb67054d8b52c254a1af584e7cff749ce90dea3af2a",
+      "bytes": 13126,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "sha256": "028e1184eb3ecab2cf232bab18d2c47fee1bce790d5b7f375a7b0a6c6bdeff93",
+      "bytes": 17869,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "sha256": "82389df7c5b0a9393acc213c09f8053de0b5dbeed88d3bf28cf312ed69b4fed7",
+      "bytes": 5351,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/IDLE.png",
+      "sha256": "bf161d9f17c3d4a83560655ad9f05b752a50648666f634e6f672e5cd0531365f",
+      "bytes": 8172,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/RUN.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/RUN.png",
+      "sha256": "f97eba0ee96a380b8f1b06606abc6c06359b040910b80f68b15c85e4b651cfbe",
+      "bytes": 10267,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline/ATTACK.png",
+      "sha256": "3e3f876b844f4f3732e4bc13e864760ddc9e75cbf00a399b41765c1172fcd213",
+      "bytes": 4196,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline/DEATH.png",
+      "sha256": "3e659df83a15f253df3076109f643daa19f0d3d3f3aabed9747c6686da2a6a60",
+      "bytes": 2910,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline/HURT.png",
+      "sha256": "6fbb945d9d238e7f4e0c91da7afc2ea70d960d4c110cfc291d9a71f48548a548",
+      "bytes": 3402,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline/IDLE.png",
+      "sha256": "75660f267027dd5896dfb8ae96eb8da07b938fed37b94a3070d1c6849d62a462",
+      "bytes": 3802,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline/MOVE.png",
+      "sha256": "9921f3b661c72951ff440d41bc6362f66b87dc68df36c7a6736f6740b976da98",
+      "bytes": 3336,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/ATTACK1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/ATTACK1.png",
+      "sha256": "f4bafc2757f8f45ea70975943a7f88616a708bfff5365c5b5881b60311452d17",
+      "bytes": 8603,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/ATTACK2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/ATTACK2.png",
+      "sha256": "7920412db6bd55410956a86ebbfb3fcc01bc7e6f622140a17ff2f978aee7ccbe",
+      "bytes": 5817,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/DEATH.png",
+      "sha256": "cdcaffab4a58270c20f1bf20aa8e15869038f4953c5ddc004158e463774f21ee",
+      "bytes": 6927,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/HURT.png",
+      "sha256": "c563f9bdc455c286b78ae46d662113176a1a47e67acf90336f7d77169eb81673",
+      "bytes": 3668,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/IDLE.png",
+      "sha256": "26dc7024518ce6c973e0840d815e9d3751ec82773dd3eb8e360461ed949b9335",
+      "bytes": 6395,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/MOVE.png",
+      "sha256": "fe5ae34108b409c5e46c346b8c522091e1d45206aaeba19ba169b81db6ebf3c4",
+      "bytes": 4856,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/APPEAR.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/APPEAR.png",
+      "sha256": "bbfbfad26e50c23d6d6d82c45e06750e6f891a4bab4bf3023928be56b20bf735",
+      "bytes": 6218,
+      "license": "res://assets/runtime/licenses/LICENSE-6799bb902d83.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "sha256": "527d5aa33666b37786f09047d846e4dea18677b2a248138b6c536a69ac302d50",
+      "bytes": 9095,
+      "license": "res://assets/runtime/licenses/LICENSE-6799bb902d83.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "85a035148c3d05be704dd08356bf9f3a84aa5fde00658b1d70eb115fb7153c00",
+      "bytes": 3500,
+      "license": "res://assets/runtime/licenses/LICENSE-6799bb902d83.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "f2fd5cf2316011880fbbcbdc48b06a9d472c0874976671dd204b8f07c952f2a6",
+      "bytes": 4864,
+      "license": "res://assets/runtime/licenses/LICENSE-6799bb902d83.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "83e1dd7cb29ababc829c2a486277af3d53ca367e63f6064c171ab43798abbf13",
+      "bytes": 5056,
+      "license": "res://assets/runtime/licenses/LICENSE-6799bb902d83.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "sha256": "5a2bf1c1593bece3c3060f9e59cb5c084c9f2dec828eec99fe84fd402c17c9af",
+      "bytes": 6356,
+      "license": "res://assets/runtime/licenses/LICENSE-6799bb902d83.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK1.png",
+      "sha256": "0c9d618ef1acbf6f178639d7ba955a70b487a81439c8d080a17f5d45940b93a9",
+      "bytes": 14663,
+      "license": "res://assets/runtime/licenses/LICENSE-a9c85bdb4b11.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK2.png",
+      "sha256": "f6f8eccdc90590d36c735722755f23f3e76414e574ed44df9773824793961bea",
+      "bytes": 13562,
+      "license": "res://assets/runtime/licenses/LICENSE-a9c85bdb4b11.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/DEATH.png",
+      "sha256": "908d6468f871b3a8d3faa2b651a3d209170ba233ed0058ef5b5dc891ce8539ab",
+      "bytes": 13086,
+      "license": "res://assets/runtime/licenses/LICENSE-a9c85bdb4b11.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/HURT.png",
+      "sha256": "1c6eaf263745e5d9e23cd33158be4e8a9b57d2fcbdff1e375ab3e08739cff004",
+      "bytes": 10661,
+      "license": "res://assets/runtime/licenses/LICENSE-a9c85bdb4b11.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/iDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/iDLE.png",
+      "sha256": "70ec737010e9d1e9b07fa2245bdf1513140013b45afe34a507d774b4305d9353",
+      "bytes": 8692,
+      "license": "res://assets/runtime/licenses/LICENSE-a9c85bdb4b11.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/WALK.png",
+      "sha256": "40778ea4a166bcf75e489a2d4da42f060fc492d9e4c5462820e457707d253a9c",
+      "bytes": 9288,
+      "license": "res://assets/runtime/licenses/LICENSE-a9c85bdb4b11.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "sha256": "45d1b1dd4bca953818876a68592ba8fac977a5334d216c7133d0faaef74fd5e0",
+      "bytes": 10494,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "14557c0d15ab67ab35d26832c59b7f40585977ec9f800cea69af4d96a297a44e",
+      "bytes": 8960,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "5ce0cb82af3d80bc65678246303cdd27b1aaa8672e68548846d5b590cf1c712d",
+      "bytes": 4822,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "ea82585d6b8ff856fe655fe233a8e7fd747621816fd03985a671478424c74c10",
+      "bytes": 6181,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "sha256": "948864b98c9d1c9c8b14b92893c55a953ad04dc1b5dd5409addc93d95c92e1e3",
+      "bytes": 6328,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/ATTACK.png",
+      "sha256": "0328cf8dd9649cca9bc15184f17b810ffe484d55486b19b06ef0e9f88c697f9d",
+      "bytes": 5488,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/DEATH.png",
+      "sha256": "6c291c930dbcbee41ab6302783e74a51456aa50132ecc5d8286eccc661f3e2fe",
+      "bytes": 5193,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/HURT.png",
+      "sha256": "4482c065a13eca8f73e61dc5c1f0b7db362677bf31d4003954e288130d4f6f23",
+      "bytes": 2640,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/IDLE.png",
+      "sha256": "1366cb8a3441b6459db46d3c69f7bbd6bc097acc07f7b42e4585ebf29a25a2bb",
+      "bytes": 3646,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/WALK.png",
+      "sha256": "d8c96e5cf30ab425d0029c8a6b4f586f73abedc6600ad5356aaabd44b466b2ad",
+      "bytes": 5841,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ARROW.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ARROW.png",
+      "sha256": "09dc8e6f5f471e43ace06bf428275a01b62df7de5526e8f38c42d74cd041b859",
+      "bytes": 215,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
+      "sha256": "1522b2ccb672670167bcf807acff4d0372c41f7df8b1eb253dc54e1e7bd6e2cb",
+      "bytes": 8003,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png",
+      "sha256": "386c84dfefd7b07ed78f43614e32473446a93d02adfc1e601a6eec64ecf63295",
+      "bytes": 8676,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png",
+      "sha256": "b48ec343b96e2bde15fbdf20a4e86be5948054e04afcf20e53edcc1737ffb8b3",
+      "bytes": 5188,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png",
+      "sha256": "eb7b3b3c6090e351e73ff37ed2262fbe682058b415fdd073f69cd3d62f902647",
+      "bytes": 6362,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png",
+      "sha256": "f94e7758d6d969b152a385aaf4217ed19e88f8e776dace8412d7bd3421902e68",
+      "bytes": 5955,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 1.png",
+      "sha256": "f13e201bc19803fc12db69a39bb181ecd5a5c4db7ba43d3612990b1a3a3e8e27",
+      "bytes": 5704,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 2.png",
+      "sha256": "6484227b75a99e3932930b93b3f16437f87f33cd0ef6a4c78e78e50cc3b083eb",
+      "bytes": 6093,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/DEATH.png",
+      "sha256": "8191ec017b335bf0c5ba8839383bc6705eb31a6f5180eaf04aa11bbe5bda3d1e",
+      "bytes": 5514,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/HURT.png",
+      "sha256": "5936d94d23e07f3c92d51a363508fecd698d35f5f5cde21541017c99af5bf797",
+      "bytes": 4736,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/IDLE.png",
+      "sha256": "ea6650e8cb72bbb62ef11cc4b0edf6cccd5adcc2bf38592e23a955cc81251d5d",
+      "bytes": 4207,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/WALK.png",
+      "sha256": "381cd3c1e451957edb28674a809d82f894bc63a5085bd8f3441a9a3d78ffeb0c",
+      "bytes": 4931,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/ATTACK.png",
+      "sha256": "3b33685fe2b4b2836b8873024584e851ce17cf59b9530db91890ca5312b07325",
+      "bytes": 22392,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/DEATH.png",
+      "sha256": "68eddd78db9c8e0140345a8485b50fa252314e1005488578b42a64c0b8c924fa",
+      "bytes": 14246,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/HURT.png",
+      "sha256": "388af44246861b4d8de4c46b225d12767ce283b20e1b69bb186688ff9230d8c4",
+      "bytes": 7989,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/IDLE.png",
+      "sha256": "275de20b46a6371228e80471ce0500a0dab3b5103e99e9922d9d6ed0eea5188d",
+      "bytes": 9089,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/WALK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/WALK.png",
+      "sha256": "f48c2f8f3348544def94050c850b866e9d36333bb2553e0690d10d390bee00e2",
+      "bytes": 11075,
+      "license": "res://assets/runtime/licenses/LICENSE-b26d3d0797a9.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK1.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK1.png",
+      "sha256": "970cab0849f47e09a79ffd7f2903be94dac7b8144c76e34d031fcc53db197a3d",
+      "bytes": 9049,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK2.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK2.png",
+      "sha256": "772560fb016941f6dbce1839183836f9241df5c4f231d977f164a37019fc4196",
+      "bytes": 6923,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/DEATH.png",
+      "sha256": "56e7c864c6982942882feec9d62087585bb0d8b7c4798efce905d1c901c2b11b",
+      "bytes": 10288,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/HURT.png",
+      "sha256": "3c914aa364e9d8e6eeea3b1451bc1138c350fda035e3cf783333ade0f5137a71",
+      "bytes": 7446,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE HUMAN.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE HUMAN.png",
+      "sha256": "98dab2f293a7d7911930c56af714a987439fc4ac3c898452894f0dd6b8eaed54",
+      "bytes": 4013,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE.png",
+      "sha256": "ba988a4df7574c615fd4df8b7d4682e9143756821d22a5cb545517a0e04976a1",
+      "bytes": 5355,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/RUN.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/RUN.png",
+      "sha256": "4ab82658c018810c6c6f7fbd2d73434ba024207358e4b1b7ab1b8939a716cbd6",
+      "bytes": 8279,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/TRANSFORMATION.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/TRANSFORMATION.png",
+      "sha256": "47c6351b8cadd9b5f47412314ef9a410c3afd900612922efd85e411a2df3c1ad",
+      "bytes": 10661,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Witch/Sprite/ATTACK.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Witch/Sprite/ATTACK.png",
+      "sha256": "7111909f7877e9262b3cc02d500ed5b90e66c9d850206cc466b5555f049acacc",
+      "bytes": 9206,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Witch/Sprite/DEATH.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Witch/Sprite/DEATH.png",
+      "sha256": "75d270b8fbfa28e5f90c1024ccd77854b4cfe11d6f4c2f186c56b28e302d17a5",
+      "bytes": 6793,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Witch/Sprite/HURT.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Witch/Sprite/HURT.png",
+      "sha256": "f86e78c83a77ae062856aadf3edbef1e21b4566ad7187e4058489e83c213a4fb",
+      "bytes": 3643,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Witch/Sprite/IDLE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Witch/Sprite/IDLE.png",
+      "sha256": "fb0095c92e8848f7cfec7fffbeac98f9d631248b8e198daa8157b0945a0a06a3",
+      "bytes": 6655,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Witch/Sprite/MOVE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Witch/Sprite/MOVE.png",
+      "sha256": "23e6fbe9422e275d3011c29b4699897b71423c5bb407d64dd64ff48a0cc73359",
+      "bytes": 6362,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Enemies/Witch/Sprite/PROJECTILE.png",
+      "source_path": "res://Characters/Enemies/SourceArt/Witch/Sprite/PROJECTILE.png",
+      "sha256": "258102fa5454c2feb9ea6bb98f7585092046f10bbff7f26e44834f79f03e7b0a",
+      "bytes": 731,
+      "license": "res://assets/runtime/licenses/LICENSE-252e74b6a90a.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/Player/Female Fighter/Player 96X96 (1).png",
+      "source_path": "res://Characters/Player/SourceArt/Female Fighter/Player 96X96 (1).png",
+      "sha256": "629e36f2184c4bd717a11552daa646f63c1fd46413387e0eb37ba0ef7fcc0ccc",
+      "bytes": 36654,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
+      "sha256": "8f674072658b2274528f0224cb5df43cc52512532ca5a3e4e94d7abffc6bd8d0",
+      "bytes": 6328781,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/2. Soulrend Sovereign (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/2. Soulrend Sovereign (Loop).ogg",
+      "sha256": "23fc3a3d397fe21333660542b880e6c3815e3ee4258512e1731057866cf20d96",
+      "bytes": 5734133,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg",
+      "sha256": "24794ae17cae30dbe9106be256752890c9f394ba5e6fdeb9d7ee5dda3f255d33",
+      "bytes": 5075626,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg",
+      "sha256": "ba8b7dd2805b582a0de4094b0a92cd930fa8b33e880ab21acdda7c5c02a9f563",
+      "bytes": 5233453,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 1 .ogg",
+      "source_path": "res://Music/Library/Robot Factory/Mega Robot Factory – 1 .ogg",
+      "sha256": "a786cc9e09c21283bd082ca357fd9b068f142149b2f9a41c0d1c1de677c4ff40",
+      "bytes": 2896205,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 2 .ogg",
+      "source_path": "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg",
+      "sha256": "d0b1b8f5970ae5f3c04b66faf1f94e9d48dd49dffda9d144642fdb80bd01700d",
+      "bytes": 3439737,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Rooftops 2/cyberpunk city 2.ogg",
+      "source_path": "res://Music/Library/Rooftops 2/cyberpunk city 2.ogg",
+      "sha256": "b470d4c7229850b43bb5651ae3b48617537f861abc2ccb835c1cea486302f38e",
+      "bytes": 1557518,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Rooftops/Cyberpunk Rooftops.ogg",
+      "source_path": "res://Music/Library/Rooftops/Cyberpunk Rooftops.ogg",
+      "sha256": "8bdc36c5df6fcfdb618658cca78d55aec8b29a5db5702d55dd18b5b9a4d8896f",
+      "bytes": 5001228,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg",
+      "source_path": "res://Music/Library/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg",
+      "sha256": "4e746226e8653897961a8fe21488cb5b5fc7d64eec56bf98ec7082d2dc2f2619",
+      "bytes": 1728581,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/back.png",
+      "source_path": "res://Parallax/SourceArt/Moonlight City/Assets/layers/back.png",
+      "sha256": "36158e77aec2fe1f1ad301d2030dc9cf90c06f5d144ba020143793725d2197fe",
+      "bytes": 3640,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/front.png",
+      "source_path": "res://Parallax/SourceArt/Moonlight City/Assets/layers/front.png",
+      "sha256": "3fa0ee8db21e46ba8e321e0921554efe55e5e742b950077501ea6a41370a6437",
+      "bytes": 1623,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/middle.png",
+      "source_path": "res://Parallax/SourceArt/Moonlight City/Assets/layers/middle.png",
+      "sha256": "92981234fd5cfa820a139e3fc899f3b0db24256a2ab567035a1b5e849ac6a90d",
+      "bytes": 1007,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/back.png",
+      "source_path": "res://Parallax/SourceArt/Neon Alley/Assets/layers/back.png",
+      "sha256": "2b16469cb7a8299ec66523c75ae0d9e5608ddbd0a08a0123903365a7977a4b71",
+      "bytes": 1487,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/front.png",
+      "source_path": "res://Parallax/SourceArt/Neon Alley/Assets/layers/front.png",
+      "sha256": "56d6b79da68cf3f929deb6331559fe784c14d6e9f6e2884fdac4e9cf4da5a3be",
+      "bytes": 6169,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/middle.png",
+      "source_path": "res://Parallax/SourceArt/Neon Alley/Assets/layers/middle.png",
+      "sha256": "152e3f168ff87099a1a8d71acdf4c84702bd586a070f7b4600c005fd7d24ee4c",
+      "bytes": 5511,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Rooftops 2/back.png",
+      "source_path": "res://Parallax/SourceArt/Rooftops 2/back.png",
+      "sha256": "22a367be0c5571f28df0149acad57a3ff7613bd3e51b9207a8647a7b2f6884de",
+      "bytes": 2372,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Rooftops 2/front.png",
+      "source_path": "res://Parallax/SourceArt/Rooftops 2/front.png",
+      "sha256": "4d76cc40cf523efc113ffa1abe1966b6bc5d15c72f0fbd5f39c9b0c4e8ea092e",
+      "bytes": 5114,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/parallax/Rooftops 2/middle.png",
+      "source_path": "res://Parallax/SourceArt/Rooftops 2/middle.png",
+      "sha256": "6d55df21301ade991e514c49ec4d63c3975d7e18bd72e4a4ffc12edb15c61be1",
+      "bytes": 2393,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/brass1.mp3",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/brass1.mp3",
+      "sha256": "b3133ef17d7afa5389f83369810c4d677b9c6088fcddd0b5202a6a30b752024b",
+      "bytes": 149490,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
+      "sha256": "5d82c6c6ddfed49ce4598c1f93a83926effcb8807fc03a3bc7f58fe27299f0a7",
+      "bytes": 9568,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
+      "sha256": "bb8568f84710f5243872ab697ca2eac2ed2324cc4ddbaede32bf6920ccb5912b",
+      "bytes": 41638,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
+      "sha256": "a71f4c2485747263f105643341615e952b1d5574b87b07d276339ec52b6f96bb",
+      "bytes": 10405,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
+      "sha256": "55844887cc3185051953d9d1acd19424aa054509cf054e7d3fb3405e19798923",
+      "bytes": 76347,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
+      "sha256": "6a883ecdc07688cd0dd490b940e8b629cae7e590ed7f956684cab12f29b4f11d",
+      "bytes": 27060,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Transition.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Transition.ogg",
+      "sha256": "27a360a578a0fc5e47452da3475c47059d6ad4246e2c69ac2a30cb25d0a8c74e",
+      "bytes": 74408,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
+      "sha256": "84f955481dabf0c9187abaddb17f74a3f8adbde3e5a6012bef16cebedcfe3a5a",
+      "bytes": 42120,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
+      "sha256": "8601eee453d8b2408694a488f6babddbc25694aa57fc5e725ec0371bc6be03e2",
+      "bytes": 10118,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
+      "sha256": "93ae50f49d6e0cb74e753a1834b7414e0d040d163a7e97189f7d3de3bfda58a6",
+      "bytes": 7935,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin1.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin1.png",
+      "sha256": "e36dac3fa55bda0c3c9c96210b198c6c8ee3089fb8e463c963b6d1a26b2e1143",
+      "bytes": 251,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin2.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin2.png",
+      "sha256": "18cd3e1820b66472ea685a88126b90817de9da278d563617c1541aedcbfa7e6d",
+      "bytes": 254,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin3.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin3.png",
+      "sha256": "53b86345e2a8864674a54e2b5f9974603885a4543ca2e62fb483bd5e4c3d3814",
+      "bytes": 265,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin4.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin4.png",
+      "sha256": "82f48e8b9a1a9dc1eb8a0512d809903a269d5ae6c0d223803d7caa90c1e57b9f",
+      "bytes": 271,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin5.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin5.png",
+      "sha256": "f34dae8880ea875db56f8e138a90e70342d8e2280968e37b57b84badaa64f6b0",
+      "bytes": 266,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin6.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin6.png",
+      "sha256": "64e2d739aa59479fe708d46cfd154d8d96f1c4a129c43fc41fa7f4865c52bd42",
+      "bytes": 268,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin7.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin7.png",
+      "sha256": "80ec513dbdc7146670382e6422207efbd51b737cd3ab2f3ae54c4bae94256184",
+      "bytes": 262,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Cyber City/Coin/coin8.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Cyber City/Coin/coin8.png",
+      "sha256": "0eefa7f680dccf3615063c09feeae461c9def15100ca58897bfd309492bd44b0",
+      "bytes": 252,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-a/banner-a1.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-a/banner-a1.png",
+      "sha256": "b3e833fba8fe8fcfcd904c8e9dd4c22f83f10a6437ec2ed38ef133cec6f6df4b",
+      "bytes": 1051,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-c/banner-c1.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-c/banner-c1.png",
+      "sha256": "e810d87c961522455277922c81233ec08a432b302623efd4cb1969bd1be326be",
+      "bytes": 1041,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-c/banner-c2.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-c/banner-c2.png",
+      "sha256": "ba3762ef9a9a36dd4e1c1d12e5e1872078c17d2bca1b1ae957d7e3206672c913",
+      "bytes": 1040,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-e/banner-e1.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-e/banner-e1.png",
+      "sha256": "0982763433b35ffe55a5ff5159e1b3eaddab46f827ca07e3d4c893ee8011c973",
+      "bytes": 461,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Rooftops 2/lights/lights1.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/lights/lights1.png",
+      "sha256": "c2d660b103f05f11a8f90069f5f5e60194e7d68772ec0ce9b68898bf1fc7f7c7",
+      "bytes": 977,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/CyberCityProps/Rooftops 2/lights/lights2.png",
+      "source_path": "res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/lights/lights2.png",
+      "sha256": "44cc062ac7ec0a3516caae183dd64baa07e1e5f7bb82ed7cb4a683e6c79140dc",
+      "bytes": 1033,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/FactoryProps/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png",
+      "source_path": "res://Stage Props/FactoryProps/SourceArt/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png",
+      "sha256": "21a80d3481709544ffb390479cfbb63bb53634b40565fae158a0764082e24282",
+      "bytes": 34072,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/LunarProps/Neon Moon Portal/portal 96x96(1).png",
+      "source_path": "res://Stage Props/LunarProps/SourceArt/Neon Moon Portal/portal 96x96(1).png",
+      "sha256": "c064bcba45cff5aa5b516916008ca12cb33d4e355fb980d989b2696a2decded5",
+      "bytes": 12727,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/LunarProps/Space Props/Space extra (1).png",
+      "source_path": "res://Stage Props/LunarProps/SourceArt/Space Props/Space extra (1).png",
+      "sha256": "9a2bc4a92f8de3b85dc7a16c48b90a6cf869d1ebbb2a9a260be6e84137cdd0e2",
+      "bytes": 2414,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/LunarProps/Space Props/space extra (125).png",
+      "source_path": "res://Stage Props/LunarProps/SourceArt/Space Props/space extra (125).png",
+      "sha256": "1062abe3ff206f5519b34c23775bfba4f3216ca254afb67c1a8d0752d3b9b774",
+      "bytes": 5483,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/LunarProps/Space Props/space extra (154).png",
+      "source_path": "res://Stage Props/LunarProps/SourceArt/Space Props/space extra (154).png",
+      "sha256": "8662e908e5ef191f15414634d69c5859a5bb12febbc956172f66f5841f4dff71",
+      "bytes": 5375,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/VoidProps/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png",
+      "source_path": "res://Stage Props/VoidProps/SourceArt/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png",
+      "sha256": "dc552d8acad9e309ad730896421e5b271bc50d505fe98a07fbd2a8ed0d317fbd",
+      "bytes": 38386,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
+      "sha256": "d31e0f25979b0e618f8967ae95733c4586e62c573fa6a31a7be5d5cdd1b074f0",
+      "bytes": 2907,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
+      "sha256": "5f864043698b0ace8bb66600c2a4d077cd5b6cba2e45bae6e0b6cb0912c0dbaf",
+      "bytes": 8200,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
+      "sha256": "75f499df4a9e93da4832ea8ebf56702717d793d8034f9d4592162819b8df5b83",
+      "bytes": 14884,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
+      "sha256": "51f009878f5ef88ec4459d6cb03bd0ccb45b9ca91ca69b09b9b1dbec1104b626",
+      "bytes": 2269,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
+      "sha256": "ff444823bd55efec4122f15d311b07ffe10adc3a8c8657d50c29edd19a2788ae",
+      "bytes": 4510,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops 2/Environment/tileset.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Rooftops 2/Environment/tileset.png",
+      "sha256": "280ba562ff7fbd7e478ddcea34e7da143db1eb5c8dd5e2e80a5493da02ec6b9d",
+      "bytes": 10314,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops/Terrain/Terrain.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Rooftops/Terrain/Terrain.png",
+      "sha256": "eddb896f9d39e68cd23f36c02428754785d576a56d35f346aede87322c5f1797",
+      "bytes": 65338,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
+      "source_path": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
+      "sha256": "c3c7bb4e7a9f6d6f3e9ec428ef48d8167a82ee9b931ea8883b6c0d077183faec",
+      "bytes": 27899,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
+      "source_path": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
+      "sha256": "229d71d2fd80087aacbcacad7a152d089dca45386dd887fcb25641e111120966",
+      "bytes": 33254,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
+      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
+      "sha256": "84729eb62d2a866c52d1b0ec291be6ddf627cfe056a62e8b7b52590e7ed127a3",
+      "bytes": 127000,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
+      "sha256": "9c897be01e01cb5468260d7ce13b7ad70778e0fe67c49e53fd9595abf51eaa82",
+      "bytes": 38233,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png",
+      "sha256": "9822dfeb94df03f1c1ad244875ba185288ea235f828d92de1e28828ffa677940",
+      "bytes": 21133,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png",
+      "sha256": "f70c77f4c7de910ebf1b0dfb3c3c3d0694fc16ce5f0b6ca93e6340e848430d86",
+      "bytes": 33380,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
+      "sha256": "bdc4424b1d9e97b18593ff001a19f69e25b675e7f43cfd9ba61ad87153776ef5",
+      "bytes": 122844,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/vfx/Pack 6/PNG sheet/Effect (1)-Sheet.png",
+      "source_path": "res://VFX/SourceArt/Pack 6/PNG sheet/Effect (1)-Sheet.png",
+      "sha256": "c4d0ef3eaced73d1f8b371f028e85675e2dfbbd8fdc5eab35a7ac0adccda0344",
+      "bytes": 2853,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    }
+  ],
+  "license_sources": {
+    "LICENSE-b26d3d0797a9.txt": "Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/License.txt",
+    "LICENSE-252e74b6a90a.txt": "Characters/Enemies/SourceArt/Witch/License.txt",
+    "LICENSE-6799bb902d83.txt": "Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/License.txt",
+    "LICENSE-a9c85bdb4b11.txt": "Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/License.txt",
+    "LICENSE-0ddffeed82b7.txt": "VFX/SourceArt/Pack 6/license.txt"
+  }
+}

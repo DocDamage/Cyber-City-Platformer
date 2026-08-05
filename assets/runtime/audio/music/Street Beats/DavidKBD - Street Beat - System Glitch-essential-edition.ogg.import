@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcwdwhs1lj7ad"
+path="res://.godot/imported/DavidKBD - Street Beat - System Glitch-essential-edition.ogg-0e4b5b864a28058dde3335a1d3970914.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/runtime/audio/music/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Street Beat - System Glitch-essential-edition.ogg-0e4b5b864a28058dde3335a1d3970914.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1mvvtu78nt8s"
+path="res://.godot/imported/Woosh_1.ogg-39fa7f6c159a736b9863bd595ba0f910.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg"
+dest_files=["res://.godot/imported/Woosh_1.ogg-39fa7f6c159a736b9863bd595ba0f910.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
