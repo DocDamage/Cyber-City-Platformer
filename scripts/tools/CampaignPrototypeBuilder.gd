@@ -1,7 +1,8 @@
 extends SceneTree
 
 const MANIFEST_PATH := "res://Stages/campaign_manifest.json"
-const BASE_SCENE_PATH := "res://Stages/PrototypeStage.tscn"
+const BASE_SCENE_PATH := "res://tools/stage_builder/PrototypeStage.tscn"
+const PRODUCTION_STAGE_SCRIPT := preload("res://scripts/campaign/CampaignStage.gd")
 const ENEMY_SCENE_ROOT := "res://Characters/Enemies/Scenes"
 const CHECKPOINT_SCENE_PATH := "res://scenes/CheckpointTerminal.tscn"
 const STAGE_EXIT_SCENE_PATH := "res://scenes/StageExit.tscn"
@@ -153,7 +154,7 @@ func _build_stage(
 	root.set("campaign_act", act_number)
 	root.set("stage_id", StringName(stage_id))
 	root.set("stage_title", String(stage.get("name", "Unnamed Stage")))
-	root.set("design_notes", "Layout pass: %s\nPainted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish." % ", ".join(stage.get("assets", [])))
+	root.set("design_notes", "Builder preview: %s" % ", ".join(stage.get("assets", [])))
 
 	var visuals: Dictionary = ACT_VISUALS[act_number]
 	root.set("far_background", load(String(visuals.far)) as Texture2D)
@@ -178,6 +179,10 @@ func _build_stage(
 	_place_props(root, act_number, stage_number, ground_top)
 	_place_enemies(root, stage_id, stage_number, ground_top, used_enemy_ids)
 	_place_gameplay_markers(root, stage_id, ground_top, next_scene_path)
+	var design_guide := root.get_node_or_null("DesignGuide")
+	if design_guide != null:
+		design_guide.free()
+	root.set_script(PRODUCTION_STAGE_SCRIPT)
 
 	var scene_path := String(stage.get("scene", ""))
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(scene_path.get_base_dir()))

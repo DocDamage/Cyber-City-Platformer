@@ -1,6 +1,8 @@
 class_name StageController
 extends Node
 
+const COLLECTIBLE_SCENE := preload("res://scenes/Collectible.tscn")
+
 signal initialized(stage_id: String)
 signal objectives_completed(stage_id: String)
 
@@ -27,6 +29,8 @@ func _ready() -> void:
 	stage_exit = stage.get_stage_exit()
 	_configure_camera()
 	_connect_exit()
+	_start_music()
+	_ensure_collectibles()
 	installed_mechanics = StageMechanicFactory.install(stage, metadata)
 	_build_standard_encounters()
 	_register_boss_or_encounters()
@@ -92,6 +96,54 @@ func _connect_exit() -> void:
 		return
 	if not stage_exit.entered.is_connected(_on_exit_entered):
 		stage_exit.entered.connect(_on_exit_entered)
+
+
+func _start_music() -> void:
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager == null:
+		return
+	var act_number := int(metadata.get("act", stage.stage_act))
+	var completion: Dictionary = metadata.get("completion_target", {})
+	if String(completion.get("type", "encounters")) == "boss":
+		audio_manager.call(&"play_boss_bgm", act_number)
+	else:
+		audio_manager.call(&"play_bgm", act_number)
+
+
+func _ensure_collectibles() -> void:
+	var expected := maxi(int(metadata.get("collectible_count", 0)), 0)
+	var collectibles: Array[Collectible] = []
+	for node: Node in get_tree().get_nodes_in_group(&"collectibles"):
+		if stage.is_ancestor_of(node) and node is Collectible:
+			collectibles.append(node as Collectible)
+	var parent := stage.find_child("Collectibles", true, false)
+	if parent == null:
+		parent = Node2D.new()
+		parent.name = "Collectibles"
+		stage.add_child(parent)
+	var bounds: Array = metadata.get("camera_bounds", [0, 0, 1408, 540])
+	while collectibles.size() < expected:
+		var collectible := COLLECTIBLE_SCENE.instantiate() as Collectible
+		var index := collectibles.size()
+		collectible.pickup_id = StringName("%s_collectible_%02d" % [get_stage_id(), index + 1])
+		parent.add_child(collectible)
+		collectible.global_position = Vector2(
+			lerpf(float(bounds[0]) + 220.0, float(bounds[2]) - 220.0, float(index + 1) / float(expected + 1)),
+			_encounter_floor_y() - 105.0 - (index % 2) * 48.0,
+		)
+		collectibles.append(collectible)
+	var manager := get_node_or_null("/root/GameManager")
+	for collectible: Collectible in collectibles:
+		if manager != null and manager.call(&"is_pickup_collected", stage.scene_file_path, collectible.pickup_id):
+			collectible.queue_free()
+		elif not collectible.collected.is_connected(_on_collectible_collected):
+			collectible.collected.connect(_on_collectible_collected)
+
+
+func _on_collectible_collected(pickup_id: StringName, value: int) -> void:
+	var manager := get_node_or_null("/root/GameManager")
+	if manager != null:
+		manager.call(&"collect_pickup", stage.scene_file_path, pickup_id, value)
 
 
 func _register_boss_or_encounters() -> void:

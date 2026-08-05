@@ -43,6 +43,13 @@ func _run() -> void:
 			var controller := stage.runtime_controller
 			if not _require(controller != null, "Stage %s has no runtime controller." % stage_id):
 				return
+			if not _require(stage.find_child("DesignGuide", true, false) == null, "Stage %s still ships a prototype design guide." % stage_id):
+				return
+			if not _require(_count_descendants_in_group(stage, &"checkpoints") >= int(metadata.get("expected_checkpoints", 0)), "Stage %s is missing checkpoints." % stage_id):
+				return
+			var collectible_count := _count_descendants_in_group(stage, &"collectibles")
+			if not _require(collectible_count == int(metadata.get("collectible_count", 0)), "Stage %s collectible count differs from metadata: %d." % [stage_id, collectible_count]):
+				return
 			var player := stage.get_player() as CharacterBody2D
 			var camera := player.get_node_or_null("Camera2D") as DynamicCamera
 			var values: Array = metadata.get("camera_bounds", [])

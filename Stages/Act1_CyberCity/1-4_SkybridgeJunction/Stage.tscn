@@ -1,6 +1,6 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_t6q2k"]
+[ext_resource type="Script" path="res://scripts/campaign/CampaignStage.gd" id="1_t6q2k"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Rooftops 2/back.png" id="2_rcflj"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Rooftops 2/middle.png" id="3_p25id"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Rooftops 2/front.png" id="4_1oycf"]
@@ -35,36 +35,10 @@ fill_to = Vector2(1, 0.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhdqc"]
 size = Vector2(5500, 140)
 
-[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
-bg_color = Color(0.025, 0.035, 0.09, 0.92)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.1, 0.85, 1, 0.9)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
-bg_color = Color(0.05, 0.15, 0.28, 0.88)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.2, 0.9, 1, 0.75)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
 [node name="SkybridgeJunction" type="Node2D" unique_id=1115666162]
 script = ExtResource("1_t6q2k")
 stage_id = &"1-4"
 stage_title = "Skybridge Junction"
-design_notes = "Layout pass: Rooftop bridges, industrial pipes, control panels, spring platforms
-Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
 music_path = "res://assets/runtime/audio/music/Rooftops 2/cyberpunk city 2.ogg"
 far_background = ExtResource("2_rcflj")
 middle_background = ExtResource("3_p25id")
@@ -238,43 +212,3 @@ shape = SubResource("RectangleShape2D_jhdqc")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=161567111 instance=ExtResource("19_djtyh")]
 layer = 20
 
-[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1293786177]
-layer = 90
-
-[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=540016881]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 520.0
-offset_bottom = 142.0
-theme_override_styles/panel = SubResource("StyleBox_guide")
-
-[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=1651868425]
-layout_mode = 2
-theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 10
-
-[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1574708010]
-layout_mode = 2
-theme_override_constants/separation = 5
-
-[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=830970441]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
-theme_override_font_sizes/font_size = 18
-text = "1-4  |  Skybridge Junction"
-
-[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=762021266]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
-theme_override_font_sizes/font_size = 12
-text = "Layout pass: Rooftop bridges, industrial pipes, control panels, spring platforms
-Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-autowrap_mode = 2
-
-[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=744019745]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBox_tag")
-text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
-horizontal_alignment = 1

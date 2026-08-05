@@ -1,6 +1,6 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_mmugk"]
+[ext_resource type="Script" path="res://scripts/campaign/CampaignStage.gd" id="1_mmugk"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_0b4jr"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_pqipf"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_to3r0"]
@@ -33,37 +33,11 @@ fill_to = Vector2(1, 0.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbqcr"]
 size = Vector2(5500, 140)
 
-[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
-bg_color = Color(0.025, 0.035, 0.09, 0.92)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.1, 0.85, 1, 0.9)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
-bg_color = Color(0.05, 0.15, 0.28, 0.88)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.2, 0.9, 1, 0.75)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
 [node name="TheDarkChasm" type="Node2D" unique_id=216455971]
 script = ExtResource("1_mmugk")
 campaign_act = 4
 stage_id = &"4-2"
 stage_title = "The Dark Chasm"
-design_notes = "Layout pass: Floating void platforms, bottomless pits
-Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
 music_path = "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
 far_background = ExtResource("2_0b4jr")
 middle_background = ExtResource("3_pqipf")
@@ -253,43 +227,3 @@ shape = SubResource("RectangleShape2D_vbqcr")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1513104742 instance=ExtResource("17_23kjk")]
 layer = 20
 
-[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1006822996]
-layer = 90
-
-[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=250091853]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 520.0
-offset_bottom = 142.0
-theme_override_styles/panel = SubResource("StyleBox_guide")
-
-[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=1636181892]
-layout_mode = 2
-theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 10
-
-[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1178246867]
-layout_mode = 2
-theme_override_constants/separation = 5
-
-[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=299856247]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
-theme_override_font_sizes/font_size = 18
-text = "4-2  |  The Dark Chasm"
-
-[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1804124452]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
-theme_override_font_sizes/font_size = 12
-text = "Layout pass: Floating void platforms, bottomless pits
-Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-autowrap_mode = 2
-
-[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=2143602040]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBox_tag")
-text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
-horizontal_alignment = 1

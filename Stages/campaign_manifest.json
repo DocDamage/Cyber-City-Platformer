@@ -43,7 +43,7 @@
             540
           ],
           "par_time": 185,
-          "collectible_count": 3,
+          "collectible_count": 5,
           "encounter_count": 2,
           "unlock_dependencies": [],
           "enemy_roster": [
@@ -276,7 +276,7 @@
             540
           ],
           "par_time": 215,
-          "collectible_count": 3,
+          "collectible_count": 5,
           "encounter_count": 2,
           "unlock_dependencies": [
             "1-5"

@@ -30,10 +30,6 @@ func _ready() -> void:
 	super()
 	_apply_campaign_background()
 	_paint_rooftop_layout()
-	_connect_collectibles()
-	var audio_manager := get_node_or_null("/root/AudioManager")
-	if audio_manager != null:
-		audio_manager.call(&"play_bgm", 1)
 
 
 func _apply_campaign_background() -> void:
@@ -79,22 +75,3 @@ func _paint_rooftop(start_x: int, end_x: int, y: int) -> void:
 			atlas_coordinates = ROOF_RIGHT
 		terrain.set_cell(Vector2i(x, y), 0, atlas_coordinates)
 
-
-func _connect_collectibles() -> void:
-	for node in get_tree().get_nodes_in_group(&"collectibles"):
-		if not is_ancestor_of(node):
-			continue
-		var collectible := node as Collectible
-		if collectible == null:
-			continue
-		var manager := get_node_or_null("/root/GameManager")
-		if manager != null and manager.call(&"is_pickup_collected", scene_file_path, collectible.pickup_id):
-			collectible.queue_free()
-		elif not collectible.collected.is_connected(_on_collectible_collected):
-			collectible.collected.connect(_on_collectible_collected)
-
-
-func _on_collectible_collected(pickup_id: StringName, value: int) -> void:
-	var manager := get_node_or_null("/root/GameManager")
-	if manager != null:
-		manager.call(&"collect_pickup", scene_file_path, pickup_id, value)

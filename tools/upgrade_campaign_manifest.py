@@ -63,7 +63,7 @@ def main() -> int:
                         540 if is_bespoke_short_stage else 720,
                     ],
                     "par_time": par_time,
-                    "collectible_count": 3,
+                    "collectible_count": 5 if stage_id in {"1-1", "2-1"} else 3,
                     "encounter_count": 1 if is_boss else 2,
                     "unlock_dependencies": [previous_id] if previous_id else [],
                     "enemy_roster": roster,

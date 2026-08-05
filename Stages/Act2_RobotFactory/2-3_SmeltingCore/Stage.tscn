@@ -1,6 +1,6 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_bkyty"]
+[ext_resource type="Script" path="res://scripts/campaign/CampaignStage.gd" id="1_bkyty"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/back.png" id="2_bv7fq"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/middle.png" id="3_jkf3c"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/front.png" id="4_p16w0"]
@@ -33,37 +33,11 @@ fill_to = Vector2(1, 0.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87lrl"]
 size = Vector2(5500, 140)
 
-[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
-bg_color = Color(0.025, 0.035, 0.09, 0.92)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.1, 0.85, 1, 0.9)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
-bg_color = Color(0.05, 0.15, 0.28, 0.88)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.2, 0.9, 1, 0.75)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
 [node name="SmeltingCore" type="Node2D" unique_id=1184196441]
 script = ExtResource("1_bkyty")
 campaign_act = 2
 stage_id = &"2-3"
 stage_title = "Smelting Core"
-design_notes = "Layout pass: Laser grids, steam vents, orange PointLight2D nodes
-Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
 music_path = "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 2 .ogg"
 far_background = ExtResource("2_bv7fq")
 middle_background = ExtResource("3_jkf3c")
@@ -252,43 +226,3 @@ shape = SubResource("RectangleShape2D_87lrl")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=906194473 instance=ExtResource("17_34taa")]
 layer = 20
 
-[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1880291623]
-layer = 90
-
-[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=92735362]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 520.0
-offset_bottom = 142.0
-theme_override_styles/panel = SubResource("StyleBox_guide")
-
-[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=136129583]
-layout_mode = 2
-theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 10
-
-[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=342192647]
-layout_mode = 2
-theme_override_constants/separation = 5
-
-[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1686108007]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
-theme_override_font_sizes/font_size = 18
-text = "2-3  |  Smelting Core"
-
-[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=242515750]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
-theme_override_font_sizes/font_size = 12
-text = "Layout pass: Laser grids, steam vents, orange PointLight2D nodes
-Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-autowrap_mode = 2
-
-[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1980270053]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBox_tag")
-text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
-horizontal_alignment = 1
