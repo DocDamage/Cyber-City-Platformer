@@ -32,6 +32,6 @@ This document maps the completion plan to committed production evidence. Command
 - GitHub Actions defines import, resource, unit, systems/shell, campaign, and Windows-export jobs using official Godot 4.7.1 artifacts and Git LFS.
 - The Windows preset excludes tests, builders, editor plugin, completion plan, local source mirrors, and developer-only manifests.
 - The release tool rejects forbidden PCK markers/machine paths/dirty release trees, packages all required files and licenses, and records source/artifact hashes.
-- A freshly extracted `1.0.0-rc.1` package launched headlessly with exit code 0 on 2026-08-04. The same clean-clone/export/extraction gate is required for `1.0.0-rc.2` before handoff.
+- Clean clone `2fa1ab023d3f18c8c9120774b29bbf2cf1c8aced` passed the 392-dependency inventory and all 18 strict tests on 2026-08-04. Its `1.0.0-rc.2` Windows export passed forbidden-content packaging, extracted successfully, and launched headlessly with no engine errors.
 
 `docs/RELEASE_CHECKLIST.md` deliberately keeps physical input/display/performance observations and the remote green CI run separate. Those gates cannot be truthfully replaced by headless automation.

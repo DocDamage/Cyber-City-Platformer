@@ -4,6 +4,8 @@ Candidate: `1.0.0-rc.2`
 
 Engine: Godot `4.7.1.stable.official.a13da4feb`
 
+Automated implementation evidence: clean clone `2fa1ab023d3f18c8c9120774b29bbf2cf1c8aced`; final tagged source SHA is recorded by the package in `BUILD_INFO.json`.
+
 ## Automated and packaging gates
 
 - [x] Clean clone imports and launches.
