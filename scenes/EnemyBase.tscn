@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="1_enemy"]
 [ext_resource type="Script" path="res://scripts/Hurtbox.gd" id="2_hurtbox"]
@@ -14,6 +14,9 @@ size = Vector2(28, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape_contact"]
 size = Vector2(24, 36)
+
+[sub_resource type="CircleShape2D" id="CircleShape_detection"]
+radius = 190.0
 
 [sub_resource type="Gradient" id="Gradient_enemy"]
 offsets = PackedFloat32Array(0, 0.4, 1)
@@ -44,8 +47,7 @@ shape = SubResource("RectangleShape_body")
 [node name="Hurtbox" type="Area2D" parent="."]
 position = Vector2(0, -22)
 collision_layer = 8
-collision_mask = 0
-monitoring = false
+collision_mask = 4
 script = ExtResource("2_hurtbox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
@@ -73,6 +75,15 @@ position = Vector2(0, -16)
 enabled = true
 target_position = Vector2(-18, 0)
 collision_mask = 1
+
+[node name="DetectionArea" type="Area2D" parent="."]
+position = Vector2(0, -20)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape_detection")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, -26)

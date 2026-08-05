@@ -17,7 +17,7 @@ const DASH_DURATION := 0.16
 const DASH_COST := 30.0
 const SHOT_COST := 12.0
 const ENERGY_REGENERATION := 22.0
-const BULLET_SCENE := preload("res://scenes/Bullet.tscn")
+const BULLET_SCENE := preload("res://scenes/Player/Bullet.tscn")
 const DUST_VFX := preload("res://scenes/vfx/DustBurst.tscn")
 
 @export var max_health := 5
@@ -44,6 +44,7 @@ var _player_sheet: Texture2D
 @onready var muzzle: Marker2D = $Muzzle
 @onready var melee_hitbox: Hitbox = $MeleeHitbox
 @onready var game_camera: DynamicCamera = $Camera2D
+@onready var wall_slide_dust: GPUParticles2D = $WallSlideDust
 
 
 func _ready() -> void:
@@ -75,6 +76,7 @@ func _physics_process(delta: float) -> void:
 		_start_dash()
 
 	if dash_time_remaining > 0.0:
+		_set_wall_slide_dust(false)
 		velocity = Vector2(facing_direction * DASH_SPEED, 0.0)
 		move_and_slide()
 		if not was_on_floor and is_on_floor():
@@ -97,6 +99,7 @@ func _physics_process(delta: float) -> void:
 			var wall_normal := get_wall_normal()
 			velocity.x = wall_normal.x * WALL_JUMP_VELOCITY.x
 			velocity.y = WALL_JUMP_VELOCITY.y
+			is_wall_sliding = false
 			_spawn_dust(-wall_normal)
 			_play_sfx(&"jump")
 
@@ -124,6 +127,7 @@ func _physics_process(delta: float) -> void:
 		shoot_projectile()
 
 	move_and_slide()
+	_update_wall_slide_dust()
 	if not was_on_floor and is_on_floor():
 		_spawn_dust(Vector2.UP)
 	update_animations(direction)
@@ -135,7 +139,7 @@ func shoot_projectile() -> void:
 	_set_energy(energy - SHOT_COST)
 	var bullet := BULLET_SCENE.instantiate()
 	bullet.global_position = muzzle.global_position
-	bullet.direction = -1.0 if sprite.flip_h else 1.0
+	bullet.direction = -1 if sprite.flip_h else 1
 	var projectile_parent := get_tree().current_scene
 	if projectile_parent == null:
 		projectile_parent = get_parent()
@@ -165,7 +169,7 @@ func take_damage(amount: int) -> bool:
 
 func _begin_invincibility() -> void:
 	is_invincible = true
-	hurtbox.set_invincible(true)
+	hurtbox.start_invincibility(invincibility_duration)
 	_flash_during_invincibility()
 
 
@@ -189,6 +193,7 @@ func _die() -> void:
 	velocity = Vector2.ZERO
 	hurtbox.set_invincible(true)
 	set_physics_process(false)
+	_set_wall_slide_dust(false)
 	died.emit()
 	var manager := _game_manager()
 	if manager != null:
@@ -211,6 +216,7 @@ func respawn_at(spawn_position: Vector2) -> void:
 	is_dead = false
 	is_invincible = false
 	dash_time_remaining = 0.0
+	_set_wall_slide_dust(false)
 	sprite.modulate = Color.WHITE
 	sprite.visible = true
 	hurtbox.set_invincible(false)
@@ -245,13 +251,21 @@ func _set_energy(value: float) -> void:
 
 
 func _spawn_dust(direction: Vector2) -> void:
-	var dust := DUST_VFX.instantiate()
-	dust.global_position = global_position + Vector2(0.0, 22.0)
-	dust.rotation = direction.angle() - Vector2.UP.angle()
-	var parent := get_tree().current_scene
-	if parent == null:
-		parent = get_parent()
-	parent.add_child(dust)
+	var vfx := get_node_or_null("/root/VFXSpawner")
+	if vfx != null:
+		vfx.call(&"spawn_one_shot", DUST_VFX, global_position + Vector2(0.0, 22.0), direction)
+
+
+func _update_wall_slide_dust() -> void:
+	_set_wall_slide_dust(is_wall_sliding and not is_dead)
+	if wall_slide_dust.emitting:
+		var wall_normal := get_wall_normal()
+		wall_slide_dust.position.x = -wall_normal.x * 13.0
+
+
+func _set_wall_slide_dust(value: bool) -> void:
+	if wall_slide_dust != null:
+		wall_slide_dust.emitting = value
 
 
 func _get_level_scene_path() -> String:
@@ -278,9 +292,9 @@ func _set_manager_energy() -> void:
 
 
 func _play_sfx(effect: StringName, sound_position := global_position, volume_db := -5.0) -> void:
-	var sound_manager := get_node_or_null("/root/SoundManager")
-	if sound_manager != null:
-		sound_manager.call(&"play_sfx", effect, sound_position, volume_db)
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_sfx", effect, sound_position, volume_db)
 
 
 func update_animations(direction: float) -> void:

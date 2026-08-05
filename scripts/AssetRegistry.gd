@@ -25,6 +25,8 @@ const CHARACTER_FOLDER_ALIASES := {
 	"player": "Player",
 	"enemy": "Enemies",
 	"enemies": "Enemies",
+	"boss": "Bosses",
+	"bosses": "Bosses",
 }
 
 var _campaign: Dictionary = {}

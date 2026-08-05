@@ -1,26 +1,22 @@
-[gd_scene format=3]
+[gd_scene format=4]
 
-[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_qovnl"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_cdhvx"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_33e5n"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_pyjb0"]
-[ext_resource type="TileSet" path="res://Stages/TileSets/Act4_AbyssalNight_Palette.tres" id="5_fkpaa"]
-[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/poison_skull.tscn" id="6_mmugk"]
-[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="7_0b4jr"]
-[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/poison_skull.tres" id="8_pqipf"]
-[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="9_to3r0"]
-[ext_resource type="Script" path="res://scripts/Player.gd" id="10_5d4ky"]
-[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="11_tede4"]
-[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="12_byrlw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape_ground"]
-size = Vector2(2048, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape_platform_a"]
-size = Vector2(260, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape_platform_b"]
-size = Vector2(220, 24)
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_mmugk"]
+[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_0b4jr"]
+[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_pqipf"]
+[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_to3r0"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act4_AbyssalNight_Palette.tres" id="5_5d4ky"]
+[ext_resource type="Texture2D" path="res://Stage Props/VoidProps/SourceArt/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png" id="6_tede4"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/poison_skull.tscn" id="7_byrlw"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_q6kyo"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/poison_skull.tres" id="9_s67td"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="10_bkvsi"]
+[ext_resource type="Script" path="res://scripts/CheckpointTerminal.gd" id="11_w0upe"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="12_rwky2"]
+[ext_resource type="Script" path="res://scripts/StageExit.gd" id="13_2nlax"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="14_mdypl"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="15_jkr1y"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="16_7ajsb"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="17_23kjk"]
 
 [sub_resource type="Gradient" id="Gradient_prototype_light"]
 offsets = PackedFloat32Array(0, 0.5, 1)
@@ -34,8 +30,8 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape_death"]
-size = Vector2(2400, 120)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbqcr"]
+size = Vector2(5500, 140)
 
 [sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
 bg_color = Color(0.025, 0.035, 0.09, 0.92)
@@ -61,189 +57,238 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="TheDarkChasm" type="Node2D" unique_id=1985186276]
-script = ExtResource("1_qovnl")
+[node name="TheDarkChasm" type="Node2D" unique_id=216455971]
+script = ExtResource("1_mmugk")
 campaign_act = 4
 stage_id = &"4-2"
 stage_title = "The Dark Chasm"
-design_notes = "Prototype goals: Floating void platforms, bottomless pits
-Replace blockout pieces as the stage design develops."
+design_notes = "Layout pass: Floating void platforms, bottomless pits
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
 music_path = "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
-far_background = ExtResource("2_cdhvx")
-middle_background = ExtResource("3_33e5n")
-front_background = ExtResource("4_pyjb0")
+far_background = ExtResource("2_0b4jr")
+middle_background = ExtResource("3_pqipf")
+front_background = ExtResource("4_to3r0")
 background_tint = Color(0.72, 0.55, 0.82, 1)
 
-[node name="Background" type="Node2D" parent="." unique_id=1904075079]
+[node name="Background" type="Node2D" parent="." unique_id=1278760119]
 
-[node name="Far" type="Parallax2D" parent="Background" unique_id=675586033]
+[node name="Far" type="Parallax2D" parent="Background" unique_id=546543059]
 z_index = -30
 scroll_scale = Vector2(0.1, 0.15)
 repeat_size = Vector2(960, 0)
-repeat_times = 3
+repeat_times = 6
 
-[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=1163598125]
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=1360251044]
 modulate = Color(0.72, 0.55, 0.82, 1)
 position = Vector2(480, 270)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_cdhvx")
+texture = ExtResource("2_0b4jr")
 
-[node name="Middle" type="Parallax2D" parent="Background" unique_id=1764548298]
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=694738122]
 z_index = -25
 scroll_scale = Vector2(0.28, 0.35)
 repeat_size = Vector2(960, 0)
-repeat_times = 3
+repeat_times = 6
 
-[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=1875797005]
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=659028341]
 modulate = Color(0.72, 0.55, 0.82, 1)
 position = Vector2(480, 270)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_33e5n")
+texture = ExtResource("3_pqipf")
 
-[node name="Front" type="Parallax2D" parent="Background" unique_id=1201008795]
+[node name="Front" type="Parallax2D" parent="Background" unique_id=501245622]
 z_index = -20
 scroll_scale = Vector2(0.55, 0.65)
 repeat_size = Vector2(960, 0)
-repeat_times = 3
+repeat_times = 6
 
-[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=1674466090]
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=196349611]
 modulate = Color(0.72, 0.55, 0.82, 1)
 position = Vector2(480, 270)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("4_pyjb0")
+texture = ExtResource("4_to3r0")
 
-[node name="Terrain" type="TileMapLayer" parent="." unique_id=1113076142]
-tile_set = ExtResource("5_fkpaa")
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=1178396796]
+tile_map_data = PackedByteArray("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AABKABQAAAAKAAAAAABKABUAAAAKAA4AAABLABQAAAAKAAAAAABLABUAAAAKAA4AAABMABQAAAAKAAAAAABMABUAAAAKAA4AAABNABQAAAAKAAAAAABNABUAAAAKAA4AAABOABQAAAAKAAAAAABOABUAAAAKAA4AAABPABQAAAAKAAAAAABPABUAAAAKAA4AAABQABQAAAAKAAAAAABQABUAAAAKAA4AAABRABQAAAAKAAAAAABRABUAAAAKAA4AAABSABQAAAAKAAAAAABSABUAAAAKAA4AAABTABQAAAAKAAAAAABTABUAAAAKAA4AAABUABQAAAAKAAAAAABUABUAAAAKAA4AAABVABQAAAAKAAAAAABVABUAAAAKAA4AAABWABQAAAAKAAAAAABWABUAAAAKAA4AAABXABQAAAAKAAAAAABXABUAAAAKAA4AAABYABQAAAAKAAAAAABYABUAAAAKAA4AAABZABQAAAAKAAAAAABZABUAAAAKAA4AAABaABQAAAAKAAAAAABaABUAAAAKAA4AAABbABQAAAAKAAAAAABbABUAAAAKAA4AAABcABQAAAAKAAAAAABcABUAAAAKAA4AAABdABQAAAAKAAAAAABdABUAAAAKAA4AAABeABQAAAAKAAAAAABeABUAAAAKAA4AAABfABQAAAAKAAAAAABfABUAAAAKAA4AAABgABQAAAAKAAAAAABgABUAAAAKAA4AAABhABQAAAAKAAAAAABhABUAAAAKAA4AAABiABQAAAAKAAAAAABiABUAAAAKAA4AAABjABQAAAAKAAAAAABjABUAAAAKAA4AAABkABQAAAAKAAAAAABkABUAAAAKAA4AAABlABQAAAAKAAAAAABlABUAAAAKAA4AAABpABQAAAAKAAAAAABpABUAAAAKAA4AAABqABQAAAAKAAAAAABqABUAAAAKAA4AAABrABQAAAAKAAAAAABrABUAAAAKAA4AAABsABQAAAAKAAAAAABsABUAAAAKAA4AAABtABQAAAAKAAAAAABtABUAAAAKAA4AAABuABQAAAAKAAAAAABuABUAAAAKAA4AAABvABQAAAAKAAAAAABvABUAAAAKAA4AAABwABQAAAAKAAAAAABwABUAAAAKAA4AAABxABQAAAAKAAAAAABxABUAAAAKAA4AAAByABQAAAAKAAAAAAByABUAAAAKAA4AAABzABQAAAAKAAAAAABzABUAAAAKAA4AAAB0ABQAAAAKAAAAAAB0ABUAAAAKAA4AAAB1ABQAAAAKAAAAAAB1ABUAAAAKAA4AAAB2ABQAAAAKAAAAAAB2ABUAAAAKAA4AAAB3ABQAAAAKAAAAAAB3ABUAAAAKAA4AAAB4ABQAAAAKAAAAAAB4ABUAAAAKAA4AAAB5ABQAAAAKAAAAAAB5ABUAAAAKAA4AAAB6ABQAAAAKAAAAAAB6ABUAAAAKAA4AAAB7ABQAAAAKAAAAAAB7ABUAAAAKAA4AAAB8ABQAAAAKAAAAAAB8ABUAAAAKAA4AAAB9ABQAAAAKAAAAAAB9ABUAAAAKAA4AAAB+ABQAAAAKAAAAAAB+ABUAAAAKAA4AAAB/ABQAAAAKAAAAAAB/ABUAAAAKAA4AAACAABQAAAAKAAAAAACAABUAAAAKAA4AAACBABQAAAAKAAAAAACBABUAAAAKAA4AAACCABQAAAAKAAAAAACCABUAAAAKAA4AAACDABQAAAAKAAAAAACDABUAAAAKAA4AAACEABQAAAAKAAAAAACEABUAAAAKAA4AAACFABQAAAAKAAAAAACFABUAAAAKAA4AAACGABQAAAAKAAAAAACGABUAAAAKAA4AAACHABQAAAAKAAAAAACHABUAAAAKAA4AAACIABQAAAAKAAAAAACIABUAAAAKAA4AAACJABQAAAAKAAAAAACJABUAAAAKAA4AAACKABQAAAAKAAAAAACKABUAAAAKAA4AAACLABQAAAAKAAAAAACLABUAAAAKAA4AAACMABQAAAAKAAAAAACMABUAAAAKAA4AAACNABQAAAAKAAAAAACNABUAAAAKAA4AAACOABQAAAAKAAAAAACOABUAAAAKAA4AAACPABQAAAAKAAAAAACPABUAAAAKAA4AAACQABQAAAAKAAAAAACQABUAAAAKAA4AAACRABQAAAAKAAAAAACRABUAAAAKAA4AAACSABQAAAAKAAAAAACSABUAAAAKAA4AAACTABQAAAAKAAAAAACTABUAAAAKAA4AAACUABQAAAAKAAAAAACUABUAAAAKAA4AAACVABQAAAAKAAAAAACVABUAAAAKAA4AAACWABQAAAAKAAAAAACWABUAAAAKAA4AAACXABQAAAAKAAAAAACXABUAAAAKAA4AAACbABQAAAAKAAAAAACbABUAAAAKAA4AAACcABQAAAAKAAAAAACcABUAAAAKAA4AAACdABQAAAAKAAAAAACdABUAAAAKAA4AAACeABQAAAAKAAAAAACeABUAAAAKAA4AAACfABQAAAAKAAAAAACfABUAAAAKAA4AAACgABQAAAAKAAAAAACgABUAAAAKAA4AAAChABQAAAAKAAAAAAChABUAAAAKAA4AAACiABQAAAAKAAAAAACiABUAAAAKAA4AAACjABQAAAAKAAAAAACjABUAAAAKAA4AAACkABQAAAAKAAAAAACkABUAAAAKAA4AAAClABQAAAAKAAAAAAClABUAAAAKAA4AAACmABQAAAAKAAAAAACmABUAAAAKAA4AAACnABQAAAAKAAAAAACnABUAAAAKAA4AAACoABQAAAAKAAAAAACoABUAAAAKAA4AAACpABQAAAAKAAAAAACpABUAAAAKAA4AAACqABQAAAAKAAAAAACqABUAAAAKAA4AAACrABQAAAAKAAAAAACrABUAAAAKAA4AAACsABQAAAAKAAAAAACsABUAAAAKAA4AAACtABQAAAAKAAAAAACtABUAAAAKAA4AAACuABQAAAAKAAAAAACuABUAAAAKAA4AAACvABQAAAAKAAAAAACvABUAAAAKAA4AAACwABQAAAAKAAAAAACwABUAAAAKAA4AAACxABQAAAAKAAAAAACxABUAAAAKAA4AAACyABQAAAAKAAAAAACyABUAAAAKAA4AAACzABQAAAAKAAAAAACzABUAAAAKAA4AAAC0ABQAAAAKAAAAAAC0ABUAAAAKAA4AAAC1ABQAAAAKAAAAAAC1ABUAAAAKAA4AAAC2ABQAAAAKAAAAAAC2ABUAAAAKAA4AAAC3ABQAAAAKAAAAAAC3ABUAAAAKAA4AAAC4ABQAAAAKAAAAAAC4ABUAAAAKAA4AAAC5ABQAAAAKAAAAAAC5ABUAAAAKAA4AAAC6ABQAAAAKAAAAAAC6ABUAAAAKAA4AAAC7ABQAAAAKAAAAAAC7ABUAAAAKAA4AAAC8ABQAAAAKAAAAAAC8ABUAAAAKAA4AAAC9ABQAAAAKAAAAAAC9ABUAAAAKAA4AAAC+ABQAAAAKAAAAAAC+ABUAAAAKAA4AAAC/ABQAAAAKAAAAAAC/ABUAAAAKAA4AAADAABQAAAAKAAAAAADAABUAAAAKAA4AAADBABQAAAAKAAAAAADBABUAAAAKAA4AAADCABQAAAAKAAAAAADCABUAAAAKAA4AAADDABQAAAAKAAAAAADDABUAAAAKAA4AAADEABQAAAAKAAAAAADEABUAAAAKAA4AAADFABQAAAAKAAAAAADFABUAAAAKAA4AAADGABQAAAAKAAAAAADGABUAAAAKAA4AAADHABQAAAAKAAAAAADHABUAAAAKAA4AAADIABQAAAAKAAAAAADIABUAAAAKAA4AAADJABQAAAAKAAAAAADJABUAAAAKAA4AAADKABQAAAAKAAAAAADKABUAAAAKAA4AAADLABQAAAAKAAAAAADLABUAAAAKAA4AAADMABQAAAAKAAAAAADMABUAAAAKAA4AAAATABIAAAALAAMAAAAUABIAAAALAAMAAAAVABIAAAALAAMAAAAWABIAAAALAAMAAAAXABIAAAALAAMAAAAYABIAAAALAAMAAAAZABIAAAALAAMAAAAqABEAAAALAAMAAAArABEAAAALAAMAAAAsABEAAAALAAMAAAAtABEAAAALAAMAAAAuABEAAAALAAMAAABCABIAAAALAAMAAABDABIAAAALAAMAAABEABIAAAALAAMAAABFABIAAAALAAMAAABGABIAAAALAAMAAABHABIAAAALAAMAAABUABIAAAALAAMAAABVABIAAAALAAMAAABWABIAAAALAAMAAABXABIAAAALAAMAAABYABIAAAALAAMAAABZABIAAAALAAMAAABaABIAAAALAAMAAABsABEAAAALAAMAAABtABEAAAALAAMAAABuABEAAAALAAMAAABvABEAAAALAAMAAABwABEAAAALAAMAAABxABEAAAALAAMAAAByABEAAAALAAMAAABzABEAAAALAAMAAACDABIAAAALAAMAAACEABIAAAALAAMAAACFABIAAAALAAMAAACGABIAAAALAAMAAACHABIAAAALAAMAAACIABIAAAALAAMAAACWABIAAAALAAMAAACXABIAAAALAAMAAACYABIAAAALAAMAAACZABIAAAALAAMAAACaABIAAAALAAMAAACbABIAAAALAAMAAACtABEAAAALAAMAAACuABEAAAALAAMAAACvABEAAAALAAMAAACwABEAAAALAAMAAACxABEAAAALAAMAAACyABEAAAALAAMAAACzABEAAAALAAMAAAAsABIAAAALAAMAAAAtABIAAAALAAMAAAAuABIAAAALAAMAAAAvABIAAAALAAMAAAAwABIAAAALAAMAAABlABIAAAALAAMAAABmABIAAAALAAMAAABnABIAAAALAAMAAABoABIAAAALAAMAAABpABIAAAALAAMAAAA=")
+tile_set = ExtResource("5_5d4ky")
 
-[node name="Blockout" type="Node2D" parent="." unique_id=558616653]
+[node name="Props" type="Node2D" parent="." unique_id=2027471677]
 
-[node name="Ground" type="StaticBody2D" parent="Blockout" unique_id=509868010]
-position = Vector2(960, 500)
+[node name="ThemedProp01" type="Sprite2D" parent="Props" unique_id=258597355]
+z_index = 1
+position = Vector2(518, 430)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(384, 192, 96, 96)
 
-[node name="Visual" type="Polygon2D" parent="Blockout/Ground" unique_id=1910183366]
-color = Color(0.06, 0.16, 0.24, 1)
-polygon = PackedVector2Array(-1024, -32, 1024, -32, 1024, 32, -1024, 32)
+[node name="ThemedProp02" type="Sprite2D" parent="Props" unique_id=844667217]
+z_index = 1
+position = Vector2(1159, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/Ground" unique_id=56582694]
-shape = SubResource("RectangleShape_ground")
+[node name="ThemedProp03" type="Sprite2D" parent="Props" unique_id=823047803]
+z_index = 1
+position = Vector2(1800, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(192, 96, 96, 96)
 
-[node name="PlatformA" type="StaticBody2D" parent="Blockout" unique_id=6460791]
-position = Vector2(620, 390)
+[node name="ThemedProp04" type="Sprite2D" parent="Props" unique_id=1791956891]
+z_index = 1
+position = Vector2(2350, 430)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(384, 192, 96, 96)
 
-[node name="Visual" type="Polygon2D" parent="Blockout/PlatformA" unique_id=345146850]
-color = Color(0.08, 0.34, 0.42, 1)
-polygon = PackedVector2Array(-130, -12, 130, -12, 130, 12, -130, 12)
+[node name="ThemedProp05" type="Sprite2D" parent="Props" unique_id=31285861]
+z_index = 1
+position = Vector2(2991, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/PlatformA" unique_id=1995688589]
-shape = SubResource("RectangleShape_platform_a")
+[node name="ThemedProp06" type="Sprite2D" parent="Props" unique_id=402890500]
+z_index = 1
+position = Vector2(3632, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(192, 96, 96, 96)
 
-[node name="PlatformB" type="StaticBody2D" parent="Blockout" unique_id=521769396]
-position = Vector2(1040, 300)
+[node name="ThemedProp07" type="Sprite2D" parent="Props" unique_id=82782902]
+z_index = 1
+position = Vector2(4182, 430)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("6_tede4")
+region_enabled = true
+region_rect = Rect2(384, 192, 96, 96)
 
-[node name="Visual" type="Polygon2D" parent="Blockout/PlatformB" unique_id=1988816007]
-color = Color(0.16, 0.22, 0.46, 1)
-polygon = PackedVector2Array(-110, -12, 110, -12, 110, 12, -110, 12)
+[node name="Hazards" type="Node2D" parent="." unique_id=1786000058]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockout/PlatformB" unique_id=350209093]
-shape = SubResource("RectangleShape_platform_b")
+[node name="Enemies" type="Node2D" parent="." unique_id=1039866556]
 
-[node name="Props" type="Node2D" parent="." unique_id=963610798]
-
-[node name="Hazards" type="Node2D" parent="." unique_id=903792922]
-
-[node name="Enemies" type="Node2D" parent="." unique_id=1597710676]
-
-[node name="PoisonSkull" type="CharacterBody2D" parent="Enemies" unique_id=1741218657 instance=ExtResource("6_mmugk")]
-position = Vector2(560, 330)
+[node name="PoisonSkull" type="CharacterBody2D" parent="Enemies" unique_id=1741218657 instance=ExtResource("7_byrlw")]
+position = Vector2(1270, 338)
 collision_layer = 0
 floor_snap_length = 4.0
-script = ExtResource("7_0b4jr")
+script = ExtResource("8_q6kyo")
 enemy_id = &"poison_skull"
-animation_library = ExtResource("8_pqipf")
+animation_library = ExtResource("9_s67td")
 starting_direction = 1
 uses_gravity = false
 movement_animation = &"walk"
 death_animation = &"death"
 
-[node name="VFX" type="Node2D" parent="." unique_id=947316918]
+[node name="VFX" type="Node2D" parent="." unique_id=1755462715]
 
-[node name="Lighting" type="Node2D" parent="." unique_id=37913883]
+[node name="Lighting" type="Node2D" parent="." unique_id=1151696879]
 
-[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=1873092990]
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=1343333172]
 position = Vector2(720, 310)
 color = Color(0.1, 0.65, 1, 1)
 energy = 0.8
 texture = SubResource("GradientTexture_prototype_light")
 texture_scale = 2.0
 
-[node name="Markers" type="Node2D" parent="." unique_id=301665302]
+[node name="Markers" type="Node2D" parent="." unique_id=2142234592]
 
-[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=902043263]
-position = Vector2(120, 438)
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=876537117]
+position = Vector2(140, 422)
 gizmo_extents = 24.0
 
-[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=2109617263]
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=2004084549]
 
-[node name="Exit" type="Marker2D" parent="Markers" unique_id=135099784]
-position = Vector2(1760, 438)
-gizmo_extents = 28.0
-
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1224283367 instance=ExtResource("9_to3r0")]
-position = Vector2(120, 438)
-collision_layer = 2
-floor_max_angle = 0.872665
-floor_snap_length = 6.0
-script = ExtResource("10_5d4ky")
-
-[node name="DeathZone" type="Area2D" parent="." unique_id=229835120]
-position = Vector2(960, 650)
+[node name="Checkpoint01" type="Area2D" parent="Markers/Checkpoints" unique_id=1026650185 instance=ExtResource("10_bkvsi")]
+position = Vector2(1600, 434)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
-script = ExtResource("11_tede4")
+script = ExtResource("11_w0upe")
+checkpoint_id = &"4-2_checkpoint_01"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=840774195]
-shape = SubResource("RectangleShape_death")
+[node name="Checkpoint02" type="Area2D" parent="Markers/Checkpoints" unique_id=1589045414 instance=ExtResource("10_bkvsi")]
+position = Vector2(3200, 434)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_w0upe")
+checkpoint_id = &"4-2_checkpoint_02"
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=2079042128 instance=ExtResource("12_byrlw")]
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=752031160]
+position = Vector2(4650, 410)
+gizmo_extents = 28.0
+
+[node name="StageExit" type="Area2D" parent="Markers" unique_id=1469206715 instance=ExtResource("12_rwky2")]
+position = Vector2(4650, 410)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("13_2nlax")
+next_scene_path = "res://Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn"
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1839541086 instance=ExtResource("14_mdypl")]
+position = Vector2(140, 422)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("15_jkr1y")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=742790502]
+position = Vector2(2400, 688)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("16_7ajsb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=902279001]
+shape = SubResource("RectangleShape2D_vbqcr")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1513104742 instance=ExtResource("17_23kjk")]
 layer = 20
 
-[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1587623021]
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1006822996]
 layer = 90
 
-[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=159656390]
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=250091853]
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 520.0
 offset_bottom = 142.0
 theme_override_styles/panel = SubResource("StyleBox_guide")
 
-[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=81538544]
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=1636181892]
 layout_mode = 2
 theme_override_constants/margin_left = 14
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 14
 theme_override_constants/margin_bottom = 10
 
-[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1637375181]
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1178246867]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1982088983]
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=299856247]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
 theme_override_font_sizes/font_size = 18
 text = "4-2  |  The Dark Chasm"
 
-[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=12594671]
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1804124452]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
 theme_override_font_sizes/font_size = 12
-text = "Prototype goals: Floating void platforms, bottomless pits
-Replace blockout pieces as the stage design develops."
+text = "Layout pass: Floating void platforms, bottomless pits
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
 autowrap_mode = 2
 
-[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1734845596]
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=2143602040]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBox_tag")
 text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"

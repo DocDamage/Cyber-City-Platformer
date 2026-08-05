@@ -12,9 +12,11 @@ var _elapsed := 0.0
 @onready var screen: Polygon2D = $Screen
 @onready var light: PointLight2D = $PointLight2D
 @onready var status: Label = $Status
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
+	add_to_group(&"checkpoints")
 	body_entered.connect(_on_body_entered)
 	var manager := _game_manager()
 	_active = manager != null and manager.get("current_checkpoint_id") == checkpoint_id \
@@ -42,9 +44,10 @@ func _on_body_entered(body: Node) -> void:
 		manager.call(&"set_player_energy", manager.get("player_max_energy"))
 	if body.has_method(&"restore_from_checkpoint"):
 		body.call(&"restore_from_checkpoint")
-	var sound_manager := get_node_or_null("/root/SoundManager")
-	if sound_manager != null:
-		sound_manager.call(&"play_sfx", &"checkpoint", global_position, -2.0)
+	animation_player.play(&"activate")
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_sfx", &"checkpoint", global_position, -2.0)
 	_apply_state()
 	activated.emit(checkpoint_id)
 

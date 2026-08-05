@@ -28,6 +28,8 @@ func _run() -> void:
 	assert(rooftop_scene.resource_path == "res://Stages/Act1_CyberCity/1-1_RooftopAlley/Stage.tscn")
 	assert(factory_scene.resource_path == "res://Stages/Act2_RobotFactory/2-1_SubLevelIntake/Stage.tscn")
 	assert(registry.get_stage_scene(4, 5).resource_path == "res://Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn")
+	var boss_scene: PackedScene = registry.get_character_scene("Bosses", "act1_helix_warden")
+	assert(boss_scene != null and boss_scene.resource_path == "res://Characters/Bosses/Scenes/act1_helix_warden.tscn")
 
 	var enemy_library: Dictionary = registry.get_enemy_library()
 	var enemies: Array = enemy_library.get("enemies", [])
@@ -56,12 +58,11 @@ func _run() -> void:
 	assert(laser_sfx != null, "Canonical SFX library did not resolve.")
 	assert(parallax != null and parallax.resource_path == "res://Parallax/SourceArt/Rooftops 2/back.png")
 	assert(vfx != null and vfx.resource_path == "res://VFX/SourceArt/Pack 6/PNG sheet/Effect (1)-Sheet.png")
-	var sound_manager := root.get_node_or_null("SoundManager")
-	var active_effects: Dictionary = sound_manager.get("_effect_streams")
-	assert(active_effects.size() == 8, "SoundManager must configure all eight gameplay effects.")
-	for stream_value: Variant in active_effects.values():
-		var stream := stream_value as AudioStream
-		assert(stream != null and stream.resource_path.begins_with("res://SFX/Library/"), "A gameplay SFX mapping fell back instead of using the supplied library.")
+	var audio_manager := root.get_node_or_null("AudioManager")
+	assert(audio_manager != null, "AudioManager is not registered as an autoload.")
+	assert(audio_manager.get_configured_act_count() == 4, "AudioManager must configure one BGM track for each Act.")
+	assert(audio_manager.get_loaded_sfx_names().size() >= 5, "AudioManager is missing required gameplay SFX.")
+	assert(audio_manager.get_node("SFXPlayer00") is AudioStreamPlayer, "AudioManager did not create its SFX player pool.")
 
 	assert(registry.get_prop_texture(1, "../icon.svg").resource_path == "res://icon.svg")
 	assert(registry.get_character_scene("../Characters", "EnemyBase").resource_path == "res://scenes/EnemyBase.tscn")

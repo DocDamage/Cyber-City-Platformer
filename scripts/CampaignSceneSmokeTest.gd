@@ -21,9 +21,23 @@ func _run() -> void:
 			root.add_child(stage)
 			await physics_frame
 			assert(is_instance_valid(stage), "Stage %d-%d failed during startup." % [act_number, stage_number])
-			if not Vector2i(act_number, stage_number) in [Vector2i(1, 1), Vector2i(2, 1)]:
-				for required_node in ["Terrain", "Props", "Hazards", "Enemies", "VFX", "Lighting", "Markers"]:
-					assert(stage.has_node(required_node), "Stage %d-%d is missing its %s editor folder." % [act_number, stage_number, required_node])
+			var terrain_layers := stage.find_children("*", "TileMapLayer", true, false)
+			assert(not terrain_layers.is_empty(), "Stage %d-%d has no painted TileMapLayer." % [act_number, stage_number])
+			var terrain := terrain_layers[0] as TileMapLayer
+			assert(not terrain.get_used_cells().is_empty(), "Stage %d-%d has no painted terrain cells." % [act_number, stage_number])
+			assert(terrain.tile_set != null and terrain.tile_set.get_physics_layers_count() > 0, "Stage %d-%d terrain has no physics layer." % [act_number, stage_number])
+			var props := stage.find_child("Props", true, false)
+			assert(props != null and not props.find_children("*", "Sprite2D", true, false).is_empty(), "Stage %d-%d has no layered Sprite2D props." % [act_number, stage_number])
+			var checkpoint_count := 0
+			for checkpoint: Node in get_nodes_in_group(&"checkpoints"):
+				if stage.is_ancestor_of(checkpoint):
+					checkpoint_count += 1
+			assert(checkpoint_count > 0, "Stage %d-%d has no checkpoint." % [act_number, stage_number])
+			var exit_count := 0
+			for stage_exit: Node in get_nodes_in_group(&"stage_exits"):
+				if stage.is_ancestor_of(stage_exit):
+					exit_count += 1
+			assert(exit_count == 1, "Stage %d-%d does not have exactly one stage exit." % [act_number, stage_number])
 			stage.free()
 			instantiated_stages += 1
 

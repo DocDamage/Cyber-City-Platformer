@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_level"]
 [ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="2_player"]
@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="11_hud"]
 [ext_resource type="PackedScene" path="res://scenes/Collectible.tscn" id="12_collectible"]
 [ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="13_checkpoint"]
-[ext_resource type="PackedScene" path="res://scenes/LevelExit.tscn" id="14_exit"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="14_exit"]
 [ext_resource type="Script" path="res://scripts/DeathZone.gd" id="15_death_zone"]
+[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-a/banner-a1.png" id="16_banner"]
+[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/lights/lights2.png" id="17_light_prop"]
 
 [sub_resource type="Gradient" id="Gradient_neon"]
 offsets = PackedFloat32Array(0, 0.4, 1)
@@ -40,6 +42,9 @@ size = Vector2(1800, 120)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_level")
+stage_act = 1
+stage_sub = 1
+environment_tint = Color(0.164706, 0.164706, 0.25098, 1)
 
 [node name="Background Skyline" type="Parallax2D" parent="."]
 z_index = -20
@@ -69,6 +74,18 @@ scale = Vector2(2, 2)
 
 [node name="Rooftop Terrain" type="TileMapLayer" parent="."]
 tile_set = ExtResource("9_rooftop")
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Neon Billboard" type="Sprite2D" parent="Props"]
+position = Vector2(612, 394)
+scale = Vector2(1.18, 1.18)
+texture = ExtResource("16_banner")
+
+[node name="Hazard Light" type="Sprite2D" parent="Props"]
+position = Vector2(1040, 397)
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("17_light_prop")
 
 [node name="Neon Signs" type="PointLight2D" parent="."]
 position = Vector2(735, 276)
@@ -119,6 +136,7 @@ checkpoint_id = &"rooftop_terminal"
 
 [node name="Level Exit" parent="." instance=ExtResource("14_exit")]
 position = Vector2(1340, 385)
+next_scene_path = "res://Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn"
 
 [node name="Death Zone" type="Area2D" parent="."]
 position = Vector2(704, 625)

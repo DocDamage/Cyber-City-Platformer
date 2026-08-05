@@ -19,8 +19,10 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/GameManager.gd"
 CombatFeedback="*res://scripts/CombatFeedback.gd"
-SoundManager="*res://scripts/SoundManager.gd"
+AudioManager="*res://scripts/AudioManager.gd"
+VFXSpawner="*res://scripts/VFXSpawner.gd"
 AssetRegistry="*res://scripts/AssetRegistry.gd"
+SceneTransition="*res://scenes/SceneTransition.tscn"
 
 [display]
 

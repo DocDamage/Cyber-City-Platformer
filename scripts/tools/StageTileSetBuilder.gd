@@ -57,9 +57,13 @@ func _build_tileset(sheet: Dictionary) -> bool:
 	var tile_set := TileSet.new()
 	tile_set.resource_name = String(sheet.name)
 	tile_set.tile_size = tile_size
+	tile_set.add_physics_layer()
+	tile_set.set_physics_layer_collision_layer(0, 1)
+	tile_set.set_physics_layer_collision_mask(0, 0)
 	var atlas := TileSetAtlasSource.new()
 	atlas.texture = texture
 	atlas.texture_region_size = tile_size
+	tile_set.add_source(atlas, 0)
 	var image := texture.get_image()
 	var grid_size := Vector2i(texture.get_width() / tile_size.x, texture.get_height() / tile_size.y)
 	var tile_count := 0
@@ -68,8 +72,15 @@ func _build_tileset(sheet: Dictionary) -> bool:
 			var coordinates := Vector2i(x, y)
 			if _tile_has_visible_pixels(image, coordinates, tile_size):
 				atlas.create_tile(coordinates)
+				var tile_data := atlas.get_tile_data(coordinates, 0)
+				tile_data.add_collision_polygon(0)
+				tile_data.set_collision_polygon_points(0, 0, PackedVector2Array([
+					Vector2(-tile_size.x * 0.5, -tile_size.y * 0.5),
+					Vector2(tile_size.x * 0.5, -tile_size.y * 0.5),
+					Vector2(tile_size.x * 0.5, tile_size.y * 0.5),
+					Vector2(-tile_size.x * 0.5, tile_size.y * 0.5),
+				]))
 				tile_count += 1
-	tile_set.add_source(atlas, 0)
 	var output_path := OUTPUT_ROOT.path_join("%s.tres" % String(sheet.name))
 	if ResourceSaver.save(tile_set, output_path) != OK:
 		push_error("Could not save stage TileSet: %s" % output_path)

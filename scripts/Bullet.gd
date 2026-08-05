@@ -1,9 +1,10 @@
 extends Hitbox
 
-const SPEED := 400.0
 const SPARK_VFX := preload("res://scenes/vfx/SparkBurst.tscn")
 
-var direction := 1.0
+@export var speed := 400.0
+
+var direction := 1
 var _spent := false
 
 
@@ -13,7 +14,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	position.x += direction * SPEED * delta
+	position.x += speed * direction * delta
 
 
 func _on_body_entered(_body: Node) -> void:
@@ -36,13 +37,9 @@ func _consume(spawn_impact := false) -> void:
 
 
 func _spawn_sparks() -> void:
-	var sparks := SPARK_VFX.instantiate()
-	sparks.global_position = global_position
-	sparks.rotation = PI if direction > 0.0 else 0.0
-	var parent := get_tree().current_scene
-	if parent == null:
-		parent = get_parent()
-	parent.add_child(sparks)
+	var vfx := get_node_or_null("/root/VFXSpawner")
+	if vfx != null:
+		vfx.call(&"spawn_one_shot", SPARK_VFX, global_position, Vector2(-direction, 0.0))
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

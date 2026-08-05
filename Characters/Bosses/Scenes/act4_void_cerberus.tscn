@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/BossBase.tscn" id="1_base"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/cerberus.tres" id="2_frames"]
+
+[node name="VoidCerberus" instance=ExtResource("1_base")]
+boss_name = "VOID CERBERUS"
+act_number = 4
+max_health = 45
+score_value = 12000
+pattern_speed = 125.0
+dash_speed = 620.0
+dash_interval = 0.8
+projectile_interval = 0.72
+laser_duration = 1.8
+laser_interval = 0.5
+laser_sweep_angle = 1.0
+animation_library = ExtResource("2_frames")
+move_animation = &"run"
+attack_animation = &"attack"
+sprite_visual_scale = Vector2(1.02, 1.02)
+accent_color = Color(1, 0.04, 0.3, 1)

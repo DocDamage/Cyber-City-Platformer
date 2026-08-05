@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/Bullet.gd" id="1_bullet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_bullet"]
+size = Vector2(20, 8)
+
+[sub_resource type="Gradient" id="Gradient_bullet"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(0, 0.952941, 1, 0, 0, 0.952941, 1, 1, 0.9, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_bullet"]
+gradient = SubResource("Gradient_bullet")
+width = 32
+height = 8
+fill = 1
+fill_from = Vector2(0, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_bullet")
+damage = 1
+hit_stop_duration = 0.025
+camera_shake_strength = 2.5
+camera_shake_duration = 0.08
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture_bullet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape_bullet")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-16, -6, 32, 12)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

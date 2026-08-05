@@ -17,7 +17,8 @@ var _hit_hurtboxes := {}
 
 func _ready() -> void:
 	_active = active_on_ready
-	area_entered.connect(_on_area_entered)
+	if not area_entered.is_connected(_on_area_entered):
+		area_entered.connect(_on_area_entered)
 
 
 func activate(duration := 0.0) -> void:
@@ -46,22 +47,22 @@ func _deactivate_after(duration: float, activation_id: int) -> void:
 
 func _scan_overlaps() -> void:
 	for area in get_overlapping_areas():
-		_try_hit(area)
+		if area is Hurtbox:
+			try_hit(area as Hurtbox)
 
 
 func _on_area_entered(area: Area2D) -> void:
-	_try_hit(area)
+	if area is Hurtbox:
+		try_hit(area as Hurtbox)
 
 
-func _try_hit(area: Area2D) -> void:
-	if not _active or not area is Hurtbox:
-		return
-
-	var hurtbox := area as Hurtbox
+func try_hit(hurtbox: Hurtbox) -> bool:
+	if not _active or hurtbox == null:
+		return false
 	if single_hit_per_activation and _hit_hurtboxes.has(hurtbox):
-		return
+		return false
 	if not hurtbox.receive_hit(self):
-		return
+		return false
 
 	if single_hit_per_activation:
 		_hit_hurtboxes[hurtbox] = true
@@ -71,3 +72,4 @@ func _try_hit(area: Area2D) -> void:
 	if feedback != null and camera_shake_strength > 0.0:
 		feedback.call(&"camera_shake", camera_shake_strength, camera_shake_duration)
 	hit_landed.emit(hurtbox)
+	return true

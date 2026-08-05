@@ -48,9 +48,9 @@ func _on_body_entered(body: Node) -> void:
 		return
 	_collected = true
 	set_deferred("monitoring", false)
-	var sound_manager := get_node_or_null("/root/SoundManager")
-	if sound_manager != null:
-		sound_manager.call(&"play_sfx", &"pickup", global_position, -3.0)
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_sfx", &"pickup", global_position, -3.0)
 	collected.emit(pickup_id, value)
 	var tween := create_tween().set_parallel(true)
 	tween.tween_property(sprite, "scale", Vector2(1.8, 0.2), 0.12)

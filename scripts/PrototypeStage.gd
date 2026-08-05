@@ -1,6 +1,6 @@
 @tool
 class_name PrototypeStage
-extends Node2D
+extends StageBase
 
 const BACKGROUND_SPRITE_PATHS := [
 	^"Background/Far/FarSprite",
@@ -20,6 +20,8 @@ const BACKGROUND_SPRITE_PATHS := [
 
 
 func _ready() -> void:
+	_set_stage_coordinates_from_id()
+	super()
 	_apply_editor_metadata()
 	_apply_backgrounds()
 	if Engine.is_editor_hint():
@@ -27,9 +29,16 @@ func _ready() -> void:
 	var guide := get_node_or_null("DesignGuide") as CanvasLayer
 	if guide != null:
 		guide.visible = false
-	var sound_manager := get_node_or_null("/root/SoundManager")
-	if sound_manager != null:
-		sound_manager.call(&"play_music", music_path)
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_bgm", campaign_act)
+
+
+func _set_stage_coordinates_from_id() -> void:
+	stage_act = campaign_act
+	var coordinates := String(stage_id).split("-", false, 1)
+	if coordinates.size() == 2 and coordinates[1].is_valid_int():
+		stage_sub = coordinates[1].to_int()
 
 
 func _apply_editor_metadata() -> void:

@@ -41,7 +41,7 @@
           "number": 2.0,
           "scene": "res://Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
           "slug": "BillboardHighway",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -55,7 +55,7 @@
           "number": 3.0,
           "scene": "res://Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
           "slug": "CommunicationSpire",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -70,7 +70,7 @@
           "number": 4.0,
           "scene": "res://Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
           "slug": "SkybridgeJunction",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -84,7 +84,7 @@
           "number": 5.0,
           "scene": "res://Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
           "slug": "ExecutiveHelipad",
-          "status": "prototype"
+          "status": "boss-ready"
         }
       ]
     },
@@ -114,7 +114,7 @@
           "number": 1.0,
           "scene": "res://Stages/Act2_RobotFactory/2-1_SubLevelIntake/Stage.tscn",
           "slug": "SubLevelIntake",
-          "status": "prototype"
+          "status": "playable"
         },
         {
           "assets": [
@@ -128,7 +128,7 @@
           "number": 2.0,
           "scene": "res://Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
           "slug": "ConveyorAssembly",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -142,7 +142,7 @@
           "number": 3.0,
           "scene": "res://Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
           "slug": "SmeltingCore",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -156,7 +156,7 @@
           "number": 4.0,
           "scene": "res://Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
           "slug": "RoboticMaintenance",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -170,7 +170,7 @@
           "number": 5.0,
           "scene": "res://Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
           "slug": "AssemblyEngine",
-          "status": "prototype"
+          "status": "boss-ready"
         }
       ]
     },
@@ -200,7 +200,7 @@
           "number": 1.0,
           "scene": "res://Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
           "slug": "LunarSurfaceArrival",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -214,7 +214,7 @@
           "number": 2.0,
           "scene": "res://Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
           "slug": "ResearchCleanrooms",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -228,7 +228,7 @@
           "number": 3.0,
           "scene": "res://Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
           "slug": "SecurityGridShaft",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -242,7 +242,7 @@
           "number": 4.0,
           "scene": "res://Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
           "slug": "BioTechLabs",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -256,7 +256,7 @@
           "number": 5.0,
           "scene": "res://Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
           "slug": "OrbitalCommand",
-          "status": "prototype"
+          "status": "boss-ready"
         }
       ]
     },
@@ -285,7 +285,7 @@
           "number": 1.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
           "slug": "CorruptedOutpost",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -298,7 +298,7 @@
           "number": 2.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
           "slug": "TheDarkChasm",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -311,7 +311,7 @@
           "number": 3.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
           "slug": "BioMechanicalNest",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -324,7 +324,7 @@
           "number": 4.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
           "slug": "AbyssalSanctuary",
-          "status": "prototype"
+          "status": "layout"
         },
         {
           "assets": [
@@ -338,12 +338,15 @@
           "number": 5.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
           "slug": "HeartOfTheVoid",
-          "status": "prototype"
+          "status": "boss-ready"
         }
       ]
     }
   ],
   "characters": {
+    "Bosses": {
+      "scene_root": "res://Characters/Bosses/Scenes"
+    },
     "Enemies": {
       "library": "res://Characters/Enemies/enemy_library.json",
       "scene_root": "res://Characters/Enemies/Scenes",

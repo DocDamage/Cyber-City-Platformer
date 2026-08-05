@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/BossBase.tscn" id="1_base"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/medusa.tres" id="2_frames"]
+
+[node name="LunarOracle" instance=ExtResource("1_base")]
+boss_name = "LUNAR ORACLE"
+act_number = 3
+max_health = 36
+score_value = 8000
+pattern_speed = 110.0
+projectile_interval = 0.9
+laser_duration = 1.6
+animation_library = ExtResource("2_frames")
+move_animation = &"move"
+attack_animation = &"attack_2"
+sprite_visual_scale = Vector2(0.94, 0.94)
+accent_color = Color(0.72, 0.25, 1, 1)

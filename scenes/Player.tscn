@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
 [ext_resource type="Script" path="res://scripts/Hurtbox.gd" id="2_hurtbox"]
@@ -26,6 +26,33 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
+[sub_resource type="Gradient" id="Gradient_wall_dust"]
+offsets = PackedFloat32Array(0, 0.35, 1)
+colors = PackedColorArray(0.7, 0.95, 1, 0.8, 0.25, 0.7, 0.82, 0.55, 0.08, 0.25, 0.32, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture_wall_dust"]
+gradient = SubResource("Gradient_wall_dust")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wall_dust"]
+direction = Vector3(0, 1, 0)
+spread = 24.0
+gravity = Vector3(0, 105, 0)
+initial_velocity_min = 22.0
+initial_velocity_max = 58.0
+damping_min = 8.0
+damping_max = 18.0
+scale_min = 1.5
+scale_max = 3.2
+color_ramp = SubResource("GradientTexture_wall_dust")
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_wall_pixel"]
+gradient = SubResource("Gradient_wall_dust")
+width = 5
+height = 5
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 1
@@ -45,9 +72,9 @@ shape = SubResource("CapsuleShape_player")
 [node name="Hurtbox" type="Area2D" parent="."]
 position = Vector2(0, 2)
 collision_layer = 32
-collision_mask = 0
-monitoring = false
+collision_mask = 16
 script = ExtResource("2_hurtbox")
+invincibility_duration = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CapsuleShape_player")
@@ -80,6 +107,16 @@ energy = 0.65
 texture = SubResource("GradientTexture_player_light")
 texture_scale = 1.2
 color = Color(0, 0.952941, 1, 1)
+
+[node name="WallSlideDust" type="GPUParticles2D" parent="."]
+position = Vector2(0, 25)
+emitting = false
+amount = 9
+lifetime = 0.48
+fixed_fps = 30
+process_material = SubResource("ParticleProcessMaterial_wall_dust")
+texture = SubResource("GradientTexture_wall_pixel")
+visibility_rect = Rect2(-40, -20, 80, 100)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(112, -80)

@@ -5,13 +5,20 @@ signal player_energy_changed(current: float, maximum: float)
 signal score_changed(total: int)
 signal checkpoint_changed(checkpoint_id: StringName, position: Vector2)
 signal level_transition_started(scene_path: String)
+signal level_transition_finished(scene_path: String)
+signal campaign_completed
 
 var player_health := -1
 var player_max_health := 0
 var player_energy := -1.0
 var player_max_energy := 0.0
 var current_score := 0
-var current_checkpoint := Vector2.ZERO
+var active_checkpoint_position := Vector2.ZERO
+var current_checkpoint: Vector2:
+	get:
+		return active_checkpoint_position
+	set(value):
+		active_checkpoint_position = value
 var current_checkpoint_id := &""
 var current_checkpoint_scene := ""
 
@@ -45,7 +52,7 @@ func register_player(
 		current_checkpoint = default_spawn
 
 	if player is Node2D and current_checkpoint_scene == level_scene_path:
-		(player as Node2D).global_position = current_checkpoint
+		(player as Node2D).global_position = active_checkpoint_position
 
 	player_health_changed.emit(player_health, player_max_health)
 	player_energy_changed.emit(player_energy, player_max_energy)
@@ -90,7 +97,7 @@ func activate_checkpoint(
 		level_scene_path: String
 ) -> void:
 	current_checkpoint_id = checkpoint_id
-	current_checkpoint = position
+	active_checkpoint_position = position
 	current_checkpoint_scene = level_scene_path
 	checkpoint_locations["%s::%s" % [level_scene_path, checkpoint_id]] = position
 	checkpoint_changed.emit(checkpoint_id, position)
@@ -106,7 +113,7 @@ func request_respawn(player: Node) -> void:
 func _respawn_after_delay(player: Node) -> void:
 	await get_tree().create_timer(0.65, true, false, true).timeout
 	if is_instance_valid(player) and player.has_method(&"respawn_at"):
-		player.call(&"respawn_at", current_checkpoint)
+		player.call(&"respawn_at", active_checkpoint_position)
 	_respawning = false
 
 
@@ -118,19 +125,68 @@ func change_level(scene_path: String) -> void:
 	_change_level_deferred(scene_path)
 
 
+func advance_stage() -> void:
+	if _transitioning:
+		return
+
+	var current_stage := get_tree().current_scene as StageBase
+	if current_stage == null:
+		push_error("GameManager cannot advance a scene that does not extend StageBase.")
+		return
+
+	var registry := get_node_or_null("/root/AssetRegistry")
+	if registry == null or not registry.has_method(&"get_stage_info"):
+		push_error("GameManager requires AssetRegistry to advance the campaign.")
+		return
+
+	var next_act := current_stage.stage_act
+	var next_sub := current_stage.stage_sub + 1
+	var next_stage: Dictionary = registry.call(&"get_stage_info", next_act, next_sub)
+	if next_stage.is_empty():
+		next_act += 1
+		next_sub = 1
+		next_stage = registry.call(&"get_stage_info", next_act, next_sub)
+
+	if next_stage.is_empty():
+		campaign_completed.emit()
+		push_warning("Campaign complete after act %d, sub-stage %d." % [
+			current_stage.stage_act,
+			current_stage.stage_sub,
+		])
+		return
+
+	var next_scene_path := String(next_stage.get("scene", ""))
+	if next_scene_path.is_empty():
+		push_error("The next campaign stage has no scene path.")
+		return
+	change_level(next_scene_path)
+
+
 func _change_level_deferred(scene_path: String) -> void:
-	await get_tree().process_frame
+	var transition := get_node_or_null("/root/SceneTransition")
+	if transition != null and transition.has_method(&"fade_out"):
+		await transition.call(&"fade_out")
+	else:
+		await get_tree().process_frame
 	var error := get_tree().change_scene_to_file(scene_path)
 	if error != OK:
 		push_error("GameManager could not change scene to %s (error %s)." % [scene_path, error])
+		if transition != null and transition.has_method(&"fade_in"):
+			await transition.call(&"fade_in")
+		_transitioning = false
+		return
+	await get_tree().process_frame
+	if transition != null and transition.has_method(&"fade_in"):
+		await transition.call(&"fade_in")
 	_transitioning = false
+	level_transition_finished.emit(scene_path)
 
 
 func reset_run() -> void:
 	player_health = -1
 	player_energy = -1.0
 	current_score = 0
-	current_checkpoint = Vector2.ZERO
+	active_checkpoint_position = Vector2.ZERO
 	current_checkpoint_id = &""
 	current_checkpoint_scene = ""
 	checkpoint_locations.clear()

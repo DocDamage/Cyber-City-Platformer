@@ -1,4 +1,4 @@
-extends Node2D
+extends StageBase
 
 const ROOF_LEFT := Vector2i(0, 0)
 const ROOF_MIDDLE := Vector2i(1, 0)
@@ -27,12 +27,13 @@ const BACKGROUND_NODE_PATHS := [
 
 
 func _ready() -> void:
+	super()
 	_apply_campaign_background()
 	_paint_rooftop_layout()
 	_connect_collectibles()
-	var sound_manager := get_node_or_null("/root/SoundManager")
-	if sound_manager != null:
-		sound_manager.call(&"play_music", music_path)
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_bgm", 1)
 
 
 func _apply_campaign_background() -> void:
