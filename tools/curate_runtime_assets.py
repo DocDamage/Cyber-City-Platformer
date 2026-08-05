@@ -208,6 +208,16 @@ def main() -> int:
         encoding="utf-8",
         newline="\n",
     )
+    resource_index = {
+        "schema_version": 1,
+        "generator": "tools/curate_runtime_assets.py",
+        "paths": [str(record["runtime_path"]) for record in records],
+    }
+    (runtime_root / "resource_index.json").write_text(
+        json.dumps(resource_index, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
     total_bytes = sum(int(record["bytes"]) for record in records)
     lines = [
@@ -219,7 +229,7 @@ def main() -> int:
         f"- Runtime bytes: {total_bytes}",
         f"- Unique license texts: {len(licenses)}",
         "",
-        "`asset_license_manifest.json` maps every shipped binary to its source path, SHA-256 digest, size, and included license text.",
+        "`asset_license_manifest.json` maps every shipped binary to its source path, SHA-256 digest, size, and included license text. `resource_index.json` is the source-free runtime lookup index included in exports.",
         "",
         "To recurate from an asset-populated maintainer checkout, run `python tools/curate_runtime_assets.py`, then rerun `python tools/inventory_runtime_assets.py --check`.",
         "",

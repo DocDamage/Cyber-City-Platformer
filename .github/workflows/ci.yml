@@ -1,0 +1,128 @@
+name: Godot validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: godot-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  godot-import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: ./.github/actions/setup-godot
+      - name: Import project
+        run: python3 tools/run_headless_suite.py --group import --log-dir build/ci-logs
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-import-logs
+          path: build/ci-logs
+
+  resource-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: ./.github/actions/setup-godot
+      - name: Validate assets and resource dependencies
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p build/ci-logs
+          python3 tools/inventory_runtime_assets.py --check 2>&1 | tee build/ci-logs/asset-inventory.log
+          python3 tools/run_headless_suite.py --group resource --log-dir build/ci-logs
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-validation-logs
+          path: build/ci-logs
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: ./.github/actions/setup-godot
+      - name: Run state and player tests
+        run: python3 tools/run_headless_suite.py --group unit --log-dir build/ci-logs
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-logs
+          path: build/ci-logs
+
+  systems-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: ./.github/actions/setup-godot
+      - name: Run gameplay and shell smoke tests
+        run: python3 tools/run_headless_suite.py --group systems --group shell --log-dir build/ci-logs
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: systems-smoke-logs
+          path: build/ci-logs
+
+  campaign-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: ./.github/actions/setup-godot
+      - name: Load and traverse the production campaign
+        run: python3 tools/run_headless_suite.py --group campaign --log-dir build/ci-logs
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: campaign-smoke-logs
+          path: build/ci-logs
+
+  windows-export:
+    needs: [godot-import, resource-validation, unit-tests, systems-smoke, campaign-smoke]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: ./.github/actions/setup-godot
+        with:
+          export-templates: "true"
+      - name: Export Windows release
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p build/windows build/ci-logs
+          "$GODOT_BIN" --headless --path . --export-release "Windows Desktop" build/windows/CyberCityPlatformer.exe 2>&1 | tee build/ci-logs/windows-export.log
+      - name: Upload export log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-export-logs
+          path: build/ci-logs
+      - name: Upload temporary Windows build
+        uses: actions/upload-artifact@v4
+        with:
+          name: CyberCityPlatformer-windows-x86_64
+          path: build/windows

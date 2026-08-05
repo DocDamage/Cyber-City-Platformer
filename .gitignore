@@ -3,6 +3,8 @@
 /android/
 __pycache__/
 *.py[cod]
+/build/
+export_credentials.cfg
 
 # Original bulk asset library retained as a local source mirror. The curated
 # runtime subtree is intentionally tracked and is the only shippable content

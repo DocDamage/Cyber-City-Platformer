@@ -53,6 +53,10 @@ func _run() -> void:
 	settings.call(&"set_setting", &"master_volume", 0.35, false)
 	settings.call(&"set_setting", &"controller_deadzone", 0.4, false)
 	settings.call(&"set_setting", &"reduced_flashing", true, false)
+	var remapped_key := InputEventKey.new()
+	remapped_key.physical_keycode = KEY_Q
+	if not _require(settings.call(&"rebind_action", &"attack_melee", remapped_key), "Keyboard remap was rejected."):
+		return
 	if not _require(settings.call(&"save_settings"), "Settings atomic write failed."):
 		return
 	settings.call(&"set_setting", &"master_volume", 1.0, false)
@@ -62,6 +66,11 @@ func _run() -> void:
 	if not _require(is_equal_approx(float(settings.call(&"get_setting", &"master_volume")), 0.35), "Master volume did not persist."):
 		return
 	if not _require(is_equal_approx(float(settings.call(&"get_setting", &"controller_deadzone")), 0.4), "Controller deadzone did not persist."):
+		return
+	var melee_events: Array[InputEvent] = InputMap.action_get_events(&"attack_melee")
+	if not _require(melee_events.any(func(event: InputEvent) -> bool: return event is InputEventKey and (event as InputEventKey).physical_keycode == KEY_Q), "Keyboard remap did not persist."):
+		return
+	if not _require(melee_events.any(func(event: InputEvent) -> bool: return event is InputEventJoypadButton), "Keyboard remap removed the controller binding."):
 		return
 	for action: StringName in [&"ui_left", &"ui_right", &"ui_accept", &"attack_melee", &"attack_shoot", &"slide_dash", &"interact", &"pause_game"]:
 		if not _require(InputMap.has_action(action) and not InputMap.action_get_events(action).is_empty(), "Input action is missing bindings: %s" % action):

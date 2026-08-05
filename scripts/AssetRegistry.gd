@@ -2,6 +2,7 @@ extends Node
 
 const CAMPAIGN_MANIFEST_PATH := "res://Stages/campaign_manifest.json"
 const RUNTIME_ASSET_ROOT := "res://assets/runtime"
+const RUNTIME_ASSET_INDEX_PATH := RUNTIME_ASSET_ROOT + "/resource_index.json"
 const PROP_ROOT := RUNTIME_ASSET_ROOT + "/props"
 const CHARACTER_TEXTURE_ROOT := RUNTIME_ASSET_ROOT + "/characters"
 const STAGE_TEXTURE_ROOT := RUNTIME_ASSET_ROOT + "/environments"
@@ -34,6 +35,7 @@ const CHARACTER_FOLDER_ALIASES := {
 
 var _campaign: Dictionary = {}
 var _enemy_library: Dictionary = {}
+var _runtime_path_index: Dictionary = {}
 var _resource_cache: Dictionary = {}
 var _missing_cache: Dictionary = {}
 var _warned_requests: Dictionary = {}
@@ -46,6 +48,7 @@ var _campaign_validation_errors := PackedStringArray()
 
 
 func _ready() -> void:
+	_build_runtime_path_index()
 	_ensure_campaign_loaded()
 
 
@@ -99,6 +102,10 @@ func get_character_scene(character_folder: String, character_name: String) -> Pa
 		return _missing_character(cache_key, character_folder, character_name, canonical_folder)
 
 	var roots: Array = [CHARACTER_ROOT.path_join(canonical_folder)]
+	if canonical_folder == "Bosses":
+		roots.append(CHARACTER_ROOT.path_join("Bosses/Scenes"))
+	elif canonical_folder == "Enemies":
+		roots.append(ENEMY_SCENES_ROOT)
 	var resource := _load_named_resource(roots, character_name, SCENE_EXTENSIONS, "PackedScene")
 	if resource is PackedScene:
 		_resource_cache[cache_key] = resource
@@ -369,10 +376,16 @@ func _load_named_resource(
 	var target := _normalize_lookup_name(requested_name)
 	for root_value: Variant in roots:
 		var root := String(root_value).trim_suffix("/")
-		if root.is_empty() or not DirAccess.dir_exists_absolute(root):
+		if root.is_empty():
 			continue
-		var matches: Array[String] = []
-		_collect_matching_paths(root, target, extensions, matches)
+		var matches: Array = []
+		for indexed_root_value: Variant in _runtime_path_index:
+			var indexed_root := String(indexed_root_value)
+			if root == indexed_root or root.begins_with(indexed_root + "/"):
+				var root_index: Dictionary = _runtime_path_index[indexed_root]
+				for candidate: String in (root_index.get(target, []) as Array):
+					if candidate.begins_with(root + "/"):
+						matches.append(candidate)
 		matches.sort()
 		for path: String in matches:
 			var resource := _load_resource_path(path, type_hint)
@@ -403,21 +416,39 @@ func _load_resource_path(path: String, type_hint: String) -> Resource:
 	return ResourceLoader.load(path, type_hint, ResourceLoader.CACHE_MODE_REUSE)
 
 
-func _collect_matching_paths(
-		directory_path: String,
-		target: String,
-		extensions: Array,
-		matches: Array[String]
-) -> void:
-	var directory := DirAccess.open(directory_path)
-	if directory == null:
+func _build_runtime_path_index() -> void:
+	_runtime_path_index.clear()
+	if not FileAccess.file_exists(RUNTIME_ASSET_INDEX_PATH):
+		push_error("AssetRegistry requires the committed runtime resource index.")
 		return
-	for file_name: String in directory.get_files():
-		if extensions.has(file_name.get_extension().to_lower()) and _normalize_lookup_name(file_name) == target:
-			matches.append(directory_path.path_join(file_name))
-	for child_name: String in directory.get_directories():
-		if not child_name.begins_with("."):
-			_collect_matching_paths(directory_path.path_join(child_name), target, extensions, matches)
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(RUNTIME_ASSET_INDEX_PATH))
+	if parsed is not Dictionary:
+		push_error("AssetRegistry could not parse the runtime resource index.")
+		return
+	for path_value: Variant in (parsed as Dictionary).get("paths", []):
+		var path := String(path_value)
+		if path.is_empty():
+			continue
+		var normalized := _normalize_lookup_name(path)
+		for root: String in [PROP_ROOT, CHARACTER_TEXTURE_ROOT, STAGE_TEXTURE_ROOT, MUSIC_ROOT, SFX_ROOT, PARALLAX_ROOT, VFX_ROOT]:
+			if path.begins_with(root + "/"):
+				var root_index: Dictionary = _runtime_path_index.get(root, {})
+				var matches: Array = root_index.get(normalized, [])
+				matches.append(path)
+				matches.sort()
+				root_index[normalized] = matches
+				_runtime_path_index[root] = root_index
+				break
+
+
+func get_runtime_indexed_path_count() -> int:
+	var unique_paths := {}
+	for root_index_value: Variant in _runtime_path_index.values():
+		var root_index: Dictionary = root_index_value
+		for matches_value: Variant in root_index.values():
+			for path: String in (matches_value as Array):
+				unique_paths[path] = true
+	return unique_paths.size()
 
 
 func _normalize_lookup_name(value: String) -> String:

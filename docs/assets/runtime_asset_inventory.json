@@ -807,43 +807,11 @@
       ]
     },
     {
-      "path": "res://addons/AsepriteWizard/plugin.cfg",
+      "path": "res://assets/runtime",
       "distribution": "Present and tracked",
-      "requirement": "Runtime-critical",
+      "requirement": "Optional",
       "present": true,
       "tracked": true,
-      "ignored": false,
-      "hard_reference": true,
-      "references": [
-        {
-          "source": "project.godot",
-          "line": 38,
-          "hard": true
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Characters/Heroes",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 357,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/runtime",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
       "ignored": false,
       "hard_reference": false,
       "references": [
@@ -865,7 +833,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 33,
+          "line": 37,
           "hard": false
         }
       ]
@@ -881,7 +849,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 34,
+          "line": 38,
           "hard": false
         }
       ]
@@ -897,7 +865,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 35,
+          "line": 39,
           "hard": false
         }
       ]
@@ -913,42 +881,42 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 30,
+          "line": 34,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 36,
+          "line": 40,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 46,
+          "line": 47,
           "hard": false
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
-          "line": 72,
+          "line": 46,
           "hard": false
         }
       ]
@@ -980,32 +948,32 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 28,
+          "line": 32,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 30,
+          "line": 31,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 67,
+          "line": 41,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 68,
+          "line": 42,
           "hard": false
         }
       ]
@@ -1021,32 +989,32 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 27,
+          "line": 31,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 22,
+          "line": 23,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
-          "line": 70,
+          "line": 44,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 70,
+          "line": 44,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 68,
+          "line": 42,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 69,
+          "line": 43,
           "hard": false
         }
       ]
@@ -1066,7 +1034,7 @@
           "hard": false
         },
         {
-          "source": "scripts/PrototypeStage.gd",
+          "source": "tools/stage_builder/PrototypeStage.gd",
           "line": 15,
           "hard": false
         }
@@ -1083,37 +1051,37 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 29,
+          "line": 33,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 38,
+          "line": 39,
           "hard": false
         },
         {
           "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
-          "line": 69,
+          "line": 43,
           "hard": false
         },
         {
           "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
-          "line": 69,
+          "line": 43,
           "hard": false
         },
         {
           "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
-          "line": 69,
+          "line": 43,
           "hard": false
         },
         {
           "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
-          "line": 69,
+          "line": 43,
           "hard": false
         },
         {
           "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
-          "line": 70,
+          "line": 44,
           "hard": false
         }
       ]
@@ -1147,6 +1115,11 @@
           "source": "scripts/AudioManager.gd",
           "line": 23,
           "hard": false
+        },
+        {
+          "source": "scripts/AudioManager.gd",
+          "line": 26,
+          "hard": false
         }
       ]
     },
@@ -1179,6 +1152,11 @@
           "source": "scripts/AudioManager.gd",
           "line": 19,
           "hard": false
+        },
+        {
+          "source": "scripts/AudioManager.gd",
+          "line": 25,
+          "hard": false
         }
       ]
     },
@@ -1194,6 +1172,11 @@
         {
           "source": "scripts/AudioManager.gd",
           "line": 21,
+          "hard": false
+        },
+        {
+          "source": "scripts/AudioManager.gd",
+          "line": 27,
           "hard": false
         }
       ]
@@ -1226,6 +1209,11 @@
         {
           "source": "scripts/AudioManager.gd",
           "line": 22,
+          "hard": false
+        },
+        {
+          "source": "scripts/AudioManager.gd",
+          "line": 28,
           "hard": false
         }
       ]
@@ -1279,11 +1267,27 @@
       ]
     },
     {
+      "path": "res://assets/runtime/characters/Enemies",
+      "distribution": "Present and tracked",
+      "requirement": "Editor-only",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/tools/EnemyLibraryBuilder.gd",
+          "line": 3,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
@@ -1376,16 +1380,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 36,
+          "line": 47,
           "hard": false
         }
       ]
@@ -1472,16 +1476,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 55,
+          "line": 77,
           "hard": false
         }
       ]
@@ -1583,33 +1587,17 @@
       ]
     },
     {
-      "path": "res://assets/runtime/characters/Enemies/death knight",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Characters/Enemies/enemy_library.json",
-          "line": 77,
-          "hard": false
-        }
-      ]
-    },
-    {
       "path": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 96,
+          "line": 137,
           "hard": false
         }
       ]
@@ -1712,16 +1700,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 113,
+          "line": 165,
           "hard": false
         }
       ]
@@ -1792,16 +1780,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 132,
+          "line": 195,
           "hard": false
         }
       ]
@@ -1904,16 +1892,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 151,
+          "line": 225,
           "hard": false
         }
       ]
@@ -2016,16 +2004,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 170,
+          "line": 255,
           "hard": false
         }
       ]
@@ -2128,16 +2116,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 188,
+          "line": 284,
           "hard": false
         }
       ]
@@ -2224,16 +2212,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 206,
+          "line": 313,
           "hard": false
         }
       ]
@@ -2320,16 +2308,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 224,
+          "line": 342,
           "hard": false
         }
       ]
@@ -2416,16 +2404,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 243,
+          "line": 372,
           "hard": false
         }
       ]
@@ -2528,16 +2516,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 262,
+          "line": 402,
           "hard": false
         }
       ]
@@ -2640,16 +2628,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 281,
+          "line": 432,
           "hard": false
         }
       ]
@@ -2752,16 +2740,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 299,
+          "line": 461,
           "hard": false
         }
       ]
@@ -2848,16 +2836,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 317,
+          "line": 490,
           "hard": false
         }
       ]
@@ -2944,16 +2932,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 336,
+          "line": 520,
           "hard": false
         }
       ]
@@ -3056,16 +3044,21 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 355,
+          "line": 107,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 550,
           "hard": false
         }
       ]
@@ -3198,16 +3191,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 373,
+          "line": 579,
           "hard": false
         }
       ]
@@ -3294,16 +3287,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 394,
+          "line": 611,
           "hard": false
         }
       ]
@@ -3438,16 +3431,16 @@
     },
     {
       "path": "res://assets/runtime/characters/Enemies/Witch/Sprite",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 413,
+          "line": 641,
           "hard": false
         }
       ]
@@ -3545,6 +3538,22 @@
           "source": "Characters/Enemies/SpriteFrames/witch.tres",
           "line": 8,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/Player",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "Stages/campaign_manifest.json",
+          "line": 960,
+          "hard": false
         }
       ]
     },
@@ -3648,7 +3657,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 43,
+          "line": 44,
           "hard": false
         },
         {
@@ -3689,7 +3698,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 44,
+          "line": 45,
           "hard": false
         },
         {
@@ -3730,7 +3739,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 45,
+          "line": 46,
           "hard": false
         },
         {
@@ -3792,7 +3801,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 35,
+          "line": 36,
           "hard": false
         },
         {
@@ -3833,7 +3842,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 37,
+          "line": 38,
           "hard": false
         },
         {
@@ -3874,7 +3883,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 36,
+          "line": 37,
           "hard": false
         },
         {
@@ -3915,7 +3924,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 27,
+          "line": 28,
           "hard": false
         },
         {
@@ -3951,7 +3960,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 29,
+          "line": 30,
           "hard": false
         },
         {
@@ -3987,7 +3996,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 28,
+          "line": 29,
           "hard": false
         },
         {
@@ -4028,7 +4037,12 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 19,
+          "line": 20,
+          "hard": false
+        },
+        {
+          "source": "scripts/ui/TitleScreen.gd",
+          "line": 22,
           "hard": false
         },
         {
@@ -4064,7 +4078,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 21,
+          "line": 22,
           "hard": false
         },
         {
@@ -4100,7 +4114,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 20,
+          "line": 21,
           "hard": false
         },
         {
@@ -4146,7 +4160,7 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 54,
+          "line": 55,
           "hard": false
         },
         {
@@ -4198,7 +4212,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 55,
+          "line": 56,
           "hard": false
         },
         {
@@ -4271,7 +4285,7 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 56,
+          "line": 57,
           "hard": false
         },
         {
@@ -4312,17 +4326,17 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 59,
-          "hard": false
-        },
-        {
-          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
           "line": 60,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
           "line": 61,
+          "hard": false
+        },
+        {
+          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
+          "line": 62,
           "hard": false
         },
         {
@@ -4358,7 +4372,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 66,
+          "line": 67,
           "hard": false
         },
         {
@@ -4415,7 +4429,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 64,
+          "line": 65,
           "hard": false
         },
         {
@@ -4456,7 +4470,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 65,
+          "line": 66,
           "hard": false
         },
         {
@@ -4497,17 +4511,17 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 69,
-          "hard": false
-        },
-        {
-          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
           "line": 70,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
           "line": 71,
+          "hard": false
+        },
+        {
+          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
+          "line": 72,
           "hard": false
         },
         {
@@ -4559,175 +4573,33 @@
       ]
     },
     {
-      "path": "res://assets/Stage Props/Space Props",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 8,
-          "hard": false
-        },
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 96,
-          "hard": false
-        },
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 181,
-          "hard": false
-        },
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 268,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Stages/Abyssal Night",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 267,
-          "hard": false
-        },
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 271,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Stages/Cyber City",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 11,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Stages/Cyber City/Cyber City/Prop",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 7,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Stages/Mega Robot Factory",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 95,
-          "hard": false
-        },
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 99,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Stages/Neon Moon Protocol",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 182,
-          "hard": false
-        },
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 185,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://assets/Stages/Rooftops",
-      "distribution": "Present but untracked",
-      "requirement": "Optional",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "Stages/campaign_manifest.json",
-          "line": 12,
-          "hard": false
-        }
-      ]
-    },
-    {
       "path": "res://Characters",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
-      "ignored": false,
+      "tracked": true,
+      "ignored": true,
       "hard_reference": false,
       "references": [
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 8,
+          "line": 9,
           "hard": false
         }
       ]
     },
     {
       "path": "res://Characters/Bosses/Scenes",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 348,
+          "line": 952,
           "hard": false
         }
       ]
@@ -4753,13 +4625,18 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 11,
+          "line": 12,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
           "line": 22,
           "hard": true
+        },
+        {
+          "source": "tests/integration/CleanCloneGate.gd",
+          "line": 4,
+          "hard": false
         }
       ]
     },
@@ -4779,13 +4656,18 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 12,
+          "line": 13,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
           "line": 20,
           "hard": true
+        },
+        {
+          "source": "tests/integration/CleanCloneGate.gd",
+          "line": 5,
+          "hard": false
         }
       ]
     },
@@ -4805,13 +4687,18 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 13,
+          "line": 14,
           "hard": false
         },
         {
           "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
           "line": 22,
           "hard": true
+        },
+        {
+          "source": "tests/integration/CleanCloneGate.gd",
+          "line": 6,
+          "hard": false
         }
       ]
     },
@@ -4831,13 +4718,18 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 14,
+          "line": 15,
           "hard": false
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
           "line": 24,
           "hard": true
+        },
+        {
+          "source": "tests/integration/CleanCloneGate.gd",
+          "line": 7,
+          "hard": false
         }
       ]
     },
@@ -4852,7 +4744,7 @@
       "references": [
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 12,
+          "line": 13,
           "hard": false
         },
         {
@@ -4862,7 +4754,7 @@
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 351,
+          "line": 955,
           "hard": false
         }
       ]
@@ -4890,21 +4782,21 @@
     },
     {
       "path": "res://Characters/Enemies/Scenes",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 11,
+          "line": 12,
           "hard": false
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 5,
+          "line": 6,
           "hard": false
         },
         {
@@ -4914,7 +4806,7 @@
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 352,
+          "line": 956,
           "hard": false
         }
       ]
@@ -4956,7 +4848,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 35,
+          "line": 46,
           "hard": false
         },
         {
@@ -4982,7 +4874,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 54,
+          "line": 76,
           "hard": false
         },
         {
@@ -5008,7 +4900,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 76,
+          "line": 106,
           "hard": false
         },
         {
@@ -5034,7 +4926,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 95,
+          "line": 136,
           "hard": false
         },
         {
@@ -5060,7 +4952,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 112,
+          "line": 164,
           "hard": false
         },
         {
@@ -5086,7 +4978,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 131,
+          "line": 194,
           "hard": false
         },
         {
@@ -5112,7 +5004,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 150,
+          "line": 224,
           "hard": false
         },
         {
@@ -5129,6 +5021,11 @@
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
           "line": 11,
           "hard": true
+        },
+        {
+          "source": "tests/integration/EncounterLifecycleTest.gd",
+          "line": 4,
+          "hard": true
         }
       ]
     },
@@ -5143,7 +5040,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 169,
+          "line": 254,
           "hard": false
         },
         {
@@ -5169,7 +5066,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 187,
+          "line": 283,
           "hard": false
         },
         {
@@ -5195,7 +5092,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 205,
+          "line": 312,
           "hard": false
         },
         {
@@ -5221,7 +5118,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 223,
+          "line": 341,
           "hard": false
         },
         {
@@ -5247,7 +5144,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 242,
+          "line": 371,
           "hard": false
         },
         {
@@ -5273,7 +5170,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 261,
+          "line": 401,
           "hard": false
         },
         {
@@ -5299,7 +5196,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 280,
+          "line": 431,
           "hard": false
         },
         {
@@ -5325,7 +5222,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 298,
+          "line": 460,
           "hard": false
         },
         {
@@ -5351,7 +5248,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 316,
+          "line": 489,
           "hard": false
         },
         {
@@ -5377,7 +5274,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 335,
+          "line": 519,
           "hard": false
         },
         {
@@ -5403,7 +5300,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 354,
+          "line": 549,
           "hard": false
         },
         {
@@ -5429,7 +5326,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 372,
+          "line": 578,
           "hard": false
         },
         {
@@ -5460,7 +5357,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 393,
+          "line": 610,
           "hard": false
         },
         {
@@ -5486,7 +5383,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 412,
+          "line": 640,
           "hard": false
         },
         {
@@ -5502,33 +5399,17 @@
       ]
     },
     {
-      "path": "res://Characters/Enemies/SourceArt",
-      "distribution": "Present but untracked",
-      "requirement": "Editor-only",
-      "present": true,
-      "tracked": false,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "scripts/tools/EnemyLibraryBuilder.gd",
-          "line": 3,
-          "hard": false
-        }
-      ]
-    },
-    {
       "path": "res://Characters/Enemies/SpriteFrames",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
+      "tracked": true,
       "ignored": false,
       "hard_reference": false,
       "references": [
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 10,
+          "line": 11,
           "hard": false
         },
         {
@@ -5538,7 +5419,7 @@
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 353,
+          "line": 957,
           "hard": false
         }
       ]
@@ -5590,7 +5471,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 37,
+          "line": 48,
           "hard": false
         },
         {
@@ -5621,7 +5502,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 56,
+          "line": 78,
           "hard": false
         },
         {
@@ -5652,7 +5533,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 78,
+          "line": 108,
           "hard": false
         },
         {
@@ -5688,7 +5569,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 97,
+          "line": 138,
           "hard": false
         },
         {
@@ -5719,7 +5600,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 114,
+          "line": 166,
           "hard": false
         },
         {
@@ -5750,7 +5631,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 133,
+          "line": 196,
           "hard": false
         },
         {
@@ -5781,7 +5662,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 152,
+          "line": 226,
           "hard": false
         },
         {
@@ -5812,7 +5693,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 171,
+          "line": 256,
           "hard": false
         },
         {
@@ -5843,7 +5724,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 189,
+          "line": 285,
           "hard": false
         },
         {
@@ -5874,7 +5755,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 207,
+          "line": 314,
           "hard": false
         },
         {
@@ -5905,7 +5786,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 225,
+          "line": 343,
           "hard": false
         },
         {
@@ -5941,7 +5822,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 244,
+          "line": 373,
           "hard": false
         },
         {
@@ -5972,7 +5853,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 263,
+          "line": 403,
           "hard": false
         },
         {
@@ -6008,7 +5889,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 282,
+          "line": 433,
           "hard": false
         },
         {
@@ -6039,7 +5920,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 300,
+          "line": 462,
           "hard": false
         },
         {
@@ -6070,7 +5951,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 318,
+          "line": 491,
           "hard": false
         },
         {
@@ -6101,7 +5982,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 337,
+          "line": 521,
           "hard": false
         },
         {
@@ -6132,7 +6013,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 356,
+          "line": 551,
           "hard": false
         },
         {
@@ -6163,7 +6044,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 374,
+          "line": 580,
           "hard": false
         },
         {
@@ -6194,7 +6075,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 395,
+          "line": 612,
           "hard": false
         },
         {
@@ -6225,7 +6106,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 414,
+          "line": 642,
           "hard": false
         },
         {
@@ -6256,12 +6137,12 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 16,
+          "line": 17,
           "hard": true
         },
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 18,
+          "line": 19,
           "hard": false
         },
         {
@@ -6272,6 +6153,16 @@
         {
           "source": "scripts/AssetRegistrySmokeTest.gd",
           "line": 67,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/CleanCloneGate.gd",
+          "line": 87,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/CleanCloneGate.gd",
+          "line": 88,
           "hard": false
         }
       ]
@@ -6350,7 +6241,7 @@
       "references": [
         {
           "source": "scripts/BossBase.gd",
-          "line": 15,
+          "line": 18,
           "hard": true
         }
       ]
@@ -6376,7 +6267,7 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 6,
+          "line": 7,
           "hard": false
         },
         {
@@ -6489,6 +6380,11 @@
           "source": "scenes/Level2.tscn",
           "line": 8,
           "hard": true
+        },
+        {
+          "source": "scripts/campaign/StageController.gd",
+          "line": 4,
+          "hard": true
         }
       ]
     },
@@ -6502,13 +6398,123 @@
       "hard_reference": true,
       "references": [
         {
+          "source": "Characters/Enemies/Scenes/centaur.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/cerberus.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/cyclops.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/death_knight.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/demon_boss.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/flying_eye.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/gargoyle.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/goblin.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/gryphon.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/harpy.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/headless_horseman.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/imp.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/medusa.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/mimic.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/minotaur.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/poison_skull.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/pyromancer.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/satyr_archer.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/skeleton_warrior.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/stone_golem.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/werewolf.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Characters/Enemies/Scenes/witch.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
           "source": "scenes/Act1_CyberCity/SubStage_1_1.tscn",
           "line": 10,
           "hard": true
         },
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 20,
+          "line": 21,
           "hard": false
         },
         {
@@ -6659,7 +6665,7 @@
           "hard": true
         },
         {
-          "source": "Stages/PrototypeStage.tscn",
+          "source": "tools/stage_builder/PrototypeStage.tscn",
           "line": 5,
           "hard": true
         }
@@ -6675,13 +6681,8 @@
       "hard_reference": true,
       "references": [
         {
-          "source": "project.godot",
-          "line": 14,
-          "hard": true
-        },
-        {
           "source": "scripts/AssetRegistry.gd",
-          "line": 21,
+          "line": 22,
           "hard": false
         },
         {
@@ -6738,7 +6739,7 @@
         },
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 19,
+          "line": 20,
           "hard": false
         },
         {
@@ -6748,7 +6749,7 @@
         },
         {
           "source": "scripts/BossSystemsSmokeTest.gd",
-          "line": 98,
+          "line": 122,
           "hard": false
         },
         {
@@ -6847,7 +6848,22 @@
           "hard": true
         },
         {
-          "source": "Stages/PrototypeStage.tscn",
+          "source": "Stages/campaign_manifest.json",
+          "line": 961,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/EncounterLifecycleTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/PlayerStateTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tools/stage_builder/PrototypeStage.tscn",
           "line": 4,
           "hard": true
         }
@@ -6863,8 +6879,13 @@
       "hard_reference": true,
       "references": [
         {
-          "source": "scripts/Player.gd",
-          "line": 20,
+          "source": "scripts/systems/player/PlayerCombatController.gd",
+          "line": 8,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/PlayerStateTest.gd",
+          "line": 4,
           "hard": true
         }
       ]
@@ -6896,7 +6917,7 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 25,
+          "line": 28,
           "hard": true
         }
       ]
@@ -6922,7 +6943,7 @@
         },
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 7,
+          "line": 8,
           "hard": false
         },
         {
@@ -7018,6 +7039,152 @@
       ]
     },
     {
+      "path": "res://scenes/systems/security/EnemyProjectile.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/EnemyBase.gd",
+          "line": 21,
+          "hard": true
+        },
+        {
+          "source": "scripts/systems/security/Turret.gd",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 4,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/CreditsScreen.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/ui/EndingScreen.gd",
+          "line": 35,
+          "hard": false
+        },
+        {
+          "source": "scripts/ui/TitleScreen.gd",
+          "line": 3,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 73,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/EndingScreen.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/GameManager.gd",
+          "line": 15,
+          "hard": false
+        },
+        {
+          "source": "tests/campaign/CampaignTraversalTest.gd",
+          "line": 62,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 67,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/PauseMenu.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/campaign/StageController.gd",
+          "line": 5,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/StageSelectScreen.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/ui/TitleScreen.gd",
+          "line": 4,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 61,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/TitleScreen.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "project.godot",
+          "line": 15,
+          "hard": true
+        },
+        {
+          "source": "scripts/GameManager.gd",
+          "line": 14,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 17,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 53,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://scenes/vfx/DustBurst.tscn",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -7028,7 +7195,7 @@
       "references": [
         {
           "source": "scripts/Player.gd",
-          "line": 21,
+          "line": 23,
           "hard": true
         },
         {
@@ -7070,7 +7237,7 @@
       "references": [
         {
           "source": "scripts/EnemyBase.gd",
-          "line": 14,
+          "line": 20,
           "hard": true
         },
         {
@@ -7122,7 +7289,7 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 24,
+          "line": 26,
           "hard": true
         }
       ]
@@ -7138,7 +7305,7 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 22,
+          "line": 24,
           "hard": true
         },
         {
@@ -7160,6 +7327,70 @@
         {
           "source": "scenes/BossBase.tscn",
           "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/bosses/AssemblyColossus.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Characters/Bosses/Scenes/act2_assembly_colossus.tscn",
+          "line": 5,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/bosses/HelixWarden.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Characters/Bosses/Scenes/act1_helix_warden.tscn",
+          "line": 5,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/bosses/LunarOracle.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Characters/Bosses/Scenes/act3_lunar_oracle.tscn",
+          "line": 5,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/bosses/VoidCerberus.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Characters/Bosses/Scenes/act4_void_cerberus.tscn",
+          "line": 5,
           "hard": true
         }
       ]
@@ -7196,6 +7427,112 @@
         },
         {
           "source": "scenes/Player/Bullet.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/campaign/CampaignStage.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
+          "line": 5,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
           "line": 3,
           "hard": true
         }
@@ -7334,7 +7671,7 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 21,
+          "line": 23,
           "hard": true
         },
         {
@@ -7454,7 +7791,7 @@
           "hard": true
         },
         {
-          "source": "Stages/PrototypeStage.tscn",
+          "source": "tools/stage_builder/PrototypeStage.tscn",
           "line": 6,
           "hard": true
         }
@@ -7488,116 +7825,6 @@
         {
           "source": "Characters/Enemies/EnemyCatalog.tscn",
           "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/centaur.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/cerberus.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/cyclops.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/death_knight.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/demon_boss.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/flying_eye.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/gargoyle.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/goblin.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/gryphon.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/harpy.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/headless_horseman.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/imp.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/medusa.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/mimic.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/minotaur.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/poison_skull.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/pyromancer.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/satyr_archer.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/skeleton_warrior.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/stone_golem.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/werewolf.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/witch.tscn",
-          "line": 3,
           "hard": true
         },
         {
@@ -7708,7 +7935,7 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 20,
+          "line": 21,
           "hard": true
         },
         {
@@ -7727,116 +7954,6 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
-        {
-          "source": "Characters/Enemies/Scenes/centaur.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/cerberus.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/cyclops.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/death_knight.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/demon_boss.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/flying_eye.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/gargoyle.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/goblin.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/gryphon.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/harpy.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/headless_horseman.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/imp.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/medusa.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/mimic.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/minotaur.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/poison_skull.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/pyromancer.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/satyr_archer.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/skeleton_warrior.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/stone_golem.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/werewolf.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/witch.tscn",
-          "line": 6,
-          "hard": true
-        },
         {
           "source": "scenes/BossBase.tscn",
           "line": 5,
@@ -7879,116 +7996,6 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
-        {
-          "source": "Characters/Enemies/Scenes/centaur.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/cerberus.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/cyclops.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/death_knight.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/demon_boss.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/flying_eye.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/gargoyle.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/goblin.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/gryphon.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/harpy.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/headless_horseman.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/imp.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/medusa.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/mimic.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/minotaur.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/poison_skull.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/pyromancer.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/satyr_archer.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/skeleton_warrior.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/stone_golem.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/werewolf.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Characters/Enemies/Scenes/witch.tscn",
-          "line": 5,
-          "hard": true
-        },
         {
           "source": "scenes/BossBase.tscn",
           "line": 4,
@@ -8166,7 +8173,7 @@
       ]
     },
     {
-      "path": "res://scripts/PrototypeStage.gd",
+      "path": "res://scripts/SaveManager.gd",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
       "present": true,
@@ -8175,98 +8182,8 @@
       "hard_reference": true,
       "references": [
         {
-          "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
-          "line": 3,
-          "hard": true
-        },
-        {
-          "source": "Stages/PrototypeStage.tscn",
-          "line": 3,
+          "source": "project.godot",
+          "line": 27,
           "hard": true
         }
       ]
@@ -8283,6 +8200,22 @@
         {
           "source": "scenes/SceneTransition.tscn",
           "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/SettingsManager.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "project.godot",
+          "line": 22,
           "hard": true
         }
       ]
@@ -8415,6 +8348,118 @@
       ]
     },
     {
+      "path": "res://scripts/systems/encounters/EnemyProjectile.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/systems/security/EnemyProjectile.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/systems/player/PlayerCombatController.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/Player.tscn",
+          "line": 7,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/CreditsScreen.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/CreditsScreen.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/EndingScreen.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/EndingScreen.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/PauseMenu.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/PauseMenu.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/StageSelectScreen.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/StageSelectScreen.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/TitleScreen.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/TitleScreen.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
       "path": "res://scripts/VFXBurst.gd",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -8456,23 +8501,23 @@
       "references": [
         {
           "source": "project.godot",
-          "line": 23,
+          "line": 25,
           "hard": true
         }
       ]
     },
     {
       "path": "res://Stages",
-      "distribution": "Present but untracked",
+      "distribution": "Present and tracked",
       "requirement": "Optional",
       "present": true,
-      "tracked": false,
-      "ignored": false,
+      "tracked": true,
+      "ignored": true,
       "hard_reference": false,
       "references": [
         {
           "source": "scripts/AssetRegistry.gd",
-          "line": 9,
+          "line": 10,
           "hard": false
         }
       ]
@@ -8492,8 +8537,18 @@
           "hard": false
         },
         {
+          "source": "scripts/GameManager.gd",
+          "line": 13,
+          "hard": false
+        },
+        {
           "source": "Stages/campaign_manifest.json",
-          "line": 28,
+          "line": 20,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 31,
           "hard": false
         }
       ]
@@ -8519,7 +8574,12 @@
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 42,
+          "line": 64,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/SaveSettingsTest.gd",
+          "line": 21,
           "hard": false
         }
       ]
@@ -8535,12 +8595,12 @@
       "references": [
         {
           "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
-          "line": 233,
+          "line": 207,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 56,
+          "line": 109,
           "hard": false
         }
       ]
@@ -8556,12 +8616,12 @@
       "references": [
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 234,
+          "line": 208,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 71,
+          "line": 156,
           "hard": false
         }
       ]
@@ -8582,12 +8642,12 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 219,
+          "line": 193,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 85,
+          "line": 202,
           "hard": false
         }
       ]
@@ -8624,12 +8684,12 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 213,
+          "line": 187,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 115,
+          "line": 255,
           "hard": false
         }
       ]
@@ -8650,7 +8710,7 @@
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 129,
+          "line": 300,
           "hard": false
         }
       ]
@@ -8666,12 +8726,12 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 234,
+          "line": 208,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 143,
+          "line": 346,
           "hard": false
         }
       ]
@@ -8687,12 +8747,12 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 233,
+          "line": 207,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 157,
+          "line": 393,
           "hard": false
         }
       ]
@@ -8713,12 +8773,12 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 233,
+          "line": 207,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 171,
+          "line": 439,
           "hard": false
         }
       ]
@@ -8734,12 +8794,12 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 226,
+          "line": 200,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 201,
+          "line": 492,
           "hard": false
         }
       ]
@@ -8755,12 +8815,12 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
-          "line": 227,
+          "line": 201,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 215,
+          "line": 537,
           "hard": false
         }
       ]
@@ -8776,12 +8836,12 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
-          "line": 229,
+          "line": 203,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 229,
+          "line": 583,
           "hard": false
         }
       ]
@@ -8797,12 +8857,12 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
-          "line": 225,
+          "line": 199,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 243,
+          "line": 630,
           "hard": false
         }
       ]
@@ -8823,12 +8883,12 @@
         },
         {
           "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
-          "line": 226,
+          "line": 200,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 257,
+          "line": 677,
           "hard": false
         }
       ]
@@ -8844,12 +8904,12 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
-          "line": 220,
+          "line": 194,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 286,
+          "line": 729,
           "hard": false
         }
       ]
@@ -8865,12 +8925,12 @@
       "references": [
         {
           "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
-          "line": 233,
+          "line": 207,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 299,
+          "line": 773,
           "hard": false
         }
       ]
@@ -8886,12 +8946,12 @@
       "references": [
         {
           "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
-          "line": 234,
+          "line": 208,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 312,
+          "line": 819,
           "hard": false
         }
       ]
@@ -8899,21 +8959,26 @@
     {
       "path": "res://Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
       "distribution": "Present and tracked",
-      "requirement": "Optional",
+      "requirement": "Runtime-critical",
       "present": true,
       "tracked": true,
       "ignored": false,
-      "hard_reference": false,
+      "hard_reference": true,
       "references": [
         {
           "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
-          "line": 233,
+          "line": 207,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 325,
+          "line": 864,
           "hard": false
+        },
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 3,
+          "hard": true
         }
       ]
     },
@@ -8938,12 +9003,17 @@
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
-          "line": 234,
+          "line": 208,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
-          "line": 339,
+          "line": 912,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 49,
           "hard": false
         }
       ]
@@ -8970,27 +9040,11 @@
       ]
     },
     {
-      "path": "res://Stages/PrototypeStage.tscn",
+      "path": "res://Stages/TileSets",
       "distribution": "Present and tracked",
       "requirement": "Editor-only",
       "present": true,
       "tracked": true,
-      "ignored": false,
-      "hard_reference": false,
-      "references": [
-        {
-          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 4,
-          "hard": false
-        }
-      ]
-    },
-    {
-      "path": "res://Stages/TileSets",
-      "distribution": "Present but untracked",
-      "requirement": "Editor-only",
-      "present": true,
-      "tracked": false,
       "ignored": false,
       "hard_reference": false,
       "references": [
@@ -9012,7 +9066,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 23,
+          "line": 24,
           "hard": false
         },
         {
@@ -9048,7 +9102,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 31,
+          "line": 32,
           "hard": false
         },
         {
@@ -9084,7 +9138,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 39,
+          "line": 40,
           "hard": false
         },
         {
@@ -9125,7 +9179,7 @@
       "references": [
         {
           "source": "scripts/tools/CampaignPrototypeBuilder.gd",
-          "line": 47,
+          "line": 48,
           "hard": false
         },
         {
@@ -9167,6 +9221,54 @@
         {
           "source": "addons/AsepriteWizard/interface/docks/wizard/as_wizard_window.tscn",
           "line": 181,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://tests/fixtures/BossTestTarget.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/BossSystemsSmokeTest.gd",
+          "line": 34,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://tools/stage_builder/PrototypeStage.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Editor-only",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "tools/stage_builder/PrototypeStage.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://tools/stage_builder/PrototypeStage.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Editor-only",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/tools/CampaignPrototypeBuilder.gd",
+          "line": 4,
           "hard": false
         }
       ]

@@ -42,7 +42,7 @@ def is_editor_source(source: str) -> bool:
     return normalized.startswith(("addons/", "tools/", "scripts/tools/"))
 
 
-def collect_dependencies(root: Path) -> dict[str, Dependency]:
+def collect_dependencies(root: Path, tracked: set[str]) -> dict[str, Dependency]:
     dependencies: dict[str, Dependency] = {}
     for source in sorted(root.rglob("*")):
         if not source.is_file() or ".git" in source.parts or ".godot" in source.parts:
@@ -55,6 +55,8 @@ def collect_dependencies(root: Path) -> dict[str, Dependency]:
         if source.name != "project.godot" and source.suffix.lower() not in SCAN_SUFFIXES:
             continue
         relative_source = source.relative_to(root).as_posix()
+        if relative_source not in tracked:
+            continue
         try:
             lines = source.read_text(encoding="utf-8-sig").splitlines()
         except UnicodeDecodeError:
@@ -88,8 +90,13 @@ def classify(
     relative_path = dependency.path.removeprefix("res://")
     normalized = relative_path.replace("\\", "/")
     present = (root / Path(relative_path)).exists()
-    is_tracked = normalized in tracked
-    is_ignored = normalized in ignored
+    is_directory = (root / Path(relative_path)).is_dir()
+    is_tracked = normalized in tracked or (
+        is_directory and any(path.startswith(normalized.rstrip("/") + "/") for path in tracked)
+    )
+    is_ignored = normalized in ignored or (
+        is_directory and any(path.startswith(normalized.rstrip("/") + "/") for path in ignored)
+    )
     all_editor = all(is_editor_source(str(ref["source"])) for ref in dependency.references)
 
     if present and is_tracked:
@@ -192,8 +199,8 @@ def main() -> int:
     arguments = parser.parse_args()
 
     root = Path(__file__).resolve().parents[1]
-    dependencies = collect_dependencies(root)
     tracked = git_lines(root, "ls-files")
+    dependencies = collect_dependencies(root, tracked)
     ignored = git_lines(root, "ls-files", "--others", "--ignored", "--exclude-standard")
     records = [
         classify(root, dependencies[path], tracked, ignored)

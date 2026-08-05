@@ -1,0 +1,45 @@
+name: Set up Godot 4.7.1
+description: Download the official pinned Godot headless binary and optional export templates
+inputs:
+  export-templates:
+    description: Install the official 4.7.1 export templates
+    required: false
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - name: Download Godot
+      shell: bash
+      env:
+        GODOT_VERSION: 4.7.1
+        GODOT_RELEASE: stable
+      run: |
+        set -euo pipefail
+        archive="$RUNNER_TEMP/godot.zip"
+        install_dir="$RUNNER_TEMP/godot"
+        curl --fail --location --retry 3 \
+          "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-${GODOT_RELEASE}/Godot_v${GODOT_VERSION}-${GODOT_RELEASE}_linux.x86_64.zip" \
+          --output "$archive"
+        mkdir -p "$install_dir"
+        unzip -q "$archive" -d "$install_dir"
+        binary="$install_dir/Godot_v${GODOT_VERSION}-${GODOT_RELEASE}_linux.x86_64"
+        chmod +x "$binary"
+        echo "$install_dir" >> "$GITHUB_PATH"
+        echo "GODOT_BIN=$binary" >> "$GITHUB_ENV"
+    - name: Install export templates
+      if: inputs.export-templates == 'true'
+      shell: bash
+      env:
+        GODOT_VERSION: 4.7.1
+        GODOT_RELEASE: stable
+      run: |
+        set -euo pipefail
+        archive="$RUNNER_TEMP/godot-templates.tpz"
+        unpacked="$RUNNER_TEMP/godot-templates"
+        destination="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.${GODOT_RELEASE}"
+        curl --fail --location --retry 3 \
+          "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-${GODOT_RELEASE}/Godot_v${GODOT_VERSION}-${GODOT_RELEASE}_export_templates.tpz" \
+          --output "$archive"
+        mkdir -p "$unpacked" "$destination"
+        unzip -q "$archive" -d "$unpacked"
+        cp -R "$unpacked/templates/." "$destination/"

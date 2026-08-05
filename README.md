@@ -1,53 +1,36 @@
 # Cyber City Platformer
 
-Godot 4.7 project foundation for a neon cyberpunk action platformer.
+Cyber City Platformer is a Godot 4.7.1 neon action-platformer with a twenty-stage campaign across four acts. The production game includes movement and combat upgrades, ten enemy archetypes, four distinct bosses, checkpoints, save recovery, stage select, settings, accessibility options, an ending, and credits.
 
-## Controls
+## Play the Windows build
 
-- Move: Left/Right arrows or gamepad left stick/D-pad
-- Jump / wall jump: Space or the default `ui_accept` gamepad binding
-- Melee: Z or gamepad Cross/A
-- Shoot: X or gamepad Square/X
-- Slide/dash input: C or gamepad Circle/B
+Extract the complete release archive, keep the executable and PCK together, then run `CyberCityPlatformer.exe`. The unsigned build targets 64-bit Windows 10/11. Saves and settings are stored by Godot in the current user's application-data directory, never beside the executable.
 
-## HUD and game loop
+See `CONTROLS.md` for the complete keyboard/controller map and `KNOWN_ISSUES.md` for release notes that can affect first launch.
 
-`GameManager` persists health, dash/weapon energy, credits, collected pickup IDs, and the active checkpoint position between scenes. Checkpoint terminals heal the player, refill energy, save a scene-scoped respawn position, and play a sync animation. Every exit advances to the next campaign sub-stage through the persistent `SceneTransition` fade overlay.
+## Developer setup
 
-The screen-space HUD uses neon health and weapon-energy progress bars plus a live credits counter. Shooting costs 12 energy, dashing costs 30 energy, and energy recharges over time.
+Prerequisites:
 
-`AudioManager` is a persistent autoload with independent Music and SFX buses, pooled SFX players, one Act theme per campaign act, boss themes, and two-player BGM crossfades. Re-entering the same Act does not restart its track during level transitions. `play_sfx(name)` accepts `laser_shot`, `sword_slash`, `explosion`, `player_hurt`, `jump`, and the other gameplay cues used by the project.
+- Godot `4.7.1.stable` standard build
+- Git LFS
+- Python 3.11 or newer for repository tooling
 
-`VFXSpawner.spawn_effect(name, global_position, direction)` creates reusable one-shot GPU particle effects and the particle roots auto-delete after their lifetime. Bullets emit hit sparks against hurtboxes or terrain, enemy and boss defeats emit expanding pixel explosion rings, and the player has a continuous foot-level wall-slide dust emitter.
-
-Combat uses reusable `Hitbox` and `Hurtbox` Area2D scripts. Player attacks use physics layer 3 and detect enemy hurtboxes on layer 4; enemy attacks use layer 5 and detect the player's hurtbox on layer 6. A hurtbox's parent should implement `take_damage(amount)` unless its `damage_receiver` path points elsewhere.
-
-`EnemyBase` provides reusable `IDLE`, `PATROL`, and `CHASE` states. Ground enemies reverse at ledges and walls using `FloorCheck` and `WallCheck` ray casts, while `DetectionArea` switches them into chase when the player enters its radius. Defeated enemies award credits through `GameManager`.
-
-`BossBase` provides the campaign's three-state boss machine: Phase 1 pattern movement and projectiles, Phase 2 dash-slashes below 50% health, and Phase 3 sweeping desperation lasers below 20%. Each X-5 stage contains one Act-specific scene from `res://Characters/Bosses/Scenes`; its exit remains locked until `boss_defeated`, and the HUD binds to the boss health/phase signals when the arena activates.
-
-The player camera has 5.0-speed position smoothing, facing-based look-ahead, and a lightweight shake API. Melee impacts trigger shake and a 0.05-second hit stop automatically. Explosion effects can trigger the same camera shake with `CombatFeedback.camera_shake(strength, duration)`.
-
-After taking damage, the player hurtbox is disabled for one second while the sprite flashes. The movement collision remains enabled so i-frames cannot make the player fall through platforms.
-
-The startup scene is `res://scenes/Level.tscn`. Canonical project asset roots are `res://Characters`, `res://Stages`, `res://Stage Props`, `res://Music`, `res://SFX`, `res://Parallax`, and `res://VFX`.
-
-## Campaign asset registry
-
-The `AssetRegistry` autoload resolves props, character textures, all 22 enemy scenes and animation libraries, all 20 campaign stages, OGG music, SFX, parallax textures, and VFX textures. Every campaign slot has a connected playable layout. Stages 1-1 and 2-1 retain their bespoke layouts; the other 18 use serialized multi-screen TileMap layouts generated from `PrototypeStage.tscn`.
-
-Open `res://Characters/Enemies/EnemyCatalog.tscn` to browse all enemies. Open any `Stage.tscn` under an act folder to edit that level's painted terrain, props, checkpoints, hazards, enemies, VFX, lighting, and exit. Four collision-enabled atlas palettes are available under `res://Stages/TileSets`.
-
-Rebuild generated editor assets after replacing source files:
+Clone with LFS assets, import once, and run the complete non-UI suite:
 
 ```text
-godot --headless --path . --script res://scripts/tools/EnemyLibraryBuilder.gd
-godot --headless --path . --script res://scripts/tools/StageTileSetBuilder.gd
-godot --headless --path . --script res://scripts/tools/CampaignPrototypeBuilder.gd
+git lfs pull
+godot --headless --path . --import
+python tools/run_headless_suite.py --group all
 ```
 
-Run the registry validation with `godot --headless --path . --script res://scripts/AssetRegistrySmokeTest.gd`.
+Create the Windows build and release archive:
 
-Run the full gameplay-system smoke test with `godot --headless --path . --script res://scripts/SystemsSmokeTest.gd`.
+```text
+godot --headless --path . --export-release "Windows Desktop" build/windows/CyberCityPlatformer.exe
+python tools/package_release.py
+```
 
-Run the boss, VFX, audio, X-5 gate, and boss-HUD validation with `godot --headless --path . --script res://scripts/BossSystemsSmokeTest.gd`.
+The startup scene is `res://scenes/ui/TitleScreen.tscn`. Production campaign metadata lives in `res://Stages/campaign_manifest.json`; runtime assets live under `res://assets/runtime` and are tracked with Git LFS. Original asset-pack mirrors and builder tools are development-only and excluded from exports.
+
+Detailed test, architecture, performance, asset, and release evidence is under `docs/`.

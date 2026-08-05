@@ -8,11 +8,29 @@ const BOSS_SCENES := [
 ]
 const REQUIRED_AUTOLOADS := [
 	"GameManager",
+	"SettingsManager",
 	"CombatFeedback",
 	"AudioManager",
 	"VFXSpawner",
 	"AssetRegistry",
+	"SaveManager",
 	"SceneTransition",
+]
+const REQUIRED_SFX: Array[StringName] = [
+	&"laser_shot",
+	&"sword_slash",
+	&"explosion",
+	&"player_hurt",
+	&"jump",
+	&"dash",
+	&"pickup",
+	&"checkpoint",
+	&"armor_hit",
+	&"phase_change",
+	&"ui_confirm",
+	&"hazard_warning",
+	&"stage_clear",
+	&"ending",
 ]
 
 var _failures: Array[String] = []
@@ -73,7 +91,9 @@ func _run() -> void:
 	if audio_manager != null:
 		var missing_audio: Array = audio_manager.call(&"get_missing_audio_paths")
 		_require(missing_audio.is_empty(), "Required audio is unresolved: %s" % str(missing_audio))
-		_require((audio_manager.call(&"get_loaded_sfx_names") as Array).size() == 10, "SFX manifest did not load all cues.")
+		var loaded_sfx: Array = audio_manager.call(&"get_loaded_sfx_names")
+		for cue: StringName in REQUIRED_SFX:
+			_require(cue in loaded_sfx, "SFX manifest is missing cue: %s" % cue)
 
 	_require(stage_count == 20, "Expected 20 campaign stages; found %d." % stage_count)
 	_require(enemy_count == 22, "Expected 22 production enemies; found %d." % enemy_count)

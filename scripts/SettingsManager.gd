@@ -2,6 +2,17 @@ extends Node
 
 signal setting_changed(setting_id: StringName, value: Variant)
 
+const REBINDABLE_ACTIONS: Array[StringName] = [
+	&"ui_left",
+	&"ui_right",
+	&"ui_accept",
+	&"attack_melee",
+	&"attack_shoot",
+	&"slide_dash",
+	&"interact",
+	&"pause_game",
+]
+
 const DEFAULT_SETTINGS := {
 	"master_volume": 1.0,
 	"music_volume": 0.85,
@@ -20,10 +31,12 @@ const DEFAULT_SETTINGS := {
 }
 
 var _settings: Dictionary = DEFAULT_SETTINGS.duplicate(true)
+var _default_bindings: Dictionary = {}
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	_capture_default_bindings()
 	load_settings()
 	_apply_all.call_deferred()
 
@@ -50,11 +63,32 @@ func set_setting(setting_id: StringName, value: Variant, persist := true) -> boo
 
 
 func rebind_action(action: StringName, event: InputEvent) -> bool:
-	if not InputMap.has_action(action) or event == null:
+	if action not in REBINDABLE_ACTIONS or not InputMap.has_action(action) or event == null:
 		return false
+	var family := _event_family(event)
+	if family.is_empty():
+		return false
+	var preserved: Array[InputEvent] = []
+	for existing: InputEvent in InputMap.action_get_events(action):
+		if _event_family(existing) != family:
+			preserved.append(existing)
 	InputMap.action_erase_events(action)
+	for existing: InputEvent in preserved:
+		InputMap.action_add_event(action, existing)
 	InputMap.action_add_event(action, event)
+	save_settings()
 	return true
+
+
+func get_action_binding_text(action: StringName) -> String:
+	if not InputMap.has_action(action):
+		return "Unbound"
+	var labels: Array[String] = []
+	for event: InputEvent in InputMap.action_get_events(action):
+		var label := event.as_text().trim_suffix(" (Physical)")
+		if not label.is_empty() and label not in labels:
+			labels.append(label)
+	return " / ".join(labels) if not labels.is_empty() else "Unbound"
 
 
 func save_settings() -> bool:
@@ -66,7 +100,11 @@ func save_settings() -> bool:
 	var file := FileAccess.open(temporary, FileAccess.WRITE)
 	if file == null:
 		return false
-	file.store_string(JSON.stringify({"version": 1, "settings": _settings}, "  "))
+	file.store_string(JSON.stringify({
+		"version": 2,
+		"settings": _settings,
+		"bindings": _serialize_bindings(),
+	}, "  "))
 	file.close()
 	var target_absolute := _absolute(path)
 	if FileAccess.file_exists(path):
@@ -87,11 +125,15 @@ func load_settings() -> bool:
 	for key: String in DEFAULT_SETTINGS:
 		if loaded.has(key):
 			_settings[key] = _normalize(key, loaded[key])
+	var bindings: Variant = (parsed as Dictionary).get("bindings", {})
+	if bindings is Dictionary:
+		_apply_serialized_bindings(bindings)
 	return true
 
 
 func reset_defaults() -> void:
 	_settings = DEFAULT_SETTINGS.duplicate(true)
+	_restore_default_bindings()
 	_apply_all()
 	save_settings()
 
@@ -149,3 +191,93 @@ func _absolute(path: String) -> String:
 
 func _persistence_enabled() -> bool:
 	return DisplayServer.get_name() != "headless" or not OS.get_environment("CCP_TEST_SAVE_DIR").is_empty()
+
+
+func _capture_default_bindings() -> void:
+	_default_bindings.clear()
+	for action: StringName in REBINDABLE_ACTIONS:
+		_default_bindings[action] = InputMap.action_get_events(action).duplicate(true)
+
+
+func _restore_default_bindings() -> void:
+	for action: StringName in REBINDABLE_ACTIONS:
+		InputMap.action_erase_events(action)
+		for event: InputEvent in (_default_bindings.get(action, []) as Array):
+			InputMap.action_add_event(action, event)
+
+
+func _serialize_bindings() -> Dictionary:
+	var result := {}
+	for action: StringName in REBINDABLE_ACTIONS:
+		var events: Array[Dictionary] = []
+		for event: InputEvent in InputMap.action_get_events(action):
+			var encoded := _serialize_event(event)
+			if not encoded.is_empty():
+				events.append(encoded)
+		result[String(action)] = events
+	return result
+
+
+func _serialize_event(event: InputEvent) -> Dictionary:
+	if event is InputEventKey:
+		var key := event as InputEventKey
+		return {"type": "key", "keycode": key.keycode, "physical_keycode": key.physical_keycode}
+	if event is InputEventJoypadButton:
+		return {"type": "joy_button", "button_index": (event as InputEventJoypadButton).button_index}
+	if event is InputEventJoypadMotion:
+		var motion := event as InputEventJoypadMotion
+		return {"type": "joy_motion", "axis": motion.axis, "axis_value": motion.axis_value}
+	if event is InputEventMouseButton:
+		return {"type": "mouse_button", "button_index": (event as InputEventMouseButton).button_index}
+	return {}
+
+
+func _apply_serialized_bindings(bindings: Dictionary) -> void:
+	for action: StringName in REBINDABLE_ACTIONS:
+		var encoded_events: Variant = bindings.get(String(action), null)
+		if encoded_events is not Array or (encoded_events as Array).is_empty():
+			continue
+		var decoded: Array[InputEvent] = []
+		for encoded: Variant in encoded_events:
+			if encoded is Dictionary:
+				var event := _deserialize_event(encoded)
+				if event != null:
+					decoded.append(event)
+		if decoded.is_empty():
+			continue
+		InputMap.action_erase_events(action)
+		for event: InputEvent in decoded:
+			InputMap.action_add_event(action, event)
+
+
+func _deserialize_event(encoded: Dictionary) -> InputEvent:
+	match String(encoded.get("type", "")):
+		"key":
+			var key := InputEventKey.new()
+			key.keycode = int(encoded.get("keycode", 0)) as Key
+			key.physical_keycode = int(encoded.get("physical_keycode", 0)) as Key
+			return key
+		"joy_button":
+			var button := InputEventJoypadButton.new()
+			button.button_index = int(encoded.get("button_index", 0)) as JoyButton
+			return button
+		"joy_motion":
+			var motion := InputEventJoypadMotion.new()
+			motion.axis = int(encoded.get("axis", 0)) as JoyAxis
+			motion.axis_value = float(encoded.get("axis_value", 0.0))
+			return motion
+		"mouse_button":
+			var mouse := InputEventMouseButton.new()
+			mouse.button_index = int(encoded.get("button_index", 1)) as MouseButton
+			return mouse
+	return null
+
+
+func _event_family(event: InputEvent) -> StringName:
+	if event is InputEventKey:
+		return &"keyboard"
+	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		return &"controller"
+	if event is InputEventMouseButton:
+		return &"mouse"
+	return &""
