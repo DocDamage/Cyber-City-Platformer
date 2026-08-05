@@ -1,0 +1,151 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://scripts/Level.gd" id="1_level"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://scripts/NeonFlicker.gd" id="8_flicker"]
+[ext_resource type="TileSet" path="res://scenes/RooftopTileSet.tres" id="9_rooftop"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/goblin.tscn" id="10_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="11_hud"]
+[ext_resource type="PackedScene" path="res://scenes/Collectible.tscn" id="12_collectible"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="13_checkpoint"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="14_exit"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="15_death_zone"]
+[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-a/banner-a1.png" id="16_banner"]
+[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/lights/lights2.png" id="17_light_prop"]
+
+[sub_resource type="Gradient" id="Gradient_neon"]
+offsets = PackedFloat32Array(0, 0.4, 1)
+colors = PackedColorArray(1, 0, 0.498039, 1, 1, 0, 0.498039, 0.32, 1, 0, 0.498039, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_neon"]
+gradient = SubResource("Gradient_neon")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_cyan"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0, 0.952941, 1, 0.8, 0, 0.952941, 1, 0.2, 0, 0.952941, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_cyan"]
+gradient = SubResource("Gradient_cyan")
+width = 192
+height = 192
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_death_zone"]
+size = Vector2(1800, 120)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_level")
+stage_act = 1
+stage_sub = 1
+environment_tint = Color(0.164706, 0.164706, 0.25098, 1)
+
+[node name="Background Skyline" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(960, 0)
+repeat_times = 3
+
+[node name="Cyberpunk City Sunset" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+
+[node name="Distant Silhouette" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+
+[node name="Neon Skyline" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+
+[node name="Near City" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+
+[node name="Reflections" type="Sprite2D" parent="Background Skyline"]
+position = Vector2(480, 270)
+scale = Vector2(2, 2)
+
+[node name="Rooftop Terrain" type="TileMapLayer" parent="."]
+tile_set = ExtResource("9_rooftop")
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Neon Billboard" type="Sprite2D" parent="Props"]
+position = Vector2(612, 394)
+scale = Vector2(1.18, 1.18)
+texture = ExtResource("16_banner")
+
+[node name="Hazard Light" type="Sprite2D" parent="Props"]
+position = Vector2(1040, 397)
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("17_light_prop")
+
+[node name="Neon Signs" type="PointLight2D" parent="."]
+position = Vector2(735, 276)
+energy = 1.5
+texture = SubResource("GradientTexture_neon")
+texture_scale = 1.8
+color = Color(1, 0, 0.498039, 1)
+script = ExtResource("8_flicker")
+
+[node name="Terminal Glow" type="PointLight2D" parent="."]
+position = Vector2(350, 340)
+energy = 1.35
+texture = SubResource("GradientTexture_cyan")
+color = Color(0, 0.952941, 1, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.164706, 0.164706, 0.25098, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(288, 286)
+
+[node name="Cyber Guard" parent="." instance=ExtResource("10_enemy")]
+position = Vector2(384, 318)
+
+[node name="Coin 01" parent="." instance=ExtResource("12_collectible")]
+position = Vector2(500, 390)
+pickup_id = &"rooftop_coin_01"
+
+[node name="Coin 02" parent="." instance=ExtResource("12_collectible")]
+position = Vector2(625, 390)
+pickup_id = &"rooftop_coin_02"
+
+[node name="Coin 03" parent="." instance=ExtResource("12_collectible")]
+position = Vector2(790, 390)
+pickup_id = &"rooftop_coin_03"
+
+[node name="Coin 04" parent="." instance=ExtResource("12_collectible")]
+position = Vector2(1015, 390)
+pickup_id = &"rooftop_coin_04"
+
+[node name="Coin 05" parent="." instance=ExtResource("12_collectible")]
+position = Vector2(1190, 390)
+pickup_id = &"rooftop_coin_05"
+
+[node name="Rooftop Terminal" parent="." instance=ExtResource("13_checkpoint")]
+position = Vector2(720, 414)
+checkpoint_id = &"rooftop_terminal"
+
+[node name="Level Exit" parent="." instance=ExtResource("14_exit")]
+position = Vector2(1340, 385)
+next_scene_path = "res://Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn"
+
+[node name="Death Zone" type="Area2D" parent="."]
+position = Vector2(704, 625)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("15_death_zone")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Zone"]
+shape = SubResource("RectangleShape_death_zone")
+
+[node name="HUD" parent="." instance=ExtResource("11_hud")]

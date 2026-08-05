@@ -1,0 +1,290 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_hkwk4"]
+[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_w26kj"]
+[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_y73i0"]
+[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_a3y0f"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act4_AbyssalNight_Palette.tres" id="5_02tuw"]
+[ext_resource type="Texture2D" path="res://Stage Props/VoidProps/SourceArt/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png" id="6_do3u7"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/cerberus.tscn" id="7_1ucnm"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_xagan"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/cerberus.tres" id="9_ufnt2"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/headless_horseman.tscn" id="10_uoidv"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/headless_horseman.tres" id="11_ea0o1"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/werewolf.tscn" id="12_r85b4"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/werewolf.tres" id="13_g4pdo"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="14_qinju"]
+[ext_resource type="Script" path="res://scripts/CheckpointTerminal.gd" id="15_3ynpp"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="16_cvqiy"]
+[ext_resource type="Script" path="res://scripts/StageExit.gd" id="17_ipbo3"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="18_oe1jj"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="19_u0quw"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="20_jgwfd"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="21_flcre"]
+[ext_resource type="PackedScene" path="res://Characters/Bosses/Scenes/act4_void_cerberus.tscn" id="22_boss"]
+
+[sub_resource type="Gradient" id="Gradient_prototype_light"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
+gradient = SubResource("Gradient_prototype_light")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgx7j"]
+size = Vector2(5500, 140)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
+bg_color = Color(0.025, 0.035, 0.09, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.85, 1, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
+bg_color = Color(0.05, 0.15, 0.28, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.9, 1, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="HeartOfTheVoid" type="Node2D" unique_id=1861340353]
+script = ExtResource("1_hkwk4")
+campaign_act = 4
+stage_id = &"4-5"
+stage_title = "Heart of the Void"
+design_notes = "Layout pass: Open arena, dynamic lighting, final boss
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+music_path = "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
+far_background = ExtResource("2_w26kj")
+middle_background = ExtResource("3_y73i0")
+front_background = ExtResource("4_a3y0f")
+background_tint = Color(0.72, 0.55, 0.82, 1)
+
+[node name="Background" type="Node2D" parent="." unique_id=1615417733]
+
+[node name="Far" type="Parallax2D" parent="Background" unique_id=826355997]
+z_index = -30
+scroll_scale = Vector2(0.1, 0.15)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=786859095]
+modulate = Color(0.72, 0.55, 0.82, 1)
+position = Vector2(480, 270)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_w26kj")
+
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=784014116]
+z_index = -25
+scroll_scale = Vector2(0.28, 0.35)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=1051911593]
+modulate = Color(0.72, 0.55, 0.82, 1)
+position = Vector2(480, 270)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_y73i0")
+
+[node name="Front" type="Parallax2D" parent="Background" unique_id=2133066127]
+z_index = -20
+scroll_scale = Vector2(0.55, 0.65)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=1796445554]
+modulate = Color(0.72, 0.55, 0.82, 1)
+position = Vector2(480, 270)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_a3y0f")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=222097406]
+tile_map_data = PackedByteArray("AAD8/xQAAAAQABkAAAD8/xUAAAARAA4AAAD9/xQAAAAQABkAAAD9/xUAAAARAA4AAAD+/xQAAAAQABkAAAD+/xUAAAARAA4AAAD//xQAAAAQABkAAAD//xUAAAARAA4AAAAAABQAAAAQABkAAAAAABUAAAARAA4AAAABABQAAAAQABkAAAABABUAAAARAA4AAAACABQAAAAQABkAAAACABUAAAARAA4AAAADABQAAAAQABkAAAADABUAAAARAA4AAAAEABQAAAAQABkAAAAEABUAAAARAA4AAAAFABQAAAAQABkAAAAFABUAAAARAA4AAAAGABQAAAAQABkAAAAGABUAAAARAA4AAAAHABQAAAAQABkAAAAHABUAAAARAA4AAAAIABQAAAAQABkAAAAIABUAAAARAA4AAAAJABQAAAAQABkAAAAJABUAAAARAA4AAAAKABQAAAAQABkAAAAKABUAAAARAA4AAAALABQAAAAQABkAAAALABUAAAARAA4AAAAMABQAAAAQABkAAAAMABUAAAARAA4AAAANABQAAAAQABkAAAANABUAAAARAA4AAAAOABQAAAAQABkAAAAOABUAAAARAA4AAAAPABQAAAAQABkAAAAPABUAAAARAA4AAAAQABQAAAAQABkAAAAQABUAAAARAA4AAAARABQAAAAQABkAAAARABUAAAARAA4AAAASABQAAAAQABkAAAASABUAAAARAA4AAAATABQAAAAQABkAAAATABUAAAARAA4AAAAUABQAAAAQABkAAAAUABUAAAARAA4AAAAVABQAAAAQABkAAAAVABUAAAARAA4AAAAWABQAAAAQABkAAAAWABUAAAARAA4AAAAXABQAAAAQABkAAAAXABUAAAARAA4AAAAYABQAAAAQABkAAAAYABUAAAARAA4AAAAZABQAAAAQABkAAAAZABUAAAARAA4AAAAaABQAAAAQABkAAAAaABUAAAARAA4AAAAbABQAAAAQABkAAAAbABUAAAARAA4AAAAcABQAAAAQABkAAAAcABUAAAARAA4AAAAdABQAAAAQABkAAAAdABUAAAARAA4AAAAeABQAAAAQABkAAAAeABUAAAARAA4AAAAfABQAAAAQABkAAAAfABUAAAARAA4AAAAgABQAAAAQABkAAAAgABUAAAARAA4AAAAhABQAAAAQABkAAAAhABUAAAARAA4AAAAiABQAAAAQABkAAAAiABUAAAARAA4AAAAjABQAAAAQABkAAAAjABUAAAARAA4AAAAkABQAAAAQABkAAAAkABUAAAARAA4AAAAlABQAAAAQABkAAAAlABUAAAARAA4AAAAmABQAAAAQABkAAAAmABUAAAARAA4AAAAnABQAAAAQABkAAAAnABUAAAARAA4AAAAoABQAAAAQABkAAAAoABUAAAARAA4AAAApABQAAAAQABkAAAApABUAAAARAA4AAAAqABQAAAAQABkAAAAqABUAAAARAA4AAAArABQAAAAQABkAAAArABUAAAARAA4AAAAvABQAAAAQABkAAAAvABUAAAARAA4AAAAwABQAAAAQABkAAAAwABUAAAARAA4AAAAxABQAAAAQABkAAAAxABUAAAARAA4AAAAyABQAAAAQABkAAAAyABUAAAARAA4AAAAzABQAAAAQABkAAAAzABUAAAARAA4AAAA0ABQAAAAQABkAAAA0ABUAAAARAA4AAAA1ABQAAAAQABkAAAA1ABUAAAARAA4AAAA2ABQAAAAQABkAAAA2ABUAAAARAA4AAAA3ABQAAAAQABkAAAA3ABUAAAARAA4AAAA4ABQAAAAQABkAAAA4ABUAAAARAA4AAAA5ABQAAAAQABkAAAA5ABUAAAARAA4AAAA6ABQAAAAQABkAAAA6ABUAAAARAA4AAAA7ABQAAAAQABkAAAA7ABUAAAARAA4AAAA8ABQAAAAQABkAAAA8ABUAAAARAA4AAAA9ABQAAAAQABkAAAA9ABUAAAARAA4AAAA+ABQAAAAQABkAAAA+ABUAAAARAA4AAAA/ABQAAAAQABkAAAA/ABUAAAARAA4AAABAABQAAAAQABkAAABAABUAAAARAA4AAABBABQAAAAQABkAAABBABUAAAARAA4AAABCABQAAAAQABkAAABCABUAAAARAA4AAABDABQAAAAQABkAAABDABUAAAARAA4AAABEABQAAAAQABkAAABEABUAAAARAA4AAABFABQAAAAQABkAAABFABUAAAARAA4AAABGABQAAAAQABkAAABGABUAAAARAA4AAABHABQAAAAQABkAAABHABUAAAARAA4AAABIABQAAAAQABkAAABIABUAAAARAA4AAABJABQAAAAQABkAAABJABUAAAARAA4AAABKABQAAAAQABkAAABKABUAAAARAA4AAABLABQAAAAQABkAAABLABUAAAARAA4AAABMABQAAAAQABkAAABMABUAAAARAA4AAABNABQAAAAQABkAAABNABUAAAARAA4AAABOABQAAAAQABkAAABOABUAAAARAA4AAABPABQAAAAQABkAAABPABUAAAARAA4AAABQABQAAAAQABkAAABQABUAAAARAA4AAABRABQAAAAQABkAAABRABUAAAARAA4AAABSABQAAAAQABkAAABSABUAAAARAA4AAABTABQAAAAQABkAAABTABUAAAARAA4AAABUABQAAAAQABkAAABUABUAAAARAA4AAABVABQAAAAQABkAAABVABUAAAARAA4AAABWABQAAAAQABkAAABWABUAAAARAA4AAABXABQAAAAQABkAAABXABUAAAARAA4AAABYABQAAAAQABkAAABYABUAAAARAA4AAABZABQAAAAQABkAAABZABUAAAARAA4AAABaABQAAAAQABkAAABaABUAAAARAA4AAABbABQAAAAQABkAAABbABUAAAARAA4AAABcABQAAAAQABkAAABcABUAAAARAA4AAABdABQAAAAQABkAAABdABUAAAARAA4AAABeABQAAAAQABkAAABeABUAAAARAA4AAABfABQAAAAQABkAAABfABUAAAARAA4AAABgABQAAAAQABkAAABgABUAAAARAA4AAABhABQAAAAQABkAAABhABUAAAARAA4AAABiABQAAAAQABkAAABiABUAAAARAA4AAABjABQAAAAQABkAAABjABUAAAARAA4AAABkABQAAAAQABkAAABkABUAAAARAA4AAABoABQAAAAQABkAAABoABUAAAARAA4AAABpABQAAAAQABkAAABpABUAAAARAA4AAABqABQAAAAQABkAAABqABUAAAARAA4AAABrABQAAAAQABkAAABrABUAAAARAA4AAABsABQAAAAQABkAAABsABUAAAARAA4AAABtABQAAAAQABkAAABtABUAAAARAA4AAABuABQAAAAQABkAAABuABUAAAARAA4AAABvABQAAAAQABkAAABvABUAAAARAA4AAABwABQAAAAQABkAAABwABUAAAARAA4AAABxABQAAAAQABkAAABxABUAAAARAA4AAAByABQAAAAQABkAAAByABUAAAARAA4AAABzABQAAAAQABkAAABzABUAAAARAA4AAAB0ABQAAAAQABkAAAB0ABUAAAARAA4AAAB1ABQAAAAQABkAAAB1ABUAAAARAA4AAAB2ABQAAAAQABkAAAB2ABUAAAARAA4AAAB3ABQAAAAQABkAAAB3ABUAAAARAA4AAAB4ABQAAAAQABkAAAB4ABUAAAARAA4AAAB5ABQAAAAQABkAAAB5ABUAAAARAA4AAAB6ABQAAAAQABkAAAB6ABUAAAARAA4AAAB7ABQAAAAQABkAAAB7ABUAAAARAA4AAAB8ABQAAAAQABkAAAB8ABUAAAARAA4AAAB9ABQAAAAQABkAAAB9ABUAAAARAA4AAAB+ABQAAAAQABkAAAB+ABUAAAARAA4AAAB/ABQAAAAQABkAAAB/ABUAAAARAA4AAACAABQAAAAQABkAAACAABUAAAARAA4AAACBABQAAAAQABkAAACBABUAAAARAA4AAACCABQAAAAQABkAAACCABUAAAARAA4AAACDABQAAAAQABkAAACDABUAAAARAA4AAACEABQAAAAQABkAAACEABUAAAARAA4AAACFABQAAAAQABkAAACFABUAAAARAA4AAACGABQAAAAQABkAAACGABUAAAARAA4AAACHABQAAAAQABkAAACHABUAAAARAA4AAACIABQAAAAQABkAAACIABUAAAARAA4AAACJABQAAAAQABkAAACJABUAAAARAA4AAACKABQAAAAQABkAAACKABUAAAARAA4AAACLABQAAAAQABkAAACLABUAAAARAA4AAACMABQAAAAQABkAAACMABUAAAARAA4AAACNABQAAAAQABkAAACNABUAAAARAA4AAACOABQAAAAQABkAAACOABUAAAARAA4AAACPABQAAAAQABkAAACPABUAAAARAA4AAACQABQAAAAQABkAAACQABUAAAARAA4AAACRABQAAAAQABkAAACRABUAAAARAA4AAACSABQAAAAQABkAAACSABUAAAARAA4AAACTABQAAAAQABkAAACTABUAAAARAA4AAACUABQAAAAQABkAAACUABUAAAARAA4AAACVABQAAAAQABkAAACVABUAAAARAA4AAACWABQAAAAQABkAAACWABUAAAARAA4AAACaABQAAAAQABkAAACaABUAAAARAA4AAACbABQAAAAQABkAAACbABUAAAARAA4AAACcABQAAAAQABkAAACcABUAAAARAA4AAACdABQAAAAQABkAAACdABUAAAARAA4AAACeABQAAAAQABkAAACeABUAAAARAA4AAACfABQAAAAQABkAAACfABUAAAARAA4AAACgABQAAAAQABkAAACgABUAAAARAA4AAAChABQAAAAQABkAAAChABUAAAARAA4AAACiABQAAAAQABkAAACiABUAAAARAA4AAACjABQAAAAQABkAAACjABUAAAARAA4AAACkABQAAAAQABkAAACkABUAAAARAA4AAAClABQAAAAQABkAAAClABUAAAARAA4AAACmABQAAAAQABkAAACmABUAAAARAA4AAACnABQAAAAQABkAAACnABUAAAARAA4AAACoABQAAAAQABkAAACoABUAAAARAA4AAACpABQAAAAQABkAAACpABUAAAARAA4AAACqABQAAAAQABkAAACqABUAAAARAA4AAACrABQAAAAQABkAAACrABUAAAARAA4AAACsABQAAAAQABkAAACsABUAAAARAA4AAACtABQAAAAQABkAAACtABUAAAARAA4AAACuABQAAAAQABkAAACuABUAAAARAA4AAACvABQAAAAQABkAAACvABUAAAARAA4AAACwABQAAAAQABkAAACwABUAAAARAA4AAACxABQAAAAQABkAAACxABUAAAARAA4AAACyABQAAAAQABkAAACyABUAAAARAA4AAACzABQAAAAQABkAAACzABUAAAARAA4AAAC0ABQAAAAQABkAAAC0ABUAAAARAA4AAAC1ABQAAAAQABkAAAC1ABUAAAARAA4AAAC2ABQAAAAQABkAAAC2ABUAAAARAA4AAAC3ABQAAAAQABkAAAC3ABUAAAARAA4AAAC4ABQAAAAQABkAAAC4ABUAAAARAA4AAAC5ABQAAAAQABkAAAC5ABUAAAARAA4AAAC6ABQAAAAQABkAAAC6ABUAAAARAA4AAAC7ABQAAAAQABkAAAC7ABUAAAARAA4AAAC8ABQAAAAQABkAAAC8ABUAAAARAA4AAAC9ABQAAAAQABkAAAC9ABUAAAARAA4AAAC+ABQAAAAQABkAAAC+ABUAAAARAA4AAAC/ABQAAAAQABkAAAC/ABUAAAARAA4AAADAABQAAAAQABkAAADAABUAAAARAA4AAADBABQAAAAQABkAAADBABUAAAARAA4AAADCABQAAAAQABkAAADCABUAAAARAA4AAADDABQAAAAQABkAAADDABUAAAARAA4AAADEABQAAAAQABkAAADEABUAAAARAA4AAADFABQAAAAQABkAAADFABUAAAARAA4AAADGABQAAAAQABkAAADGABUAAAARAA4AAADHABQAAAAQABkAAADHABUAAAARAA4AAADIABQAAAAQABkAAADIABUAAAARAA4AAADJABQAAAAQABkAAADJABUAAAARAA4AAADKABQAAAAQABkAAADKABUAAAARAA4AAADLABQAAAAQABkAAADLABUAAAARAA4AAADMABQAAAAQABkAAADMABUAAAARAA4AAAAUABIAAAATAAAAAAAVABIAAAATAAAAAAAWABIAAAATAAAAAAAXABIAAAATAAAAAAAYABIAAAATAAAAAAAZABIAAAATAAAAAAAsABEAAAATAAAAAAAtABEAAAATAAAAAAAuABEAAAATAAAAAAAvABEAAAATAAAAAAAwABEAAAATAAAAAAAxABEAAAATAAAAAAAyABEAAAATAAAAAAA+ABIAAAATAAAAAAA/ABIAAAATAAAAAABAABIAAAATAAAAAABBABIAAAATAAAAAABCABIAAAATAAAAAABDABIAAAATAAAAAABEABIAAAATAAAAAABWABIAAAATAAAAAABXABIAAAATAAAAAABYABIAAAATAAAAAABZABIAAAATAAAAAABaABIAAAATAAAAAABtABEAAAATAAAAAABuABEAAAATAAAAAABvABEAAAATAAAAAABwABEAAAATAAAAAABxABEAAAATAAAAAAByABEAAAATAAAAAACAABIAAAATAAAAAACBABIAAAATAAAAAACCABIAAAATAAAAAACDABIAAAATAAAAAACEABIAAAATAAAAAACFABIAAAATAAAAAACGABIAAAATAAAAAACXABIAAAATAAAAAACYABIAAAATAAAAAACZABIAAAATAAAAAACaABIAAAATAAAAAACbABIAAAATAAAAAACcABIAAAATAAAAAACdABIAAAATAAAAAACeABIAAAATAAAAAACvABEAAAATAAAAAACwABEAAAATAAAAAACxABEAAAATAAAAAACyABEAAAATAAAAAACzABEAAAATAAAAAAC0ABEAAAATAAAAAAArABIAAAATAAAAAAAsABIAAAATAAAAAAAtABIAAAATAAAAAAAuABIAAAATAAAAAAAvABIAAAATAAAAAABkABIAAAATAAAAAABlABIAAAATAAAAAABmABIAAAATAAAAAABnABIAAAATAAAAAABoABIAAAATAAAAAACWABIAAAATAAAAAAA=")
+tile_set = ExtResource("5_02tuw")
+
+[node name="Props" type="Node2D" parent="." unique_id=200938718]
+
+[node name="ThemedProp01" type="Sprite2D" parent="Props" unique_id=401493900]
+z_index = 1
+position = Vector2(568, 430)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(384, 192, 96, 96)
+
+[node name="ThemedProp02" type="Sprite2D" parent="Props" unique_id=372430326]
+z_index = 1
+position = Vector2(1209, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
+
+[node name="ThemedProp03" type="Sprite2D" parent="Props" unique_id=1426050281]
+z_index = 1
+position = Vector2(1759, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(192, 96, 96, 96)
+
+[node name="ThemedProp04" type="Sprite2D" parent="Props" unique_id=720547051]
+z_index = 1
+position = Vector2(2400, 430)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(384, 192, 96, 96)
+
+[node name="ThemedProp05" type="Sprite2D" parent="Props" unique_id=324488154]
+z_index = 1
+position = Vector2(3041, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
+
+[node name="ThemedProp06" type="Sprite2D" parent="Props" unique_id=1031705931]
+z_index = 1
+position = Vector2(3591, 427)
+scale = Vector2(0.8541667, 0.8541667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(192, 96, 96, 96)
+
+[node name="ThemedProp07" type="Sprite2D" parent="Props" unique_id=1373726404]
+z_index = 1
+position = Vector2(4232, 430)
+scale = Vector2(0.7916667, 0.7916667)
+texture = ExtResource("6_do3u7")
+region_enabled = true
+region_rect = Rect2(384, 192, 96, 96)
+
+[node name="Hazards" type="Node2D" parent="." unique_id=1253426387]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=749773829]
+
+[node name="VoidCerberus" parent="Enemies" unique_id=428360888 instance=ExtResource("22_boss")]
+position = Vector2(4120, 430)
+
+[node name="VFX" type="Node2D" parent="." unique_id=9670239]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=1895555077]
+
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=540093811]
+position = Vector2(720, 310)
+color = Color(0.1, 0.65, 1, 1)
+energy = 0.8
+texture = SubResource("GradientTexture_prototype_light")
+texture_scale = 2.0
+
+[node name="Markers" type="Node2D" parent="." unique_id=1559032541]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=1189903542]
+position = Vector2(140, 422)
+gizmo_extents = 24.0
+
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=216942632]
+
+[node name="Checkpoint01" type="Area2D" parent="Markers/Checkpoints" unique_id=872480196 instance=ExtResource("14_qinju")]
+position = Vector2(1600, 434)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("15_3ynpp")
+checkpoint_id = &"4-5_checkpoint_01"
+
+[node name="Checkpoint02" type="Area2D" parent="Markers/Checkpoints" unique_id=819138 instance=ExtResource("14_qinju")]
+position = Vector2(3200, 434)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("15_3ynpp")
+checkpoint_id = &"4-5_checkpoint_02"
+
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=555836102]
+position = Vector2(4650, 410)
+gizmo_extents = 28.0
+
+[node name="StageExit" type="Area2D" parent="Markers" unique_id=1600648854 instance=ExtResource("16_cvqiy")]
+position = Vector2(4650, 410)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("17_ipbo3")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1014343817 instance=ExtResource("18_oe1jj")]
+position = Vector2(140, 422)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("19_u0quw")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=775532881]
+position = Vector2(2400, 688)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("20_jgwfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=1639006856]
+shape = SubResource("RectangleShape2D_lgx7j")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=240449404 instance=ExtResource("21_flcre")]
+layer = 20
+
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1650030425]
+layer = 90
+
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=162511253]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBox_guide")
+
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=2138457498]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1941559603]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1156732985]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "4-5  |  Heart of the Void"
+
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=292208883]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Layout pass: Open arena, dynamic lighting, final boss
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+autowrap_mode = 2
+
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1473722917]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBox_tag")
+text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
+horizontal_alignment = 1

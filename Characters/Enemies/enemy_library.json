@@ -1,0 +1,418 @@
+{
+  "enemies": [
+    {
+      "airborne": false,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "run"
+      ],
+      "frame_height": 96,
+      "frame_width": 148,
+      "id": "centaur",
+      "name": "Centaur",
+      "pack": "Centaur 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/centaur.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/centaur.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "run"
+      ],
+      "frame_height": 128,
+      "frame_width": 128,
+      "id": "cerberus",
+      "name": "Cerberus",
+      "pack": "Cerberus 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/cerberus.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/cerberus.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 128,
+      "frame_width": 245,
+      "id": "cyclops",
+      "name": "Cyclops",
+      "pack": "Cyclops 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/cyclops.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/cyclops.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "death",
+        "down_swing",
+        "full_combo",
+        "fwd_swing",
+        "hurt",
+        "idle_walk",
+        "idle",
+        "side_swing",
+        "walk"
+      ],
+      "frame_height": 125,
+      "frame_width": 170,
+      "id": "death_knight",
+      "name": "Death Knight",
+      "pack": "death knight",
+      "scene": "res://Characters/Enemies/Scenes/death_knight.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/death knight",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/death_knight.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack",
+        "death",
+        "flying",
+        "hurt",
+        "idle",
+        "transition"
+      ],
+      "frame_height": 148,
+      "frame_width": 162,
+      "id": "demon_boss",
+      "name": "Demon Boss",
+      "pack": "Demon Boss 2D Pixel Art",
+      "scene": "res://Characters/Enemies/Scenes/demon_boss.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/demon_boss.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "move"
+      ],
+      "frame_height": 150,
+      "frame_width": 150,
+      "id": "flying_eye",
+      "name": "Flying Eye",
+      "pack": "Flying Eye 2D Pixel Art",
+      "scene": "res://Characters/Enemies/Scenes/flying_eye.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/flying_eye.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "move"
+      ],
+      "frame_height": 96,
+      "frame_width": 144,
+      "id": "gargoyle",
+      "name": "Gargoyle",
+      "pack": "Gargoyle 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/gargoyle.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/gargoyle.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "run"
+      ],
+      "frame_height": 78,
+      "frame_width": 115,
+      "id": "goblin",
+      "name": "Goblin",
+      "pack": "Goblin 2D Pixel Art v1.1",
+      "scene": "res://Characters/Enemies/Scenes/goblin.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/goblin.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "move"
+      ],
+      "frame_height": 103,
+      "frame_width": 112,
+      "id": "gryphon",
+      "name": "Gryphon",
+      "pack": "Gryphon 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/gryphon.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/gryphon.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "move"
+      ],
+      "frame_height": 96,
+      "frame_width": 96,
+      "id": "harpy",
+      "name": "Harpy",
+      "pack": "Harpy 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/harpy.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/harpy.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "run"
+      ],
+      "frame_height": 150,
+      "frame_width": 150,
+      "id": "headless_horseman",
+      "name": "Headless Horseman",
+      "pack": "Headless Horseman 2D Pixel Art",
+      "scene": "res://Characters/Enemies/Scenes/headless_horseman.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/headless_horseman.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "move"
+      ],
+      "frame_height": 48,
+      "frame_width": 128,
+      "id": "imp",
+      "name": "Imp",
+      "pack": "Imp 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/imp.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/imp.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "move"
+      ],
+      "frame_height": 125,
+      "frame_width": 150,
+      "id": "medusa",
+      "name": "Medusa",
+      "pack": "Medusa V2.0",
+      "scene": "res://Characters/Enemies/Scenes/medusa.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/medusa.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "appear",
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 96,
+      "frame_width": 192,
+      "id": "mimic",
+      "name": "Mimic",
+      "pack": "Mimic 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/mimic.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/mimic.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 128,
+      "frame_width": 128,
+      "id": "minotaur",
+      "name": "Minotaur",
+      "pack": "Minotaur 2D Pixel Art v1.1",
+      "scene": "res://Characters/Enemies/Scenes/minotaur.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/minotaur.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 96,
+      "frame_width": 160,
+      "id": "poison_skull",
+      "name": "Poison Skull",
+      "pack": "Poison Skull 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/poison_skull.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/poison_skull.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 100,
+      "frame_width": 100,
+      "id": "pyromancer",
+      "name": "Pyromancer",
+      "pack": "Pyromancer 2D Pixel Art",
+      "scene": "res://Characters/Enemies/Scenes/pyromancer.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/pyromancer.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "arrow",
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 96,
+      "frame_width": 96,
+      "id": "satyr_archer",
+      "name": "Satyr Archer",
+      "pack": "Satyr Archer 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/satyr_archer.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/satyr_archer.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 78,
+      "frame_width": 89,
+      "id": "skeleton_warrior",
+      "name": "Skeleton Warrior",
+      "pack": "Skeleton Warrior  2D Pixel Art v1.1",
+      "scene": "res://Characters/Enemies/Scenes/skeleton_warrior.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/skeleton_warrior.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "walk"
+      ],
+      "frame_height": 96,
+      "frame_width": 220,
+      "id": "stone_golem",
+      "name": "Stone Golem",
+      "pack": "Stone Golem 2D Pixel Art v1.2",
+      "scene": "res://Characters/Enemies/Scenes/stone_golem.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/stone_golem.tres"
+    },
+    {
+      "airborne": false,
+      "animations": [
+        "attack_1",
+        "attack_2",
+        "death",
+        "hurt",
+        "idle_human",
+        "idle",
+        "run",
+        "transformation"
+      ],
+      "frame_height": 125,
+      "frame_width": 158,
+      "id": "werewolf",
+      "name": "Werewolf",
+      "pack": "Werewolf 2D Pixel Art",
+      "scene": "res://Characters/Enemies/Scenes/werewolf.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/werewolf.tres"
+    },
+    {
+      "airborne": true,
+      "animations": [
+        "attack",
+        "death",
+        "hurt",
+        "idle",
+        "move",
+        "projectile"
+      ],
+      "frame_height": 125,
+      "frame_width": 125,
+      "id": "witch",
+      "name": "Witch",
+      "pack": "Witch",
+      "scene": "res://Characters/Enemies/Scenes/witch.tscn",
+      "source_directory": "res://Characters/Enemies/SourceArt/Witch/Sprite",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/witch.tres"
+    }
+  ],
+  "enemy_count": 22
+}

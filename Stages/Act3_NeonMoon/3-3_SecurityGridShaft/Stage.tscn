@@ -1,0 +1,286 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_ehnd7"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Moonlight City/Assets/layers/back.png" id="2_t2mdv"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Moonlight City/Assets/layers/middle.png" id="3_63ylu"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Moonlight City/Assets/layers/front.png" id="4_7hkwb"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act3_NeonMoon_Palette.tres" id="5_0n8dx"]
+[ext_resource type="Texture2D" path="res://Stage Props/LunarProps/SourceArt/Space Props/space extra (125).png" id="6_j1nln"]
+[ext_resource type="Texture2D" path="res://Stage Props/LunarProps/SourceArt/Space Props/space extra (154).png" id="7_jjtwf"]
+[ext_resource type="Texture2D" path="res://Stage Props/LunarProps/SourceArt/Neon Moon Portal/portal 96x96(1).png" id="8_ju5ye"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/satyr_archer.tscn" id="9_3dp0x"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="10_htwdi"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/satyr_archer.tres" id="11_ov1eu"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="12_62mtw"]
+[ext_resource type="Script" path="res://scripts/CheckpointTerminal.gd" id="13_qbfy6"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="14_rc5hc"]
+[ext_resource type="Script" path="res://scripts/StageExit.gd" id="15_h0emh"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="16_php1i"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="17_n6013"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="18_buh77"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="19_cad8p"]
+
+[sub_resource type="Gradient" id="Gradient_prototype_light"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
+gradient = SubResource("Gradient_prototype_light")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u61r5"]
+size = Vector2(5500, 140)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
+bg_color = Color(0.025, 0.035, 0.09, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.85, 1, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
+bg_color = Color(0.05, 0.15, 0.28, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.9, 1, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="SecurityGridShaft" type="Node2D" unique_id=594247561]
+script = ExtResource("1_ehnd7")
+campaign_act = 3
+stage_id = &"3-3"
+stage_title = "Security Grid Shaft"
+design_notes = "Layout pass: Laser barriers, defense turrets, wall-jump shafts
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+music_path = "res://Music/Library/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg"
+far_background = ExtResource("2_t2mdv")
+middle_background = ExtResource("3_63ylu")
+front_background = ExtResource("4_7hkwb")
+background_tint = Color(0.7, 0.86, 1, 1)
+
+[node name="Background" type="Node2D" parent="." unique_id=592352304]
+
+[node name="Far" type="Parallax2D" parent="Background" unique_id=50351011]
+z_index = -30
+scroll_scale = Vector2(0.1, 0.15)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=1951197526]
+modulate = Color(0.7, 0.86, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(3.5294118, 3.5294118)
+texture = ExtResource("2_t2mdv")
+
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=1944794195]
+z_index = -25
+scroll_scale = Vector2(0.28, 0.35)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=340147627]
+modulate = Color(0.7, 0.86, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(10, 10)
+texture = ExtResource("3_63ylu")
+
+[node name="Front" type="Parallax2D" parent="Background" unique_id=202647695]
+z_index = -20
+scroll_scale = Vector2(0.55, 0.65)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=877145466]
+modulate = Color(0.7, 0.86, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(10, 10)
+texture = ExtResource("4_7hkwb")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=1312078500]
+tile_map_data = PackedByteArray("AAD8/xQAAAAKAB8AAAD8/xUAAAALAA8AAAD9/xQAAAAKAB8AAAD9/xUAAAALAA8AAAD+/xQAAAAKAB8AAAD+/xUAAAALAA8AAAD//xQAAAAKAB8AAAD//xUAAAALAA8AAAAAABQAAAAKAB8AAAAAABUAAAALAA8AAAABABQAAAAKAB8AAAABABUAAAALAA8AAAACABQAAAAKAB8AAAACABUAAAALAA8AAAADABQAAAAKAB8AAAADABUAAAALAA8AAAAEABQAAAAKAB8AAAAEABUAAAALAA8AAAAFABQAAAAKAB8AAAAFABUAAAALAA8AAAAGABQAAAAKAB8AAAAGABUAAAALAA8AAAAHABQAAAAKAB8AAAAHABUAAAALAA8AAAAIABQAAAAKAB8AAAAIABUAAAALAA8AAAAJABQAAAAKAB8AAAAJABUAAAALAA8AAAAKABQAAAAKAB8AAAAKABUAAAALAA8AAAALABQAAAAKAB8AAAALABUAAAALAA8AAAAMABQAAAAKAB8AAAAMABUAAAALAA8AAAANABQAAAAKAB8AAAANABUAAAALAA8AAAAOABQAAAAKAB8AAAAOABUAAAALAA8AAAAPABQAAAAKAB8AAAAPABUAAAALAA8AAAAQABQAAAAKAB8AAAAQABUAAAALAA8AAAARABQAAAAKAB8AAAARABUAAAALAA8AAAASABQAAAAKAB8AAAASABUAAAALAA8AAAATABQAAAAKAB8AAAATABUAAAALAA8AAAAUABQAAAAKAB8AAAAUABUAAAALAA8AAAAVABQAAAAKAB8AAAAVABUAAAALAA8AAAAWABQAAAAKAB8AAAAWABUAAAALAA8AAAAXABQAAAAKAB8AAAAXABUAAAALAA8AAAAYABQAAAAKAB8AAAAYABUAAAALAA8AAAAZABQAAAAKAB8AAAAZABUAAAALAA8AAAAaABQAAAAKAB8AAAAaABUAAAALAA8AAAAbABQAAAAKAB8AAAAbABUAAAALAA8AAAAcABQAAAAKAB8AAAAcABUAAAALAA8AAAAdABQAAAAKAB8AAAAdABUAAAALAA8AAAAeABQAAAAKAB8AAAAeABUAAAALAA8AAAAfABQAAAAKAB8AAAAfABUAAAALAA8AAAAgABQAAAAKAB8AAAAgABUAAAALAA8AAAAhABQAAAAKAB8AAAAhABUAAAALAA8AAAAiABQAAAAKAB8AAAAiABUAAAALAA8AAAAjABQAAAAKAB8AAAAjABUAAAALAA8AAAAkABQAAAAKAB8AAAAkABUAAAALAA8AAAAlABQAAAAKAB8AAAAlABUAAAALAA8AAAAmABQAAAAKAB8AAAAmABUAAAALAA8AAAAnABQAAAAKAB8AAAAnABUAAAALAA8AAAAoABQAAAAKAB8AAAAoABUAAAALAA8AAAApABQAAAAKAB8AAAApABUAAAALAA8AAAAqABQAAAAKAB8AAAAqABUAAAALAA8AAAArABQAAAAKAB8AAAArABUAAAALAA8AAAAsABQAAAAKAB8AAAAsABUAAAALAA8AAAAtABQAAAAKAB8AAAAtABUAAAALAA8AAAAxABQAAAAKAB8AAAAxABUAAAALAA8AAAAyABQAAAAKAB8AAAAyABUAAAALAA8AAAAzABQAAAAKAB8AAAAzABUAAAALAA8AAAA0ABQAAAAKAB8AAAA0ABUAAAALAA8AAAA1ABQAAAAKAB8AAAA1ABUAAAALAA8AAAA2ABQAAAAKAB8AAAA2ABUAAAALAA8AAAA3ABQAAAAKAB8AAAA3ABUAAAALAA8AAAA4ABQAAAAKAB8AAAA4ABUAAAALAA8AAAA5ABQAAAAKAB8AAAA5ABUAAAALAA8AAAA6ABQAAAAKAB8AAAA6ABUAAAALAA8AAAA7ABQAAAAKAB8AAAA7ABUAAAALAA8AAAA8ABQAAAAKAB8AAAA8ABUAAAALAA8AAAA9ABQAAAAKAB8AAAA9ABUAAAALAA8AAAA+ABQAAAAKAB8AAAA+ABUAAAALAA8AAAA/ABQAAAAKAB8AAAA/ABUAAAALAA8AAABAABQAAAAKAB8AAABAABUAAAALAA8AAABBABQAAAAKAB8AAABBABUAAAALAA8AAABCABQAAAAKAB8AAABCABUAAAALAA8AAABDABQAAAAKAB8AAABDABUAAAALAA8AAABEABQAAAAKAB8AAABEABUAAAALAA8AAABFABQAAAAKAB8AAABFABUAAAALAA8AAABGABQAAAAKAB8AAABGABUAAAALAA8AAABHABQAAAAKAB8AAABHABUAAAALAA8AAABIABQAAAAKAB8AAABIABUAAAALAA8AAABJABQAAAAKAB8AAABJABUAAAALAA8AAABKABQAAAAKAB8AAABKABUAAAALAA8AAABLABQAAAAKAB8AAABLABUAAAALAA8AAABMABQAAAAKAB8AAABMABUAAAALAA8AAABNABQAAAAKAB8AAABNABUAAAALAA8AAABOABQAAAAKAB8AAABOABUAAAALAA8AAABPABQAAAAKAB8AAABPABUAAAALAA8AAABQABQAAAAKAB8AAABQABUAAAALAA8AAABRABQAAAAKAB8AAABRABUAAAALAA8AAABSABQAAAAKAB8AAABSABUAAAALAA8AAABTABQAAAAKAB8AAABTABUAAAALAA8AAABUABQAAAAKAB8AAABUABUAAAALAA8AAABVABQAAAAKAB8AAABVABUAAAALAA8AAABWABQAAAAKAB8AAABWABUAAAALAA8AAABXABQAAAAKAB8AAABXABUAAAALAA8AAABYABQAAAAKAB8AAABYABUAAAALAA8AAABZABQAAAAKAB8AAABZABUAAAALAA8AAABaABQAAAAKAB8AAABaABUAAAALAA8AAABbABQAAAAKAB8AAABbABUAAAALAA8AAABcABQAAAAKAB8AAABcABUAAAALAA8AAABdABQAAAAKAB8AAABdABUAAAALAA8AAABeABQAAAAKAB8AAABeABUAAAALAA8AAABfABQAAAAKAB8AAABfABUAAAALAA8AAABgABQAAAAKAB8AAABgABUAAAALAA8AAABhABQAAAAKAB8AAABhABUAAAALAA8AAABiABQAAAAKAB8AAABiABUAAAALAA8AAABjABQAAAAKAB8AAABjABUAAAALAA8AAABkABQAAAAKAB8AAABkABUAAAALAA8AAABlABQAAAAKAB8AAABlABUAAAALAA8AAABmABQAAAAKAB8AAABmABUAAAALAA8AAABqABQAAAAKAB8AAABqABUAAAALAA8AAABrABQAAAAKAB8AAABrABUAAAALAA8AAABsABQAAAAKAB8AAABsABUAAAALAA8AAABtABQAAAAKAB8AAABtABUAAAALAA8AAABuABQAAAAKAB8AAABuABUAAAALAA8AAABvABQAAAAKAB8AAABvABUAAAALAA8AAABwABQAAAAKAB8AAABwABUAAAALAA8AAABxABQAAAAKAB8AAABxABUAAAALAA8AAAByABQAAAAKAB8AAAByABUAAAALAA8AAABzABQAAAAKAB8AAABzABUAAAALAA8AAAB0ABQAAAAKAB8AAAB0ABUAAAALAA8AAAB1ABQAAAAKAB8AAAB1ABUAAAALAA8AAAB2ABQAAAAKAB8AAAB2ABUAAAALAA8AAAB3ABQAAAAKAB8AAAB3ABUAAAALAA8AAAB4ABQAAAAKAB8AAAB4ABUAAAALAA8AAAB5ABQAAAAKAB8AAAB5ABUAAAALAA8AAAB6ABQAAAAKAB8AAAB6ABUAAAALAA8AAAB7ABQAAAAKAB8AAAB7ABUAAAALAA8AAAB8ABQAAAAKAB8AAAB8ABUAAAALAA8AAAB9ABQAAAAKAB8AAAB9ABUAAAALAA8AAAB+ABQAAAAKAB8AAAB+ABUAAAALAA8AAAB/ABQAAAAKAB8AAAB/ABUAAAALAA8AAACAABQAAAAKAB8AAACAABUAAAALAA8AAACBABQAAAAKAB8AAACBABUAAAALAA8AAACCABQAAAAKAB8AAACCABUAAAALAA8AAACDABQAAAAKAB8AAACDABUAAAALAA8AAACEABQAAAAKAB8AAACEABUAAAALAA8AAACFABQAAAAKAB8AAACFABUAAAALAA8AAACGABQAAAAKAB8AAACGABUAAAALAA8AAACHABQAAAAKAB8AAACHABUAAAALAA8AAACIABQAAAAKAB8AAACIABUAAAALAA8AAACJABQAAAAKAB8AAACJABUAAAALAA8AAACKABQAAAAKAB8AAACKABUAAAALAA8AAACLABQAAAAKAB8AAACLABUAAAALAA8AAACMABQAAAAKAB8AAACMABUAAAALAA8AAACNABQAAAAKAB8AAACNABUAAAALAA8AAACOABQAAAAKAB8AAACOABUAAAALAA8AAACPABQAAAAKAB8AAACPABUAAAALAA8AAACQABQAAAAKAB8AAACQABUAAAALAA8AAACRABQAAAAKAB8AAACRABUAAAALAA8AAACSABQAAAAKAB8AAACSABUAAAALAA8AAACTABQAAAAKAB8AAACTABUAAAALAA8AAACUABQAAAAKAB8AAACUABUAAAALAA8AAACVABQAAAAKAB8AAACVABUAAAALAA8AAACWABQAAAAKAB8AAACWABUAAAALAA8AAACXABQAAAAKAB8AAACXABUAAAALAA8AAACbABQAAAAKAB8AAACbABUAAAALAA8AAACcABQAAAAKAB8AAACcABUAAAALAA8AAACdABQAAAAKAB8AAACdABUAAAALAA8AAACeABQAAAAKAB8AAACeABUAAAALAA8AAACfABQAAAAKAB8AAACfABUAAAALAA8AAACgABQAAAAKAB8AAACgABUAAAALAA8AAAChABQAAAAKAB8AAAChABUAAAALAA8AAACiABQAAAAKAB8AAACiABUAAAALAA8AAACjABQAAAAKAB8AAACjABUAAAALAA8AAACkABQAAAAKAB8AAACkABUAAAALAA8AAAClABQAAAAKAB8AAAClABUAAAALAA8AAACmABQAAAAKAB8AAACmABUAAAALAA8AAACnABQAAAAKAB8AAACnABUAAAALAA8AAACoABQAAAAKAB8AAACoABUAAAALAA8AAACpABQAAAAKAB8AAACpABUAAAALAA8AAACqABQAAAAKAB8AAACqABUAAAALAA8AAACrABQAAAAKAB8AAACrABUAAAALAA8AAACsABQAAAAKAB8AAACsABUAAAALAA8AAACtABQAAAAKAB8AAACtABUAAAALAA8AAACuABQAAAAKAB8AAACuABUAAAALAA8AAACvABQAAAAKAB8AAACvABUAAAALAA8AAACwABQAAAAKAB8AAACwABUAAAALAA8AAACxABQAAAAKAB8AAACxABUAAAALAA8AAACyABQAAAAKAB8AAACyABUAAAALAA8AAACzABQAAAAKAB8AAACzABUAAAALAA8AAAC0ABQAAAAKAB8AAAC0ABUAAAALAA8AAAC1ABQAAAAKAB8AAAC1ABUAAAALAA8AAAC2ABQAAAAKAB8AAAC2ABUAAAALAA8AAAC3ABQAAAAKAB8AAAC3ABUAAAALAA8AAAC4ABQAAAAKAB8AAAC4ABUAAAALAA8AAAC5ABQAAAAKAB8AAAC5ABUAAAALAA8AAAC6ABQAAAAKAB8AAAC6ABUAAAALAA8AAAC7ABQAAAAKAB8AAAC7ABUAAAALAA8AAAC8ABQAAAAKAB8AAAC8ABUAAAALAA8AAAC9ABQAAAAKAB8AAAC9ABUAAAALAA8AAAC+ABQAAAAKAB8AAAC+ABUAAAALAA8AAAC/ABQAAAAKAB8AAAC/ABUAAAALAA8AAADAABQAAAAKAB8AAADAABUAAAALAA8AAADBABQAAAAKAB8AAADBABUAAAALAA8AAADCABQAAAAKAB8AAADCABUAAAALAA8AAADDABQAAAAKAB8AAADDABUAAAALAA8AAADEABQAAAAKAB8AAADEABUAAAALAA8AAADFABQAAAAKAB8AAADFABUAAAALAA8AAADGABQAAAAKAB8AAADGABUAAAALAA8AAADHABQAAAAKAB8AAADHABUAAAALAA8AAADIABQAAAAKAB8AAADIABUAAAALAA8AAADJABQAAAAKAB8AAADJABUAAAALAA8AAADKABQAAAAKAB8AAADKABUAAAALAA8AAADLABQAAAAKAB8AAADLABUAAAALAA8AAADMABQAAAAKAB8AAADMABUAAAALAA8AAAAUABIAAAAMAAsAAAAVABIAAAAMAAsAAAAWABIAAAAMAAsAAAAXABIAAAAMAAsAAAAYABIAAAAMAAsAAAArABEAAAAMAAsAAAAsABEAAAAMAAsAAAAtABEAAAAMAAsAAAAuABEAAAAMAAsAAAAvABEAAAAMAAsAAAAwABEAAAAMAAsAAABCABIAAAAMAAsAAABDABIAAAAMAAsAAABEABIAAAAMAAsAAABFABIAAAAMAAsAAABGABIAAAAMAAsAAABHABIAAAAMAAsAAABIABIAAAAMAAsAAABVABIAAAAMAAsAAABWABIAAAAMAAsAAABXABIAAAAMAAsAAABYABIAAAAMAAsAAABZABIAAAAMAAsAAABaABIAAAAMAAsAAABbABIAAAAMAAsAAABcABIAAAAMAAsAAABsABEAAAAMAAsAAABtABEAAAAMAAsAAABuABEAAAAMAAsAAABvABEAAAAMAAsAAABwABEAAAAMAAsAAABxABEAAAAMAAsAAAB/ABIAAAAMAAsAAACAABIAAAAMAAsAAACBABIAAAAMAAsAAACCABIAAAAMAAsAAACDABIAAAAMAAsAAACEABIAAAAMAAsAAACWABIAAAAMAAsAAACXABIAAAAMAAsAAACYABIAAAAMAAsAAACZABIAAAAMAAsAAACaABIAAAAMAAsAAACbABIAAAAMAAsAAACcABIAAAAMAAsAAACuABEAAAAMAAsAAACvABEAAAAMAAsAAACwABEAAAAMAAsAAACxABEAAAAMAAsAAACyABEAAAAMAAsAAACzABEAAAAMAAsAAAC0ABEAAAAMAAsAAAC1ABEAAAAMAAsAAAAtABIAAAAMAAsAAAAuABIAAAAMAAsAAAAvABIAAAAMAAsAAAAwABIAAAAMAAsAAAAxABIAAAAMAAsAAABmABIAAAAMAAsAAABnABIAAAAMAAsAAABoABIAAAAMAAsAAABpABIAAAAMAAsAAABqABIAAAAMAAsAAAA=")
+tile_set = ExtResource("5_0n8dx")
+
+[node name="Props" type="Node2D" parent="." unique_id=1280723959]
+
+[node name="ThemedProp01" type="Sprite2D" parent="Props" unique_id=1357670982]
+z_index = 1
+position = Vector2(565, 437)
+scale = Vector2(1.3478261, 1.3478261)
+texture = ExtResource("6_j1nln")
+
+[node name="ThemedProp02" type="Sprite2D" parent="Props" unique_id=1477390405]
+z_index = 1
+position = Vector2(1206, 432)
+scale = Vector2(1.4117647, 1.4117647)
+texture = ExtResource("7_jjtwf")
+
+[node name="ThemedProp03" type="Sprite2D" parent="Props" unique_id=2071069206]
+z_index = 1
+position = Vector2(1756, 421)
+scale = Vector2(0.9791667, 0.9791667)
+texture = ExtResource("8_ju5ye")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
+
+[node name="ThemedProp04" type="Sprite2D" parent="Props" unique_id=2031722714]
+z_index = 1
+position = Vector2(2397, 437)
+scale = Vector2(1.3478261, 1.3478261)
+texture = ExtResource("6_j1nln")
+
+[node name="ThemedProp05" type="Sprite2D" parent="Props" unique_id=1873509153]
+z_index = 1
+position = Vector2(3038, 432)
+scale = Vector2(1.4117647, 1.4117647)
+texture = ExtResource("7_jjtwf")
+
+[node name="ThemedProp06" type="Sprite2D" parent="Props" unique_id=1610967281]
+z_index = 1
+position = Vector2(3588, 421)
+scale = Vector2(0.9791667, 0.9791667)
+texture = ExtResource("8_ju5ye")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 96)
+
+[node name="ThemedProp07" type="Sprite2D" parent="Props" unique_id=1333623542]
+z_index = 1
+position = Vector2(4229, 437)
+scale = Vector2(1.3478261, 1.3478261)
+texture = ExtResource("6_j1nln")
+
+[node name="Hazards" type="Node2D" parent="." unique_id=1962043976]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1543686105]
+
+[node name="SatyrArcher" type="CharacterBody2D" parent="Enemies" unique_id=1991947899 instance=ExtResource("9_3dp0x")]
+position = Vector2(1315, 432)
+collision_layer = 0
+floor_snap_length = 4.0
+script = ExtResource("10_htwdi")
+enemy_id = &"satyr_archer"
+animation_library = ExtResource("11_ov1eu")
+starting_direction = 1
+movement_animation = &"walk"
+death_animation = &"death"
+
+[node name="VFX" type="Node2D" parent="." unique_id=1833420236]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=256369046]
+
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=102683800]
+position = Vector2(720, 310)
+color = Color(0.1, 0.65, 1, 1)
+energy = 0.8
+texture = SubResource("GradientTexture_prototype_light")
+texture_scale = 2.0
+
+[node name="Markers" type="Node2D" parent="." unique_id=2099593167]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=1520754505]
+position = Vector2(140, 422)
+gizmo_extents = 24.0
+
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=1438956871]
+
+[node name="Checkpoint01" type="Area2D" parent="Markers/Checkpoints" unique_id=571771056 instance=ExtResource("12_62mtw")]
+position = Vector2(1600, 434)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("13_qbfy6")
+checkpoint_id = &"3-3_checkpoint_01"
+
+[node name="Checkpoint02" type="Area2D" parent="Markers/Checkpoints" unique_id=1009399180 instance=ExtResource("12_62mtw")]
+position = Vector2(3200, 434)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("13_qbfy6")
+checkpoint_id = &"3-3_checkpoint_02"
+
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=1272423994]
+position = Vector2(4650, 410)
+gizmo_extents = 28.0
+
+[node name="StageExit" type="Area2D" parent="Markers" unique_id=770346596 instance=ExtResource("14_rc5hc")]
+position = Vector2(4650, 410)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("15_h0emh")
+next_scene_path = "res://Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn"
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1375697274 instance=ExtResource("16_php1i")]
+position = Vector2(140, 422)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("17_n6013")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=505169221]
+position = Vector2(2400, 688)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("18_buh77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=537203240]
+shape = SubResource("RectangleShape2D_u61r5")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=527119501 instance=ExtResource("19_cad8p")]
+layer = 20
+
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1632370791]
+layer = 90
+
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=1269122791]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBox_guide")
+
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=2064422046]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=2049533821]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1675181193]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "3-3  |  Security Grid Shaft"
+
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=115776555]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Layout pass: Laser barriers, defense turrets, wall-jump shafts
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+autowrap_mode = 2
+
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1389572083]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBox_tag")
+text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
+horizontal_alignment = 1

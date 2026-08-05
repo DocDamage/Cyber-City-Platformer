@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Original bulk asset library retained as a local source mirror.
+/assets/
+
+# Canonical mirrors are populated from the supplied local libraries; generated
+# Godot scenes, SpriteFrames, TileSets, manifests, and documentation stay tracked.
+/Stage Props/*/SourceArt/
+/Characters/*/SourceArt/
+/Characters/Enemies/SourceArt/
+/Stages/Act*/SourceArt/
+/Music/Library/
+/SFX/Library/
+/Parallax/SourceArt/
+/VFX/SourceArt/

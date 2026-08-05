@@ -1,0 +1,83 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="1_vsbb8"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/demon_boss.tres" id="2_p4rv4"]
+[ext_resource type="Script" path="res://scripts/Hurtbox.gd" id="3_o0dl7"]
+[ext_resource type="Script" path="res://scripts/Hitbox.gd" id="4_ulscl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enemy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_body"]
+size = Vector2(20, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_hurtbox"]
+size = Vector2(28, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_contact"]
+size = Vector2(24, 36)
+
+[sub_resource type="Gradient" id="Gradient_enemy"]
+offsets = PackedFloat32Array(0, 0.4, 1)
+colors = PackedColorArray(0, 0.952941, 1, 0.55, 0.1, 0.45, 1, 0.18, 0.1, 0.45, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_enemy"]
+gradient = SubResource("Gradient_enemy")
+width = 96
+height = 96
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Demon Boss" type="CharacterBody2D" unique_id=873689987]
+collision_layer = 0
+floor_snap_length = 4.0
+script = ExtResource("1_vsbb8")
+enemy_id = &"demon_boss"
+animation_library = ExtResource("2_p4rv4")
+uses_gravity = false
+movement_animation = &"flying"
+death_animation = &"death"
+sprite_visual_scale = Vector2(0.7567568, 0.7567568)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=905428960]
+position = Vector2(0, -30)
+sprite_frames = SubResource("SpriteFrames_enemy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1148954970]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape_body")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=229499685]
+position = Vector2(0, -22)
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_o0dl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=320997311]
+shape = SubResource("RectangleShape_hurtbox")
+
+[node name="ContactHitbox" type="Area2D" parent="." unique_id=3588294]
+position = Vector2(0, -18)
+collision_layer = 16
+collision_mask = 32
+monitorable = false
+script = ExtResource("4_ulscl")
+single_hit_per_activation = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ContactHitbox" unique_id=504180351]
+shape = SubResource("RectangleShape_contact")
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=754452905]
+position = Vector2(-14, -2)
+target_position = Vector2(0, 16)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1396897605]
+position = Vector2(0, -16)
+target_position = Vector2(-18, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1991497490]
+position = Vector2(0, -26)
+color = Color(0.1, 0.45, 1, 1)
+energy = 0.55
+texture = SubResource("GradientTexture_enemy")

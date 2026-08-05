@@ -1,0 +1,302 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/HUDView.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
+bg_color = Color(0.015, 0.035, 0.075, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0627, 0.8745, 0.9608, 0.9)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_score_panel"]
+bg_color = Color(0.015, 0.035, 0.075, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.1843, 0.5373, 0.9)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_bar_background"]
+bg_color = Color(0.02, 0.08, 0.12, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.1529, 0.3922, 0.4745, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_health_fill"]
+bg_color = Color(0.1569, 0.9373, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6353, 0.9843, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_ammo_fill"]
+bg_color = Color(0.5529, 0.2824, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7647, 0.6196, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_notice"]
+bg_color = Color(0.02, 0.08, 0.1, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 1, 0.68, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_boss_panel"]
+bg_color = Color(0.08, 0.005, 0.04, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.1, 0.5, 0.95)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.55)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_boss_fill"]
+bg_color = Color(1, 0.08, 0.42, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.55, 0.75, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="HUD" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_hud")
+
+[node name="Layout" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StatusPanel" type="PanelContainer" parent="Layout"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 330.0
+offset_bottom = 158.0
+theme_override_styles/panel = SubResource("StyleBox_panel")
+
+[node name="Margin" type="MarginContainer" parent="Layout/StatusPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="Readouts" type="VBoxContainer" parent="Layout/StatusPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="HealthHeader" type="HBoxContainer" parent="Layout/StatusPanel/Margin/Readouts"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Layout/StatusPanel/Margin/Readouts/HealthHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.5137, 0.9647, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "VITAL INTEGRITY"
+
+[node name="HealthValue" type="Label" parent="Layout/StatusPanel/Margin/Readouts/HealthHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "05 / 05"
+horizontal_alignment = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Layout/StatusPanel/Margin/Readouts"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+max_value = 5.0
+value = 5.0
+show_percentage = false
+theme_override_styles/background = SubResource("StyleBox_bar_background")
+theme_override_styles/fill = SubResource("StyleBox_health_fill")
+
+[node name="AmmoHeader" type="HBoxContainer" parent="Layout/StatusPanel/Margin/Readouts"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Layout/StatusPanel/Margin/Readouts/AmmoHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.702, 0.549, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "WEAPON ENERGY"
+
+[node name="AmmoValue" type="Label" parent="Layout/StatusPanel/Margin/Readouts/AmmoHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "100 / 100"
+horizontal_alignment = 2
+
+[node name="AmmoBar" type="ProgressBar" parent="Layout/StatusPanel/Margin/Readouts"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+theme_override_styles/background = SubResource("StyleBox_bar_background")
+theme_override_styles/fill = SubResource("StyleBox_ammo_fill")
+
+[node name="ScorePanel" type="PanelContainer" parent="Layout"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_top = 18.0
+offset_right = -20.0
+offset_bottom = 92.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBox_score_panel")
+
+[node name="Margin" type="MarginContainer" parent="Layout/ScorePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 8
+
+[node name="Readouts" type="VBoxContainer" parent="Layout/ScorePanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="Layout/ScorePanel/Margin/Readouts"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5686, 0.7608, 1)
+theme_override_font_sizes/font_size = 12
+text = "CREDITS"
+horizontal_alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="Layout/ScorePanel/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "000000"
+horizontal_alignment = 2
+
+[node name="BossPanel" type="PanelContainer" parent="Layout"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -265.0
+offset_top = 18.0
+offset_right = 265.0
+offset_bottom = 98.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBox_boss_panel")
+
+[node name="Margin" type="MarginContainer" parent="Layout/BossPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 9
+
+[node name="Readouts" type="VBoxContainer" parent="Layout/BossPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Header" type="HBoxContainer" parent="Layout/BossPanel/Margin/Readouts"]
+layout_mode = 2
+
+[node name="BossName" type="Label" parent="Layout/BossPanel/Margin/Readouts/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.55, 0.76, 1)
+theme_override_font_sizes/font_size = 14
+text = "STAGE GUARDIAN"
+
+[node name="BossPhase" type="Label" parent="Layout/BossPanel/Margin/Readouts/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "PHASE 1"
+horizontal_alignment = 2
+
+[node name="BossHealthBar" type="ProgressBar" parent="Layout/BossPanel/Margin/Readouts"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+max_value = 30.0
+value = 30.0
+show_percentage = false
+theme_override_styles/background = SubResource("StyleBox_bar_background")
+theme_override_styles/fill = SubResource("StyleBox_boss_fill")
+
+[node name="CheckpointNotice" type="Label" parent="Layout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 44)
+layout_mode = 0
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 34.0
+offset_right = 150.0
+offset_bottom = 78.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.55, 1, 0.78, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBox_notice")
+text = "CHECKPOINT SYNCHRONIZED"
+horizontal_alignment = 1
+vertical_alignment = 1
+modulate = Color(1, 1, 1, 0)

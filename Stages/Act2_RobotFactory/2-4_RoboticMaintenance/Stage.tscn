@@ -1,0 +1,294 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_vcysh"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/back.png" id="2_j2g4w"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/middle.png" id="3_lk73w"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/front.png" id="4_gfhjw"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act2_RobotFactory_Palette.tres" id="5_tq1so"]
+[ext_resource type="Texture2D" path="res://Stage Props/FactoryProps/SourceArt/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png" id="6_j7ipv"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/pyromancer.tscn" id="7_se1s3"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_5dq6m"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/pyromancer.tres" id="9_cfyta"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="10_25sgd"]
+[ext_resource type="Script" path="res://scripts/CheckpointTerminal.gd" id="11_8x5wp"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="12_0rxhn"]
+[ext_resource type="Script" path="res://scripts/StageExit.gd" id="13_y5yrs"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="14_pc1gh"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="15_4idc8"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="16_vahkt"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="17_lbg7s"]
+
+[sub_resource type="Gradient" id="Gradient_prototype_light"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
+gradient = SubResource("Gradient_prototype_light")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0xmp"]
+size = Vector2(5500, 140)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
+bg_color = Color(0.025, 0.035, 0.09, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.85, 1, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
+bg_color = Color(0.05, 0.15, 0.28, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.9, 1, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="RoboticMaintenance" type="Node2D" unique_id=422382610]
+script = ExtResource("1_vcysh")
+campaign_act = 2
+stage_id = &"2-4"
+stage_title = "Robotic Maintenance"
+design_notes = "Layout pass: Damaged control panels, broken machinery, vertical drop shafts
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+music_path = "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg"
+far_background = ExtResource("2_j2g4w")
+middle_background = ExtResource("3_lk73w")
+front_background = ExtResource("4_gfhjw")
+background_tint = Color(0.92, 0.78, 1, 1)
+
+[node name="Background" type="Node2D" parent="." unique_id=1123602444]
+
+[node name="Far" type="Parallax2D" parent="Background" unique_id=215854638]
+z_index = -30
+scroll_scale = Vector2(0.1, 0.15)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=1519483079]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("2_j2g4w")
+
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=1848587034]
+z_index = -25
+scroll_scale = Vector2(0.28, 0.35)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=407333532]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("3_lk73w")
+
+[node name="Front" type="Parallax2D" parent="Background" unique_id=440240185]
+z_index = -20
+scroll_scale = Vector2(0.55, 0.65)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=2126832355]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(5.4545455, 5.4545455)
+texture = ExtResource("4_gfhjw")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=982041136]
+tile_map_data = PackedByteArray("AAD8/w8AAAABAAQAAAD8/xAAAAACAAgAAAD9/w8AAAABAAQAAAD9/xAAAAACAAgAAAD+/w8AAAABAAQAAAD+/xAAAAACAAgAAAD//w8AAAABAAQAAAD//xAAAAACAAgAAAAAAA8AAAABAAQAAAAAABAAAAACAAgAAAABAA8AAAABAAQAAAABABAAAAACAAgAAAACAA8AAAABAAQAAAACABAAAAACAAgAAAADAA8AAAABAAQAAAADABAAAAACAAgAAAAEAA8AAAABAAQAAAAEABAAAAACAAgAAAAFAA8AAAABAAQAAAAFABAAAAACAAgAAAAGAA8AAAABAAQAAAAGABAAAAACAAgAAAAHAA8AAAABAAQAAAAHABAAAAACAAgAAAAIAA8AAAABAAQAAAAIABAAAAACAAgAAAAJAA8AAAABAAQAAAAJABAAAAACAAgAAAAKAA8AAAABAAQAAAAKABAAAAACAAgAAAALAA8AAAABAAQAAAALABAAAAACAAgAAAAMAA8AAAABAAQAAAAMABAAAAACAAgAAAANAA8AAAABAAQAAAANABAAAAACAAgAAAAOAA8AAAABAAQAAAAOABAAAAACAAgAAAAPAA8AAAABAAQAAAAPABAAAAACAAgAAAAQAA8AAAABAAQAAAAQABAAAAACAAgAAAARAA8AAAABAAQAAAARABAAAAACAAgAAAASAA8AAAABAAQAAAASABAAAAACAAgAAAATAA8AAAABAAQAAAATABAAAAACAAgAAAAUAA8AAAABAAQAAAAUABAAAAACAAgAAAAVAA8AAAABAAQAAAAVABAAAAACAAgAAAAWAA8AAAABAAQAAAAWABAAAAACAAgAAAAXAA8AAAABAAQAAAAXABAAAAACAAgAAAAYAA8AAAABAAQAAAAYABAAAAACAAgAAAAZAA8AAAABAAQAAAAZABAAAAACAAgAAAAaAA8AAAABAAQAAAAaABAAAAACAAgAAAAbAA8AAAABAAQAAAAbABAAAAACAAgAAAAcAA8AAAABAAQAAAAcABAAAAACAAgAAAAdAA8AAAABAAQAAAAdABAAAAACAAgAAAAeAA8AAAABAAQAAAAeABAAAAACAAgAAAAfAA8AAAABAAQAAAAfABAAAAACAAgAAAAgAA8AAAABAAQAAAAgABAAAAACAAgAAAAhAA8AAAABAAQAAAAhABAAAAACAAgAAAAkAA8AAAABAAQAAAAkABAAAAACAAgAAAAlAA8AAAABAAQAAAAlABAAAAACAAgAAAAmAA8AAAABAAQAAAAmABAAAAACAAgAAAAnAA8AAAABAAQAAAAnABAAAAACAAgAAAAoAA8AAAABAAQAAAAoABAAAAACAAgAAAApAA8AAAABAAQAAAApABAAAAACAAgAAAAqAA8AAAABAAQAAAAqABAAAAACAAgAAAArAA8AAAABAAQAAAArABAAAAACAAgAAAAsAA8AAAABAAQAAAAsABAAAAACAAgAAAAtAA8AAAABAAQAAAAtABAAAAACAAgAAAAuAA8AAAABAAQAAAAuABAAAAACAAgAAAAvAA8AAAABAAQAAAAvABAAAAACAAgAAAAwAA8AAAABAAQAAAAwABAAAAACAAgAAAAxAA8AAAABAAQAAAAxABAAAAACAAgAAAAyAA8AAAABAAQAAAAyABAAAAACAAgAAAAzAA8AAAABAAQAAAAzABAAAAACAAgAAAA0AA8AAAABAAQAAAA0ABAAAAACAAgAAAA1AA8AAAABAAQAAAA1ABAAAAACAAgAAAA2AA8AAAABAAQAAAA2ABAAAAACAAgAAAA3AA8AAAABAAQAAAA3ABAAAAACAAgAAAA4AA8AAAABAAQAAAA4ABAAAAACAAgAAAA5AA8AAAABAAQAAAA5ABAAAAACAAgAAAA6AA8AAAABAAQAAAA6ABAAAAACAAgAAAA7AA8AAAABAAQAAAA7ABAAAAACAAgAAAA8AA8AAAABAAQAAAA8ABAAAAACAAgAAAA9AA8AAAABAAQAAAA9ABAAAAACAAgAAAA+AA8AAAABAAQAAAA+ABAAAAACAAgAAAA/AA8AAAABAAQAAAA/ABAAAAACAAgAAABAAA8AAAABAAQAAABAABAAAAACAAgAAABBAA8AAAABAAQAAABBABAAAAACAAgAAABCAA8AAAABAAQAAABCABAAAAACAAgAAABDAA8AAAABAAQAAABDABAAAAACAAgAAABEAA8AAAABAAQAAABEABAAAAACAAgAAABFAA8AAAABAAQAAABFABAAAAACAAgAAABGAA8AAAABAAQAAABGABAAAAACAAgAAABHAA8AAAABAAQAAABHABAAAAACAAgAAABIAA8AAAABAAQAAABIABAAAAACAAgAAABJAA8AAAABAAQAAABJABAAAAACAAgAAABKAA8AAAABAAQAAABKABAAAAACAAgAAABLAA8AAAABAAQAAABLABAAAAACAAgAAABMAA8AAAABAAQAAABMABAAAAACAAgAAABPAA8AAAABAAQAAABPABAAAAACAAgAAABQAA8AAAABAAQAAABQABAAAAACAAgAAABRAA8AAAABAAQAAABRABAAAAACAAgAAABSAA8AAAABAAQAAABSABAAAAACAAgAAABTAA8AAAABAAQAAABTABAAAAACAAgAAABUAA8AAAABAAQAAABUABAAAAACAAgAAABVAA8AAAABAAQAAABVABAAAAACAAgAAABWAA8AAAABAAQAAABWABAAAAACAAgAAABXAA8AAAABAAQAAABXABAAAAACAAgAAABYAA8AAAABAAQAAABYABAAAAACAAgAAABZAA8AAAABAAQAAABZABAAAAACAAgAAABaAA8AAAABAAQAAABaABAAAAACAAgAAABbAA8AAAABAAQAAABbABAAAAACAAgAAABcAA8AAAABAAQAAABcABAAAAACAAgAAABdAA8AAAABAAQAAABdABAAAAACAAgAAABeAA8AAAABAAQAAABeABAAAAACAAgAAABfAA8AAAABAAQAAABfABAAAAACAAgAAABgAA8AAAABAAQAAABgABAAAAACAAgAAABhAA8AAAABAAQAAABhABAAAAACAAgAAABiAA8AAAABAAQAAABiABAAAAACAAgAAABjAA8AAAABAAQAAABjABAAAAACAAgAAABkAA8AAAABAAQAAABkABAAAAACAAgAAABlAA8AAAABAAQAAABlABAAAAACAAgAAABmAA8AAAABAAQAAABmABAAAAACAAgAAABnAA8AAAABAAQAAABnABAAAAACAAgAAABoAA8AAAABAAQAAABoABAAAAACAAgAAABpAA8AAAABAAQAAABpABAAAAACAAgAAABqAA8AAAABAAQAAABqABAAAAACAAgAAABrAA8AAAABAAQAAABrABAAAAACAAgAAABsAA8AAAABAAQAAABsABAAAAACAAgAAABtAA8AAAABAAQAAABtABAAAAACAAgAAABuAA8AAAABAAQAAABuABAAAAACAAgAAABvAA8AAAABAAQAAABvABAAAAACAAgAAABwAA8AAAABAAQAAABwABAAAAACAAgAAABxAA8AAAABAAQAAABxABAAAAACAAgAAAByAA8AAAABAAQAAAByABAAAAACAAgAAAB1AA8AAAABAAQAAAB1ABAAAAACAAgAAAB2AA8AAAABAAQAAAB2ABAAAAACAAgAAAB3AA8AAAABAAQAAAB3ABAAAAACAAgAAAB4AA8AAAABAAQAAAB4ABAAAAACAAgAAAB5AA8AAAABAAQAAAB5ABAAAAACAAgAAAB6AA8AAAABAAQAAAB6ABAAAAACAAgAAAB7AA8AAAABAAQAAAB7ABAAAAACAAgAAAB8AA8AAAABAAQAAAB8ABAAAAACAAgAAAB9AA8AAAABAAQAAAB9ABAAAAACAAgAAAB+AA8AAAABAAQAAAB+ABAAAAACAAgAAAB/AA8AAAABAAQAAAB/ABAAAAACAAgAAACAAA8AAAABAAQAAACAABAAAAACAAgAAACBAA8AAAABAAQAAACBABAAAAACAAgAAACCAA8AAAABAAQAAACCABAAAAACAAgAAACDAA8AAAABAAQAAACDABAAAAACAAgAAACEAA8AAAABAAQAAACEABAAAAACAAgAAACFAA8AAAABAAQAAACFABAAAAACAAgAAACGAA8AAAABAAQAAACGABAAAAACAAgAAACHAA8AAAABAAQAAACHABAAAAACAAgAAACIAA8AAAABAAQAAACIABAAAAACAAgAAACJAA8AAAABAAQAAACJABAAAAACAAgAAACKAA8AAAABAAQAAACKABAAAAACAAgAAACLAA8AAAABAAQAAACLABAAAAACAAgAAACMAA8AAAABAAQAAACMABAAAAACAAgAAACNAA8AAAABAAQAAACNABAAAAACAAgAAACOAA8AAAABAAQAAACOABAAAAACAAgAAACPAA8AAAABAAQAAACPABAAAAACAAgAAACQAA8AAAABAAQAAACQABAAAAACAAgAAACRAA8AAAABAAQAAACRABAAAAACAAgAAACSAA8AAAABAAQAAACSABAAAAACAAgAAACTAA8AAAABAAQAAACTABAAAAACAAgAAACUAA8AAAABAAQAAACUABAAAAACAAgAAACVAA8AAAABAAQAAACVABAAAAACAAgAAACWAA8AAAABAAQAAACWABAAAAACAAgAAACXAA8AAAABAAQAAACXABAAAAACAAgAAACYAA8AAAABAAQAAACYABAAAAACAAgAAACZAA8AAAABAAQAAACZABAAAAACAAgAAACaAA8AAAABAAQAAACaABAAAAACAAgAAAAPAA4AAAAGAAIAAAAQAA4AAAAGAAIAAAARAA4AAAAGAAIAAAASAA4AAAAGAAIAAAATAA4AAAAGAAIAAAAhAA0AAAAGAAIAAAAiAA0AAAAGAAIAAAAjAA0AAAAGAAIAAAAkAA0AAAAGAAIAAAAlAA0AAAAGAAIAAAAvAA4AAAAGAAIAAAAwAA4AAAAGAAIAAAAxAA4AAAAGAAIAAAAyAA4AAAAGAAIAAAAzAA4AAAAGAAIAAAA0AA4AAAAGAAIAAABAAA4AAAAGAAIAAABBAA4AAAAGAAIAAABCAA4AAAAGAAIAAABDAA4AAAAGAAIAAABSAA0AAAAGAAIAAABTAA0AAAAGAAIAAABUAA0AAAAGAAIAAABVAA0AAAAGAAIAAABWAA0AAAAGAAIAAABgAA4AAAAGAAIAAABhAA4AAAAGAAIAAABiAA4AAAAGAAIAAABjAA4AAAAGAAIAAABkAA4AAAAGAAIAAABxAA4AAAAGAAIAAAByAA4AAAAGAAIAAABzAA4AAAAGAAIAAAB0AA4AAAAGAAIAAAB1AA4AAAAGAAIAAAB2AA4AAAAGAAIAAACDAA0AAAAGAAIAAACEAA0AAAAGAAIAAACFAA0AAAAGAAIAAACGAA0AAAAGAAIAAAAhAA4AAAAGAAIAAAAiAA4AAAAGAAIAAAAjAA4AAAAGAAIAAAAkAA4AAAAGAAIAAABMAA4AAAAGAAIAAABNAA4AAAAGAAIAAABOAA4AAAAGAAIAAABPAA4AAAAGAAIAAAA=")
+tile_set = ExtResource("5_tq1so")
+
+[node name="Props" type="Node2D" parent="." unique_id=1679879181]
+
+[node name="ThemedProp01" type="Sprite2D" parent="Props" unique_id=382160570]
+z_index = 1
+position = Vector2(521, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(192, 0, 160, 128)
+
+[node name="ThemedProp02" type="Sprite2D" parent="Props" unique_id=1796449181]
+z_index = 1
+position = Vector2(1162, 438)
+scale = Vector2(1.0833334, 1.0833334)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(160, 128, 160, 48)
+
+[node name="ThemedProp03" type="Sprite2D" parent="Props" unique_id=392660027]
+z_index = 1
+position = Vector2(1803, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 128)
+
+[node name="ThemedProp04" type="Sprite2D" parent="Props" unique_id=261385019]
+z_index = 1
+position = Vector2(2353, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(192, 0, 160, 128)
+
+[node name="ThemedProp05" type="Sprite2D" parent="Props" unique_id=816366549]
+z_index = 1
+position = Vector2(2994, 438)
+scale = Vector2(1.0833334, 1.0833334)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(160, 128, 160, 48)
+
+[node name="ThemedProp06" type="Sprite2D" parent="Props" unique_id=1501402127]
+z_index = 1
+position = Vector2(3635, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 128)
+
+[node name="ThemedProp07" type="Sprite2D" parent="Props" unique_id=2084478178]
+z_index = 1
+position = Vector2(4185, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_j7ipv")
+region_enabled = true
+region_rect = Rect2(192, 0, 160, 128)
+
+[node name="Hazards" type="Node2D" parent="." unique_id=509675178]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1243083059]
+
+[node name="Pyromancer" type="CharacterBody2D" parent="Enemies" unique_id=1242685091 instance=ExtResource("7_se1s3")]
+position = Vector2(1360, 428)
+collision_layer = 0
+floor_snap_length = 4.0
+script = ExtResource("8_5dq6m")
+enemy_id = &"pyromancer"
+animation_library = ExtResource("9_cfyta")
+starting_direction = 1
+movement_animation = &"walk"
+death_animation = &"death"
+
+[node name="VFX" type="Node2D" parent="." unique_id=174617530]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=1724019421]
+
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=1712934662]
+position = Vector2(720, 310)
+color = Color(0.1, 0.65, 1, 1)
+energy = 0.8
+texture = SubResource("GradientTexture_prototype_light")
+texture_scale = 2.0
+
+[node name="Markers" type="Node2D" parent="." unique_id=269284878]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=795385495]
+position = Vector2(140, 418)
+gizmo_extents = 24.0
+
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=580575562]
+
+[node name="Checkpoint01" type="Area2D" parent="Markers/Checkpoints" unique_id=1841412601 instance=ExtResource("10_25sgd")]
+position = Vector2(1600, 430)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_8x5wp")
+checkpoint_id = &"2-4_checkpoint_01"
+
+[node name="Checkpoint02" type="Area2D" parent="Markers/Checkpoints" unique_id=1490648486 instance=ExtResource("10_25sgd")]
+position = Vector2(3200, 430)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_8x5wp")
+checkpoint_id = &"2-4_checkpoint_02"
+
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=1171844402]
+position = Vector2(4650, 406)
+gizmo_extents = 28.0
+
+[node name="StageExit" type="Area2D" parent="Markers" unique_id=431765701 instance=ExtResource("12_0rxhn")]
+position = Vector2(4650, 406)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("13_y5yrs")
+next_scene_path = "res://Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn"
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1470849664 instance=ExtResource("14_pc1gh")]
+position = Vector2(140, 418)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("15_4idc8")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=1769471453]
+position = Vector2(2400, 684)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("16_vahkt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=1222421425]
+shape = SubResource("RectangleShape2D_a0xmp")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1827981650 instance=ExtResource("17_lbg7s")]
+layer = 20
+
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1952734267]
+layer = 90
+
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=1500666015]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBox_guide")
+
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=2022765452]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=1916164414]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=621831486]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "2-4  |  Robotic Maintenance"
+
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=738136500]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Layout pass: Damaged control panels, broken machinery, vertical drop shafts
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+autowrap_mode = 2
+
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1381026604]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBox_tag")
+text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
+horizontal_alignment = 1

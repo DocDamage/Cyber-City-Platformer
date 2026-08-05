@@ -1,0 +1,287 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_st05x"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/back.png" id="2_81wcc"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/middle.png" id="3_mhgpu"]
+[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/front.png" id="4_mn1ur"]
+[ext_resource type="TileSet" path="res://Stages/TileSets/Act2_RobotFactory_Palette.tres" id="5_h6x2v"]
+[ext_resource type="Texture2D" path="res://Stage Props/FactoryProps/SourceArt/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png" id="6_0acvs"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/minotaur.tscn" id="7_pph5q"]
+[ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_bwntv"]
+[ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/minotaur.tres" id="9_35uuq"]
+[ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="10_4xamf"]
+[ext_resource type="Script" path="res://scripts/CheckpointTerminal.gd" id="11_dbi8e"]
+[ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="12_0d2yp"]
+[ext_resource type="Script" path="res://scripts/StageExit.gd" id="13_c3kcx"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="14_4ty4b"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="15_hox18"]
+[ext_resource type="Script" path="res://scripts/DeathZone.gd" id="16_bkkwj"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="17_4a2px"]
+[ext_resource type="PackedScene" path="res://Characters/Bosses/Scenes/act2_assembly_colossus.tscn" id="18_boss"]
+
+[sub_resource type="Gradient" id="Gradient_prototype_light"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
+gradient = SubResource("Gradient_prototype_light")
+width = 280
+height = 280
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmn2i"]
+size = Vector2(5500, 140)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_guide"]
+bg_color = Color(0.025, 0.035, 0.09, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.85, 1, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_tag"]
+bg_color = Color(0.05, 0.15, 0.28, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.9, 1, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="AssemblyEngine" type="Node2D" unique_id=658430627]
+script = ExtResource("1_st05x")
+campaign_act = 2
+stage_id = &"2-5"
+stage_title = "Assembly Engine"
+design_notes = "Layout pass: Moving machinery, background gears, Act 2 boss
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+music_path = "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg"
+far_background = ExtResource("2_81wcc")
+middle_background = ExtResource("3_mhgpu")
+front_background = ExtResource("4_mn1ur")
+background_tint = Color(0.92, 0.78, 1, 1)
+
+[node name="Background" type="Node2D" parent="." unique_id=418081000]
+
+[node name="Far" type="Parallax2D" parent="Background" unique_id=1315966824]
+z_index = -30
+scroll_scale = Vector2(0.1, 0.15)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FarSprite" type="Sprite2D" parent="Background/Far" unique_id=1218723428]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("2_81wcc")
+
+[node name="Middle" type="Parallax2D" parent="Background" unique_id=36109070]
+z_index = -25
+scroll_scale = Vector2(0.28, 0.35)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="MiddleSprite" type="Sprite2D" parent="Background/Middle" unique_id=124231270]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("3_mhgpu")
+
+[node name="Front" type="Parallax2D" parent="Background" unique_id=2134872549]
+z_index = -20
+scroll_scale = Vector2(0.55, 0.65)
+repeat_size = Vector2(960, 0)
+repeat_times = 6
+
+[node name="FrontSprite" type="Sprite2D" parent="Background/Front" unique_id=1680758433]
+modulate = Color(0.92, 0.78, 1, 1)
+position = Vector2(480, 270)
+scale = Vector2(5.4545455, 5.4545455)
+texture = ExtResource("4_mn1ur")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=1623484591]
+tile_map_data = PackedByteArray("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AABLAA8AAAALAAQAAABLABAAAAAOAAYAAABMAA8AAAALAAQAAABMABAAAAAOAAYAAABNAA8AAAALAAQAAABNABAAAAAOAAYAAABOAA8AAAALAAQAAABOABAAAAAOAAYAAABPAA8AAAALAAQAAABPABAAAAAOAAYAAABQAA8AAAALAAQAAABQABAAAAAOAAYAAABRAA8AAAALAAQAAABRABAAAAAOAAYAAABSAA8AAAALAAQAAABSABAAAAAOAAYAAABTAA8AAAALAAQAAABTABAAAAAOAAYAAABUAA8AAAALAAQAAABUABAAAAAOAAYAAABVAA8AAAALAAQAAABVABAAAAAOAAYAAABWAA8AAAALAAQAAABWABAAAAAOAAYAAABXAA8AAAALAAQAAABXABAAAAAOAAYAAABYAA8AAAALAAQAAABYABAAAAAOAAYAAABZAA8AAAALAAQAAABZABAAAAAOAAYAAABaAA8AAAALAAQAAABaABAAAAAOAAYAAABbAA8AAAALAAQAAABbABAAAAAOAAYAAABcAA8AAAALAAQAAABcABAAAAAOAAYAAABdAA8AAAALAAQAAABdABAAAAAOAAYAAABeAA8AAAALAAQAAABeABAAAAAOAAYAAABfAA8AAAALAAQAAABfABAAAAAOAAYAAABgAA8AAAALAAQAAABgABAAAAAOAAYAAABhAA8AAAALAAQAAABhABAAAAAOAAYAAABiAA8AAAALAAQAAABiABAAAAAOAAYAAABjAA8AAAALAAQAAABjABAAAAAOAAYAAABkAA8AAAALAAQAAABkABAAAAAOAAYAAABlAA8AAAALAAQAAABlABAAAAAOAAYAAABmAA8AAAALAAQAAABmABAAAAAOAAYAAABnAA8AAAALAAQAAABnABAAAAAOAAYAAABoAA8AAAALAAQAAABoABAAAAAOAAYAAABpAA8AAAALAAQAAABpABAAAAAOAAYAAABqAA8AAAALAAQAAABqABAAAAAOAAYAAABrAA8AAAALAAQAAABrABAAAAAOAAYAAABsAA8AAAALAAQAAABsABAAAAAOAAYAAABtAA8AAAALAAQAAABtABAAAAAOAAYAAABuAA8AAAALAAQAAABuABAAAAAOAAYAAABvAA8AAAALAAQAAABvABAAAAAOAAYAAABwAA8AAAALAAQAAABwABAAAAAOAAYAAABxAA8AAAALAAQAAABxABAAAAAOAAYAAAByAA8AAAALAAQAAAByABAAAAAOAAYAAABzAA8AAAALAAQAAABzABAAAAAOAAYAAAB2AA8AAAALAAQAAAB2ABAAAAAOAAYAAAB3AA8AAAALAAQAAAB3ABAAAAAOAAYAAAB4AA8AAAALAAQAAAB4ABAAAAAOAAYAAAB5AA8AAAALAAQAAAB5ABAAAAAOAAYAAAB6AA8AAAALAAQAAAB6ABAAAAAOAAYAAAB7AA8AAAALAAQAAAB7ABAAAAAOAAYAAAB8AA8AAAALAAQAAAB8ABAAAAAOAAYAAAB9AA8AAAALAAQAAAB9ABAAAAAOAAYAAAB+AA8AAAALAAQAAAB+ABAAAAAOAAYAAAB/AA8AAAALAAQAAAB/ABAAAAAOAAYAAACAAA8AAAALAAQAAACAABAAAAAOAAYAAACBAA8AAAALAAQAAACBABAAAAAOAAYAAACCAA8AAAALAAQAAACCABAAAAAOAAYAAACDAA8AAAALAAQAAACDABAAAAAOAAYAAACEAA8AAAALAAQAAACEABAAAAAOAAYAAACFAA8AAAALAAQAAACFABAAAAAOAAYAAACGAA8AAAALAAQAAACGABAAAAAOAAYAAACHAA8AAAALAAQAAACHABAAAAAOAAYAAACIAA8AAAALAAQAAACIABAAAAAOAAYAAACJAA8AAAALAAQAAACJABAAAAAOAAYAAACKAA8AAAALAAQAAACKABAAAAAOAAYAAACLAA8AAAALAAQAAACLABAAAAAOAAYAAACMAA8AAAALAAQAAACMABAAAAAOAAYAAACNAA8AAAALAAQAAACNABAAAAAOAAYAAACOAA8AAAALAAQAAACOABAAAAAOAAYAAACPAA8AAAALAAQAAACPABAAAAAOAAYAAACQAA8AAAALAAQAAACQABAAAAAOAAYAAACRAA8AAAALAAQAAACRABAAAAAOAAYAAACSAA8AAAALAAQAAACSABAAAAAOAAYAAACTAA8AAAALAAQAAACTABAAAAAOAAYAAACUAA8AAAALAAQAAACUABAAAAAOAAYAAACVAA8AAAALAAQAAACVABAAAAAOAAYAAACWAA8AAAALAAQAAACWABAAAAAOAAYAAACXAA8AAAALAAQAAACXABAAAAAOAAYAAACYAA8AAAALAAQAAACYABAAAAAOAAYAAACZAA8AAAALAAQAAACZABAAAAAOAAYAAACaAA8AAAALAAQAAACaABAAAAAOAAYAAAARAA4AAAAQAAgAAAASAA4AAAAQAAgAAAATAA4AAAAQAAgAAAAUAA4AAAAQAAgAAAAfAA0AAAAQAAgAAAAgAA0AAAAQAAgAAAAhAA0AAAAQAAgAAAAiAA0AAAAQAAgAAAAjAA0AAAAQAAgAAAAwAA4AAAAQAAgAAAAxAA4AAAAQAAgAAAAyAA4AAAAQAAgAAAAzAA4AAAAQAAgAAAA0AA4AAAAQAAgAAABCAA4AAAAQAAgAAABDAA4AAAAQAAgAAABEAA4AAAAQAAgAAABFAA4AAAAQAAgAAABQAA0AAAAQAAgAAABRAA0AAAAQAAgAAABSAA0AAAAQAAgAAABTAA0AAAAQAAgAAABhAA4AAAAQAAgAAABiAA4AAAAQAAgAAABjAA4AAAAQAAgAAABkAA4AAAAQAAgAAABlAA4AAAAQAAgAAABzAA4AAAAQAAgAAAB0AA4AAAAQAAgAAAB1AA4AAAAQAAgAAAB2AA4AAAAQAAgAAAB3AA4AAAAQAAgAAACBAA0AAAAQAAgAAACCAA0AAAAQAAgAAACDAA0AAAAQAAgAAACEAA0AAAAQAAgAAAAjAA4AAAAQAAgAAAAkAA4AAAAQAAgAAAAlAA4AAAAQAAgAAAAmAA4AAAAQAAgAAABIAA4AAAAQAAgAAABJAA4AAAAQAAgAAABKAA4AAAAQAAgAAABLAA4AAAAQAAgAAAA=")
+tile_set = ExtResource("5_h6x2v")
+
+[node name="Props" type="Node2D" parent="." unique_id=1588830253]
+
+[node name="ThemedProp01" type="Sprite2D" parent="Props" unique_id=1424931835]
+z_index = 1
+position = Vector2(568, 438)
+scale = Vector2(1.0833334, 1.0833334)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(160, 128, 160, 48)
+
+[node name="ThemedProp02" type="Sprite2D" parent="Props" unique_id=2000561982]
+z_index = 1
+position = Vector2(1209, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 128)
+
+[node name="ThemedProp03" type="Sprite2D" parent="Props" unique_id=1525359871]
+z_index = 1
+position = Vector2(1759, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(192, 0, 160, 128)
+
+[node name="ThemedProp04" type="Sprite2D" parent="Props" unique_id=1001590623]
+z_index = 1
+position = Vector2(2400, 438)
+scale = Vector2(1.0833334, 1.0833334)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(160, 128, 160, 48)
+
+[node name="ThemedProp05" type="Sprite2D" parent="Props" unique_id=362830213]
+z_index = 1
+position = Vector2(3041, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(0, 0, 160, 128)
+
+[node name="ThemedProp06" type="Sprite2D" parent="Props" unique_id=917031376]
+z_index = 1
+position = Vector2(3591, 408)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(192, 0, 160, 128)
+
+[node name="ThemedProp07" type="Sprite2D" parent="Props" unique_id=164321444]
+z_index = 1
+position = Vector2(4232, 438)
+scale = Vector2(1.0833334, 1.0833334)
+texture = ExtResource("6_0acvs")
+region_enabled = true
+region_rect = Rect2(160, 128, 160, 48)
+
+[node name="Hazards" type="Node2D" parent="." unique_id=658710373]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=544999556]
+
+[node name="AssemblyColossus" parent="Enemies" unique_id=286476364 instance=ExtResource("18_boss")]
+position = Vector2(4120, 430)
+
+[node name="VFX" type="Node2D" parent="." unique_id=1919501418]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=1870044634]
+
+[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=1937863594]
+position = Vector2(720, 310)
+color = Color(0.1, 0.65, 1, 1)
+energy = 0.8
+texture = SubResource("GradientTexture_prototype_light")
+texture_scale = 2.0
+
+[node name="Markers" type="Node2D" parent="." unique_id=7785183]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers" unique_id=2042513887]
+position = Vector2(140, 418)
+gizmo_extents = 24.0
+
+[node name="Checkpoints" type="Node2D" parent="Markers" unique_id=790527194]
+
+[node name="Checkpoint01" type="Area2D" parent="Markers/Checkpoints" unique_id=1235856792 instance=ExtResource("10_4xamf")]
+position = Vector2(1600, 430)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_dbi8e")
+checkpoint_id = &"2-5_checkpoint_01"
+
+[node name="Checkpoint02" type="Area2D" parent="Markers/Checkpoints" unique_id=82975664 instance=ExtResource("10_4xamf")]
+position = Vector2(3200, 430)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("11_dbi8e")
+checkpoint_id = &"2-5_checkpoint_02"
+
+[node name="Exit" type="Marker2D" parent="Markers" unique_id=1833076166]
+position = Vector2(4650, 406)
+gizmo_extents = 28.0
+
+[node name="StageExit" type="Area2D" parent="Markers" unique_id=1447578738 instance=ExtResource("12_0d2yp")]
+position = Vector2(4650, 406)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("13_c3kcx")
+next_scene_path = "res://Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn"
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=141488146 instance=ExtResource("14_4ty4b")]
+position = Vector2(140, 418)
+collision_layer = 2
+floor_max_angle = 0.872665
+floor_snap_length = 6.0
+script = ExtResource("15_hox18")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=1611885132]
+position = Vector2(2400, 684)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("16_bkkwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=647123003]
+shape = SubResource("RectangleShape2D_hmn2i")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1337399914 instance=ExtResource("17_4a2px")]
+layer = 20
+
+[node name="DesignGuide" type="CanvasLayer" parent="." unique_id=1985459996]
+layer = 90
+
+[node name="Panel" type="PanelContainer" parent="DesignGuide" unique_id=2063372072]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBox_guide")
+
+[node name="Margin" type="MarginContainer" parent="DesignGuide/Panel" unique_id=1021698915]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="DesignGuide/Panel/Margin" unique_id=618448340]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=375448799]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "2-5  |  Assembly Engine"
+
+[node name="Notes" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1125611975]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Layout pass: Moving machinery, background gears, Act 2 boss
+Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
+autowrap_mode = 2
+
+[node name="FolderHint" type="Label" parent="DesignGuide/Panel/Margin/VBox" unique_id=1534896867]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBox_tag")
+text = "Terrain  •  Props  •  Hazards  •  Enemies  •  VFX  •  Lighting  •  Markers"
+horizontal_alignment = 1

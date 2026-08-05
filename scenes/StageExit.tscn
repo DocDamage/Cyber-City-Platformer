@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/StageExit.gd" id="1_exit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_exit"]
+size = Vector2(54, 120)
+
+[sub_resource type="Gradient" id="Gradient_exit_light"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 0.1, 0.62, 0.7, 1, 0.1, 0.62, 0.18, 1, 0.1, 0.62, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_exit_light"]
+gradient = SubResource("Gradient_exit_light")
+width = 140
+height = 180
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_exit_label"]
+bg_color = Color(0.07, 0.01, 0.08, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.12, 0.62, 0.85)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="StageExit" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_exit")
+
+[node name="GateLeft" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-34, -62, -25, -62, -25, 58, -34, 58)
+color = Color(0.95, 0.05, 0.5, 0.9)
+
+[node name="GateRight" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(25, -62, 34, -62, 34, 58, 25, 58)
+color = Color(0.95, 0.05, 0.5, 0.9)
+
+[node name="GateTop" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-34, -62, 34, -62, 27, -52, -27, -52)
+color = Color(0.95, 0.05, 0.5, 0.9)
+
+[node name="Chevron" type="Polygon2D" parent="."]
+position = Vector2(0, -4)
+polygon = PackedVector2Array(-12, -18, 7, 0, -12, 18, -4, 18, 15, 0, -4, -18)
+color = Color(1, 0.45, 0.78, 0.95)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 1.3
+texture = SubResource("GradientTexture_exit_light")
+color = Color(1, 0.08, 0.55, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -88.0
+offset_right = 48.0
+offset_bottom = -68.0
+theme_override_colors/font_color = Color(1, 0.45, 0.76, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBox_exit_label")
+text = "STAGE EXIT"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape_exit")
