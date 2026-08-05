@@ -42,6 +42,7 @@ var _fallback_player_scene: PackedScene
 var _fallback_character_scene: PackedScene
 var _fallback_stage_scene: PackedScene
 var _fallback_enemy_frames: SpriteFrames
+var _campaign_validation_errors := PackedStringArray()
 
 
 func _ready() -> void:
@@ -144,6 +145,15 @@ func get_enemy_library() -> Dictionary:
 	return _enemy_library.duplicate(true)
 
 
+func get_enemy_info(enemy_name: StringName) -> Dictionary:
+	var enemy_id := _canonical_enemy_id(String(enemy_name))
+	var enemies: Array = get_enemy_library().get("enemies", [])
+	for value: Variant in enemies:
+		if value is Dictionary and String((value as Dictionary).get("id", "")) == enemy_id:
+			return (value as Dictionary).duplicate(true)
+	return {}
+
+
 func get_music_stream(track_name: String) -> AudioStream:
 	return _get_audio_stream(MUSIC_ROOT, "music", track_name)
 
@@ -233,6 +243,11 @@ func get_campaign_manifest() -> Dictionary:
 	return _campaign.duplicate(true)
 
 
+func get_campaign_validation_errors() -> PackedStringArray:
+	_ensure_campaign_loaded()
+	return _campaign_validation_errors.duplicate()
+
+
 func get_act_info(act_number: int) -> Dictionary:
 	_ensure_campaign_loaded()
 	var acts: Array = _campaign.get("acts", [])
@@ -287,6 +302,9 @@ func _ensure_campaign_loaded() -> void:
 	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(CAMPAIGN_MANIFEST_PATH))
 	if parsed is Dictionary:
 		_campaign = parsed
+		_campaign_validation_errors = CampaignSchema.validate(_campaign)
+		for failure: String in _campaign_validation_errors:
+			push_error("Campaign manifest: %s" % failure)
 	else:
 		_warn_once("manifest:invalid", "Campaign manifest is not valid JSON: %s." % CAMPAIGN_MANIFEST_PATH)
 

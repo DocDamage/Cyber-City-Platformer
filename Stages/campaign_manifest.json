@@ -3,14 +3,6 @@
     {
       "character_folder": "Enemies",
       "folder": "Act1_CyberCity",
-      "legacy_prop_roots": [
-        "res://assets/Stages/Cyber City/Cyber City/Prop",
-        "res://assets/Stage Props/Space Props"
-      ],
-      "legacy_stage_roots": [
-        "res://assets/Stages/Cyber City",
-        "res://assets/Stages/Rooftops"
-      ],
       "name": "Cyber City",
       "number": 1.0,
       "prop_folder": "CyberCityProps",
@@ -27,7 +19,37 @@
           "number": 1.0,
           "scene": "res://Stages/Act1_CyberCity/1-1_RooftopAlley/Stage.tscn",
           "slug": "RooftopAlley",
-          "status": "playable"
+          "status": "production",
+          "display_name": "Rooftop Alley",
+          "act": 1,
+          "substage": 1,
+          "music_id": "act_1",
+          "mechanics": [
+            "tutorial",
+            "wall_jump",
+            "melee",
+            "ranged"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            1408,
+            540
+          ],
+          "par_time": 185,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [],
+          "enemy_roster": [
+            "goblin",
+            "flying_eye"
+          ]
         },
         {
           "assets": [
@@ -41,7 +63,38 @@
           "number": 2.0,
           "scene": "res://Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
           "slug": "BillboardHighway",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Billboard Highway",
+          "act": 1,
+          "substage": 2,
+          "music_id": "act_1",
+          "mechanics": [
+            "moving_platform",
+            "electric_sign"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 220,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "1-1"
+          ],
+          "enemy_roster": [
+            "goblin",
+            "satyr_archer",
+            "harpy"
+          ]
         },
         {
           "assets": [
@@ -55,7 +108,39 @@
           "number": 3.0,
           "scene": "res://Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
           "slug": "CommunicationSpire",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Communication Spire",
+          "act": 1,
+          "substage": 3,
+          "music_id": "act_1",
+          "mechanics": [
+            "vertical",
+            "signal_hazard",
+            "flying_combat"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            -540,
+            4800,
+            720
+          ],
+          "par_time": 230,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "1-2"
+          ],
+          "enemy_roster": [
+            "flying_eye",
+            "gargoyle",
+            "satyr_archer"
+          ]
         },
         {
           "assets": [
@@ -70,7 +155,39 @@
           "number": 4.0,
           "scene": "res://Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
           "slug": "SkybridgeJunction",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Skybridge Junction",
+          "act": 1,
+          "substage": 4,
+          "music_id": "act_1",
+          "mechanics": [
+            "moving_platform",
+            "breakaway_platform",
+            "dash_challenge"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 245,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "1-3"
+          ],
+          "enemy_roster": [
+            "werewolf",
+            "harpy",
+            "skeleton_warrior"
+          ]
         },
         {
           "assets": [
@@ -84,20 +201,43 @@
           "number": 5.0,
           "scene": "res://Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
           "slug": "ExecutiveHelipad",
-          "status": "boss-ready"
+          "status": "production",
+          "display_name": "Executive Helipad",
+          "act": 1,
+          "substage": 5,
+          "music_id": "boss_1",
+          "mechanics": [
+            "boss",
+            "air_hazard",
+            "projectile_arcs"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "helix_warden",
+          "completion_target": {
+            "type": "boss",
+            "count": 1
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 180,
+          "collectible_count": 3,
+          "encounter_count": 1,
+          "unlock_dependencies": [
+            "1-4"
+          ],
+          "enemy_roster": [
+            "demon_boss"
+          ]
         }
       ]
     },
     {
       "character_folder": "Enemies",
       "folder": "Act2_RobotFactory",
-      "legacy_prop_roots": [
-        "res://assets/Stages/Mega Robot Factory",
-        "res://assets/Stage Props/Space Props"
-      ],
-      "legacy_stage_roots": [
-        "res://assets/Stages/Mega Robot Factory"
-      ],
       "name": "Mega Robot Factory",
       "number": 2.0,
       "prop_folder": "FactoryProps",
@@ -114,7 +254,38 @@
           "number": 1.0,
           "scene": "res://Stages/Act2_RobotFactory/2-1_SubLevelIntake/Stage.tscn",
           "slug": "SubLevelIntake",
-          "status": "playable"
+          "status": "production",
+          "display_name": "Sub-Level Intake",
+          "act": 2,
+          "substage": 1,
+          "music_id": "act_2",
+          "mechanics": [
+            "conveyor",
+            "steam_vent"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            1408,
+            540
+          ],
+          "par_time": 215,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "1-5"
+          ],
+          "enemy_roster": [
+            "stone_golem",
+            "goblin",
+            "pyromancer"
+          ]
         },
         {
           "assets": [
@@ -128,7 +299,39 @@
           "number": 2.0,
           "scene": "res://Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
           "slug": "ConveyorAssembly",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Conveyor Assembly",
+          "act": 2,
+          "substage": 2,
+          "music_id": "act_2",
+          "mechanics": [
+            "reversible_conveyor",
+            "moving_platform",
+            "drop_hazard"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 250,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "2-1"
+          ],
+          "enemy_roster": [
+            "cyclops",
+            "satyr_archer",
+            "imp"
+          ]
         },
         {
           "assets": [
@@ -142,7 +345,40 @@
           "number": 3.0,
           "scene": "res://Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
           "slug": "SmeltingCore",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Smelting Core",
+          "act": 2,
+          "substage": 3,
+          "music_id": "act_2",
+          "mechanics": [
+            "heat_zone",
+            "steam_vent",
+            "laser_grid",
+            "vertical"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            -540,
+            4800,
+            720
+          ],
+          "par_time": 265,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "2-2"
+          ],
+          "enemy_roster": [
+            "stone_golem",
+            "pyromancer",
+            "flying_eye"
+          ]
         },
         {
           "assets": [
@@ -156,7 +392,39 @@
           "number": 4.0,
           "scene": "res://Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
           "slug": "RoboticMaintenance",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Robotic Maintenance",
+          "act": 2,
+          "substage": 4,
+          "music_id": "act_2",
+          "mechanics": [
+            "crusher",
+            "terminal",
+            "security_gate"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 275,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "2-3"
+          ],
+          "enemy_roster": [
+            "minotaur",
+            "satyr_archer",
+            "witch"
+          ]
         },
         {
           "assets": [
@@ -170,20 +438,43 @@
           "number": 5.0,
           "scene": "res://Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
           "slug": "AssemblyEngine",
-          "status": "boss-ready"
+          "status": "production",
+          "display_name": "Assembly Engine",
+          "act": 2,
+          "substage": 5,
+          "music_id": "boss_2",
+          "mechanics": [
+            "boss",
+            "conveyor",
+            "shockwave"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "assembly_colossus",
+          "completion_target": {
+            "type": "boss",
+            "count": 1
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 200,
+          "collectible_count": 3,
+          "encounter_count": 1,
+          "unlock_dependencies": [
+            "2-4"
+          ],
+          "enemy_roster": [
+            "cyclops"
+          ]
         }
       ]
     },
     {
       "character_folder": "Enemies",
       "folder": "Act3_NeonMoon",
-      "legacy_prop_roots": [
-        "res://assets/Stage Props/Space Props",
-        "res://assets/Stages/Neon Moon Protocol"
-      ],
-      "legacy_stage_roots": [
-        "res://assets/Stages/Neon Moon Protocol"
-      ],
       "name": "Neon Moon Protocol",
       "number": 3.0,
       "prop_folder": "LunarProps",
@@ -200,7 +491,38 @@
           "number": 1.0,
           "scene": "res://Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
           "slug": "LunarSurfaceArrival",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Lunar Surface Arrival",
+          "act": 3,
+          "substage": 1,
+          "music_id": "act_3",
+          "mechanics": [
+            "low_gravity",
+            "long_gap"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 230,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "2-5"
+          ],
+          "enemy_roster": [
+            "harpy",
+            "poison_skull",
+            "gargoyle"
+          ]
         },
         {
           "assets": [
@@ -214,7 +536,39 @@
           "number": 2.0,
           "scene": "res://Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
           "slug": "ResearchCleanrooms",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Research Cleanrooms",
+          "act": 3,
+          "substage": 2,
+          "music_id": "act_3",
+          "mechanics": [
+            "terminal",
+            "security_gate",
+            "laser_grid"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 260,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "3-1"
+          ],
+          "enemy_roster": [
+            "satyr_archer",
+            "witch",
+            "flying_eye"
+          ]
         },
         {
           "assets": [
@@ -228,7 +582,40 @@
           "number": 3.0,
           "scene": "res://Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
           "slug": "SecurityGridShaft",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Security Grid Shaft",
+          "act": 3,
+          "substage": 3,
+          "music_id": "act_3",
+          "mechanics": [
+            "turret",
+            "rotating_laser",
+            "vertical",
+            "low_gravity"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            -540,
+            4800,
+            720
+          ],
+          "par_time": 280,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "3-2"
+          ],
+          "enemy_roster": [
+            "poison_skull",
+            "gryphon",
+            "skeleton_warrior"
+          ]
         },
         {
           "assets": [
@@ -242,7 +629,40 @@
           "number": 4.0,
           "scene": "res://Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
           "slug": "BioTechLabs",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Bio-Tech Labs",
+          "act": 3,
+          "substage": 4,
+          "music_id": "act_3",
+          "mechanics": [
+            "gravity_zone",
+            "terminal",
+            "ambush",
+            "multi_switch"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 290,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "3-3"
+          ],
+          "enemy_roster": [
+            "mimic",
+            "medusa",
+            "demon_boss"
+          ]
         },
         {
           "assets": [
@@ -256,20 +676,43 @@
           "number": 5.0,
           "scene": "res://Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
           "slug": "OrbitalCommand",
-          "status": "boss-ready"
+          "status": "production",
+          "display_name": "Orbital Command",
+          "act": 3,
+          "substage": 5,
+          "music_id": "boss_3",
+          "mechanics": [
+            "boss",
+            "gravity_zone",
+            "laser_sweep"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "lunar_oracle",
+          "completion_target": {
+            "type": "boss",
+            "count": 1
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 210,
+          "collectible_count": 3,
+          "encounter_count": 1,
+          "unlock_dependencies": [
+            "3-4"
+          ],
+          "enemy_roster": [
+            "medusa"
+          ]
         }
       ]
     },
     {
       "character_folder": "Enemies",
       "folder": "Act4_AbyssalNight",
-      "legacy_prop_roots": [
-        "res://assets/Stages/Abyssal Night",
-        "res://assets/Stage Props/Space Props"
-      ],
-      "legacy_stage_roots": [
-        "res://assets/Stages/Abyssal Night"
-      ],
       "name": "Abyssal Night",
       "number": 4.0,
       "prop_folder": "VoidProps",
@@ -285,7 +728,38 @@
           "number": 1.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
           "slug": "CorruptedOutpost",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Corrupted Outpost",
+          "act": 4,
+          "substage": 1,
+          "music_id": "act_4",
+          "mechanics": [
+            "corruption_zone",
+            "elite_enemy"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 255,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "3-5"
+          ],
+          "enemy_roster": [
+            "death_knight",
+            "werewolf",
+            "demon_boss"
+          ]
         },
         {
           "assets": [
@@ -298,7 +772,40 @@
           "number": 2.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
           "slug": "TheDarkChasm",
-          "status": "layout"
+          "status": "production",
+          "display_name": "The Dark Chasm",
+          "act": 4,
+          "substage": 2,
+          "music_id": "act_4",
+          "mechanics": [
+            "moving_platform",
+            "void_pit",
+            "low_visibility",
+            "dash_challenge"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 285,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "4-1"
+          ],
+          "enemy_roster": [
+            "gargoyle",
+            "headless_horseman",
+            "harpy"
+          ]
         },
         {
           "assets": [
@@ -311,7 +818,39 @@
           "number": 3.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
           "slug": "BioMechanicalNest",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Bio-Mechanical Nest",
+          "act": 4,
+          "substage": 3,
+          "music_id": "act_4",
+          "mechanics": [
+            "corruption_node",
+            "ambush",
+            "security_gate"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 300,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "4-2"
+          ],
+          "enemy_roster": [
+            "mimic",
+            "cerberus",
+            "witch"
+          ]
         },
         {
           "assets": [
@@ -324,7 +863,41 @@
           "number": 4.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
           "slug": "AbyssalSanctuary",
-          "status": "layout"
+          "status": "production",
+          "display_name": "Abyssal Sanctuary",
+          "act": 4,
+          "substage": 4,
+          "music_id": "act_4",
+          "mechanics": [
+            "conveyor",
+            "laser_grid",
+            "gravity_zone",
+            "moving_platform",
+            "elite_enemy"
+          ],
+          "expected_checkpoints": 2,
+          "expected_boss": "",
+          "completion_target": {
+            "type": "encounters",
+            "count": 2
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 320,
+          "collectible_count": 3,
+          "encounter_count": 2,
+          "unlock_dependencies": [
+            "4-3"
+          ],
+          "enemy_roster": [
+            "stone_golem",
+            "poison_skull",
+            "death_knight"
+          ]
         },
         {
           "assets": [
@@ -338,7 +911,38 @@
           "number": 5.0,
           "scene": "res://Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
           "slug": "HeartOfTheVoid",
-          "status": "boss-ready"
+          "status": "production",
+          "display_name": "Heart of the Void",
+          "act": 4,
+          "substage": 5,
+          "music_id": "boss_4",
+          "mechanics": [
+            "boss",
+            "corruption_zone",
+            "laser_sweep",
+            "desperation"
+          ],
+          "expected_checkpoints": 1,
+          "expected_boss": "void_cerberus",
+          "completion_target": {
+            "type": "boss",
+            "count": 1
+          },
+          "camera_bounds": [
+            0,
+            0,
+            4800,
+            720
+          ],
+          "par_time": 240,
+          "collectible_count": 3,
+          "encounter_count": 1,
+          "unlock_dependencies": [
+            "4-4"
+          ],
+          "enemy_roster": [
+            "cerberus"
+          ]
         }
       ]
     }
@@ -353,9 +957,9 @@
       "sprite_frames_root": "res://Characters/Enemies/SpriteFrames"
     },
     "Player": {
-      "legacy_roots": [
-        "res://assets/Characters/Heroes"
-      ]
+      "texture_root": "res://assets/runtime/characters/Player",
+      "scene": "res://scenes/Player.tscn"
     }
-  }
+  },
+  "schema_version": 1
 }
