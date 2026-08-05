@@ -45,6 +45,18 @@ func is_complete() -> bool:
 	return _complete
 
 
+func is_active() -> bool:
+	return _active
+
+
+func get_live_enemy_count() -> int:
+	return _live_enemies.size()
+
+
+func get_live_enemies() -> Array[EnemyBase]:
+	return _live_enemies.duplicate()
+
+
 func force_complete_for_test() -> void:
 	if _complete:
 		return

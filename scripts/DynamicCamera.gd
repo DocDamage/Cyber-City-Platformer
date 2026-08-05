@@ -57,6 +57,22 @@ func get_configured_bounds() -> Rect2:
 	return _stage_bounds
 
 
+func get_clamped_center_for_world_position(world_position: Vector2, viewport_size := Vector2(960.0, 540.0)) -> Vector2:
+	var half_view := viewport_size * 0.5
+	var minimum := _stage_bounds.position + half_view
+	var maximum := _stage_bounds.end - half_view
+	if maximum.x < minimum.x:
+		minimum.x = _stage_bounds.get_center().x
+		maximum.x = minimum.x
+	if maximum.y < minimum.y:
+		minimum.y = _stage_bounds.get_center().y
+		maximum.y = minimum.y
+	return Vector2(
+		clampf(world_position.x, minimum.x, maximum.x),
+		clampf(world_position.y, minimum.y, maximum.y),
+	)
+
+
 func shake(strength: float, duration := 0.15) -> void:
 	if strength <= 0.0 or duration <= 0.0:
 		return
