@@ -4578,7 +4578,7 @@
       "requirement": "Optional",
       "present": true,
       "tracked": true,
-      "ignored": true,
+      "ignored": false,
       "hard_reference": false,
       "references": [
         {
@@ -8512,7 +8512,7 @@
       "requirement": "Optional",
       "present": true,
       "tracked": true,
-      "ignored": true,
+      "ignored": false,
       "hard_reference": false,
       "references": [
         {

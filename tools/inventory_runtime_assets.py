@@ -94,8 +94,9 @@ def classify(
     is_tracked = normalized in tracked or (
         is_directory and any(path.startswith(normalized.rstrip("/") + "/") for path in tracked)
     )
-    is_ignored = normalized in ignored or (
-        is_directory and any(path.startswith(normalized.rstrip("/") + "/") for path in ignored)
+    is_ignored = not is_tracked and (
+        normalized in ignored
+        or (is_directory and any(path.startswith(normalized.rstrip("/") + "/") for path in ignored))
     )
     all_editor = all(is_editor_source(str(ref["source"])) for ref in dependency.references)
 
