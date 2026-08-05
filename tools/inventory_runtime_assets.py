@@ -208,7 +208,6 @@ def main() -> int:
     ]
 
     output_directory = root / "docs" / "assets"
-    output_directory.mkdir(parents=True, exist_ok=True)
     json_path = output_directory / "runtime_asset_inventory.json"
     markdown_path = output_directory / "RUNTIME_ASSET_INVENTORY.md"
     payload = {
@@ -216,8 +215,18 @@ def main() -> int:
         "generator": "tools/inventory_runtime_assets.py",
         "dependencies": records,
     }
-    json_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    markdown_path.write_text(markdown_report(records), encoding="utf-8")
+    json_content = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+    markdown_content = markdown_report(records)
+    stale_reports: list[Path] = []
+    if arguments.check:
+        expected = ((json_path, json_content), (markdown_path, markdown_content))
+        for path, content in expected:
+            if not path.is_file() or path.read_text(encoding="utf-8") != content:
+                stale_reports.append(path)
+    else:
+        output_directory.mkdir(parents=True, exist_ok=True)
+        json_path.write_text(json_content, encoding="utf-8", newline="\n")
+        markdown_path.write_text(markdown_content, encoding="utf-8", newline="\n")
 
     blockers = [
         record
@@ -226,9 +235,13 @@ def main() -> int:
     ]
     print(
         "RUNTIME_ASSET_INVENTORY_OK "
-        f"dependencies={len(records)} runtime_blockers={len(blockers)}"
+        f"dependencies={len(records)} runtime_blockers={len(blockers)} "
+        f"stale_reports={len(stale_reports)}"
     )
-    return 1 if arguments.check and blockers else 0
+    if stale_reports:
+        for path in stale_reports:
+            print(f"STALE_RUNTIME_ASSET_REPORT: {path.relative_to(root)}", file=sys.stderr)
+    return 1 if arguments.check and (blockers or stale_reports) else 0
 
 
 if __name__ == "__main__":
