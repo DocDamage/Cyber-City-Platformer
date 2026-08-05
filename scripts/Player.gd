@@ -105,6 +105,9 @@ func _ready() -> void:
 	combat.action_finished.connect(_on_combat_action_finished)
 	combat.hit_confirmed.connect(_on_hit_confirmed)
 	game_camera.set_facing_direction(facing_direction)
+	var settings := get_node_or_null("/root/SettingsManager")
+	if settings != null:
+		controller_deadzone = float(settings.call(&"get_setting", &"controller_deadzone", controller_deadzone))
 	_set_state(State.IDLE, true)
 
 

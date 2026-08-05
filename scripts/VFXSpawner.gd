@@ -39,6 +39,10 @@ func spawn_one_shot(
 	if effect_parent == null:
 		effect_parent = get_tree().root
 	effect_parent.add_child(particles)
+	var settings := get_node_or_null("/root/SettingsManager")
+	if settings != null and bool(settings.call(&"get_setting", &"reduced_flashing", false)):
+		particles.amount = maxi(1, particles.amount / 2)
+		particles.modulate.a = 0.65
 	particles.global_position = target_global_position
 	if not direction.is_zero_approx():
 		particles.rotation = direction.angle()

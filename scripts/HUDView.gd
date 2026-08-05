@@ -10,6 +10,9 @@ extends CanvasLayer
 @onready var boss_name_label: Label = %BossName
 @onready var boss_phase_label: Label = %BossPhase
 @onready var boss_health_bar: ProgressBar = %BossHealthBar
+@onready var upgrade_label: Label = %UpgradeLabel
+@onready var objective_label: Label = %ObjectiveLabel
+@onready var interaction_prompt: Label = %InteractionPrompt
 
 var _manager: Node
 var _notice_tween: Tween
@@ -28,10 +31,13 @@ func _ready() -> void:
 	_connect_manager_signal(&"player_energy_changed", _on_energy_changed)
 	_connect_manager_signal(&"score_changed", _on_score_changed)
 	_connect_manager_signal(&"checkpoint_changed", _on_checkpoint_changed)
+	_connect_manager_signal(&"upgrade_acquired", _on_upgrade_acquired)
 	_on_health_changed(maxi(_manager.get("player_health"), 0), maxi(_manager.get("player_max_health"), 1))
 	_on_energy_changed(maxf(_manager.get("player_energy"), 0.0), maxf(_manager.get("player_max_energy"), 1.0))
 	_on_score_changed(_manager.get("current_score"))
 	_bind_existing_boss.call_deferred()
+	_bind_stage_runtime.call_deferred()
+	_update_upgrade_label()
 
 
 func _connect_manager_signal(signal_name: StringName, callable: Callable) -> void:
@@ -65,6 +71,57 @@ func _on_checkpoint_changed(_checkpoint_id: StringName, _position: Vector2) -> v
 	_notice_tween = create_tween()
 	_notice_tween.tween_interval(1.5)
 	_notice_tween.tween_property(checkpoint_notice, "modulate:a", 0.0, 0.6)
+
+
+func _on_upgrade_acquired(upgrade_id: StringName, level: int) -> void:
+	checkpoint_notice.text = "UPGRADE ACQUIRED: %s  LV.%d" % [String(upgrade_id).replace("_", " ").to_upper(), level]
+	checkpoint_notice.modulate.a = 1.0
+	_update_upgrade_label()
+
+
+func _update_upgrade_label() -> void:
+	if _manager == null:
+		return
+	var labels: Array[String] = []
+	var names := {
+		"max_health": "HP",
+		"max_energy": "EN",
+		"energy_regeneration": "REGEN",
+		"melee_damage": "MELEE",
+		"ranged_damage": "RANGED",
+		"dash_distance": "DASH",
+		"dash_efficiency": "EFF",
+	}
+	for key: String in names:
+		var level := int(_manager.call(&"get_upgrade_level", StringName(key)))
+		if level > 0:
+			labels.append("%s+%d" % [names[key], level])
+	upgrade_label.text = "UPGRADES: %s" % ("  ".join(labels) if not labels.is_empty() else "NONE")
+
+
+func _bind_stage_runtime() -> void:
+	await get_tree().process_frame
+	await get_tree().process_frame
+	var stage := _top_level_scene_node(self) as StageBase
+	if stage != null and stage.runtime_controller != null:
+		var controller := stage.runtime_controller
+		var completion: Dictionary = controller.metadata.get("completion_target", {})
+		objective_label.text = "OBJECTIVE: DEFEAT BOSS" if String(completion.get("type", "")) == "boss" else "OBJECTIVE: CLEAR %d ENCOUNTERS" % int(controller.metadata.get("encounter_count", 0))
+		if not controller.objectives_completed.is_connected(_on_objectives_completed):
+			controller.objectives_completed.connect(_on_objectives_completed)
+	for node: Node in get_tree().get_nodes_in_group(&"interactive_terminals"):
+		if _shares_stage_root(node) and node.has_signal(&"focus_changed"):
+			node.connect(&"focus_changed", _on_interaction_focus_changed)
+
+
+func _on_objectives_completed(_stage_id: String) -> void:
+	objective_label.text = "OBJECTIVE COMPLETE — EXIT UNLOCKED"
+	objective_label.modulate = Color(0.35, 1.0, 0.65)
+
+
+func _on_interaction_focus_changed(active: bool, prompt: String) -> void:
+	interaction_prompt.visible = active
+	interaction_prompt.text = prompt
 
 
 func bind_boss(boss: BossBase) -> void:

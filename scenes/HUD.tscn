@@ -300,3 +300,44 @@ text = "CHECKPOINT SYNCHRONIZED"
 horizontal_alignment = 1
 vertical_alignment = 1
 modulate = Color(1, 1, 1, 0)
+
+[node name="UpgradeLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+offset_left = 20.0
+offset_top = 166.0
+offset_right = 330.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0.65, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 12
+text = "UPGRADES: NONE"
+
+[node name="ObjectiveLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 104.0
+offset_right = 220.0
+offset_bottom = 136.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "OBJECTIVE: CLEAR ENCOUNTERS"
+horizontal_alignment = 1
+
+[node name="InteractionPrompt" type="Label" parent="Layout"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 12
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -64.0
+offset_right = 190.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.3, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "E / Y  ACCESS TERMINAL"
+horizontal_alignment = 1

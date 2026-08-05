@@ -22,6 +22,10 @@ const SFX_PATHS := {
 	&"checkpoint": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Transition.ogg",
 	&"armor_hit": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
 	&"phase_change": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/brass1.mp3",
+	&"ui_confirm": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
+	&"hazard_warning": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
+	&"stage_clear": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
+	&"ending": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Transition.ogg",
 }
 const ACT_BGM_PATHS := {
 	1: "res://assets/runtime/audio/music/Rooftops 2/cyberpunk city 2.ogg",
@@ -51,6 +55,10 @@ const FALLBACK_DURATIONS := {
 	&"player_hurt": 0.16,
 	&"armor_hit": 0.13,
 	&"phase_change": 0.42,
+	&"ui_confirm": 0.1,
+	&"hazard_warning": 0.2,
+	&"stage_clear": 0.5,
+	&"ending": 0.65,
 }
 
 var _music_players: Array[AudioStreamPlayer] = []

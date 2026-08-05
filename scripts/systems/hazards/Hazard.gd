@@ -16,6 +16,7 @@ var is_active := false
 var _elapsed := 0.0
 var _damage_cooldowns: Dictionary = {}
 var _visual: Polygon2D
+var _warning: Label
 
 
 func _ready() -> void:
@@ -47,6 +48,16 @@ func set_active(value: bool) -> void:
 	is_active = value
 	if _visual != null:
 		_visual.color = Color(1.0, 0.12, 0.3, 0.86) if value else Color(0.25, 0.3, 0.42, 0.35)
+	if _warning != null:
+		_warning.text = "! ACTIVE !" if value else "SAFE WINDOW"
+		_warning.modulate.a = 1.0 if value else 0.55
+	if value:
+		for body: Node2D in get_overlapping_bodies():
+			if body.is_in_group(&"player"):
+				var audio := get_node_or_null("/root/AudioManager")
+				if audio != null:
+					audio.call(&"play_sfx", &"hazard_warning", global_position, -6.0)
+				break
 	active_changed.emit(value)
 
 
@@ -90,3 +101,8 @@ func _build_components() -> void:
 	_visual.polygon = PackedVector2Array([Vector2(-half.x, -half.y), Vector2(half.x, -half.y), Vector2(half.x, half.y), Vector2(-half.x, half.y)])
 	_visual.color = Color(1.0, 0.12, 0.3, 0.86)
 	add_child(_visual)
+	_warning = Label.new()
+	_warning.position = Vector2(-42.0, -half.y - 25.0)
+	_warning.text = "! ACTIVE !"
+	_warning.add_theme_color_override("font_color", Color.WHITE)
+	add_child(_warning)

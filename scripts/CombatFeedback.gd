@@ -22,7 +22,11 @@ func hit_stop(duration := 0.05) -> void:
 func camera_shake(strength: float, duration := 0.15) -> void:
 	if strength <= 0.0 or duration <= 0.0:
 		return
-	get_tree().call_group(&"game_camera", &"shake", strength, duration)
+	var settings := get_node_or_null("/root/SettingsManager")
+	var intensity := float(settings.call(&"get_setting", &"screen_shake_intensity", 1.0)) if settings != null else 1.0
+	if intensity <= 0.0:
+		return
+	get_tree().call_group(&"game_camera", &"shake", strength * intensity, duration)
 
 
 func _exit_tree() -> void:

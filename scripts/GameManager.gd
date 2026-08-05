@@ -10,6 +10,10 @@ signal stage_completed(stage_id: String)
 signal upgrade_acquired(upgrade_id: StringName, level: int)
 signal campaign_completed
 
+const FIRST_STAGE_SCENE := "res://Stages/Act1_CyberCity/1-1_RooftopAlley/Stage.tscn"
+const TITLE_SCENE := "res://scenes/ui/TitleScreen.tscn"
+const ENDING_SCENE := "res://scenes/ui/EndingScreen.tscn"
+
 var run_state := RunState.new()
 var campaign_progress := CampaignProgress.new()
 var _respawning := false
@@ -156,6 +160,11 @@ func complete_stage(stage_id: String) -> void:
 	_request_autosave()
 
 
+func enter_stage(stage_id: String, scene_path: String) -> void:
+	run_state.stage_id = stage_id
+	run_state.stage_scene = scene_path
+
+
 func mark_boss_defeated(boss_id: StringName) -> void:
 	if boss_id.is_empty():
 		return
@@ -200,6 +209,7 @@ func advance_stage() -> void:
 	if next_stage.is_empty():
 		_finish_campaign()
 		return
+	run_state.stage_id = "%d-%d" % [next_act, next_sub]
 	change_level(String(next_stage.get("scene", "")))
 
 
@@ -209,6 +219,41 @@ func new_game() -> void:
 	_respawning = false
 	_transitioning = false
 	score_changed.emit(0)
+
+
+func start_new_game() -> void:
+	new_game()
+	get_tree().paused = false
+	change_level(FIRST_STAGE_SCENE)
+
+
+func return_to_title() -> void:
+	get_tree().paused = false
+	_transitioning = false
+	change_level(TITLE_SCENE)
+
+
+func start_stage_select(stage_id: String) -> bool:
+	if not campaign_progress.campaign_complete:
+		return false
+	var registry := get_node_or_null("/root/AssetRegistry")
+	var act := stage_id.get_slice("-", 0).to_int()
+	var substage := stage_id.get_slice("-", 1).to_int()
+	var metadata: Dictionary = registry.call(&"get_stage_info", act, substage) if registry != null else {}
+	var scene_path := String(metadata.get("scene", ""))
+	if scene_path.is_empty():
+		return false
+	run_state.player_health = -1
+	run_state.player_energy = -1.0
+	run_state.score = 0
+	run_state.checkpoint_id = &""
+	run_state.checkpoint_scene = ""
+	run_state.checkpoint_position = Vector2.ZERO
+	run_state.stage_id = stage_id
+	run_state.stage_scene = scene_path
+	get_tree().paused = false
+	change_level(scene_path)
+	return true
 
 
 func reset_run() -> void:
@@ -255,6 +300,7 @@ func _finish_campaign() -> void:
 	campaign_progress.campaign_complete = true
 	campaign_completed.emit()
 	_request_autosave()
+	change_level(ENDING_SCENE)
 
 
 func _request_autosave() -> void:

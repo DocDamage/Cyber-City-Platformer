@@ -2,6 +2,7 @@ class_name StageController
 extends Node
 
 const COLLECTIBLE_SCENE := preload("res://scenes/Collectible.tscn")
+const PAUSE_MENU_SCENE := preload("res://scenes/ui/PauseMenu.tscn")
 
 signal initialized(stage_id: String)
 signal objectives_completed(stage_id: String)
@@ -26,9 +27,13 @@ func _ready() -> void:
 		push_error("StageController requires a stage and validated metadata.")
 		return
 	player = stage.get_player() as Node2D
+	var manager := get_node_or_null("/root/GameManager")
+	if manager != null:
+		manager.call(&"enter_stage", get_stage_id(), stage.scene_file_path)
 	stage_exit = stage.get_stage_exit()
 	_configure_camera()
 	_connect_exit()
+	_ensure_pause_menu()
 	_start_music()
 	_ensure_collectibles()
 	installed_mechanics = StageMechanicFactory.install(stage, metadata)
@@ -108,6 +113,11 @@ func _start_music() -> void:
 		audio_manager.call(&"play_boss_bgm", act_number)
 	else:
 		audio_manager.call(&"play_bgm", act_number)
+
+
+func _ensure_pause_menu() -> void:
+	if stage.find_child("PauseMenu", true, false) == null:
+		stage.add_child(PAUSE_MENU_SCENE.instantiate())
 
 
 func _ensure_collectibles() -> void:
@@ -231,6 +241,9 @@ func _complete_objectives() -> void:
 	objectives_are_complete = true
 	if stage_exit != null:
 		stage_exit.set_locked(false)
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_sfx", &"stage_clear", player.global_position if player != null else Vector2.ZERO, -3.0)
 	objectives_completed.emit(get_stage_id())
 
 
