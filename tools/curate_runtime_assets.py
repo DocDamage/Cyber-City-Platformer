@@ -117,6 +117,13 @@ def referenced_asset_files(root: Path) -> set[str]:
     inventory_path = root / "docs" / "assets" / "runtime_asset_inventory.json"
     inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
     paths = set(DYNAMIC_ASSETS)
+    existing_manifest_path = root / "assets" / "runtime" / "asset_license_manifest.json"
+    if existing_manifest_path.is_file():
+        existing_manifest = json.loads(existing_manifest_path.read_text(encoding="utf-8"))
+        for record in existing_manifest.get("assets", []):
+            source_path = str(record.get("source_path", "")).removeprefix("res://")
+            if source_path:
+                paths.add(source_path)
     for record in inventory["dependencies"]:
         if record["requirement"] == "Editor-only" or record["tracked"]:
             continue
@@ -153,7 +160,9 @@ def main() -> int:
     license_root.mkdir(parents=True, exist_ok=True)
 
     source_paths = referenced_asset_files(root)
-    replacements: dict[str, str] = {}
+    replacements: dict[str, str] = {
+        "res://Characters/Enemies/SourceArt/": "res://assets/runtime/characters/Enemies/",
+    }
     records: list[dict[str, object]] = []
     licenses: dict[str, str] = {}
 

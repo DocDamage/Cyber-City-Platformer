@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3]
 
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png" id="1_2d5bj"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png" id="1_2d5bj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8wdh"]
 texture = ExtResource("1_2d5bj")

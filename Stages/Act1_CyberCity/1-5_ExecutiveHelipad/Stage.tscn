@@ -1,13 +1,13 @@
 [gd_scene format=4]
 
 [ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_6imws"]
-[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Rooftops 2/back.png" id="2_hc8hy"]
-[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Rooftops 2/middle.png" id="3_474hw"]
-[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Rooftops 2/front.png" id="4_pcglp"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Rooftops 2/back.png" id="2_hc8hy"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Rooftops 2/middle.png" id="3_474hw"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Rooftops 2/front.png" id="4_pcglp"]
 [ext_resource type="TileSet" path="res://Stages/TileSets/Act1_Rooftops2_Palette.tres" id="5_oxyxq"]
-[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/lights/lights2.png" id="6_7l84c"]
-[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-a/banner-a1.png" id="7_ji347"]
-[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-c/banner-c2.png" id="8_d1rqe"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/CyberCityProps/Rooftops 2/lights/lights2.png" id="6_7l84c"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-a/banner-a1.png" id="7_ji347"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-c/banner-c2.png" id="8_d1rqe"]
 [ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/demon_boss.tscn" id="9_7xe2w"]
 [ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="10_d4plu"]
 [ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/demon_boss.tres" id="11_s2gog"]
@@ -66,7 +66,7 @@ stage_id = &"1-5"
 stage_title = "Executive Helipad"
 design_notes = "Layout pass: Clean rooftop terrain, massive neon backdrop, Act 1 boss
 Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-music_path = "res://Music/Library/Rooftops 2/cyberpunk city 2.ogg"
+music_path = "res://assets/runtime/audio/music/Rooftops 2/cyberpunk city 2.ogg"
 far_background = ExtResource("2_hc8hy")
 middle_background = ExtResource("3_474hw")
 front_background = ExtResource("4_pcglp")

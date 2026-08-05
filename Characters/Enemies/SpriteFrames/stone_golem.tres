@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/ATTACK.png" id="1_7uflw"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/DEATH.png" id="2_gkcyt"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/HURT.png" id="3_nbceh"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/IDLE.png" id="4_ril4j"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/WALK.png" id="5_nxdd3"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/ATTACK.png" id="1_7uflw"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/DEATH.png" id="2_gkcyt"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/HURT.png" id="3_nbceh"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/IDLE.png" id="4_ril4j"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline/WALK.png" id="5_nxdd3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs6sf"]
 atlas = ExtResource("1_7uflw")

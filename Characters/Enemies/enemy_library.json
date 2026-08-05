@@ -15,7 +15,7 @@
       "name": "Centaur",
       "pack": "Centaur 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/centaur.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/centaur.tres"
     },
     {
@@ -33,7 +33,7 @@
       "name": "Cerberus",
       "pack": "Cerberus 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/cerberus.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/cerberus.tres"
     },
     {
@@ -52,7 +52,7 @@
       "name": "Cyclops",
       "pack": "Cyclops 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/cyclops.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/cyclops.tres"
     },
     {
@@ -74,7 +74,7 @@
       "name": "Death Knight",
       "pack": "death knight",
       "scene": "res://Characters/Enemies/Scenes/death_knight.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/death knight",
+      "source_directory": "res://assets/runtime/characters/Enemies/death knight",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/death_knight.tres"
     },
     {
@@ -93,7 +93,7 @@
       "name": "Demon Boss",
       "pack": "Demon Boss 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/demon_boss.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/demon_boss.tres"
     },
     {
@@ -110,7 +110,7 @@
       "name": "Flying Eye",
       "pack": "Flying Eye 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/flying_eye.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/flying_eye.tres"
     },
     {
@@ -129,7 +129,7 @@
       "name": "Gargoyle",
       "pack": "Gargoyle 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/gargoyle.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/gargoyle.tres"
     },
     {
@@ -148,7 +148,7 @@
       "name": "Goblin",
       "pack": "Goblin 2D Pixel Art v1.1",
       "scene": "res://Characters/Enemies/Scenes/goblin.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Goblin 2D Pixel Art v1.1/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/goblin.tres"
     },
     {
@@ -167,7 +167,7 @@
       "name": "Gryphon",
       "pack": "Gryphon 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/gryphon.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/gryphon.tres"
     },
     {
@@ -185,7 +185,7 @@
       "name": "Harpy",
       "pack": "Harpy 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/harpy.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/harpy.tres"
     },
     {
@@ -203,7 +203,7 @@
       "name": "Headless Horseman",
       "pack": "Headless Horseman 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/headless_horseman.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/headless_horseman.tres"
     },
     {
@@ -221,7 +221,7 @@
       "name": "Imp",
       "pack": "Imp 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/imp.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Imp 2D Pixel Art v1.2/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/imp.tres"
     },
     {
@@ -240,7 +240,7 @@
       "name": "Medusa",
       "pack": "Medusa V2.0",
       "scene": "res://Characters/Enemies/Scenes/medusa.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite",
+      "source_directory": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/medusa.tres"
     },
     {
@@ -259,7 +259,7 @@
       "name": "Mimic",
       "pack": "Mimic 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/mimic.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/mimic.tres"
     },
     {
@@ -278,7 +278,7 @@
       "name": "Minotaur",
       "pack": "Minotaur 2D Pixel Art v1.1",
       "scene": "res://Characters/Enemies/Scenes/minotaur.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/minotaur.tres"
     },
     {
@@ -296,7 +296,7 @@
       "name": "Poison Skull",
       "pack": "Poison Skull 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/poison_skull.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/poison_skull.tres"
     },
     {
@@ -314,7 +314,7 @@
       "name": "Pyromancer",
       "pack": "Pyromancer 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/pyromancer.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites",
+      "source_directory": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/pyromancer.tres"
     },
     {
@@ -333,7 +333,7 @@
       "name": "Satyr Archer",
       "pack": "Satyr Archer 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/satyr_archer.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/satyr_archer.tres"
     },
     {
@@ -352,7 +352,7 @@
       "name": "Skeleton Warrior",
       "pack": "Skeleton Warrior  2D Pixel Art v1.1",
       "scene": "res://Characters/Enemies/Scenes/skeleton_warrior.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/skeleton_warrior.tres"
     },
     {
@@ -370,7 +370,7 @@
       "name": "Stone Golem",
       "pack": "Stone Golem 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/stone_golem.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/stone_golem.tres"
     },
     {
@@ -391,7 +391,7 @@
       "name": "Werewolf",
       "pack": "Werewolf 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/werewolf.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline",
+      "source_directory": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/werewolf.tres"
     },
     {
@@ -410,7 +410,7 @@
       "name": "Witch",
       "pack": "Witch",
       "scene": "res://Characters/Enemies/Scenes/witch.tscn",
-      "source_directory": "res://Characters/Enemies/SourceArt/Witch/Sprite",
+      "source_directory": "res://assets/runtime/characters/Enemies/Witch/Sprite",
       "sprite_frames": "res://Characters/Enemies/SpriteFrames/witch.tres"
     }
   ],

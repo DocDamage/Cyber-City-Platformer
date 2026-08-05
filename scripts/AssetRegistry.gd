@@ -1,16 +1,19 @@
 extends Node
 
 const CAMPAIGN_MANIFEST_PATH := "res://Stages/campaign_manifest.json"
-const PROP_ROOT := "res://Stage Props"
+const RUNTIME_ASSET_ROOT := "res://assets/runtime"
+const PROP_ROOT := RUNTIME_ASSET_ROOT + "/props"
+const CHARACTER_TEXTURE_ROOT := RUNTIME_ASSET_ROOT + "/characters"
+const STAGE_TEXTURE_ROOT := RUNTIME_ASSET_ROOT + "/environments"
 const CHARACTER_ROOT := "res://Characters"
 const STAGE_ROOT := "res://Stages"
 const ENEMY_FRAMES_ROOT := "res://Characters/Enemies/SpriteFrames"
 const ENEMY_SCENES_ROOT := "res://Characters/Enemies/Scenes"
 const ENEMY_INDEX_PATH := "res://Characters/Enemies/enemy_library.json"
-const MUSIC_ROOT := "res://Music/Library"
-const SFX_ROOT := "res://SFX/Library"
-const PARALLAX_ROOT := "res://Parallax/SourceArt"
-const VFX_ROOT := "res://VFX/SourceArt"
+const MUSIC_ROOT := RUNTIME_ASSET_ROOT + "/audio/music"
+const SFX_ROOT := RUNTIME_ASSET_ROOT + "/audio/sfx"
+const PARALLAX_ROOT := RUNTIME_ASSET_ROOT + "/environments/parallax"
+const VFX_ROOT := RUNTIME_ASSET_ROOT + "/vfx"
 
 const FALLBACK_TEXTURE_PATH := "res://icon.svg"
 const FALLBACK_PLAYER_SCENE_PATH := "res://scenes/Player.tscn"
@@ -57,7 +60,6 @@ func get_prop_texture(act_number: int, prop_name: String) -> Texture2D:
 		return _missing_prop(cache_key, act_number, prop_name)
 
 	var roots: Array = [PROP_ROOT.path_join(String(act.get("prop_folder", "")))]
-	_append_paths(roots, act.get("legacy_prop_roots", []))
 	var resource := _load_named_resource(roots, prop_name, TEXTURE_EXTENSIONS, "Texture2D")
 	if resource is Texture2D:
 		_resource_cache[cache_key] = resource
@@ -76,9 +78,7 @@ func get_character_texture(character_folder: String, texture_name: String) -> Te
 	if canonical_folder.is_empty() or not _is_safe_relative_path(texture_name):
 		return _missing_character_texture(cache_key, character_folder, texture_name)
 
-	var roots: Array = [CHARACTER_ROOT.path_join(canonical_folder)]
-	var character_info := get_character_folder_info(canonical_folder)
-	_append_paths(roots, character_info.get("legacy_roots", []))
+	var roots: Array = [CHARACTER_TEXTURE_ROOT.path_join(canonical_folder)]
 	var resource := _load_named_resource(roots, texture_name, TEXTURE_EXTENSIONS, "Texture2D")
 	if resource is Texture2D:
 		_resource_cache[cache_key] = resource
@@ -98,8 +98,6 @@ func get_character_scene(character_folder: String, character_name: String) -> Pa
 		return _missing_character(cache_key, character_folder, character_name, canonical_folder)
 
 	var roots: Array = [CHARACTER_ROOT.path_join(canonical_folder)]
-	var character_info := get_character_folder_info(canonical_folder)
-	_append_paths(roots, character_info.get("legacy_roots", []))
 	var resource := _load_named_resource(roots, character_name, SCENE_EXTENSIONS, "PackedScene")
 	if resource is PackedScene:
 		_resource_cache[cache_key] = resource
@@ -173,8 +171,7 @@ func get_stage_texture(act_number: int, texture_name: String) -> Texture2D:
 	if act.is_empty() or not _is_safe_relative_path(texture_name):
 		return _missing_stage_texture(cache_key, act_number, texture_name)
 
-	var roots: Array = [STAGE_ROOT.path_join(String(act.get("folder", "")))]
-	_append_paths(roots, act.get("legacy_stage_roots", []))
+	var roots: Array = [STAGE_TEXTURE_ROOT.path_join(String(act.get("folder", "")))]
 	var resource := _load_named_resource(roots, texture_name, TEXTURE_EXTENSIONS, "Texture2D")
 	if resource is Texture2D:
 		_resource_cache[cache_key] = resource

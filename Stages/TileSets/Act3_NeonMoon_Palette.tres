@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3]
 
-[ext_resource type="Texture2D" path="res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png" id="1_kxiwc"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png" id="1_kxiwc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hb62f"]
 texture = ExtResource("1_kxiwc")

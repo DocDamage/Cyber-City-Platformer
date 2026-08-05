@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_c2xi8"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_ml4x3"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/FLYING.png" id="3_cm2ms"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/HURT.png" id="4_hixkd"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/IDLE.png" id="5_l4i5r"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/Sprites/without_outline/TRANSITION.png" id="6_sq6rx"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_c2xi8"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_ml4x3"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/FLYING.png" id="3_cm2ms"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/HURT.png" id="4_hixkd"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/IDLE.png" id="5_l4i5r"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline/TRANSITION.png" id="6_sq6rx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kajah"]
 atlas = ExtResource("1_c2xi8")

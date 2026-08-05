@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/VFXBurst.gd" id="1_vfx"]
-[ext_resource type="Texture2D" path="res://VFX/SourceArt/Pack 6/PNG sheet/Effect (1)-Sheet.png" id="2_impact"]
+[ext_resource type="Texture2D" path="res://assets/runtime/vfx/Pack 6/PNG sheet/Effect (1)-Sheet.png" id="2_impact"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_impact_0"]
 atlas = ExtResource("2_impact")

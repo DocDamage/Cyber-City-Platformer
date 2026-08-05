@@ -1,11 +1,11 @@
 [gd_scene format=4]
 
 [ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_7umov"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_o6hv6"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_y4xej"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_eag64"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_o6hv6"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_y4xej"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_eag64"]
 [ext_resource type="TileSet" path="res://Stages/TileSets/Act4_AbyssalNight_Palette.tres" id="5_mn0nt"]
-[ext_resource type="Texture2D" path="res://Stage Props/VoidProps/SourceArt/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png" id="6_j4cji"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/VoidProps/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png" id="6_j4cji"]
 [ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/skeleton_warrior.tscn" id="7_iex2r"]
 [ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_cwc3o"]
 [ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/skeleton_warrior.tres" id="9_1f80j"]
@@ -64,7 +64,7 @@ stage_id = &"4-1"
 stage_title = "Corrupted Outpost"
 design_notes = "Layout pass: Clean-tech tiles, bio-cyber roots
 Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-music_path = "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
+music_path = "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
 far_background = ExtResource("2_o6hv6")
 middle_background = ExtResource("3_y4xej")
 front_background = ExtResource("4_eag64")

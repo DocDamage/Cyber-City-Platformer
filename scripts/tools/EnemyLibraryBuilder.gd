@@ -1,6 +1,6 @@
 extends SceneTree
 
-const SOURCE_ROOT := "res://Characters/Enemies/SourceArt"
+const SOURCE_ROOT := "res://assets/runtime/characters/Enemies"
 const FRAMES_ROOT := "res://Characters/Enemies/SpriteFrames"
 const SCENES_ROOT := "res://Characters/Enemies/Scenes"
 const BASE_SCENE_PATH := "res://scenes/EnemyBase.tscn"

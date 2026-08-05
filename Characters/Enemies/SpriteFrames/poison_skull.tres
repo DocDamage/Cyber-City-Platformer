@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png" id="1_c5chs"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="2_wljgu"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="3_x8u24"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="4_pibud"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="5_qbm7v"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png" id="1_c5chs"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="2_wljgu"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="3_x8u24"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="4_pibud"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="5_qbm7v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2im4c"]
 atlas = ExtResource("1_c5chs")

@@ -1,11 +1,11 @@
 [gd_scene format=4]
 
 [ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_mmugk"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_0b4jr"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_pqipf"]
-[ext_resource type="Texture2D" path="res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_to3r0"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_0b4jr"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_pqipf"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_to3r0"]
 [ext_resource type="TileSet" path="res://Stages/TileSets/Act4_AbyssalNight_Palette.tres" id="5_5d4ky"]
-[ext_resource type="Texture2D" path="res://Stage Props/VoidProps/SourceArt/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png" id="6_tede4"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/VoidProps/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png" id="6_tede4"]
 [ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/poison_skull.tscn" id="7_byrlw"]
 [ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_q6kyo"]
 [ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/poison_skull.tres" id="9_s67td"]
@@ -64,7 +64,7 @@ stage_id = &"4-2"
 stage_title = "The Dark Chasm"
 design_notes = "Layout pass: Floating void platforms, bottomless pits
 Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-music_path = "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
+music_path = "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg"
 far_background = ExtResource("2_0b4jr")
 middle_background = ExtResource("3_pqipf")
 front_background = ExtResource("4_to3r0")

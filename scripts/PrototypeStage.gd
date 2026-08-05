@@ -12,7 +12,7 @@ const BACKGROUND_SPRITE_PATHS := [
 @export var stage_id: StringName = &"prototype"
 @export var stage_title := "Editable Stage Prototype"
 @export_multiline var design_notes := "Replace the blockout geometry, paint Terrain, and drag props/enemies/VFX into their named folders."
-@export_file("*.ogg") var music_path := "res://Music/Library/Rooftops/Cyberpunk Rooftops.ogg"
+@export_file("*.ogg") var music_path := "res://assets/runtime/audio/music/Rooftops/Cyberpunk Rooftops.ogg"
 @export var far_background: Texture2D
 @export var middle_background: Texture2D
 @export var front_background: Texture2D

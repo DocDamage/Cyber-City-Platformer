@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 1.png" id="1_3e3vy"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 2.png" id="2_nh04v"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/DEATH.png" id="3_880mh"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/HURT.png" id="4_8520j"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/IDLE.png" id="5_cqq3b"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/WALK.png" id="6_u77ym"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 1.png" id="1_3e3vy"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/ATTACK 2.png" id="2_nh04v"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/DEATH.png" id="3_880mh"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/HURT.png" id="4_8520j"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/IDLE.png" id="5_cqq3b"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline/WALK.png" id="6_u77ym"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnq0f"]
 atlas = ExtResource("1_3e3vy")

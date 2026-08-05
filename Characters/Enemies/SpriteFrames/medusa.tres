@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/ATTACK1.png" id="1_84y6o"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/ATTACK2.png" id="2_7wok1"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/DEATH.png" id="3_78sk7"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/HURT.png" id="4_uyhqe"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/IDLE.png" id="5_ebwqx"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Medusa V2.0/Sprite/MOVE.png" id="6_8xp43"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/ATTACK1.png" id="1_84y6o"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/ATTACK2.png" id="2_7wok1"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/DEATH.png" id="3_78sk7"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/HURT.png" id="4_uyhqe"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/IDLE.png" id="5_ebwqx"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite/MOVE.png" id="6_8xp43"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2yoa"]
 atlas = ExtResource("1_84y6o")

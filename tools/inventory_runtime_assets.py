@@ -27,7 +27,7 @@ class Dependency:
 
 def git_lines(root: Path, *arguments: str) -> set[str]:
     result = subprocess.run(
-        ["git", *arguments],
+        ["git", "-c", "core.quotepath=false", *arguments],
         cwd=root,
         check=True,
         capture_output=True,
@@ -46,6 +46,11 @@ def collect_dependencies(root: Path) -> dict[str, Dependency]:
     dependencies: dict[str, Dependency] = {}
     for source in sorted(root.rglob("*")):
         if not source.is_file() or ".git" in source.parts or ".godot" in source.parts:
+            continue
+        relative_parts = source.relative_to(root).parts
+        if relative_parts and relative_parts[0] == "docs":
+            continue
+        if len(relative_parts) >= 2 and relative_parts[:2] == ("assets", "runtime"):
             continue
         if source.name != "project.godot" and source.suffix.lower() not in SCAN_SUFFIXES:
             continue

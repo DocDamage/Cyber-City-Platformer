@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Witch/Sprite/ATTACK.png" id="1_lrd50"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Witch/Sprite/DEATH.png" id="2_2nwjv"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Witch/Sprite/HURT.png" id="3_4k056"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Witch/Sprite/IDLE.png" id="4_ei6a7"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Witch/Sprite/MOVE.png" id="5_u0rvo"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Witch/Sprite/PROJECTILE.png" id="6_p7ixl"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Witch/Sprite/ATTACK.png" id="1_lrd50"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Witch/Sprite/DEATH.png" id="2_2nwjv"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Witch/Sprite/HURT.png" id="3_4k056"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Witch/Sprite/IDLE.png" id="4_ei6a7"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Witch/Sprite/MOVE.png" id="5_u0rvo"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Witch/Sprite/PROJECTILE.png" id="6_p7ixl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iiv2c"]
 atlas = ExtResource("1_lrd50")

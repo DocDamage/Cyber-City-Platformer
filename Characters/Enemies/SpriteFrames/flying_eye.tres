@@ -1,9 +1,9 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_ketpb"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_vldap"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/HURT.png" id="3_l7xr0"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Flying Eye 2D Pixel Art/Sprites/without_outline/MOVE.png" id="4_bybej"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_ketpb"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_vldap"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/HURT.png" id="3_l7xr0"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline/MOVE.png" id="4_bybej"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ujtx0"]
 atlas = ExtResource("1_ketpb")

@@ -14,14 +14,14 @@ const BACKGROUND_NODE_PATHS := [
 @export_enum("Rooftops:0", "Factory Approach:1") var layout_variant := 0
 @export_range(1, 4, 1) var campaign_act := 1
 @export var background_texture_names := PackedStringArray([
-	"SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
-	"SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
-	"SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
-	"SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
-	"SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
+	"Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
+	"Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
+	"Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
+	"Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
+	"Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
 ])
 @export var level_id: StringName = &"rooftops_01"
-@export_file("*.ogg") var music_path := "res://Music/Library/Rooftops/Cyberpunk Rooftops.ogg"
+@export_file("*.ogg") var music_path := "res://assets/runtime/audio/music/Rooftops/Cyberpunk Rooftops.ogg"
 
 @onready var terrain: TileMapLayer = $"Rooftop Terrain"
 

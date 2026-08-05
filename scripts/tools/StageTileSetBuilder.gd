@@ -4,22 +4,22 @@ const OUTPUT_ROOT := "res://Stages/TileSets"
 const TILE_SHEETS := [
 	{
 		"name": "Act1_Rooftops2_Palette",
-		"texture": "res://Stages/Act1_CyberCity/SourceArt/Rooftops 2/Environment/tileset.png",
+		"texture": "res://assets/runtime/environments/Act1_CyberCity/Rooftops 2/Environment/tileset.png",
 		"tile_size": Vector2i(16, 16),
 	},
 	{
 		"name": "Act2_RobotFactory_Palette",
-		"texture": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
+		"texture": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
 		"tile_size": Vector2i(32, 32),
 	},
 	{
 		"name": "Act3_NeonMoon_Palette",
-		"texture": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
+		"texture": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
 		"tile_size": Vector2i(24, 24),
 	},
 	{
 		"name": "Act4_AbyssalNight_Palette",
-		"texture": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
+		"texture": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
 		"tile_size": Vector2i(24, 24),
 	},
 ]

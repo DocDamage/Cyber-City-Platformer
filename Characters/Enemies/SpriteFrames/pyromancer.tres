@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/ATTACK.png" id="1_22ei1"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/DEATH.png" id="2_gj6fp"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/HURT.png" id="3_qy7en"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/IDLE.png" id="4_h50ux"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Pyromancer 2D Pixel Art/Sprites/WALK.png" id="5_jh6pa"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/ATTACK.png" id="1_22ei1"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/DEATH.png" id="2_gj6fp"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/HURT.png" id="3_qy7en"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/IDLE.png" id="4_h50ux"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites/WALK.png" id="5_jh6pa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kaccc"]
 atlas = ExtResource("1_22ei1")

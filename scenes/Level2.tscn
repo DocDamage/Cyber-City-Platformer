@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="12_checkpoint"]
 [ext_resource type="Script" path="res://scripts/DeathZone.gd" id="13_death_zone"]
 [ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="14_exit"]
-[ext_resource type="Texture2D" path="res://Stage Props/FactoryProps/SourceArt/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png" id="15_factory_props"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/FactoryProps/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png" id="15_factory_props"]
 
 [sub_resource type="Gradient" id="Gradient_magenta"]
 offsets = PackedFloat32Array(0, 0.45, 1)
@@ -33,9 +33,9 @@ stage_sub = 1
 environment_tint = Color(0.13, 0.12, 0.23, 1)
 layout_variant = 1
 campaign_act = 2
-background_texture_names = PackedStringArray("SourceArt/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png", "", "", "", "")
+background_texture_names = PackedStringArray("Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png", "", "", "", "")
 level_id = &"factory_approach_02"
-music_path = "res://Music/Library/Robot Factory/Mega Robot Factory – 1 .ogg"
+music_path = "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 1 .ogg"
 
 [node name="Background Skyline" type="Parallax2D" parent="."]
 z_index = -20

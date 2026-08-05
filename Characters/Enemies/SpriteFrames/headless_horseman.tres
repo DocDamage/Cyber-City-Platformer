@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_2pqsp"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_fkoqv"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/HURT.png" id="3_key2k"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/IDLE.png" id="4_kpv7g"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Headless Horseman 2D Pixel Art/Sprites/without_outline/RUN.png" id="5_flw7u"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="1_2pqsp"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/DEATH.png" id="2_fkoqv"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/HURT.png" id="3_key2k"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/IDLE.png" id="4_kpv7g"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline/RUN.png" id="5_flw7u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjidc"]
 atlas = ExtResource("1_2pqsp")

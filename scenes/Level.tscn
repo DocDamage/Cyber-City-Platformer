@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" path="res://scenes/CheckpointTerminal.tscn" id="13_checkpoint"]
 [ext_resource type="PackedScene" path="res://scenes/StageExit.tscn" id="14_exit"]
 [ext_resource type="Script" path="res://scripts/DeathZone.gd" id="15_death_zone"]
-[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/banner-a/banner-a1.png" id="16_banner"]
-[ext_resource type="Texture2D" path="res://Stage Props/CyberCityProps/SourceArt/Rooftops 2/lights/lights2.png" id="17_light_prop"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-a/banner-a1.png" id="16_banner"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/CyberCityProps/Rooftops 2/lights/lights2.png" id="17_light_prop"]
 
 [sub_resource type="Gradient" id="Gradient_neon"]
 offsets = PackedFloat32Array(0, 0.4, 1)

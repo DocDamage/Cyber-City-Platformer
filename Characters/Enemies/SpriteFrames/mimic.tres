@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/APPEAR.png" id="1_fceuc"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png" id="2_n54ug"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="3_u4m41"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="4_452yc"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="5_hurgi"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="6_qa22q"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/APPEAR.png" id="1_fceuc"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png" id="2_n54ug"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="3_u4m41"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="4_452yc"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="5_hurgi"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="6_qa22q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grlop"]
 atlas = ExtResource("1_fceuc")

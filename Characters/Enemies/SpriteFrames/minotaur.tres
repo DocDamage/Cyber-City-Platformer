@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK1.png" id="1_1gwu6"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK2.png" id="2_l4utb"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/DEATH.png" id="3_skmfn"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/HURT.png" id="4_iolsg"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/iDLE.png" id="5_317x6"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/WALK.png" id="6_7tu3m"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK1.png" id="1_1gwu6"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/ATTACK2.png" id="2_l4utb"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/DEATH.png" id="3_skmfn"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/HURT.png" id="4_iolsg"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/iDLE.png" id="5_317x6"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline/WALK.png" id="6_7tu3m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ol6we"]
 atlas = ExtResource("1_1gwu6")

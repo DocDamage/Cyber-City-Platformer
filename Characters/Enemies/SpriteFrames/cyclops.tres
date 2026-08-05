@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 1.png" id="1_afi2k"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 2.png" id="2_vqang"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="3_mwp24"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="4_bmtrr"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="5_ulouo"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="6_051la"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 1.png" id="1_afi2k"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK 2.png" id="2_vqang"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="3_mwp24"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="4_bmtrr"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="5_ulouo"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="6_051la"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ol6bu"]
 atlas = ExtResource("1_afi2k")

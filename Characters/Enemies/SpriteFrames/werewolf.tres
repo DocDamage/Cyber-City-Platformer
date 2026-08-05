@@ -1,13 +1,13 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK1.png" id="1_4f1kf"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK2.png" id="2_xrey2"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/DEATH.png" id="3_fksmn"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/HURT.png" id="4_hv4di"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE.png" id="5_8x575"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE HUMAN.png" id="6_xx3c8"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/RUN.png" id="7_hllyq"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Werewolf 2D Pixel Art/Sprites/without_outline/TRANSFORMATION.png" id="8_7yneu"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK1.png" id="1_4f1kf"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/ATTACK2.png" id="2_xrey2"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/DEATH.png" id="3_fksmn"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/HURT.png" id="4_hv4di"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE.png" id="5_8x575"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/IDLE HUMAN.png" id="6_xx3c8"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/RUN.png" id="7_hllyq"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline/TRANSFORMATION.png" id="8_7yneu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yowmw"]
 atlas = ExtResource("1_4f1kf")

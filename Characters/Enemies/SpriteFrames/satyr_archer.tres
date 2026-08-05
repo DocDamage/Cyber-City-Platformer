@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" format=3]
 
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ARROW.png" id="1_xs1ao"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png" id="2_3clhc"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="3_twhte"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="4_m1bo0"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="5_e6myx"]
-[ext_resource type="Texture2D" path="res://Characters/Enemies/SourceArt/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="6_nmvxk"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ARROW.png" id="1_xs1ao"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png" id="2_3clhc"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/DEATH.png" id="3_twhte"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/HURT.png" id="4_m1bo0"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/IDLE.png" id="5_e6myx"]
+[ext_resource type="Texture2D" path="res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline/WALK.png" id="6_nmvxk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jvpcu"]
 atlas = ExtResource("1_xs1ao")

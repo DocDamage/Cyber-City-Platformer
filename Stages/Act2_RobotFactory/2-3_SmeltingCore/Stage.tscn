@@ -1,11 +1,11 @@
 [gd_scene format=4]
 
 [ext_resource type="Script" path="res://scripts/PrototypeStage.gd" id="1_bkyty"]
-[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/back.png" id="2_bv7fq"]
-[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/middle.png" id="3_jkf3c"]
-[ext_resource type="Texture2D" path="res://Parallax/SourceArt/Neon Alley/Assets/layers/front.png" id="4_p16w0"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/back.png" id="2_bv7fq"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/middle.png" id="3_jkf3c"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/front.png" id="4_p16w0"]
 [ext_resource type="TileSet" path="res://Stages/TileSets/Act2_RobotFactory_Palette.tres" id="5_7rfkp"]
-[ext_resource type="Texture2D" path="res://Stage Props/FactoryProps/SourceArt/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png" id="6_1pvkd"]
+[ext_resource type="Texture2D" path="res://assets/runtime/props/FactoryProps/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png" id="6_1pvkd"]
 [ext_resource type="PackedScene" path="res://Characters/Enemies/Scenes/stone_golem.tscn" id="7_jyvvf"]
 [ext_resource type="Script" path="res://scripts/EnemyBase.gd" id="8_4i8jl"]
 [ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/stone_golem.tres" id="9_pn31s"]
@@ -64,7 +64,7 @@ stage_id = &"2-3"
 stage_title = "Smelting Core"
 design_notes = "Layout pass: Laser grids, steam vents, orange PointLight2D nodes
 Painted terrain, themed props, two checkpoints, and a connected exit are ready for encounter polish."
-music_path = "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg"
+music_path = "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 2 .ogg"
 far_background = ExtResource("2_bv7fq")
 middle_background = ExtResource("3_jkf3c")
 front_background = ExtResource("4_p16w0")
