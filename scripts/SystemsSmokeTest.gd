@@ -74,6 +74,9 @@ func _run() -> void:
 
 	assert(audio_manager.get_node("SFXPlayer00") is AudioStreamPlayer, "AudioManager did not build its independent SFX pool.")
 	assert(audio_manager.get_node("BGMPlayer0") is AudioStreamPlayer, "AudioManager did not build its persistent BGM players.")
+	var stage_controller := level.get_node_or_null("StageController") as StageController
+	assert(stage_controller != null, "Stage runtime controller was not attached.")
+	stage_controller.complete_objectives_for_test()
 	var level_exit: Area2D = level.get_node("Level Exit")
 	player.global_position = level_exit.global_position
 	for frame in range(90):

@@ -13,6 +13,7 @@ var _shake_strength := 0.0
 var _shake_duration := 0.0
 var _shake_remaining := 0.0
 var _random := RandomNumberGenerator.new()
+var _stage_bounds := Rect2(0.0, 0.0, 1408.0, 540.0)
 
 
 func _ready() -> void:
@@ -23,6 +24,7 @@ func _ready() -> void:
 	_look_ahead_x = _facing_direction * look_ahead_distance
 	position = Vector2(_look_ahead_x, vertical_offset)
 	_random.randomize()
+	configure_bounds(_stage_bounds)
 
 
 func _process(delta: float) -> void:
@@ -36,6 +38,23 @@ func _process(delta: float) -> void:
 func set_facing_direction(direction: float) -> void:
 	if not is_zero_approx(direction):
 		_facing_direction = signf(direction)
+
+
+func configure_bounds(bounds: Rect2, offset_y := vertical_offset) -> void:
+	if bounds.size.x <= 0.0 or bounds.size.y <= 0.0:
+		push_warning("DynamicCamera rejected invalid bounds: %s" % bounds)
+		return
+	_stage_bounds = bounds
+	limit_left = floori(bounds.position.x)
+	limit_top = floori(bounds.position.y)
+	limit_right = ceili(bounds.end.x)
+	limit_bottom = ceili(bounds.end.y)
+	vertical_offset = offset_y
+	limit_smoothed = true
+
+
+func get_configured_bounds() -> Rect2:
+	return _stage_bounds
 
 
 func shake(strength: float, duration := 0.15) -> void:

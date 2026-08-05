@@ -58,12 +58,16 @@ func _run() -> void:
 	assert(guard.is_on_floor(), "Floor-edge RayCast2D did not keep the patrol on its platform.")
 	assert(saw_edge_turn, "Patrol never reversed at an edge or patrol boundary.")
 
-	target.set_physics_process(false)
 	player.global_position = target.global_position - Vector2(96.0, 0.0)
 	player.velocity = Vector2.ZERO
 	player.facing_direction = 1.0
 	player.sprite.flip_h = false
-	for expected_health in [2, 1, 0]:
+	for _frame in range(3):
+		await physics_frame
+	assert(target.process_mode != Node.PROCESS_MODE_DISABLED, "Entering the arena did not activate its encounter.")
+	target.set_physics_process(false)
+	var target_starting_health := target.health
+	for expected_health in range(target_starting_health - 1, -1, -1):
 		var energy_before: float = player.energy
 		player.shoot_projectile()
 		assert(player.energy < energy_before, "Projectile did not consume weapon energy.")
