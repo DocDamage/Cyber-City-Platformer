@@ -7,6 +7,7 @@ signal checkpoint_changed(checkpoint_id: StringName, position: Vector2)
 signal level_transition_started(scene_path: String)
 signal level_transition_finished(scene_path: String)
 signal stage_completed(stage_id: String)
+signal upgrade_acquired(upgrade_id: StringName, level: int)
 signal campaign_completed
 
 var run_state := RunState.new()
@@ -161,6 +162,20 @@ func mark_boss_defeated(boss_id: StringName) -> void:
 	run_state.defeated_bosses[String(boss_id)] = true
 	campaign_progress.defeated_bosses[String(boss_id)] = true
 	_request_autosave()
+
+
+func award_upgrade(upgrade_id: StringName, amount := 1) -> bool:
+	var key := String(upgrade_id)
+	if not run_state.upgrades.has(key) or amount <= 0:
+		return false
+	run_state.upgrades[key] = int(run_state.upgrades[key]) + amount
+	upgrade_acquired.emit(upgrade_id, int(run_state.upgrades[key]))
+	_request_autosave()
+	return true
+
+
+func get_upgrade_level(upgrade_id: StringName) -> int:
+	return int(run_state.upgrades.get(String(upgrade_id), 0))
 
 
 func advance_stage() -> void:

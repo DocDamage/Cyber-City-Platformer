@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
 [ext_resource type="Script" path="res://scripts/Hurtbox.gd" id="2_hurtbox"]
 [ext_resource type="Script" path="res://scripts/Hitbox.gd" id="3_hitbox"]
 [ext_resource type="Script" path="res://scripts/DynamicCamera.gd" id="4_camera"]
+[ext_resource type="Script" path="res://scripts/systems/player/PlayerCombatController.gd" id="5_combat"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
 
@@ -100,6 +101,9 @@ camera_shake_duration = 0.14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeHitbox"]
 shape = SubResource("RectangleShape_melee")
+
+[node name="CombatController" type="Node" parent="."]
+script = ExtResource("5_combat")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, -10)

@@ -3,9 +3,11 @@ extends Hitbox
 const SPARK_VFX := preload("res://scenes/vfx/SparkBurst.tscn")
 
 @export var speed := 400.0
+@export_range(0.1, 10.0, 0.1) var max_lifetime := 3.0
 
 var direction := 1
 var _spent := false
+var _lifetime := 0.0
 
 
 func _ready() -> void:
@@ -14,6 +16,10 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	_lifetime += delta
+	if _lifetime >= max_lifetime:
+		_consume()
+		return
 	position.x += speed * direction * delta
 
 
