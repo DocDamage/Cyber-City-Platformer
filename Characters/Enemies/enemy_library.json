@@ -16,7 +16,18 @@
       "pack": "Centaur 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/centaur.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/centaur.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/centaur.tres",
+      "archetype": "leaping_enemy",
+      "max_health": 4,
+      "attack_damage": 2,
+      "attack_range": 110,
+      "attack_cooldown": 1.25,
+      "chase_speed": 120,
+      "detection_radius": 210,
+      "body_size": [
+        26,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -34,7 +45,18 @@
       "pack": "Cerberus 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/cerberus.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Cerberus 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/cerberus.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/cerberus.tres",
+      "archetype": "hazard_spawning_enemy",
+      "max_health": 5,
+      "attack_damage": 1,
+      "attack_range": 230,
+      "attack_cooldown": 1.8,
+      "chase_speed": 85,
+      "detection_radius": 210,
+      "body_size": [
+        23,
+        57
+      ]
     },
     {
       "airborne": false,
@@ -53,19 +75,27 @@
       "pack": "Cyclops 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/cyclops.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Cyclops 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/cyclops.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/cyclops.tres",
+      "archetype": "heavy_armored_enemy",
+      "max_health": 7,
+      "attack_damage": 2,
+      "attack_range": 64,
+      "attack_cooldown": 1.5,
+      "chase_speed": 70,
+      "detection_radius": 210,
+      "body_size": [
+        44,
+        57
+      ]
     },
     {
       "airborne": false,
       "animations": [
+        "attack_1",
+        "attack_2",
         "death",
-        "down_swing",
-        "full_combo",
-        "fwd_swing",
         "hurt",
-        "idle_walk",
         "idle",
-        "side_swing",
         "walk"
       ],
       "frame_height": 125,
@@ -74,8 +104,19 @@
       "name": "Death Knight",
       "pack": "death knight",
       "scene": "res://Characters/Enemies/Scenes/death_knight.tscn",
-      "source_directory": "res://assets/runtime/characters/Enemies/death knight",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/death_knight.tres"
+      "source_directory": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline",
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/death_knight.tres",
+      "archetype": "shielded_enemy",
+      "max_health": 6,
+      "attack_damage": 1,
+      "attack_range": 58,
+      "attack_cooldown": 1.4,
+      "chase_speed": 75,
+      "detection_radius": 210,
+      "body_size": [
+        30,
+        56
+      ]
     },
     {
       "airborne": true,
@@ -94,7 +135,18 @@
       "pack": "Demon Boss 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/demon_boss.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Demon Boss 2D Pixel Art/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/demon_boss.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/demon_boss.tres",
+      "archetype": "flying_shooter",
+      "max_health": 4,
+      "attack_damage": 1,
+      "attack_range": 280,
+      "attack_cooldown": 1.5,
+      "chase_speed": 95,
+      "detection_radius": 280,
+      "body_size": [
+        29,
+        66
+      ]
     },
     {
       "airborne": true,
@@ -111,7 +163,18 @@
       "pack": "Flying Eye 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/flying_eye.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Flying Eye 2D Pixel Art/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/flying_eye.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/flying_eye.tres",
+      "archetype": "flying_patrol",
+      "max_health": 3,
+      "attack_damage": 1,
+      "attack_range": 70,
+      "attack_cooldown": 1.0,
+      "chase_speed": 105,
+      "detection_radius": 210,
+      "body_size": [
+        27,
+        67
+      ]
     },
     {
       "airborne": true,
@@ -130,7 +193,18 @@
       "pack": "Gargoyle 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/gargoyle.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Gargoyle 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/gargoyle.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/gargoyle.tres",
+      "archetype": "flying_patrol",
+      "max_health": 3,
+      "attack_damage": 1,
+      "attack_range": 70,
+      "attack_cooldown": 1.0,
+      "chase_speed": 105,
+      "detection_radius": 210,
+      "body_size": [
+        25,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -149,7 +223,18 @@
       "pack": "Goblin 2D Pixel Art v1.1",
       "scene": "res://Characters/Enemies/Scenes/goblin.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Goblin 2D Pixel Art v1.1/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/goblin.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/goblin.tres",
+      "archetype": "ground_chaser",
+      "max_health": 3,
+      "attack_damage": 1,
+      "attack_range": 48,
+      "attack_cooldown": 1.05,
+      "chase_speed": 115,
+      "detection_radius": 210,
+      "body_size": [
+        20,
+        35
+      ]
     },
     {
       "airborne": true,
@@ -168,7 +253,18 @@
       "pack": "Gryphon 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/gryphon.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Gryphon 2D Pixel Art v1.2/NEW VERSION/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/gryphon.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/gryphon.tres",
+      "archetype": "flying_shooter",
+      "max_health": 4,
+      "attack_damage": 1,
+      "attack_range": 280,
+      "attack_cooldown": 1.5,
+      "chase_speed": 95,
+      "detection_radius": 280,
+      "body_size": [
+        20,
+        46
+      ]
     },
     {
       "airborne": true,
@@ -186,7 +282,18 @@
       "pack": "Harpy 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/harpy.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Harpy 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/harpy.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/harpy.tres",
+      "archetype": "flying_patrol",
+      "max_health": 3,
+      "attack_damage": 1,
+      "attack_range": 70,
+      "attack_cooldown": 1.0,
+      "chase_speed": 105,
+      "detection_radius": 210,
+      "body_size": [
+        18,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -204,7 +311,18 @@
       "pack": "Headless Horseman 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/headless_horseman.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Headless Horseman 2D Pixel Art/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/headless_horseman.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/headless_horseman.tres",
+      "archetype": "hazard_spawning_enemy",
+      "max_health": 5,
+      "attack_damage": 1,
+      "attack_range": 230,
+      "attack_cooldown": 1.8,
+      "chase_speed": 85,
+      "detection_radius": 210,
+      "body_size": [
+        27,
+        67
+      ]
     },
     {
       "airborne": true,
@@ -222,7 +340,18 @@
       "pack": "Imp 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/imp.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Imp 2D Pixel Art v1.2/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/imp.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/imp.tres",
+      "archetype": "fast_melee_attacker",
+      "max_health": 3,
+      "attack_damage": 1,
+      "attack_range": 54,
+      "attack_cooldown": 0.7,
+      "chase_speed": 155,
+      "detection_radius": 210,
+      "body_size": [
+        23,
+        30
+      ]
     },
     {
       "airborne": false,
@@ -241,7 +370,18 @@
       "pack": "Medusa V2.0",
       "scene": "res://Characters/Enemies/Scenes/medusa.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Medusa V2.0/Sprite",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/medusa.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/medusa.tres",
+      "archetype": "ambush_enemy",
+      "max_health": 4,
+      "attack_damage": 2,
+      "attack_range": 72,
+      "attack_cooldown": 1.5,
+      "chase_speed": 100,
+      "detection_radius": 210,
+      "body_size": [
+        27,
+        56
+      ]
     },
     {
       "airborne": false,
@@ -260,7 +400,18 @@
       "pack": "Mimic 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/mimic.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Mimic 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/mimic.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/mimic.tres",
+      "archetype": "ambush_enemy",
+      "max_health": 4,
+      "attack_damage": 2,
+      "attack_range": 72,
+      "attack_cooldown": 1.5,
+      "chase_speed": 100,
+      "detection_radius": 210,
+      "body_size": [
+        34,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -279,7 +430,18 @@
       "pack": "Minotaur 2D Pixel Art v1.1",
       "scene": "res://Characters/Enemies/Scenes/minotaur.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Minotaur 2D Pixel Art v1.1/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/minotaur.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/minotaur.tres",
+      "archetype": "heavy_armored_enemy",
+      "max_health": 7,
+      "attack_damage": 2,
+      "attack_range": 64,
+      "attack_cooldown": 1.5,
+      "chase_speed": 70,
+      "detection_radius": 210,
+      "body_size": [
+        23,
+        57
+      ]
     },
     {
       "airborne": true,
@@ -297,7 +459,18 @@
       "pack": "Poison Skull 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/poison_skull.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Poison Skull 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/poison_skull.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/poison_skull.tres",
+      "archetype": "flying_shooter",
+      "max_health": 4,
+      "attack_damage": 1,
+      "attack_range": 280,
+      "attack_cooldown": 1.5,
+      "chase_speed": 95,
+      "detection_radius": 280,
+      "body_size": [
+        28,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -315,7 +488,18 @@
       "pack": "Pyromancer 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/pyromancer.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Pyromancer 2D Pixel Art/Sprites",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/pyromancer.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/pyromancer.tres",
+      "archetype": "ranged_shooter",
+      "max_health": 4,
+      "attack_damage": 1,
+      "attack_range": 260,
+      "attack_cooldown": 1.35,
+      "chase_speed": 80,
+      "detection_radius": 280,
+      "body_size": [
+        18,
+        45
+      ]
     },
     {
       "airborne": false,
@@ -334,7 +518,18 @@
       "pack": "Satyr Archer 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/satyr_archer.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Satyr Archer 2D Pixel Art v1.2/New Version/Sprites/no_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/satyr_archer.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/satyr_archer.tres",
+      "archetype": "ranged_shooter",
+      "max_health": 4,
+      "attack_damage": 1,
+      "attack_range": 260,
+      "attack_cooldown": 1.35,
+      "chase_speed": 80,
+      "detection_radius": 280,
+      "body_size": [
+        18,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -353,7 +548,18 @@
       "pack": "Skeleton Warrior  2D Pixel Art v1.1",
       "scene": "res://Characters/Enemies/Scenes/skeleton_warrior.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Skeleton Warrior  2D Pixel Art v1.1/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/skeleton_warrior.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/skeleton_warrior.tres",
+      "archetype": "shielded_enemy",
+      "max_health": 6,
+      "attack_damage": 1,
+      "attack_range": 58,
+      "attack_cooldown": 1.4,
+      "chase_speed": 75,
+      "detection_radius": 210,
+      "body_size": [
+        18,
+        35
+      ]
     },
     {
       "airborne": false,
@@ -371,7 +577,18 @@
       "pack": "Stone Golem 2D Pixel Art v1.2",
       "scene": "res://Characters/Enemies/Scenes/stone_golem.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Stone Golem 2D Pixel Art v1.2/new version/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/stone_golem.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/stone_golem.tres",
+      "archetype": "heavy_armored_enemy",
+      "max_health": 7,
+      "attack_damage": 2,
+      "attack_range": 64,
+      "attack_cooldown": 1.5,
+      "chase_speed": 70,
+      "detection_radius": 210,
+      "body_size": [
+        39,
+        43
+      ]
     },
     {
       "airborne": false,
@@ -380,8 +597,8 @@
         "attack_2",
         "death",
         "hurt",
-        "idle_human",
         "idle",
+        "idle_human",
         "run",
         "transformation"
       ],
@@ -392,7 +609,18 @@
       "pack": "Werewolf 2D Pixel Art",
       "scene": "res://Characters/Enemies/Scenes/werewolf.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Werewolf 2D Pixel Art/Sprites/without_outline",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/werewolf.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/werewolf.tres",
+      "archetype": "fast_melee_attacker",
+      "max_health": 3,
+      "attack_damage": 1,
+      "attack_range": 54,
+      "attack_cooldown": 0.7,
+      "chase_speed": 155,
+      "detection_radius": 210,
+      "body_size": [
+        28,
+        56
+      ]
     },
     {
       "airborne": true,
@@ -411,8 +639,20 @@
       "pack": "Witch",
       "scene": "res://Characters/Enemies/Scenes/witch.tscn",
       "source_directory": "res://assets/runtime/characters/Enemies/Witch/Sprite",
-      "sprite_frames": "res://Characters/Enemies/SpriteFrames/witch.tres"
+      "sprite_frames": "res://Characters/Enemies/SpriteFrames/witch.tres",
+      "archetype": "ranged_shooter",
+      "max_health": 4,
+      "attack_damage": 1,
+      "attack_range": 260,
+      "attack_cooldown": 1.35,
+      "chase_speed": 80,
+      "detection_radius": 280,
+      "body_size": [
+        22,
+        56
+      ]
     }
   ],
-  "enemy_count": 22
+  "enemy_count": 22,
+  "schema_version": 1
 }
