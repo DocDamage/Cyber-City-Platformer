@@ -178,7 +178,8 @@ func _load_audio_manifest() -> void:
 
 
 func _safe_load_audio(path: String) -> AudioStream:
-	if path.is_empty() or not ResourceLoader.exists(path, "AudioStream"):
+	var force_missing := OS.get_environment("CCP_TEST_AUDIO_MISSING") == "1"
+	if force_missing or path.is_empty() or not ResourceLoader.exists(path, "AudioStream"):
 		if not _missing_audio.has(path):
 			_missing_audio.append(path)
 			push_warning("AudioManager: optional audio is unavailable: %s" % path)
