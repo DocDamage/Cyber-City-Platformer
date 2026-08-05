@@ -16,7 +16,6 @@ const SFX_ROOT := RUNTIME_ASSET_ROOT + "/audio/sfx"
 const PARALLAX_ROOT := RUNTIME_ASSET_ROOT + "/environments/parallax"
 const VFX_ROOT := RUNTIME_ASSET_ROOT + "/vfx"
 
-const FALLBACK_TEXTURE_PATH := "res://icon.svg"
 const FALLBACK_PLAYER_SCENE_PATH := "res://scenes/Player.tscn"
 const FALLBACK_CHARACTER_SCENE_PATH := "res://scenes/EnemyBase.tscn"
 const FALLBACK_STAGE_SCENE_PATH := "res://scenes/Level.tscn"
@@ -355,7 +354,7 @@ func _get_library_texture(root_path: String, kind: String, requested_name: Strin
 	if resource is Texture2D:
 		_resource_cache[cache_key] = resource
 		return resource as Texture2D
-	_warn_once(cache_key, "Could not find %s texture '%s'; using %s." % [kind, requested_name, FALLBACK_TEXTURE_PATH])
+	_warn_once(cache_key, "Could not find %s texture '%s'; using a procedural diagnostic texture." % [kind, requested_name])
 	return _get_fallback_texture()
 
 
@@ -479,24 +478,24 @@ func _append_paths(target: Array, values: Variant) -> void:
 
 func _missing_prop(cache_key: String, act_number: int, prop_name: String) -> Texture2D:
 	_missing_cache[cache_key] = true
-	_warn_once(cache_key, "Could not find prop '%s' for act %d; using %s." % [
-		prop_name, act_number, FALLBACK_TEXTURE_PATH,
+	_warn_once(cache_key, "Could not find prop '%s' for act %d; using a procedural diagnostic texture." % [
+		prop_name, act_number,
 	])
 	return _get_fallback_texture()
 
 
 func _missing_character_texture(cache_key: String, character_folder: String, texture_name: String) -> Texture2D:
 	_missing_cache[cache_key] = true
-	_warn_once(cache_key, "Could not find character texture '%s' in '%s'; using %s." % [
-		texture_name, character_folder, FALLBACK_TEXTURE_PATH,
+	_warn_once(cache_key, "Could not find character texture '%s' in '%s'; using a procedural diagnostic texture." % [
+		texture_name, character_folder,
 	])
 	return _get_fallback_texture()
 
 
 func _missing_stage_texture(cache_key: String, act_number: int, texture_name: String) -> Texture2D:
 	_missing_cache[cache_key] = true
-	_warn_once(cache_key, "Could not find stage texture '%s' for act %d; using %s." % [
-		texture_name, act_number, FALLBACK_TEXTURE_PATH,
+	_warn_once(cache_key, "Could not find stage texture '%s' for act %d; using a procedural diagnostic texture." % [
+		texture_name, act_number,
 	])
 	return _get_fallback_texture()
 
@@ -524,7 +523,12 @@ func _warn_once(key: String, message: String) -> void:
 
 func _get_fallback_texture() -> Texture2D:
 	if _fallback_texture == null:
-		_fallback_texture = load(FALLBACK_TEXTURE_PATH) as Texture2D
+		var image := Image.create(32, 32, false, Image.FORMAT_RGBA8)
+		for y in range(32):
+			for x in range(32):
+				var bright := (floori(float(x) / 8.0) + floori(float(y) / 8.0)) % 2 == 0
+				image.set_pixel(x, y, Color("ff2b9b") if bright else Color("161025"))
+		_fallback_texture = ImageTexture.create_from_image(image)
 	return _fallback_texture
 
 

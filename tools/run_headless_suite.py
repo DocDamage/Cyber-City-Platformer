@@ -20,6 +20,7 @@ import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
+ENGINE_ERROR_PREFIXES = ("SCRIPT ERROR:", "ERROR:")
 
 TEST_GROUPS: dict[str, tuple[str, ...]] = {
     "import": ("@import",),
@@ -35,12 +36,14 @@ TEST_GROUPS: dict[str, tuple[str, ...]] = {
         "scripts/SystemsSmokeTest.gd",
         "scripts/GoalSmokeTest.gd",
         "scripts/BossSystemsSmokeTest.gd",
+        "tests/integration/StageMechanicsTest.gd",
         "tests/integration/EncounterLifecycleTest.gd",
         "tests/integration/PerformanceBudgetTest.gd",
     ),
     "campaign": (
         "scripts/CampaignSceneSmokeTest.gd",
         "tests/campaign/CampaignRuntimeTest.gd",
+        "tests/campaign/CampaignContentTest.gd",
         "tests/campaign/CampaignTraversalTest.gd",
     ),
     "shell": (
@@ -169,6 +172,18 @@ def run_command(
         logged = engine_log.read_text(encoding="utf-8", errors="replace")
         if logged and logged not in output:
             output += logged
+
+    engine_errors = [
+        line.strip()
+        for line in output.splitlines()
+        if line.lstrip().startswith(ENGINE_ERROR_PREFIXES)
+    ]
+    if engine_errors and exit_code == 0:
+        exit_code = 1
+        output += (
+            "\nHEADLESS_RUNNER_ERROR: Godot emitted engine errors despite a zero "
+            f"process exit code (count={len(engine_errors)}).\n"
+        )
     print(output, end="" if output.endswith("\n") else "\n", flush=True)
     elapsed = time.monotonic() - started
     result_line = f"RESULT {label}: exit={exit_code} elapsed={elapsed:.2f}s\n"

@@ -23,6 +23,7 @@ var checkpoint_position := Vector2.ZERO
 var checkpoint_scene := ""
 var checkpoint_locations: Dictionary = {}
 var collected_pickups: Dictionary = {}
+var stage_flags: Dictionary = {}
 var defeated_bosses: Dictionary = {}
 var upgrades: Dictionary = DEFAULT_UPGRADES.duplicate(true)
 var elapsed_seconds := 0.0
@@ -41,6 +42,7 @@ func clear() -> void:
 	checkpoint_scene = ""
 	checkpoint_locations.clear()
 	collected_pickups.clear()
+	stage_flags.clear()
 	defeated_bosses.clear()
 	upgrades = DEFAULT_UPGRADES.duplicate(true)
 	elapsed_seconds = 0.0
@@ -60,6 +62,7 @@ func to_dict() -> Dictionary:
 		"checkpoint_scene": checkpoint_scene,
 		"checkpoint_locations": _vectors_to_arrays(checkpoint_locations),
 		"collected_pickups": collected_pickups.duplicate(true),
+		"stage_flags": stage_flags.duplicate(true),
 		"defeated_bosses": defeated_bosses.duplicate(true),
 		"upgrades": upgrades.duplicate(true),
 		"elapsed_seconds": elapsed_seconds,
@@ -81,6 +84,7 @@ func load_dict(data: Dictionary) -> bool:
 	checkpoint_scene = String(data.get("checkpoint_scene", ""))
 	checkpoint_locations = _arrays_to_vectors(data.get("checkpoint_locations", {}))
 	collected_pickups = (data.get("collected_pickups", {}) as Dictionary).duplicate(true)
+	stage_flags = (data.get("stage_flags", {}) as Dictionary).duplicate(true)
 	defeated_bosses = (data.get("defeated_bosses", {}) as Dictionary).duplicate(true)
 	upgrades = DEFAULT_UPGRADES.duplicate(true)
 	upgrades.merge(data.get("upgrades", {}) as Dictionary, true)

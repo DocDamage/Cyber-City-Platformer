@@ -1,6 +1,6 @@
 # Release-candidate checklist
 
-Candidate: `1.0.0-rc.1`
+Candidate: `1.0.0-rc.2`
 
 Engine: Godot `4.7.1.stable.official.a13da4feb`
 

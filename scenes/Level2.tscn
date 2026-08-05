@@ -31,6 +31,9 @@ script = ExtResource("1_level")
 stage_act = 2
 stage_sub = 1
 environment_tint = Color(0.13, 0.12, 0.23, 1)
+death_zone_path = NodePath("Death Zone")
+terrain_path = NodePath("Rooftop Terrain")
+ambient_root_path = NodePath("Background Skyline")
 layout_variant = 1
 campaign_act = 2
 background_texture_names = PackedStringArray("Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png", "", "", "", "")
@@ -96,38 +99,49 @@ color = Color(0.13, 0.12, 0.23, 1)
 [node name="Player" parent="." instance=ExtResource("2_player")]
 position = Vector2(145, 380)
 
-[node name="Factory Guard 01" parent="." instance=ExtResource("9_enemy")]
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="PlayerSpawn" type="Marker2D" parent="Markers"]
+position = Vector2(145, 380)
+
+[node name="Checkpoints" type="Node2D" parent="Markers"]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Factory Guard 01" parent="Enemies" instance=ExtResource("9_enemy")]
 position = Vector2(395, 414)
 
-[node name="Factory Guard 02" parent="." instance=ExtResource("9_enemy")]
+[node name="Factory Guard 02" parent="Enemies" instance=ExtResource("9_enemy")]
 position = Vector2(915, 318)
 starting_direction = 1
 
-[node name="Coin 01" parent="." instance=ExtResource("11_collectible")]
+[node name="Collectibles" type="Node2D" parent="."]
+
+[node name="Coin 01" parent="Collectibles" instance=ExtResource("11_collectible")]
 position = Vector2(315, 390)
 pickup_id = &"factory_coin_01"
 
-[node name="Coin 02" parent="." instance=ExtResource("11_collectible")]
+[node name="Coin 02" parent="Collectibles" instance=ExtResource("11_collectible")]
 position = Vector2(520, 390)
 pickup_id = &"factory_coin_02"
 
-[node name="Coin 03" parent="." instance=ExtResource("11_collectible")]
+[node name="Coin 03" parent="Collectibles" instance=ExtResource("11_collectible")]
 position = Vector2(650, 294)
 pickup_id = &"factory_coin_03"
 
-[node name="Coin 04" parent="." instance=ExtResource("11_collectible")]
+[node name="Coin 04" parent="Collectibles" instance=ExtResource("11_collectible")]
 position = Vector2(850, 294)
 pickup_id = &"factory_coin_04"
 
-[node name="Coin 05" parent="." instance=ExtResource("11_collectible")]
+[node name="Coin 05" parent="Collectibles" instance=ExtResource("11_collectible")]
 position = Vector2(1080, 198)
 pickup_id = &"factory_coin_05"
 
-[node name="Factory Terminal" parent="." instance=ExtResource("12_checkpoint")]
+[node name="Factory Terminal" parent="Markers/Checkpoints" instance=ExtResource("12_checkpoint")]
 position = Vector2(720, 318)
 checkpoint_id = &"factory_terminal"
 
-[node name="Level Exit" parent="." instance=ExtResource("14_exit")]
+[node name="StageExit" parent="Markers" instance=ExtResource("14_exit")]
 position = Vector2(1318, 225)
 next_scene_path = "res://Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn"
 

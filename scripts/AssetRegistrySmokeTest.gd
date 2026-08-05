@@ -45,7 +45,7 @@ func _run() -> void:
 	var fallback_texture: Texture2D = registry.get_prop_texture(99, "missing")
 	var fallback_player: PackedScene = registry.get_character_scene("Player", "missing")
 	var fallback_enemy: PackedScene = registry.get_character_scene("Enemies", "missing")
-	assert(fallback_texture != null and fallback_texture.resource_path == "res://icon.svg")
+	assert(fallback_texture != null and fallback_texture.resource_path.is_empty() and fallback_texture.get_size() == Vector2(32, 32), "Missing art did not use the procedural diagnostic texture.")
 	assert(fallback_player != null and fallback_player.resource_path == "res://scenes/Player.tscn")
 	assert(fallback_enemy != null and fallback_enemy.resource_path == "res://scenes/EnemyBase.tscn")
 	var canonical_prop: Texture2D = registry.get_prop_texture(3, "Space Props/Space extra (1).png")
@@ -64,7 +64,7 @@ func _run() -> void:
 	assert(audio_manager.get_loaded_sfx_names().size() >= 5, "AudioManager is missing required gameplay SFX.")
 	assert(audio_manager.get_node("SFXPlayer00") is AudioStreamPlayer, "AudioManager did not create its SFX player pool.")
 
-	assert(registry.get_prop_texture(1, "../icon.svg").resource_path == "res://icon.svg")
+	assert(registry.get_prop_texture(1, "../icon.svg").resource_path.is_empty(), "Unsafe texture path did not use the procedural diagnostic texture.")
 	assert(registry.get_character_scene("../Characters", "EnemyBase").resource_path == "res://scenes/EnemyBase.tscn")
 	print("ASSET_REGISTRY_SMOKE_TEST_OK acts=", acts.size(), " stages=20 enemies=", enemies.size())
 	quit()

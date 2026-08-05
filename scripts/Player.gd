@@ -71,6 +71,7 @@ var _hurt_remaining := 0.0
 var _action_buffer_remaining := 0.0
 var _buffered_action: StringName = &""
 var _combo_step := 0
+var _footstep_remaining := 0.0
 var _level_scene_path := ""
 var _default_spawn := Vector2.ZERO
 
@@ -133,6 +134,8 @@ func _physics_process(delta: float) -> void:
 	if not was_on_floor and is_on_floor():
 		_spawn_dust(Vector2.UP)
 		_vibrate(0.12, 0.06)
+		_play_sfx(&"land", global_position, -8.0)
+	_update_footsteps(direction, delta)
 	_update_wall_slide_dust()
 	if current_state not in [State.MELEE, State.SHOOT, State.WALL_JUMP]:
 		_update_locomotion_state(direction)
@@ -363,6 +366,15 @@ func _update_horizontal_velocity(direction: float, delta: float) -> void:
 	else:
 		var friction := ground_friction if is_on_floor() else air_acceleration * 0.28
 		velocity.x = move_toward(velocity.x, 0.0, friction * delta)
+
+
+func _update_footsteps(direction: float, delta: float) -> void:
+	_footstep_remaining = maxf(_footstep_remaining - delta, 0.0)
+	if not is_on_floor() or absf(direction) < controller_deadzone or absf(velocity.x) < 45.0:
+		return
+	if is_zero_approx(_footstep_remaining):
+		_play_sfx(&"footstep", global_position, -13.0)
+		_footstep_remaining = 0.32
 
 
 func _get_move_axis() -> float:

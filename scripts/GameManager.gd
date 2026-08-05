@@ -50,6 +50,8 @@ var checkpoint_locations: Dictionary:
 	get: return run_state.checkpoint_locations
 var collected_pickups: Dictionary:
 	get: return run_state.collected_pickups
+var stage_flags: Dictionary:
+	get: return run_state.stage_flags
 
 
 func _ready() -> void:
@@ -119,6 +121,18 @@ func collect_pickup(level_scene_path: String, pickup_id: StringName, value: int)
 
 func is_pickup_collected(level_scene_path: String, pickup_id: StringName) -> bool:
 	return collected_pickups.has("%s::%s" % [level_scene_path, pickup_id])
+
+
+func set_stage_flag(level_scene_path: String, flag_id: StringName, value := true, autosave := false) -> void:
+	if level_scene_path.is_empty() or flag_id.is_empty():
+		return
+	stage_flags["%s::%s" % [level_scene_path, flag_id]] = value
+	if autosave:
+		_request_autosave()
+
+
+func get_stage_flag(level_scene_path: String, flag_id: StringName, default_value: Variant = false) -> Variant:
+	return stage_flags.get("%s::%s" % [level_scene_path, flag_id], default_value)
 
 
 func activate_checkpoint(checkpoint_id: StringName, position: Vector2, level_scene_path: String) -> void:

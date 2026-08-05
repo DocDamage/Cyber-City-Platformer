@@ -49,7 +49,9 @@ func _on_health_changed(current: int, maximum: int) -> void:
 	var safe_maximum := maxi(maximum, 1)
 	health_bar.max_value = safe_maximum
 	health_bar.value = clampi(current, 0, safe_maximum)
-	health_value.text = "%02d / %02d" % [current, safe_maximum]
+	var low_health := current > 0 and float(current) / float(safe_maximum) <= 0.25
+	health_bar.modulate = Color(1.0, 0.38, 0.48) if low_health else Color.WHITE
+	health_value.text = ("CRITICAL  %02d / %02d" if low_health else "%02d / %02d") % [current, safe_maximum]
 
 
 func _on_energy_changed(current: float, maximum: float) -> void:
@@ -104,13 +106,18 @@ func _bind_stage_runtime() -> void:
 	await get_tree().process_frame
 	var stage := _top_level_scene_node(self) as StageBase
 	if stage != null and stage.runtime_controller != null:
-		var controller := stage.runtime_controller
-		var completion: Dictionary = controller.metadata.get("completion_target", {})
-		objective_label.text = "OBJECTIVE: DEFEAT BOSS" if String(completion.get("type", "")) == "boss" else "OBJECTIVE: CLEAR %d ENCOUNTERS" % int(controller.metadata.get("encounter_count", 0))
-		if not controller.objectives_completed.is_connected(_on_objectives_completed):
-			controller.objectives_completed.connect(_on_objectives_completed)
-	for node: Node in get_tree().get_nodes_in_group(&"interactive_terminals"):
-		if _shares_stage_root(node) and node.has_signal(&"focus_changed"):
+		bind_stage(stage.runtime_controller)
+
+
+func bind_stage(controller: StageController) -> void:
+	if controller == null:
+		return
+	var completion: Dictionary = controller.metadata.get("completion_target", {})
+	objective_label.text = "OBJECTIVE: DEFEAT BOSS" if String(completion.get("type", "")) == "boss" else "OBJECTIVE: CLEAR %d ENCOUNTERS" % controller.authored_encounters.size()
+	if not controller.objectives_completed.is_connected(_on_objectives_completed):
+		controller.objectives_completed.connect(_on_objectives_completed)
+	for node: Node in controller.installed_mechanics:
+		if node.has_signal(&"focus_changed") and not node.is_connected(&"focus_changed", _on_interaction_focus_changed):
 			node.connect(&"focus_changed", _on_interaction_focus_changed)
 
 
@@ -142,10 +149,9 @@ func bind_boss(boss: BossBase) -> void:
 
 
 func _bind_existing_boss() -> void:
-	for node: Node in get_tree().get_nodes_in_group(&"bosses"):
-		if node is BossBase and _shares_stage_root(node):
-			bind_boss(node as BossBase)
-			return
+	var stage := _top_level_scene_node(self) as StageBase
+	if stage != null:
+		bind_boss(stage.get_boss())
 
 
 func _connect_boss_signal(signal_name: StringName, callable: Callable) -> void:

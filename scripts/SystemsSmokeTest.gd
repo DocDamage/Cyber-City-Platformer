@@ -39,13 +39,13 @@ func _run() -> void:
 	player.shoot_projectile()
 	assert(player.energy < energy_before, "Shooting did not consume weapon energy.")
 
-	var coin: Area2D = level.get_node("Coin 01")
+	var coin := level.get_node("Collectibles").get_child(0) as Area2D
 	player.global_position = coin.global_position
 	for frame in range(4):
 		await physics_frame
 	assert(game_manager.current_score == 100, "Collectible signal did not increment persistent score.")
 
-	var terminal: Area2D = level.get_node("Rooftop Terminal")
+	var terminal: Area2D = level.get_node("Markers/Checkpoints/Rooftop Terminal")
 	player.global_position = terminal.global_position
 	for frame in range(4):
 		await physics_frame
@@ -61,7 +61,7 @@ func _run() -> void:
 	assert(game_manager.player_health == player.max_health, "Respawn did not restore health.")
 
 	var next_stage_path := "res://Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn"
-	assert(level.get_node("Level Exit").get("next_scene_path") == next_stage_path, "Rooftop exit is not linked to campaign stage 1-2.")
+	assert(level.get_node("Markers/StageExit").get("next_scene_path") == next_stage_path, "Rooftop exit is not linked to campaign stage 1-2.")
 	assert(load(next_stage_path) != null, "Campaign stage 1-2 could not be loaded.")
 	for path in [
 		"res://scenes/vfx/SparkBurst.tscn",
@@ -77,7 +77,7 @@ func _run() -> void:
 	var stage_controller := level.get_node_or_null("StageController") as StageController
 	assert(stage_controller != null, "Stage runtime controller was not attached.")
 	stage_controller.complete_objectives_for_test()
-	var level_exit: Area2D = level.get_node("Level Exit")
+	var level_exit: Area2D = level.get_node("Markers/StageExit")
 	player.global_position = level_exit.global_position
 	for frame in range(90):
 		await physics_frame

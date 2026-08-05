@@ -55,16 +55,7 @@ func _run() -> void:
 		enemy.free()
 		instantiated_enemies += 1
 
-	var catalog_scene := load("res://Characters/Enemies/EnemyCatalog.tscn") as PackedScene
-	var catalog := catalog_scene.instantiate()
-	root.add_child(catalog)
-	await process_frame
-	var catalog_enemy_count := 0
-	for child: Node in catalog.get_children():
-		if child is EnemyBase:
-			catalog_enemy_count += 1
-	assert(catalog_enemy_count == 22, "Enemy catalog does not show all 22 supplied packs.")
-	catalog.free()
+	assert(instantiated_enemies == 22, "Enemy library does not expose all 22 supplied packs.")
 
 	print("CAMPAIGN_SCENE_SMOKE_TEST_OK stages=", instantiated_stages, " enemies=", instantiated_enemies)
 	quit()

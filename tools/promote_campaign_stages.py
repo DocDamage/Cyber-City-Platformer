@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Promote generated campaign layouts by removing editor-only guide sections."""
+"""Promote campaign layouts by removing editor-only guide residue."""
 
 from __future__ import annotations
 
@@ -24,14 +24,21 @@ def remove_resource_block(text: str, resource_id: str) -> str:
 
 def promote(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
-    if not any(script in text for script in OLD_SCRIPTS) and "[node name=\"DesignGuide\"" not in text:
-        return False
+    original = text
     for script in OLD_SCRIPTS:
         text = text.replace(script, NEW_SCRIPT)
+    text = text.replace("Gradient_prototype_light", "Gradient_ambient_light")
+    text = text.replace(
+        "GradientTexture2D_prototype_light", "GradientTexture2D_ambient_light"
+    )
+    text = text.replace("GradientTexture_prototype_light", "GradientTexture_ambient_light")
+    text = text.replace('name="PrototypeLight"', 'name="AmbientKeyLight"')
     text = re.sub(r'\ndesign_notes = ".*?"\n', "\n", text, flags=re.DOTALL)
     text = remove_resource_block(text, "StyleBox_guide")
     text = remove_resource_block(text, "StyleBox_tag")
     text = re.sub(r'\n\[node name="DesignGuide".*\Z', "\n", text, flags=re.DOTALL)
+    if text == original:
+        return False
     path.write_text(text, encoding="utf-8", newline="\n")
     return True
 

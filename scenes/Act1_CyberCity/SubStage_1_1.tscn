@@ -18,6 +18,9 @@ script = ExtResource("1_stage_base")
 stage_act = 1
 stage_sub = 1
 environment_tint = Color(0.78, 0.54, 0.62, 1)
+runtime_enabled = false
+player_spawn_path = NodePath("PlayerSpawn")
+stage_exit_path = NodePath("StageExit")
 
 [node name="SunsetBackdrop" type="Polygon2D" parent="."]
 z_index = -10

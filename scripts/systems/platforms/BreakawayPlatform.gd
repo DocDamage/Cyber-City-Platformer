@@ -6,6 +6,7 @@ extends StaticBody2D
 @export_range(0.5, 8.0, 0.1) var reset_delay := 2.5
 
 var _collapsing := false
+var _generation := 0
 var _collision: CollisionShape2D
 var _visual: Polygon2D
 
@@ -22,15 +23,31 @@ func _on_body_entered(body: Node) -> void:
 
 func _collapse_cycle() -> void:
 	_collapsing = true
+	_generation += 1
+	var generation := _generation
 	_visual.color = Color("ff405f")
 	await get_tree().create_timer(collapse_delay).timeout
+	if generation != _generation:
+		return
 	_collision.set_deferred("disabled", true)
 	_visual.visible = false
 	await get_tree().create_timer(reset_delay).timeout
+	if generation != _generation:
+		return
 	_collision.set_deferred("disabled", false)
 	_visual.visible = true
 	_visual.color = Color("ffc857")
 	_collapsing = false
+
+
+func reset_platform() -> void:
+	_generation += 1
+	_collapsing = false
+	if _collision != null:
+		_collision.set_deferred("disabled", false)
+	if _visual != null:
+		_visual.visible = true
+		_visual.color = Color("ffc857")
 
 
 func _build_components() -> void:

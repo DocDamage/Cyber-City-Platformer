@@ -59,6 +59,7 @@ var _laser_base_angle := 0.0
 var _laser_direction := 1.0
 var _intro_remaining := 0.0
 var _spawned_attack_nodes: Array[Node] = []
+var _stage_exit: StageExit
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
@@ -166,6 +167,16 @@ func complete_intro() -> void:
 
 func get_attack_roster() -> Array[StringName]:
 	return [&"projectile_volley", &"dash", &"laser_sweep"]
+
+
+func configure_stage(stage_exit: StageExit, target: Node2D, arena_bounds: Rect2) -> void:
+	_stage_exit = stage_exit
+	_target = target
+	if arena_bounds.size.x > 0.0:
+		arena_half_width = maxf(arena_bounds.size.x * 0.5 - 60.0, 80.0)
+		global_position.x = arena_bounds.get_center().x
+		_arena_origin = global_position
+	_lock_stage_exits()
 
 
 func reset_encounter() -> void:
@@ -452,12 +463,18 @@ func _on_player_died() -> void:
 
 
 func _lock_stage_exits() -> void:
+	if _stage_exit != null:
+		_stage_exit.set_locked(true)
+		return
 	for stage_exit: Node in get_tree().get_nodes_in_group(&"stage_exits"):
 		if _shares_stage_root(stage_exit) and stage_exit.has_method(&"set_locked"):
 			stage_exit.call(&"set_locked", true)
 
 
 func _unlock_stage_exits() -> void:
+	if _stage_exit != null:
+		_stage_exit.set_locked(false)
+		return
 	for stage_exit: Node in get_tree().get_nodes_in_group(&"stage_exits"):
 		if _shares_stage_root(stage_exit) and stage_exit.has_method(&"set_locked"):
 			stage_exit.call(&"set_locked", false)

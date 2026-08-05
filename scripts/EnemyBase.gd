@@ -32,11 +32,14 @@ const PROJECTILE_SCENE := preload("res://scenes/systems/security/EnemyProjectile
 @export var initial_state: State = State.IDLE
 @export_enum("Left:-1", "Right:1") var starting_direction := -1
 @export var uses_gravity := true
+@export_range(0.0, 0.8, 0.05) var knockback_resistance := 0.0
+@export_range(0.0, 1200.0, 1.0) var detection_radius := 0.0
 @export var movement_animation: StringName
 @export var death_animation: StringName
 @export var sprite_visual_scale := Vector2.ONE
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity_multiplier := 1.0
 var health := 0
 var direction := -1
 var state: State = State.IDLE
@@ -85,7 +88,7 @@ func _physics_process(delta: float) -> void:
 		return
 	_attack_cooldown_remaining = maxf(_attack_cooldown_remaining - delta, 0.0)
 	if uses_gravity and not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * gravity_multiplier * delta
 	if not is_instance_valid(_chase_target):
 		_chase_target = null
 		if state == State.CHASE:
@@ -122,7 +125,7 @@ func take_damage(amount: int) -> bool:
 
 func apply_knockback(force: Vector2) -> void:
 	if not is_dead:
-		velocity += force
+		velocity += force * (1.0 - knockback_resistance)
 
 
 func set_state(next_state: State) -> void:
@@ -135,6 +138,23 @@ func get_chase_target() -> Node2D:
 
 func get_archetype() -> StringName:
 	return archetype
+
+
+func set_gravity_multiplier(value: float) -> void:
+	gravity_multiplier = clampf(value, -2.0, 3.0)
+
+
+func get_default_detection_radius() -> float:
+	return float(_get_enemy_info().get("detection_radius", 210.0))
+
+
+func set_detection_radius(value: float) -> void:
+	detection_radius = clampf(value, 1.0, 1200.0)
+	if detection_area == null:
+		return
+	var detection_collision := detection_area.get_node_or_null("CollisionShape2D") as CollisionShape2D
+	if detection_collision != null and detection_collision.shape is CircleShape2D:
+		(detection_collision.shape as CircleShape2D).radius = detection_radius
 
 
 func _update_idle(delta: float) -> void:
@@ -313,7 +333,9 @@ func _configure_runtime_components() -> void:
 		if circle == null:
 			circle = CircleShape2D.new()
 			detection_collision.shape = circle
-		circle.radius = float(_get_enemy_info().get("detection_radius", 210.0))
+		if detection_radius <= 0.0:
+			detection_radius = get_default_detection_radius()
+		circle.radius = detection_radius
 
 
 func _build_attack_controller() -> void:
@@ -428,11 +450,15 @@ func _play_first_available(candidates: Array[StringName]) -> StringName:
 
 
 func _get_enemy_info() -> Dictionary:
+	if not is_inside_tree():
+		return {}
 	var registry := get_node_or_null("/root/AssetRegistry")
 	return registry.call(&"get_enemy_info", enemy_id) if registry != null else {}
 
 
 func _get_enemy_sprite_frames(requested_enemy_id: StringName) -> SpriteFrames:
+	if not is_inside_tree():
+		return null
 	var registry := get_node_or_null("/root/AssetRegistry")
 	if registry == null:
 		push_error("EnemyBase requires AssetRegistry.")

@@ -19,12 +19,12 @@
 [ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="17_4a2px"]
 [ext_resource type="PackedScene" path="res://Characters/Bosses/Scenes/act2_assembly_colossus.tscn" id="18_boss"]
 
-[sub_resource type="Gradient" id="Gradient_prototype_light"]
+[sub_resource type="Gradient" id="Gradient_ambient_light"]
 offsets = PackedFloat32Array(0, 0.5, 1)
 colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
-gradient = SubResource("Gradient_prototype_light")
+[sub_resource type="GradientTexture2D" id="GradientTexture_ambient_light"]
+gradient = SubResource("Gradient_ambient_light")
 width = 280
 height = 280
 fill = 1
@@ -36,6 +36,7 @@ size = Vector2(5500, 140)
 
 [node name="AssemblyEngine" type="Node2D" unique_id=658430627]
 script = ExtResource("1_st05x")
+boss_path = NodePath("Enemies/AssemblyColossus")
 campaign_act = 2
 stage_id = &"2-5"
 stage_title = "Assembly Engine"
@@ -156,11 +157,11 @@ position = Vector2(4120, 430)
 
 [node name="Lighting" type="Node2D" parent="." unique_id=1870044634]
 
-[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=1937863594]
+[node name="AmbientKeyLight" type="PointLight2D" parent="Lighting" unique_id=1937863594]
 position = Vector2(720, 310)
 color = Color(0.1, 0.65, 1, 1)
 energy = 0.8
-texture = SubResource("GradientTexture_prototype_light")
+texture = SubResource("GradientTexture_ambient_light")
 texture_scale = 2.0
 
 [node name="Markers" type="Node2D" parent="." unique_id=7785183]
@@ -218,4 +219,3 @@ shape = SubResource("RectangleShape2D_hmn2i")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1337399914 instance=ExtResource("17_4a2px")]
 layer = 20
-

@@ -21,12 +21,12 @@
 [ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="19_e00gc"]
 [ext_resource type="PackedScene" path="res://Characters/Bosses/Scenes/act3_lunar_oracle.tscn" id="20_boss"]
 
-[sub_resource type="Gradient" id="Gradient_prototype_light"]
+[sub_resource type="Gradient" id="Gradient_ambient_light"]
 offsets = PackedFloat32Array(0, 0.5, 1)
 colors = PackedColorArray(0.1, 0.85, 1, 0.5, 0.1, 0.4, 1, 0.15, 0.1, 0.4, 1, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture_prototype_light"]
-gradient = SubResource("Gradient_prototype_light")
+[sub_resource type="GradientTexture2D" id="GradientTexture_ambient_light"]
+gradient = SubResource("Gradient_ambient_light")
 width = 280
 height = 280
 fill = 1
@@ -38,6 +38,7 @@ size = Vector2(5500, 140)
 
 [node name="OrbitalCommand" type="Node2D" unique_id=2138866288]
 script = ExtResource("1_4pglj")
+boss_path = NodePath("Enemies/LunarOracle")
 campaign_act = 3
 stage_id = &"3-5"
 stage_title = "Orbital Command"
@@ -150,11 +151,11 @@ position = Vector2(4120, 430)
 
 [node name="Lighting" type="Node2D" parent="." unique_id=1761796477]
 
-[node name="PrototypeLight" type="PointLight2D" parent="Lighting" unique_id=1016797978]
+[node name="AmbientKeyLight" type="PointLight2D" parent="Lighting" unique_id=1016797978]
 position = Vector2(720, 310)
 color = Color(0.1, 0.65, 1, 1)
 energy = 0.8
-texture = SubResource("GradientTexture_prototype_light")
+texture = SubResource("GradientTexture_ambient_light")
 texture_scale = 2.0
 
 [node name="Markers" type="Node2D" parent="." unique_id=999214237]
@@ -212,4 +213,3 @@ shape = SubResource("RectangleShape2D_62c1h")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=592719459 instance=ExtResource("19_e00gc")]
 layer = 20
-

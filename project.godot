@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cyber City Platformer"
-config/version="1.0.0-rc.1"
+config/version="1.0.0-rc.2"
 run/main_scene="res://scenes/ui/TitleScreen.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"

@@ -1,6 +1,6 @@
 # Testing
 
-All automation is pinned to Godot `4.7.1.stable.official.a13da4feb`. Each GDScript test runs in an isolated headless process and returns a meaningful exit code. On Windows, the Python runner resolves the small official console launcher to the real process and uses Godot log files so timeouts are reliable.
+All automation is pinned to Godot `4.7.1.stable.official.a13da4feb`. Each of the 18 commands runs in an isolated headless process and returns a meaningful exit code. The runner also fails a command if Godot prints `ERROR:` or `SCRIPT ERROR:` despite returning zero. On Windows, it resolves the small official console launcher to the real process and uses Godot log files so timeouts are reliable.
 
 ## Complete local gate
 
@@ -11,7 +11,7 @@ python tools/inventory_runtime_assets.py --check
 
 Available repeatable groups are `import`, `resource`, `unit`, `systems`, `campaign`, and `shell`. Combine groups by repeating `--group`. Override the engine with `GODOT_BIN` or `--godot`; the per-command timeout defaults to 120 seconds.
 
-The full gate covers import/parse validation, clean-clone dependencies, schema/state transitions, player combat and movement, production encounters, bosses, stage mechanics, performance bounds, all twenty production scenes, deterministic campaign traversal, atomic save recovery, settings/remap persistence, every shell route, and missing-audio fallbacks.
+The full gate covers import/parse validation, clean-clone dependencies, schema/state transitions, player combat and movement, production encounters, live per-act balance, bosses, 23 authored mechanic kinds, performance bounds, all twenty production scenes, deterministic campaign traversal, atomic save recovery, settings/remap persistence, every shell route, and missing-audio fallbacks.
 
 ## Export gate
 

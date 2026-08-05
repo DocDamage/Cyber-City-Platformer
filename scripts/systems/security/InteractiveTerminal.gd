@@ -4,7 +4,13 @@ extends Area2D
 signal activated
 signal focus_changed(active: bool, prompt: String)
 
+@export var terminal_id: StringName = &"terminal"
+@export_enum("terminal", "switch", "lore") var interaction_kind := "terminal"
+@export_enum("encounter", "checkpoint", "save") var persistence := "encounter"
+@export_multiline var lore_text := ""
+
 var linked_gate: SecurityGate
+var linked_targets: Array[Node] = []
 var _player_inside := false
 var _activated := false
 var _label: Label
@@ -34,6 +40,7 @@ func _ready() -> void:
 	_label.text = "PRESS E / Y: ACCESS"
 	_label.visible = false
 	add_child(_label)
+	_restore_persisted_state()
 	body_entered.connect(func(body: Node) -> void:
 		if body.is_in_group(&"player"):
 			_player_inside = true
@@ -71,7 +78,66 @@ func activate() -> void:
 	if _activated:
 		return
 	_activated = true
-	_label.text = "ACCESS GRANTED"
+	_label.text = lore_text if interaction_kind == "lore" and not lore_text.is_empty() else "ACCESS GRANTED"
 	if linked_gate != null:
-		linked_gate.open_gate()
+		linked_gate.request_open(terminal_id)
+	for target: Node in linked_targets:
+		_activate_target(target)
+	_persist_state(true)
 	activated.emit()
+
+
+func link_target(target: Node) -> void:
+	if target == null or linked_targets.has(target):
+		return
+	linked_targets.append(target)
+	if _activated:
+		_activate_target(target)
+
+
+func reset_interaction() -> void:
+	if persistence in ["checkpoint", "save"] and _get_persisted_state():
+		return
+	_activated = false
+	_hold_progress = 0.0
+	if _label != null:
+		_label.text = "PRESS E / Y: ACCESS"
+
+
+func is_activated() -> bool:
+	return _activated
+
+
+func _activate_target(target: Node) -> void:
+	if target.has_method(&"request_open"):
+		target.call(&"request_open", terminal_id)
+	elif target.has_method(&"set_enabled"):
+		target.call(&"set_enabled", false)
+	elif target.has_method(&"activate"):
+		target.call(&"activate")
+
+
+func _persist_state(value: bool) -> void:
+	if persistence not in ["checkpoint", "save"]:
+		return
+	var manager := get_node_or_null("/root/GameManager")
+	if manager != null:
+		manager.call(&"set_stage_flag", _stage_scene_path(), terminal_id, value, persistence == "save")
+
+
+func _get_persisted_state() -> bool:
+	var manager := get_node_or_null("/root/GameManager")
+	return bool(manager.call(&"get_stage_flag", _stage_scene_path(), terminal_id, false)) if manager != null else false
+
+
+func _restore_persisted_state() -> void:
+	if persistence in ["checkpoint", "save"] and _get_persisted_state():
+		_activated = true
+		_label.text = "ACCESS RESTORED"
+
+
+func _stage_scene_path() -> String:
+	var node: Node = self
+	while node.get_parent() != null and node.get_parent() != get_tree().root:
+		node = node.get_parent()
+	return node.scene_file_path

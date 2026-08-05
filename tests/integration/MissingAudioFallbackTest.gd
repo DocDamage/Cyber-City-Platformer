@@ -19,7 +19,8 @@ func _run() -> void:
 	assert(missing.size() == configured_paths.size(), "The fixture did not exercise every unique configured stream.")
 	for path: String in configured_paths:
 		assert(path in missing, "Configured missing-audio path was not reported: %s" % path)
-	assert(loaded_sfx.size() == 14, "Procedural fallback SFX were not generated.")
+	var expected_sfx: Dictionary = constants.get("SFX_PATHS", {})
+	assert(loaded_sfx.size() == expected_sfx.size(), "Procedural fallback SFX were not generated for every configured effect.")
 	for required_sfx: StringName in [&"laser_shot", &"sword_slash", &"explosion", &"checkpoint"]:
 		assert(loaded_sfx.has(required_sfx), "Missing procedural fallback: %s" % required_sfx)
 	print("MISSING_AUDIO_FALLBACK_TEST_OK missing=", missing.size(), " fallback_sfx=", loaded_sfx.size())

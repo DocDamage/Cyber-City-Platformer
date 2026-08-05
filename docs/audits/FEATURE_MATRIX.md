@@ -9,7 +9,7 @@ Status values are locked to: **Not started**, **Foundation only**, **Implemented
 | Player upgrades | Verified | CCP-304 | State/save tests cover award levels, reset, save, recovery, and load. |
 | Enemy behavior | Verified | CCP-400/404 | 22 production scenes and 10 archetypes instantiate, detect, attack, and reset in campaign/system tests. |
 | Bosses | Verified | CCP-1000/1001 | Four unique rosters, phases, retry, cleanup, defeat, reward, HUD, and exit gates pass boss smoke. |
-| Stage-specific mechanics | Verified | CCP-501/506 | Production runtime test covers moving/breakaway/conveyor platforms, hazards, gravity, turrets, terminals, and gates. |
+| Stage-specific mechanics | Verified | CCP-501/506 | `StageMechanicsTest` and `CampaignContentTest` cover multi-point moving/breakaway/conveyor platforms, 8 hazard classes, gravity, camera/visibility zones, turrets, terminals, switches, and persistent gates. |
 | Checkpoints | Verified | CCP-202/403 | Campaign runtime and save tests verify every checkpoint plus persisted recovery/reset behavior. |
 | Camera | Verified | CCP-500 | All 20 stage bounds and clamped start/midpoint/exit positions pass campaign runtime assertions. |
 | Save/load | Verified | CCP-1101 | Atomic primary/backup, checksum, corruption recovery, migration schema, reset, and restart data pass. |
@@ -17,7 +17,7 @@ Status values are locked to: **Not started**, **Foundation only**, **Implemented
 | Settings | Verified | CCP-1103 | Independent atomic persistence, immediate application, and keyboard/controller-family remaps pass. |
 | Controller support | Implemented | CCP-301/1100/1103 | Bindings, deadzone, focus, vibration, reconnect-safe keyboard fallback, and persistent remap exist; hardware matrix remains manual. |
 | Accessibility | Implemented | CCP-1104 | Reduced flashing, shake, vibration, contrast, hold interaction, deadzone, cues, and UI scale persist; visual matrix remains manual. |
-| Audio | Verified | CCP-102/1203 | Clean/missing manifests, 14 procedural fallbacks, fixed pools, crossfade behavior, and licenses pass. |
+| Audio | Verified | CCP-102/1203 | Clean/missing manifests, 17 procedural fallbacks, fixed pools, movement/conveyor/combat/UI/hazard cues, crossfade behavior, and licenses pass. |
 | VFX | Verified | CCP-103/1201/1202 | Clean load, reduced-effects response, and bounded one-shot cleanup pass; final visibility check remains manual. |
 | Stage progression | Verified | CCP-201/202/1303 | Clean-state traversal visits all 20 production stage IDs in order and completes exactly once. |
 | Ending/results | Verified | CCP-1105 | Final completion reaches results once with title/continue behavior covered by traversal and shell tests. |
