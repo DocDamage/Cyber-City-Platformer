@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/BossBase.tscn" id="1_base"]
 [ext_resource type="SpriteFrames" path="res://Characters/Enemies/SpriteFrames/minotaur.tres" id="2_frames"]
+[ext_resource type="Script" path="res://scripts/bosses/AssemblyColossus.gd" id="3_controller"]
 
 [node name="AssemblyColossus" instance=ExtResource("1_base")]
+script = ExtResource("3_controller")
 boss_name = "ASSEMBLY COLOSSUS"
 act_number = 2
 max_health = 30

@@ -31,12 +31,13 @@ func _run() -> void:
 	assert(audio_manager.get_node("BGMPlayer0") is AudioStreamPlayer, "BGM channel is missing.")
 	assert(audio_manager.get_node("SFXPlayer00") is AudioStreamPlayer, "SFX channel is missing.")
 
-	var target := CharacterBody2D.new()
+	var target := load("res://tests/fixtures/BossTestTarget.gd").new() as CharacterBody2D
 	target.name = "BossTestTarget"
-	target.add_to_group(&"player")
 	target.position = Vector2(180.0, 0.0)
 	root.add_child(target)
 	var defeated_bosses: Array[String] = []
+	var attack_rosters := {}
+	var controller_scripts := {}
 	for scene_path: String in BOSS_SCENES:
 		var packed := load(scene_path) as PackedScene
 		assert(packed != null, "Boss scene is not loadable: %s" % scene_path)
@@ -47,8 +48,15 @@ func _run() -> void:
 		assert(boss.get_node("Hurtbox") is Hurtbox, "Boss is missing Hurtbox.")
 		assert(boss.get_node("SlashHitbox") is Hitbox, "Boss is missing slash Hitbox.")
 		assert(boss.get_phase_number() == 1 and is_equal_approx(boss.get_health_percentage(), 1.0), "Boss did not initialize in Phase 1.")
+		var roster := boss.get_attack_roster()
+		var roster_key := ",".join(PackedStringArray(roster))
+		attack_rosters[roster_key] = true
+		controller_scripts[boss.get_script().resource_path] = true
+		boss.start_encounter()
+		assert(target.get("input_disabled"), "Boss intro did not lock player input.")
+		boss.complete_intro()
+		assert(not target.get("input_disabled"), "Boss intro did not release player input.")
 		if scene_path == BOSS_SCENES[0]:
-			boss.start_encounter()
 			boss.set("_attack_cooldown", 0.0)
 			await physics_frame
 			await physics_frame
@@ -62,17 +70,33 @@ func _run() -> void:
 			assert((boss.get_node("SlashHitbox") as Hitbox).is_active(), "Phase 2 did not activate its dash-slash hitbox.")
 		boss.take_damage(boss.health - floori(boss.max_health * boss.phase_three_threshold))
 		assert(boss.state == BossBase.State.PHASE_3, "desperation health gate did not enter Phase 3.")
-		if scene_path == BOSS_SCENES[0]:
-			boss.set("_attack_cooldown", 0.0)
-			await physics_frame
-			await physics_frame
-			assert((boss.get_node("LaserPivot/LaserHitbox/LaserVisual") as Line2D).visible, "Phase 3 did not start its sweeping laser.")
+		boss.set("_attack_cooldown", 0.0)
+		await physics_frame
+		await physics_frame
+		if boss is HelixWarden or boss is AssemblyColossus:
+			assert(not get_nodes_in_group(&"hazards").is_empty(), "%s did not create its distinct arena hazard." % boss.boss_name)
+		else:
+			assert((boss.get_node("LaserPivot/LaserHitbox/LaserVisual") as Line2D).visible, "%s did not start its sweep attack." % boss.boss_name)
 		boss.boss_defeated.connect(func() -> void: defeated_bosses.append(boss.boss_name))
 		boss.take_damage(999)
 		assert(boss.is_defeated, "Boss did not enter defeated state at zero health.")
 		boss.free()
 
 	assert(defeated_bosses.size() == 4, "boss_defeated did not emit for every Act boss.")
+	assert(attack_rosters.size() == 4 and controller_scripts.size() == 4, "Bosses do not have four distinct controllers and attack rosters.")
+	var manager := root.get_node("GameManager")
+	for reward: StringName in [&"max_health", &"max_energy", &"energy_regeneration", &"melee_damage"]:
+		assert(int(manager.call(&"get_upgrade_level", reward)) == 1, "Boss reward was not applied: %s" % reward)
+	var retry_boss := (load(BOSS_SCENES[0]) as PackedScene).instantiate() as BossBase
+	root.add_child(retry_boss)
+	await process_frame
+	retry_boss.start_encounter()
+	retry_boss.complete_intro()
+	retry_boss.take_damage(3)
+	target.died.emit()
+	await process_frame
+	assert(not retry_boss.encounter_active and retry_boss.health == retry_boss.max_health, "Boss retry did not reset cleanly after player death.")
+	retry_boss.free()
 	target.free()
 	for stage_path: String in BOSS_STAGE_SCENES:
 		var stage := (load(stage_path) as PackedScene).instantiate()

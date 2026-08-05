@@ -79,6 +79,7 @@ func bind_boss(boss: BossBase) -> void:
 	_connect_boss_signal(&"health_changed", _on_boss_health_changed)
 	_connect_boss_signal(&"phase_changed", _on_boss_phase_changed)
 	_connect_boss_signal(&"boss_defeated", _on_boss_defeated)
+	_connect_boss_signal(&"encounter_reset", _on_boss_encounter_reset)
 	if boss.encounter_active:
 		_on_boss_encounter_started()
 
@@ -118,6 +119,14 @@ func _on_boss_defeated() -> void:
 	tween.tween_property(boss_panel, "modulate:a", 0.0, 0.4)
 	await tween.finished
 	boss_panel.visible = false
+
+
+func _on_boss_encounter_reset() -> void:
+	boss_panel.visible = false
+	boss_panel.modulate.a = 1.0
+	if _boss != null:
+		boss_phase_label.text = "PHASE 1"
+		boss_health_bar.value = _boss.max_health
 
 
 func _shares_stage_root(other: Node) -> bool:

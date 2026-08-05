@@ -2,6 +2,9 @@ class_name BossBase
 extends CharacterBody2D
 
 signal encounter_started
+signal intro_started(title: String)
+signal intro_finished
+signal encounter_reset
 signal health_changed(current: int, maximum: int, percentage: float)
 signal phase_changed(previous: State, current: State)
 signal boss_defeated
@@ -30,6 +33,7 @@ const PROJECTILE_SCENE := preload("res://scenes/BossProjectile.tscn")
 @export_range(0.2, 5.0, 0.1) var laser_duration := 1.4
 @export_range(0.2, 5.0, 0.1) var laser_interval := 0.75
 @export_range(0.1, 1.5, 0.05) var laser_sweep_angle := 0.78
+@export_range(0.0, 3.0, 0.05) var intro_duration := 0.7
 @export var animation_library: SpriteFrames
 @export var idle_animation: StringName = &"idle"
 @export var move_animation: StringName = &"run"
@@ -43,6 +47,7 @@ var health := 0
 var state: State = State.PHASE_1
 var encounter_active := false
 var is_defeated := false
+var intro_active := false
 
 var _target: Node2D
 var _arena_origin := Vector2.ZERO
@@ -52,6 +57,8 @@ var _dash_time_remaining := 0.0
 var _laser_elapsed := -1.0
 var _laser_base_angle := 0.0
 var _laser_direction := 1.0
+var _intro_remaining := 0.0
+var _spawned_attack_nodes: Array[Node] = []
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
@@ -90,6 +97,12 @@ func _physics_process(delta: float) -> void:
 		if _target != null and absf(_target.global_position.x - global_position.x) <= activation_range:
 			start_encounter()
 		return
+	if intro_active:
+		_intro_remaining = maxf(_intro_remaining - delta, 0.0)
+		velocity = Vector2.ZERO
+		if is_zero_approx(_intro_remaining):
+			complete_intro()
+		return
 
 	_face_target()
 	match state:
@@ -106,9 +119,16 @@ func start_encounter() -> void:
 	if encounter_active or is_defeated:
 		return
 	encounter_active = true
+	intro_active = intro_duration > 0.0
+	_intro_remaining = intro_duration
 	_attack_cooldown = 0.35
 	encounter_started.emit()
+	intro_started.emit(boss_name)
 	health_changed.emit(health, max_health, get_health_percentage())
+	if _target != null and _target.has_method(&"set_input_disabled"):
+		_target.call(&"set_input_disabled", true)
+	if not intro_active:
+		complete_intro()
 	var audio := get_node_or_null("/root/AudioManager")
 	if audio != null:
 		audio.call(&"play_boss_bgm", act_number)
@@ -119,6 +139,8 @@ func take_damage(amount: int) -> bool:
 		return false
 	if not encounter_active:
 		start_encounter()
+	if intro_active:
+		return false
 	health = maxi(health - amount, 0)
 	health_changed.emit(health, max_health, get_health_percentage())
 	if health == 0:
@@ -130,6 +152,41 @@ func take_damage(amount: int) -> bool:
 	if audio != null:
 		audio.call(&"play_sfx", &"armor_hit", global_position, -7.0)
 	return true
+
+
+func complete_intro() -> void:
+	if not encounter_active:
+		return
+	intro_active = false
+	_intro_remaining = 0.0
+	if _target != null and _target.has_method(&"set_input_disabled"):
+		_target.call(&"set_input_disabled", false)
+	intro_finished.emit()
+
+
+func get_attack_roster() -> Array[StringName]:
+	return [&"projectile_volley", &"dash", &"laser_sweep"]
+
+
+func reset_encounter() -> void:
+	if is_defeated:
+		return
+	_cleanup_spawned_attacks()
+	health = max_health
+	state = State.PHASE_1
+	encounter_active = false
+	intro_active = false
+	_intro_remaining = 0.0
+	velocity = Vector2.ZERO
+	global_position = _arena_origin
+	_attack_cooldown = 0.0
+	_dash_time_remaining = 0.0
+	_stop_laser()
+	slash_hitbox.deactivate()
+	hurtbox.set_invincible(false)
+	health_changed.emit(health, max_health, 1.0)
+	_lock_stage_exits()
+	encounter_reset.emit()
 
 
 func get_health_percentage() -> float:
@@ -264,14 +321,7 @@ func _fire_projectile_volley(projectile_count: int, spread_radians: float) -> vo
 	var aim_direction := (_target.global_position - muzzle.global_position).normalized()
 	var first_angle := -spread_radians * float(projectile_count - 1) * 0.5
 	for index in range(projectile_count):
-		var projectile := PROJECTILE_SCENE.instantiate()
-		var projectile_parent := get_tree().current_scene
-		if projectile_parent == null:
-			projectile_parent = get_parent()
-		projectile_parent.add_child(projectile)
-		projectile.global_position = muzzle.global_position
-		projectile.modulate = accent_color
-		projectile.call(&"launch", aim_direction.rotated(first_angle + spread_radians * index))
+		_spawn_projectile(aim_direction.rotated(first_angle + spread_radians * index))
 	_play_animation(attack_animation)
 	var audio := get_node_or_null("/root/AudioManager")
 	if audio != null:
@@ -290,6 +340,8 @@ func _find_target() -> void:
 	for node: Node in get_tree().get_nodes_in_group(&"player"):
 		if node is Node2D:
 			_target = node as Node2D
+			if _target.has_signal(&"died") and not _target.is_connected(&"died", _on_player_died):
+				_target.connect(&"died", _on_player_died)
 			return
 	_target = null
 
@@ -306,6 +358,7 @@ func _die() -> void:
 		return
 	is_defeated = true
 	encounter_active = false
+	intro_active = false
 	velocity = Vector2.ZERO
 	set_physics_process(false)
 	body_collision.set_deferred("disabled", true)
@@ -315,11 +368,14 @@ func _die() -> void:
 	_play_animation(death_animation)
 	boss_defeated.emit()
 	_unlock_stage_exits()
-	for projectile: Node in get_tree().get_nodes_in_group(&"boss_projectiles"):
-		projectile.queue_free()
+	_cleanup_spawned_attacks()
 	var manager := get_node_or_null("/root/GameManager")
-	if manager != null and score_value > 0:
-		manager.call(&"add_score", score_value)
+	if manager != null:
+		if score_value > 0:
+			manager.call(&"add_score", score_value)
+		manager.call(&"mark_boss_defeated", StringName(boss_name.to_snake_case()))
+		var rewards := [&"max_health", &"max_energy", &"energy_regeneration", &"melee_damage"]
+		manager.call(&"award_upgrade", rewards[act_number - 1])
 	var vfx := get_node_or_null("/root/VFXSpawner")
 	if vfx != null:
 		for offset in [Vector2(0.0, -36.0), Vector2(-28.0, -18.0), Vector2(30.0, -48.0)]:
@@ -338,6 +394,61 @@ func _die() -> void:
 func _finish_death() -> void:
 	await get_tree().create_timer(0.85, true, false, true).timeout
 	queue_free()
+
+
+func _spawn_projectile(direction: Vector2, speed_scale := 1.0) -> Node:
+	var projectile := PROJECTILE_SCENE.instantiate()
+	var projectile_parent := get_tree().current_scene if get_tree().current_scene != null else get_parent()
+	projectile_parent.add_child(projectile)
+	projectile.global_position = muzzle.global_position
+	projectile.modulate = accent_color
+	projectile.set("speed", float(projectile.get("speed")) * speed_scale)
+	projectile.call(&"launch", direction)
+	_spawned_attack_nodes.append(projectile)
+	return projectile
+
+
+func _spawn_shockwave() -> void:
+	_spawn_projectile(Vector2.LEFT, 1.35)
+	_spawn_projectile(Vector2.RIGHT, 1.35)
+
+
+func _spawn_arena_hazard(hazard_position: Vector2, size := Vector2(120.0, 54.0), lifetime := 2.5) -> Hazard:
+	var hazard := Hazard.new()
+	hazard.hazard_id = &"boss_arena_hazard"
+	hazard.hazard_size = size
+	hazard.active_duration = lifetime
+	hazard.inactive_duration = 0.0
+	var parent := get_tree().current_scene if get_tree().current_scene != null else get_parent()
+	parent.add_child(hazard)
+	hazard.global_position = hazard_position
+	_spawned_attack_nodes.append(hazard)
+	_expire_attack_node(hazard, lifetime)
+	return hazard
+
+
+func _teleport_to_arena_offset(offset_x: float, offset_y := 0.0) -> void:
+	global_position = _arena_origin + Vector2(clampf(offset_x, -arena_half_width, arena_half_width), offset_y)
+	velocity = Vector2.ZERO
+
+
+func _expire_attack_node(node: Node, lifetime: float) -> void:
+	await get_tree().create_timer(lifetime, true, false, true).timeout
+	_spawned_attack_nodes.erase(node)
+	if is_instance_valid(node):
+		node.queue_free()
+
+
+func _cleanup_spawned_attacks() -> void:
+	for node: Node in _spawned_attack_nodes:
+		if is_instance_valid(node):
+			node.queue_free()
+	_spawned_attack_nodes.clear()
+
+
+func _on_player_died() -> void:
+	if encounter_active and not is_defeated:
+		reset_encounter()
 
 
 func _lock_stage_exits() -> void:
