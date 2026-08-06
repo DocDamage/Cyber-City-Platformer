@@ -1,7 +1,7 @@
 [gd_scene format=4]
 
 [ext_resource type="Script" path="res://scripts/campaign/CampaignStage.gd" id="1_hh6g5"]
-[ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/back.png" id="2_bmfpx"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act3_NeonMoon/Generated/lunar_surface_arrival_panorama_v1.png" id="2_bmfpx"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/middle.png" id="3_spf5b"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/front.png" id="4_w6h77"]
 [ext_resource type="TileSet" path="res://Stages/TileSets/Act3_NeonMoon_Palette.tres" id="5_sv8h3"]
@@ -44,7 +44,10 @@ music_path = "res://assets/runtime/audio/music/Street Beats/DavidKBD - Street Be
 far_background = ExtResource("2_bmfpx")
 middle_background = ExtResource("3_spf5b")
 front_background = ExtResource("4_w6h77")
-background_tint = Color(0.7, 0.86, 1, 1)
+use_layer_tints = true
+far_background_tint = Color(1, 1, 1, 1)
+middle_background_tint = Color(0.58, 0.82, 1, 0.3)
+front_background_tint = Color(0.3, 0.62, 1, 0.28)
 
 [node name="Background" type="Node2D" parent="." unique_id=2016288682]
 
@@ -219,4 +222,3 @@ shape = SubResource("RectangleShape2D_r6m88")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=684535405 instance=ExtResource("19_3s5xu")]
 layer = 20
-

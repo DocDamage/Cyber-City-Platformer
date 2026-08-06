@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "profile_source": "district_art_bible_v1",
+  "profiles": {
+    "rooftop_alley": {
+      "region_id": "cyber_city",
+      "art_direction": "Crowded utility roofs framed by pirate-radio aerials and improvised cyan wiring.",
+      "background_color": "071a31",
+      "architecture_color": "102e49",
+      "platform_color": "17445d",
+      "trim_color": "32d9f5",
+      "accent_color": "ff72c6",
+      "atmosphere_color": "5ce8ff",
+      "foreground_color": "0b273d",
+      "backdrop_heights": [0.44, 0.62, 0.35, 0.74, 0.51, 0.67, 0.39, 0.58],
+      "landmark_points": [[-150,110],[-108,42],[-48,18],[-28,-112],[0,-196],[28,-112],[48,18],[108,42],[150,110]],
+      "prop_paths": [
+        "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-a/banner-a1.png",
+        "res://assets/runtime/props/CyberCityProps/Rooftops 2/lights/lights1.png"
+      ],
+      "prop_scale": [1.7, 1.8]
+    },
+    "billboard_highway": {
+      "region_id": "cyber_city",
+      "art_direction": "Wide advertising lanes cut through stacked magenta billboards and suspended maintenance rails.",
+      "background_color": "10142f",
+      "architecture_color": "252353",
+      "platform_color": "283f66",
+      "trim_color": "ff4fb8",
+      "accent_color": "ffd44a",
+      "atmosphere_color": "c65cff",
+      "foreground_color": "191a3d",
+      "backdrop_heights": [0.31, 0.48, 0.71, 0.43, 0.77, 0.36, 0.64, 0.49],
+      "landmark_points": [[-190,105],[-178,-62],[-92,-82],[92,-82],[178,-62],[190,105],[94,105],[76,8],[-76,8],[-94,105]],
+      "prop_paths": [
+        "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-c/banner-c1.png",
+        "res://assets/runtime/props/CyberCityProps/Rooftops 2/banner-e/banner-e1.png"
+      ],
+      "prop_scale": [1.8, 1.8]
+    },
+    "communication_spire": {
+      "region_id": "cyber_city",
+      "art_direction": "A narrow storm-lit climb surrounded by relay cores, diagnostic consoles, and vertical signal traces.",
+      "background_color": "06192b",
+      "architecture_color": "12354c",
+      "platform_color": "194b62",
+      "trim_color": "55f3ff",
+      "accent_color": "9b7cff",
+      "atmosphere_color": "8eeaff",
+      "foreground_color": "09273a",
+      "backdrop_heights": [0.73, 0.46, 0.82, 0.54, 0.88, 0.61, 0.79, 0.42],
+      "landmark_points": [[-86,112],[-62,36],[-32,4],[-18,-116],[-8,-116],[0,-218],[8,-116],[18,-116],[32,4],[62,36],[86,112]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/communication_spire/relay_core.png",
+        "res://assets/runtime/props/districts/communication_spire/service_console.png"
+      ],
+      "prop_scale": [2.1, 2.1]
+    },
+    "skybridge_junction": {
+      "region_id": "cyber_city",
+      "art_direction": "Broken transit decks float between suspension arms, warning beacons, and open storm gaps.",
+      "background_color": "0b1830",
+      "architecture_color": "1a3850",
+      "platform_color": "27516a",
+      "trim_color": "7ee6ff",
+      "accent_color": "ff9f43",
+      "atmosphere_color": "93dfff",
+      "foreground_color": "102d42",
+      "backdrop_heights": [0.28, 0.52, 0.33, 0.69, 0.32, 0.57, 0.29, 0.66],
+      "landmark_points": [[-198,104],[-152,32],[-72,24],[-48,-26],[-12,-12],[12,-44],[48,-18],[78,30],[154,34],[198,104],[78,88],[0,62],[-82,88]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/skybridge_junction/suspension_arm.png",
+        "res://assets/runtime/props/districts/skybridge_junction/signal_flare.png"
+      ],
+      "prop_scale": [2.0, 2.4]
+    },
+    "executive_helipad": {
+      "region_id": "cyber_city",
+      "art_direction": "A clean exposed landing dais with corporate violet lighting, a shuttle, and orbital alignment markers.",
+      "background_color": "11152c",
+      "architecture_color": "303050",
+      "platform_color": "3c4662",
+      "trim_color": "ffd166",
+      "accent_color": "a980ff",
+      "atmosphere_color": "e0ccff",
+      "foreground_color": "20253c",
+      "backdrop_heights": [0.36, 0.34, 0.43, 0.29, 0.38, 0.31, 0.46, 0.35],
+      "landmark_points": [[-186,108],[-164,36],[-102,4],[-48,-20],[48,-20],[102,4],[164,36],[186,108],[108,108],[72,54],[-72,54],[-108,108]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/executive_helipad/shuttle.png",
+        "res://assets/runtime/props/districts/executive_helipad/landing_obelisk.png"
+      ],
+      "prop_scale": [2.0, 1.7]
+    },
+    "sub_level_intake": {
+      "region_id": "robot_factory",
+      "art_direction": "Low pressure tunnels descend between coolant filters, intake canisters, and damp teal turbine housings.",
+      "background_color": "171b1f",
+      "architecture_color": "26383c",
+      "platform_color": "355057",
+      "trim_color": "5bd6c5",
+      "accent_color": "ff9b42",
+      "atmosphere_color": "7fc8bd",
+      "foreground_color": "1b3033",
+      "backdrop_heights": [0.67, 0.58, 0.51, 0.43, 0.37, 0.49, 0.32, 0.41],
+      "landmark_points": [[-152,108],[-138,12],[-92,-52],[-34,-86],[34,-86],[92,-52],[138,12],[152,108],[76,64],[0,34],[-76,64]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/sub_level_intake/coolant_filter.png",
+        "res://assets/runtime/props/districts/sub_level_intake/intake_canister.png"
+      ],
+      "prop_scale": [2.7, 2.2]
+    },
+    "conveyor_assembly": {
+      "region_id": "robot_factory",
+      "art_direction": "Long sorting lanes repeat orange crate modules beneath a rigid overhead conveyor spine.",
+      "background_color": "21170f",
+      "architecture_color": "46301c",
+      "platform_color": "5b3d22",
+      "trim_color": "ffb33f",
+      "accent_color": "6fe5ff",
+      "atmosphere_color": "f1a14b",
+      "foreground_color": "352313",
+      "backdrop_heights": [0.41, 0.45, 0.39, 0.47, 0.42, 0.46, 0.38, 0.44],
+      "landmark_points": [[-196,106],[-196,18],[-132,18],[-132,-34],[-48,-34],[-48,-82],[48,-82],[48,-34],[132,-34],[132,18],[196,18],[196,106]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/conveyor_assembly/sorter_crates.png",
+        "res://assets/runtime/props/districts/conveyor_assembly/conveyor_rack.png"
+      ],
+      "prop_scale": [2.3, 1.8]
+    },
+    "smelting_core": {
+      "region_id": "robot_factory",
+      "art_direction": "Dark cooling shelves orbit a white-hot crucible, hazard drums, and vertical furnace canisters.",
+      "background_color": "24110b",
+      "architecture_color": "4a2413",
+      "platform_color": "63321a",
+      "trim_color": "ff6b1a",
+      "accent_color": "ffe06a",
+      "atmosphere_color": "ff8a32",
+      "foreground_color": "3a190e",
+      "backdrop_heights": [0.48, 0.63, 0.39, 0.72, 0.44, 0.67, 0.36, 0.59],
+      "landmark_points": [[-144,110],[-126,18],[-88,-18],[-58,-124],[-28,-76],[0,-156],[28,-76],[58,-124],[88,-18],[126,18],[144,110],[64,72],[0,48],[-64,72]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/smelting_core/slag_drum.png",
+        "res://assets/runtime/props/districts/smelting_core/furnace_canister.png"
+      ],
+      "prop_scale": [2.2, 1.7]
+    },
+    "robotic_maintenance": {
+      "region_id": "robot_factory",
+      "art_direction": "Cool repair alcoves alternate between service benches, suspended drones, and precise blue work lights.",
+      "background_color": "141c24",
+      "architecture_color": "293b49",
+      "platform_color": "385469",
+      "trim_color": "79d7ff",
+      "accent_color": "a3ff8f",
+      "atmosphere_color": "86c7dd",
+      "foreground_color": "20313d",
+      "backdrop_heights": [0.56, 0.34, 0.66, 0.42, 0.61, 0.37, 0.71, 0.45],
+      "landmark_points": [[-176,108],[-176,-18],[-122,-18],[-122,-82],[-64,-82],[-64,-22],[-18,-22],[-18,-132],[18,-132],[18,-22],[64,-22],[64,-82],[122,-82],[122,-18],[176,-18],[176,108]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/robotic_maintenance/service_bench.png",
+        "res://assets/runtime/props/districts/robotic_maintenance/repair_drones.png"
+      ],
+      "prop_scale": [2.0, 2.0]
+    },
+    "assembly_engine": {
+      "region_id": "robot_factory",
+      "art_direction": "Piston-step platforms converge on a massive cable core and gold control flywheel.",
+      "background_color": "20170f",
+      "architecture_color": "43311f",
+      "platform_color": "58462b",
+      "trim_color": "ffc857",
+      "accent_color": "57d7ff",
+      "atmosphere_color": "d9a74f",
+      "foreground_color": "342718",
+      "backdrop_heights": [0.52, 0.59, 0.66, 0.73, 0.78, 0.69, 0.61, 0.54],
+      "landmark_points": [[-160,108],[-142,22],[-108,-28],[-62,-48],[-34,-108],[0,-134],[34,-108],[62,-48],[108,-28],[142,22],[160,108],[94,76],[52,18],[0,42],[-52,18],[-94,76]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/assembly_engine/cable_core.png",
+        "res://assets/runtime/props/districts/assembly_engine/control_chip.png"
+      ],
+      "prop_scale": [2.2, 2.2]
+    },
+    "lunar_surface_arrival": {
+      "region_id": "neon_moon",
+      "art_direction": "Low-gravity crater shelves surround a half-buried landing pod and tall cyan lunar crystal.",
+      "background_color": "11162d",
+      "architecture_color": "242d4d",
+      "platform_color": "354568",
+      "trim_color": "7de7ff",
+      "accent_color": "a5ff74",
+      "atmosphere_color": "b8dfff",
+      "foreground_color": "1c2944",
+      "backdrop_heights": [0.24, 0.31, 0.22, 0.37, 0.27, 0.35, 0.21, 0.29],
+      "landmark_points": [[-174,108],[-146,52],[-92,30],[-64,-18],[-34,-54],[34,-54],[64,-18],[92,30],[146,52],[174,108],[88,88],[0,68],[-88,88]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/lunar_surface_arrival/landing_pod.png",
+        "res://assets/runtime/props/districts/lunar_surface_arrival/lunar_crystal.png"
+      ],
+      "prop_scale": [1.5, 1.35]
+    },
+    "research_cleanrooms": {
+      "region_id": "neon_moon",
+      "art_direction": "Sterile mint-lit containment cells are framed by specimen racks and analytical consoles.",
+      "background_color": "102126",
+      "architecture_color": "23454a",
+      "platform_color": "356269",
+      "trim_color": "8ffff0",
+      "accent_color": "c38bff",
+      "atmosphere_color": "a1f5e7",
+      "foreground_color": "1a373b",
+      "backdrop_heights": [0.49, 0.36, 0.57, 0.43, 0.62, 0.39, 0.54, 0.46],
+      "landmark_points": [[-112,110],[-104,-74],[-72,-124],[-32,-148],[32,-148],[72,-124],[104,-74],[112,110],[62,82],[46,-46],[-46,-46],[-62,82]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/research_cleanrooms/specimen_rack.png",
+        "res://assets/runtime/props/districts/research_cleanrooms/assay_console.png"
+      ],
+      "prop_scale": [1.9, 1.9]
+    },
+    "security_grid_shaft": {
+      "region_id": "neon_moon",
+      "art_direction": "A severe vertical aperture is punctuated by blue security pods and polarized grid terminals.",
+      "background_color": "10172b",
+      "architecture_color": "263453",
+      "platform_color": "384d70",
+      "trim_color": "5fa8ff",
+      "accent_color": "ff6bd6",
+      "atmosphere_color": "83b9ff",
+      "foreground_color": "1d2944",
+      "backdrop_heights": [0.78, 0.61, 0.84, 0.66, 0.89, 0.72, 0.81, 0.58],
+      "landmark_points": [[-82,112],[-82,-138],[-48,-178],[-22,-178],[-22,-212],[22,-212],[22,-178],[48,-178],[82,-138],[82,112],[36,68],[36,-86],[-36,-86],[-36,68]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/security_grid_shaft/security_pod.png",
+        "res://assets/runtime/props/districts/security_grid_shaft/grid_terminal.png"
+      ],
+      "prop_scale": [1.8, 2.0]
+    },
+    "bio_tech_labs": {
+      "region_id": "neon_moon",
+      "art_direction": "Suspended culture vessels and egg clusters orbit a breached violet incubation chamber.",
+      "background_color": "17152c",
+      "architecture_color": "373052",
+      "platform_color": "50436c",
+      "trim_color": "d889ff",
+      "accent_color": "66ffbd",
+      "atmosphere_color": "c08cf1",
+      "foreground_color": "292240",
+      "backdrop_heights": [0.42, 0.58, 0.36, 0.68, 0.51, 0.34, 0.63, 0.47],
+      "landmark_points": [[-132,110],[-118,22],[-88,-18],[-70,-106],[-30,-154],[4,-118],[38,-164],[76,-98],[96,-12],[128,28],[132,110],[66,72],[6,44],[-60,70]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/bio_tech_labs/egg_cluster.png",
+        "res://assets/runtime/props/districts/bio_tech_labs/culture_crystal.png"
+      ],
+      "prop_scale": [1.55, 1.9]
+    },
+    "orbital_command": {
+      "region_id": "neon_moon",
+      "art_direction": "Symmetrical command-ring lanes focus on an Oracle telemetry globe and paired command consoles.",
+      "background_color": "11192f",
+      "architecture_color": "263758",
+      "platform_color": "3b5277",
+      "trim_color": "78ffe0",
+      "accent_color": "ffcc6a",
+      "atmosphere_color": "94d8ff",
+      "foreground_color": "1d2c49",
+      "backdrop_heights": [0.48, 0.55, 0.63, 0.71, 0.71, 0.63, 0.55, 0.48],
+      "landmark_points": [[-154,108],[-134,24],[-82,-34],[-36,-92],[0,-126],[36,-92],[82,-34],[134,24],[154,108],[86,78],[0,46],[-86,78]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/orbital_command/command_console.png",
+        "res://assets/runtime/props/districts/orbital_command/telemetry_ring.png"
+      ],
+      "prop_scale": [2.0, 1.9]
+    },
+    "corrupted_outpost": {
+      "region_id": "abyssal_night",
+      "art_direction": "Broken shelters cling to a collapsed purifier tower between corrupted capsules and sickly green crystals.",
+      "background_color": "1c1022",
+      "architecture_color": "3b203c",
+      "platform_color": "56304d",
+      "trim_color": "ff477e",
+      "accent_color": "83ff8f",
+      "atmosphere_color": "d14c86",
+      "foreground_color": "2c1930",
+      "backdrop_heights": [0.52, 0.37, 0.64, 0.31, 0.71, 0.43, 0.59, 0.34],
+      "landmark_points": [[-128,110],[-118,44],[-92,12],[-78,-88],[-42,-132],[-18,-116],[4,-188],[34,-154],[46,-66],[82,-24],[112,34],[128,110],[58,76],[-12,50],[-70,82]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/corrupted_outpost/corruption_capsule.png",
+        "res://assets/runtime/props/districts/corrupted_outpost/purifier_crystal.png"
+      ],
+      "prop_scale": [1.65, 1.2]
+    },
+    "the_dark_chasm": {
+      "region_id": "abyssal_night",
+      "art_direction": "Sparse blue-black ledges descend around a fossil lift, broken machinery, and a claw-like debris field.",
+      "background_color": "090d1b",
+      "architecture_color": "182238",
+      "platform_color": "29364d",
+      "trim_color": "6e8fc8",
+      "accent_color": "e24b8e",
+      "atmosphere_color": "536d9e",
+      "foreground_color": "111929",
+      "backdrop_heights": [0.82, 0.69, 0.57, 0.45, 0.34, 0.27, 0.38, 0.22],
+      "landmark_points": [[-96,108],[-96,-72],[-62,-112],[-62,-168],[-34,-168],[-34,-202],[34,-202],[34,-168],[62,-168],[62,-112],[96,-72],[96,108],[42,82],[42,-86],[-42,-86],[-42,82]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/the_dark_chasm/debris_field.png",
+        "res://assets/runtime/props/districts/the_dark_chasm/fossil_claw.png"
+      ],
+      "prop_scale": [1.45, 1.55]
+    },
+    "bio_mechanical_nest": {
+      "region_id": "abyssal_night",
+      "art_direction": "Contracting organic bridges surround a pulsing hatchery membrane, brood cluster, and exposed neural mass.",
+      "background_color": "231020",
+      "architecture_color": "4a203d",
+      "platform_color": "67304d",
+      "trim_color": "ff5c9a",
+      "accent_color": "a5e768",
+      "atmosphere_color": "cf477f",
+      "foreground_color": "38182e",
+      "backdrop_heights": [0.46, 0.61, 0.52, 0.73, 0.68, 0.49, 0.65, 0.42],
+      "landmark_points": [[-156,108],[-134,36],[-104,-18],[-70,-66],[-34,-128],[0,-92],[34,-128],[70,-66],[104,-18],[134,36],[156,108],[86,68],[44,26],[0,58],[-44,26],[-86,68]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/bio_mechanical_nest/brood_cluster.png",
+        "res://assets/runtime/props/districts/bio_mechanical_nest/neural_mass.png"
+      ],
+      "prop_scale": [1.55, 1.55]
+    },
+    "abyssal_sanctuary": {
+      "region_id": "abyssal_night",
+      "art_direction": "Mirrored ceremonial steps frame a cold phase reliquary and weathered sentinel idol.",
+      "background_color": "171126",
+      "architecture_color": "342646",
+      "platform_color": "4a3860",
+      "trim_color": "ae8cff",
+      "accent_color": "65e3ff",
+      "atmosphere_color": "9275c9",
+      "foreground_color": "271d38",
+      "backdrop_heights": [0.39, 0.52, 0.65, 0.77, 0.77, 0.65, 0.52, 0.39],
+      "landmark_points": [[-142,110],[-126,30],[-94,-14],[-72,-92],[-38,-132],[0,-186],[38,-132],[72,-92],[94,-14],[126,30],[142,110],[72,70],[0,28],[-72,70]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/abyssal_sanctuary/phase_reliquary.png",
+        "res://assets/runtime/props/districts/abyssal_sanctuary/sentinel_idol.png"
+      ],
+      "prop_scale": [1.55, 1.7]
+    },
+    "heart_of_the_void": {
+      "region_id": "abyssal_night",
+      "art_direction": "Concentric scarlet rises close around a beating convergence heart, void orb, and unstable core portal.",
+      "background_color": "210a1b",
+      "architecture_color": "4b1233",
+      "platform_color": "6d1e45",
+      "trim_color": "ff316f",
+      "accent_color": "ffb34f",
+      "atmosphere_color": "ed2f68",
+      "foreground_color": "381027",
+      "backdrop_heights": [0.43, 0.55, 0.68, 0.81, 0.86, 0.81, 0.68, 0.55],
+      "landmark_points": [[0,-186],[46,-132],[88,-112],[126,-66],[138,-14],[126,46],[82,92],[0,138],[-82,92],[-126,46],[-138,-14],[-126,-66],[-88,-112],[-46,-132]],
+      "prop_paths": [
+        "res://assets/runtime/props/districts/heart_of_the_void/void_orb.png",
+        "res://assets/runtime/props/districts/heart_of_the_void/core_portal.png"
+      ],
+      "prop_scale": [1.8, 2.5]
+    }
+  }
+}

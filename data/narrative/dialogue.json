@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "prologue_rooftop_arrival": {
+      "lines": [
+        {
+          "id": "prologue.001",
+          "speaker": "MARA",
+          "portrait_id": "portrait_08",
+          "expression": "alert",
+          "text": "Signal acquired. {player_name}, if you can hear me, the rooftop route is still open.",
+          "voice_bark": "greeting"
+        },
+        {
+          "id": "prologue.002",
+          "speaker": "MARA",
+          "portrait_id": "portrait_08",
+          "expression": "focused",
+          "text": "Helix locked the streets below. Stay high, follow the cyan relays, and trust the phase marker only when it turns solid."
+        },
+        {
+          "id": "prologue.003",
+          "speaker": "{player_name}",
+          "portrait": "player",
+          "expression": "ready",
+          "text": "Understood. {subject_cap} won't get another clean trace.",
+          "voice_bark": "confirmation"
+        }
+      ]
+    },
+    "market_mara_first": {
+      "conditions": [{"flag": "met_mara", "equals": false}],
+      "lines": [
+        {
+          "id": "market.001",
+          "speaker": "MARA",
+          "portrait_id": "portrait_08",
+          "expression": "warm",
+          "text": "There you are, {player_name}. The relay says {subject} {be} still in one piece."
+        },
+        {
+          "id": "market.002",
+          "speaker": "MARA",
+          "portrait_id": "portrait_08",
+          "expression": "focused",
+          "text": "The barber and tailor can mask your phase signature. Their changes are cosmetic, but what Helix sees matters."
+        }
+      ],
+      "rewards": [{"type": "story_flag", "id": "met_mara", "value": true}]
+    },
+    "market_mara_repeat": {
+      "conditions": [{"flag": "met_mara", "equals": true}],
+      "lines": [
+        {
+          "id": "market.repeat.001",
+          "speaker": "MARA",
+          "portrait_id": "portrait_08",
+          "expression": "focused",
+          "text": "The overlook relay is east. Sync there before you challenge the junction gate."
+        }
+      ]
+    },
+    "market_mara_post_helix": {
+      "conditions": [{"flag":"helix_warden_defeated","equals":true},{"flag":"assembly_colossus_defeated","equals":false}],
+      "lines": [
+        {"id":"market.helix.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Helix Warden's barrier key is stable. The factory elevator can bring you home, but the assembly signal will keep spreading until its engine stops."}
+      ]
+    },
+    "market_mara_post_factory": {
+      "conditions": [{"flag":"assembly_colossus_defeated","equals":true},{"flag":"lunar_oracle_defeated","equals":false}],
+      "lines": [
+        {"id":"market.factory.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The factory relays are clean. Neon Moon is still issuing seed commands, and every one points back to the Oracle."}
+      ]
+    },
+    "market_mara_post_oracle": {
+      "conditions": [{"flag":"lunar_oracle_defeated","equals":true},{"flag":"game_complete","equals":false}],
+      "lines": [
+        {"id":"market.oracle.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The Oracle opened an Abyssal breach when it fell. Install a corruption filter before you follow it to the convergence."}
+      ]
+    },
+    "market_mara_post_game": {
+      "conditions": [{"flag":"game_complete","equals":true}],
+      "lines": [
+        {"id":"market.ending.001","speaker":"MARA","portrait_id":"portrait_08","expression":"warm","text":"The dawn grid is holding, {player_name}. Take your time—the city still has lost routes and weapon signals worth bringing home."}
+      ]
+    },
+    "dagger_cache_found": {
+      "lines": [
+        {
+          "id": "cache.001",
+          "speaker": "SYSTEM",
+          "portrait_id": "portrait_12",
+          "expression": "neutral",
+          "text": "Signal Pair recovered. Daggers favor rapid close attacks and phase repositioning."
+        }
+      ]
+    },
+    "rooftop_district_exit": {
+      "lines": [
+        {
+          "id": "exit.001",
+          "speaker": "MARA",
+          "portrait_id": "portrait_08",
+          "expression": "alert",
+          "text": "Billboard Highway is ahead. Helix patrols are searching for someone with your phase signature."
+        },
+        {
+          "id": "exit.002",
+          "speaker": "{player_name}",
+          "portrait": "player",
+          "expression": "ready",
+          "text": "Then {subject} {have} a trail to follow."
+        }
+      ]
+    },
+    "billboard_helix_clue": {
+      "lines": [
+        {"id":"billboard.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"That crown is rebroadcasting your phase trace straight to Communication Spire."},
+        {"id":"billboard.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Then {subject} {have} a transmitter to climb."}
+      ]
+    },
+    "billboard_bow_found": {
+      "lines": [
+        {"id":"billboard.bow.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Voltage Arc recovered. Charged arrows control long lanes and exposed airspace."}
+      ]
+    },
+    "spire_orbital_reveal": {
+      "lines": [
+        {"id":"spire.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The array is routing Helix traffic beyond the city—to a factory descent and an orbital corridor."},
+        {"id":"spire.002","speaker":"{player_name}","portrait":"player","expression":"focused","text":"The route is bigger than one district. Keep the relay open."}
+      ]
+    },
+    "magnetic_rail_acquired": {
+      "lines": [
+        {"id":"spire.rail.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Magnetic Rail Grip installed. Cyan rail locks and ceiling routes are now traversable."}
+      ]
+    },
+    "skybridge_warp_intro": {
+      "lines": [
+        {"id":"skybridge.warp.001","speaker":"RELAY KEEPER","portrait_id":"portrait_06","expression":"neutral","text":"Wake a relay from a warp room and the network remembers it. Transfers only start from another live relay."}
+      ]
+    },
+    "skybridge_keeper": {
+      "lines": [
+        {"id":"skybridge.keeper.001","speaker":"RELAY KEEPER","portrait_id":"portrait_06","expression":"focused","text":"The executive crossing is east. The service gauntlet below still hides confiscated runner gear."}
+      ]
+    },
+    "skybridge_spear_found": {
+      "lines": [
+        {"id":"skybridge.spear.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Arc Lance recovered. Its reach controls approach lanes and punishes airborne patrols."}
+      ]
+    },
+    "helix_warden_warning": {
+      "lines": [
+        {"id":"helipad.warning.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Helix Warden owns the pad ahead. Save now. Its projectile arcs are designed to catch blind teleports."}
+      ]
+    },
+    "cyber_city_complete": {
+      "lines": [
+        {"id":"city.complete.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"The Warden is down. Factory access just opened beneath the executive tower."},
+        {"id":"city.complete.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Good. {subject_cap} {be} taking the fight to the assembly line."}
+      ]
+    },
+    "factory_intake_arrival": {
+      "lines": [
+        {"id":"factory.intake.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Sub-Level Intake is still live. Orange belts carry cargo—and anything standing on them—straight toward the furnaces."},
+        {"id":"factory.intake.002","speaker":"{player_name}","portrait":"player","expression":"focused","text":"Then {subject} {be} staying ahead of the sort order."}
+      ]
+    },
+    "conveyor_assembly_complete": {
+      "lines": [
+        {"id":"factory.conveyor.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Sort-line override confirmed. The reversible belts now expose a safe coolant route into the Smelting Core."},
+        {"id":"factory.conveyor.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Good. {subject_cap} {be} following the cold line through the furnace."}
+      ]
+    },
+    "factory_heavy_found": {
+      "lines": [
+        {"id":"factory.heavy.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Foundry Maul recovered. Heavy strikes trade speed for armor-breaking impact."}
+      ]
+    },
+    "factory_smelting_warning": {
+      "lines": [
+        {"id":"factory.smelting.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The Smelting Core vents in sequence. Read the blue pressure lights before crossing a molten channel."}
+      ]
+    },
+    "factory_staff_found": {
+      "lines": [
+        {"id":"factory.staff.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Coolant Coil recovered. Staff techniques can now sustain safer ranged pressure through heat zones."}
+      ]
+    },
+    "heavy_ground_break_acquired": {
+      "lines": [
+        {"id":"factory.breaker.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Kinetic Breaker Core installed. Heavy ground strikes can rupture reinforced orange floor seals."}
+      ]
+    },
+    "factory_smelting_breakthrough": {
+      "lines": [
+        {"id":"factory.breakthrough.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"That breaker core was feeding the repair bays. With it removed, their armored floor seals are yours to open."}
+      ]
+    },
+    "factory_purpose_reveal": {
+      "lines": [
+        {"id":"factory.purpose.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"These memory records call the factory an orbital seed forge. The machines were built to assemble something on the moon."},
+        {"id":"factory.purpose.002","speaker":"{player_name}","portrait":"player","expression":"focused","text":"Then the Assembly Engine is the last link before launch."}
+      ]
+    },
+    "factory_servo_found": {
+      "lines": [
+        {"id":"factory.servo.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Servo Pair recovered. Dagger recovery and phase follow-ups respond faster under pressure."}
+      ]
+    },
+    "factory_engine_warning": {
+      "lines": [
+        {"id":"factory.engine.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The repair bay just woke the Assembly Colossus. Its shockwaves use the conveyor timing as a weapon."}
+      ]
+    },
+    "assembly_colossus_warning": {
+      "lines": [
+        {"id":"factory.colossus.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Relay and save station are stable. In its final phase, wait for the engine flare—the armor only opens during that punish window."}
+      ]
+    },
+    "robot_factory_complete": {
+      "lines": [
+        {"id":"factory.complete.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Assembly Colossus is offline. The orbital lift is answering a protocol from the Neon Moon."},
+        {"id":"factory.complete.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Factory secured. {subject_cap} {be} taking that lift to the source."}
+      ]
+    },
+    "moon_surface_arrival": {
+      "lines": [
+        {"id":"moon.arrival.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Orbital link restored. Gravity is forty percent below city standard; your jumps and phase marker will carry farther."},
+        {"id":"moon.arrival.002","speaker":"{player_name}","portrait":"player","expression":"focused","text":"Copy. Short inputs, long arcs, solid ground before the next throw."}
+      ]
+    },
+    "neon_moon_protocol_reveal": {
+      "lines": [
+        {"id":"moon.protocol.001","speaker":"PROTOCOL ECHO","portrait_id":"portrait_10","expression":"neutral","text":"NEON MOON PROTOCOL: preserve the Oracle, seed compliant worlds, quarantine corrupted outcomes."},
+        {"id":"moon.protocol.002","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The factory wasn't exporting machines. It was building seed systems for this station."}
+      ]
+    },
+    "moon_protocol_ai": {
+      "lines": [
+        {"id":"moon.ai.001","speaker":"PROTOCOL ECHO","portrait_id":"portrait_10","expression":"neutral","text":"Cleanroom access is conditional. Anchor-compatible subjects may revisit the sealed shaft cache."}
+      ]
+    },
+    "moon_prism_found": {
+      "lines": [
+        {"id":"moon.prism.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Lunar Prism recovered. Bow charges refract through low-gravity lanes with improved area control."}
+      ]
+    },
+    "moon_cleanroom_record": {
+      "lines": [
+        {"id":"moon.cleanroom.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"These observation records predate Helix. The Oracle predicted the city breach—and ordered the response that caused it."}
+      ]
+    },
+    "security_grid_mastered": {
+      "lines": [
+        {"id":"moon.security.001","speaker":"PROTOCOL ECHO","portrait_id":"portrait_10","expression":"neutral","text":"Security lattice mastered. Bio-Tech observation access transferred to the phasebound subject."},
+        {"id":"moon.security.002","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"That shaft was protecting more than the Oracle. The next lab is where the corruption entered the protocol."}
+      ]
+    },
+    "moon_orbit_lance_found": {
+      "lines": [
+        {"id":"moon.lance.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Orbit Lance recovered. Its extended thrust stabilizes aerial attacks during gravity inversion."}
+      ]
+    },
+    "biotech_corruption_glimpse": {
+      "lines": [
+        {"id":"moon.corruption.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The growth behind that glass matches the signal leaking beyond Orbital Command. This station has been cultivating the corruption."}
+      ]
+    },
+    "oracle_origin_reveal": {
+      "lines": [
+        {"id":"moon.origin.001","speaker":"PROTOCOL ECHO","portrait_id":"portrait_10","expression":"neutral","text":"Oracle model trained on failed timelines: Cyber City collapse, factory conversion, abyssal convergence."},
+        {"id":"moon.origin.002","speaker":"{player_name}","portrait":"player","expression":"focused","text":"It didn't predict the disaster. It rehearsed it."}
+      ]
+    },
+    "moon_oracle_focus_found": {
+      "lines": [
+        {"id":"moon.focus.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Oracle Focus recovered. Staff techniques retain lock through abrupt gravity shifts."}
+      ]
+    },
+    "gravity_anchor_acquired": {
+      "lines": [
+        {"id":"moon.anchor.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Gravity Anchor installed. Inversion fields stabilize around your phase signature, opening anchor-sealed routes."}
+      ]
+    },
+    "biotech_access_component": {
+      "lines": [
+        {"id":"moon.access.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Anchor confirmed. The Security Shaft cache is reachable now, and Orbital Command can no longer throw you off-axis."}
+      ]
+    },
+    "lunar_oracle_warning": {
+      "lines": [
+        {"id":"moon.oracle.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Save here. Lunar Oracle teleports before every pattern and reverses gravity in phase two. Follow the flash, not its last position."}
+      ]
+    },
+    "neon_moon_complete": {
+      "lines": [
+        {"id":"moon.complete.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Oracle is down, but its final command opened a corruption breach below the station. The signal calls it Abyssal Night."},
+        {"id":"moon.complete.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Then {subject} {be} following the chain before it reaches Cyber City."}
+      ]
+    },
+    "abyssal_breach_arrival": {
+      "lines": [
+        {"id":"abyss.arrival.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Magenta fields are accumulating corruption in your phase signature. Cross in short bursts until we find a filter."},
+        {"id":"abyss.arrival.002","speaker":"{player_name}","portrait":"player","expression":"focused","text":"Understood. {subject_cap} {be} not giving the breach time to settle."}
+      ]
+    },
+    "corruption_resistance_acquired": {
+      "lines": [
+        {"id":"abyss.filter.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Abyssal Filter installed. Corruption buildup is reduced and corrupted fields no longer deal direct contact damage."}
+      ]
+    },
+    "outpost_cleansed": {
+      "lines": [
+        {"id":"abyss.outpost.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Filter telemetry is clean. The signal descends through the Dark Chasm into a living machine network."}
+      ]
+    },
+    "void_string_found": {
+      "lines": [
+        {"id":"abyss.string.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Void String recovered. Bow charges remain stable inside corruption fields."}
+      ]
+    },
+    "chasm_signal_record": {
+      "lines": [
+        {"id":"abyss.chasm.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"The chasm relays carry copies of every signal we broke above. The Abyss has been learning our route."}
+      ]
+    },
+    "cleansing_spike_found": {
+      "lines": [
+        {"id":"abyss.spike.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Cleansing Spike recovered. Spear finishers disperse nearby corruption buildup."}
+      ]
+    },
+    "nest_evidence_reveal": {
+      "lines": [
+        {"id":"abyss.evidence.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"These growth rings contain Helix, factory, and lunar code. The Oracle fed every failed defense into the same organism."}
+      ]
+    },
+    "energy_field_acquired": {
+      "lines": [
+        {"id":"abyss.field.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Null Energy Field installed. Dense corruption seals and sanctuary trial gates now recognize your phase signature."}
+      ]
+    },
+    "nest_core_cleansed": {
+      "lines": [
+        {"id":"abyss.nest.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"The nest core is clean. One signal remains beyond the Sanctuary: Void Cerberus, guarding the convergence heart."}
+      ]
+    },
+    "sanctuary_arrival": {
+      "lines": [
+        {"id":"abyss.sanctuary.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Sanctuary relay is live. Each chamber repeats one system you've already mastered. Read the primary threat and ignore the noise."}
+      ]
+    },
+    "convergence_edge_found": {
+      "lines": [
+        {"id":"abyss.edge.001","speaker":"SYSTEM","portrait_id":"portrait_12","expression":"neutral","text":"Convergence Edge recovered. Sword finishers project a short null-field wave."}
+      ]
+    },
+    "void_cerberus_preparation": {
+      "lines": [
+        {"id":"abyss.prep.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Cerberus combines the whole route: spreads, corruption zones, dash pressure, then a desperation sweep. Your field is the answer, not a shortcut."}
+      ]
+    },
+    "void_cerberus_warning": {
+      "lines": [
+        {"id":"abyss.warning.001","speaker":"MARA","portrait_id":"portrait_08","expression":"focused","text":"Final save is stable. Once you cross, follow each head's telegraph and keep a legal phase return point behind you."},
+        {"id":"abyss.warning.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Mara, keep the city channel open. {subject_cap} {be} ending this."}
+      ]
+    },
+    "abyssal_ending": {
+      "lines": [
+        {"id":"ending.001","speaker":"MARA","portrait_id":"portrait_08","expression":"alert","text":"Cerberus is down. The convergence is collapsing around you—phase to the cyan anchor now!"},
+        {"id":"ending.002","speaker":"{player_name}","portrait":"player","expression":"ready","text":"Anchor locked. Tell Cyber City {subject} {have} its dawn back."},
+        {"id":"ending.003","speaker":"MARA","portrait_id":"portrait_08","expression":"warm","text":"Come home, {player_name}. We'll tell them together."}
+      ]
+    }
+  }
+}

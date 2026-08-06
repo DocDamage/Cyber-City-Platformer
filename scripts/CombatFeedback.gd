@@ -5,6 +5,9 @@ var _restore_time_scale := 1.0
 
 
 func hit_stop(duration := 0.05) -> void:
+	var settings := get_node_or_null("/root/SettingsManager")
+	var scale := float(settings.call(&"get_setting", &"hit_stop_scale", 1.0)) if settings != null else 1.0
+	duration *= scale
 	if duration <= 0.0:
 		return
 

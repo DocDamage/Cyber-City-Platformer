@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "frame_size": [100, 40],
+  "sheet_size": [800, 680],
+  "options": {
+    "body": [
+      {"id": "body_01", "display_name": "Balanced Frame", "visual_scale_x": 1.0},
+      {"id": "body_02", "display_name": "Agile Frame", "visual_scale_x": 0.94},
+      {"id": "body_03", "display_name": "Power Frame", "visual_scale_x": 1.08}
+    ],
+    "skin_tone": [
+      {"id": "skin_01", "display_name": "Tone 1", "path": "res://assets/runtime/characters/player_creator/skin/skin_01.png"},
+      {"id": "skin_02", "display_name": "Tone 2", "path": "res://assets/runtime/characters/player_creator/skin/skin_02.png"},
+      {"id": "skin_03", "display_name": "Tone 3", "path": "res://assets/runtime/characters/player_creator/skin/skin_03.png"},
+      {"id": "skin_04", "display_name": "Tone 4", "path": "res://assets/runtime/characters/player_creator/skin/skin_04.png"},
+      {"id": "skin_05", "display_name": "Tone 5", "path": "res://assets/runtime/characters/player_creator/skin/skin_05.png"},
+      {"id": "skin_06", "display_name": "Tone 6", "path": "res://assets/runtime/characters/player_creator/skin/skin_06.png"}
+    ],
+    "face": [
+      {"id": "face_01", "display_name": "Face 1", "path": "res://assets/runtime/characters/player_creator/face/face_01.png"},
+      {"id": "face_02", "display_name": "Face 2", "path": "res://assets/runtime/characters/player_creator/face/face_02.png"},
+      {"id": "face_03", "display_name": "Face 3", "path": "res://assets/runtime/characters/player_creator/face/face_03.png"},
+      {"id": "face_04", "display_name": "Face 4", "path": "res://assets/runtime/characters/player_creator/face/face_04.png"},
+      {"id": "face_05", "display_name": "Face 5", "path": "res://assets/runtime/characters/player_creator/face/face_05.png"},
+      {"id": "face_06", "display_name": "Face 6", "path": "res://assets/runtime/characters/player_creator/face/face_06.png"},
+      {"id": "face_07", "display_name": "Face 7", "path": "res://assets/runtime/characters/player_creator/face/face_07.png"}
+    ],
+    "hair_style": [
+      {"id": "hair_f1", "display_name": "Undercut", "back_path": "res://assets/runtime/characters/player_creator/hair/hair_f1_bot.png", "front_path": "res://assets/runtime/characters/player_creator/hair/hair_f1_top.png"},
+      {"id": "hair_f2", "display_name": "Side Sweep", "back_path": "res://assets/runtime/characters/player_creator/hair/hair_f2_bot.png", "front_path": "res://assets/runtime/characters/player_creator/hair/hair_f2_top.png"},
+      {"id": "hair_m1", "display_name": "Taper", "back_path": "res://assets/runtime/characters/player_creator/hair/hair_m1_bot.png", "front_path": "res://assets/runtime/characters/player_creator/hair/hair_m1_top.png"}
+    ],
+    "hair_color": [
+      {"id": "hair_color_01", "display_name": "Source"},
+      {"id": "hair_color_cyan", "display_name": "Cyan", "modulate": "8ff5ff"},
+      {"id": "hair_color_magenta", "display_name": "Magenta", "modulate": "ff7fcb"},
+      {"id": "hair_color_gold", "display_name": "Gold", "modulate": "ffe28a"},
+      {"id": "hair_color_white", "display_name": "Moon White", "modulate": "e8f3ff"},
+      {"id": "hair_color_violet", "display_name": "Void Violet", "modulate": "b995ff"},
+      {"id": "hair_color_crimson", "display_name": "Crimson", "modulate": "ff647d"},
+      {"id": "hair_color_obsidian", "display_name": "Obsidian", "modulate": "526078"}
+    ],
+    "top": [
+      {"id": "cloth_1", "display_name": "Street Jacket", "back_path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_bot.png", "front_path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_top.png"},
+      {"id": "cloth_2", "display_name": "Runner Coat", "back_path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_bot.png", "front_path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_top.png"},
+      {"id": "cloth_3", "display_name": "Signal Armor", "back_path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_bot.png", "front_path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_top.png"}
+    ],
+    "bottom": [
+      {"id": "cloth_1", "display_name": "Street Pants", "back_path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_bot.png", "front_path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_top.png"},
+      {"id": "cloth_2", "display_name": "Runner Pants", "back_path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_bot.png", "front_path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_top.png"},
+      {"id": "cloth_3", "display_name": "Signal Greaves", "back_path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_bot.png", "front_path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_top.png"}
+    ],
+    "clothing_color": [
+      {"id": "cloth_color_01", "display_name": "Source"},
+      {"id": "cloth_color_cyan", "display_name": "Cyan", "modulate": "7ceeff"},
+      {"id": "cloth_color_magenta", "display_name": "Magenta", "modulate": "ff66bd"},
+      {"id": "cloth_color_gold", "display_name": "Gold", "modulate": "ffd66b"},
+      {"id": "cloth_color_white", "display_name": "Chrome White", "modulate": "dcecff"},
+      {"id": "cloth_color_violet", "display_name": "Royal Violet", "modulate": "9c7cff"},
+      {"id": "cloth_color_green", "display_name": "Signal Green", "modulate": "72e6a1"},
+      {"id": "cloth_color_crimson", "display_name": "Crimson", "modulate": "ff5f72"},
+      {"id": "cloth_color_obsidian", "display_name": "Obsidian", "modulate": "53627c"}
+    ]
+  },
+  "weapon_layers": {
+    "sword": {"back_path": "res://assets/runtime/characters/player_creator/weapons/weapon_1_bot.png", "front_path": "res://assets/runtime/characters/player_creator/weapons/weapon_1_top.png"},
+    "dagger": {"back_path": "res://assets/runtime/characters/player_creator/weapons/weapon_2_bot.png", "front_path": "res://assets/runtime/characters/player_creator/weapons/weapon_2_top.png"},
+    "spear": {"back_path": "res://assets/runtime/characters/player_creator/weapons/weapon_3_bot.png", "front_path": "res://assets/runtime/characters/player_creator/weapons/weapon_3_top.png"},
+    "heavy": {"back_path": "res://assets/runtime/characters/player_creator/weapons/weapon_4_bot.png", "front_path": "res://assets/runtime/characters/player_creator/weapons/weapon_4_top.png"},
+    "bow": {"back_path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_bot.png", "front_path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_top.png"},
+    "staff": {"back_path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_bot.png", "front_path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_top.png"}
+  }
+}

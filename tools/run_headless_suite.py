@@ -26,14 +26,17 @@ TEST_GROUPS: dict[str, tuple[str, ...]] = {
     "import": ("@import",),
     "resource": (
         "tests/integration/CleanCloneGate.gd",
+        "tests/integration/EnemyContractTest.gd",
         "scripts/AssetRegistrySmokeTest.gd",
     ),
     "unit": (
         "tests/unit/StateSchemaTest.gd",
+        "tests/unit/MetroidvaniaCharacterTest.gd",
         "tests/integration/PlayerStateTest.gd",
     ),
     "systems": (
         "scripts/SystemsSmokeTest.gd",
+        "tests/integration/TeleportWeaponTest.gd",
         "scripts/GoalSmokeTest.gd",
         "scripts/BossSystemsSmokeTest.gd",
         "tests/integration/StageMechanicsTest.gd",
@@ -44,10 +47,27 @@ TEST_GROUPS: dict[str, tuple[str, ...]] = {
         "scripts/CampaignSceneSmokeTest.gd",
         "tests/campaign/CampaignRuntimeTest.gd",
         "tests/campaign/CampaignContentTest.gd",
+        "tests/integration/FirstTwoActsProductionTest.gd",
+		"tests/integration/LastTwoActsProductionTest.gd",
         "tests/campaign/CampaignTraversalTest.gd",
+    ),
+    "world": (
+        "tests/integration/WorldFoundationTest.gd",
+        "tests/integration/RooftopVerticalSliceTest.gd",
+        "tests/integration/CyberCityProductionTest.gd",
+        "tests/integration/RobotFactoryProductionTest.gd",
+        "tests/integration/NeonMoonProductionTest.gd",
+        "tests/integration/AbyssalNightProductionTest.gd",
+        "tests/integration/WorldContentAuditTest.gd",
+        "tests/integration/WorldTraversalProbeTest.gd",
+        "tests/integration/FullGameProgressionTest.gd",
+        "tests/integration/AbilityBarrierTest.gd",
+        "tests/integration/NarrativeServicesTest.gd",
+        "tests/integration/QuestProgressionTest.gd",
     ),
     "shell": (
         "tests/integration/SaveSettingsTest.gd",
+        "tests/integration/CharacterCreationFlowTest.gd",
         "tests/integration/ShellFlowTest.gd",
         "tests/integration/MissingAudioFallbackTest.gd",
     ),
@@ -131,7 +151,22 @@ def run_command(
     save_root: Path,
 ) -> bool:
     env = os.environ.copy()
-    if "SaveSettingsTest" in test_name or "ShellFlowTest" in test_name:
+    isolated_save_tests = (
+        "SaveSettingsTest",
+        "CharacterCreationFlowTest",
+        "ShellFlowTest",
+        "WorldFoundationTest",
+        "RooftopVerticalSliceTest",
+        "CyberCityProductionTest",
+        "RobotFactoryProductionTest",
+        "NeonMoonProductionTest",
+        "AbyssalNightProductionTest",
+        "PerformanceBudgetTest",
+        "AbilityBarrierTest",
+        "NarrativeServicesTest",
+        "QuestProgressionTest",
+    )
+    if any(name in test_name for name in isolated_save_tests):
         safe_name = Path(test_name).stem.lower()
         test_save_dir = save_root / safe_name
         test_save_dir.mkdir(parents=True, exist_ok=True)

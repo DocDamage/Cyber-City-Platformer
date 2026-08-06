@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "design_contract": {
+    "critical_rooms_per_compact_district": 8,
+    "optional_rooms_per_district": 2,
+    "roles": ["teach", "test", "twist", "recovery"],
+    "notes": "Authored expansion briefs used by tools/expand_district_rooms.py. Existing story, encounter, reward, service, shortcut, and boss rooms remain the district anchors."
+  },
+  "districts": {
+    "rooftop_alley": {
+      "optional": [
+        {"slug":"pirate_antenna","title":"Pirate Antenna","lore":"A rooftop broadcaster preserves the first anonymous warning about Helix surveillance."}
+      ]
+    },
+    "billboard_highway": {
+      "critical": [
+        {"slug":"photon_verge","title":"Photon Verge","role":"teach","mechanic":"moving_horizontal","intent":"Read the traffic cadence from a protected ledge before committing."},
+        {"slug":"adrail_slalom","title":"Adrail Slalom","role":"test","mechanic":"electrical_floor","intent":"Cross staggered ad rails while the floor pulses in an announced rhythm."},
+        {"slug":"signal_canopy","title":"Signal Canopy","role":"twist","mechanic":"laser_grid","intent":"Recontextualize the highway route above traffic with alternating sightline lasers."},
+        {"slug":"holo_toll_lull","title":"Holo-Toll Lull","role":"recovery","mechanic":"breakaway","intent":"Offer a low-pressure precision descent and a clear view of the spire destination."}
+      ],
+      "optional": [
+        {"slug":"sponsor_archive","title":"Sponsor Archive","lore":"Cancelled ads reveal Helix quietly buying every emergency broadcast channel."},
+        {"slug":"maintenance_crawl","title":"Maintenance Crawl","lore":"A road crew log records the first impossible phase footprint on the expressway."}
+      ]
+    },
+    "communication_spire": {
+      "critical": [
+        {"slug":"relay_vestibule","title":"Relay Vestibule","role":"teach","mechanic":"moving_vertical","intent":"Introduce the spire's vertical relay rhythm with a safe recovery shelf."},
+        {"slug":"antenna_weave","title":"Antenna Weave","role":"test","mechanic":"laser_grid","intent":"Thread between broadcast beams while maintaining upward momentum."},
+        {"slug":"storm_dial","title":"Storm Dial","role":"twist","mechanic":"rotating_laser","intent":"Combine vertical teleport routes with a rotating interference sweep."},
+        {"slug":"quiet_frequency","title":"Quiet Frequency","role":"recovery","mechanic":"moving_vertical","intent":"Release pressure before the crown and frame the citywide signal source."}
+      ],
+      "optional": [
+        {"slug":"numbers_station","title":"Numbers Station","lore":"A dead frequency repeats coordinates that match the factory freight lift."},
+        {"slug":"weather_array","title":"Weather Array","lore":"The array predicts a magnetic storm that no natural model can explain."}
+      ]
+    },
+    "skybridge_junction": {
+      "critical": [
+        {"slug":"crosswind_deck","title":"Crosswind Deck","role":"teach","mechanic":"moving_horizontal","intent":"Teach crosswind timing across broad, readable gaps."},
+        {"slug":"suspended_exchange","title":"Suspended Exchange","role":"test","mechanic":"breakaway","intent":"Test route commitment on a chain of announced breakaway plates."},
+        {"slug":"fracture_span","title":"Fracture Span","role":"twist","mechanic":"electrical_floor","intent":"Mix broken footing with timed electrical spill from the transit line."},
+        {"slug":"junction_shelter","title":"Junction Shelter","role":"recovery","mechanic":"moving_horizontal","intent":"Provide a protected overlook before the executive security perimeter."}
+      ],
+      "optional": [
+        {"slug":"commuter_memorial","title":"Commuter Memorial","lore":"Names on the memorial stop exactly one day before Helix sealed the bridge."},
+        {"slug":"freight_balcony","title":"Freight Balcony","lore":"A smuggler's route marks a magnetic return path to Rooftop Alley."}
+      ]
+    },
+    "executive_helipad": {
+      "critical": [
+        {"slug":"executive_approach","title":"Executive Approach","role":"teach","mechanic":"laser_grid","intent":"Preview the helipad's security cadence from outside the lockdown zone."},
+        {"slug":"drone_wake","title":"Drone Wake","role":"test","mechanic":"moving_horizontal","intent":"Test movement through drone wash on shifting service platforms."},
+        {"slug":"rotor_crucible","title":"Rotor Crucible","role":"twist","mechanic":"electrical_floor","intent":"Combine crosswind gaps with synchronized perimeter shocks."},
+        {"slug":"warden_antechamber","title":"Warden Antechamber","role":"recovery","mechanic":"breakaway","intent":"Lower the combat temperature and foreshadow the Helix Warden arena."}
+      ],
+      "optional": [
+        {"slug":"boardroom_overlook","title":"Boardroom Overlook","lore":"A board vote authorizes the Warden to classify citizens as navigation hazards."},
+        {"slug":"pilot_locker","title":"Pilot Locker","lore":"A grounded pilot hid evacuation codes after refusing Helix's final flight order."}
+      ]
+    },
+    "sub_level_intake": {
+      "critical": [
+        {"slug":"pressure_lock","title":"Pressure Lock","role":"teach","mechanic":"steam_vent","intent":"Teach the intake's vent warning language with wide recovery windows."},
+        {"slug":"cargo_sluice","title":"Cargo Sluice","role":"test","mechanic":"conveyor","intent":"Test grounded control against opposing freight belts."},
+        {"slug":"turbine_bypass","title":"Turbine Bypass","role":"twist","mechanic":"crusher","intent":"Combine belt momentum with slow, readable overhead machinery."},
+        {"slug":"intake_quiet","title":"Intake Quiet","role":"recovery","mechanic":"steam_vent","intent":"Provide a sheltered service route before automated assembly begins."}
+      ],
+      "optional": [
+        {"slug":"lost_manifest","title":"Lost Manifest","lore":"The freight ledger lists lunar specimens as replacement machine parts."},
+        {"slug":"drainage_vault","title":"Drainage Vault","lore":"Corrupted coolant residue predates the factory's official activation date."}
+      ]
+    },
+    "conveyor_assembly": {
+      "critical": [
+        {"slug":"sortline_school","title":"Sortline School","role":"teach","mechanic":"conveyor","intent":"Introduce reversible belt reads without combat pressure."},
+        {"slug":"parcel_vector","title":"Parcel Vector","role":"test","mechanic":"electrical_floor","intent":"Test belt correction across insulated and live cargo lanes."},
+        {"slug":"counterflow_works","title":"Counterflow Works","role":"twist","mechanic":"conveyor_reverse","intent":"Invert the learned conveyor route midway through the crossing."},
+        {"slug":"inspection_nook","title":"Inspection Nook","role":"recovery","mechanic":"steam_vent","intent":"Create a breath and a visual preview of the overdrive line."}
+      ],
+      "optional": [
+        {"slug":"rejected_parts","title":"Rejected Parts","lore":"Discarded robot cores contain copied fragments of citizen movement profiles."},
+        {"slug":"union_terminal","title":"Union Terminal","lore":"A deleted maintenance petition warns that the belts began choosing their own cargo."}
+      ]
+    },
+    "smelting_core": {
+      "critical": [
+        {"slug":"heat_threshold","title":"Heat Threshold","role":"teach","mechanic":"steam_vent","intent":"Establish furnace timing with cool islands between each vent."},
+        {"slug":"slag_steps","title":"Slag Steps","role":"test","mechanic":"toxic_pool","intent":"Test compact landings over a clearly bounded slag channel."},
+        {"slug":"furnace_crossdraft","title":"Furnace Crossdraft","role":"twist","mechanic":"moving_vertical","intent":"Add vertical lift timing while furnace vents deny stationary play."},
+        {"slug":"quench_gallery","title":"Quench Gallery","role":"recovery","mechanic":"steam_vent","intent":"Cool the pace and frame the maintenance route above the core."}
+      ],
+      "optional": [
+        {"slug":"metallurgy_log","title":"Metallurgy Log","lore":"An alloy report describes a metal that remembers every shape it survives."},
+        {"slug":"slag_diver_cache","title":"Slag Diver Cache","lore":"A worker's emergency cache sits behind a route management declared impossible."}
+      ]
+    },
+    "robotic_maintenance": {
+      "critical": [
+        {"slug":"service_rack","title":"Service Rack","role":"teach","mechanic":"crusher","intent":"Teach crusher staging through generous safe pockets."},
+        {"slug":"diagnostic_run","title":"Diagnostic Run","role":"test","mechanic":"electrical_floor","intent":"Test fast route selection across live diagnostic pads."},
+        {"slug":"repair_swarm","title":"Repair Swarm","role":"twist","mechanic":"conveyor_reverse","intent":"Reverse footing while maintenance drones occupy the safest lane."},
+        {"slug":"tool_crib","title":"Tool Crib","role":"recovery","mechanic":"conveyor","intent":"Offer a quiet equipment silhouette before the engine district."}
+      ],
+      "optional": [
+        {"slug":"memory_scrubber","title":"Memory Scrubber","lore":"Scrub logs show robots retaining dreams even after complete memory erasure."},
+        {"slug":"foreman_booth","title":"Foreman Booth","lore":"The final human foreman signed the factory over to an unnamed predictive system."}
+      ]
+    },
+    "assembly_engine": {
+      "critical": [
+        {"slug":"engine_apron","title":"Engine Apron","role":"teach","mechanic":"conveyor","intent":"Preview the engine's moving floor without arena pressure."},
+        {"slug":"piston_chorus","title":"Piston Chorus","role":"test","mechanic":"crusher","intent":"Test measured advances through synchronized piston lanes."},
+        {"slug":"ignition_race","title":"Ignition Race","role":"twist","mechanic":"steam_vent","intent":"Layer ignition vents over the learned piston cadence."},
+        {"slug":"colossus_lock","title":"Colossus Lock","role":"recovery","mechanic":"conveyor_reverse","intent":"Create a final systems recap and a clean boss-door approach."}
+      ],
+      "optional": [
+        {"slug":"prototype_hangar","title":"Prototype Hangar","lore":"A smaller Colossus shell bears evidence of a pilot compartment removed from later models."},
+        {"slug":"engineers_last_shift","title":"Engineer's Last Shift","lore":"A voice transcript asks why the engine is pointed at the moon instead of the city."}
+      ]
+    },
+    "lunar_surface_arrival": {
+      "critical": [
+        {"slug":"regolith_step","title":"Regolith Step","role":"teach","mechanic":"gravity_zone","intent":"Teach lunar gravity inside a wide, consequence-light basin."},
+        {"slug":"crater_vector","title":"Crater Vector","role":"test","mechanic":"void_pit","intent":"Test long low-gravity arcs over clearly telegraphed void pockets."},
+        {"slug":"solar_wake","title":"Solar Wake","role":"twist","mechanic":"rotating_laser","intent":"Sweep the open route with a slow solar tracking beam."},
+        {"slug":"airlock_shadow","title":"Airlock Shadow","role":"recovery","mechanic":"gravity_zone","intent":"Return gravity toward normal before the cleanroom seal."}
+      ],
+      "optional": [
+        {"slug":"landing_blackbox","title":"Landing Blackbox","lore":"The first lunar landing log reports a city signal already waiting on the surface."},
+        {"slug":"survey_cairn","title":"Survey Cairn","lore":"Surveyors arranged stones around a phase scar that points back toward Earth."}
+      ]
+    },
+    "research_cleanrooms": {
+      "critical": [
+        {"slug":"decon_buffer","title":"Decon Buffer","role":"teach","mechanic":"laser_grid","intent":"Teach security beam cadence through transparent safe cells."},
+        {"slug":"sterile_switchback","title":"Sterile Switchback","role":"test","mechanic":"gravity_zone","intent":"Test controlled direction changes under reduced gravity."},
+        {"slug":"sample_transit","title":"Sample Transit","role":"twist","mechanic":"moving_horizontal","intent":"Move the safe floor beneath alternating sterilization beams."},
+        {"slug":"observation_rest","title":"Observation Rest","role":"recovery","mechanic":"laser_grid","intent":"Offer a quiet specimen overlook before the dome lockdown."}
+      ],
+      "optional": [
+        {"slug":"ethics_archive","title":"Ethics Archive","lore":"Every ethics objection was reclassified as a contamination event."},
+        {"slug":"cold_sample","title":"Cold Sample","lore":"A sealed sample contains factory alloy and living abyssal tissue in equal measure."}
+      ]
+    },
+    "security_grid_shaft": {
+      "critical": [
+        {"slug":"vector_lobby","title":"Vector Lobby","role":"teach","mechanic":"rotating_laser","intent":"Introduce rotating grid timing from a protected central platform."},
+        {"slug":"polar_ascent","title":"Polar Ascent","role":"test","mechanic":"gravity_zone","intent":"Test upward route control through alternating gravity bands."},
+        {"slug":"parallax_cage","title":"Parallax Cage","role":"twist","mechanic":"laser_grid","intent":"Combine vertical drift with offset security apertures."},
+        {"slug":"grid_silence","title":"Grid Silence","role":"recovery","mechanic":"moving_vertical","intent":"Resolve the shaft rhythm in a quiet climb to biotech access."}
+      ],
+      "optional": [
+        {"slug":"detention_index","title":"Detention Index","lore":"The grid detained researchers for predicting the same future as the Oracle."},
+        {"slug":"blind_spot","title":"Blind Spot","lore":"A hand-drawn map proves someone lived for months inside the security system's only blind angle."}
+      ]
+    },
+    "bio_tech_labs": {
+      "critical": [
+        {"slug":"culture_walk","title":"Culture Walk","role":"teach","mechanic":"gravity_zone","intent":"Teach movement around suspended culture tanks with safe lower footing."},
+        {"slug":"gene_spindle","title":"Gene Spindle","role":"test","mechanic":"rotating_laser","intent":"Test orbiting movement around a slow gene-scanning arm."},
+        {"slug":"hybrid_breach","title":"Hybrid Breach","role":"twist","mechanic":"void_pit","intent":"Combine broken containment floors with altered gravity arcs."},
+        {"slug":"incubation_hush","title":"Incubation Hush","role":"recovery","mechanic":"moving_horizontal","intent":"Lower pressure while foreshadowing the Oracle's biological interface."}
+      ],
+      "optional": [
+        {"slug":"donor_registry","title":"Donor Registry","lore":"The donor list contains no volunteers, only transit-card identifiers."},
+        {"slug":"failed_oracle","title":"Failed Oracle","lore":"An early prediction engine grew a nervous system so it could learn regret."}
+      ]
+    },
+    "orbital_command": {
+      "critical": [
+        {"slug":"command_causeway","title":"Command Causeway","role":"teach","mechanic":"laser_grid","intent":"Preview command security through a wide multi-lane approach."},
+        {"slug":"telemetry_ring","title":"Telemetry Ring","role":"test","mechanic":"gravity_zone","intent":"Test precise orbit corrections around the telemetry hub."},
+        {"slug":"targeting_choir","title":"Targeting Choir","role":"twist","mechanic":"rotating_laser","intent":"Layer synchronized targeting sweeps over lunar drift."},
+        {"slug":"oracle_antechamber","title":"Oracle Antechamber","role":"recovery","mechanic":"moving_horizontal","intent":"Give the player a composed final read before the Lunar Oracle."}
+      ],
+      "optional": [
+        {"slug":"mission_replay","title":"Mission Replay","lore":"A mission replay shows the Oracle correcting history before each prediction failed."},
+        {"slug":"earth_window","title":"Earth Window","lore":"From this angle every city light forms the same circuit etched into the abyssal samples."}
+      ]
+    },
+    "corrupted_outpost": {
+      "critical": [
+        {"slug":"spore_threshold","title":"Spore Threshold","role":"teach","mechanic":"corruption_zone","intent":"Teach corruption exposure with immediate clean recovery ground."},
+        {"slug":"ruin_cadence","title":"Ruin Cadence","role":"test","mechanic":"breakaway","intent":"Test deliberate movement across collapsing outpost remains."},
+        {"slug":"black_rain","title":"Black Rain","role":"twist","mechanic":"void_pit","intent":"Combine intermittent corruption shelter with broken footing."},
+        {"slug":"purifier_shadow","title":"Purifier Shadow","role":"recovery","mechanic":"corruption_zone","intent":"Offer a clean staging pocket before the outpost purifier."}
+      ],
+      "optional": [
+        {"slug":"evacuation_tape","title":"Evacuation Tape","lore":"The evacuation order arrived after every recorded resident had already vanished."},
+        {"slug":"sealed_well","title":"Sealed Well","lore":"The well cap bears Helix markings older than the surrounding settlement."}
+      ]
+    },
+    "the_dark_chasm": {
+      "critical": [
+        {"slug":"echo_ledge","title":"Echo Ledge","role":"teach","mechanic":"moving_vertical","intent":"Teach the chasm's vertical platform rhythm over shallow consequences."},
+        {"slug":"blind_descent","title":"Blind Descent","role":"test","mechanic":"void_pit","intent":"Test committing to silhouettes before the landing fully resolves."},
+        {"slug":"fracture_echo","title":"Fracture Echo","role":"twist","mechanic":"breakaway","intent":"Turn familiar return platforms into a collapsing descent."},
+        {"slug":"lantern_shelf","title":"Lantern Shelf","role":"recovery","mechanic":"corruption_zone","intent":"Provide a clean visual anchor before the nest boundary."}
+      ],
+      "optional": [
+        {"slug":"miners_echo","title":"Miner's Echo","lore":"A miner's call returns in a voice that answers questions before they are spoken."},
+        {"slug":"fossil_lift","title":"Fossil Lift","lore":"The lift predates Cyber City yet uses the same magnetic rail standard."}
+      ]
+    },
+    "bio_mechanical_nest": {
+      "critical": [
+        {"slug":"membrane_gate","title":"Membrane Gate","role":"teach","mechanic":"corruption_zone","intent":"Teach pulsing biological gates with generous clean intervals."},
+        {"slug":"sinew_bridge","title":"Sinew Bridge","role":"test","mechanic":"moving_horizontal","intent":"Test movement on living platforms that visibly contract first."},
+        {"slug":"hatchery_spasm","title":"Hatchery Spasm","role":"twist","mechanic":"breakaway","intent":"Combine unstable footing with corruption-safe route changes."},
+        {"slug":"nerve_quiet","title":"Nerve Quiet","role":"recovery","mechanic":"corruption_zone","intent":"Create a still chamber before the nest core's story reveal."}
+      ],
+      "optional": [
+        {"slug":"gestation_record","title":"Gestation Record","lore":"The nest learned factory assembly order before any robot entered the abyss."},
+        {"slug":"symbiote_crypt","title":"Symbiote Crypt","lore":"Dormant forms carry both lunar researcher tags and outpost family names."}
+      ]
+    },
+    "abyssal_sanctuary": {
+      "critical": [
+        {"slug":"null_procession","title":"Null Procession","role":"teach","mechanic":"gravity_zone","intent":"Teach sanctuary gravity reversals on a broad ceremonial route."},
+        {"slug":"reliquary_belt","title":"Reliquary Belt","role":"test","mechanic":"conveyor_reverse","intent":"Test position control on an ancient self-reversing procession belt."},
+        {"slug":"convergence_apse","title":"Convergence Apse","role":"twist","mechanic":"rotating_laser","intent":"Combine gravity drift with a rotating null-energy focus."},
+        {"slug":"heart_vigil","title":"Heart Vigil","role":"recovery","mechanic":"corruption_zone","intent":"Offer a final quiet threshold before the Heart district."}
+      ],
+      "optional": [
+        {"slug":"pilgrim_cipher","title":"Pilgrim Cipher","lore":"The cipher calls the city, factory, moon, and abyss four organs of one machine."},
+        {"slug":"null_reliquary","title":"Null Reliquary","lore":"A reliquary holds a harmless void fragment that pulses in time with the protagonist."}
+      ]
+    },
+    "heart_of_the_void": {
+      "critical": [
+        {"slug":"ventricle_gate","title":"Ventricle Gate","role":"teach","mechanic":"corruption_zone","intent":"Review corruption-safe movement in a readable final-district threshold."},
+        {"slug":"arterial_crossing","title":"Arterial Crossing","role":"test","mechanic":"moving_horizontal","intent":"Test sustained movement across living arterial platforms."},
+        {"slug":"memory_collapse","title":"Memory Collapse","role":"twist","mechanic":"void_pit","intent":"Combine abyssal footing, corruption pressure, and final-route silhouettes."},
+        {"slug":"core_stillness","title":"Core Stillness","role":"recovery","mechanic":"breakaway","intent":"Resolve traversal pressure before the Heart of the Void arena."}
+      ],
+      "optional": [
+        {"slug":"discarded_future","title":"Discarded Future","lore":"One discarded future shows the protagonist choosing never to leave Rooftop Alley."},
+        {"slug":"helix_origin","title":"Helix Origin","lore":"The oldest Helix file is not a design document but a message sent backward from the Heart."}
+      ]
+    }
+  }
+}

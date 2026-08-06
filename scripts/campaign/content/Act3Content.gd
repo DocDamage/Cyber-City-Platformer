@@ -15,8 +15,8 @@ static func _lunar_surface() -> Dictionary:
 	return {
 		"stage_id": "3-1",
 		"traversal": [
-			{"id": "low_g_school", "kind": "low_gravity_gap", "position": Vector2(850, 410), "optional": false},
-			{"id": "crater_crossing", "kind": "long_gap", "position": Vector2(2850, 410), "optional": false},
+			{"id": "low_g_school", "kind": "low_gravity_gap", "architecture": "lunar_crater_walk", "position": Vector2(850, 410), "optional": false},
+			{"id": "crater_crossing", "kind": "long_gap", "architecture": "lunar_crater_span", "position": Vector2(2850, 410), "optional": false},
 		],
 		"mechanics": [
 			{"id": "lunar_low_g", "kind": "gravity_zone", "position": Vector2(1600, 230), "size": Vector2(2700, 500), "gravity": 0.38},
@@ -34,8 +34,8 @@ static func _cleanrooms() -> Dictionary:
 	return {
 		"stage_id": "3-2",
 		"traversal": [
-			{"id": "airlock_cycle", "kind": "hazard_steps", "position": Vector2(900, 410), "optional": false},
-			{"id": "observation_route", "kind": "high_route", "position": Vector2(2850, 390), "optional": true},
+			{"id": "airlock_cycle", "kind": "hazard_steps", "architecture": "lunar_cleanroom_airlock", "position": Vector2(900, 410), "optional": false},
+			{"id": "observation_route", "kind": "high_route", "architecture": "lunar_observation_spine", "position": Vector2(2850, 390), "optional": true},
 		],
 		"mechanics": [
 			{"id": "cleanroom_gate", "kind": "security_gate", "position": Vector2(2050, 330), "persistence": "checkpoint"},
@@ -56,8 +56,8 @@ static func _security_shaft() -> Dictionary:
 	return {
 		"stage_id": "3-3",
 		"traversal": [
-			{"id": "security_shaft", "kind": "wall_jump_shaft", "position": Vector2(1100, 390), "height": 600.0, "optional": false},
-			{"id": "orbital_lift", "kind": "vertical_route", "position": Vector2(3000, 380), "optional": false},
+			{"id": "security_shaft", "kind": "wall_jump_shaft", "architecture": "lunar_security_shaft", "position": Vector2(1100, 390), "height": 600.0, "optional": false},
+			{"id": "orbital_lift", "kind": "vertical_route", "architecture": "lunar_orbital_lift", "position": Vector2(3000, 380), "optional": false},
 		],
 		"mechanics": [
 			{"id": "shaft_turret", "kind": "turret", "position": Vector2(1500, 150), "mode": "tracking", "destructible": true},
@@ -78,8 +78,8 @@ static func _biotech_labs() -> Dictionary:
 	return {
 		"stage_id": "3-4",
 		"traversal": [
-			{"id": "gravity_switchback", "kind": "low_gravity_gap", "position": Vector2(950, 410), "optional": false},
-			{"id": "containment_bypass", "kind": "high_route", "position": Vector2(3000, 390), "optional": false},
+			{"id": "gravity_switchback", "kind": "low_gravity_gap", "architecture": "biotech_gravity_bridge", "position": Vector2(950, 410), "optional": false},
+			{"id": "containment_bypass", "kind": "high_route", "architecture": "biotech_containment_bypass", "position": Vector2(3000, 390), "optional": false},
 		],
 		"mechanics": [
 			{"id": "heavy_g_lab", "kind": "gravity_zone", "position": Vector2(900, 250), "size": Vector2(650, 430), "gravity": 1.7},

@@ -16,6 +16,8 @@ var _activated := false
 var _label: Label
 var _hold_progress := 0.0
 
+const TERMINAL_TEXTURE := "res://assets/runtime/props/districts/security_grid_shaft/grid_terminal.png"
+
 
 func _ready() -> void:
 	add_to_group(&"interactive_terminals")
@@ -27,25 +29,27 @@ func _ready() -> void:
 	shape.size = Vector2(72.0, 100.0)
 	collision.shape = shape
 	add_child(collision)
-	var visual := Polygon2D.new()
-	visual.polygon = PackedVector2Array([
-		Vector2(-24.0, -36.0), Vector2(24.0, -36.0),
-		Vector2(24.0, 36.0), Vector2(-24.0, 36.0),
-	])
+	var visual := Sprite2D.new()
+	visual.name = "TerminalConsole"
+	visual.texture = load(TERMINAL_TEXTURE) as Texture2D
+	visual.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	visual.scale = Vector2(2.0, 2.0)
+	visual.position.y = 33.0
 	var settings := get_node_or_null("/root/SettingsManager")
-	visual.color = Color.WHITE if settings != null and bool(settings.call(&"get_setting", &"high_contrast_interactables", false)) else Color("22e6ff")
+	visual.modulate = Color.WHITE if settings != null and bool(settings.call(&"get_setting", &"high_contrast_interactables", false)) else Color("b8f7ff")
 	add_child(visual)
 	_label = Label.new()
 	_label.position = Vector2(-70.0, -72.0)
-	_label.text = "PRESS E / Y: ACCESS"
 	_label.visible = false
 	add_child(_label)
+	_bind_prompt_updates()
+	_refresh_prompt()
 	_restore_persisted_state()
 	body_entered.connect(func(body: Node) -> void:
 		if body.is_in_group(&"player"):
 			_player_inside = true
 			_label.visible = true
-			focus_changed.emit(true, "E / Y  ACCESS TERMINAL")
+			focus_changed.emit(true, "%s  ACCESS TERMINAL" % _interact_prompt())
 	)
 	body_exited.connect(func(body: Node) -> void:
 		if body.is_in_group(&"player"):
@@ -69,7 +73,7 @@ func _process(delta: float) -> void:
 		_hold_progress = 0.0
 		return
 	_hold_progress = _hold_progress + delta if Input.is_action_pressed(&"interact") else 0.0
-	_label.text = "HOLD E / Y: %d%%" % mini(roundi(_hold_progress / 0.6 * 100.0), 100)
+	_label.text = "HOLD %s: %d%%" % [_interact_prompt(), mini(roundi(_hold_progress / 0.6 * 100.0), 100)]
 	if _hold_progress >= 0.6:
 		activate()
 
@@ -101,7 +105,7 @@ func reset_interaction() -> void:
 	_activated = false
 	_hold_progress = 0.0
 	if _label != null:
-		_label.text = "PRESS E / Y: ACCESS"
+		_refresh_prompt()
 
 
 func is_activated() -> bool:
@@ -111,6 +115,8 @@ func is_activated() -> bool:
 func _activate_target(target: Node) -> void:
 	if target.has_method(&"request_open"):
 		target.call(&"request_open", terminal_id)
+	elif target.has_method(&"reverse"):
+		target.call(&"reverse")
 	elif target.has_method(&"set_enabled"):
 		target.call(&"set_enabled", false)
 	elif target.has_method(&"activate"):
@@ -122,12 +128,23 @@ func _persist_state(value: bool) -> void:
 		return
 	var manager := get_node_or_null("/root/GameManager")
 	if manager != null:
-		manager.call(&"set_stage_flag", _stage_scene_path(), terminal_id, value, persistence == "save")
+		if _in_world_room():
+			manager.world_progress.set_object_state(String(terminal_id), value)
+			if persistence == "save":
+				var save := get_node_or_null("/root/SaveManager")
+				if save != null:
+					save.call_deferred(&"save_game")
+		else:
+			manager.call(&"set_stage_flag", _stage_scene_path(), terminal_id, value, persistence == "save")
 
 
 func _get_persisted_state() -> bool:
 	var manager := get_node_or_null("/root/GameManager")
-	return bool(manager.call(&"get_stage_flag", _stage_scene_path(), terminal_id, false)) if manager != null else false
+	if manager == null:
+		return false
+	if _in_world_room():
+		return bool(manager.world_progress.get_object_state(String(terminal_id), false))
+	return bool(manager.call(&"get_stage_flag", _stage_scene_path(), terminal_id, false))
 
 
 func _restore_persisted_state() -> void:
@@ -141,3 +158,35 @@ func _stage_scene_path() -> String:
 	while node.get_parent() != null and node.get_parent() != get_tree().root:
 		node = node.get_parent()
 	return node.scene_file_path
+
+
+func _in_world_room() -> bool:
+	var node := get_parent()
+	while node != null:
+		if node.is_in_group(&"world_rooms"):
+			return true
+		node = node.get_parent()
+	return false
+
+
+func _interact_prompt() -> String:
+	var settings := get_node_or_null("/root/SettingsManager")
+	return String(settings.call(&"get_action_prompt", &"interact")) if settings != null else "INTERACT"
+
+
+func _bind_prompt_updates() -> void:
+	var settings := get_node_or_null("/root/SettingsManager")
+	if settings == null:
+		return
+	for signal_name: StringName in [&"input_device_changed", &"action_binding_changed"]:
+		var callback := Callable(self, &"_refresh_prompt")
+		if settings.has_signal(signal_name) and not settings.is_connected(signal_name, callback):
+			settings.connect(signal_name, callback)
+
+
+func _refresh_prompt(_unused: Variant = null) -> void:
+	if _label == null or _activated:
+		return
+	_label.text = "PRESS %s: ACCESS" % _interact_prompt()
+	if _player_inside:
+		focus_changed.emit(true, "%s  ACCESS TERMINAL" % _interact_prompt())

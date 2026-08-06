@@ -40,6 +40,8 @@ func _ready() -> void:
 		return
 	player = stage.get_player() as Node2D
 	stage_exit = stage.get_stage_exit()
+	if stage_exit != null:
+		stage_exit.set_locked_message("DEFEAT BOSS" if is_boss_stage else "CLEAR ENCOUNTERS")
 	var manager := get_node_or_null("/root/GameManager")
 	if manager != null:
 		manager.call(&"enter_stage", get_stage_id(), stage.scene_file_path)
@@ -57,6 +59,7 @@ func _ready() -> void:
 	else:
 		_build_authored_encounters()
 	_bind_hud()
+	_present_stage_briefing()
 	if player != null and player.has_signal(&"died") and not player.is_connected(&"died", _on_player_died):
 		player.connect(&"died", _on_player_died)
 	initialized.emit(get_stage_id())
@@ -195,13 +198,16 @@ func _collect_traversal_sections() -> void:
 func _install_environmental_presentation() -> void:
 	var container := stage.get_presentation_container()
 	for child: Node in container.get_children():
-		if child is EnvironmentalPresentation:
+		if child is EnvironmentalPresentation or child is StageArchitectureDressing:
 			child.queue_free()
 	var values: Array = metadata.get("camera_bounds", [0, 0, 1408, 540])
 	var bounds := Rect2(float(values[0]), float(values[1]), float(values[2]) - float(values[0]), float(values[3]) - float(values[1]))
 	environmental_presentation = EnvironmentalPresentation.new()
 	environmental_presentation.configure(int(metadata.get("act", stage.stage_act)), stage.stage_sub, bounds)
 	container.add_child(environmental_presentation)
+	var dressing := StageArchitectureDressing.new()
+	container.add_child(dressing)
+	dressing.configure(stage, StringName(get_stage_id()))
 
 
 func _build_authored_encounters() -> void:
@@ -243,7 +249,7 @@ func _register_boss() -> void:
 		boss.boss_defeated.connect(_on_boss_defeated.bind(boss))
 	var arena := BossArenaController.new()
 	var camera := player.get_node_or_null("Camera2D") as DynamicCamera if player != null else null
-	arena.configure(arena_bounds, boss, camera)
+	arena.configure(arena_bounds, boss, camera, int(metadata.get("act", stage.stage_act)))
 	stage.get_encounters_container().add_child(arena)
 
 
@@ -257,6 +263,12 @@ func _bind_hud() -> void:
 	var boss := stage.get_boss()
 	if boss != null and hud.has_method(&"bind_boss"):
 		hud.call(&"bind_boss", boss)
+
+
+func _present_stage_briefing() -> void:
+	var hud := stage.get_hud()
+	if hud != null and hud.has_method(&"show_stage_intro"):
+		hud.call(&"show_stage_intro", get_stage_id(), metadata)
 
 
 func _reset_stage_systems() -> void:

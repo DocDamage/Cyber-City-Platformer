@@ -14,11 +14,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Runtime asset packs
 
-The release contains 182 curated third-party runtime files. `ASSET_LICENSE_MANIFEST.json` in the release maps every file to a SHA-256 digest and one of the included full license texts under `licenses/`.
+The release contains 314 curated runtime files. `ASSET_LICENSE_MANIFEST.json` in the release maps every file to a SHA-256 digest, source provenance, and one of the included full license texts under `licenses/`. Seventeen project-authored, AI-assisted environment panoramas have `generated://openai-imagegen/2026-08-05/...` provenance and are distributed under the included CC0 text used by their project reference art.
 
 | Included license | Files | Covered packs |
 |---|---:|---|
-| `LICENSE-0ddffeed82b7.txt` | 64 | Player fighter, stage tiles/props, parallax, VFX Pack 6, music, and retro action SFX |
+| `LICENSE-0ddffeed82b7.txt` | 196 | Player fighter, layered Character Creator, animated weapon effects, curated weapon/unknown inventory icons, twenty district-specific prop sets, five-profile dialogue voices, stage tiles/props, parallax, four repository-native Neon Moon layers, seventeen AI-assisted act panoramas, VFX Pack 6, music, and retro action SFX |
 | `LICENSE-252e74b6a90a.txt` | 58 | Demon Boss, Flying Eye, Goblin, Gryphon, Headless Horseman, Medusa, Pyromancer, Skeleton Warrior, Werewolf, and Witch enemy packs |
 | `LICENSE-6799bb902d83.txt` | 6 | Mimic enemy pack |
 | `LICENSE-a9c85bdb4b11.txt` | 6 | Minotaur enemy pack |

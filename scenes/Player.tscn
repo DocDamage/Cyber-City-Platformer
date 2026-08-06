@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
 [ext_resource type="Script" path="res://scripts/Hurtbox.gd" id="2_hurtbox"]
 [ext_resource type="Script" path="res://scripts/Hitbox.gd" id="3_hitbox"]
 [ext_resource type="Script" path="res://scripts/DynamicCamera.gd" id="4_camera"]
 [ext_resource type="Script" path="res://scripts/systems/player/PlayerCombatController.gd" id="5_combat"]
+[ext_resource type="PackedScene" path="res://scenes/Player/PlayerVisual.tscn" id="6_visual"]
+[ext_resource type="Script" path="res://scripts/metroidvania/TeleportController.gd" id="7_teleport"]
+[ext_resource type="Script" path="res://scripts/metroidvania/VoiceBarkPlayer.gd" id="8_voice"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
 
@@ -66,6 +69,10 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_player")
 centered = true
 
+[node name="PlayerVisual" parent="." instance=ExtResource("6_visual")]
+position = Vector2(0, -12)
+scale = Vector2(1.5, 1.5)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape_player")
@@ -104,6 +111,13 @@ shape = SubResource("RectangleShape_melee")
 
 [node name="CombatController" type="Node" parent="."]
 script = ExtResource("5_combat")
+
+[node name="TeleportController" type="Node2D" parent="."]
+z_index = 20
+script = ExtResource("7_teleport")
+
+[node name="VoiceBarkPlayer" type="Node" parent="."]
+script = ExtResource("8_voice")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, -10)

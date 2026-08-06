@@ -1,6 +1,6 @@
 # Cyber City Platformer
 
-Cyber City Platformer is a Godot 4.7.1 neon action-platformer with a twenty-stage campaign across four acts. The production game includes movement and combat upgrades, ten enemy archetypes, four distinct bosses, checkpoints, save recovery, stage select, settings, accessibility options, an ending, and credits.
+Cyber City Platformer is a Godot 4.7.1 neon action-platformer rebuilt as one continuous 202-room metroidvania. Its twenty districts span Cyber City, Mega Robot Factory, Neon Moon Protocol, and Abyssal Night, with character creation, six starting weapon families, universal phase teleport, persistent abilities/shortcuts/warps/caches, four regional bosses, a personalized ending, and post-game exploration. The 103 expansion rooms carry unique static geometry derived from twenty district-specific spatial rhythms and rendered landmark silhouettes. The original twenty-stage campaign remains available as a validated legacy mode; all four acts now have production presentation, traversal, objective, boss, completion, and persistence coverage, including seventeen stage-specific hero panoramas.
 
 ## Play the Windows build
 
@@ -31,6 +31,6 @@ godot --headless --path . --export-release "Windows Desktop" build/windows/Cyber
 python tools/package_release.py
 ```
 
-The startup scene is `res://scenes/ui/TitleScreen.tscn`. Production campaign metadata lives in `res://Stages/campaign_manifest.json`; runtime assets live under `res://assets/runtime` and are tracked with Git LFS. Original asset-pack mirrors and builder tools are development-only and excluded from exports.
+The startup scene is `res://scenes/ui/TitleScreen.tscn`. The connected-world manifest lives in `res://data/world/world_manifest.json`; legacy campaign metadata lives in `res://Stages/campaign_manifest.json`. Runtime assets live under `res://assets/runtime` and are tracked with Git LFS. Original asset-pack mirrors and builder tools are development-only and excluded from exports.
 
-Detailed test, architecture, performance, asset, and release evidence is under `docs/`.
+Detailed test, architecture, performance, asset, and release evidence is under `docs/`. Start with `docs/implementation/DELIVERY_SUMMARY.md` for the current delivery state.

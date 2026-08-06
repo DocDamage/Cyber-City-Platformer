@@ -6,9 +6,10 @@ static func install(stage: StageBase, blueprint: Dictionary) -> Array[Node]:
 	var installed: Array[Node] = []
 	var container := stage.get_mechanics_container()
 	_clear_container(container)
+	var environment_id := _environment_id_for_stage(stage)
 	for traversal_value: Variant in blueprint.get("traversal", []):
 		var section := AuthoredTraversal.new()
-		section.configure(traversal_value as Dictionary)
+		section.configure(traversal_value as Dictionary, environment_id)
 		container.add_child(section)
 	var indexed_nodes := {}
 	for entry_value: Variant in blueprint.get("mechanics", []):
@@ -38,6 +39,7 @@ static func _create_mechanic(stage: StageBase, entry: Dictionary) -> Node:
 			platform.speed = float(entry.get("speed", 110.0))
 			platform.wait_time = float(entry.get("wait", 0.25))
 			platform.phase_offset = float(entry.get("phase", 0.0))
+			platform.presentation_id = StringName(entry.get("presentation", ""))
 			return platform
 		"breakaway_platform":
 			var platform := BreakawayPlatform.new()
@@ -164,3 +166,11 @@ static func _clear_container(container: Node) -> void:
 	for child: Node in container.get_children():
 		container.remove_child(child)
 		child.queue_free()
+
+
+static func _environment_id_for_stage(stage: StageBase) -> StringName:
+	match stage.stage_act:
+		2: return &"robot_factory"
+		3: return &"neon_moon"
+		4: return &"abyssal_night"
+		_: return &"cyber_city"

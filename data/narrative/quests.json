@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "quests": {
+    "main_phasebound": {
+      "title": "Phasebound",
+      "category": "main",
+      "mode": "sequential",
+      "auto_start": true,
+      "completion_text": "The convergence is broken. Continue exploring Cyber City.",
+      "steps": [
+        {"id":"prologue","objective":"Reach Mara's night-market relay.","event_type":"story_flag","event_id":"prologue_complete","target_room_id":"cyber_rooftop_market"},
+        {"id":"rooftop","objective":"Cross Rooftop Alley and sync at the eastern overlook.","event_type":"story_flag","event_id":"rooftop_alley_complete","target_room_id":"cyber_rooftop_overlook"},
+        {"id":"billboard","objective":"Follow the Helix trace across Billboard Highway.","event_type":"story_flag","event_id":"billboard_highway_complete","target_room_id":"cyber_billboard_crown"},
+        {"id":"spire","objective":"Climb Communication Spire and decode the orbital signal.","event_type":"story_flag","event_id":"spire_signal_revealed","target_room_id":"cyber_spire_crown"},
+        {"id":"skybridge","objective":"Bring the Skybridge phase relay online.","event_type":"story_flag","event_id":"warp_tutorial_seen","target_room_id":"cyber_skybridge_east"},
+        {"id":"helix","objective":"Defeat Helix Warden at the Executive Helipad.","event_type":"story_flag","event_id":"helix_warden_defeated","target_room_id":"cyber_helipad_arena"},
+        {"id":"intake","objective":"Descend through the factory's Sub-Level Intake.","event_type":"story_flag","event_id":"factory_intake_reached","target_room_id":"factory_intake_lift"},
+        {"id":"conveyor","objective":"Override the Conveyor Assembly sort line.","event_type":"story_flag","event_id":"conveyor_assembly_complete","target_room_id":"factory_conveyor_overdrive"},
+        {"id":"smelting","objective":"Breach the Smelting Core and recover its ground-break module.","event_type":"story_flag","event_id":"smelting_core_cleared","target_room_id":"factory_smelting_ascent"},
+        {"id":"maintenance","objective":"Recover the factory-purpose record in Robotic Maintenance.","event_type":"story_flag","event_id":"factory_purpose_revealed","target_room_id":"factory_maintenance_bay"},
+        {"id":"colossus","objective":"Defeat Assembly Colossus and restore the orbital lift.","event_type":"story_flag","event_id":"assembly_colossus_defeated","target_room_id":"factory_engine_arena"},
+        {"id":"surface","objective":"Stabilize the Neon Moon arrival protocol.","event_type":"story_flag","event_id":"neon_moon_protocol_revealed","target_room_id":"moon_surface_transit"},
+        {"id":"cleanrooms","objective":"Recover the Oracle's cleanroom record.","event_type":"story_flag","event_id":"cleanroom_record_found","target_room_id":"moon_cleanroom_dome"},
+        {"id":"security","objective":"Master the Security Grid Shaft and open Bio-Tech access.","event_type":"story_flag","event_id":"security_grid_mastered","target_room_id":"moon_security_recovery"},
+        {"id":"biotech","objective":"Install Gravity Anchor and expose the Oracle's origin.","event_type":"story_flag","event_id":"biotech_labs_complete","target_room_id":"moon_biotech_core"},
+        {"id":"oracle","objective":"Defeat Lunar Oracle in Orbital Command.","event_type":"story_flag","event_id":"lunar_oracle_defeated","target_room_id":"moon_command_arena"},
+        {"id":"outpost","objective":"Cleanse the Corrupted Outpost and install Abyssal Filter.","event_type":"story_flag","event_id":"corrupted_outpost_complete","target_room_id":"void_outpost_purifier"},
+        {"id":"chasm","objective":"Follow the copied signal through the Dark Chasm.","event_type":"story_flag","event_id":"dark_chasm_complete","target_room_id":"void_chasm_exit"},
+        {"id":"nest","objective":"Cleanse the Bio-Mechanical Nest core.","event_type":"story_flag","event_id":"bio_mechanical_nest_complete","target_room_id":"void_nest_core"},
+        {"id":"sanctuary","objective":"Complete the Abyssal Sanctuary trials.","event_type":"story_flag","event_id":"void_cerberus_preparation_seen","target_room_id":"void_sanctuary_crown"},
+        {"id":"heart","objective":"Defeat Void Cerberus and break the convergence.","event_type":"story_flag","event_id":"game_complete","target_room_id":"void_heart_arena"}
+      ]
+    },
+    "lost_arsenal": {
+      "title": "Lost Arsenal",
+      "category": "side",
+      "mode": "collection",
+      "auto_start": true,
+      "active_objective": "Recover optional weapon signals across all four regions.",
+      "completion_text": "Every lost weapon signal has been recovered.",
+      "steps": [
+        {"id":"signal_pair","objective":"Recover Signal Pair.","event_type":"item","event_id":"dagger_signal_pair"},
+        {"id":"voltage_arc","objective":"Recover Voltage Arc.","event_type":"item","event_id":"bow_voltage_arc"},
+        {"id":"arc_lance","objective":"Recover Arc Lance.","event_type":"item","event_id":"spear_arc_lance"},
+        {"id":"foundry_maul","objective":"Recover Foundry Maul.","event_type":"item","event_id":"heavy_foundry_maul"},
+        {"id":"coolant_coil","objective":"Recover Coolant Coil.","event_type":"item","event_id":"staff_coolant_coil"},
+        {"id":"servo_pair","objective":"Recover Servo Pair.","event_type":"item","event_id":"dagger_servo_pair"},
+        {"id":"lunar_prism","objective":"Recover Lunar Prism.","event_type":"item","event_id":"bow_lunar_prism"},
+        {"id":"orbit_lance","objective":"Recover Orbit Lance.","event_type":"item","event_id":"spear_orbit_lance"},
+        {"id":"oracle_focus","objective":"Recover Oracle Focus.","event_type":"item","event_id":"staff_oracle_focus"},
+        {"id":"void_string","objective":"Recover Void String.","event_type":"item","event_id":"bow_void_string"},
+        {"id":"cleansing_spike","objective":"Recover Cleansing Spike.","event_type":"item","event_id":"spear_cleansing_spike"},
+        {"id":"convergence_edge","objective":"Recover Convergence Edge.","event_type":"item","event_id":"sword_convergence_edge"}
+      ]
+    },
+    "relay_network": {
+      "title": "Relay Network",
+      "category": "side",
+      "mode": "collection",
+      "auto_start": true,
+      "active_objective": "Activate every regional warp relay.",
+      "completion_text": "The full warp relay network is online.",
+      "steps": [
+        {"id":"rooftop","objective":"Activate Rooftop Relay.","event_type":"warp","event_id":"warp_rooftop_overlook"},
+        {"id":"skybridge","objective":"Activate Skybridge Exchange.","event_type":"warp","event_id":"warp_skybridge"},
+        {"id":"factory","objective":"Activate Assembly Relay.","event_type":"warp","event_id":"warp_factory_engine"},
+        {"id":"moon","objective":"Activate Lunar Transit.","event_type":"warp","event_id":"warp_moon_surface"},
+        {"id":"abyss","objective":"Activate Abyssal Relay.","event_type":"warp","event_id":"warp_void_sanctuary"}
+      ]
+    },
+    "phase_mastery": {
+      "title": "Phase Mastery",
+      "category": "side",
+      "mode": "collection",
+      "auto_start": true,
+      "active_objective": "Install every major traversal module.",
+      "completion_text": "Every traversal module is synchronized.",
+      "steps": [
+        {"id":"magnetic","objective":"Install Magnetic Rail.","event_type":"ability","event_id":"magnetic_rail"},
+        {"id":"barrier","objective":"Install Phase Barrier.","event_type":"ability","event_id":"phase_barrier"},
+        {"id":"ground_break","objective":"Install Kinetic Ground Break.","event_type":"ability","event_id":"heavy_ground_break"},
+        {"id":"gravity","objective":"Install Gravity Anchor.","event_type":"ability","event_id":"gravity_anchor"},
+        {"id":"chain","objective":"Install Chain Teleport.","event_type":"ability","event_id":"chain_teleport"},
+        {"id":"resistance","objective":"Install Corruption Resistance.","event_type":"ability","event_id":"corruption_resistance"},
+        {"id":"field","objective":"Install Null Energy Field.","event_type":"ability","event_id":"energy_field"}
+      ]
+    }
+  }
+}

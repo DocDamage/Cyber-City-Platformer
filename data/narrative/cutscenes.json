@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "sequences": {
+    "prologue_rooftop_arrival": {
+      "once": true,
+      "commands": [
+        {"type": "lock_player"},
+        {"type": "dialogue", "entry_id": "prologue_rooftop_arrival"},
+        {"type": "set_flag", "id": "prologue_complete", "value": true},
+        {"type": "unlock_player"}
+      ],
+      "skip_endpoint": [
+        {"type": "set_flag", "id": "prologue_complete", "value": true},
+        {"type": "unlock_player"}
+      ]
+    },
+    "rooftop_district_exit": {
+      "once": true,
+      "commands": [
+        {"type": "lock_player"},
+        {"type": "dialogue", "entry_id": "rooftop_district_exit"},
+        {"type": "set_flag", "id": "rooftop_alley_complete", "value": true},
+        {"type": "unlock_player"}
+      ],
+      "skip_endpoint": [
+        {"type": "set_flag", "id": "rooftop_alley_complete", "value": true},
+        {"type": "unlock_player"}
+      ]
+    },
+    "billboard_helix_clue": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"billboard_helix_clue"},{"type":"set_flag","id":"billboard_highway_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"billboard_highway_complete","value":true},{"type":"unlock_player"}]
+    },
+    "spire_orbital_reveal": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"spire_orbital_reveal"},{"type":"set_flag","id":"spire_signal_revealed","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"spire_signal_revealed","value":true},{"type":"unlock_player"}]
+    },
+    "skybridge_warp_intro": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"skybridge_warp_intro"},{"type":"set_flag","id":"warp_tutorial_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"warp_tutorial_seen","value":true},{"type":"unlock_player"}]
+    },
+    "helix_warden_warning": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"helix_warden_warning"},{"type":"set_flag","id":"helix_warden_warning_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"helix_warden_warning_seen","value":true},{"type":"unlock_player"}]
+    },
+    "cyber_city_complete": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"cyber_city_complete"},{"type":"set_flag","id":"cyber_city_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"cyber_city_complete","value":true},{"type":"unlock_player"}]
+    },
+    "factory_intake_arrival": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"factory_intake_arrival"},{"type":"set_flag","id":"factory_intake_reached","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"factory_intake_reached","value":true},{"type":"unlock_player"}]
+    },
+    "conveyor_assembly_complete": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"conveyor_assembly_complete"},{"type":"set_flag","id":"conveyor_assembly_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"conveyor_assembly_complete","value":true},{"type":"unlock_player"}]
+    },
+    "factory_smelting_warning": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"factory_smelting_warning"},{"type":"set_flag","id":"smelting_warning_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"smelting_warning_seen","value":true},{"type":"unlock_player"}]
+    },
+    "factory_smelting_breakthrough": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"factory_smelting_breakthrough"},{"type":"set_flag","id":"smelting_core_cleared","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"smelting_core_cleared","value":true},{"type":"unlock_player"}]
+    },
+    "factory_purpose_reveal": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"factory_purpose_reveal"},{"type":"set_flag","id":"factory_purpose_revealed","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"factory_purpose_revealed","value":true},{"type":"unlock_player"}]
+    },
+    "factory_engine_warning": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"factory_engine_warning"},{"type":"set_flag","id":"factory_engine_warning_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"factory_engine_warning_seen","value":true},{"type":"unlock_player"}]
+    },
+    "assembly_colossus_warning": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"assembly_colossus_warning"},{"type":"set_flag","id":"assembly_colossus_warning_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"assembly_colossus_warning_seen","value":true},{"type":"unlock_player"}]
+    },
+    "robot_factory_complete": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"robot_factory_complete"},{"type":"set_flag","id":"robot_factory_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"robot_factory_complete","value":true},{"type":"unlock_player"}]
+    },
+    "moon_surface_arrival": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"moon_surface_arrival"},{"type":"set_flag","id":"moon_surface_reached","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"moon_surface_reached","value":true},{"type":"unlock_player"}]
+    },
+    "neon_moon_protocol_reveal": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"neon_moon_protocol_reveal"},{"type":"set_flag","id":"neon_moon_protocol_revealed","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"neon_moon_protocol_revealed","value":true},{"type":"unlock_player"}]
+    },
+    "moon_cleanroom_record": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"moon_cleanroom_record"},{"type":"set_flag","id":"cleanroom_record_found","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"cleanroom_record_found","value":true},{"type":"unlock_player"}]
+    },
+    "security_grid_mastered": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"security_grid_mastered"},{"type":"set_flag","id":"security_grid_mastered","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"security_grid_mastered","value":true},{"type":"unlock_player"}]
+    },
+    "biotech_corruption_glimpse": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"biotech_corruption_glimpse"},{"type":"set_flag","id":"corruption_glimpse_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"corruption_glimpse_seen","value":true},{"type":"unlock_player"}]
+    },
+    "oracle_origin_reveal": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"oracle_origin_reveal"},{"type":"set_flag","id":"oracle_origin_revealed","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"oracle_origin_revealed","value":true},{"type":"unlock_player"}]
+    },
+    "biotech_access_component": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"biotech_access_component"},{"type":"set_flag","id":"biotech_labs_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"biotech_labs_complete","value":true},{"type":"unlock_player"}]
+    },
+    "lunar_oracle_warning": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"lunar_oracle_warning"},{"type":"set_flag","id":"lunar_oracle_warning_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"lunar_oracle_warning_seen","value":true},{"type":"unlock_player"}]
+    },
+    "neon_moon_complete": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"neon_moon_complete"},{"type":"set_flag","id":"neon_moon_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"neon_moon_complete","value":true},{"type":"unlock_player"}]
+    },
+    "abyssal_breach_arrival": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"abyssal_breach_arrival"},{"type":"set_flag","id":"abyssal_breach_reached","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"abyssal_breach_reached","value":true},{"type":"unlock_player"}]
+    },
+    "outpost_cleansed": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"outpost_cleansed"},{"type":"set_flag","id":"corrupted_outpost_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"corrupted_outpost_complete","value":true},{"type":"unlock_player"}]
+    },
+    "chasm_signal_record": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"chasm_signal_record"},{"type":"set_flag","id":"dark_chasm_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"dark_chasm_complete","value":true},{"type":"unlock_player"}]
+    },
+    "nest_evidence_reveal": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"nest_evidence_reveal"},{"type":"set_flag","id":"nest_evidence_found","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"nest_evidence_found","value":true},{"type":"unlock_player"}]
+    },
+    "nest_core_cleansed": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"nest_core_cleansed"},{"type":"set_flag","id":"bio_mechanical_nest_complete","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"bio_mechanical_nest_complete","value":true},{"type":"unlock_player"}]
+    },
+    "sanctuary_arrival": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"sanctuary_arrival"},{"type":"set_flag","id":"abyssal_sanctuary_reached","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"abyssal_sanctuary_reached","value":true},{"type":"unlock_player"}]
+    },
+    "void_cerberus_preparation": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"void_cerberus_preparation"},{"type":"set_flag","id":"void_cerberus_preparation_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"void_cerberus_preparation_seen","value":true},{"type":"unlock_player"}]
+    },
+    "void_cerberus_warning": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"void_cerberus_warning"},{"type":"set_flag","id":"void_cerberus_warning_seen","value":true},{"type":"unlock_player"}],
+      "skip_endpoint": [{"type":"set_flag","id":"void_cerberus_warning_seen","value":true},{"type":"unlock_player"}]
+    },
+    "abyssal_ending": {
+      "once": true,
+      "commands": [{"type":"lock_player"},{"type":"dialogue","entry_id":"abyssal_ending"},{"type":"set_flag","id":"abyssal_night_complete","value":true},{"type":"finish_game"}],
+      "skip_endpoint": [{"type":"set_flag","id":"abyssal_night_complete","value":true},{"type":"set_flag","id":"game_complete","value":true},{"type":"finish_game"}]
+    }
+  }
+}

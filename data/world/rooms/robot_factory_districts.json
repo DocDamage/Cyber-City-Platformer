@@ -1,0 +1,6719 @@
+{
+  "schema_version": 2,
+  "rooms": [
+    {
+      "id": "factory_intake_entry",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Cargo Drop",
+      "map_cell": [
+        41,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          395,
+          170,
+          16
+        ],
+        [
+          405,
+          315,
+          150,
+          16
+        ],
+        [
+          675,
+          390,
+          160,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "position": [
+            310,
+            480
+          ],
+          "size": [
+            230,
+            22
+          ],
+          "speed": 105
+        },
+        {
+          "position": [
+            680,
+            480
+          ],
+          "size": [
+            210,
+            22
+          ],
+          "speed": -120
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            500,
+            475
+          ],
+          "size": [
+            72,
+            34
+          ],
+          "active": 0.85,
+          "inactive": 1.7
+        }
+      ],
+      "tutorial": "CONVEYORS CARRY MOMENTUM • READ THE ORANGE ARROWS",
+      "story_beat": "factory_intake_arrival",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_descent",
+          "target_connection": "east",
+          "map_hidden": true
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_pressure_lock",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 42
+    },
+    {
+      "id": "factory_intake_steam",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Steam Galleries",
+      "map_cell": [
+        39,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 123,
+        "expert_seconds": 31
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          220,
+          40
+        ],
+        [
+          300,
+          500,
+          180,
+          40
+        ],
+        [
+          565,
+          500,
+          170,
+          40
+        ],
+        [
+          820,
+          500,
+          140,
+          40
+        ],
+        [
+          110,
+          370,
+          150,
+          16
+        ],
+        [
+          405,
+          300,
+          150,
+          16
+        ],
+        [
+          700,
+          355,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -190
+            ]
+          ],
+          "speed": 95
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            260,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.8,
+          "inactive": 1.4
+        },
+        {
+          "type": "steam_vent",
+          "position": [
+            525,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.8,
+          "inactive": 1.4,
+          "phase": 0.75
+        },
+        {
+          "type": "steam_vent",
+          "position": [
+            780,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.8,
+          "inactive": 1.4,
+          "phase": 1.4
+        }
+      ],
+      "encounters": [
+        {
+          "id": "intake_steam_patrol",
+          "activation": [
+            150,
+            150,
+            660,
+            350
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  360,
+                  470
+                ]
+              },
+              {
+                "enemy": "pyromancer",
+                "position": [
+                  700,
+                  325
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  520,
+                  455
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_pressure_lock",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_cargo_sluice",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 44
+    },
+    {
+      "id": "factory_intake_cargo",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Cargo Well",
+      "map_cell": [
+        37,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 132,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          405,
+          170,
+          16
+        ],
+        [
+          335,
+          330,
+          150,
+          16
+        ],
+        [
+          580,
+          255,
+          150,
+          16
+        ],
+        [
+          780,
+          365,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            270,
+            445
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              220,
+              -150
+            ]
+          ],
+          "speed": 105
+        },
+        {
+          "position": [
+            650,
+            190
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              180,
+              160
+            ]
+          ],
+          "speed": 110,
+          "wait": 0.15
+        }
+      ],
+      "hazards": [
+        {
+          "type": "falling",
+          "position": [
+            510,
+            80
+          ],
+          "distance": 300,
+          "phase": 0.3
+        },
+        {
+          "type": "falling",
+          "position": [
+            710,
+            80
+          ],
+          "distance": 260,
+          "phase": 1.2
+        }
+      ],
+      "encounters": [
+        {
+          "id": "intake_cargo_lift_lockdown",
+          "activation": [
+            160,
+            120,
+            650,
+            370
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  350,
+                  470
+                ]
+              },
+              {
+                "enemy": "pyromancer",
+                "position": [
+                  680,
+                  225
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cyclops",
+                "position": [
+                  530,
+                  445
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_cargo_sluice",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_turbine_bypass",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 46
+    },
+    {
+      "id": "factory_intake_lift",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Recovery Elevator",
+      "map_cell": [
+        34,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 161,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "north": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          395,
+          170,
+          16
+        ],
+        [
+          395,
+          305,
+          170,
+          16
+        ],
+        [
+          675,
+          395,
+          170,
+          16
+        ],
+        [
+          430,
+          120,
+          100,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            130,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 130
+        }
+      ],
+      "shortcut": {
+        "id": "shortcut_factory_city_elevator",
+        "position": [
+          480,
+          250
+        ],
+        "size": [
+          24,
+          115
+        ],
+        "approach": "right",
+        "target_room": "cyber_helipad_descent",
+        "target_connection": "east"
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_intake_quiet",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_entry",
+          "target_connection": "west"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_helipad_descent",
+          "target_connection": "east",
+          "required_ability": "phase_barrier",
+          "barrier_id": "barrier_factory_city_elevator",
+          "one_way": true
+        }
+      ],
+      "critical_path_index": 49
+    },
+    {
+      "id": "factory_conveyor_entry",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Sort Line",
+      "map_cell": [
+        33,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 97,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          190,
+          370,
+          170,
+          16
+        ],
+        [
+          590,
+          330,
+          180,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "position": [
+            250,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": 125
+        },
+        {
+          "position": [
+            710,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -125
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_lift",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_sortline_school",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 50
+    },
+    {
+      "id": "factory_conveyor_switchyard",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Reversal Switchyard",
+      "map_cell": [
+        31,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 126,
+        "expert_seconds": 31
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          370,
+          150,
+          16
+        ],
+        [
+          405,
+          285,
+          150,
+          16
+        ],
+        [
+          710,
+          370,
+          150,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "id": "conveyor_switchyard_west",
+          "position": [
+            300,
+            480
+          ],
+          "size": [
+            280,
+            22
+          ],
+          "speed": 150
+        },
+        {
+          "id": "conveyor_switchyard_east",
+          "position": [
+            680,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": 135
+        }
+      ],
+      "terminals": [
+        {
+          "id": "switch_conveyor_west",
+          "kind": "switch",
+          "position": [
+            170,
+            335
+          ],
+          "targets": [
+            "conveyor_switchyard_west"
+          ],
+          "persistence": "save"
+        },
+        {
+          "id": "switch_conveyor_east",
+          "kind": "switch",
+          "position": [
+            760,
+            335
+          ],
+          "targets": [
+            "conveyor_switchyard_east"
+          ],
+          "persistence": "save"
+        }
+      ],
+      "encounters": [
+        {
+          "id": "conveyor_reversal_crossfire",
+          "activation": [
+            160,
+            150,
+            650,
+            350
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  220,
+                  340
+                ]
+              },
+              {
+                "enemy": "imp",
+                "position": [
+                  700,
+                  340
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cyclops",
+                "position": [
+                  510,
+                  450
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_sortline_school",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_parcel_vector",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "factory_conveyor_control",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 52
+    },
+    {
+      "id": "factory_conveyor_control",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Service Control",
+      "map_cell": [
+        30,
+        5
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 160,
+        "expert_seconds": 40,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          160,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          670,
+          390,
+          160,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "id": "conveyor_control_belt",
+          "position": [
+            480,
+            480
+          ],
+          "size": [
+            330,
+            22
+          ],
+          "speed": 170,
+          "hazardous": true
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            350
+          ],
+          "size": [
+            120,
+            110
+          ],
+          "active": 0.85,
+          "inactive": 1.35
+        }
+      ],
+      "security_gates": [
+        {
+          "id": "gate_conveyor_service_cache",
+          "position": [
+            610,
+            270
+          ],
+          "size": [
+            34,
+            540
+          ],
+          "required_switches": 2,
+          "persistence": "save"
+        }
+      ],
+      "terminals": [
+        {
+          "id": "switch_conveyor_service_a",
+          "kind": "switch",
+          "position": [
+            230,
+            350
+          ],
+          "targets": [
+            "conveyor_control_belt",
+            "gate_conveyor_service_cache"
+          ],
+          "persistence": "save"
+        },
+        {
+          "id": "switch_conveyor_service_b",
+          "kind": "switch",
+          "position": [
+            450,
+            265
+          ],
+          "targets": [
+            "gate_conveyor_service_cache"
+          ],
+          "persistence": "save"
+        }
+      ],
+      "reward": {
+        "id": "heavy_foundry_maul",
+        "family": "heavy",
+        "display_name": "Foundry Maul",
+        "position": [
+          760,
+          265
+        ],
+        "dialogue": "factory_heavy_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "factory_conveyor_switchyard",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_gauntlet",
+          "target_connection": "service"
+        }
+      ]
+    },
+    {
+      "id": "factory_conveyor_gauntlet",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Sorting Gauntlet",
+      "map_cell": [
+        29,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 136,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "service": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          375,
+          150,
+          16
+        ],
+        [
+          405,
+          295,
+          150,
+          16
+        ],
+        [
+          700,
+          375,
+          150,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "position": [
+            255,
+            480
+          ],
+          "size": [
+            250,
+            22
+          ],
+          "speed": 165
+        },
+        {
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            280,
+            22
+          ],
+          "speed": -175,
+          "hazardous": true
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            485
+          ],
+          "size": [
+            120,
+            22
+          ],
+          "active": 0.9,
+          "inactive": 1.4
+        }
+      ],
+      "encounters": [
+        {
+          "id": "conveyor_sorting_lockdown",
+          "activation": [
+            150,
+            140,
+            670,
+            360
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "imp",
+                "position": [
+                  300,
+                  350
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  690,
+                  345
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cyclops",
+                "position": [
+                  400,
+                  455
+                ]
+              },
+              {
+                "enemy": "imp",
+                "position": [
+                  650,
+                  260
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_parcel_vector",
+          "target_connection": "east"
+        },
+        {
+          "id": "service",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "factory_conveyor_control",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_counterflow_works",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 54
+    },
+    {
+      "id": "factory_conveyor_overdrive",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Overdrive Run",
+      "map_cell": [
+        26,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 165,
+        "expert_seconds": 41
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          190,
+          40
+        ],
+        [
+          770,
+          500,
+          190,
+          40
+        ],
+        [
+          90,
+          380,
+          130,
+          16
+        ],
+        [
+          420,
+          285,
+          130,
+          16
+        ],
+        [
+          730,
+          370,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            270,
+            440
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              200,
+              -140
+            ]
+          ],
+          "speed": 125
+        }
+      ],
+      "conveyors": [
+        {
+          "position": [
+            600,
+            480
+          ],
+          "size": [
+            300,
+            22
+          ],
+          "speed": 190,
+          "reversible": true,
+          "reverse_interval": 2.5
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            520,
+            42
+          ]
+        }
+      ],
+      "encounters": [
+        {
+          "id": "conveyor_overdrive_guard",
+          "activation": [
+            160,
+            130,
+            650,
+            360
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  460,
+                  220
+                ]
+              },
+              {
+                "enemy": "cyclops",
+                "position": [
+                  760,
+                  450
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "story_beat": "conveyor_assembly_complete",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_inspection_nook",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 57
+    },
+    {
+      "id": "factory_smelting_entry",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Coolant Walk",
+      "map_cell": [
+        25,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 99,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          240,
+          40
+        ],
+        [
+          330,
+          500,
+          260,
+          40
+        ],
+        [
+          680,
+          500,
+          280,
+          40
+        ],
+        [
+          390,
+          350,
+          180,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "toxic_pool",
+          "position": [
+            285,
+            500
+          ],
+          "size": [
+            90,
+            40
+          ]
+        },
+        {
+          "type": "steam_vent",
+          "position": [
+            635,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.8,
+          "inactive": 1.5
+        }
+      ],
+      "story_beat": "factory_smelting_warning",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_overdrive",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_heat_threshold",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 58
+    },
+    {
+      "id": "factory_smelting_furnace",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Furnace Ring",
+      "map_cell": [
+        23,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 129,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          210,
+          40
+        ],
+        [
+          750,
+          500,
+          210,
+          40
+        ],
+        [
+          90,
+          380,
+          150,
+          16
+        ],
+        [
+          370,
+          300,
+          170,
+          16
+        ],
+        [
+          690,
+          380,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            300,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              170,
+              -140
+            ]
+          ],
+          "speed": 110
+        },
+        {
+          "position": [
+            620,
+            260
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              130,
+              130
+            ]
+          ],
+          "speed": 115
+        }
+      ],
+      "hazards": [
+        {
+          "type": "toxic_pool",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            540,
+            45
+          ]
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            290
+          ],
+          "radius": 155,
+          "speed": 0.85
+        }
+      ],
+      "encounters": [
+        {
+          "id": "smelting_furnace_defense",
+          "activation": [
+            150,
+            130,
+            660,
+            360
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "pyromancer",
+                "position": [
+                  320,
+                  350
+                ]
+              },
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  650,
+                  220
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  520,
+                  445
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_heat_threshold",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_slag_steps",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "factory_smelting_coolant",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 60
+    },
+    {
+      "id": "factory_smelting_coolant",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Coolant Bypass",
+      "map_cell": [
+        22,
+        5
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 145,
+        "expert_seconds": 36,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          140,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          310,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            300,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.7,
+          "inactive": 1.2
+        },
+        {
+          "type": "steam_vent",
+          "position": [
+            660,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.7,
+          "inactive": 1.2,
+          "phase": 0.65
+        }
+      ],
+      "reward": {
+        "id": "staff_coolant_coil",
+        "family": "staff",
+        "display_name": "Coolant Coil",
+        "position": [
+          480,
+          275
+        ],
+        "dialogue": "factory_staff_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "factory_smelting_furnace",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_climb",
+          "target_connection": "coolant"
+        }
+      ]
+    },
+    {
+      "id": "factory_smelting_climb",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Furnace Climb",
+      "map_cell": [
+        21,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 138,
+        "expert_seconds": 34
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "coolant": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          90,
+          400,
+          150,
+          16
+        ],
+        [
+          300,
+          320,
+          150,
+          16
+        ],
+        [
+          520,
+          240,
+          150,
+          16
+        ],
+        [
+          740,
+          345,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            115,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -245
+            ]
+          ],
+          "speed": 105
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            410,
+            370
+          ],
+          "size": [
+            90,
+            100
+          ],
+          "active": 0.9,
+          "inactive": 1.3
+        },
+        {
+          "type": "steam_vent",
+          "position": [
+            720,
+            475
+          ],
+          "size": [
+            70,
+            38
+          ],
+          "active": 0.8,
+          "inactive": 1.4
+        }
+      ],
+      "encounters": [
+        {
+          "id": "smelting_core_ascent",
+          "activation": [
+            150,
+            100,
+            670,
+            390
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "pyromancer",
+                "position": [
+                  310,
+                  290
+                ]
+              },
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  730,
+                  455
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cyclops",
+                "position": [
+                  520,
+                  210
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_slag_steps",
+          "target_connection": "east"
+        },
+        {
+          "id": "coolant",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "factory_smelting_coolant",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_furnace_crossdraft",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 62
+    },
+    {
+      "id": "factory_smelting_ascent",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Tempering Deck",
+      "map_cell": [
+        18,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 168,
+        "expert_seconds": 42
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          385,
+          170,
+          16
+        ],
+        [
+          395,
+          290,
+          170,
+          16
+        ],
+        [
+          670,
+          385,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            486
+          ],
+          "size": [
+            210,
+            22
+          ],
+          "active": 0.9,
+          "inactive": 1.5
+        }
+      ],
+      "ability_reward": {
+        "ability": "heavy_ground_break",
+        "display_name": "Kinetic Breaker Core",
+        "position": [
+          480,
+          255
+        ],
+        "dialogue": "heavy_ground_break_acquired"
+      },
+      "story_beat": "factory_smelting_breakthrough",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_quench_gallery",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 65
+    },
+    {
+      "id": "factory_maintenance_entry",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Service Bay",
+      "map_cell": [
+        17,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 98,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          180,
+          390,
+          160,
+          16
+        ],
+        [
+          400,
+          310,
+          160,
+          16
+        ],
+        [
+          650,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "crusher",
+          "position": [
+            480,
+            80
+          ],
+          "distance": 290,
+          "phase": 0.4
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_ascent",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_service_rack",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 66
+    },
+    {
+      "id": "factory_maintenance_crushers",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Crusher Tunnel",
+      "map_cell": [
+        15,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 127,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          380,
+          150,
+          16
+        ],
+        [
+          395,
+          310,
+          170,
+          16
+        ],
+        [
+          690,
+          380,
+          150,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "crusher",
+          "position": [
+            280,
+            90
+          ],
+          "distance": 300
+        },
+        {
+          "type": "crusher",
+          "position": [
+            520,
+            90
+          ],
+          "distance": 260,
+          "phase": 0.85
+        },
+        {
+          "type": "crusher",
+          "position": [
+            750,
+            90
+          ],
+          "distance": 300,
+          "phase": 1.65
+        }
+      ],
+      "encounters": [
+        {
+          "id": "maintenance_crusher_patrol",
+          "activation": [
+            150,
+            150,
+            670,
+            350
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "minotaur",
+                "position": [
+                  350,
+                  455
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  700,
+                  350
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_service_rack",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_diagnostic_run",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 68
+    },
+    {
+      "id": "factory_maintenance_control",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Control Spine",
+      "map_cell": [
+        13,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 136,
+        "expert_seconds": 34
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          385,
+          170,
+          16
+        ],
+        [
+          390,
+          300,
+          180,
+          16
+        ],
+        [
+          690,
+          385,
+          170,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            435
+          ],
+          "size": [
+            120,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -190
+            ]
+          ],
+          "speed": 120
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            300,
+            445
+          ],
+          "size": [
+            100,
+            90
+          ],
+          "active": 0.85,
+          "inactive": 1.4
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            670,
+            445
+          ],
+          "size": [
+            100,
+            90
+          ],
+          "active": 0.85,
+          "inactive": 1.4,
+          "phase": 0.8
+        }
+      ],
+      "security_gates": [
+        {
+          "id": "gate_maintenance_control",
+          "position": [
+            760,
+            270
+          ],
+          "size": [
+            34,
+            540
+          ],
+          "required_switches": 1,
+          "persistence": "save"
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_maintenance_control",
+          "kind": "switch",
+          "position": [
+            500,
+            265
+          ],
+          "targets": [
+            "gate_maintenance_control"
+          ],
+          "persistence": "save"
+        }
+      ],
+      "shortcut": {
+        "id": "shortcut_maintenance_service",
+        "position": [
+          800,
+          330
+        ],
+        "size": [
+          24,
+          120
+        ],
+        "approach": "left",
+        "target_room": "factory_maintenance_entry",
+        "target_connection": "east"
+      },
+      "encounters": [
+        {
+          "id": "maintenance_control_ambush",
+          "activation": [
+            150,
+            130,
+            670,
+            370
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "witch",
+                "position": [
+                  320,
+                  350
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  680,
+                  350
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "minotaur",
+                "position": [
+                  500,
+                  450
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_diagnostic_run",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_repair_swarm",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "factory_maintenance_archive",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 70
+    },
+    {
+      "id": "factory_maintenance_archive",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Memory Archive",
+      "map_cell": [
+        12,
+        5
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 155,
+        "expert_seconds": 38,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          160,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          670,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            486
+          ],
+          "size": [
+            220,
+            22
+          ],
+          "active": 1.0,
+          "inactive": 1.5
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_factory_archive",
+          "kind": "lore",
+          "position": [
+            240,
+            350
+          ],
+          "text": "ARCHIVE: The assembly line was designed to manufacture adaptive bodies for the lunar intelligence.",
+          "persistence": "save"
+        }
+      ],
+      "story_beat": "factory_purpose_reveal",
+      "reward": {
+        "id": "dagger_servo_pair",
+        "family": "dagger",
+        "display_name": "Servo Pair",
+        "position": [
+          480,
+          265
+        ],
+        "dialogue": "factory_servo_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "factory_maintenance_control",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_bay",
+          "target_connection": "archive"
+        }
+      ]
+    },
+    {
+      "id": "factory_maintenance_bay",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Reactivation Bay",
+      "map_cell": [
+        10,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 166,
+        "expert_seconds": 42
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "archive": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          125,
+          380,
+          160,
+          16
+        ],
+        [
+          390,
+          285,
+          180,
+          16
+        ],
+        [
+          680,
+          380,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "crusher",
+          "position": [
+            480,
+            70
+          ],
+          "distance": 240,
+          "phase": 0.7
+        }
+      ],
+      "encounters": [
+        {
+          "id": "maintenance_reactivation_wave",
+          "activation": [
+            140,
+            120,
+            690,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  300,
+                  455
+                ]
+              },
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  700,
+                  455
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "minotaur",
+                "position": [
+                  500,
+                  450
+                ],
+                "elite": true
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  610,
+                  250
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "story_beat": "factory_engine_warning",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_tool_crib",
+          "target_connection": "east"
+        },
+        {
+          "id": "archive",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "factory_maintenance_archive",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 73
+    },
+    {
+      "id": "factory_engine_entry",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Core Gate",
+      "map_cell": [
+        9,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 29
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "warp": [
+          480,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          250,
+          360,
+          460,
+          18
+        ]
+      ],
+      "save_room": {
+        "id": "save_factory_engine",
+        "position": [
+          350,
+          445
+        ]
+      },
+      "warp_room": {
+        "id": "warp_factory_engine",
+        "position": [
+          610,
+          445
+        ]
+      },
+      "story_beat": "assembly_colossus_warning",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_bay",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_engine_apron",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 74
+    },
+    {
+      "id": "factory_engine_approach",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Shockline Approach",
+      "map_cell": [
+        7,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 142,
+        "expert_seconds": 37
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          90,
+          380,
+          150,
+          16
+        ],
+        [
+          405,
+          285,
+          150,
+          16
+        ],
+        [
+          720,
+          380,
+          150,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "position": [
+            300,
+            480
+          ],
+          "size": [
+            230,
+            22
+          ],
+          "speed": 180,
+          "reversible": true,
+          "reverse_interval": 2.4
+        },
+        {
+          "position": [
+            660,
+            480
+          ],
+          "size": [
+            230,
+            22
+          ],
+          "speed": -180,
+          "reversible": true,
+          "reverse_interval": 2.4
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            486
+          ],
+          "size": [
+            120,
+            22
+          ],
+          "active": 0.75,
+          "inactive": 1.25
+        },
+        {
+          "type": "falling",
+          "position": [
+            480,
+            65
+          ],
+          "distance": 260,
+          "phase": 0.9
+        }
+      ],
+      "encounters": [
+        {
+          "id": "assembly_shockline_guard",
+          "activation": [
+            150,
+            120,
+            670,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "cyclops",
+                "position": [
+                  310,
+                  450
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  710,
+                  350
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  500,
+                  450
+                ]
+              },
+              {
+                "enemy": "pyromancer",
+                "position": [
+                  620,
+                  260
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_engine_apron",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_piston_chorus",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 76
+    },
+    {
+      "id": "factory_engine_arena",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Colossus Chamber",
+      "map_cell": [
+        5,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 153,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          90,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          365,
+          150,
+          16
+        ],
+        [
+          405,
+          285,
+          150,
+          16
+        ],
+        [
+          690,
+          365,
+          150,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "position": [
+            300,
+            480
+          ],
+          "size": [
+            210,
+            22
+          ],
+          "speed": 125,
+          "reversible": true,
+          "reverse_interval": 3.1
+        },
+        {
+          "position": [
+            660,
+            480
+          ],
+          "size": [
+            210,
+            22
+          ],
+          "speed": -125,
+          "reversible": true,
+          "reverse_interval": 3.1
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            486
+          ],
+          "size": [
+            110,
+            22
+          ],
+          "active": 0.9,
+          "inactive": 1.7
+        }
+      ],
+      "boss": {
+        "id": "assembly_colossus",
+        "scene": "res://Characters/Bosses/Scenes/act2_assembly_colossus.tscn",
+        "position": [
+          650,
+          405
+        ],
+        "arena": [
+          110,
+          80,
+          760,
+          420
+        ],
+        "completion_flag": "assembly_colossus_defeated",
+        "intro_sequence": "assembly_colossus_warning",
+        "defeat_sequence": "robot_factory_complete"
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_piston_chorus",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_ignition_race",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 78
+    },
+    {
+      "id": "factory_engine_exit",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Orbital Lift",
+      "map_cell": [
+        2,
+        4
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 186,
+        "expert_seconds": 49
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          305,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            130,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -220
+            ]
+          ],
+          "speed": 145
+        }
+      ],
+      "story_beat": "robot_factory_complete",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_colossus_lock",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_entry",
+          "target_connection": "west",
+          "map_hidden": true
+        }
+      ],
+      "critical_path_index": 81
+    },
+    {
+      "id": "sub_level_intake_exp_pressure_lock",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Pressure Lock",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 99,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Teach the intake's vent warning language with wide recovery windows.",
+      "mechanic_contract": "steam_vent",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          435,
+          185,
+          18
+        ],
+        [
+          300,
+          393,
+          180,
+          18
+        ],
+        [
+          545,
+          341,
+          150,
+          18
+        ],
+        [
+          760,
+          404,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_steam",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "sub_level_intake_opt_lost_manifest",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 43,
+      "map_cell": [
+        40,
+        4
+      ],
+      "layout_id": "sub_level_intake_teach_pressure_lock",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth"
+    },
+    {
+      "id": "sub_level_intake_exp_cargo_sluice",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Cargo Sluice",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 109,
+        "expert_seconds": 27
+      },
+      "room_role": "test",
+      "design_intent": "Test grounded control against opposing freight belts.",
+      "mechanic_contract": "conveyor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          290,
+          40
+        ],
+        [
+          570,
+          500,
+          390,
+          40
+        ],
+        [
+          85,
+          425,
+          155,
+          18
+        ],
+        [
+          315,
+          370,
+          155,
+          18
+        ],
+        [
+          540,
+          340,
+          125,
+          18
+        ],
+        [
+          770,
+          380,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_steam",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_cargo",
+          "target_connection": "west"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "sub_level_intake_exp_cargo_sluice_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": false,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "sub_level_intake_exp_cargo_sluice_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": false,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 45,
+      "map_cell": [
+        38,
+        4
+      ],
+      "layout_id": "sub_level_intake_test_cargo_sluice",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth"
+    },
+    {
+      "id": "sub_level_intake_exp_turbine_bypass",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Turbine Bypass",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "twist",
+      "design_intent": "Combine belt momentum with slow, readable overhead machinery.",
+      "mechanic_contract": "crusher",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          290,
+          40
+        ],
+        [
+          610,
+          500,
+          350,
+          40
+        ],
+        [
+          115,
+          390,
+          145,
+          18
+        ],
+        [
+          280,
+          395,
+          145,
+          18
+        ],
+        [
+          570,
+          305,
+          115,
+          18
+        ],
+        [
+          745,
+          415,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_cargo",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_intake_quiet",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "crusher",
+          "position": [
+            350,
+            185
+          ],
+          "distance": 245,
+          "phase": 0.0
+        },
+        {
+          "type": "crusher",
+          "position": [
+            650,
+            185
+          ],
+          "distance": 245,
+          "phase": 1.2
+        }
+      ],
+      "critical_path_index": 47,
+      "map_cell": [
+        36,
+        4
+      ],
+      "layout_id": "sub_level_intake_twist_turbine_bypass",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth"
+    },
+    {
+      "id": "sub_level_intake_exp_intake_quiet",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Intake Quiet",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "recovery",
+      "design_intent": "Provide a sheltered service route before automated assembly begins.",
+      "mechanic_contract": "steam_vent",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          450,
+          200,
+          18
+        ],
+        [
+          305,
+          410,
+          195,
+          18
+        ],
+        [
+          540,
+          365,
+          165,
+          18
+        ],
+        [
+          760,
+          430,
+          180,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "sub_level_intake_exp_turbine_bypass",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_lift",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "sub_level_intake_opt_drainage_vault",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 48,
+      "map_cell": [
+        35,
+        4
+      ],
+      "layout_id": "sub_level_intake_recovery_intake_quiet",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth"
+    },
+    {
+      "id": "conveyor_assembly_exp_sortline_school",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Sortline School",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 102,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Introduce reversible belt reads without combat pressure.",
+      "mechanic_contract": "conveyor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          430,
+          195,
+          18
+        ],
+        [
+          300,
+          428,
+          165,
+          18
+        ],
+        [
+          520,
+          386,
+          170,
+          18
+        ],
+        [
+          745,
+          424,
+          165,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_switchyard",
+          "target_connection": "west"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "conveyor_assembly_exp_sortline_school_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": false,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "conveyor_assembly_exp_sortline_school_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": false,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 51,
+      "map_cell": [
+        32,
+        4
+      ],
+      "layout_id": "conveyor_assembly_teach_sortline_school",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "low horizontal sorting lanes with abrupt counterflow changes",
+      "landmark": "overhead parcel sorting spine"
+    },
+    {
+      "id": "conveyor_assembly_exp_parcel_vector",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Parcel Vector",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 112,
+        "expert_seconds": 27
+      },
+      "room_role": "test",
+      "design_intent": "Test belt correction across insulated and live cargo lanes.",
+      "mechanic_contract": "electrical_floor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          345,
+          40
+        ],
+        [
+          625,
+          500,
+          335,
+          40
+        ],
+        [
+          80,
+          420,
+          165,
+          18
+        ],
+        [
+          315,
+          405,
+          140,
+          18
+        ],
+        [
+          515,
+          385,
+          145,
+          18
+        ],
+        [
+          755,
+          400,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_switchyard",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_gauntlet",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            220,
+            24
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 53,
+      "map_cell": [
+        30,
+        4
+      ],
+      "layout_id": "conveyor_assembly_test_parcel_vector",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "low horizontal sorting lanes with abrupt counterflow changes",
+      "landmark": "overhead parcel sorting spine"
+    },
+    {
+      "id": "conveyor_assembly_exp_counterflow_works",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Counterflow Works",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 116,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Invert the learned conveyor route midway through the crossing.",
+      "mechanic_contract": "conveyor_reverse",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          345,
+          40
+        ],
+        [
+          665,
+          500,
+          295,
+          40
+        ],
+        [
+          110,
+          385,
+          155,
+          18
+        ],
+        [
+          280,
+          430,
+          130,
+          18
+        ],
+        [
+          545,
+          350,
+          135,
+          18
+        ],
+        [
+          730,
+          435,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_gauntlet",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_inspection_nook",
+          "target_connection": "west"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "conveyor_assembly_exp_counterflow_works_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": true,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "conveyor_assembly_exp_counterflow_works_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": true,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 55,
+      "map_cell": [
+        28,
+        4
+      ],
+      "layout_id": "conveyor_assembly_twist_counterflow_works",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "low horizontal sorting lanes with abrupt counterflow changes",
+      "landmark": "overhead parcel sorting spine"
+    },
+    {
+      "id": "conveyor_assembly_exp_inspection_nook",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Inspection Nook",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 116,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Create a breath and a visual preview of the overdrive line.",
+      "mechanic_contract": "steam_vent",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          445,
+          210,
+          18
+        ],
+        [
+          305,
+          445,
+          180,
+          18
+        ],
+        [
+          515,
+          410,
+          185,
+          18
+        ],
+        [
+          745,
+          450,
+          185,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "conveyor_assembly_exp_counterflow_works",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_conveyor_overdrive",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "conveyor_assembly_opt_rejected_parts",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 56,
+      "map_cell": [
+        27,
+        4
+      ],
+      "layout_id": "conveyor_assembly_recovery_inspection_nook",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "low horizontal sorting lanes with abrupt counterflow changes",
+      "landmark": "overhead parcel sorting spine"
+    },
+    {
+      "id": "smelting_core_exp_heat_threshold",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Heat Threshold",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 104,
+        "expert_seconds": 26
+      },
+      "room_role": "teach",
+      "design_intent": "Establish furnace timing with cool islands between each vent.",
+      "mechanic_contract": "steam_vent",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          440,
+          175,
+          18
+        ],
+        [
+          310,
+          363,
+          155,
+          18
+        ],
+        [
+          530,
+          296,
+          140,
+          18
+        ],
+        [
+          745,
+          369,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_furnace",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 59,
+      "map_cell": [
+        24,
+        4
+      ],
+      "layout_id": "smelting_core_teach_heat_threshold",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "compact cool islands climbing around an open furnace throat",
+      "landmark": "white-hot smelting crucible"
+    },
+    {
+      "id": "smelting_core_exp_slag_steps",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Slag Steps",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 114,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test compact landings over a clearly bounded slag channel.",
+      "mechanic_contract": "toxic_pool",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          370,
+          40
+        ],
+        [
+          650,
+          500,
+          310,
+          40
+        ],
+        [
+          85,
+          430,
+          145,
+          18
+        ],
+        [
+          325,
+          340,
+          130,
+          18
+        ],
+        [
+          525,
+          295,
+          115,
+          18
+        ],
+        [
+          755,
+          345,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_furnace",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_climb",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "toxic_pool",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            250,
+            38
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 61,
+      "map_cell": [
+        22,
+        4
+      ],
+      "layout_id": "smelting_core_test_slag_steps",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "compact cool islands climbing around an open furnace throat",
+      "landmark": "white-hot smelting crucible"
+    },
+    {
+      "id": "smelting_core_exp_furnace_crossdraft",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Furnace Crossdraft",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 119,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Add vertical lift timing while furnace vents deny stationary play.",
+      "mechanic_contract": "moving_vertical",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          370,
+          40
+        ],
+        [
+          690,
+          500,
+          270,
+          40
+        ],
+        [
+          115,
+          395,
+          135,
+          18
+        ],
+        [
+          290,
+          365,
+          120,
+          18
+        ],
+        [
+          555,
+          260,
+          105,
+          18
+        ],
+        [
+          730,
+          380,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_climb",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_quench_gallery",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 104,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 63,
+      "map_cell": [
+        20,
+        4
+      ],
+      "layout_id": "smelting_core_twist_furnace_crossdraft",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "compact cool islands climbing around an open furnace throat",
+      "landmark": "white-hot smelting crucible"
+    },
+    {
+      "id": "smelting_core_exp_quench_gallery",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Quench Gallery",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 119,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Cool the pace and frame the maintenance route above the core.",
+      "mechanic_contract": "steam_vent",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          455,
+          190,
+          18
+        ],
+        [
+          315,
+          380,
+          170,
+          18
+        ],
+        [
+          525,
+          320,
+          155,
+          18
+        ],
+        [
+          745,
+          395,
+          180,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "smelting_core_exp_furnace_crossdraft",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_smelting_ascent",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "smelting_core_opt_metallurgy_log",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 64,
+      "map_cell": [
+        19,
+        4
+      ],
+      "layout_id": "smelting_core_recovery_quench_gallery",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "compact cool islands climbing around an open furnace throat",
+      "landmark": "white-hot smelting crucible"
+    },
+    {
+      "id": "robotic_maintenance_exp_service_rack",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Service Rack",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 102,
+        "expert_seconds": 26
+      },
+      "room_role": "teach",
+      "design_intent": "Teach crusher staging through generous safe pockets.",
+      "mechanic_contract": "crusher",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          420,
+          165,
+          18
+        ],
+        [
+          325,
+          338,
+          175,
+          18
+        ],
+        [
+          550,
+          416,
+          150,
+          18
+        ],
+        [
+          760,
+          324,
+          155,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_crushers",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "crusher",
+          "position": [
+            350,
+            185
+          ],
+          "distance": 245,
+          "phase": 0.0
+        },
+        {
+          "type": "crusher",
+          "position": [
+            650,
+            185
+          ],
+          "distance": 245,
+          "phase": 1.2
+        }
+      ],
+      "critical_path_index": 67,
+      "map_cell": [
+        16,
+        4
+      ],
+      "layout_id": "robotic_maintenance_teach_service_rack",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "alternating service pockets beneath descending repair machinery",
+      "landmark": "memory-scrubber service rack"
+    },
+    {
+      "id": "robotic_maintenance_exp_diagnostic_run",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Diagnostic Run",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 112,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test fast route selection across live diagnostic pads.",
+      "mechanic_contract": "electrical_floor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          305,
+          40
+        ],
+        [
+          585,
+          500,
+          375,
+          40
+        ],
+        [
+          100,
+          410,
+          135,
+          18
+        ],
+        [
+          340,
+          315,
+          150,
+          18
+        ],
+        [
+          545,
+          415,
+          125,
+          18
+        ],
+        [
+          770,
+          300,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_crushers",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_control",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            220,
+            24
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 69,
+      "map_cell": [
+        14,
+        4
+      ],
+      "layout_id": "robotic_maintenance_test_diagnostic_run",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "alternating service pockets beneath descending repair machinery",
+      "landmark": "memory-scrubber service rack"
+    },
+    {
+      "id": "robotic_maintenance_exp_repair_swarm",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Repair Swarm",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 117,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Reverse footing while maintenance drones occupy the safest lane.",
+      "mechanic_contract": "conveyor_reverse",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          305,
+          40
+        ],
+        [
+          625,
+          500,
+          335,
+          40
+        ],
+        [
+          130,
+          375,
+          125,
+          18
+        ],
+        [
+          305,
+          340,
+          140,
+          18
+        ],
+        [
+          575,
+          380,
+          115,
+          18
+        ],
+        [
+          745,
+          335,
+          130,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_control",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_tool_crib",
+          "target_connection": "west"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "robotic_maintenance_exp_repair_swarm_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": true,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "robotic_maintenance_exp_repair_swarm_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": true,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 71,
+      "map_cell": [
+        12,
+        4
+      ],
+      "layout_id": "robotic_maintenance_twist_repair_swarm",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "alternating service pockets beneath descending repair machinery",
+      "landmark": "memory-scrubber service rack"
+    },
+    {
+      "id": "robotic_maintenance_exp_tool_crib",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Tool Crib",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 117,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Offer a quiet equipment silhouette before the engine district.",
+      "mechanic_contract": "conveyor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          435,
+          180,
+          18
+        ],
+        [
+          330,
+          355,
+          190,
+          18
+        ],
+        [
+          545,
+          440,
+          165,
+          18
+        ],
+        [
+          760,
+          350,
+          175,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "robotic_maintenance_exp_repair_swarm",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_maintenance_bay",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "robotic_maintenance_opt_memory_scrubber",
+          "target_connection": "return"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "robotic_maintenance_exp_tool_crib_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": false,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "robotic_maintenance_exp_tool_crib_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": false,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 72,
+      "map_cell": [
+        11,
+        4
+      ],
+      "layout_id": "robotic_maintenance_recovery_tool_crib",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "alternating service pockets beneath descending repair machinery",
+      "landmark": "memory-scrubber service rack"
+    },
+    {
+      "id": "assembly_engine_exp_engine_apron",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Engine Apron",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 115,
+        "expert_seconds": 30
+      },
+      "room_role": "teach",
+      "design_intent": "Preview the engine's moving floor without arena pressure.",
+      "mechanic_contract": "conveyor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          435,
+          190,
+          18
+        ],
+        [
+          310,
+          388,
+          165,
+          18
+        ],
+        [
+          540,
+          336,
+          150,
+          18
+        ],
+        [
+          760,
+          289,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_approach",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "assembly_engine_opt_prototype_hangar",
+          "target_connection": "return"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "assembly_engine_exp_engine_apron_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": false,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "assembly_engine_exp_engine_apron_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": false,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 75,
+      "map_cell": [
+        8,
+        4
+      ],
+      "layout_id": "assembly_engine_teach_engine_apron",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel"
+    },
+    {
+      "id": "assembly_engine_exp_piston_chorus",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Piston Chorus",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 126,
+        "expert_seconds": 33
+      },
+      "room_role": "test",
+      "design_intent": "Test measured advances through synchronized piston lanes.",
+      "mechanic_contract": "crusher",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          390,
+          40
+        ],
+        [
+          670,
+          500,
+          290,
+          40
+        ],
+        [
+          90,
+          425,
+          160,
+          18
+        ],
+        [
+          325,
+          365,
+          140,
+          18
+        ],
+        [
+          535,
+          335,
+          125,
+          18
+        ],
+        [
+          770,
+          265,
+          125,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_approach",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_arena",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "crusher",
+          "position": [
+            350,
+            185
+          ],
+          "distance": 245,
+          "phase": 0.0
+        },
+        {
+          "type": "crusher",
+          "position": [
+            650,
+            185
+          ],
+          "distance": 245,
+          "phase": 1.2
+        }
+      ],
+      "critical_path_index": 77,
+      "map_cell": [
+        6,
+        4
+      ],
+      "layout_id": "assembly_engine_test_piston_chorus",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel"
+    },
+    {
+      "id": "assembly_engine_exp_ignition_race",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Ignition Race",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 132,
+        "expert_seconds": 34
+      },
+      "room_role": "twist",
+      "design_intent": "Layer ignition vents over the learned piston cadence.",
+      "mechanic_contract": "steam_vent",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          390,
+          40
+        ],
+        [
+          710,
+          500,
+          250,
+          40
+        ],
+        [
+          120,
+          390,
+          150,
+          18
+        ],
+        [
+          290,
+          390,
+          130,
+          18
+        ],
+        [
+          565,
+          300,
+          115,
+          18
+        ],
+        [
+          745,
+          300,
+          120,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_arena",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_colossus_lock",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 79,
+      "map_cell": [
+        4,
+        4
+      ],
+      "layout_id": "assembly_engine_twist_ignition_race",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel"
+    },
+    {
+      "id": "assembly_engine_exp_colossus_lock",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Colossus Lock",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 34
+      },
+      "room_role": "recovery",
+      "design_intent": "Create a final systems recap and a clean boss-door approach.",
+      "mechanic_contract": "conveyor_reverse",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          450,
+          205,
+          18
+        ],
+        [
+          315,
+          405,
+          180,
+          18
+        ],
+        [
+          535,
+          360,
+          165,
+          18
+        ],
+        [
+          760,
+          315,
+          165,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "assembly_engine_exp_ignition_race",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_exit",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "assembly_engine_opt_engineers_last_shift",
+          "target_connection": "return"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "assembly_engine_exp_colossus_lock_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": true,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "assembly_engine_exp_colossus_lock_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": true,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 80,
+      "map_cell": [
+        3,
+        4
+      ],
+      "layout_id": "assembly_engine_recovery_colossus_lock",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel"
+    },
+    {
+      "id": "sub_level_intake_opt_lost_manifest",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Lost Manifest",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The freight ledger lists lunar specimens as replacement machine parts.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          415,
+          175,
+          18
+        ],
+        [
+          290,
+          400,
+          175,
+          18
+        ],
+        [
+          555,
+          330,
+          145,
+          18
+        ],
+        [
+          740,
+          420,
+          160,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_sub_level_intake_lost_manifest",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The freight ledger lists lunar specimens as replacement machine parts.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_sub_level_intake_lost_manifest",
+        "amount": 40,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "sub_level_intake_exp_pressure_lock",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        40,
+        5
+      ],
+      "layout_id": "sub_level_intake_optional_lore_lost_manifest",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth"
+    },
+    {
+      "id": "sub_level_intake_opt_drainage_vault",
+      "region_id": "robot_factory",
+      "district_id": "sub_level_intake",
+      "display_name": "Sub-Level Intake — Drainage Vault",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: Corrupted coolant residue predates the factory's official activation date.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          310,
+          40
+        ],
+        [
+          550,
+          500,
+          410,
+          40
+        ],
+        [
+          75,
+          395,
+          150,
+          18
+        ],
+        [
+          320,
+          380,
+          150,
+          18
+        ],
+        [
+          530,
+          300,
+          120,
+          18
+        ],
+        [
+          775,
+          400,
+          135,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_sub_level_intake_drainage_vault",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Corrupted coolant residue predates the factory's official activation date.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_sub_level_intake_drainage_vault",
+        "amount": 50,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "sub_level_intake_exp_intake_quiet",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "map_cell": [
+        35,
+        5
+      ],
+      "layout_id": "sub_level_intake_optional_mastery_drainage_vault",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth"
+    },
+    {
+      "id": "conveyor_assembly_opt_rejected_parts",
+      "region_id": "robot_factory",
+      "district_id": "conveyor_assembly",
+      "display_name": "Conveyor Assembly — Rejected Parts",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: Discarded robot cores contain copied fragments of citizen movement profiles.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          105,
+          410,
+          185,
+          18
+        ],
+        [
+          290,
+          435,
+          160,
+          18
+        ],
+        [
+          530,
+          375,
+          165,
+          18
+        ],
+        [
+          725,
+          440,
+          165,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_conveyor_assembly_rejected_parts",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Discarded robot cores contain copied fragments of citizen movement profiles.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_conveyor_assembly_rejected_parts",
+        "amount": 40,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "conveyor_assembly_exp_inspection_nook",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        27,
+        5
+      ],
+      "layout_id": "conveyor_assembly_optional_lore_rejected_parts",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "low horizontal sorting lanes with abrupt counterflow changes",
+      "landmark": "overhead parcel sorting spine"
+    },
+    {
+      "id": "smelting_core_opt_metallurgy_log",
+      "region_id": "robot_factory",
+      "district_id": "smelting_core",
+      "display_name": "Smelting Core — Metallurgy Log",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: An alloy report describes a metal that remembers every shape it survives.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          420,
+          165,
+          18
+        ],
+        [
+          300,
+          370,
+          150,
+          18
+        ],
+        [
+          540,
+          285,
+          135,
+          18
+        ],
+        [
+          725,
+          385,
+          160,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_smelting_core_metallurgy_log",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "An alloy report describes a metal that remembers every shape it survives.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_smelting_core_metallurgy_log",
+        "amount": 40,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "smelting_core_exp_quench_gallery",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        19,
+        5
+      ],
+      "layout_id": "smelting_core_optional_lore_metallurgy_log",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "compact cool islands climbing around an open furnace throat",
+      "landmark": "white-hot smelting crucible"
+    },
+    {
+      "id": "robotic_maintenance_opt_memory_scrubber",
+      "region_id": "robot_factory",
+      "district_id": "robotic_maintenance",
+      "display_name": "Robotic Maintenance — Memory Scrubber",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: Scrub logs show robots retaining dreams even after complete memory erasure.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          125,
+          400,
+          155,
+          18
+        ],
+        [
+          315,
+          345,
+          170,
+          18
+        ],
+        [
+          560,
+          405,
+          145,
+          18
+        ],
+        [
+          740,
+          340,
+          155,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_robotic_maintenance_memory_scrubber",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Scrub logs show robots retaining dreams even after complete memory erasure.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_robotic_maintenance_memory_scrubber",
+        "amount": 40,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "robotic_maintenance_exp_tool_crib",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        11,
+        5
+      ],
+      "layout_id": "robotic_maintenance_optional_lore_memory_scrubber",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "alternating service pockets beneath descending repair machinery",
+      "landmark": "memory-scrubber service rack"
+    },
+    {
+      "id": "assembly_engine_opt_prototype_hangar",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Prototype Hangar",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: A smaller Colossus shell bears evidence of a pilot compartment removed from later models.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          415,
+          180,
+          18
+        ],
+        [
+          300,
+          395,
+          160,
+          18
+        ],
+        [
+          550,
+          325,
+          145,
+          18
+        ],
+        [
+          740,
+          305,
+          145,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_assembly_engine_prototype_hangar",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A smaller Colossus shell bears evidence of a pilot compartment removed from later models.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_assembly_engine_prototype_hangar",
+        "amount": 40,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "assembly_engine_exp_engine_apron",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        8,
+        5
+      ],
+      "layout_id": "assembly_engine_optional_lore_prototype_hangar",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel"
+    },
+    {
+      "id": "assembly_engine_opt_engineers_last_shift",
+      "region_id": "robot_factory",
+      "district_id": "assembly_engine",
+      "display_name": "Assembly Engine — Engineer's Last Shift",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: A voice transcript asks why the engine is pointed at the moon instead of the city.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          410,
+          40
+        ],
+        [
+          650,
+          500,
+          310,
+          40
+        ],
+        [
+          80,
+          395,
+          155,
+          18
+        ],
+        [
+          330,
+          375,
+          135,
+          18
+        ],
+        [
+          525,
+          295,
+          120,
+          18
+        ],
+        [
+          775,
+          285,
+          120,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_assembly_engine_engineers_last_shift",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A voice transcript asks why the engine is pointed at the moon instead of the city.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_assembly_engine_engineers_last_shift",
+        "amount": 50,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "assembly_engine_exp_colossus_lock",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "steam_vent",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            120,
+            26
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "map_cell": [
+        3,
+        5
+      ],
+      "layout_id": "assembly_engine_optional_mastery_engineers_last_shift",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel"
+    }
+  ],
+  "district_expansion_version": 2
+}

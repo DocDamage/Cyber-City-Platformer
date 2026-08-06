@@ -1,0 +1,1362 @@
+{
+  "schema_version": 2,
+  "rooms": [
+    {
+      "id": "cyber_rooftop_entry",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Safehouse Roof",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "safe runway into three readable rooftop steps",
+      "landmark": "safehouse relay crown",
+      "map_cell": [
+        0,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 55,
+        "expert_seconds": 18
+      },
+      "spawns": {
+        "new_game": [
+          90,
+          446
+        ],
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "shortcut": [
+          310,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          445,
+          180,
+          55
+        ],
+        [
+          390,
+          390,
+          150,
+          110
+        ],
+        [
+          600,
+          445,
+          210,
+          55
+        ]
+      ],
+      "connections": [
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_lane",
+          "target_connection": "west"
+        }
+      ],
+      "story_beat": "prologue_rooftop_arrival",
+      "critical_path_index": 0
+    },
+    {
+      "id": "cyber_rooftop_lane",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Runner's Lane",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "four-beat jump tutorial with a near-limit middle rise and recovery landing",
+      "landmark": "runner timing pylons",
+      "map_cell": [
+        1,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 75,
+        "expert_seconds": 25
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          445,
+          145,
+          55
+        ],
+        [
+          370,
+          395,
+          130,
+          105
+        ],
+        [
+          570,
+          345,
+          130,
+          155
+        ],
+        [
+          755,
+          415,
+          130,
+          85
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_interior",
+          "target_connection": "west"
+        }
+      ],
+      "tutorial": "movement",
+      "critical_path_index": 1
+    },
+    {
+      "id": "cyber_rooftop_interior",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Utility Interior",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "grounded combat lane framed by two optional elevation routes",
+      "landmark": "utility transformer bank",
+      "map_cell": [
+        2,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 35
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          445,
+          160,
+          55
+        ],
+        [
+          300,
+          390,
+          135,
+          110
+        ],
+        [
+          610,
+          335,
+          125,
+          165
+        ],
+        [
+          780,
+          415,
+          120,
+          85
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_lane",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_phase_tutorial",
+          "target_connection": "west"
+        }
+      ],
+      "tutorial": "combat",
+      "encounters": [
+        {
+          "id": "rooftop_combat_tutorial",
+          "activation": [
+            250,
+            220,
+            450,
+            280
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  470,
+                  470
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "critical_path_index": 2
+    },
+    {
+      "id": "cyber_rooftop_phase_tutorial",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Phase Range",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "teleport gap with a visible safe target, elevated mastery target, and secret return",
+      "landmark": "phase calibration gantry",
+      "map_cell": [
+        3,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 130,
+        "expert_seconds": 45
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "secret": [
+          470,
+          120
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          250,
+          40
+        ],
+        [
+          710,
+          500,
+          250,
+          40
+        ],
+        [
+          300,
+          410,
+          100,
+          16
+        ],
+        [
+          560,
+          350,
+          90,
+          16
+        ],
+        [
+          420,
+          230,
+          120,
+          16
+        ],
+        [
+          350,
+          155,
+          240,
+          16
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_interior",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_signworks",
+          "target_connection": "west"
+        },
+        {
+          "id": "secret",
+          "rect": [
+            420,
+            95,
+            120,
+            20
+          ],
+          "target_room": "cyber_rooftop_cache",
+          "target_connection": "south"
+        }
+      ],
+      "tutorial": "teleport",
+      "critical_path_index": 3
+    },
+    {
+      "id": "cyber_rooftop_cache",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Smuggler Cache",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "symmetric reward chamber with a centered reveal pedestal",
+      "landmark": "smuggler signal vault",
+      "map_cell": [
+        3,
+        -1
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 25,
+        "optional": true
+      },
+      "spawns": {
+        "south": [
+          470,
+          430
+        ]
+      },
+      "platforms": [
+        [
+          170,
+          500,
+          620,
+          40
+        ],
+        [
+          260,
+          400,
+          140,
+          16
+        ],
+        [
+          560,
+          400,
+          140,
+          16
+        ],
+        [
+          405,
+          300,
+          150,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            420,
+            500,
+            120,
+            18
+          ],
+          "target_room": "cyber_rooftop_phase_tutorial",
+          "target_connection": "secret"
+        }
+      ],
+      "reward": {
+        "id": "dagger_signal_pair",
+        "family": "dagger",
+        "display_name": "Signal Pair",
+        "position": [
+          480,
+          270
+        ],
+        "dialogue": "dagger_cache_found"
+      }
+    },
+    {
+      "id": "cyber_rooftop_signworks",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Neon Signworks",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "three safe islands separated by telegraphed electrical floor beats",
+      "landmark": "neon fabrication crane",
+      "map_cell": [
+        4,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 130,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          240,
+          40
+        ],
+        [
+          330,
+          500,
+          260,
+          40
+        ],
+        [
+          690,
+          500,
+          270,
+          40
+        ],
+        [
+          180,
+          380,
+          150,
+          16
+        ],
+        [
+          430,
+          315,
+          130,
+          16
+        ],
+        [
+          650,
+          390,
+          150,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            285,
+            480
+          ],
+          "size": [
+            80,
+            24
+          ],
+          "active": 1.2,
+          "inactive": 1.4
+        },
+        {
+          "type": "electrical_floor",
+          "position": [
+            640,
+            480
+          ],
+          "size": [
+            80,
+            24
+          ],
+          "active": 1.0,
+          "inactive": 1.5
+        }
+      ],
+      "encounters": [
+        {
+          "id": "rooftop_signworks_lockdown",
+          "activation": [
+            250,
+            210,
+            470,
+            290
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  430,
+                  470
+                ]
+              },
+              {
+                "enemy": "imp",
+                "position": [
+                  590,
+                  330
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  520,
+                  470
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_phase_tutorial",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_shaft",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "rooftop_alley_opt_pirate_antenna",
+          "target_connection": "return"
+        }
+      ],
+      "critical_path_index": 4
+    },
+    {
+      "id": "cyber_rooftop_shaft",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Signal Shaft",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "alternating ascent steps around a clear ground-combat pocket",
+      "landmark": "signal shaft mast",
+      "map_cell": [
+        5,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 115,
+        "expert_seconds": 35
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          105,
+          445,
+          180,
+          55
+        ],
+        [
+          360,
+          390,
+          145,
+          110
+        ],
+        [
+          610,
+          335,
+          145,
+          165
+        ],
+        [
+          790,
+          410,
+          120,
+          90
+        ],
+        [
+          465,
+          280,
+          100,
+          16
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_signworks",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_market",
+          "target_connection": "west"
+        }
+      ],
+      "encounters": [
+        {
+          "id": "rooftop_shaft_crossfire",
+          "activation": [
+            220,
+            100,
+            560,
+            400
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  350,
+                  470
+                ]
+              },
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  585,
+                  230
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "critical_path_index": 5
+    },
+    {
+      "id": "cyber_rooftop_market",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Night Market",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "flat decompression hub with two vendor balconies and an unobstructed service lane",
+      "landmark": "night market canopy",
+      "map_cell": [
+        6,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 170,
+        "expert_seconds": 45
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          140,
+          400,
+          180,
+          18
+        ],
+        [
+          650,
+          400,
+          180,
+          18
+        ]
+      ],
+      "save_room": {
+        "id": "save_rooftop_market",
+        "position": [
+          475,
+          450
+        ]
+      },
+      "services": [
+        {
+          "type": "barber",
+          "position": [
+            200,
+            450
+          ]
+        },
+        {
+          "type": "npc",
+          "id": "mara_rooftop",
+          "display_name": "Mara",
+          "position": [
+            480,
+            450
+          ],
+          "dialogue_entries": [
+            "market_mara_first",
+            "market_mara_post_game",
+            "market_mara_post_oracle",
+            "market_mara_post_factory",
+            "market_mara_post_helix",
+            "market_mara_repeat"
+          ]
+        },
+        {
+          "type": "tailor",
+          "position": [
+            760,
+            450
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_shaft",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_shortcut",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 6
+    },
+    {
+      "id": "cyber_rooftop_shortcut",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Fire-Escape Loop",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "ascending shortcut loop that returns to a centered ground switch",
+      "landmark": "safehouse return conduit",
+      "map_cell": [
+        7,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 100,
+        "expert_seconds": 28
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "shortcut": [
+          470,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          135,
+          445,
+          145,
+          55
+        ],
+        [
+          330,
+          390,
+          125,
+          110
+        ],
+        [
+          575,
+          335,
+          125,
+          165
+        ],
+        [
+          750,
+          415,
+          130,
+          85
+        ]
+      ],
+      "shortcut": {
+        "id": "shortcut_rooftop_safehouse",
+        "position": [
+          480,
+          455
+        ],
+        "size": [
+          24,
+          90
+        ],
+        "approach": "right",
+        "target_room": "cyber_rooftop_entry",
+        "target_connection": "shortcut"
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_market",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_overlook",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 7
+    },
+    {
+      "id": "cyber_rooftop_overlook",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Relay Overlook",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "quiet warp vista framed by two broad observation decks",
+      "landmark": "relay overlook beacon",
+      "map_cell": [
+        8,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 80,
+        "expert_seconds": 22
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "warp": [
+          475,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          190,
+          390,
+          170,
+          18
+        ],
+        [
+          600,
+          390,
+          170,
+          18
+        ]
+      ],
+      "warp_room": {
+        "id": "warp_rooftop_overlook",
+        "position": [
+          480,
+          445
+        ]
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_shortcut",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_guardian",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 8
+    },
+    {
+      "id": "cyber_rooftop_guardian",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Junction Gate",
+      "layout_source": "hand_tuned_rooftop_slice_v2",
+      "spatial_rhythm": "wide ground duel with perimeter perches and a visible ability-gated ceiling hook",
+      "landmark": "guardian junction antenna",
+      "map_cell": [
+        9,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 145,
+        "expert_seconds": 45
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "magnetic_return": [
+          480,
+          105
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          390,
+          150,
+          16
+        ],
+        [
+          400,
+          315,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          150,
+          16
+        ],
+        [
+          420,
+          205,
+          120,
+          16
+        ],
+        [
+          430,
+          115,
+          100,
+          16
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_overlook",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_entry",
+          "target_connection": "west"
+        },
+        {
+          "id": "magnetic_rail",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_entry",
+          "target_connection": "rooftop_backtrack",
+          "required_ability": "magnetic_rail",
+          "barrier_id": "barrier_rooftop_spire_rail",
+          "map_hidden": true
+        }
+      ],
+      "encounters": [
+        {
+          "id": "rooftop_junction_guard",
+          "activation": [
+            220,
+            150,
+            560,
+            350
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  380,
+                  470
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  625,
+                  470
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  500,
+                  450
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "story_beat": "rooftop_district_exit",
+      "critical_path_index": 9
+    },
+    {
+      "id": "rooftop_alley_opt_pirate_antenna",
+      "region_id": "cyber_city",
+      "district_id": "rooftop_alley",
+      "display_name": "Rooftop Alley — Pirate Antenna",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: A rooftop broadcaster preserves the first anonymous warning about Helix surveillance.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          410,
+          160,
+          18
+        ],
+        [
+          290,
+          375,
+          155,
+          18
+        ],
+        [
+          530,
+          295,
+          160,
+          18
+        ],
+        [
+          735,
+          400,
+          145,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_rooftop_alley_pirate_antenna",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A rooftop broadcaster preserves the first anonymous warning about Helix surveillance.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_rooftop_alley_pirate_antenna",
+        "amount": 25,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "cyber_rooftop_signworks",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        4,
+        -1
+      ],
+      "layout_id": "rooftop_alley_optional_lore_pirate_antenna",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "close rooftop steps opening into a broadcast overlook",
+      "landmark": "pirate antenna crown"
+    }
+  ],
+  "district_expansion_version": 2
+}

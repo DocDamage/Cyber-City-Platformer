@@ -6,6 +6,7 @@ signal lock_changed(locked: bool)
 
 @export_file("*.tscn") var next_scene_path := ""
 @export var starts_locked := false
+@export var locked_label_text := "OBJECTIVE LOCKED"
 
 var _triggered := false
 var is_locked := false
@@ -46,10 +47,21 @@ func set_locked(value: bool) -> void:
 		return
 	is_locked = value
 	set_deferred("monitoring", not is_locked)
-	var label := get_node_or_null("Label") as Label
-	if label != null:
-		label.text = "DEFEAT BOSS" if is_locked else "STAGE EXIT"
+	_refresh_label()
 	var chevron := get_node_or_null("Chevron") as CanvasItem
 	if chevron != null:
 		chevron.modulate = Color(1.0, 0.2, 0.35, 0.45) if is_locked else Color.WHITE
 	lock_changed.emit(is_locked)
+
+
+func set_locked_message(value: String) -> void:
+	locked_label_text = value.strip_edges().to_upper()
+	if locked_label_text.is_empty():
+		locked_label_text = "OBJECTIVE LOCKED"
+	_refresh_label()
+
+
+func _refresh_label() -> void:
+	var label := get_node_or_null("Label") as Label
+	if label != null:
+		label.text = locked_label_text if is_locked else "STAGE EXIT"

@@ -38,12 +38,13 @@ func _physics_process(delta: float) -> void:
 
 func _apply_velocity() -> void:
 	constant_linear_velocity = Vector2(speed * _direction, 0.0) if _active else Vector2.ZERO
-	var visual := get_node_or_null("Visual") as Polygon2D
+	var visual := get_node_or_null("Visual") as TerrainSurfaceArt
 	if visual != null:
-		visual.color = (Color("ff4fd8") if _direction > 0.0 else Color("7a5cff")) if _active else Color("34394f")
+		visual.modulate = Color.WHITE if _active else Color(0.42, 0.46, 0.55, 1.0)
 	var arrow := get_node_or_null("DirectionArrow") as Label
 	if arrow != null:
 		arrow.text = (">>>" if _direction > 0.0 else "<<<") if _active else "---"
+		arrow.add_theme_color_override("font_color", Color("ffb347") if _active else Color("8791a8"))
 	if _hazard != null:
 		_hazard.set_active(_active)
 
@@ -61,6 +62,10 @@ func reverse() -> void:
 	_elapsed = 0.0
 	_apply_velocity()
 	_play_motion_cue()
+
+
+func current_direction() -> float:
+	return _direction
 
 
 func reset_conveyor() -> void:
@@ -86,15 +91,18 @@ func _ensure_components() -> void:
 		add_child(collision)
 	var half := conveyor_size * 0.5
 	if get_node_or_null("Visual") == null:
-		var visual := Polygon2D.new()
-		visual.name = "Visual"
-		visual.polygon = PackedVector2Array([Vector2(-half.x, -half.y), Vector2(half.x, -half.y), Vector2(half.x, half.y), Vector2(-half.x, half.y)])
-		visual.color = Color("ff4fd8")
-		add_child(visual)
+		var visual := TerrainPlatform.create_surface_art(conveyor_size, TerrainPlatform.region_for_node(self), 0, TerrainPlatform.prefers_traversal_skin(self))
+		if visual != null:
+			visual.name = "Visual"
+			visual.set_meta(&"mechanic_role", "conveyor")
+			add_child(visual)
 	var arrow := Label.new()
 	arrow.name = "DirectionArrow"
-	arrow.position = Vector2(-24.0, -13.0)
-	arrow.add_theme_color_override("font_color", Color.WHITE)
+	arrow.position = Vector2(-24.0, -15.0)
+	arrow.add_theme_color_override("font_color", Color("ffb347"))
+	arrow.add_theme_color_override("font_outline_color", Color("172031"))
+	arrow.add_theme_constant_override("outline_size", 2)
+	arrow.z_index = 2
 	add_child(arrow)
 	if hazardous:
 		_hazard = Hazard.new()

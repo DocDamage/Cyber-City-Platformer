@@ -67,6 +67,7 @@ func _run() -> void:
 	assert(target.process_mode != Node.PROCESS_MODE_DISABLED, "Entering the arena did not activate its encounter.")
 	target.set_physics_process(false)
 	var target_starting_health := target.health
+	var target_score_value := target.score_value
 	for expected_health in range(target_starting_health - 1, -1, -1):
 		var energy_before: float = player.energy
 		player.shoot_projectile()
@@ -83,9 +84,9 @@ func _run() -> void:
 		if not is_instance_valid(target):
 			break
 	assert(not is_instance_valid(target), "Enemy did not complete its death sequence.")
-	assert(manager.current_score == 250, "Enemy defeat did not increment GameManager score.")
+	assert(manager.current_score == target_score_value, "Enemy defeat did not increment GameManager score by its authored value.")
 	var score_label := hud.get_node("Layout/ScorePanel/Margin/Readouts/ScoreLabel") as Label
-	assert(score_label.text == "000250", "HUD score label did not refresh from GameManager.")
+	assert(score_label.text == "%06d" % target_score_value, "HUD score label did not refresh from GameManager.")
 
 	player.invincibility_duration = 0.1
 	var starting_health: int = player.health

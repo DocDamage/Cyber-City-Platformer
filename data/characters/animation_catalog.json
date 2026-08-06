@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "frame_size": [100, 40],
+  "columns": 8,
+  "row_frame_counts": [6, 6, 8, 8, 8, 6, 6, 4, 6, 4, 5, 5, 4, 5, 8, 5, 8],
+  "animations": {
+    "idle": {"source_frames": [1, 6], "fps": 8.0, "loop": true},
+    "idle_alt": {"source_frames": [7, 12], "fps": 8.0, "loop": true},
+    "run": {"source_frames": [13, 20], "fps": 12.0, "loop": true, "events": {"2": "footstep", "6": "footstep"}},
+    "run_alt": {"source_frames": [21, 28], "fps": 12.0, "loop": true, "events": {"2": "footstep", "6": "footstep"}},
+    "jump": {"source_frames": [29, 32], "fps": 10.0, "loop": false},
+    "fall": {"source_frames": [33, 35], "fps": 9.0, "loop": true},
+    "land": {"source_frames": [36, 36], "fps": 8.0, "loop": false},
+    "attack_1": {"source_frames": [37, 42], "fps": 16.0, "loop": false, "events": {"2": "hitbox_on", "4": "hitbox_off"}},
+    "attack_2": {"source_frames": [43, 48], "fps": 16.0, "loop": false, "events": {"2": "hitbox_on", "4": "hitbox_off"}},
+    "attack_3": {"source_frames": [49, 52], "fps": 13.0, "loop": false, "events": {"1": "hitbox_on", "3": "hitbox_off"}},
+    "air_attack_1": {"source_frames": [53, 58], "fps": 15.0, "loop": false, "events": {"2": "hitbox_on", "4": "hitbox_off"}},
+    "air_attack_2": {"source_frames": [59, 62], "fps": 13.0, "loop": false, "events": {"1": "hitbox_on", "3": "hitbox_off"}},
+    "cast_1": {"source_frames": [63, 64], "fps": 9.0, "loop": false},
+    "cast_loop_1": {"source_frames": [65, 67], "fps": 8.0, "loop": true},
+    "cast_2": {"source_frames": [68, 69], "fps": 9.0, "loop": false},
+    "cast_loop_2": {"source_frames": [70, 72], "fps": 8.0, "loop": true},
+    "hurt": {"source_frames": [73, 76], "fps": 12.0, "loop": false},
+    "dying": {"source_frames": [77, 81], "fps": 9.0, "loop": false},
+    "dash": {"source_frames": [82, 89], "fps": 15.0, "loop": false},
+    "block": {"source_frames": [90, 94], "fps": 8.0, "loop": true},
+    "roll": {"source_frames": [95, 102], "fps": 14.0, "loop": false}
+  }
+}

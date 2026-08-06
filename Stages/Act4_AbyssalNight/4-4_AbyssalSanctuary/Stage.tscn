@@ -1,7 +1,7 @@
 [gd_scene format=4]
 
 [ext_resource type="Script" path="res://scripts/campaign/CampaignStage.gd" id="1_6b1y4"]
-[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png" id="2_eehvx"]
+[ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Generated/abyssal_sanctuary_panorama_v1.png" id="2_eehvx"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png" id="3_edn2a"]
 [ext_resource type="Texture2D" path="res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png" id="4_bbkah"]
 [ext_resource type="TileSet" path="res://Stages/TileSets/Act4_AbyssalNight_Palette.tres" id="5_23axb"]
@@ -42,7 +42,10 @@ music_path = "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread R
 far_background = ExtResource("2_eehvx")
 middle_background = ExtResource("3_edn2a")
 front_background = ExtResource("4_bbkah")
-background_tint = Color(0.72, 0.55, 0.82, 1)
+use_layer_tints = true
+far_background_tint = Color(1, 1, 1, 1)
+middle_background_tint = Color(0.64, 0.46, 0.96, 0.18)
+front_background_tint = Color(0.28, 0.64, 0.9, 0.2)
 
 [node name="Background" type="Node2D" parent="." unique_id=680164470]
 
@@ -226,4 +229,3 @@ shape = SubResource("RectangleShape2D_okomo")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1416502301 instance=ExtResource("17_mn7tt")]
 layer = 20
-

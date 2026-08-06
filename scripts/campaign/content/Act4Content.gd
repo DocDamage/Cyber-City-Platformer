@@ -15,8 +15,8 @@ static func _corrupted_outpost() -> Dictionary:
 	return {
 		"stage_id": "4-1",
 		"traversal": [
-			{"id": "ruined_entry", "kind": "hazard_steps", "position": Vector2(900, 410), "optional": false},
-			{"id": "corrupt_rooftops", "kind": "moving_platform_route", "position": Vector2(2900, 390), "optional": false},
+			{"id": "ruined_entry", "kind": "hazard_steps", "architecture": "outpost_ruin_steps", "position": Vector2(900, 410), "optional": false},
+			{"id": "corrupt_rooftops", "kind": "moving_platform_route", "architecture": "outpost_corruption_lift", "position": Vector2(2900, 390), "optional": false},
 		],
 		"mechanics": [
 			{"id": "corruption_a", "kind": "toxic_pool", "position": Vector2(1100, 470), "size": Vector2(420, 90), "damage": 2},
@@ -35,8 +35,8 @@ static func _dark_chasm() -> Dictionary:
 	return {
 		"stage_id": "4-2",
 		"traversal": [
-			{"id": "void_floats", "kind": "moving_platform_route", "position": Vector2(900, 390), "optional": false},
-			{"id": "blind_dash", "kind": "dash_gap", "position": Vector2(3100, 410), "optional": false},
+			{"id": "void_floats", "kind": "moving_platform_route", "architecture": "chasm_cable_lifts", "position": Vector2(900, 390), "optional": false},
+			{"id": "blind_dash", "kind": "dash_gap", "architecture": "chasm_shadow_bridge", "position": Vector2(3100, 410), "optional": false},
 		],
 		"mechanics": [
 			{"id": "chasm_pit_a", "kind": "void_pit", "position": Vector2(1200, 490), "size": Vector2(560, 120)},
@@ -58,8 +58,8 @@ static func _biomechanical_nest() -> Dictionary:
 	return {
 		"stage_id": "4-3",
 		"traversal": [
-			{"id": "organic_spines", "kind": "hazard_steps", "position": Vector2(950, 410), "optional": false},
-			{"id": "nest_bypass", "kind": "high_route", "position": Vector2(3000, 380), "optional": false},
+			{"id": "organic_spines", "kind": "hazard_steps", "architecture": "nest_rib_walk", "position": Vector2(950, 410), "optional": false},
+			{"id": "nest_bypass", "kind": "high_route", "architecture": "nest_brood_bypass", "position": Vector2(3000, 380), "optional": false},
 		],
 		"mechanics": [
 			{"id": "organic_crusher_a", "kind": "crusher", "position": Vector2(1050, 140), "travel": 270.0, "phase": 0.2},
@@ -80,8 +80,8 @@ static func _abyssal_sanctuary() -> Dictionary:
 	return {
 		"stage_id": "4-4",
 		"traversal": [
-			{"id": "mastery_floor", "kind": "conveyor_route", "position": Vector2(900, 410), "optional": false},
-			{"id": "mastery_air", "kind": "moving_platform_route", "position": Vector2(3000, 380), "optional": false},
+			{"id": "mastery_floor", "kind": "conveyor_route", "architecture": "sanctuary_mastery_steps", "position": Vector2(900, 410), "optional": false},
+			{"id": "mastery_air", "kind": "moving_platform_route", "architecture": "sanctuary_void_carriage", "position": Vector2(3000, 380), "optional": false},
 		],
 		"mechanics": [
 			{"id": "sanctuary_belt", "kind": "conveyor", "position": Vector2(900, 424), "size": Vector2(600, 24), "speed": -175.0, "hazard": true},

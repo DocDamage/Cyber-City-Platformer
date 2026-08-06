@@ -15,8 +15,8 @@ static func _sublevel_intake() -> Dictionary:
 	return {
 		"stage_id": "2-1",
 		"traversal": [
-			{"id": "safe_belt", "kind": "conveyor_route", "position": Vector2(290, 418), "optional": false},
-			{"id": "steam_timing", "kind": "hazard_steps", "position": Vector2(790, 412), "optional": false},
+			{"id": "safe_belt", "kind": "conveyor_route", "architecture": "intake_conveyors", "position": Vector2(290, 385), "optional": false},
+			{"id": "steam_timing", "kind": "hazard_steps", "architecture": "forge_laser_walk", "position": Vector2(790, 270), "optional": false},
 		],
 		"mechanics": [
 			{"id": "intake_belt", "kind": "conveyor", "position": Vector2(390, 424), "size": Vector2(290, 24), "speed": 90.0},
@@ -35,13 +35,13 @@ static func _conveyor_assembly() -> Dictionary:
 	return {
 		"stage_id": "2-2",
 		"traversal": [
-			{"id": "reversal_lane", "kind": "conveyor_route", "position": Vector2(850, 420), "optional": false},
-			{"id": "cargo_lift", "kind": "moving_platform_route", "position": Vector2(2800, 390), "optional": false},
+			{"id": "reversal_lane", "kind": "conveyor_route", "architecture": "reversal_conveyors", "position": Vector2(850, 420), "optional": false},
+			{"id": "cargo_lift", "kind": "moving_platform_route", "architecture": "cargo_transfer", "position": Vector2(2800, 390), "optional": false},
 		],
 		"mechanics": [
 			{"id": "reverse_belt_a", "kind": "conveyor", "position": Vector2(900, 424), "size": Vector2(500, 24), "speed": 145.0, "reversible": true, "interval": 2.5},
 			{"id": "hazard_belt", "kind": "conveyor", "position": Vector2(2050, 424), "size": Vector2(560, 24), "speed": -170.0, "hazard": true},
-			{"id": "cargo_platform", "kind": "moving_platform", "position": Vector2(2860, 390), "points": [Vector2.ZERO, Vector2(260, -180), Vector2(560, -40)], "loop": true, "wait": 0.25},
+			{"id": "cargo_platform", "kind": "moving_platform", "position": Vector2(2860, 390), "points": [Vector2.ZERO, Vector2(260, -180), Vector2(560, -40)], "loop": true, "wait": 0.25, "presentation": "factory_cargo_lift"},
 			{"id": "falling_part_a", "kind": "falling_object", "position": Vector2(3420, 140), "drop": 310.0, "phase": 0.0},
 			{"id": "falling_part_b", "kind": "falling_object", "position": Vector2(3710, 80), "drop": 370.0, "phase": 0.8},
 		],
@@ -57,8 +57,8 @@ static func _smelting_core() -> Dictionary:
 	return {
 		"stage_id": "2-3",
 		"traversal": [
-			{"id": "furnace_climb", "kind": "vertical_route", "position": Vector2(1100, 390), "optional": false},
-			{"id": "laser_forge", "kind": "hazard_steps", "position": Vector2(3050, 390), "optional": false},
+			{"id": "furnace_climb", "kind": "vertical_route", "architecture": "furnace_gantry", "position": Vector2(1100, 390), "optional": false},
+			{"id": "laser_forge", "kind": "hazard_steps", "architecture": "forge_laser_walk", "position": Vector2(3050, 390), "optional": false},
 		],
 		"mechanics": [
 			{"id": "smelter_pool", "kind": "toxic_pool", "position": Vector2(1050, 470), "size": Vector2(520, 90)},
@@ -79,8 +79,8 @@ static func _robotic_maintenance() -> Dictionary:
 	return {
 		"stage_id": "2-4",
 		"traversal": [
-			{"id": "crusher_hall", "kind": "hazard_steps", "position": Vector2(950, 410), "optional": false},
-			{"id": "repair_bypass", "kind": "high_route", "position": Vector2(2720, 370), "optional": true},
+			{"id": "crusher_hall", "kind": "hazard_steps", "architecture": "crusher_bay", "position": Vector2(1200, 410), "optional": false},
+			{"id": "repair_bypass", "kind": "high_route", "architecture": "maintenance_bypass", "position": Vector2(2720, 370), "optional": true},
 		],
 		"mechanics": [
 			{"id": "crusher_a", "kind": "crusher", "position": Vector2(1000, 160), "travel": 245.0, "phase": 0.0},

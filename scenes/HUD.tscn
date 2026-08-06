@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://scripts/HUDView.gd" id="1_hud"]
 
@@ -103,6 +103,20 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_stage_intro"]
+bg_color = Color(0.01, 0.025, 0.065, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14, 0.82, 0.98, 0.86)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 5
 
 [node name="HUD" type="CanvasLayer"]
 layer = 20
@@ -233,10 +247,11 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 0
 anchors_preset = 10
-anchor_right = 1.0
-offset_left = -265.0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
 offset_top = 18.0
-offset_right = 265.0
+offset_right = 230.0
 offset_bottom = 98.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBox_boss_panel")
@@ -281,12 +296,56 @@ show_percentage = false
 theme_override_styles/background = SubResource("StyleBox_bar_background")
 theme_override_styles/fill = SubResource("StyleBox_boss_fill")
 
+[node name="StageIntro" type="PanelContainer" parent="Layout"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(420, 74)
+layout_mode = 0
+anchors_preset = 10
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 158.0
+offset_right = 210.0
+offset_bottom = 232.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_stage_intro")
+
+[node name="Margin" type="MarginContainer" parent="Layout/StageIntro"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 8
+
+[node name="Readouts" type="VBoxContainer" parent="Layout/StageIntro/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="ActLabel" type="Label" parent="Layout/StageIntro/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "ACT 01  //  CYBER CITY"
+horizontal_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Layout/StageIntro/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "ROOFTOP ALLEY"
+horizontal_alignment = 1
+
 [node name="CheckpointNotice" type="Label" parent="Layout"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 44)
 layout_mode = 0
 anchors_preset = 10
-anchor_right = 1.0
+anchor_left = 0.5
+anchor_right = 0.5
 offset_left = -150.0
 offset_top = 34.0
 offset_right = 150.0
@@ -314,7 +373,8 @@ text = "UPGRADES: NONE"
 [node name="ObjectiveLabel" type="Label" parent="Layout"]
 unique_name_in_owner = true
 anchors_preset = 10
-anchor_right = 1.0
+anchor_left = 0.5
+anchor_right = 0.5
 offset_left = -220.0
 offset_top = 104.0
 offset_right = 220.0
@@ -329,7 +389,8 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 visible = false
 anchors_preset = 12
-anchor_right = 1.0
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -190.0
 offset_top = -64.0

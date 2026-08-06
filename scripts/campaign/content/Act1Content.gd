@@ -15,9 +15,9 @@ static func _rooftop_alley() -> Dictionary:
 	return {
 		"stage_id": "1-1",
 		"traversal": [
-			{"id": "jump_school", "kind": "jump_steps", "position": Vector2(300, 418), "optional": false},
-			{"id": "wall_school", "kind": "wall_jump_shaft", "position": Vector2(700, 410), "optional": false},
-			{"id": "pickup_roof", "kind": "high_route", "position": Vector2(1010, 390), "optional": true},
+			{"id": "jump_school", "kind": "jump_steps", "architecture": "rooftop_steps", "position": Vector2(300, 418), "optional": false},
+			{"id": "wall_school", "kind": "wall_jump_shaft", "architecture": "service_shaft", "position": Vector2(700, 410), "optional": false},
+			{"id": "pickup_roof", "kind": "high_route", "architecture": "billboard_bypass", "position": Vector2(1010, 390), "optional": true},
 		],
 		"mechanics": [
 			{"id": "move_prompt", "kind": "tutorial", "position": Vector2(160, 325), "text": "MOVE  A/D or LEFT STICK"},
@@ -37,13 +37,13 @@ static func _billboard_highway() -> Dictionary:
 	return {
 		"stage_id": "1-2",
 		"traversal": [
-			{"id": "billboard_run", "kind": "moving_platform_route", "position": Vector2(760, 420), "optional": false},
-			{"id": "highway_gap", "kind": "dash_gap", "position": Vector2(2850, 418), "optional": false},
-			{"id": "high_billboards", "kind": "high_route", "position": Vector2(1900, 360), "optional": true},
+			{"id": "billboard_run", "kind": "moving_platform_route", "architecture": "billboard_lifts", "position": Vector2(760, 420), "optional": false},
+			{"id": "highway_gap", "kind": "dash_gap", "architecture": "broken_skybridge", "position": Vector2(2850, 418), "optional": false},
+			{"id": "high_billboards", "kind": "high_route", "architecture": "billboard_bypass", "position": Vector2(1900, 360), "optional": true},
 		],
 		"mechanics": [
-			{"id": "billboard_lift_a", "kind": "moving_platform", "position": Vector2(850, 370), "points": [Vector2.ZERO, Vector2(260, -125), Vector2(520, 0)], "loop": true, "wait": 0.35},
-			{"id": "billboard_lift_b", "kind": "moving_platform", "position": Vector2(2200, 350), "points": [Vector2.ZERO, Vector2(0, -180)], "wait": 0.55},
+			{"id": "billboard_lift_a", "kind": "moving_platform", "position": Vector2(850, 370), "points": [Vector2.ZERO, Vector2(260, -125), Vector2(520, 0)], "loop": true, "wait": 0.35, "presentation": "city_elevator"},
+			{"id": "billboard_lift_b", "kind": "moving_platform", "position": Vector2(2200, 350), "points": [Vector2.ZERO, Vector2(0, -180)], "wait": 0.55, "presentation": "city_elevator"},
 			{"id": "electric_sign_a", "kind": "electrical_floor", "position": Vector2(1500, 402), "size": Vector2(170, 50), "active": 1.0, "inactive": 1.35},
 			{"id": "electric_sign_b", "kind": "electrical_floor", "position": Vector2(3500, 402), "size": Vector2(210, 50), "phase": 0.8},
 		],
@@ -59,13 +59,13 @@ static func _communication_spire() -> Dictionary:
 	return {
 		"stage_id": "1-3",
 		"traversal": [
-			{"id": "antenna_shaft", "kind": "wall_jump_shaft", "position": Vector2(980, 400), "height": 520.0, "optional": false},
-			{"id": "dish_ascent", "kind": "vertical_route", "position": Vector2(2740, 380), "optional": false},
+			{"id": "antenna_shaft", "kind": "wall_jump_shaft", "architecture": "antenna_shaft", "position": Vector2(980, 400), "height": 520.0, "optional": false},
+			{"id": "dish_ascent", "kind": "vertical_route", "architecture": "spire_ascent", "position": Vector2(2740, 380), "optional": false},
 		],
 		"mechanics": [
 			{"id": "signal_spinner_a", "kind": "rotating_laser", "position": Vector2(1550, 210), "radius": 150.0},
 			{"id": "signal_spinner_b", "kind": "rotating_laser", "position": Vector2(3320, 120), "radius": 190.0, "clockwise": false},
-			{"id": "spire_lift", "kind": "moving_platform", "position": Vector2(2450, 370), "points": [Vector2.ZERO, Vector2(0, -350)], "wait": 0.45},
+			{"id": "spire_lift", "kind": "moving_platform", "position": Vector2(2450, 370), "points": [Vector2.ZERO, Vector2(0, -350)], "wait": 0.45, "presentation": "spire_carriage"},
 			{"id": "vertical_camera", "kind": "camera_zone", "position": Vector2(2450, 40), "size": Vector2(900, 1040)},
 		],
 		"encounters": [
@@ -80,11 +80,11 @@ static func _skybridge_junction() -> Dictionary:
 	return {
 		"stage_id": "1-4",
 		"traversal": [
-			{"id": "moving_bridge", "kind": "moving_platform_route", "position": Vector2(900, 420), "optional": false},
-			{"id": "dash_bridge", "kind": "dash_gap", "position": Vector2(3000, 420), "optional": false},
+			{"id": "moving_bridge", "kind": "moving_platform_route", "architecture": "skybridge_carriage", "position": Vector2(900, 420), "optional": false},
+			{"id": "dash_bridge", "kind": "dash_gap", "architecture": "broken_skybridge", "position": Vector2(3000, 420), "optional": false},
 		],
 		"mechanics": [
-			{"id": "bridge_carriage", "kind": "moving_platform", "position": Vector2(1050, 390), "points": [Vector2.ZERO, Vector2(380, 0)], "wait": 0.25},
+			{"id": "bridge_carriage", "kind": "moving_platform", "position": Vector2(1050, 390), "points": [Vector2.ZERO, Vector2(380, 0)], "wait": 0.25, "presentation": "skybridge_carriage"},
 			{"id": "bridge_segment_a", "kind": "breakaway_platform", "position": Vector2(2100, 390), "collapse": 0.7},
 			{"id": "bridge_segment_b", "kind": "breakaway_platform", "position": Vector2(2250, 390), "collapse": 0.45},
 			{"id": "dash_prompt", "kind": "tutorial", "position": Vector2(2920, 310), "text": "DASH  SHIFT / RIGHT TRIGGER"},

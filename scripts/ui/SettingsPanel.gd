@@ -12,11 +12,18 @@ const ACTION_LABELS := {
 	&"slide_dash": "Slide / Dash",
 	&"interact": "Interact",
 	&"pause_game": "Pause",
+	&"teleport": "Phase Marker",
+	&"teleport_cancel": "Recall Marker",
+	&"open_map": "Open Map",
+	&"open_inventory": "Open Inventory",
+	&"skip_cutscene": "Skip Cutscene",
+	&"dialogue_backlog": "Dialogue Backlog",
 }
 
 var _manager: Node
 var _listening_action := &""
 var _binding_buttons: Dictionary = {}
+var _resolution_option: OptionButton
 
 
 func _ready() -> void:
@@ -25,6 +32,8 @@ func _ready() -> void:
 	_manager = get_node_or_null("/root/SettingsManager")
 	set_process_input(false)
 	_build_interface()
+	if _manager != null:
+		_manager.setting_changed.connect(_on_setting_changed)
 
 
 func _build_interface() -> void:
@@ -51,9 +60,18 @@ func _build_interface() -> void:
 	_add_slider(content, "Master Volume", &"master_volume", 0.0, 1.0, 0.05)
 	_add_slider(content, "Music Volume", &"music_volume", 0.0, 1.0, 0.05)
 	_add_slider(content, "SFX Volume", &"sfx_volume", 0.0, 1.0, 0.05)
+	_add_slider(content, "UI Volume", &"ui_volume", 0.0, 1.0, 0.05)
+	_add_slider(content, "Ambience Volume", &"ambience_volume", 0.0, 1.0, 0.05)
+	_add_slider(content, "Protagonist Voice", &"voice_volume", 0.0, 1.0, 0.05)
 	_add_slider(content, "Screen Shake", &"screen_shake_intensity", 0.0, 1.0, 0.05)
+	_add_slider(content, "Hit-Stop Strength", &"hit_stop_scale", 0.0, 1.0, 0.05)
+	_add_slider(content, "Aim Assist", &"aim_assist_strength", 0.0, 1.0, 0.05)
+	_add_slider(content, "Aim Deadzone", &"aim_deadzone", 0.05, 0.8, 0.05)
+	_add_slider(content, "Aim Response", &"aim_response", 0.1, 1.0, 0.05)
+	_add_slider(content, "Vibration Strength", &"controller_vibration_strength", 0.0, 1.0, 0.05)
 	_add_slider(content, "Controller Deadzone", &"controller_deadzone", 0.05, 0.8, 0.05)
 	_add_slider(content, "UI Scale", &"ui_scale", 0.75, 1.5, 0.05)
+	_add_slider(content, "Dialogue Text Speed", &"text_speed", 0.5, 2.0, 0.1)
 	var checks := GridContainer.new()
 	checks.columns = 2
 	content.add_child(checks)
@@ -63,24 +81,31 @@ func _build_interface() -> void:
 	_add_check(checks, "Reduced Flashing", &"reduced_flashing")
 	_add_check(checks, "High-Contrast Interactables", &"high_contrast_interactables")
 	_add_check(checks, "Hold-to-Interact", &"hold_to_interact")
+	_add_check(checks, "Voice Barks", &"barks_enabled")
+	_add_check(checks, "Bark Subtitles", &"bark_subtitles")
+	_add_check(checks, "Instant Dialogue Text", &"instant_text")
+	_add_check(checks, "Auto-Advance Dialogue", &"auto_advance")
+	_add_check(checks, "High-Contrast Phase Reticle", &"high_contrast_teleport_reticle")
+	_add_choice(content, "Teleport Aim", &"teleport_aim_behavior", ["hold", "tap"])
 	var resolution_row := HBoxContainer.new()
 	content.add_child(resolution_row)
 	var resolution_label := Label.new()
 	resolution_label.text = "Resolution"
 	resolution_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	resolution_row.add_child(resolution_label)
-	var resolution := OptionButton.new()
-	for option in ["1280x720", "1600x900", "1920x1080", "2560x1440"]:
-		resolution.add_item(option)
+	_resolution_option = OptionButton.new()
+	var resolution_options: Array = _manager.call(&"get_resolution_options")
+	for option: String in resolution_options:
+		_resolution_option.add_item(option)
 	var selected := String(_manager.call(&"get_setting", &"resolution", "1280x720"))
-	for index in range(resolution.item_count):
-		if resolution.get_item_text(index) == selected:
-			resolution.select(index)
+	for index in range(_resolution_option.item_count):
+		if _resolution_option.get_item_text(index) == selected:
+			_resolution_option.select(index)
 			break
-	resolution.item_selected.connect(func(index: int) -> void:
-		_manager.call(&"set_setting", &"resolution", resolution.get_item_text(index))
+	_resolution_option.item_selected.connect(func(index: int) -> void:
+		_manager.call(&"set_setting", &"resolution", _resolution_option.get_item_text(index))
 	)
-	resolution_row.add_child(resolution)
+	resolution_row.add_child(_resolution_option)
 	var binding_title := Label.new()
 	binding_title.text = "CONTROL BINDINGS"
 	binding_title.add_theme_font_size_override("font_size", 18)
@@ -143,6 +168,15 @@ func _refresh_binding_button(action: StringName) -> void:
 		button.text = String(_manager.call(&"get_action_binding_text", action))
 
 
+func _on_setting_changed(setting_id: StringName, value: Variant) -> void:
+	if setting_id != &"resolution" or _resolution_option == null:
+		return
+	for index in range(_resolution_option.item_count):
+		if _resolution_option.get_item_text(index) == String(value):
+			_resolution_option.select(index)
+			return
+
+
 func _add_slider(parent: Control, label_text: String, setting_id: StringName, minimum: float, maximum: float, step: float) -> void:
 	var row := HBoxContainer.new()
 	parent.add_child(row)
@@ -170,3 +204,24 @@ func _add_check(parent: Control, label_text: String, setting_id: StringName) -> 
 		_manager.call(&"set_setting", setting_id, value)
 	)
 	parent.add_child(check)
+
+
+func _add_choice(parent: Control, label_text: String, setting_id: StringName, values: Array[String]) -> void:
+	var row := HBoxContainer.new()
+	parent.add_child(row)
+	var label := Label.new()
+	label.text = label_text
+	label.custom_minimum_size.x = 210
+	row.add_child(label)
+	var option := OptionButton.new()
+	for value: String in values:
+		option.add_item(value.capitalize())
+		option.set_item_metadata(option.item_count - 1, value)
+	var current := String(_manager.call(&"get_setting", setting_id, values[0]))
+	for index: int in range(option.item_count):
+		if String(option.get_item_metadata(index)) == current:
+			option.select(index)
+	option.item_selected.connect(func(index: int) -> void:
+		_manager.call(&"set_setting", setting_id, String(option.get_item_metadata(index)))
+	)
+	row.add_child(option)

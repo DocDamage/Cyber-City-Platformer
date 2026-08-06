@@ -1,6 +1,8 @@
 class_name SecurityGate
 extends StaticBody2D
 
+const LOCKDOWN_GATE_ART := preload("res://scripts/systems/security/LockdownGateArt.gd")
+
 signal opened
 signal closed
 
@@ -11,7 +13,7 @@ signal closed
 @export_enum("encounter", "checkpoint", "save") var persistence := "encounter"
 var is_open := false
 var _collision: CollisionShape2D
-var _visual: Polygon2D
+var _visual: CanvasItem
 var _activated_sources: Dictionary = {}
 var _open_generation := 0
 
@@ -23,10 +25,9 @@ func _ready() -> void:
 	shape.size = gate_size
 	_collision.shape = shape
 	add_child(_collision)
-	var half := gate_size * 0.5
-	_visual = Polygon2D.new()
-	_visual.polygon = PackedVector2Array([Vector2(-half.x, -half.y), Vector2(half.x, -half.y), Vector2(half.x, half.y), Vector2(-half.x, half.y)])
-	_visual.color = Color(1.0, 0.1, 0.42, 0.72)
+	var gate_art := LOCKDOWN_GATE_ART.new()
+	gate_art.configure(gate_size, _resolve_act_number(), &"security")
+	_visual = gate_art as CanvasItem
 	add_child(_visual)
 	_restore_persisted_state.call_deferred()
 
@@ -89,7 +90,16 @@ func _apply_open_state() -> void:
 func _update_visual_progress() -> void:
 	if _visual != null:
 		var weight := float(_activated_sources.size()) / float(maxi(required_switches, 1))
-		_visual.color = Color("ffc857").lerp(Color("2df3a3"), weight)
+		_visual.call(&"set_charge", weight)
+
+
+func _resolve_act_number() -> int:
+	var node: Node = get_parent()
+	while node != null:
+		if node is StageBase:
+			return clampi((node as StageBase).stage_act, 1, 4)
+		node = node.get_parent()
+	return 2 if String(gate_id).contains("factory") or String(gate_id).contains("conveyor") else 1
 
 
 func _persist_state(value: bool) -> void:
@@ -97,12 +107,23 @@ func _persist_state(value: bool) -> void:
 		return
 	var manager := get_node_or_null("/root/GameManager")
 	if manager != null:
-		manager.call(&"set_stage_flag", _stage_scene_path(), gate_id, value, persistence == "save")
+		if _in_world_room():
+			manager.world_progress.set_object_state(String(gate_id), value)
+			if persistence == "save":
+				var save := get_node_or_null("/root/SaveManager")
+				if save != null:
+					save.call_deferred(&"save_game")
+		else:
+			manager.call(&"set_stage_flag", _stage_scene_path(), gate_id, value, persistence == "save")
 
 
 func _get_persisted_state() -> bool:
 	var manager := get_node_or_null("/root/GameManager")
-	return bool(manager.call(&"get_stage_flag", _stage_scene_path(), gate_id, false)) if manager != null else false
+	if manager == null:
+		return false
+	if _in_world_room():
+		return bool(manager.world_progress.get_object_state(String(gate_id), false))
+	return bool(manager.call(&"get_stage_flag", _stage_scene_path(), gate_id, false))
 
 
 func _restore_persisted_state() -> void:
@@ -115,3 +136,12 @@ func _stage_scene_path() -> String:
 	while node.get_parent() != null and node.get_parent() != get_tree().root:
 		node = node.get_parent()
 	return node.scene_file_path
+
+
+func _in_world_room() -> bool:
+	var node := get_parent()
+	while node != null:
+		if node.is_in_group(&"world_rooms"):
+			return true
+		node = node.get_parent()
+	return false

@@ -3,6 +3,279 @@
   "strategy": "Curated runtime files tracked with Git LFS; bulk source packs remain ignored.",
   "assets": [
     {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
+      "sha256": "8f674072658b2274528f0224cb5df43cc52512532ca5a3e4e94d7abffc6bd8d0",
+      "bytes": 6328781,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/2. Soulrend Sovereign (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/2. Soulrend Sovereign (Loop).ogg",
+      "sha256": "23fc3a3d397fe21333660542b880e6c3815e3ee4258512e1731057866cf20d96",
+      "bytes": 5734133,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg",
+      "sha256": "24794ae17cae30dbe9106be256752890c9f394ba5e6fdeb9d7ee5dda3f255d33",
+      "bytes": 5075626,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg",
+      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg",
+      "sha256": "ba8b7dd2805b582a0de4094b0a92cd930fa8b33e880ab21acdda7c5c02a9f563",
+      "bytes": 5233453,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 1 .ogg",
+      "source_path": "res://Music/Library/Robot Factory/Mega Robot Factory – 1 .ogg",
+      "sha256": "a786cc9e09c21283bd082ca357fd9b068f142149b2f9a41c0d1c1de677c4ff40",
+      "bytes": 2896205,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 2 .ogg",
+      "source_path": "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg",
+      "sha256": "d0b1b8f5970ae5f3c04b66faf1f94e9d48dd49dffda9d144642fdb80bd01700d",
+      "bytes": 3439737,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Rooftops 2/cyberpunk city 2.ogg",
+      "source_path": "res://Music/Library/Rooftops 2/cyberpunk city 2.ogg",
+      "sha256": "b470d4c7229850b43bb5651ae3b48617537f861abc2ccb835c1cea486302f38e",
+      "bytes": 1557518,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Rooftops/Cyberpunk Rooftops.ogg",
+      "source_path": "res://Music/Library/Rooftops/Cyberpunk Rooftops.ogg",
+      "sha256": "8bdc36c5df6fcfdb618658cca78d55aec8b29a5db5702d55dd18b5b9a4d8896f",
+      "bytes": 5001228,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/music/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg",
+      "source_path": "res://Music/Library/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg",
+      "sha256": "4e746226e8653897961a8fe21488cb5b5fc7d64eec56bf98ec7082d2dc2f2619",
+      "bytes": 1728581,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/brass1.mp3",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/brass1.mp3",
+      "sha256": "b3133ef17d7afa5389f83369810c4d677b9c6088fcddd0b5202a6a30b752024b",
+      "bytes": 149490,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
+      "sha256": "5d82c6c6ddfed49ce4598c1f93a83926effcb8807fc03a3bc7f58fe27299f0a7",
+      "bytes": 9568,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
+      "sha256": "bb8568f84710f5243872ab697ca2eac2ed2324cc4ddbaede32bf6920ccb5912b",
+      "bytes": 41638,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
+      "sha256": "a71f4c2485747263f105643341615e952b1d5574b87b07d276339ec52b6f96bb",
+      "bytes": 10405,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
+      "sha256": "55844887cc3185051953d9d1acd19424aa054509cf054e7d3fb3405e19798923",
+      "bytes": 76347,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
+      "sha256": "6a883ecdc07688cd0dd490b940e8b629cae7e590ed7f956684cab12f29b4f11d",
+      "bytes": 27060,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Transition.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Transition.ogg",
+      "sha256": "27a360a578a0fc5e47452da3475c47059d6ad4246e2c69ac2a30cb25d0a8c74e",
+      "bytes": 74408,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
+      "sha256": "84f955481dabf0c9187abaddb17f74a3f8adbde3e5a6012bef16cebedcfe3a5a",
+      "bytes": 42120,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
+      "sha256": "8601eee453d8b2408694a488f6babddbc25694aa57fc5e725ec0371bc6be03e2",
+      "bytes": 10118,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
+      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
+      "sha256": "93ae50f49d6e0cb74e753a1834b7414e0d040d163a7e97189f7d3de3bfda58a6",
+      "bytes": 7935,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_01/confirmation_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Female/Karen Cenon/confirmation_1_karen.wav",
+      "sha256": "4d53a3c150efce1b4359a57ca62ccdb3bdede51c1a859d93decd86d15c43da4b",
+      "bytes": 133278,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_01/damage_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/7 - Damage/Female/Karen Cenon/damage_1_karen.wav",
+      "sha256": "0d43ef64005dc6fa1f4b3d087b506d98bc8c9e3d20dc5c591f14b172b458871d",
+      "bytes": 99274,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_01/greeting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/3 - Greeting/Female/Karen Cenon/greeting_1_karen.wav",
+      "sha256": "9bae03e8bcc67b181c6bf97cc52692b98030d90634b8dc3fbfc46b220a87e0c8",
+      "bytes": 146158,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_01/grunting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/9 - Grunting/Female/Karen Cenon/grunting_1_karen.wav",
+      "sha256": "e9f6fd16385508404895de10cc5995907c7cea5f28da5572d25c59bf6ffce98a",
+      "bytes": 110962,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_02/confirmation_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Female/Meghan Christian/confirmation_1_meghan.wav",
+      "sha256": "c187c0feb632c78ef6f14fa49357d16e077a0de7caeb922936fc7c77a2e650c1",
+      "bytes": 153554,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_02/damage_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/7 - Damage/Female/Meghan Christian/damage_1_meghan.wav",
+      "sha256": "896743ff192c358e7afaf0b3fca4ec71bd75bea34ef0e60722e2c05bc0f8dace",
+      "bytes": 124814,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_02/greeting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/3 - Greeting/Female/Meghan Christian/greeting_1_meghan.wav",
+      "sha256": "2fc1508a0d14dc31c5f466ffec0f5f1531e50ca7202669cb5676fe502749e58b",
+      "bytes": 175186,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_02/grunting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/9 - Grunting/Female/Meghan Christian/grunting_1_meghan.wav",
+      "sha256": "0c350a5db86e76bac65a74a94400d7574569f1b5a6e83c92428840a2d7146b26",
+      "bytes": 100446,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_03/confirmation_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Male/Alex Brodie/confirmation_1_alex.wav",
+      "sha256": "e2e4b46c2ae7af73f2df6d9754b35700f4840e298bda10211f95c82c24404a74",
+      "bytes": 162262,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_03/damage_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/7 - Damage/Male/Alex Brodie/damage_1_alex.wav",
+      "sha256": "a9a9d6e53788246f8511465c62b5536e0ad3a1a86dc300640edcb427ae2bd8a8",
+      "bytes": 108842,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_03/greeting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/3 - Greeting/Male/Alex Brodie/greeting_1_alex.wav",
+      "sha256": "e6f054eb377790fb0124885968cedde0018447a892bb55792cab4cb74553157c",
+      "bytes": 162802,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_03/grunting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/9 - Grunting/Male/Alex Brodie/grunting_1_alex.wav",
+      "sha256": "fdda5a783aa8d03aa37716bb6d595538e249e99a0126a78a75fd47ef4873a50b",
+      "bytes": 160826,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_04/confirmation_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Male/Ian Lampert/confirmation_1_ian.wav",
+      "sha256": "37f0a2bffe4492f1cd6277eaa589c542d3763aabc80447e83c17ad23626b81af",
+      "bytes": 125474,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_04/damage_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/7 - Damage/Male/Ian Lampert/damage_1_ian.wav",
+      "sha256": "cd8ce1f729235f5df8fa94ca283aeaa3298d3ee195fd2b6439844ec0918b57da",
+      "bytes": 141674,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_04/greeting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/3 - Greeting/Male/Ian Lampert/greeting_1_ian.wav",
+      "sha256": "bcbb398cca475bd576e5beaa5734bbd62b7d1077e7ca43fb240508f73a0048d6",
+      "bytes": 148114,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_04/grunting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/9 - Grunting/Male/Ian Lampert/grunting_1_ian.wav",
+      "sha256": "1fade9a561fa01254a1d03c410c7dbacd3d6c60ac43802724f2bc2116668bd55",
+      "bytes": 190674,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_05/confirmation_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Male/Sean Lenhart/confirmation_1_sean.wav",
+      "sha256": "e5e8e83b9d22eca4e5a4190f40527b9c446a00585b68649ad0ccbe2097333ee8",
+      "bytes": 126142,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_05/damage_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/7 - Damage/Male/Sean Lenhart/damage_1_sean.wav",
+      "sha256": "0838f9f1100b7c2fb49a641f7dd02c4242bec49c7e6b194098cc23d3b6ef584b",
+      "bytes": 124378,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_05/greeting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/3 - Greeting/Male/Sean Lenhart/greeting_1_sean.wav",
+      "sha256": "8dee1c650445787f6e46f25d4d6a9f9e9e4bd17b72a900eaa7d337ccbafb4fdd",
+      "bytes": 141074,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/audio/voices/voice_05/grunting_01.wav",
+      "source_path": "source-library://SFX/Super Dialogue Audio Pack v1/Step 2 - Audio Files/9 - Grunting/Male/Sean Lenhart/grunting_1_sean.wav",
+      "sha256": "aaa45b314ec46f4197523e06d35220f5a974af8c653e280220aca13109314584",
+      "bytes": 128978,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
       "runtime_path": "res://assets/runtime/characters/Enemies/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
       "source_path": "res://Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/Sprites/no_outline/ATTACK.png",
       "sha256": "af3df71869fe7c46fbae7a8cf4a959bb6cbcc8c74dc2bd8a9aa9b422205b1ee4",
@@ -836,66 +1109,493 @@
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
-      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
-      "sha256": "8f674072658b2274528f0224cb5df43cc52512532ca5a3e4e94d7abffc6bd8d0",
-      "bytes": 6328781,
+      "runtime_path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_bot.png",
+      "source_path": "source-library://Characters/Character Creator/cloth/cloth1/cloth1_bot/cloth1_c1_bot.png",
+      "sha256": "9ac3a617f5846e5d93268b58ae35ea0ac2de6cdff4db3f477ae73ad6b0f24ecf",
+      "bytes": 32755,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/2. Soulrend Sovereign (Loop).ogg",
-      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/2. Soulrend Sovereign (Loop).ogg",
-      "sha256": "23fc3a3d397fe21333660542b880e6c3815e3ee4258512e1731057866cf20d96",
-      "bytes": 5734133,
+      "runtime_path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_top.png",
+      "source_path": "source-library://Characters/Character Creator/cloth/cloth1/cloth1_top/cloth1_c1_top.png",
+      "sha256": "e87464ecf68f9605da7a733b90da6df1faf82ee6d17e13324be1dd351c49c7f7",
+      "bytes": 2202,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg",
-      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/3. Veil of the Forsaken (Loop).ogg",
-      "sha256": "24794ae17cae30dbe9106be256752890c9f394ba5e6fdeb9d7ee5dda3f255d33",
-      "bytes": 5075626,
+      "runtime_path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_bot.png",
+      "source_path": "source-library://Characters/Character Creator/cloth/cloth2/cloth2_bot/cloth2_c1_bot.png",
+      "sha256": "4faa5b9814884137b83c83789922b8a6950c25460c60489a575da0c6a5163b7d",
+      "bytes": 33528,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg",
-      "source_path": "res://Music/Library/Boss Battles/Loops/Ogg/6. Dread Requiem (Loop).ogg",
-      "sha256": "ba8b7dd2805b582a0de4094b0a92cd930fa8b33e880ab21acdda7c5c02a9f563",
-      "bytes": 5233453,
+      "runtime_path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_top.png",
+      "source_path": "source-library://Characters/Character Creator/cloth/cloth2/cloth2_top/cloth2_c1_top.png",
+      "sha256": "e87464ecf68f9605da7a733b90da6df1faf82ee6d17e13324be1dd351c49c7f7",
+      "bytes": 2202,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 1 .ogg",
-      "source_path": "res://Music/Library/Robot Factory/Mega Robot Factory – 1 .ogg",
-      "sha256": "a786cc9e09c21283bd082ca357fd9b068f142149b2f9a41c0d1c1de677c4ff40",
-      "bytes": 2896205,
+      "runtime_path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_bot.png",
+      "source_path": "source-library://Characters/Character Creator/cloth/cloth3/cloth3_bot/cloth3_c1_bot.png",
+      "sha256": "922eb4a141314e7b55e74b8c2175b6924e932039cb16b7080e1a4321753eecd7",
+      "bytes": 29408,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 2 .ogg",
-      "source_path": "res://Music/Library/Robot Factory/Mega Robot Factory – 2 .ogg",
-      "sha256": "d0b1b8f5970ae5f3c04b66faf1f94e9d48dd49dffda9d144642fdb80bd01700d",
-      "bytes": 3439737,
+      "runtime_path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_top.png",
+      "source_path": "source-library://Characters/Character Creator/cloth/cloth3/cloth3_top/cloth3_c1_top.png",
+      "sha256": "e87464ecf68f9605da7a733b90da6df1faf82ee6d17e13324be1dd351c49c7f7",
+      "bytes": 2202,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Rooftops 2/cyberpunk city 2.ogg",
-      "source_path": "res://Music/Library/Rooftops 2/cyberpunk city 2.ogg",
-      "sha256": "b470d4c7229850b43bb5651ae3b48617537f861abc2ccb835c1cea486302f38e",
-      "bytes": 1557518,
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_01.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c1.png",
+      "sha256": "74249026981169c41b1c6c477a45414fb30d1b034d4abc4df0b79a2eae12d52c",
+      "bytes": 3567,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Rooftops/Cyberpunk Rooftops.ogg",
-      "source_path": "res://Music/Library/Rooftops/Cyberpunk Rooftops.ogg",
-      "sha256": "8bdc36c5df6fcfdb618658cca78d55aec8b29a5db5702d55dd18b5b9a4d8896f",
-      "bytes": 5001228,
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_02.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c2.png",
+      "sha256": "75b0817426578102fcda5e359fc46800e0ca4b894a564149435a8c42c94f7f5d",
+      "bytes": 3540,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/audio/music/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg",
-      "source_path": "res://Music/Library/Street Beats/DavidKBD - Street Beat - System Glitch-essential-edition.ogg",
-      "sha256": "4e746226e8653897961a8fe21488cb5b5fc7d64eec56bf98ec7082d2dc2f2619",
-      "bytes": 1728581,
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_03.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c3.png",
+      "sha256": "949b34801b2956a564bb5cb8bd084226e1b19edf570c67db1fa17efe8694cb23",
+      "bytes": 3604,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_04.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c4.png",
+      "sha256": "ec42d1788ce6c675ef390e97408534b3abfd37990eada97b2012007957850c29",
+      "bytes": 3690,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_05.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c5.png",
+      "sha256": "d32b15f1c0f2d6a7f2cfeef6f0eeae4b1318cc72c1797ec6320d0d788e38e089",
+      "bytes": 3594,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_06.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c6.png",
+      "sha256": "17ccc3f1fec2728c98f50d1a57f6496d0bfe5d7aafff5ba951ac53c1179707c8",
+      "bytes": 3676,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/face/face_07.png",
+      "source_path": "source-library://Characters/Character Creator/face/face_c7.png",
+      "sha256": "5b281e6b567919f003e3b60cdbfc1e33a4b155d384cb61e3e2cc6d70dc1e986d",
+      "bytes": 3666,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/hair/hair_f1_bot.png",
+      "source_path": "source-library://Characters/Character Creator/hair/f1/f1_bot/f1_c1_bot.png",
+      "sha256": "674f5acea8eff11bc0e86e557331be4382a8f41865286003bd6db5d845c43b09",
+      "bytes": 10984,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/hair/hair_f1_top.png",
+      "source_path": "source-library://Characters/Character Creator/hair/f1/f1_top/f1_c1_top.png",
+      "sha256": "8c662320057ef88c32adfde3376e219d108fb956697d40aa8554fffcd7908580",
+      "bytes": 13116,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/hair/hair_f2_bot.png",
+      "source_path": "source-library://Characters/Character Creator/hair/f2/f2_bot/f2_c1_bot.png",
+      "sha256": "1c034330a366a739b102bae188c59629517b8fbfc8ff73a346db2277758a1899",
+      "bytes": 21234,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/hair/hair_f2_top.png",
+      "source_path": "source-library://Characters/Character Creator/hair/f2/f2_top/f2_c1_top.png",
+      "sha256": "6dd5b2ff6ceb9a1f347236ebc5616b0e8e9b335cef5c881d93b7722daf83b531",
+      "bytes": 19958,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/hair/hair_m1_bot.png",
+      "source_path": "source-library://Characters/Character Creator/hair/m1/m1_bot/m1_c1_bot.png",
+      "sha256": "e46a67d949ffb7b3bd3f776f0166566e95c9e3643b2dc689e24b85c309edc789",
+      "bytes": 15516,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/hair/hair_m1_top.png",
+      "source_path": "source-library://Characters/Character Creator/hair/m1/m1_top/m1_c1_top.png",
+      "sha256": "d2f161d276f57a23489b9680ebc8caa437e06790d515e56d4297f71d849e47d7",
+      "bytes": 3130,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/skin/skin_01.png",
+      "source_path": "source-library://Characters/Character Creator/skin/skin_c1.png",
+      "sha256": "ee9b6de16db9567eaa1b8db1f8065c7ee7b6dee675d93b9d5aea8b372cdbe0b9",
+      "bytes": 21100,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/skin/skin_02.png",
+      "source_path": "source-library://Characters/Character Creator/skin/skin_c2.png",
+      "sha256": "b9b36ab03719d0dc8bef7d3aa2def648c44c04c3a030e667334326f735c48b96",
+      "bytes": 22752,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/skin/skin_03.png",
+      "source_path": "source-library://Characters/Character Creator/skin/skin_c3.png",
+      "sha256": "99b3e9ff10375d8e7592f3956206b233166b45e72e00fb0871ac826426d4c288",
+      "bytes": 22224,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/skin/skin_04.png",
+      "source_path": "source-library://Characters/Character Creator/skin/skin_c4.png",
+      "sha256": "3080218decbab57dbe0843449f0e80e291a67fe24a05f3dec1ed3ae39ce11680",
+      "bytes": 21965,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/skin/skin_05.png",
+      "source_path": "source-library://Characters/Character Creator/skin/skin_c5.png",
+      "sha256": "667bff1165c795744d14dfa5504bcb7a5d44f8a54e0b419fa935ebaecc5a70b6",
+      "bytes": 22403,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/skin/skin_06.png",
+      "source_path": "source-library://Characters/Character Creator/skin/skin_c6.png",
+      "sha256": "152f87cfd804c9a2e3c2937a05d5eb1c0c9ffe1d329937b43c3f55bc92b12980",
+      "bytes": 21932,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_1_bot.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon1/weapon1_bot/weapon1_bot.png",
+      "sha256": "ce0257bb24c14c8069dd4fdf3808ac9bd3f734074c29b929be6a08a61685689f",
+      "bytes": 2415,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_1_top.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon1/weapon1_top/weapon1_top.png",
+      "sha256": "68136b782552aa755c11b1d3c2e243ab170b405ed277121d66ee303bf62218dd",
+      "bytes": 16086,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_2_bot.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon2/weapon2_bot/weapon2_bot.png",
+      "sha256": "42cd9d1d86f2ac562772638434fcf5fb45bfef899e501a08295a4a1e3df36997",
+      "bytes": 2677,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_2_top.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon2/weapon2_top/weapon2_top.png",
+      "sha256": "c1d4ce00f1b57a6b621c821d8a2e65844e3cbf4795f1c72aa6e678b92d3f1c40",
+      "bytes": 21202,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_3_bot.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon3/weapon3_bot/weapon3_bot.png",
+      "sha256": "017ce62ad707683dca06f2a20673b7a9745c33db77e993c7234030c5a1c4508c",
+      "bytes": 2396,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_3_top.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon3/weapon3_top/weapon3_top.png",
+      "sha256": "edc1acd51499dc2ec4712f30d8d35ca68ab07622048f1fb0a54cf7fb738187f3",
+      "bytes": 13532,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_4_bot.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon4/weapon4_bot/weapon4_bot.png",
+      "sha256": "84aece545f6747f13a7f6f3ca73efded431592fdc5dc8d92ff0252d538f1549a",
+      "bytes": 4222,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_4_top.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon4/weapon4_top/weapon4_top.png",
+      "sha256": "344001e760e828ea3cda4bc3ff46f59e57276036a3c4b051fcf18a6942d5961b",
+      "bytes": 17576,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_bot.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon5/weapon5_bot/weapon5_c1_bot.png",
+      "sha256": "3f33a1e855e8beaaf8ad47e495482557c66fcb2e1782586014d1c79f405df6e3",
+      "bytes": 3179,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_top.png",
+      "source_path": "source-library://Characters/Character Creator/weapon/weapon5/weapon5_top/weapon5_c1_top.png",
+      "sha256": "223a460f9912cee04efc76344491841ddc32419a137462933d723ea4c674b0ac",
+      "bytes": 14948,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
+      "sha256": "d31e0f25979b0e618f8967ae95733c4586e62c573fa6a31a7be5d5cdd1b074f0",
+      "bytes": 2907,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
+      "sha256": "5f864043698b0ace8bb66600c2a4d077cd5b6cba2e45bae6e0b6cb0912c0dbaf",
+      "bytes": 8200,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
+      "sha256": "75f499df4a9e93da4832ea8ebf56702717d793d8034f9d4592162819b8df5b83",
+      "bytes": 14884,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
+      "sha256": "51f009878f5ef88ec4459d6cb03bd0ccb45b9ca91ca69b09b9b1dbec1104b626",
+      "bytes": 2269,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
+      "sha256": "ff444823bd55efec4122f15d311b07ffe10adc3a8c8657d50c29edd19a2788ae",
+      "bytes": 4510,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Generated/communication_spire_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/communication-spire",
+      "sha256": "c9f401c44228625aed9f88606c3f0f2cce5222b6e7ed32f883c53a15d1ac8028",
+      "bytes": 2046554,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Generated/executive_helipad_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/executive-helipad",
+      "sha256": "aec63e50b239eb7134d202d133ad54630988f21cf1ad386a1e1768dad46890ca",
+      "bytes": 1809561,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Generated/skybridge_junction_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/skybridge-junction",
+      "sha256": "1063a364b9987735bd1a97d5c7762a6479a776e230a6006a45c63373c6cd44e0",
+      "bytes": 2006811,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops 2/Environment/tileset.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Rooftops 2/Environment/tileset.png",
+      "sha256": "280ba562ff7fbd7e478ddcea34e7da143db1eb5c8dd5e2e80a5493da02ec6b9d",
+      "bytes": 10314,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops/Terrain/Terrain.png",
+      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Rooftops/Terrain/Terrain.png",
+      "sha256": "eddb896f9d39e68cd23f36c02428754785d576a56d35f346aede87322c5f1797",
+      "bytes": 65338,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/assembly_engine_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/assembly-engine",
+      "sha256": "e5a097e234e9a37a8dcf241cc75190fca820da2cd369083e5517a63fcc29fa6e",
+      "bytes": 2335774,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/mega_robot_factory_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/mega-robot-factory",
+      "sha256": "eda76e9639fa4834732662e59a432dc77e1e30c9bf860dd2f0c1329e80d877f3",
+      "bytes": 1808115,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/robotic_maintenance_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/robotic-maintenance",
+      "sha256": "87dc755450ea4a60cd751c5fdb40a9571c03809ece2d45f3b3af088c16db4b8c",
+      "bytes": 2168673,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/smelting_core_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/smelting-core",
+      "sha256": "80c07454b39ea731513f12103863f0759b5aa7e4d887c5bf25ebf6e24507bc04",
+      "bytes": 2169757,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
+      "source_path": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
+      "sha256": "c3c7bb4e7a9f6d6f3e9ec428ef48d8167a82ee9b931ea8883b6c0d077183faec",
+      "bytes": 27899,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
+      "source_path": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
+      "sha256": "229d71d2fd80087aacbcacad7a152d089dca45386dd887fcb25641e111120966",
+      "bytes": 33254,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/bio_tech_labs_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/bio-tech-labs",
+      "sha256": "702fe64200d7e378b7aea2dec5e8c5bab8d46c4e448b5e3c4714aac353fc3826",
+      "bytes": 2438321,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/lunar_surface_arrival_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/lunar-surface-arrival",
+      "sha256": "ca0d0260bcc46cccfb2498ed1f22def4092e3175c43c48059c8182aed4c9b713",
+      "bytes": 2479969,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/orbital_command_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/orbital-command",
+      "sha256": "be430d17cf2fc3385d079724a315f02148916763b5287c08e2f7ac03666da4ab",
+      "bytes": 1965812,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/research_cleanrooms_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/research-cleanrooms",
+      "sha256": "584a272690fae12b5f82b86b5ed3661f5e02e477523670c60312bb7fd9cd604c",
+      "bytes": 1708412,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/security_grid_shaft_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/security-grid-shaft",
+      "sha256": "4e1006c7ac70c4c1189c022511ac50c1dd290f875479b7f5c92017f180594873",
+      "bytes": 2297177,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (1).png",
+      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Backgroud/backgroud (1).png",
+      "sha256": "b02e2abd141ef54055ada5d151dc41707a62488b0668a3ee19ced8aa91a048b9",
+      "bytes": 30010,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (2).png",
+      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Backgroud/backgroud (2).png",
+      "sha256": "216879526f07159dbc7a20b7a0f87e6dfcb90f877131d1bd831ffa1517c9dddc",
+      "bytes": 63817,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (3).png",
+      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Backgroud/backgroud (3).png",
+      "sha256": "f2ed7e189ffecea8edf10a477f743d38479b1f72422632b657e1227cd6bc980a",
+      "bytes": 47258,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (4).png",
+      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Backgroud/backgroud (4).png",
+      "sha256": "b60098c71b1164ef9b56e931c64a7e672d49c90de4d99529d853f04af09bcf21",
+      "bytes": 19334,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
+      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
+      "sha256": "84729eb62d2a866c52d1b0ec291be6ddf627cfe056a62e8b7b52590e7ed127a3",
+      "bytes": 127000,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
+      "sha256": "9c897be01e01cb5468260d7ce13b7ad70778e0fe67c49e53fd9595abf51eaa82",
+      "bytes": 38233,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png",
+      "sha256": "9822dfeb94df03f1c1ad244875ba185288ea235f828d92de1e28828ffa677940",
+      "bytes": 21133,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png",
+      "sha256": "f70c77f4c7de910ebf1b0dfb3c3c3d0694fc16ce5f0b6ca93e6340e848430d86",
+      "bytes": 33380,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
+      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
+      "sha256": "bdc4424b1d9e97b18593ff001a19f69e25b675e7f43cfd9ba61ad87153776ef5",
+      "bytes": 122844,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/abyssal_sanctuary_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/abyssal-sanctuary",
+      "sha256": "bb5da2bfd3c8fe31688d57f7cd7a25e9d503824b91399aed09618d61d4942033",
+      "bytes": 1824401,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/bio_mechanical_nest_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/bio-mechanical-nest",
+      "sha256": "5d70c61c1c6646bc213ec5649e68ba1b20bce585d6e687d1a375079f7d903d5e",
+      "bytes": 2237076,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/corrupted_outpost_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/corrupted-outpost",
+      "sha256": "d089d1af4ef654af54dfe4bb4f1e32969b9d34c4633089de2dbe72e4b45f616a",
+      "bytes": 2180239,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/heart_of_the_void_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/heart-of-the-void",
+      "sha256": "08ffde34b895480b562d9b245dbe61db82a9fe8281994b2b5723080a8db57d88",
+      "bytes": 2350894,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/the_dark_chasm_panorama_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/the-dark-chasm",
+      "sha256": "c73a5381bcb4744341d9537e4b82941f67ea232c3b6910669e7491014ae8c3ce",
+      "bytes": 1951699,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
@@ -959,76 +1659,6 @@
       "source_path": "res://Parallax/SourceArt/Rooftops 2/middle.png",
       "sha256": "6d55df21301ade991e514c49ec4d63c3975d7e18bd72e4a4ffc12edb15c61be1",
       "bytes": 2393,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/brass1.mp3",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/brass1.mp3",
-      "sha256": "b3133ef17d7afa5389f83369810c4d677b9c6088fcddd0b5202a6a30b752024b",
-      "bytes": 149490,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Clang3.ogg",
-      "sha256": "5d82c6c6ddfed49ce4598c1f93a83926effcb8807fc03a3bc7f58fe27299f0a7",
-      "bytes": 9568,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Shell Explosion_1.ogg",
-      "sha256": "bb8568f84710f5243872ab697ca2eac2ed2324cc4ddbaede32bf6920ccb5912b",
-      "bytes": 41638,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Snap_3.ogg",
-      "sha256": "a71f4c2485747263f105643341615e952b1d5574b87b07d276339ec52b6f96bb",
-      "bytes": 10405,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/sucess1.mp3",
-      "sha256": "55844887cc3185051953d9d1acd19424aa054509cf054e7d3fb3405e19798923",
-      "bytes": 76347,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Thudd2.ogg",
-      "sha256": "6a883ecdc07688cd0dd490b940e8b629cae7e590ed7f956684cab12f29b4f11d",
-      "bytes": 27060,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Transition.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Transition.ogg",
-      "sha256": "27a360a578a0fc5e47452da3475c47059d6ad4246e2c69ac2a30cb25d0a8c74e",
-      "bytes": 74408,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
-      "sha256": "84f955481dabf0c9187abaddb17f74a3f8adbde3e5a6012bef16cebedcfe3a5a",
-      "bytes": 42120,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Woosh_1.ogg",
-      "sha256": "8601eee453d8b2408694a488f6babddbc25694aa57fc5e725ec0371bc6be03e2",
-      "bytes": 10118,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
-      "source_path": "res://SFX/Library/FREE Retro Action Platformer Sound Effects/Woosh_4.ogg",
-      "sha256": "93ae50f49d6e0cb74e753a1834b7414e0d040d163a7e97189f7d3de3bfda58a6",
-      "bytes": 7935,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
@@ -1130,6 +1760,258 @@
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
+      "runtime_path": "res://assets/runtime/props/districts/abyssal_sanctuary/phase_reliquary.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (381).png",
+      "sha256": "cf3531ae2500adaa57c3e56d7e9df1539bd118770f14819ed3494e49fb4e3e75",
+      "bytes": 4451,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/abyssal_sanctuary/sentinel_idol.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (396).png",
+      "sha256": "1a6d9816e347e9b51deac855c49d4f489562863879e15a2e64fb6f697c3163d8",
+      "bytes": 3472,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/assembly_engine/cable_core.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(269).png",
+      "sha256": "c8c42e704838cde0db0f7bf9bbf5391546f8fab01f2d53ae8bd98e1c77538f25",
+      "bytes": 1698,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/assembly_engine/control_chip.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(494).png",
+      "sha256": "268cbe04e2e97042902fb98b990b7760636ff52ece52de605cfdd492d22ba1e3",
+      "bytes": 1891,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/bio_mechanical_nest/brood_cluster.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (377).png",
+      "sha256": "af0d82958019b7151f87e28afd0475d496a87a2abd1a1a42012837bc1967e8f3",
+      "bytes": 4924,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/bio_mechanical_nest/neural_mass.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (384).png",
+      "sha256": "9e375543b3b6581373e0e9addfb4f3d0c051205ca3a0cfc1f6d72178aa80f1e0",
+      "bytes": 4828,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/bio_tech_labs/culture_crystal.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(451).png",
+      "sha256": "c771196041c7dffc54c427231a5dcc300dda8b65c8d367dd657f3344b103960a",
+      "bytes": 2506,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/bio_tech_labs/egg_cluster.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (382).png",
+      "sha256": "8ad370d5957dfcdba7d628d0bbfae31a583bc1cbdc80d749f76cfba0d88c1707",
+      "bytes": 4923,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/communication_spire/relay_core.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(117).png",
+      "sha256": "fd6f75b8b7cb8472a31d32114677766622884b99484446170891025423c912de",
+      "bytes": 2312,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/communication_spire/service_console.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(134).png",
+      "sha256": "e3f71a5c2d9e0f07b05e9da8b0d03b02611456187684ec2adde16e863674a751",
+      "bytes": 1718,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/conveyor_assembly/conveyor_rack.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(325).png",
+      "sha256": "39c0c9135604396490768f0a76853b1bcd53de7487cfa723abdcb7cfd407682a",
+      "bytes": 3244,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/conveyor_assembly/sorter_crates.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(195).png",
+      "sha256": "d9a567ba078360b5cbec428f1f7a2ee0ac3f19d3dad4cf921db258ee263dfdac",
+      "bytes": 1322,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/corrupted_outpost/corruption_capsule.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (388).png",
+      "sha256": "8c4fead65d58727bc12782ba1f35fbce90a3fbf85900f39ee0863191556ddaf7",
+      "bytes": 4363,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/corrupted_outpost/purifier_crystal.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (390).png",
+      "sha256": "ff73b39b2a771e6590c1cff1437c4d2fedd33ddda7790397e352fc437398d011",
+      "bytes": 6506,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/executive_helipad/landing_obelisk.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (252).png",
+      "sha256": "7632c622b57e2d7a0cb6fbfbc50fe950762a036fbdd248e24c77ae2dbd3d853f",
+      "bytes": 3472,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/executive_helipad/shuttle.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (247).png",
+      "sha256": "bd403c74f26e4a56a59ebc605f9dd380fadddf7edbb797b20aaa71f71736d846",
+      "bytes": 2133,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/heart_of_the_void/core_portal.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (587).png",
+      "sha256": "acc0c9ff10758441a11d752db1014fdef2d5ae0b6f8ab1c17e7f927aaaa89cfa",
+      "bytes": 1114,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/heart_of_the_void/void_orb.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (283).png",
+      "sha256": "1b832df52ac1519eca4c51e076132a6219c8958e89323478ef329c3b6333dcf6",
+      "bytes": 2940,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/lunar_surface_arrival/landing_pod.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (148).png",
+      "sha256": "1efde136187ec60179e4cce8fcd6ef4d7dc5976e505b31f38ff7440b97683e98",
+      "bytes": 5210,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/lunar_surface_arrival/lunar_crystal.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (61).png",
+      "sha256": "64a3327f2f1c2e13522a5dc13ce6dacae75cded327060a6d5f404e887b1b2d7a",
+      "bytes": 7016,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/orbital_command/command_console.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (308).png",
+      "sha256": "a8bca0f7583465a309440455f2cf02bb665fcff6ca801efc4afcda2d684a0ea6",
+      "bytes": 2182,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/orbital_command/telemetry_ring.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(280).png",
+      "sha256": "a7c60715ab055c331eaed73d4f582c981a44ff36a745f46502bb25c603511ef1",
+      "bytes": 1823,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/research_cleanrooms/assay_console.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(449).png",
+      "sha256": "8a34d8cff3c1d652cbe636b02cb336ed628ac3ecfe4a79d7d99ca5ec2a07cf56",
+      "bytes": 2805,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/research_cleanrooms/specimen_rack.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(448).png",
+      "sha256": "bbb8aed39bf8a1789ee28aa3ee605dcbbe2940b6cb98f78e341b22a6ca7d71d5",
+      "bytes": 2047,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/robotic_maintenance/repair_drones.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(597).png",
+      "sha256": "389118f754fd2a133484cb0c5b4274fee62a719084366ee34ffe49ac3c7cfa0b",
+      "bytes": 2234,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/robotic_maintenance/service_bench.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(511).png",
+      "sha256": "567937385fe2485f5dcab19411afeef16a250a8cc298694c2ac4e415e83513e6",
+      "bytes": 1889,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/security_grid_shaft/grid_terminal.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (318).png",
+      "sha256": "e5fcc868172798018133bbbb704b5e5caef523f252ea2b5a4db82b4c7dc04f67",
+      "bytes": 1796,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/security_grid_shaft/security_pod.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (315).png",
+      "sha256": "f8dcd670eb52ff7e84288c0128fd0ed30991eeb8a07b20efc00611a0351473f6",
+      "bytes": 2353,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/skybridge_junction/signal_flare.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(199).png",
+      "sha256": "fc9041b9e3e2ed56adb247fe07b73acca63ca467f948e51460ca4eec08916a38",
+      "bytes": 688,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/skybridge_junction/suspension_arm.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(176).png",
+      "sha256": "3eb59251e5168966b57e2b55a41f602a5819a76d9cf3ef34c0895b6ce8af31c4",
+      "bytes": 2124,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/smelting_core/furnace_canister.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(513).png",
+      "sha256": "e25c4fdac33c4aed062bcab38e701f3b9982b58b06f2c77fbe222eb3a1d865fa",
+      "bytes": 2429,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/smelting_core/slag_drum.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(403).png",
+      "sha256": "0166b1bce10bf1bb7e4e3e015edea7ba65be83c6625eb1486f38161ebbe9d318",
+      "bytes": 1544,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/sub_level_intake/coolant_filter.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(190).png",
+      "sha256": "1a5207c3a00c8e004210382aa0b450a30adc6d8b5a879f6f13cea3896563702f",
+      "bytes": 726,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/sub_level_intake/intake_canister.png",
+      "source_path": "source-library://Stage Props/Cargo, Tech & Laboratory Loot/Loot(137).png",
+      "sha256": "99564c03f12f0734440f2bac1bf1c2ef8f0a81c53ebbcae28b5936841ab94549",
+      "bytes": 1658,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/the_dark_chasm/debris_field.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (295).png",
+      "sha256": "a7ac61b6820cbc13b69d3d49d9e4d92546e7b75340a014ad8aa3927966e72c0d",
+      "bytes": 4911,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/districts/the_dark_chasm/fossil_claw.png",
+      "source_path": "source-library://Stage Props/Space Props/space extra (296).png",
+      "sha256": "f3aae4530291557d914b2eb372f29fb96567c12c574e91c8ea8e641167b44e13",
+      "bytes": 4326,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
       "runtime_path": "res://assets/runtime/props/FactoryProps/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png",
       "source_path": "res://Stage Props/FactoryProps/SourceArt/Mega Robot Factory/CENA COLOR (2)/TILESET/Tileset.png",
       "sha256": "21a80d3481709544ffb390479cfbb63bb53634b40565fae158a0764082e24282",
@@ -1165,6 +2047,90 @@
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/cyber_antenna_perch_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/cyber-antenna-perch",
+      "sha256": "3fac81d4c8bd8d371a75cb8e1cc0ea5e88c43658131534790aec98ba116f7988",
+      "bytes": 75238,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/cyber_antenna_shaft_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/cyber-antenna-shaft",
+      "sha256": "7ab6112cd1b61e7515004fbf783b8360d66965b24e8a02ea16b4b6d271e35019",
+      "bytes": 118578,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/cyber_billboard_gantry_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/cyber-billboard-gantry",
+      "sha256": "85f6214f8aba7d8f920b32ffe6f0507fcdf5b6acbc4c84c149b879a18f244190",
+      "bytes": 213631,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/cyber_elevator_cage_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/cyber-elevator-cage",
+      "sha256": "37090cd2ed06538830d33aab2c5d03927a8e9afe13b8f37af8b5e2db75aed759",
+      "bytes": 210036,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/cyber_rooftop_catwalk_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/cyber-rooftop-catwalk",
+      "sha256": "5f10b62a9b00b734c93c0d56cf75e25d224693bca2c74766ed2a1bab07ac0fbc",
+      "bytes": 116210,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/cyber_skybridge_truss_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/cyber-skybridge-truss",
+      "sha256": "94e14c4af77ed1df592f5da8865b8ff9d2bbc511a659350f3a7b0d86ea61c7f6",
+      "bytes": 111782,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/factory_cargo_lift_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/factory-cargo-lift",
+      "sha256": "d1c190cfc1171f352fc5dc059dc83ea87b737140f2093f4c20facd08b8ce9981",
+      "bytes": 165332,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/factory_conveyor_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/factory-conveyor",
+      "sha256": "32e47fe864d880544f0db088608b3c744ddc65d2f09507540fe818d2c8762c3b",
+      "bytes": 158984,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/factory_crane_runway_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/factory-crane-runway",
+      "sha256": "c12be765ee0b676e04fce00cea43e3c1388bf8781a0d1a879cc1a060fa06cbbe",
+      "bytes": 111681,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/factory_crusher_bay_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/factory-crusher-bay",
+      "sha256": "40cbe5939e4f58122e7cc1ad43e9406a02554a63fc154e7c3e2ed89da79639a0",
+      "bytes": 265132,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/factory_furnace_catwalk_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/factory-furnace-catwalk",
+      "sha256": "87522250ba034db7b297925f88c5c23238e24ab7f6d959c3272800eb23079bdc",
+      "bytes": 201865,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/props/TraversalKits/Generated/factory_maintenance_gantry_v1.png",
+      "source_path": "generated://openai-imagegen/2026-08-05/factory-maintenance-gantry",
+      "sha256": "13a565c9ce80e2beac37da453350c59abe68a78f8f92092c262314943b0fcccf",
+      "bytes": 139786,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
       "runtime_path": "res://assets/runtime/props/VoidProps/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png",
       "source_path": "res://Stage Props/VoidProps/SourceArt/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png",
       "sha256": "dc552d8acad9e309ad730896421e5b271bc50d505fe98a07fbd2a8ed0d317fbd",
@@ -1172,101 +2138,52 @@
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
-      "sha256": "d31e0f25979b0e618f8967ae95733c4586e62c573fa6a31a7be5d5cdd1b074f0",
-      "bytes": 2907,
+      "runtime_path": "res://assets/runtime/ui/icons/unknown.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (1103).png",
+      "sha256": "cf253b9346f2a04fcea16e995a634fb8a7563d12d384e2f62977bab5e4cc60e0",
+      "bytes": 785,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
-      "sha256": "5f864043698b0ace8bb66600c2a4d077cd5b6cba2e45bae6e0b6cb0912c0dbaf",
-      "bytes": 8200,
+      "runtime_path": "res://assets/runtime/ui/icons/weapons/bow.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (169).png",
+      "sha256": "86f8dfef2c625a5e4994563be91c6e0a3d981c5cb2f4642a0377c04ccbf04334",
+      "bytes": 852,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
-      "sha256": "75f499df4a9e93da4832ea8ebf56702717d793d8034f9d4592162819b8df5b83",
-      "bytes": 14884,
+      "runtime_path": "res://assets/runtime/ui/icons/weapons/dagger.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (164).png",
+      "sha256": "c70d411c0f6d6f0406c2dccf4dee5d18e9001ca484ea559db7ffd23f3b73f302",
+      "bytes": 1257,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
-      "sha256": "51f009878f5ef88ec4459d6cb03bd0ccb45b9ca91ca69b09b9b1dbec1104b626",
-      "bytes": 2269,
+      "runtime_path": "res://assets/runtime/ui/icons/weapons/heavy.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (185).png",
+      "sha256": "746a90328116c4dd0321cfe8ac6677a6d7341cd8c86299ec2980ffc5219c94b2",
+      "bytes": 554,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
-      "sha256": "ff444823bd55efec4122f15d311b07ffe10adc3a8c8657d50c29edd19a2788ae",
-      "bytes": 4510,
+      "runtime_path": "res://assets/runtime/ui/icons/weapons/spear.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (197).png",
+      "sha256": "986e7264ff769a70bc61a8bbca8fde7ccd8294dd87e9671d092d21102d22e191",
+      "bytes": 471,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops 2/Environment/tileset.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Rooftops 2/Environment/tileset.png",
-      "sha256": "280ba562ff7fbd7e478ddcea34e7da143db1eb5c8dd5e2e80a5493da02ec6b9d",
-      "bytes": 10314,
+      "runtime_path": "res://assets/runtime/ui/icons/weapons/staff.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (190).png",
+      "sha256": "e5e24c4f0e21b81744731645c5e6815bb699ce23b6a2f070c9f5d43638ab35bf",
+      "bytes": 500,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
-      "runtime_path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops/Terrain/Terrain.png",
-      "source_path": "res://Stages/Act1_CyberCity/SourceArt/Rooftops/Terrain/Terrain.png",
-      "sha256": "eddb896f9d39e68cd23f36c02428754785d576a56d35f346aede87322c5f1797",
-      "bytes": 65338,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
-      "source_path": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
-      "sha256": "c3c7bb4e7a9f6d6f3e9ec428ef48d8167a82ee9b931ea8883b6c0d077183faec",
-      "bytes": 27899,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
-      "source_path": "res://Stages/Act2_RobotFactory/SourceArt/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
-      "sha256": "229d71d2fd80087aacbcacad7a152d089dca45386dd887fcb25641e111120966",
-      "bytes": 33254,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
-      "source_path": "res://Stages/Act3_NeonMoon/SourceArt/Neon Moon Protocol/Trerrain/Terrain 24x24 (1).png",
-      "sha256": "84729eb62d2a866c52d1b0ec291be6ddf627cfe056a62e8b7b52590e7ed127a3",
-      "bytes": 127000,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
-      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
-      "sha256": "9c897be01e01cb5468260d7ce13b7ad70778e0fe67c49e53fd9595abf51eaa82",
-      "bytes": 38233,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png",
-      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (2).png",
-      "sha256": "9822dfeb94df03f1c1ad244875ba185288ea235f828d92de1e28828ffa677940",
-      "bytes": 21133,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png",
-      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (4).png",
-      "sha256": "f70c77f4c7de910ebf1b0dfb3c3c3d0694fc16ce5f0b6ca93e6340e848430d86",
-      "bytes": 33380,
-      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
-    },
-    {
-      "runtime_path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
-      "source_path": "res://Stages/Act4_AbyssalNight/SourceArt/Abyssal Night/Abyssal Night – Color (2)/Trerrain/Terrain 24x24 (1).png",
-      "sha256": "bdc4424b1d9e97b18593ff001a19f69e25b675e7f43cfd9ba61ad87153776ef5",
-      "bytes": 122844,
+      "runtime_path": "res://assets/runtime/ui/icons/weapons/sword.png",
+      "source_path": "source-library://Stage Props/Icons/Icon (173).png",
+      "sha256": "20d9ac35ff67b5dbddfb72034886b652cc13afbb6e146f2c88154575047e4e03",
+      "bytes": 500,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     },
     {
@@ -1275,13 +2192,20 @@
       "sha256": "c4d0ef3eaced73d1f8b371f028e85675e2dfbbd8fdc5eab35a7ac0adccda0344",
       "bytes": 2853,
       "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
+    },
+    {
+      "runtime_path": "res://assets/runtime/weapons/sword/sword_effects.png",
+      "source_path": "source-library://Stage Props/Animated Weapons/Ultimate Weapon Pack – 2D Pixel Art/PNG/Armas (1).png",
+      "sha256": "007c09732d798b4942db745427f71f21d7ecd3f0361dfa0667b88f8bab14fda3",
+      "bytes": 38519,
+      "license": "res://assets/runtime/licenses/LICENSE-0ddffeed82b7.txt"
     }
   ],
   "license_sources": {
-    "LICENSE-b26d3d0797a9.txt": "Characters/Enemies/SourceArt/Stone Golem 2D Pixel Art v1.2/new version/License.txt",
-    "LICENSE-252e74b6a90a.txt": "Characters/Enemies/SourceArt/Witch/License.txt",
+    "LICENSE-b26d3d0797a9.txt": "Characters/Enemies/SourceArt/Centaur 2D Pixel Art v1.2/New Version/License.txt",
+    "LICENSE-252e74b6a90a.txt": "Characters/Enemies/SourceArt/Demon Boss 2D Pixel Art/License.txt",
     "LICENSE-6799bb902d83.txt": "Characters/Enemies/SourceArt/Mimic 2D Pixel Art v1.2/New Version/License.txt",
     "LICENSE-a9c85bdb4b11.txt": "Characters/Enemies/SourceArt/Minotaur 2D Pixel Art v1.1/License.txt",
-    "LICENSE-0ddffeed82b7.txt": "VFX/SourceArt/Pack 6/license.txt"
+    "LICENSE-0ddffeed82b7.txt": "Characters/Player/SourceArt/Female Fighter/license.txt"
   }
 }

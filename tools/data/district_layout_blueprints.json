@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "description": "Authored spatial rhythms for the connected-world expansion. Anchors are [x, y, width] platform silhouettes; the expansion tool turns each district profile into role-specific, reviewable room geometry.",
+  "profiles": {
+    "rooftop_alley": {
+      "spatial_rhythm": "close rooftop steps opening into a broadcast overlook",
+      "landmark": "pirate antenna crown",
+      "anchors": [[100, 420, 150], [300, 360, 140], [520, 300, 150], [755, 380, 130]],
+      "gap_center": 470
+    },
+    "billboard_highway": {
+      "spatial_rhythm": "long lateral lanes broken by shallow advertising-rail rises",
+      "landmark": "suspended holographic billboard gantry",
+      "anchors": [[90, 415, 180], [320, 360, 125], [535, 405, 145], [760, 330, 145]],
+      "gap_center": 455
+    },
+    "communication_spire": {
+      "spatial_rhythm": "tight central ascent with alternating relay shelves",
+      "landmark": "storm-lit transmission mast",
+      "anchors": [[120, 430, 150], [330, 350, 135], [520, 270, 125], [710, 190, 155]],
+      "gap_center": 500
+    },
+    "skybridge_junction": {
+      "spatial_rhythm": "broad wind gaps linked by staggered suspended decks",
+      "landmark": "fractured transit exchange",
+      "anchors": [[90, 390, 165], [310, 330, 130], [535, 390, 145], [760, 315, 125]],
+      "gap_center": 475
+    },
+    "executive_helipad": {
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais",
+      "anchors": [[115, 420, 180], [365, 370, 150], [590, 315, 140], [775, 390, 120]],
+      "gap_center": 520
+    },
+    "sub_level_intake": {
+      "spatial_rhythm": "descending service shelves pressed between intake channels",
+      "landmark": "pressure-lock turbine mouth",
+      "anchors": [[95, 425, 165], [300, 385, 160], [545, 335, 135], [760, 400, 145]],
+      "gap_center": 430
+    },
+    "conveyor_assembly": {
+      "spatial_rhythm": "low horizontal sorting lanes with abrupt counterflow changes",
+      "landmark": "overhead parcel sorting spine",
+      "anchors": [[90, 420, 175], [300, 420, 145], [520, 380, 155], [745, 420, 150]],
+      "gap_center": 485
+    },
+    "smelting_core": {
+      "spatial_rhythm": "compact cool islands climbing around an open furnace throat",
+      "landmark": "white-hot smelting crucible",
+      "anchors": [[95, 430, 155], [310, 355, 135], [530, 290, 125], [745, 365, 145]],
+      "gap_center": 510
+    },
+    "robotic_maintenance": {
+      "spatial_rhythm": "alternating service pockets beneath descending repair machinery",
+      "landmark": "memory-scrubber service rack",
+      "anchors": [[110, 410, 145], [325, 330, 155], [550, 410, 135], [760, 320, 140]],
+      "gap_center": 445
+    },
+    "assembly_engine": {
+      "spatial_rhythm": "steady piston-step ascent toward the engine ignition lock",
+      "landmark": "colossus assembly flywheel",
+      "anchors": [[100, 425, 170], [310, 380, 145], [540, 330, 135], [760, 285, 130]],
+      "gap_center": 530
+    },
+    "lunar_surface_arrival": {
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander",
+      "anchors": [[80, 430, 190], [320, 365, 150], [555, 320, 160], [780, 390, 125]],
+      "gap_center": 460
+    },
+    "research_cleanrooms": {
+      "spatial_rhythm": "sterile switchbacks threading transparent containment cells",
+      "landmark": "sealed specimen observation tank",
+      "anchors": [[110, 420, 150], [350, 335, 130], [570, 410, 145], [760, 300, 135]],
+      "gap_center": 505
+    },
+    "security_grid_shaft": {
+      "spatial_rhythm": "narrow vertical climb through offset security apertures",
+      "landmark": "polarized grid elevator core",
+      "anchors": [[150, 430, 145], [350, 345, 130], [535, 255, 125], [700, 165, 150]],
+      "gap_center": 470
+    },
+    "bio_tech_labs": {
+      "spatial_rhythm": "orbiting ledges around suspended culture vessels",
+      "landmark": "breached hybrid incubation vat",
+      "anchors": [[115, 400, 155], [320, 300, 130], [540, 230, 145], [750, 350, 150]],
+      "gap_center": 540
+    },
+    "orbital_command": {
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe",
+      "anchors": [[95, 390, 160], [315, 300, 140], [545, 300, 140], [765, 390, 145]],
+      "gap_center": 480
+    },
+    "corrupted_outpost": {
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower",
+      "anchors": [[85, 420, 165], [290, 350, 135], [505, 410, 145], [735, 325, 150]],
+      "gap_center": 425
+    },
+    "the_dark_chasm": {
+      "spatial_rhythm": "blind descending ledges that resolve into a deep return shelf",
+      "landmark": "fossil lift suspended over the chasm",
+      "anchors": [[120, 250, 145], [335, 330, 135], [550, 405, 150], [760, 455, 140]],
+      "gap_center": 515
+    },
+    "bio_mechanical_nest": {
+      "spatial_rhythm": "contracting sinew bridges wrapped around a pulsing central chamber",
+      "landmark": "living hatchery membrane",
+      "anchors": [[100, 420, 155], [300, 360, 135], [500, 285, 150], [720, 360, 165]],
+      "gap_center": 450
+    },
+    "abyssal_sanctuary": {
+      "spatial_rhythm": "ceremonial mirrored steps interrupted by gravity reversals",
+      "landmark": "null-energy reliquary",
+      "anchors": [[85, 405, 160], [300, 325, 140], [535, 325, 140], [765, 405, 150]],
+      "gap_center": 495
+    },
+    "heart_of_the_void": {
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart",
+      "anchors": [[100, 430, 155], [300, 345, 135], [480, 255, 155], [680, 345, 135]],
+      "gap_center": 465
+    }
+  }
+}

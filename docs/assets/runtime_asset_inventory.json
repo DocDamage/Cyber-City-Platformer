@@ -823,6 +823,22 @@
       ]
     },
     {
+      "path": "res://assets/runtime/audio/music",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 27,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://assets/runtime/audio/music/Boss Battles/Loops/Ogg/1. Abyssal Tyrant (Loop).ogg",
       "distribution": "Present and tracked",
       "requirement": "Optional",
@@ -833,7 +849,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 40,
+          "line": 49,
           "hard": false
         }
       ]
@@ -849,7 +865,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 41,
+          "line": 50,
           "hard": false
         }
       ]
@@ -865,7 +881,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 42,
+          "line": 51,
           "hard": false
         }
       ]
@@ -881,12 +897,12 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 37,
+          "line": 46,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 43,
+          "line": 52,
           "hard": false
         },
         {
@@ -943,27 +959,27 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 35,
+          "line": 44,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 41,
+          "line": 39,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 41,
+          "line": 39,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 41,
+          "line": 39,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 43,
+          "line": 41,
           "hard": false
         }
       ]
@@ -979,7 +995,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 34,
+          "line": 43,
           "hard": false
         },
         {
@@ -989,17 +1005,17 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 44,
-          "hard": false
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
           "line": 42,
           "hard": false
         },
         {
+          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
+          "line": 40,
+          "hard": false
+        },
+        {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 44,
+          "line": 42,
           "hard": false
         }
       ]
@@ -1031,7 +1047,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 36,
+          "line": 45,
           "hard": false
         },
         {
@@ -1062,6 +1078,22 @@
       ]
     },
     {
+      "path": "res://assets/runtime/audio/sfx",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 28,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/brass1.mp3",
       "distribution": "Present and tracked",
       "requirement": "Optional",
@@ -1072,7 +1104,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 27,
+          "line": 36,
           "hard": false
         }
       ]
@@ -1088,17 +1120,17 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 23,
+          "line": 32,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 26,
+          "line": 35,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 29,
+          "line": 38,
           "hard": false
         }
       ]
@@ -1114,7 +1146,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 17,
+          "line": 26,
           "hard": false
         }
       ]
@@ -1130,17 +1162,17 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 19,
-          "hard": false
-        },
-        {
-          "source": "scripts/AudioManager.gd",
-          "line": 21,
-          "hard": false
-        },
-        {
-          "source": "scripts/AudioManager.gd",
           "line": 28,
+          "hard": false
+        },
+        {
+          "source": "scripts/AudioManager.gd",
+          "line": 30,
+          "hard": false
+        },
+        {
+          "source": "scripts/AudioManager.gd",
+          "line": 37,
           "hard": false
         }
       ]
@@ -1156,12 +1188,12 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 24,
+          "line": 33,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 30,
+          "line": 39,
           "hard": false
         }
       ]
@@ -1177,12 +1209,12 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 18,
+          "line": 27,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 22,
+          "line": 31,
           "hard": false
         }
       ]
@@ -1198,12 +1230,12 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 25,
+          "line": 34,
           "hard": false
         },
         {
           "source": "scripts/AudioManager.gd",
-          "line": 31,
+          "line": 40,
           "hard": false
         }
       ]
@@ -1219,7 +1251,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 15,
+          "line": 24,
           "hard": false
         }
       ]
@@ -1235,7 +1267,7 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
-          "line": 16,
+          "line": 25,
           "hard": false
         }
       ]
@@ -1251,7 +1283,343 @@
       "references": [
         {
           "source": "scripts/AudioManager.gd",
+          "line": 29,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_01/confirmation_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_01/damage_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 15,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_01/greeting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_01/grunting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 16,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_02/confirmation_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 19,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_02/damage_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 21,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_02/greeting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
           "line": 20,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_02/grunting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 22,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_03/confirmation_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 25,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_03/damage_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 27,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_03/greeting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 26,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_03/grunting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 28,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_04/confirmation_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 31,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_04/damage_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 33,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_04/greeting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 32,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_04/grunting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 34,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_05/confirmation_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 37,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_05/damage_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 39,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_05/greeting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 38,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/audio/voices/voice_05/grunting_01.wav",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/voice_profiles.json",
+          "line": 40,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 25,
           "hard": false
         }
       ]
@@ -1363,7 +1731,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 47,
+          "line": 139,
           "hard": false
         }
       ]
@@ -1459,7 +1827,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 77,
+          "line": 261,
           "hard": false
         }
       ]
@@ -1571,7 +1939,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 137,
+          "line": 506,
           "hard": false
         }
       ]
@@ -1683,7 +2051,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 165,
+          "line": 627,
           "hard": false
         }
       ]
@@ -1763,7 +2131,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 195,
+          "line": 751,
           "hard": false
         }
       ]
@@ -1875,7 +2243,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 225,
+          "line": 875,
           "hard": false
         }
       ]
@@ -1987,7 +2355,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 255,
+          "line": 998,
           "hard": false
         }
       ]
@@ -2099,7 +2467,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 284,
+          "line": 1120,
           "hard": false
         }
       ]
@@ -2195,7 +2563,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 313,
+          "line": 1243,
           "hard": false
         }
       ]
@@ -2291,7 +2659,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 342,
+          "line": 1364,
           "hard": false
         }
       ]
@@ -2387,7 +2755,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 372,
+          "line": 1487,
           "hard": false
         }
       ]
@@ -2499,7 +2867,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 402,
+          "line": 1609,
           "hard": false
         }
       ]
@@ -2611,7 +2979,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 432,
+          "line": 1732,
           "hard": false
         }
       ]
@@ -2723,7 +3091,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 461,
+          "line": 1853,
           "hard": false
         }
       ]
@@ -2819,7 +3187,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 490,
+          "line": 1975,
           "hard": false
         }
       ]
@@ -2915,7 +3283,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 520,
+          "line": 2097,
           "hard": false
         }
       ]
@@ -3027,12 +3395,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 107,
+          "line": 384,
           "hard": false
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 550,
+          "line": 2221,
           "hard": false
         }
       ]
@@ -3174,7 +3542,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 579,
+          "line": 2343,
           "hard": false
         }
       ]
@@ -3270,7 +3638,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 611,
+          "line": 2469,
           "hard": false
         }
       ]
@@ -3414,7 +3782,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 641,
+          "line": 2592,
           "hard": false
         }
       ]
@@ -3532,6 +3900,781 @@
       ]
     },
     {
+      "path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 44,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 49,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/clothing/cloth_1_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 44,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 49,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 45,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 50,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/clothing/cloth_2_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 45,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 50,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 46,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 51,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/clothing/cloth_3_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 46,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 51,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_01.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 20,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_02.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 21,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_03.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 22,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_04.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 23,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_05.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 24,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_06.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 25,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/face/face_07.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 26,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/hair/hair_f1_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 29,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/hair/hair_f1_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 29,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/hair/hair_f2_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 30,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/hair/hair_f2_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 30,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/hair/hair_m1_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 31,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/hair/hair_m1_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 31,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/skin/skin_01.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 12,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/skin/skin_02.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/skin/skin_03.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/skin/skin_04.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 15,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/skin/skin_05.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 16,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/skin/skin_06.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 17,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_1_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 66,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_1_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 66,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_2_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 67,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_2_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 67,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_3_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 68,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_3_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 68,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_4_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 69,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_4_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 69,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_bot.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 70,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 71,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/characters/player_creator/weapons/weapon_5_top.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 70,
+          "hard": false
+        },
+        {
+          "source": "data/characters/creator_catalog.json",
+          "line": 71,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 26,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/WorldContentAuditTest.gd",
+          "line": 303,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (1)/Backgroud (1) 1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 15,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (2)/Backgroud (2) 1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (3)/Backgroud (3) 1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (5)/Backgroud (5) 1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 12,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Cyber City/Cyber City/Backgroud/BACKGROUND (6)/Backgroud (6) 1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 11,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Generated/communication_spire_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 9,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Generated/executive_helipad_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 11,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act1_CyberCity/Generated/skybridge_junction_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 10,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://assets/runtime/environments/Act1_CyberCity/Rooftops 2/Environment/tileset.png",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -3543,6 +4686,11 @@
         {
           "source": "scripts/tools/StageTileSetBuilder.gd",
           "line": 7,
+          "hard": false
+        },
+        {
+          "source": "scripts/world/TerrainPlatform.gd",
+          "line": 6,
           "hard": false
         },
         {
@@ -3574,6 +4722,111 @@
       ]
     },
     {
+      "path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/assembly_engine_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 16,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/mega_robot_factory_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 12,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/robotic_maintenance_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 15,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act2_RobotFactory/Generated/smelting_core_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 18,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://assets/runtime/environments/Act2_RobotFactory/Mega Robot Factory/CENA (!)/TILESET/Tileset.png",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -3593,9 +4846,183 @@
           "hard": false
         },
         {
+          "source": "scripts/world/TerrainPlatform.gd",
+          "line": 15,
+          "hard": false
+        },
+        {
           "source": "Stages/TileSets/Act2_RobotFactory_Palette.tres",
           "line": 3,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/bio_tech_labs_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 12,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/lunar_surface_arrival_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 9,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/orbital_command_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/research_cleanrooms_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 10,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Generated/security_grid_shaft_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 11,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (1).png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 21,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (2).png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 22,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (3).png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 23,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act3_NeonMoon/Neon Moon Protocol/Backgroud/backgroud (4).png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 24,
+          "hard": false
         }
       ]
     },
@@ -3614,6 +5041,11 @@
           "hard": false
         },
         {
+          "source": "scripts/world/TerrainPlatform.gd",
+          "line": 24,
+          "hard": false
+        },
+        {
           "source": "Stages/TileSets/Act3_NeonMoon_Palette.tres",
           "line": 3,
           "hard": true
@@ -3623,36 +5055,16 @@
     {
       "path": "res://assets/runtime/environments/Act4_AbyssalNight/Abyssal Night/Abyssal Night – Color (2)/Backgroud/backgroud (1).png",
       "distribution": "Present and tracked",
-      "requirement": "Runtime-critical",
+      "requirement": "Optional",
       "present": true,
       "tracked": true,
       "ignored": false,
-      "hard_reference": true,
+      "hard_reference": false,
       "references": [
         {
-          "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
-          "line": 4,
-          "hard": true
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 27,
+          "hard": false
         }
       ]
     },
@@ -3665,6 +5077,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 28,
+          "hard": false
+        },
         {
           "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
           "line": 5,
@@ -3701,6 +5118,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 29,
+          "hard": false
+        },
         {
           "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
           "line": 6,
@@ -3743,6 +5165,11 @@
           "hard": false
         },
         {
+          "source": "scripts/world/TerrainPlatform.gd",
+          "line": 33,
+          "hard": false
+        },
+        {
           "source": "Stages/TileSets/Act4_AbyssalNight_Palette.tres",
           "line": 3,
           "hard": true
@@ -3750,7 +5177,7 @@
       ]
     },
     {
-      "path": "res://assets/runtime/environments/parallax/Moonlight City/Assets/layers/back.png",
+      "path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/abyssal_sanctuary_panorama_v1.png",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
       "present": true,
@@ -3759,29 +5186,98 @@
       "hard_reference": true,
       "references": [
         {
-          "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
+          "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
           "line": 4,
           "hard": true
         },
         {
-          "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 17,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/bio_mechanical_nest_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
           "line": 4,
           "hard": true
         },
         {
-          "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 16,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/corrupted_outpost_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
           "line": 4,
           "hard": true
         },
         {
-          "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/heart_of_the_void_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
           "line": 4,
           "hard": true
         },
         {
-          "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 18,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/environments/Act4_AbyssalNight/Generated/the_dark_chasm_panorama_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
           "line": 4,
           "hard": true
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 15,
+          "hard": false
         }
       ]
     },
@@ -3860,93 +5356,16 @@
     {
       "path": "res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/back.png",
       "distribution": "Present and tracked",
-      "requirement": "Runtime-critical",
+      "requirement": "Optional",
       "present": true,
       "tracked": true,
       "ignored": false,
-      "hard_reference": true,
+      "hard_reference": false,
       "references": [
         {
-          "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 4,
-          "hard": true
-        }
-      ]
-    },
-    {
-      "path": "res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/front.png",
-      "distribution": "Present and tracked",
-      "requirement": "Runtime-critical",
-      "present": true,
-      "tracked": true,
-      "ignored": false,
-      "hard_reference": true,
-      "references": [
-        {
-          "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 6,
-          "hard": true
-        }
-      ]
-    },
-    {
-      "path": "res://assets/runtime/environments/parallax/Neon Alley/Assets/layers/middle.png",
-      "distribution": "Present and tracked",
-      "requirement": "Runtime-critical",
-      "present": true,
-      "tracked": true,
-      "ignored": false,
-      "hard_reference": true,
-      "references": [
-        {
-          "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 5,
-          "hard": true
+          "source": "scripts/ui/CharacterCreator.gd",
+          "line": 57,
+          "hard": false
         }
       ]
     },
@@ -3966,26 +5385,11 @@
         },
         {
           "source": "scripts/ui/TitleScreen.gd",
-          "line": 22,
+          "line": 21,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 4,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
           "line": 4,
           "hard": true
         }
@@ -4004,21 +5408,6 @@
           "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
           "line": 6,
           "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 6,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 6,
-          "hard": true
         }
       ]
     },
@@ -4035,21 +5424,38 @@
           "source": "Stages/Act1_CyberCity/1-2_BillboardHighway/Stage.tscn",
           "line": 5,
           "hard": true
-        },
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
         {
-          "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 5,
-          "hard": true
-        },
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 24,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
         {
-          "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 5,
-          "hard": true
-        },
-        {
-          "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 5,
-          "hard": true
+          "source": "scripts/world/DistrictArtCatalog.gd",
+          "line": 93,
+          "hard": false
         }
       ]
     },
@@ -4062,6 +5468,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 18,
+          "hard": false
+        },
         {
           "source": "scenes/Act1_CyberCity/SubStage_1_1.tscn",
           "line": 5,
@@ -4079,17 +5490,17 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         }
       ]
@@ -4103,6 +5514,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 36,
+          "hard": false
+        },
         {
           "source": "scenes/Act1_CyberCity/SubStage_1_1.tscn",
           "line": 7,
@@ -4126,17 +5542,17 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         }
       ]
@@ -4150,6 +5566,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 37,
+          "hard": false
+        },
         {
           "source": "scenes/Act1_CyberCity/SubStage_1_1.tscn",
           "line": 8,
@@ -4166,6 +5587,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 19,
+          "hard": false
+        },
         {
           "source": "scenes/Act1_CyberCity/SubStage_1_1.tscn",
           "line": 6,
@@ -4194,18 +5620,599 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/abyssal_sanctuary/phase_reliquary.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 342,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/abyssal_sanctuary/sentinel_idol.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 343,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/assembly_engine/cable_core.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 180,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/assembly_engine/control_chip.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 181,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/bio_mechanical_nest/brood_cluster.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 324,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/bio_mechanical_nest/neural_mass.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 325,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/bio_tech_labs/culture_crystal.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 253,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/bio_tech_labs/egg_cluster.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 252,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/communication_spire/relay_core.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 54,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/communication_spire/service_console.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 55,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/conveyor_assembly/conveyor_rack.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 127,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/conveyor_assembly/sorter_crates.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 126,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/corrupted_outpost/corruption_capsule.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 288,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/corrupted_outpost/purifier_crystal.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 289,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/executive_helipad/landing_obelisk.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 91,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/executive_helipad/shuttle.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 90,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/heart_of_the_void/core_portal.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 361,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/heart_of_the_void/void_orb.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 360,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/lunar_surface_arrival/landing_pod.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 198,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/lunar_surface_arrival/lunar_crystal.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 199,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/orbital_command/command_console.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 270,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/orbital_command/telemetry_ring.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 271,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/research_cleanrooms/assay_console.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 217,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/research_cleanrooms/specimen_rack.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 216,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/robotic_maintenance/repair_drones.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 163,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/robotic_maintenance/service_bench.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 162,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/security_grid_shaft/grid_terminal.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 235,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/security/InteractiveTerminal.gd",
+          "line": 19,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/security_grid_shaft/security_pod.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 234,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/skybridge_junction/signal_flare.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 73,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/skybridge_junction/suspension_arm.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 72,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/smelting_core/furnace_canister.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 145,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/smelting_core/slag_drum.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 144,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/sub_level_intake/coolant_filter.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 108,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/sub_level_intake/intake_canister.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 109,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/the_dark_chasm/debris_field.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 306,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/districts/the_dark_chasm/fossil_claw.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/district_art_profiles.json",
+          "line": 307,
+          "hard": false
         }
       ]
     },
@@ -4225,22 +6232,22 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 8,
+          "line": 6,
           "hard": true
         }
       ]
@@ -4370,6 +6377,293 @@
       ]
     },
     {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/cyber_antenna_perch_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 171,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 113,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/cyber_antenna_shaft_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 168,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 110,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/cyber_billboard_gantry_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 167,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 109,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/cyber_elevator_cage_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 170,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 112,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/platforms/MovingPlatform.gd",
+          "line": 18,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/platforms/MovingPlatform.gd",
+          "line": 19,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/cyber_rooftop_catwalk_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 166,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 108,
+          "hard": false
+        },
+        {
+          "source": "scripts/world/TerrainPlatform.gd",
+          "line": 49,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/cyber_skybridge_truss_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 169,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 111,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/platforms/BreakawayPlatform.gd",
+          "line": 13,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/platforms/MovingPlatform.gd",
+          "line": 20,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/factory_cargo_lift_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 175,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 117,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/platforms/MovingPlatform.gd",
+          "line": 21,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/factory_conveyor_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 172,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 114,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/factory_crane_runway_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 176,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 118,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/factory_crusher_bay_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 177,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 119,
+          "hard": false
+        },
+        {
+          "source": "scripts/systems/hazards/CrusherHazard.gd",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/factory_furnace_catwalk_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 174,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 116,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/props/TraversalKits/Generated/factory_maintenance_gantry_v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/campaign/AuthoredTraversal.gd",
+          "line": 173,
+          "hard": false
+        },
+        {
+          "source": "scripts/campaign/StageArchitectureDressing.gd",
+          "line": 115,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://assets/runtime/props/VoidProps/Abyssal Night/Abyssal Night – Color (2)/effect/effect 96x96 (3).png",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -4402,6 +6696,574 @@
           "source": "Stages/Act4_AbyssalNight/4-5_HeartOfTheVoid/Stage.tscn",
           "line": 8,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/resource_index.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 22,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/unknown.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/metroidvania/WeaponCatalog.gd",
+          "line": 5,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/weapons/bow.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 82,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 86,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 89,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/weapons/dagger.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 79,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 85,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/weapons/heavy.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 81,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/weapons/spear.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 80,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 87,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 90,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/weapons/staff.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 83,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 84,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 88,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/icons/weapons/sword.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 78,
+          "hard": false
+        },
+        {
+          "source": "data/weapons/weapon_families.json",
+          "line": 91,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-02-ghost-f-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 5,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-02-ghost-f-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 5,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-03-striker-m-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 6,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-03-striker-m-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 6,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-04-oracle-f-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 7,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-04-oracle-f-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 7,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-05-breaker-m-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 8,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-05-breaker-m-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 8,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-06-courier-m-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 9,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-06-courier-m-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 9,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-07-sentinel-m-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 10,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-07-sentinel-m-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 10,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-08-rook-f-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 11,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-08-rook-f-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 11,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-09-nomad-f-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 12,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-09-nomad-f-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 12,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-10-signal-m-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-10-signal-m-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 13,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-11-warden-m-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-11-warden-m-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 14,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-12-rebel-f-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 15,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-12-rebel-f-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 15,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-v1-recolor-mask.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/ui/portraits/runner-portrait-v1.png",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/characters/portrait_catalog.json",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://assets/runtime/vfx",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 29,
+          "hard": false
         }
       ]
     },
@@ -4468,6 +7330,11 @@
       "hard_reference": true,
       "references": [
         {
+          "source": "data/world/rooms/cyber_city_districts.json",
+          "line": 2401,
+          "hard": false
+        },
+        {
           "source": "scripts/AssetRegistrySmokeTest.gd",
           "line": 32,
           "hard": false
@@ -4479,7 +7346,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 22,
+          "line": 20,
           "hard": true
         },
         {
@@ -4499,13 +7366,18 @@
       "hard_reference": true,
       "references": [
         {
+          "source": "data/world/rooms/robot_factory_districts.json",
+          "line": 3323,
+          "hard": false
+        },
+        {
           "source": "scripts/BossSystemsSmokeTest.gd",
           "line": 5,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 20,
+          "line": 18,
           "hard": true
         },
         {
@@ -4524,6 +7396,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "data/world/rooms/neon_moon_districts.json",
+          "line": 3194,
+          "hard": false
+        },
         {
           "source": "scripts/BossSystemsSmokeTest.gd",
           "line": 6,
@@ -4550,6 +7427,11 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "data/world/rooms/abyssal_night_districts.json",
+          "line": 3189,
+          "hard": false
+        },
         {
           "source": "scripts/BossSystemsSmokeTest.gd",
           "line": 7,
@@ -4641,7 +7523,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 46,
+          "line": 138,
           "hard": false
         },
         {
@@ -4662,12 +7544,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 76,
+          "line": 260,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         }
       ]
@@ -4683,7 +7565,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 106,
+          "line": 383,
           "hard": false
         },
         {
@@ -4704,12 +7586,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 136,
+          "line": 505,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         }
       ]
@@ -4725,7 +7607,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 164,
+          "line": 626,
           "hard": false
         },
         {
@@ -4746,12 +7628,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 194,
+          "line": 750,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         }
       ]
@@ -4767,7 +7649,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 224,
+          "line": 874,
           "hard": false
         },
         {
@@ -4777,7 +7659,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         },
         {
@@ -4798,12 +7680,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 254,
+          "line": 997,
           "hard": false
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         }
       ]
@@ -4819,7 +7701,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 283,
+          "line": 1119,
           "hard": false
         },
         {
@@ -4840,7 +7722,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 312,
+          "line": 1242,
           "hard": false
         },
         {
@@ -4861,7 +7743,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 341,
+          "line": 1363,
           "hard": false
         },
         {
@@ -4882,7 +7764,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 371,
+          "line": 1486,
           "hard": false
         },
         {
@@ -4903,7 +7785,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 401,
+          "line": 1608,
           "hard": false
         },
         {
@@ -4924,12 +7806,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 431,
+          "line": 1731,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         }
       ]
@@ -4945,7 +7827,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 460,
+          "line": 1852,
           "hard": false
         },
         {
@@ -4966,12 +7848,12 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 489,
+          "line": 1974,
           "hard": false
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         }
       ]
@@ -4987,7 +7869,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 519,
+          "line": 2096,
           "hard": false
         },
         {
@@ -5008,7 +7890,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 549,
+          "line": 2220,
           "hard": false
         },
         {
@@ -5029,7 +7911,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 578,
+          "line": 2342,
           "hard": false
         },
         {
@@ -5039,7 +7921,7 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 9,
+          "line": 7,
           "hard": true
         }
       ]
@@ -5055,7 +7937,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 610,
+          "line": 2468,
           "hard": false
         },
         {
@@ -5076,7 +7958,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 640,
+          "line": 2591,
           "hard": false
         },
         {
@@ -5149,7 +8031,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 48,
+          "line": 140,
           "hard": false
         },
         {
@@ -5175,7 +8057,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 78,
+          "line": 262,
           "hard": false
         },
         {
@@ -5185,7 +8067,7 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         }
       ]
@@ -5201,7 +8083,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 108,
+          "line": 385,
           "hard": false
         },
         {
@@ -5232,7 +8114,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 138,
+          "line": 507,
           "hard": false
         },
         {
@@ -5242,7 +8124,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         }
       ]
@@ -5258,7 +8140,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 166,
+          "line": 628,
           "hard": false
         },
         {
@@ -5284,7 +8166,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 196,
+          "line": 752,
           "hard": false
         },
         {
@@ -5294,7 +8176,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         }
       ]
@@ -5310,7 +8192,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 226,
+          "line": 876,
           "hard": false
         },
         {
@@ -5320,7 +8202,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         }
       ]
@@ -5336,7 +8218,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 256,
+          "line": 999,
           "hard": false
         },
         {
@@ -5346,7 +8228,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         }
       ]
@@ -5362,7 +8244,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 285,
+          "line": 1121,
           "hard": false
         },
         {
@@ -5388,7 +8270,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 314,
+          "line": 1244,
           "hard": false
         },
         {
@@ -5414,7 +8296,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 343,
+          "line": 1365,
           "hard": false
         },
         {
@@ -5445,7 +8327,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 373,
+          "line": 1488,
           "hard": false
         },
         {
@@ -5471,7 +8353,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 403,
+          "line": 1610,
           "hard": false
         },
         {
@@ -5502,7 +8384,7 @@
         },
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 433,
+          "line": 1733,
           "hard": false
         },
         {
@@ -5512,7 +8394,7 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         }
       ]
@@ -5528,7 +8410,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 462,
+          "line": 1854,
           "hard": false
         },
         {
@@ -5554,7 +8436,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 491,
+          "line": 1976,
           "hard": false
         },
         {
@@ -5564,7 +8446,7 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         }
       ]
@@ -5580,7 +8462,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 521,
+          "line": 2098,
           "hard": false
         },
         {
@@ -5606,7 +8488,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 551,
+          "line": 2222,
           "hard": false
         },
         {
@@ -5632,7 +8514,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 580,
+          "line": 2344,
           "hard": false
         },
         {
@@ -5642,7 +8524,7 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 11,
+          "line": 9,
           "hard": true
         }
       ]
@@ -5658,7 +8540,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 612,
+          "line": 2470,
           "hard": false
         },
         {
@@ -5684,7 +8566,7 @@
       "references": [
         {
           "source": "Characters/Enemies/enemy_library.json",
-          "line": 642,
+          "line": 2593,
           "hard": false
         },
         {
@@ -5696,6 +8578,297 @@
           "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
           "line": 13,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://data/characters/animation_catalog.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/metroidvania/CreatorAnimationCatalog.gd",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/characters/creator_catalog.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/metroidvania/CreatorCatalog.gd",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/characters/portrait_catalog.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/metroidvania/CreatorCatalog.gd",
+          "line": 5,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/characters/voice_profiles.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/metroidvania/CreatorCatalog.gd",
+          "line": 6,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/narrative/cutscenes.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/narrative/DialogueDatabase.gd",
+          "line": 5,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/WorldContentAuditTest.gd",
+          "line": 51,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/narrative/dialogue.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/narrative/DialogueDatabase.gd",
+          "line": 4,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/WorldContentAuditTest.gd",
+          "line": 52,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/narrative/quests.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/narrative/QuestDatabase.gd",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/weapons/weapon_families.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/metroidvania/WeaponCatalog.gd",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/district_art_profiles.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/DistrictArtCatalog.gd",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/rooms/abyssal_night_districts.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/world_manifest.json",
+          "line": 10,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/EnemyContractTest.gd",
+          "line": 8,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/rooms/cyber_city_districts.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/world_manifest.json",
+          "line": 7,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/EnemyContractTest.gd",
+          "line": 5,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/rooms/neon_moon_districts.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/world_manifest.json",
+          "line": 9,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/EnemyContractTest.gd",
+          "line": 7,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/rooms/robot_factory_districts.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/world_manifest.json",
+          "line": 8,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/EnemyContractTest.gd",
+          "line": 6,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/rooms/rooftop_alley.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "data/world/world_manifest.json",
+          "line": 6,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/EnemyContractTest.gd",
+          "line": 4,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/traversal_probes.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/WorldTraversalProbeTest.gd",
+          "line": 5,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://data/world/world_manifest.json",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/world/WorldDatabase.gd",
+          "line": 4,
+          "hard": false
         }
       ]
     },
@@ -5830,37 +9003,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
@@ -6079,6 +9252,11 @@
           "source": "scripts/AssetRegistrySmokeTest.gd",
           "line": 68,
           "hard": false
+        },
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 4,
+          "hard": true
         }
       ]
     },
@@ -6129,37 +9307,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 23,
+          "line": 21,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 21,
+          "line": 19,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 21,
+          "line": 19,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
@@ -6276,6 +9454,11 @@
           "hard": true
         },
         {
+          "source": "scenes/world/WorldRoot.tscn",
+          "line": 4,
+          "hard": true
+        },
+        {
           "source": "scripts/AssetRegistry.gd",
           "line": 19,
           "hard": false
@@ -6302,37 +9485,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 20,
+          "line": 18,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
@@ -6399,6 +9582,16 @@
           "source": "tests/integration/PlayerStateTest.gd",
           "line": 3,
           "hard": true
+        },
+        {
+          "source": "tests/integration/TeleportWeaponTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/WorldTraversalProbeTest.gd",
+          "line": 4,
+          "hard": true
         }
       ]
     },
@@ -6419,6 +9612,73 @@
         {
           "source": "tests/integration/PlayerStateTest.gd",
           "line": 4,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/Player/PlayerVisual.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/Player.tscn",
+          "line": 8,
+          "hard": true
+        },
+        {
+          "source": "scripts/ui/CharacterCreator.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "scripts/ui/CustomizationService.gd",
+          "line": 7,
+          "hard": true
+        },
+        {
+          "source": "scripts/ui/EndingScreen.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "scripts/ui/PauseMenu.gd",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "scripts/ui/SaveSlotScreen.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/NarrativeServicesTest.gd",
+          "line": 120,
+          "hard": false
+        },
+        {
+          "source": "tests/unit/MetroidvaniaCharacterTest.gd",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/Player/TeleportMarker.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/metroidvania/TeleportController.gd",
+          "line": 14,
           "hard": true
         }
       ]
@@ -6481,37 +9741,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 16,
+          "line": 14,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 14,
+          "line": 12,
           "hard": true
         },
         {
@@ -6593,6 +9853,38 @@
       ]
     },
     {
+      "path": "res://scenes/testing/EnemyRosterLab.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "tests/integration/EnemyContractTest.gd",
+          "line": 134,
+          "hard": false
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/CharacterCreator.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/GameManager.gd",
+          "line": 25,
+          "hard": false
+        }
+      ]
+    },
+    {
       "path": "res://scenes/ui/CreditsScreen.tscn",
       "distribution": "Present and tracked",
       "requirement": "Optional",
@@ -6603,7 +9895,7 @@
       "references": [
         {
           "source": "scripts/ui/EndingScreen.gd",
-          "line": 35,
+          "line": 48,
           "hard": false
         },
         {
@@ -6613,7 +9905,7 @@
         },
         {
           "source": "tests/integration/ShellFlowTest.gd",
-          "line": 73,
+          "line": 124,
           "hard": false
         }
       ]
@@ -6629,7 +9921,7 @@
       "references": [
         {
           "source": "scripts/GameManager.gd",
-          "line": 15,
+          "line": 23,
           "hard": false
         },
         {
@@ -6638,8 +9930,18 @@
           "hard": false
         },
         {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 147,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/LastTwoActsProductionTest.gd",
+          "line": 149,
+          "hard": false
+        },
+        {
           "source": "tests/integration/ShellFlowTest.gd",
-          "line": 67,
+          "line": 118,
           "hard": false
         }
       ]
@@ -6654,9 +9956,30 @@
       "hard_reference": true,
       "references": [
         {
+          "source": "scenes/world/WorldRoot.tscn",
+          "line": 5,
+          "hard": true
+        },
+        {
           "source": "scripts/campaign/StageController.gd",
           "line": 5,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/ui/SaveSlotScreen.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Optional",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": false,
+      "references": [
+        {
+          "source": "scripts/GameManager.gd",
+          "line": 24,
+          "hard": false
         }
       ]
     },
@@ -6670,13 +9993,8 @@
       "hard_reference": false,
       "references": [
         {
-          "source": "scripts/ui/TitleScreen.gd",
-          "line": 4,
-          "hard": false
-        },
-        {
           "source": "tests/integration/ShellFlowTest.gd",
-          "line": 61,
+          "line": 112,
           "hard": false
         }
       ]
@@ -6697,17 +10015,22 @@
         },
         {
           "source": "scripts/GameManager.gd",
-          "line": 14,
+          "line": 22,
+          "hard": false
+        },
+        {
+          "source": "scripts/testing/DisplayMatrixCapture.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/ShellFlowTest.gd",
+          "line": 18,
           "hard": false
         },
         {
           "source": "tests/integration/ShellFlowTest.gd",
-          "line": 17,
-          "hard": false
-        },
-        {
-          "source": "tests/integration/ShellFlowTest.gd",
-          "line": 53,
+          "line": 104,
           "hard": false
         }
       ]
@@ -6723,7 +10046,7 @@
       "references": [
         {
           "source": "scripts/Player.gd",
-          "line": 23,
+          "line": 32,
           "hard": true
         },
         {
@@ -6803,6 +10126,143 @@
           "source": "scripts/VFXSpawner.gd",
           "line": 5,
           "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/world/WorldRoom.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/testing/DistrictArtCapture.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "scripts/world/RoomLoader.gd",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 6,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/WorldContentAuditTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/WorldTraversalProbeTest.gd",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scenes/world/WorldRoot.tscn",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/GameManager.gd",
+          "line": 26,
+          "hard": false
+        },
+        {
+          "source": "scripts/SaveManager.gd",
+          "line": 143,
+          "hard": false
+        },
+        {
+          "source": "scripts/SaveManager.gd",
+          "line": 144,
+          "hard": false
+        },
+        {
+          "source": "scripts/testing/DisplayMatrixCapture.gd",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "scripts/ui/EndingScreen.gd",
+          "line": 52,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/AbilityBarrierTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/AbyssalNightProductionTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/AbyssalNightProductionTest.gd",
+          "line": 62,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/CyberCityProductionTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/NeonMoonProductionTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/NeonMoonProductionTest.gd",
+          "line": 58,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 5,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/PerformanceBudgetTest.gd",
+          "line": 70,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/RobotFactoryProductionTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/RobotFactoryProductionTest.gd",
+          "line": 67,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/RooftopVerticalSliceTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/WorldFoundationTest.gd",
+          "line": 3,
+          "hard": true
+        },
+        {
+          "source": "tests/integration/WorldFoundationTest.gd",
+          "line": 34,
+          "hard": false
         }
       ]
     },
@@ -6964,6 +10424,116 @@
       "ignored": false,
       "hard_reference": true,
       "references": [
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 116,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 237,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 360,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 482,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 605,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 727,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 851,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 974,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1097,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1220,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1341,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1463,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1585,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1708,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1830,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 1952,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 2073,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 2197,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 2320,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 2443,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 2568,
+          "hard": false
+        },
+        {
+          "source": "Characters/Enemies/enemy_library.json",
+          "line": 2693,
+          "hard": false
+        },
         {
           "source": "scripts/systems/encounters/EncounterController.gd",
           "line": 4,
@@ -7162,37 +10732,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 13,
+          "line": 11,
           "hard": true
         },
         {
@@ -7310,37 +10880,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 22,
+          "line": 20,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 20,
+          "line": 18,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 20,
+          "line": 18,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 18,
+          "line": 16,
           "hard": true
         },
         {
@@ -7432,37 +11002,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 12,
+          "line": 10,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 10,
+          "line": 8,
           "hard": true
         },
         {
@@ -7628,6 +11198,102 @@
       ]
     },
     {
+      "path": "res://scripts/metroidvania/PlayerVisual.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/Player/PlayerVisual.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/metroidvania/TeleportController.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/Player.tscn",
+          "line": 9,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/metroidvania/TeleportMarker.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/Player/TeleportMarker.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/metroidvania/VoiceBarkPlayer.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/Player.tscn",
+          "line": 10,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/narrative/CutsceneDirector.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "project.godot",
+          "line": 31,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/narrative/DialogueController.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "project.godot",
+          "line": 30,
+          "hard": true
+        }
+      ]
+    },
+    {
       "path": "res://scripts/NeonFlicker.gd",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -7664,37 +11330,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 21,
+          "line": 19,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
@@ -7839,37 +11505,37 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 19,
+          "line": 17,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 17,
+          "line": 15,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 15,
+          "line": 13,
           "hard": true
         },
         {
@@ -7957,6 +11623,80 @@
       ]
     },
     {
+      "path": "res://scripts/systems/player/WeaponArc.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/systems/player/PlayerCombatController.gd",
+          "line": 9,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/systems/security/LockdownGateArt.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/systems/encounters/BossArenaController.gd",
+          "line": 4,
+          "hard": true
+        },
+        {
+          "source": "scripts/systems/encounters/EncounterController.gd",
+          "line": 5,
+          "hard": true
+        },
+        {
+          "source": "scripts/systems/security/SecurityGate.gd",
+          "line": 4,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/testing/EnemyRosterLab.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/testing/EnemyRosterLab.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/CharacterCreator.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/CharacterCreator.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
       "path": "res://scripts/ui/CreditsScreen.gd",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -7968,6 +11708,22 @@
         {
           "source": "scenes/ui/CreditsScreen.tscn",
           "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/CustomizationService.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/world/WorldRoot.tscn",
+          "line": 7,
           "hard": true
         }
       ]
@@ -7989,6 +11745,22 @@
       ]
     },
     {
+      "path": "res://scripts/ui/MetroidvaniaHUD.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/world/WorldRoot.tscn",
+          "line": 6,
+          "hard": true
+        }
+      ]
+    },
+    {
       "path": "res://scripts/ui/PauseMenu.gd",
       "distribution": "Present and tracked",
       "requirement": "Runtime-critical",
@@ -7999,6 +11771,22 @@
       "references": [
         {
           "source": "scenes/ui/PauseMenu.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/ui/SaveSlotScreen.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/ui/SaveSlotScreen.tscn",
           "line": 3,
           "hard": true
         }
@@ -8084,6 +11872,86 @@
       ]
     },
     {
+      "path": "res://scripts/world/AuthoredStageComposition.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 6,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/world/PersistentCache.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scripts/world/WorldRoom.gd",
+          "line": 5,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/world/WorldManager.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "project.godot",
+          "line": 29,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/world/WorldRoom.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/world/WorldRoom.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
+      "path": "res://scripts/world/WorldRoot.gd",
+      "distribution": "Present and tracked",
+      "requirement": "Runtime-critical",
+      "present": true,
+      "tracked": true,
+      "ignored": false,
+      "hard_reference": true,
+      "references": [
+        {
+          "source": "scenes/world/WorldRoot.tscn",
+          "line": 3,
+          "hard": true
+        }
+      ]
+    },
+    {
       "path": "res://Stages",
       "distribution": "Present and tracked",
       "requirement": "Optional",
@@ -8115,7 +11983,7 @@
         },
         {
           "source": "scripts/GameManager.gd",
-          "line": 13,
+          "line": 21,
           "hard": false
         },
         {
@@ -8125,7 +11993,7 @@
         },
         {
           "source": "tests/integration/ShellFlowTest.gd",
-          "line": 31,
+          "line": 39,
           "hard": false
         }
       ]
@@ -8193,7 +12061,7 @@
       "references": [
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 208,
+          "line": 203,
           "hard": false
         },
         {
@@ -8219,7 +12087,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 193,
+          "line": 187,
           "hard": false
         },
         {
@@ -8261,7 +12129,7 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 188,
+          "line": 182,
           "hard": false
         },
         {
@@ -8303,7 +12171,7 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 208,
+          "line": 202,
           "hard": false
         },
         {
@@ -8324,7 +12192,7 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 207,
+          "line": 202,
           "hard": false
         },
         {
@@ -8350,7 +12218,7 @@
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 207,
+          "line": 201,
           "hard": false
         },
         {
@@ -8371,12 +12239,17 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 201,
+          "line": 195,
           "hard": false
         },
         {
           "source": "Stages/campaign_manifest.json",
           "line": 492,
+          "hard": false
+        },
+        {
+          "source": "tests/integration/FirstTwoActsProductionTest.gd",
+          "line": 148,
           "hard": false
         }
       ]
@@ -8392,7 +12265,7 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-1_LunarSurfaceArrival/Stage.tscn",
-          "line": 201,
+          "line": 204,
           "hard": false
         },
         {
@@ -8413,7 +12286,7 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-2_ResearchCleanrooms/Stage.tscn",
-          "line": 203,
+          "line": 206,
           "hard": false
         },
         {
@@ -8434,7 +12307,7 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-3_SecurityGridShaft/Stage.tscn",
-          "line": 199,
+          "line": 203,
           "hard": false
         },
         {
@@ -8460,7 +12333,7 @@
         },
         {
           "source": "Stages/Act3_NeonMoon/3-4_BioTechLabs/Stage.tscn",
-          "line": 200,
+          "line": 203,
           "hard": false
         },
         {
@@ -8481,7 +12354,7 @@
       "references": [
         {
           "source": "Stages/Act3_NeonMoon/3-5_OrbitalCommand/Stage.tscn",
-          "line": 195,
+          "line": 198,
           "hard": false
         },
         {
@@ -8502,7 +12375,7 @@
       "references": [
         {
           "source": "Stages/Act4_AbyssalNight/4-1_CorruptedOutpost/Stage.tscn",
-          "line": 207,
+          "line": 210,
           "hard": false
         },
         {
@@ -8523,7 +12396,7 @@
       "references": [
         {
           "source": "Stages/Act4_AbyssalNight/4-2_TheDarkChasm/Stage.tscn",
-          "line": 208,
+          "line": 211,
           "hard": false
         },
         {
@@ -8544,7 +12417,7 @@
       "references": [
         {
           "source": "Stages/Act4_AbyssalNight/4-3_BioMechanicalNest/Stage.tscn",
-          "line": 207,
+          "line": 210,
           "hard": false
         },
         {
@@ -8580,7 +12453,7 @@
         },
         {
           "source": "Stages/Act4_AbyssalNight/4-4_AbyssalSanctuary/Stage.tscn",
-          "line": 208,
+          "line": 211,
           "hard": false
         },
         {
@@ -8590,7 +12463,7 @@
         },
         {
           "source": "tests/integration/ShellFlowTest.gd",
-          "line": 49,
+          "line": 100,
           "hard": false
         }
       ]
@@ -8643,17 +12516,17 @@
         },
         {
           "source": "Stages/Act1_CyberCity/1-3_CommunicationSpire/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-4_SkybridgeJunction/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         },
         {
           "source": "Stages/Act1_CyberCity/1-5_ExecutiveHelipad/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         }
       ]
@@ -8669,22 +12542,22 @@
       "references": [
         {
           "source": "Stages/Act2_RobotFactory/2-2_ConveyorAssembly/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-3_SmeltingCore/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-4_RoboticMaintenance/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         },
         {
           "source": "Stages/Act2_RobotFactory/2-5_AssemblyEngine/Stage.tscn",
-          "line": 7,
+          "line": 5,
           "hard": true
         }
       ]

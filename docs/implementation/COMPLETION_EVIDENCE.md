@@ -1,37 +1,79 @@
-# Full-completion implementation evidence
+# Connected-world production evidence
 
-This document maps the completion plan to committed production evidence. Commands are also consolidated in `docs/TESTING.md`.
+This document records evidence from the `feature/full-game-completion` delivery branch on 2026-08-05. It distinguishes locally verified software behavior from release observations that still require hardware, remote CI, clean-machine, or human playtesting.
 
-## Foundation and production core
+## Character, combat, and persistence
 
-- Clean-clone asset tracking: 182 curated binaries, five license texts, Git LFS, zero runtime-critical inventory blockers.
-- State architecture: validated 20-stage campaign schema, independent run and campaign-progress models, deterministic final route.
-- Player: 12 explicit states, coyote/buffer/variable jump, wall movement, dash, melee phases/combo, ranged energy/cooldown/lifetime, and upgrades.
-- Enemies/mechanics: 22 scenes across 10 attack archetypes; per-act live balance profiles; resettable multi-wave encounters; moving, breakaway, conveyor, hazard, gravity, camera/visibility, turret, terminal, switch, and gate systems.
-- Camera: stage-provided horizontal/vertical bounds, look-ahead, smoothing, clamping, and settings-scaled shake.
+- New Game flows through three save slots into Character Creator, then writes the selected slot before entering `WorldRoot`.
+- The creator supports a custom name, three pronoun sets, five voice profiles, twelve portraits, layered appearance controls, and six starting weapon families. `PlayerVisual` uses the same synchronized 102-frame catalog in creator, gameplay, equipment, save-slot, barber/tailor, and ending previews; occupied save slots reconstruct the exact saved layers and equipped weapon family alongside the dialogue portrait.
+- Sword, Dagger, Spear, Heavy, Bow, and Staff have distinct ground/air/technique profiles. Fourteen collectable weapon items resolve to those families and appear in the controller-navigable Equipment/Inventory presentation with owned/all/melee/ranged filters, sorting, live stat comparison, move summaries, fixed portrait plus exact layered preview, descriptions/lore, separated weapon/key-item/material taxonomy, six curated nearest-neighbor family icons, a locked/unknown fallback, slot status, family-safe equip rules, and immediate feedback. Universal phase teleport performs full-body clearance, forbidden-volume, room-bound, recovery, and controller-aim validation.
+- The 22-enemy schema-2 library records actual world-region placement, navigation/leash assumptions, attack telegraph/active/recovery/punish windows, stagger/resistance rules, drops, collision, animation, audio/VFX, act scaling, elite variants, and the shared source-only roster lab. `EnemyContractTest` proves those values reach live `EnemyBase` instances, including stagger and currency drops.
+- Save schema version 2 persists the profile, inventory/equipment/currency, abilities, discovered rooms, locked-route discoveries, caches, shortcuts, encounters, warps, bosses, quests, story/cutscene state, and post-game completion. Atomic primary/backup recovery, legacy-stage migration, optional-cache collection/reload, and quest reconstruction from pre-quest persistent events remain covered.
 
-## Campaign and bosses
+## Connected world
 
-- All 20 layouts use production `CampaignStage`; obsolete prototype guides/builders and duplicate preview/runtime scenes have been removed.
-- Each standard stage has at least two explicitly authored traversal sections and two authored combat encounters, plus stage-specific mechanics, checkpoints/objectives, collectibles, camera bounds, ambient presentation, and a connected exit.
-- Helix Warden, Assembly Colossus, Lunar Oracle, and Void Cerberus use distinct scripts, rosters, patterns, phases, hazards, rewards, retry cleanup, and exit gates.
-- Automated traversal visits `1-1` through `4-5` in order, fires completion once, reaches ending, and returns to title.
+- `WorldDatabase` loads one validated, fully reachable graph of 202 streamed rooms across twenty districts:
+  - Cyber City: 52 rooms, including the 12-room Rooftop Alley vertical slice.
+  - Mega Robot Factory: 50 rooms.
+  - Neon Moon Protocol: 50 rooms.
+  - Abyssal Night: 50 rooms.
+- The canonical critical route contains 162 rooms and visits all twenty districts; forty additional rooms form two optional routes per district. Each district satisfies the plan's 8–14 critical and 2–5 optional room budgets while retaining its authored 15–20 minute first-pass total. The nineteen formerly compact districts contain explicit teach, test, twist, and recovery traversal roles backed by reviewable expansion briefs. A second-generation layout contract replaces the former four shared static templates: all 103 expansion rooms now have stable layout IDs, unique platform signatures, and one of twenty authored district spatial rhythms.
+- A runtime district art bible replaces the former four region-wide dressing recipes and five hashed landmark variants. Every district has a unique palette, eight-part skyline signature, authored landmark polygon, exclusive two-prop set, atmosphere color, foreground frame, platform palette, and written direction. `WorldContentAuditTest` instantiates those layers and textures in all 202 rooms; a real OpenGL/NVIDIA capture rendered one representative 960×540 room per district for visual composition and readability inspection.
+- Twenty-seven new optional rooms provide persistent, globally unique currency caches and lore terminals. Runtime tests collect a cache, save, clear live state, reload, and recover both its credits and collected flag.
+- World systems include moving and breakaway platforms, conveyors, steam/electrical/toxic/laser/crusher/falling/void hazards, low/inverted gravity, corruption buildup and resistance, persistent encounters, ability barriers, shortcuts, save rooms, services, and discovered-only warp travel. Factory and lunar routes now use authored reversible conveyors plus ten persistent terminals controlling four multi-switch gates; IDs and targets cross-validate globally. All five relay destinations run end-to-end; later relays reject early access, active cutscenes, and active boss arenas.
+- Seven authored traversal probes instantiate production rooms and the production player to verify a near-limit standard jump, a real wall-jump chimney, dash follow-through, teleport range/full-body clearance, a gravity-dependent lunar step, moving-platform timing, and required-route fall recovery.
+- Regional progression grants Magnetic Rail, Phase Barrier, Heavy Ground Break, Gravity Anchor, Chain Teleport, Corruption Resistance, and Energy Field. Optional routes distribute production rewards across all six weapon families.
+- Helix Warden, Assembly Colossus, Lunar Oracle, and Void Cerberus stream with boss arenas, unique multi-phase rosters, persistent defeat flags/rewards, autosaves, and no respawn after streaming plus reload.
 
-## Shell, persistence, and accessibility
+## Narrative and ending
 
-- Title: New Game with overwrite confirmation, Continue, Stage Select, Settings, Credits, and Quit.
-- Pause: resume, checkpoint restart, stage restart, settings, and title routes.
-- Atomic versioned saves use a checksum, temporary file, primary/backup rotation, recovery, migration, and reset.
-- Settings persist separately and apply volume, display, VSync, shake, vibration, deadzone, reduced flashing, contrast, hold interaction, UI scale, and persistent family-preserving remaps.
-- HUD exposes health, energy, score, objectives, upgrades, boss state, interaction prompts, and non-color hazard cues.
+- Four data-authored quests provide main progression, optional arsenal, relay-network, and traversal-mastery objectives to the HUD and Journal. Quest state reconciles against story flags, inventory, abilities, and warp activation.
+- The main quest's 21 sequential steps each carry a validated room destination. The map renders the active destination as a distinct objective diamond, differentiates barber/tailor/NPC service colors, and reports overall plus four per-region discovery percentages.
+- Data-authored story triggers and skippable cutscenes cover all four regions, including the factory purpose, Oracle origin, corruption convergence, and boss preparation. Every boss declares its first-view intro and defeat sequence, and every sequence has a deterministic safe skip endpoint.
+- Dialogue resolves the custom player name and pronoun set, uses fixed NPC portraits plus the live player profile, supports voice-bark subtitles/cooldowns, and gives Mara four post-event conversation states in addition to first/repeat dialogue.
+- The Void Cerberus exit triggers a safe skippable finale and personalized EndingScreen with name, pronouns, chosen portrait, live layered visual, saved completion state, credits/title routes, and explicit `CONTINUE EXPLORING` post-game behavior.
 
-## Verification and release engineering
+## Assets and performance
 
-- The headless runner executes 18 isolated import/resource/unit/system/campaign/shell processes with per-test logs and timeouts. It treats Godot `ERROR:` and `SCRIPT ERROR:` output as failure even when the process exits zero.
-- The performance gate indexes 182 assets without gameplay recursion, fixes audio at 10 SFX/2 BGM players, releases 64 projectiles/32 VFX, and verifies stage release.
-- GitHub Actions defines import, resource, unit, systems/shell, campaign, and Windows-export jobs using official Godot 4.7.1 artifacts and Git LFS.
-- The Windows preset excludes tests, builders, editor plugin, completion plan, local source mirrors, and developer-only manifests.
-- The release tool rejects forbidden PCK markers/machine paths/dirty release trees, packages all required files and licenses, and records source/artifact hashes.
-- Clean clone `2fa1ab023d3f18c8c9120774b29bbf2cf1c8aced` passed the 392-dependency inventory and all 18 strict tests on 2026-08-04. Its `1.0.0-rc.2` Windows export passed forbidden-content packaging, extracted successfully, and launched headlessly with no engine errors.
+- The runtime set contains 314 binaries mapped by SHA-256 to five included license texts. Ninety-nine normalized creator/voice/weapon/icon/district-prop files retain stable `source-library://` provenance rather than machine-specific paths; four additional native Neon Moon layers retain repository-relative source provenance; seventeen project-authored panoramas and twelve project-authored traversal-kit assets retain stable `generated://openai-imagegen/2026-08-05/...` provenance. The ten latest panoramas give every Neon Moon and Abyssal Night stage a distinct 1672×941 hero field.
+- AssetRegistry indexes the 286 paths under its lookup roots; the voice and equipment catalogs directly load the remaining 28 indexed assets.
+- The expanded headless performance gate streams all 202 rooms, measures real fade transitions, map/inventory opening, atomic saves, a three-room memory set, layered-player surfaces, enemy/audio counts, 64 projectiles, and 32 VFX. The final 2026-08-05 reference completed its performance body in 3.70 seconds with an 11.41 ms slowest room build, 306.82 ms slowest representative transition, 8.65 ms peak save, and 231.3 MiB three-room observation after the four-act backdrop/traversal pass. Peak room complexity is 99 nodes against a 650-node ceiling. The fixed audio count remains sixteen because the four-region code-generated ambience set uses one bounded Ambience player.
+- A real exported-build 1280×720 interaction pass completed Title → slot → randomized creator → personalized prologue → movement/pause/map → streamed room → cutscene autosave → process relaunch/Continue. It verified the exact occupied-slot portrait/player reconstruction and fixed creator clipping, duplicate room-title/HUD overlap, tutorial/objective overlap, and missing final sequence persistence. The focused viewport, room-HUD, and disk-save regressions plus the complete 36-process suite pass afterward.
+- The accessibility baseline has twenty-one rebindable actions, sixteen explicit dual-input actions, and sixteen unique simultaneous controller signatures. Live prompts change immediately between keyboard/mouse and compact cross-platform controller labels. Dialogue/menu world pause, text speed/instant/auto-advance, bark mute/subtitles, five independent mixer buses, shake/vibration controls, reduced flashing, high-contrast teleport feedback, aim assist, independent phase-aim deadzone/response, and hold/tap teleport aim persist. Physical-device and visual comfort observations remain manual gates.
+- The delivery branch includes the runtime-critical scripts, scenes, and generated assets referenced by the current manifest. `python tools/inventory_runtime_assets.py --check` is the repeatable tracked-dependency gate; a fresh-clone rerun remains a release-promotion requirement rather than an unrecorded local assumption.
 
-`docs/RELEASE_CHECKLIST.md` deliberately keeps physical input/display/performance observations and the remote green CI run separate. Those gates cannot be truthfully replaced by headless automation.
+## Legacy Acts 1–2 production pass
+
+- Stages `1-1` through `2-5` retain their authored geometry, two-encounter standard-stage requirements, checkpoint/collectible budgets, mechanics, bosses, deterministic handoffs, and persistence. Each begins with a manifest-driven Act/stage card that holds through an initial input hand-off window without covering the core HUD. `FirstTwoActsProductionTest` completes all ten stages in order, validates the entry cards, physically drives rightward movement and jumping from every authored spawn, lands the live player on a colliding platform in each of the eighteen authored traversal sections, verifies the Act 2 finale routes into Act 3, and asserts that both regional finales persist. Its final pass verifies 70 collision-sized traversal decks, 41 reachable route links inside the real jump/dash envelope, 32 surface-snapped structural supports, and 9 mechanic assemblies, all with act-correct environment kits, context-sensitive safety cues, and preserved physical collision bodies.
+- Communication Spire, Skybridge Junction, Executive Helipad, Conveyor Assembly, Smelting Core, Robotic Maintenance, and Assembly Engine use seven distinct 1672×941 hero panoramas. Sub-Level Intake shares the coherent factory master while using corrected readable lighting; no Act 2 stage references the former Neon Alley city background. Communication Spire and Smelting Core use 900-pixel background coverage so vertical camera zones never expose the viewport clear color.
+- Regular locked exits now read `CLEAR ENCOUNTERS`; boss exits read `DEFEAT BOSS`; all completed exits relabel to `STAGE EXIT`. The Helix Warden and Assembly Colossus panels are constrained between the core status and score panels and show boss name, phase, and health without overlap.
+- `LegacyActCapture.gd` produces real OpenGL/NVIDIA 960×540 start, signature, and finish frames for each stage; the final `r15` review consists of all thirty frames and a ten-stage signature contact sheet. The entry presentation is shown only in the start frame so signature and finish images expose playable traversal composition. The source-only harness and all capture evidence are excluded from exports.
+
+## Legacy Acts 3–4 production pass
+
+- Stages `3-1` through `4-5` retain their authored low/inverted-gravity, terminal, laser-grid, containment, corruption, void, organic-crusher, and final-mastery mechanics alongside encounter, checkpoint, collectible, boss, handoff, and persistence contracts. `LastTwoActsProductionTest` drives real player movement and jumps, validates native terrain-deck surfaces, completes the regular and boss objectives, and reaches the personalized ending.
+- Lunar Surface Arrival, Research Cleanrooms, Security Grid Shaft, Bio-Tech Labs, Orbital Command, Corrupted Outpost, The Dark Chasm, Bio-Mechanical Nest, Abyssal Sanctuary, and Heart of the Void each use a distinct 1672×941 panorama. Far/middle/front layers use stage-specific atmospheric tints; Security Grid Shaft expands its background coverage for the vertical camera. The gate observes forty-three later-act traversal decks and twenty-eight lunar/abyssal structural assemblies, ensuring no later-act route falls back to Cyber City or Factory architecture.
+- `docs/assets/ACT3_ACT4_GENERATED_PANORAMAS.md` records the generated-art prompts, assets, hashes, and stage mapping. The art is non-interactive; authored terrain, hazards, bosses, UI, and collision remain separate runtime layers.
+
+## Automated validation
+
+The final rerun passes all 36 isolated processes under Godot `4.7.1.stable.official.a13da4feb` in bounded import/resource/unit/systems, campaign, world, and shell groups. The runner treats emitted `ERROR:` or `SCRIPT ERROR:` lines as failures even when Godot exits zero.
+
+Coverage includes import/parse, dependency and license checks, unit/state schemas, the 22-enemy schema-2 contract and roster lab, encounter death reset, six-family/fourteen-item combat and Equipment/Inventory flow, six curated family icons plus the locked/unknown fallback, measured performance budgets, all twenty legacy campaign scenes, dedicated end-to-end production assertions for the first ten stages and their seven hero panoramas plus the final ten stages and their ten hero panoramas, the 202-room world graph, 103 unique expansion geometry contracts, twenty distinct district art profiles and forty prop assignments, each region's runtime/save loop, four ambience profiles, terminal/gate/conveyor/cache controls, map-link/warp/boss-route contracts, cross-referenced narrative/boss/NPC content, four persistent quests, seven production-geometry traversal probes, the 162-room critical route for all starting families, creator-to-world flow, exact occupied-slot character reconstruction, save/settings/accessibility recovery, shell routes, and forced missing-audio fallback.
+
+## Release status
+
+The locally automatable implementation gates are green. The connected-world renderer now composes fixed-scale, native-aspect source-pack layers across the viewport; builds every static, moving, breakaway, and conveyor surface from the appropriate regional terrain atlas; derives visible platform tops and collision from the same rectangle; and restricts props to named or landmark compositions anchored to supporting surfaces. Real-render captures cover the thirty first-two-acts composition checkpoints, while the later-act production gate supplies deterministic stage-by-stage presentation and flow coverage. The corresponding bounded suite rerun passed 36/36.
+
+A pre-delivery dirty-worktree Windows export excluded generated `build/`, tools, tests, docs, source art, the obsolete pre-manifest district-entry file, the source-only enemy roster lab, the district layout authoring blueprint, temporary review sheets, both source-only capture harnesses, and all live-QA captures. Its 55,410,492-byte PCK passed the package development-content scan and contains the reviewed rooftop-catwalk, skybridge-truss, factory-conveyor, and crusher-bay kit resources. That archive predates the ten final later-act panoramas and is retained as historical packaging evidence only. A clean export/package rerun from this delivery commit remains required before release promotion.
+
+Release-candidate promotion is not yet truthful because the following external gates remain open:
+
+- keyboard/mouse and physical-controller full playthroughs for every starting family;
+- controller disconnect/reconnect, remap, vibration, and aim-feel observations;
+- display/accessibility/audio checks and 1080p target-hardware frame-time capture;
+- remote CI on the integrated release commit;
+- post-integration clean-clone and clean Windows export/package reruns;
+- independent clean-machine launch.
+
+These are recorded as open observations in `docs/RELEASE_CHECKLIST.md`, not silently treated as automated passes.

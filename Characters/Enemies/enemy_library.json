@@ -27,7 +27,99 @@
       "body_size": [
         26,
         43
-      ]
+      ],
+      "patrol_speed": 73.2,
+      "regions": [
+        "cyber_city"
+      ],
+      "stagger": {
+        "threshold": 3.0,
+        "recovery": 0.58,
+        "resistance": 0.18
+      },
+      "resistances": {
+        "damage": 0.06,
+        "knockback": 0.18
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 520,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "leap",
+        "telegraph": 0.44,
+        "active": 0.2,
+        "recovery": 0.46,
+        "punish_window": 0.46,
+        "stagger_damage": 2.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 5,
+          "max": 8
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "run",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          26,
+          43
+        ],
+        "hurtbox_size": [
+          30.68,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          31.2,
+          30.96
+        ],
+        "contact_offset": [
+          10.92,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": false,
@@ -52,11 +144,103 @@
       "attack_range": 230,
       "attack_cooldown": 1.8,
       "chase_speed": 85,
-      "detection_radius": 210,
+      "detection_radius": 270,
       "body_size": [
         23,
         57
-      ]
+      ],
+      "patrol_speed": 51.85,
+      "regions": [
+        "abyssal_night"
+      ],
+      "stagger": {
+        "threshold": 3.5,
+        "recovery": 0.62,
+        "resistance": 0.24
+      },
+      "resistances": {
+        "damage": 0.08,
+        "knockback": 0.24
+      },
+      "detection": {
+        "radius": 270,
+        "leash_distance": 500,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "hazard",
+        "telegraph": 0.62,
+        "active": 0.18,
+        "recovery": 0.6,
+        "punish_window": 0.6,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 7,
+          "max": 12
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "run",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          23,
+          57
+        ],
+        "hurtbox_size": [
+          27.14,
+          61.56
+        ],
+        "contact_hitbox_size": [
+          27.6,
+          41.04
+        ],
+        "contact_offset": [
+          9.66,
+          -20.52
+        ]
+      },
+      "audio_profile": {
+        "attack": "hazard_warning",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 500
     },
     {
       "airborne": false,
@@ -86,7 +270,100 @@
       "body_size": [
         44,
         57
-      ]
+      ],
+      "patrol_speed": 42.7,
+      "regions": [
+        "cyber_city",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 4.0,
+        "recovery": 0.68,
+        "resistance": 0.4
+      },
+      "resistances": {
+        "damage": 0.16,
+        "knockback": 0.42
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 360,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.56,
+        "active": 0.2,
+        "recovery": 0.58,
+        "punish_window": 0.58,
+        "stagger_damage": 2.0
+      },
+      "hurt": {
+        "duration": 0.24,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 7,
+          "max": 11
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          44,
+          57
+        ],
+        "hurtbox_size": [
+          51.92,
+          61.56
+        ],
+        "contact_hitbox_size": [
+          52.8,
+          41.04
+        ],
+        "contact_offset": [
+          18.48,
+          -20.52
+        ]
+      },
+      "audio_profile": {
+        "attack": "armor_hit",
+        "hurt": "armor_hit",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 700
     },
     {
       "airborne": false,
@@ -116,7 +393,99 @@
       "body_size": [
         30,
         56
-      ]
+      ],
+      "patrol_speed": 45.75,
+      "regions": [
+        "abyssal_night"
+      ],
+      "stagger": {
+        "threshold": 4.0,
+        "recovery": 0.64,
+        "resistance": 0.34
+      },
+      "resistances": {
+        "damage": 0.12,
+        "knockback": 0.36
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 380,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.42,
+        "active": 0.18,
+        "recovery": 0.5,
+        "punish_window": 0.5,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.24,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 6,
+          "max": 10
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          30,
+          56
+        ],
+        "hurtbox_size": [
+          35.4,
+          60.48
+        ],
+        "contact_hitbox_size": [
+          36.0,
+          40.32
+        ],
+        "contact_offset": [
+          12.6,
+          -20.16
+        ]
+      },
+      "audio_profile": {
+        "attack": "armor_hit",
+        "hurt": "armor_hit",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 600
     },
     {
       "airborne": true,
@@ -142,11 +511,104 @@
       "attack_range": 280,
       "attack_cooldown": 1.5,
       "chase_speed": 95,
-      "detection_radius": 280,
+      "detection_radius": 320,
       "body_size": [
         29,
         66
-      ]
+      ],
+      "patrol_speed": 55.1,
+      "regions": [
+        "abyssal_night",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 2.5,
+        "recovery": 0.52,
+        "resistance": 0.08
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.05
+      },
+      "detection": {
+        "radius": 320,
+        "leash_distance": 580,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "ranged",
+        "telegraph": 0.46,
+        "active": 0.1,
+        "recovery": 0.4,
+        "punish_window": 0.4,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 5,
+          "max": 8
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "flying",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          29,
+          66
+        ],
+        "hurtbox_size": [
+          34.22,
+          71.28
+        ],
+        "contact_hitbox_size": [
+          34.8,
+          47.52
+        ],
+        "contact_offset": [
+          12.18,
+          -23.76
+        ]
+      },
+      "audio_profile": {
+        "attack": "laser_shot",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "58f0ff",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": true,
@@ -174,7 +636,101 @@
       "body_size": [
         27,
         67
-      ]
+      ],
+      "patrol_speed": 60.9,
+      "regions": [
+        "cyber_city",
+        "neon_moon",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 2.0,
+        "recovery": 0.46,
+        "resistance": 0.0
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.0
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 500,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.34,
+        "active": 0.14,
+        "recovery": 0.32,
+        "punish_window": 0.32,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 3,
+          "max": 5
+        }
+      ],
+      "animation_map": {
+        "idle": "move",
+        "move": "move",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          27,
+          67
+        ],
+        "hurtbox_size": [
+          31.86,
+          72.36
+        ],
+        "contact_hitbox_size": [
+          32.4,
+          48.24
+        ],
+        "contact_offset": [
+          11.34,
+          -24.12
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 300
     },
     {
       "airborne": true,
@@ -204,7 +760,101 @@
       "body_size": [
         25,
         43
-      ]
+      ],
+      "patrol_speed": 60.9,
+      "regions": [
+        "abyssal_night",
+        "cyber_city",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 2.0,
+        "recovery": 0.46,
+        "resistance": 0.0
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.0
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 500,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.34,
+        "active": 0.14,
+        "recovery": 0.32,
+        "punish_window": 0.32,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 3,
+          "max": 5
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "move",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          25,
+          43
+        ],
+        "hurtbox_size": [
+          29.5,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          30.0,
+          30.96
+        ],
+        "contact_offset": [
+          10.5,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 300
     },
     {
       "airborne": false,
@@ -234,7 +884,100 @@
       "body_size": [
         20,
         35
-      ]
+      ],
+      "patrol_speed": 70.15,
+      "regions": [
+        "cyber_city",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 2.0,
+        "recovery": 0.48,
+        "resistance": 0.05
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.05
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 430,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.32,
+        "active": 0.14,
+        "recovery": 0.32,
+        "punish_window": 0.32,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 2,
+          "max": 4
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "run",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          20,
+          35
+        ],
+        "hurtbox_size": [
+          23.6,
+          37.8
+        ],
+        "contact_hitbox_size": [
+          24.0,
+          25.2
+        ],
+        "contact_offset": [
+          8.4,
+          -12.6
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 300
     },
     {
       "airborne": true,
@@ -260,11 +1003,104 @@
       "attack_range": 280,
       "attack_cooldown": 1.5,
       "chase_speed": 95,
-      "detection_radius": 280,
+      "detection_radius": 320,
       "body_size": [
         20,
         46
-      ]
+      ],
+      "patrol_speed": 55.1,
+      "regions": [
+        "cyber_city",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 2.5,
+        "recovery": 0.52,
+        "resistance": 0.08
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.05
+      },
+      "detection": {
+        "radius": 320,
+        "leash_distance": 580,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "ranged",
+        "telegraph": 0.46,
+        "active": 0.1,
+        "recovery": 0.4,
+        "punish_window": 0.4,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 5,
+          "max": 8
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "move",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          20,
+          46
+        ],
+        "hurtbox_size": [
+          23.6,
+          49.68
+        ],
+        "contact_hitbox_size": [
+          24.0,
+          33.12
+        ],
+        "contact_offset": [
+          8.4,
+          -16.56
+        ]
+      },
+      "audio_profile": {
+        "attack": "laser_shot",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "58f0ff",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": true,
@@ -293,7 +1129,101 @@
       "body_size": [
         18,
         43
-      ]
+      ],
+      "patrol_speed": 60.9,
+      "regions": [
+        "abyssal_night",
+        "cyber_city",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 2.0,
+        "recovery": 0.46,
+        "resistance": 0.0
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.0
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 500,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.34,
+        "active": 0.14,
+        "recovery": 0.32,
+        "punish_window": 0.32,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 3,
+          "max": 5
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "move",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          18,
+          43
+        ],
+        "hurtbox_size": [
+          21.24,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          21.6,
+          30.96
+        ],
+        "contact_offset": [
+          7.56,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 300
     },
     {
       "airborne": false,
@@ -318,11 +1248,103 @@
       "attack_range": 230,
       "attack_cooldown": 1.8,
       "chase_speed": 85,
-      "detection_radius": 210,
+      "detection_radius": 270,
       "body_size": [
         27,
         67
-      ]
+      ],
+      "patrol_speed": 51.85,
+      "regions": [
+        "abyssal_night"
+      ],
+      "stagger": {
+        "threshold": 3.5,
+        "recovery": 0.62,
+        "resistance": 0.24
+      },
+      "resistances": {
+        "damage": 0.08,
+        "knockback": 0.24
+      },
+      "detection": {
+        "radius": 270,
+        "leash_distance": 500,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "hazard",
+        "telegraph": 0.62,
+        "active": 0.18,
+        "recovery": 0.6,
+        "punish_window": 0.6,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 7,
+          "max": 12
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "run",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          27,
+          67
+        ],
+        "hurtbox_size": [
+          31.86,
+          72.36
+        ],
+        "contact_hitbox_size": [
+          32.4,
+          48.24
+        ],
+        "contact_offset": [
+          11.34,
+          -24.12
+        ]
+      },
+      "audio_profile": {
+        "attack": "hazard_warning",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 500
     },
     {
       "airborne": true,
@@ -351,7 +1373,100 @@
       "body_size": [
         23,
         30
-      ]
+      ],
+      "patrol_speed": 89.9,
+      "regions": [
+        "cyber_city",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 2.0,
+        "recovery": 0.4,
+        "resistance": 0.0
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.0
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 510,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.2,
+        "active": 0.12,
+        "recovery": 0.24,
+        "punish_window": 0.24,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 3,
+          "max": 5
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "move",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          23,
+          30
+        ],
+        "hurtbox_size": [
+          27.14,
+          32.4
+        ],
+        "contact_hitbox_size": [
+          27.6,
+          21.6
+        ],
+        "contact_offset": [
+          9.66,
+          -10.8
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 300
     },
     {
       "airborne": false,
@@ -381,7 +1496,99 @@
       "body_size": [
         27,
         56
-      ]
+      ],
+      "patrol_speed": 61.0,
+      "regions": [
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 3.0,
+        "recovery": 0.54,
+        "resistance": 0.14
+      },
+      "resistances": {
+        "damage": 0.04,
+        "knockback": 0.12
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 460,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.24,
+        "active": 0.15,
+        "recovery": 0.38,
+        "punish_window": 0.38,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 5,
+          "max": 9
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "move",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          27,
+          56
+        ],
+        "hurtbox_size": [
+          31.86,
+          60.48
+        ],
+        "contact_hitbox_size": [
+          32.4,
+          40.32
+        ],
+        "contact_offset": [
+          11.34,
+          -20.16
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": false,
@@ -411,7 +1618,100 @@
       "body_size": [
         34,
         43
-      ]
+      ],
+      "patrol_speed": 61.0,
+      "regions": [
+        "abyssal_night",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 3.0,
+        "recovery": 0.54,
+        "resistance": 0.14
+      },
+      "resistances": {
+        "damage": 0.04,
+        "knockback": 0.12
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 460,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.24,
+        "active": 0.15,
+        "recovery": 0.38,
+        "punish_window": 0.38,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 5,
+          "max": 9
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          34,
+          43
+        ],
+        "hurtbox_size": [
+          40.12,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          40.8,
+          30.96
+        ],
+        "contact_offset": [
+          14.28,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": false,
@@ -441,7 +1741,99 @@
       "body_size": [
         23,
         57
-      ]
+      ],
+      "patrol_speed": 42.7,
+      "regions": [
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 4.0,
+        "recovery": 0.68,
+        "resistance": 0.4
+      },
+      "resistances": {
+        "damage": 0.16,
+        "knockback": 0.42
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 360,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.56,
+        "active": 0.2,
+        "recovery": 0.58,
+        "punish_window": 0.58,
+        "stagger_damage": 2.0
+      },
+      "hurt": {
+        "duration": 0.24,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 7,
+          "max": 11
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          23,
+          57
+        ],
+        "hurtbox_size": [
+          27.14,
+          61.56
+        ],
+        "contact_hitbox_size": [
+          27.6,
+          41.04
+        ],
+        "contact_offset": [
+          9.66,
+          -20.52
+        ]
+      },
+      "audio_profile": {
+        "attack": "armor_hit",
+        "hurt": "armor_hit",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 700
     },
     {
       "airborne": true,
@@ -466,11 +1858,104 @@
       "attack_range": 280,
       "attack_cooldown": 1.5,
       "chase_speed": 95,
-      "detection_radius": 280,
+      "detection_radius": 320,
       "body_size": [
         28,
         43
-      ]
+      ],
+      "patrol_speed": 55.1,
+      "regions": [
+        "abyssal_night",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 2.5,
+        "recovery": 0.52,
+        "resistance": 0.08
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.05
+      },
+      "detection": {
+        "radius": 320,
+        "leash_distance": 580,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "ranged",
+        "telegraph": 0.46,
+        "active": 0.1,
+        "recovery": 0.4,
+        "punish_window": 0.4,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 5,
+          "max": 8
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          28,
+          43
+        ],
+        "hurtbox_size": [
+          33.04,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          33.6,
+          30.96
+        ],
+        "contact_offset": [
+          11.76,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "laser_shot",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "58f0ff",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": false,
@@ -495,11 +1980,103 @@
       "attack_range": 260,
       "attack_cooldown": 1.35,
       "chase_speed": 80,
-      "detection_radius": 280,
+      "detection_radius": 300,
       "body_size": [
         18,
         45
-      ]
+      ],
+      "patrol_speed": 48.8,
+      "regions": [
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 2.5,
+        "recovery": 0.52,
+        "resistance": 0.1
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.08
+      },
+      "detection": {
+        "radius": 300,
+        "leash_distance": 540,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "ranged",
+        "telegraph": 0.48,
+        "active": 0.1,
+        "recovery": 0.42,
+        "punish_window": 0.42,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 4,
+          "max": 7
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          18,
+          45
+        ],
+        "hurtbox_size": [
+          21.24,
+          48.6
+        ],
+        "contact_hitbox_size": [
+          21.6,
+          32.4
+        ],
+        "contact_offset": [
+          7.56,
+          -16.2
+        ]
+      },
+      "audio_profile": {
+        "attack": "laser_shot",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "58f0ff",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": false,
@@ -525,11 +2102,105 @@
       "attack_range": 260,
       "attack_cooldown": 1.35,
       "chase_speed": 80,
-      "detection_radius": 280,
+      "detection_radius": 300,
       "body_size": [
         18,
         43
-      ]
+      ],
+      "patrol_speed": 48.8,
+      "regions": [
+        "cyber_city",
+        "neon_moon",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 2.5,
+        "recovery": 0.52,
+        "resistance": 0.1
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.08
+      },
+      "detection": {
+        "radius": 300,
+        "leash_distance": 540,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "ranged",
+        "telegraph": 0.48,
+        "active": 0.1,
+        "recovery": 0.42,
+        "punish_window": 0.42,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 4,
+          "max": 7
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          18,
+          43
+        ],
+        "hurtbox_size": [
+          21.24,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          21.6,
+          30.96
+        ],
+        "contact_offset": [
+          7.56,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "laser_shot",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "58f0ff",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     },
     {
       "airborne": false,
@@ -559,7 +2230,100 @@
       "body_size": [
         18,
         35
-      ]
+      ],
+      "patrol_speed": 45.75,
+      "regions": [
+        "cyber_city",
+        "neon_moon"
+      ],
+      "stagger": {
+        "threshold": 4.0,
+        "recovery": 0.64,
+        "resistance": 0.34
+      },
+      "resistances": {
+        "damage": 0.12,
+        "knockback": 0.36
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 380,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.42,
+        "active": 0.18,
+        "recovery": 0.5,
+        "punish_window": 0.5,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.24,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 6,
+          "max": 10
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          18,
+          35
+        ],
+        "hurtbox_size": [
+          21.24,
+          37.8
+        ],
+        "contact_hitbox_size": [
+          21.6,
+          25.2
+        ],
+        "contact_offset": [
+          7.56,
+          -12.6
+        ]
+      },
+      "audio_profile": {
+        "attack": "armor_hit",
+        "hurt": "armor_hit",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 600
     },
     {
       "airborne": false,
@@ -588,7 +2352,101 @@
       "body_size": [
         39,
         43
-      ]
+      ],
+      "patrol_speed": 42.7,
+      "regions": [
+        "abyssal_night",
+        "cyber_city",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 4.0,
+        "recovery": 0.68,
+        "resistance": 0.4
+      },
+      "resistances": {
+        "damage": 0.16,
+        "knockback": 0.42
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 360,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.56,
+        "active": 0.2,
+        "recovery": 0.58,
+        "punish_window": 0.58,
+        "stagger_damage": 2.0
+      },
+      "hurt": {
+        "duration": 0.24,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 7,
+          "max": 11
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "walk",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          39,
+          43
+        ],
+        "hurtbox_size": [
+          46.02,
+          46.44
+        ],
+        "contact_hitbox_size": [
+          46.8,
+          30.96
+        ],
+        "contact_offset": [
+          16.38,
+          -15.48
+        ]
+      },
+      "audio_profile": {
+        "attack": "armor_hit",
+        "hurt": "armor_hit",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 700
     },
     {
       "airborne": false,
@@ -620,7 +2478,100 @@
       "body_size": [
         28,
         56
-      ]
+      ],
+      "patrol_speed": 94.55,
+      "regions": [
+        "abyssal_night",
+        "cyber_city"
+      ],
+      "stagger": {
+        "threshold": 2.0,
+        "recovery": 0.4,
+        "resistance": 0.0
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.0
+      },
+      "detection": {
+        "radius": 210,
+        "leash_distance": 510,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "ground",
+        "requires_floor": true,
+        "can_cross_gaps": false,
+        "tracks_target_vertically": false
+      },
+      "attack": {
+        "kind": "melee",
+        "telegraph": 0.2,
+        "active": 0.12,
+        "recovery": 0.24,
+        "punish_window": 0.24,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 3,
+          "max": 5
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "run",
+        "attack": "attack_1",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          28,
+          56
+        ],
+        "hurtbox_size": [
+          33.04,
+          60.48
+        ],
+        "contact_hitbox_size": [
+          33.6,
+          40.32
+        ],
+        "contact_offset": [
+          11.76,
+          -20.16
+        ]
+      },
+      "audio_profile": {
+        "attack": "sword_slash",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "ff6b45",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 300
     },
     {
       "airborne": true,
@@ -646,13 +2597,108 @@
       "attack_range": 260,
       "attack_cooldown": 1.35,
       "chase_speed": 80,
-      "detection_radius": 280,
+      "detection_radius": 300,
       "body_size": [
         22,
         56
-      ]
+      ],
+      "patrol_speed": 46.4,
+      "regions": [
+        "abyssal_night",
+        "cyber_city",
+        "neon_moon",
+        "robot_factory"
+      ],
+      "stagger": {
+        "threshold": 2.5,
+        "recovery": 0.52,
+        "resistance": 0.1
+      },
+      "resistances": {
+        "damage": 0.0,
+        "knockback": 0.08
+      },
+      "detection": {
+        "radius": 300,
+        "leash_distance": 540,
+        "requires_line_of_sight": false
+      },
+      "navigation": {
+        "mode": "flight",
+        "requires_floor": false,
+        "can_cross_gaps": true,
+        "tracks_target_vertically": true
+      },
+      "attack": {
+        "kind": "ranged",
+        "telegraph": 0.48,
+        "active": 0.1,
+        "recovery": 0.42,
+        "punish_window": 0.42,
+        "stagger_damage": 1.0
+      },
+      "hurt": {
+        "duration": 0.2,
+        "interrupts_attack": true
+      },
+      "death": {
+        "behavior": "despawn_after_animation",
+        "sfx": "explosion",
+        "vfx": "explosion_ring"
+      },
+      "drop_table": [
+        {
+          "type": "currency",
+          "id": "credits",
+          "chance": 1.0,
+          "min": 4,
+          "max": 7
+        }
+      ],
+      "animation_map": {
+        "idle": "idle",
+        "move": "move",
+        "attack": "attack",
+        "hurt": "hurt",
+        "death": "death"
+      },
+      "collision": {
+        "body_size": [
+          22,
+          56
+        ],
+        "hurtbox_size": [
+          25.96,
+          60.48
+        ],
+        "contact_hitbox_size": [
+          26.4,
+          40.32
+        ],
+        "contact_offset": [
+          9.24,
+          -20.16
+        ]
+      },
+      "audio_profile": {
+        "attack": "laser_shot",
+        "hurt": "player_hurt",
+        "death": "explosion"
+      },
+      "vfx_profile": {
+        "telegraph_color": "58f0ff",
+        "death": "explosion_ring"
+      },
+      "difficulty_variants": {
+        "act_balance_profile": "res://scripts/campaign/ActBalanceProfile.gd",
+        "elite": {
+          "health_multiplier": 2.0,
+          "palette": "ff59d4"
+        }
+      },
+      "score_value": 400
     }
   ],
   "enemy_count": 22,
-  "schema_version": 1
+  "schema_version": 2
 }

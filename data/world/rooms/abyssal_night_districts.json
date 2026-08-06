@@ -1,0 +1,6507 @@
+{
+  "schema_version": 2,
+  "rooms": [
+    {
+      "id": "void_outpost_entry",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Breach",
+      "map_cell": [
+        41,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 94,
+        "expert_seconds": 23
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          180,
+          400,
+          160,
+          16
+        ],
+        [
+          590,
+          310,
+          180,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            455
+          ],
+          "size": [
+            180,
+            90
+          ],
+          "active": 1.2,
+          "inactive": 1.6,
+          "damage": 1,
+          "exposure": 16
+        }
+      ],
+      "tutorial": "CORRUPTION BUILDS WHILE YOU REMAIN IN MAGENTA FIELDS • FIND A CLEANSING CORE",
+      "story_beat": "abyssal_breach_arrival",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_exit",
+          "target_connection": "east",
+          "map_hidden": true
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_spore_threshold",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 122
+    },
+    {
+      "id": "void_outpost_ruins",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Fallen Relay",
+      "map_cell": [
+        39,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 122,
+        "expert_seconds": 30
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          230,
+          40
+        ],
+        [
+          330,
+          500,
+          250,
+          40
+        ],
+        [
+          690,
+          500,
+          270,
+          40
+        ],
+        [
+          110,
+          380,
+          140,
+          16
+        ],
+        [
+          410,
+          300,
+          150,
+          16
+        ],
+        [
+          720,
+          370,
+          150,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            280,
+            500
+          ],
+          "size": [
+            90,
+            45
+          ],
+          "active": 1.0,
+          "inactive": 1.4,
+          "damage": 1
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            635,
+            500
+          ],
+          "size": [
+            90,
+            45
+          ],
+          "active": 1.0,
+          "inactive": 1.4,
+          "damage": 1,
+          "phase": 0.7
+        }
+      ],
+      "encounters": [
+        {
+          "id": "outpost_corrupted_patrol",
+          "activation": [
+            150,
+            130,
+            680,
+            370
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "werewolf",
+                "position": [
+                  350,
+                  455
+                ]
+              },
+              {
+                "enemy": "death_knight",
+                "position": [
+                  720,
+                  455
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "demon_boss",
+                "position": [
+                  520,
+                  430
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_spore_threshold",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_ruin_cadence",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 124
+    },
+    {
+      "id": "void_outpost_relay",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Overgrown Battery",
+      "map_cell": [
+        37,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          390,
+          160,
+          16
+        ],
+        [
+          390,
+          300,
+          180,
+          16
+        ],
+        [
+          700,
+          390,
+          160,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            435
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -190
+            ]
+          ],
+          "speed": 105
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            300,
+            450
+          ],
+          "size": [
+            120,
+            95
+          ],
+          "active": 1.1,
+          "inactive": 1.3,
+          "damage": 1
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            680,
+            440
+          ],
+          "size": [
+            90,
+            110
+          ],
+          "active": 0.8,
+          "inactive": 1.2
+        }
+      ],
+      "encounters": [
+        {
+          "id": "outpost_relay_elites",
+          "activation": [
+            140,
+            120,
+            690,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "death_knight",
+                "position": [
+                  320,
+                  455
+                ]
+              },
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  680,
+                  230
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "headless_horseman",
+                "position": [
+                  520,
+                  440
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_ruin_cadence",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_black_rain",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 126
+    },
+    {
+      "id": "void_outpost_purifier",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Cleansing Core",
+      "map_cell": [
+        34,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 160,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            200,
+            95
+          ],
+          "active": 0.9,
+          "inactive": 1.5,
+          "damage": 1
+        }
+      ],
+      "ability_reward": {
+        "ability": "corruption_resistance",
+        "display_name": "Abyssal Filter",
+        "position": [
+          480,
+          265
+        ],
+        "dialogue": "corruption_resistance_acquired"
+      },
+      "story_beat": "outpost_cleansed",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_purifier_shadow",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 129
+    },
+    {
+      "id": "void_chasm_entry",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Descent",
+      "map_cell": [
+        33,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 97,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          230,
+          40
+        ],
+        [
+          340,
+          430,
+          120,
+          16
+        ],
+        [
+          560,
+          350,
+          120,
+          16
+        ],
+        [
+          790,
+          500,
+          170,
+          40
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            280,
+            440
+          ],
+          "size": [
+            100,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -150
+            ]
+          ],
+          "speed": 110
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            510,
+            510
+          ],
+          "size": [
+            560,
+            44
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_purifier",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_echo_ledge",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 130
+    },
+    {
+      "id": "void_chasm_midway",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Blind Platforms",
+      "map_cell": [
+        31,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 125,
+        "expert_seconds": 31
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          170,
+          40
+        ],
+        [
+          790,
+          500,
+          170,
+          40
+        ],
+        [
+          90,
+          400,
+          130,
+          16
+        ],
+        [
+          300,
+          320,
+          130,
+          16
+        ],
+        [
+          520,
+          240,
+          130,
+          16
+        ],
+        [
+          750,
+          350,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 100
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            620,
+            44
+          ]
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            520,
+            225
+          ],
+          "size": [
+            130,
+            70
+          ],
+          "active": 1.0,
+          "inactive": 1.4,
+          "damage": 0
+        }
+      ],
+      "encounters": [
+        {
+          "id": "chasm_midway_hunters",
+          "activation": [
+            130,
+            90,
+            700,
+            410
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  340,
+                  250
+                ]
+              },
+              {
+                "enemy": "harpy",
+                "position": [
+                  680,
+                  190
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_echo_ledge",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_blind_descent",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "void_chasm_secret",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 132
+    },
+    {
+      "id": "void_chasm_secret",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Null Cache",
+      "map_cell": [
+        30,
+        13
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 160,
+        "expert_seconds": 38,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          170,
+          40
+        ],
+        [
+          790,
+          500,
+          170,
+          40
+        ],
+        [
+          110,
+          380,
+          130,
+          16
+        ],
+        [
+          400,
+          280,
+          150,
+          16
+        ],
+        [
+          710,
+          380,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            95,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -170
+            ]
+          ],
+          "speed": 145
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            590,
+            44
+          ]
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            280
+          ],
+          "radius": 145,
+          "speed": 0.85
+        }
+      ],
+      "reward": {
+        "id": "bow_void_string",
+        "family": "bow",
+        "display_name": "Void String",
+        "position": [
+          480,
+          245
+        ],
+        "dialogue": "void_string_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "void_chasm_midway",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_depths",
+          "target_connection": "secret"
+        }
+      ]
+    },
+    {
+      "id": "void_chasm_depths",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Broken Lift",
+      "map_cell": [
+        29,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 135,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "secret": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          90,
+          400,
+          130,
+          16
+        ],
+        [
+          310,
+          310,
+          130,
+          16
+        ],
+        [
+          540,
+          220,
+          130,
+          16
+        ],
+        [
+          760,
+          350,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -285
+            ]
+          ],
+          "speed": 120
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            270,
+            350
+          ],
+          "size": [
+            95,
+            18
+          ]
+        },
+        {
+          "position": [
+            670,
+            300
+          ],
+          "size": [
+            95,
+            18
+          ]
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            620,
+            44
+          ]
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            540,
+            205
+          ],
+          "size": [
+            130,
+            70
+          ],
+          "active": 1.0,
+          "inactive": 1.4,
+          "damage": 0
+        }
+      ],
+      "encounters": [
+        {
+          "id": "chasm_depths_blockade",
+          "activation": [
+            130,
+            80,
+            700,
+            420
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "headless_horseman",
+                "position": [
+                  330,
+                  450
+                ]
+              },
+              {
+                "enemy": "harpy",
+                "position": [
+                  680,
+                  190
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "death_knight",
+                "position": [
+                  520,
+                  440
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_blind_descent",
+          "target_connection": "east"
+        },
+        {
+          "id": "secret",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "void_chasm_secret",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_fracture_echo",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 134
+    },
+    {
+      "id": "void_chasm_exit",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Recovery Ledge",
+      "map_cell": [
+        26,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 164,
+        "expert_seconds": 41
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          160,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "save_room": {
+        "id": "save_chasm_recovery",
+        "position": [
+          700,
+          445
+        ]
+      },
+      "shortcut": {
+        "id": "shortcut_chasm_lift",
+        "position": [
+          260,
+          340
+        ],
+        "size": [
+          24,
+          120
+        ],
+        "approach": "right",
+        "target_room": "void_chasm_entry",
+        "target_connection": "east"
+      },
+      "story_beat": "chasm_signal_record",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_lantern_shelf",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 137
+    },
+    {
+      "id": "void_nest_entry",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Outer Vein",
+      "map_cell": [
+        25,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 98,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          180,
+          390,
+          150,
+          16
+        ],
+        [
+          420,
+          310,
+          140,
+          16
+        ],
+        [
+          680,
+          390,
+          150,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            455
+          ],
+          "size": [
+            190,
+            90
+          ],
+          "active": 1.0,
+          "inactive": 1.4,
+          "damage": 0
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_exit",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_membrane_gate",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 138
+    },
+    {
+      "id": "void_nest_hatchery",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Hatchery",
+      "map_cell": [
+        23,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 127,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          390,
+          160,
+          16
+        ],
+        [
+          390,
+          300,
+          180,
+          16
+        ],
+        [
+          700,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            300,
+            450
+          ],
+          "size": [
+            120,
+            95
+          ],
+          "active": 1.1,
+          "inactive": 1.3,
+          "damage": 0
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            680,
+            450
+          ],
+          "size": [
+            120,
+            95
+          ],
+          "active": 1.1,
+          "inactive": 1.3,
+          "damage": 0,
+          "phase": 0.7
+        }
+      ],
+      "encounters": [
+        {
+          "id": "nest_hatchery_ambush",
+          "activation": [
+            140,
+            120,
+            690,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "mimic",
+                "position": [
+                  310,
+                  450
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  680,
+                  350
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cerberus",
+                "position": [
+                  510,
+                  440
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_membrane_gate",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_sinew_bridge",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 140
+    },
+    {
+      "id": "void_nest_veins",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Pulsing Veins",
+      "map_cell": [
+        21,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 137,
+        "expert_seconds": 34
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          220,
+          40
+        ],
+        [
+          300,
+          500,
+          180,
+          40
+        ],
+        [
+          560,
+          500,
+          180,
+          40
+        ],
+        [
+          820,
+          500,
+          140,
+          40
+        ],
+        [
+          110,
+          370,
+          150,
+          16
+        ],
+        [
+          405,
+          290,
+          150,
+          16
+        ],
+        [
+          700,
+          370,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -190
+            ]
+          ],
+          "speed": 110
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            260,
+            500
+          ],
+          "size": [
+            80,
+            45
+          ],
+          "active": 0.9,
+          "inactive": 1.2,
+          "damage": 0
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            520,
+            500
+          ],
+          "size": [
+            80,
+            45
+          ],
+          "active": 0.9,
+          "inactive": 1.2,
+          "damage": 0,
+          "phase": 0.5
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            780,
+            500
+          ],
+          "size": [
+            80,
+            45
+          ],
+          "active": 0.9,
+          "inactive": 1.2,
+          "damage": 0,
+          "phase": 1.0
+        }
+      ],
+      "encounters": [
+        {
+          "id": "nest_vein_guardians",
+          "activation": [
+            140,
+            110,
+            690,
+            390
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "cerberus",
+                "position": [
+                  320,
+                  450
+                ]
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  680,
+                  230
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "death_knight",
+                "position": [
+                  500,
+                  440
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  650,
+                  340
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_sinew_bridge",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_hatchery_spasm",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "void_nest_cache",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 142
+    },
+    {
+      "id": "void_nest_cache",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Cleansed Node",
+      "map_cell": [
+        20,
+        13
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 155,
+        "expert_seconds": 38,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          160,
+          16
+        ],
+        [
+          405,
+          300,
+          150,
+          16
+        ],
+        [
+          680,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            220,
+            95
+          ],
+          "active": 0.75,
+          "inactive": 1.45,
+          "damage": 0
+        }
+      ],
+      "reward": {
+        "id": "spear_cleansing_spike",
+        "family": "spear",
+        "display_name": "Cleansing Spike",
+        "position": [
+          480,
+          265
+        ],
+        "dialogue": "cleansing_spike_found"
+      },
+      "story_beat": "nest_evidence_reveal",
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "void_nest_veins",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_core",
+          "target_connection": "cache"
+        }
+      ]
+    },
+    {
+      "id": "void_nest_core",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Field Core",
+      "map_cell": [
+        18,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 167,
+        "expert_seconds": 42
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "cache": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          390,
+          170,
+          16
+        ],
+        [
+          395,
+          285,
+          170,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            240,
+            95
+          ],
+          "active": 1.0,
+          "inactive": 1.4,
+          "damage": 0
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 145,
+          "speed": 0.8
+        }
+      ],
+      "ability_reward": {
+        "ability": "energy_field",
+        "display_name": "Null Energy Field",
+        "position": [
+          480,
+          245
+        ],
+        "dialogue": "energy_field_acquired"
+      },
+      "story_beat": "nest_core_cleansed",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_nerve_quiet",
+          "target_connection": "east"
+        },
+        {
+          "id": "cache",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "void_nest_cache",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 145
+    },
+    {
+      "id": "void_sanctuary_entry",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Relay Nave",
+      "map_cell": [
+        17,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 98,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "warp": [
+          480,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          190,
+          380,
+          180,
+          16
+        ],
+        [
+          590,
+          380,
+          180,
+          16
+        ]
+      ],
+      "warp_room": {
+        "id": "warp_void_sanctuary",
+        "position": [
+          480,
+          445
+        ]
+      },
+      "story_beat": "sanctuary_arrival",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_core",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_null_procession",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 146
+    },
+    {
+      "id": "void_sanctuary_conveyor",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Foundry Testament",
+      "map_cell": [
+        15,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 127,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          380,
+          160,
+          16
+        ],
+        [
+          400,
+          290,
+          160,
+          16
+        ],
+        [
+          690,
+          380,
+          160,
+          16
+        ]
+      ],
+      "conveyors": [
+        {
+          "position": [
+            280,
+            480
+          ],
+          "size": [
+            250,
+            22
+          ],
+          "speed": 170,
+          "reversible": true,
+          "reverse_interval": 2.7
+        },
+        {
+          "position": [
+            690,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -170,
+          "reversible": true,
+          "reverse_interval": 2.7
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            110,
+            95
+          ],
+          "active": 0.9,
+          "inactive": 1.3,
+          "damage": 0
+        }
+      ],
+      "encounters": [
+        {
+          "id": "sanctuary_foundry_trial",
+          "activation": [
+            140,
+            120,
+            690,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "stone_golem",
+                "position": [
+                  320,
+                  450
+                ]
+              },
+              {
+                "enemy": "death_knight",
+                "position": [
+                  690,
+                  450
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cerberus",
+                "position": [
+                  510,
+                  440
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_null_procession",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_reliquary_belt",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 148
+    },
+    {
+      "id": "void_sanctuary_gravity",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Lunar Testament",
+      "map_cell": [
+        13,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 137,
+        "expert_seconds": 34
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          100,
+          380,
+          140,
+          16
+        ],
+        [
+          400,
+          280,
+          160,
+          16
+        ],
+        [
+          710,
+          380,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -160
+            ]
+          ],
+          "speed": 125
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            300,
+            270
+          ],
+          "size": [
+            340,
+            410
+          ],
+          "gravity": -0.38
+        },
+        {
+          "type": "gravity_zone",
+          "position": [
+            680,
+            270
+          ],
+          "size": [
+            340,
+            410
+          ],
+          "gravity": 0.32
+        },
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            560,
+            44
+          ]
+        }
+      ],
+      "encounters": [
+        {
+          "id": "sanctuary_lunar_trial",
+          "activation": [
+            140,
+            100,
+            690,
+            400
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  350,
+                  220
+                ]
+              },
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  680,
+                  200
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "headless_horseman",
+                "position": [
+                  520,
+                  440
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_reliquary_belt",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_convergence_apse",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "void_sanctuary_trial",
+          "target_connection": "north",
+          "required_ability": "energy_field",
+          "barrier_id": "barrier_sanctuary_null_trial"
+        }
+      ],
+      "critical_path_index": 150
+    },
+    {
+      "id": "void_sanctuary_trial",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Null Trial",
+      "map_cell": [
+        12,
+        13
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 170,
+        "expert_seconds": 42,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          110,
+          380,
+          130,
+          16
+        ],
+        [
+          400,
+          280,
+          150,
+          16
+        ],
+        [
+          710,
+          380,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            95,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -170
+            ]
+          ],
+          "speed": 145
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            590,
+            44
+          ]
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            220,
+            160
+          ],
+          "active": 1.0,
+          "inactive": 1.2,
+          "damage": 0
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            280
+          ],
+          "radius": 140,
+          "speed": 0.9
+        }
+      ],
+      "reward": {
+        "id": "sword_convergence_edge",
+        "family": "sword",
+        "display_name": "Convergence Edge",
+        "position": [
+          480,
+          245
+        ],
+        "dialogue": "convergence_edge_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "void_sanctuary_gravity",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_crown",
+          "target_connection": "trial"
+        }
+      ]
+    },
+    {
+      "id": "void_sanctuary_crown",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Final Testament",
+      "map_cell": [
+        10,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 167,
+        "expert_seconds": 42
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "trial": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          380,
+          160,
+          16
+        ],
+        [
+          400,
+          285,
+          160,
+          16
+        ],
+        [
+          690,
+          380,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            300,
+            440
+          ],
+          "size": [
+            90,
+            110
+          ],
+          "active": 0.8,
+          "inactive": 1.2
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            120,
+            95
+          ],
+          "active": 0.9,
+          "inactive": 1.3,
+          "damage": 0
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            620,
+            280
+          ],
+          "radius": 120,
+          "speed": 0.8
+        }
+      ],
+      "encounters": [
+        {
+          "id": "sanctuary_final_elites",
+          "activation": [
+            130,
+            100,
+            700,
+            400
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "death_knight",
+                "position": [
+                  300,
+                  450
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  690,
+                  350
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cerberus",
+                "position": [
+                  510,
+                  440
+                ],
+                "elite": true
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  630,
+                  220
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "story_beat": "void_cerberus_preparation",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_heart_vigil",
+          "target_connection": "east"
+        },
+        {
+          "id": "trial",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "void_sanctuary_trial",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 153
+    },
+    {
+      "id": "void_heart_entry",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Commitment Gate",
+      "map_cell": [
+        9,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 29
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          250,
+          360,
+          460,
+          18
+        ]
+      ],
+      "save_room": {
+        "id": "save_heart_commitment",
+        "position": [
+          480,
+          445
+        ]
+      },
+      "story_beat": "void_cerberus_warning",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_crown",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_ventricle_gate",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 154
+    },
+    {
+      "id": "void_heart_approach",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Desperation Run",
+      "map_cell": [
+        7,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 142,
+        "expert_seconds": 37
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          90,
+          380,
+          140,
+          16
+        ],
+        [
+          400,
+          285,
+          160,
+          16
+        ],
+        [
+          710,
+          380,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -150
+            ]
+          ],
+          "speed": 135
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            560,
+            44
+          ]
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            280
+          ],
+          "size": [
+            180,
+            160
+          ],
+          "active": 0.9,
+          "inactive": 1.2,
+          "damage": 0
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 160,
+          "speed": 1.0
+        }
+      ],
+      "encounters": [
+        {
+          "id": "heart_final_guard",
+          "activation": [
+            130,
+            90,
+            700,
+            410
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "death_knight",
+                "position": [
+                  320,
+                  450
+                ]
+              },
+              {
+                "enemy": "headless_horseman",
+                "position": [
+                  690,
+                  440
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cerberus",
+                "position": [
+                  510,
+                  440
+                ],
+                "elite": true
+              },
+              {
+                "enemy": "demon_boss",
+                "position": [
+                  650,
+                  330
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_ventricle_gate",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_arterial_crossing",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 156
+    },
+    {
+      "id": "void_heart_arena",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Cerberus Arena",
+      "map_cell": [
+        5,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 153,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          90,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          365,
+          150,
+          16
+        ],
+        [
+          405,
+          280,
+          150,
+          16
+        ],
+        [
+          690,
+          365,
+          150,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            300,
+            455
+          ],
+          "size": [
+            120,
+            90
+          ],
+          "active": 1.0,
+          "inactive": 1.6,
+          "damage": 0
+        },
+        {
+          "type": "corruption_zone",
+          "position": [
+            660,
+            455
+          ],
+          "size": [
+            120,
+            90
+          ],
+          "active": 1.0,
+          "inactive": 1.6,
+          "damage": 0,
+          "phase": 0.8
+        }
+      ],
+      "boss": {
+        "id": "void_cerberus",
+        "scene": "res://Characters/Bosses/Scenes/act4_void_cerberus.tscn",
+        "position": [
+          650,
+          405
+        ],
+        "arena": [
+          110,
+          70,
+          760,
+          430
+        ],
+        "completion_flag": "void_cerberus_defeated",
+        "intro_sequence": "void_cerberus_warning",
+        "defeat_sequence": "abyssal_ending"
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_arterial_crossing",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_memory_collapse",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 158
+    },
+    {
+      "id": "void_heart_exit",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Silent Core",
+      "map_cell": [
+        2,
+        12
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 186,
+        "expert_seconds": 49
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "story_triggers": [
+        {
+          "sequence_id": "abyssal_ending",
+          "trigger_id": "story_trigger_abyssal_ending",
+          "rect": [
+            0,
+            0,
+            960,
+            540
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_core_stillness",
+          "target_connection": "east"
+        }
+      ],
+      "critical_path_index": 161
+    },
+    {
+      "id": "corrupted_outpost_exp_spore_threshold",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Spore Threshold",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 99,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Teach corruption exposure with immediate clean recovery ground.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          85,
+          430,
+          185,
+          18
+        ],
+        [
+          290,
+          358,
+          155,
+          18
+        ],
+        [
+          505,
+          416,
+          160,
+          18
+        ],
+        [
+          735,
+          329,
+          165,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_ruins",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "corrupted_outpost_opt_evacuation_tape",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 123,
+      "map_cell": [
+        40,
+        12
+      ],
+      "layout_id": "corrupted_outpost_teach_spore_threshold",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower"
+    },
+    {
+      "id": "corrupted_outpost_exp_ruin_cadence",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Ruin Cadence",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 108,
+        "expert_seconds": 27
+      },
+      "room_role": "test",
+      "design_intent": "Test deliberate movement across collapsing outpost remains.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          285,
+          40
+        ],
+        [
+          565,
+          500,
+          395,
+          40
+        ],
+        [
+          75,
+          420,
+          155,
+          18
+        ],
+        [
+          305,
+          335,
+          130,
+          18
+        ],
+        [
+          500,
+          415,
+          135,
+          18
+        ],
+        [
+          745,
+          305,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_ruins",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_relay",
+          "target_connection": "west"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 125,
+      "map_cell": [
+        38,
+        12
+      ],
+      "layout_id": "corrupted_outpost_test_ruin_cadence",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower"
+    },
+    {
+      "id": "corrupted_outpost_exp_black_rain",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Black Rain",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "twist",
+      "design_intent": "Combine intermittent corruption shelter with broken footing.",
+      "mechanic_contract": "void_pit",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          285,
+          40
+        ],
+        [
+          605,
+          500,
+          355,
+          40
+        ],
+        [
+          105,
+          385,
+          145,
+          18
+        ],
+        [
+          270,
+          360,
+          120,
+          18
+        ],
+        [
+          530,
+          380,
+          125,
+          18
+        ],
+        [
+          720,
+          340,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_relay",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_purifier_shadow",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            270,
+            44
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 127,
+      "map_cell": [
+        36,
+        12
+      ],
+      "layout_id": "corrupted_outpost_twist_black_rain",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower"
+    },
+    {
+      "id": "corrupted_outpost_exp_purifier_shadow",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Purifier Shadow",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "recovery",
+      "design_intent": "Offer a clean staging pocket before the outpost purifier.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          85,
+          445,
+          200,
+          18
+        ],
+        [
+          295,
+          375,
+          170,
+          18
+        ],
+        [
+          500,
+          440,
+          175,
+          18
+        ],
+        [
+          735,
+          355,
+          185,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "corrupted_outpost_exp_black_rain",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_purifier",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "corrupted_outpost_opt_sealed_well",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 128,
+      "map_cell": [
+        35,
+        12
+      ],
+      "layout_id": "corrupted_outpost_recovery_purifier_shadow",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower"
+    },
+    {
+      "id": "the_dark_chasm_exp_echo_ledge",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Echo Ledge",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 101,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Teach the chasm's vertical platform rhythm over shallow consequences.",
+      "mechanic_contract": "moving_vertical",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          260,
+          165,
+          18
+        ],
+        [
+          335,
+          338,
+          155,
+          18
+        ],
+        [
+          550,
+          411,
+          165,
+          18
+        ],
+        [
+          760,
+          459,
+          155,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_midway",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 88,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 131,
+      "map_cell": [
+        32,
+        12
+      ],
+      "layout_id": "the_dark_chasm_teach_echo_ledge",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "blind descending ledges that resolve into a deep return shelf",
+      "landmark": "fossil lift suspended over the chasm"
+    },
+    {
+      "id": "the_dark_chasm_exp_blind_descent",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Blind Descent",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 111,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test committing to silhouettes before the landing fully resolves.",
+      "mechanic_contract": "void_pit",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          375,
+          40
+        ],
+        [
+          655,
+          500,
+          305,
+          40
+        ],
+        [
+          110,
+          250,
+          135,
+          18
+        ],
+        [
+          350,
+          315,
+          130,
+          18
+        ],
+        [
+          545,
+          410,
+          140,
+          18
+        ],
+        [
+          770,
+          435,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_midway",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_depths",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            270,
+            44
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 133,
+      "map_cell": [
+        30,
+        12
+      ],
+      "layout_id": "the_dark_chasm_test_blind_descent",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "blind descending ledges that resolve into a deep return shelf",
+      "landmark": "fossil lift suspended over the chasm"
+    },
+    {
+      "id": "the_dark_chasm_exp_fracture_echo",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Fracture Echo",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 116,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Turn familiar return platforms into a collapsing descent.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          375,
+          40
+        ],
+        [
+          695,
+          500,
+          265,
+          40
+        ],
+        [
+          140,
+          215,
+          125,
+          18
+        ],
+        [
+          315,
+          340,
+          120,
+          18
+        ],
+        [
+          575,
+          375,
+          130,
+          18
+        ],
+        [
+          745,
+          470,
+          130,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_depths",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_lantern_shelf",
+          "target_connection": "west"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 135,
+      "map_cell": [
+        28,
+        12
+      ],
+      "layout_id": "the_dark_chasm_twist_fracture_echo",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "blind descending ledges that resolve into a deep return shelf",
+      "landmark": "fossil lift suspended over the chasm"
+    },
+    {
+      "id": "the_dark_chasm_exp_lantern_shelf",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Lantern Shelf",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 116,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Provide a clean visual anchor before the nest boundary.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          275,
+          180,
+          18
+        ],
+        [
+          340,
+          355,
+          170,
+          18
+        ],
+        [
+          545,
+          435,
+          180,
+          18
+        ],
+        [
+          760,
+          470,
+          175,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "the_dark_chasm_exp_fracture_echo",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_chasm_exit",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "the_dark_chasm_opt_miners_echo",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 136,
+      "map_cell": [
+        27,
+        12
+      ],
+      "layout_id": "the_dark_chasm_recovery_lantern_shelf",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "blind descending ledges that resolve into a deep return shelf",
+      "landmark": "fossil lift suspended over the chasm"
+    },
+    {
+      "id": "bio_mechanical_nest_exp_membrane_gate",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Membrane Gate",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 103,
+        "expert_seconds": 26
+      },
+      "room_role": "teach",
+      "design_intent": "Teach pulsing biological gates with generous clean intervals.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          430,
+          175,
+          18
+        ],
+        [
+          300,
+          368,
+          155,
+          18
+        ],
+        [
+          500,
+          291,
+          165,
+          18
+        ],
+        [
+          720,
+          364,
+          180,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_hatchery",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 139,
+      "map_cell": [
+        24,
+        12
+      ],
+      "layout_id": "bio_mechanical_nest_teach_membrane_gate",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "contracting sinew bridges wrapped around a pulsing central chamber",
+      "landmark": "living hatchery membrane"
+    },
+    {
+      "id": "bio_mechanical_nest_exp_sinew_bridge",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Sinew Bridge",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test movement on living platforms that visibly contract first.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          310,
+          40
+        ],
+        [
+          590,
+          500,
+          370,
+          40
+        ],
+        [
+          90,
+          420,
+          145,
+          18
+        ],
+        [
+          315,
+          345,
+          130,
+          18
+        ],
+        [
+          495,
+          290,
+          140,
+          18
+        ],
+        [
+          730,
+          340,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_hatchery",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_veins",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 100,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 141,
+      "map_cell": [
+        22,
+        12
+      ],
+      "layout_id": "bio_mechanical_nest_test_sinew_bridge",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "contracting sinew bridges wrapped around a pulsing central chamber",
+      "landmark": "living hatchery membrane"
+    },
+    {
+      "id": "bio_mechanical_nest_exp_hatchery_spasm",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Hatchery Spasm",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 118,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Combine unstable footing with corruption-safe route changes.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          310,
+          40
+        ],
+        [
+          630,
+          500,
+          330,
+          40
+        ],
+        [
+          120,
+          385,
+          135,
+          18
+        ],
+        [
+          280,
+          370,
+          120,
+          18
+        ],
+        [
+          525,
+          255,
+          130,
+          18
+        ],
+        [
+          705,
+          375,
+          155,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_veins",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_nerve_quiet",
+          "target_connection": "west"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 143,
+      "map_cell": [
+        20,
+        12
+      ],
+      "layout_id": "bio_mechanical_nest_twist_hatchery_spasm",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "contracting sinew bridges wrapped around a pulsing central chamber",
+      "landmark": "living hatchery membrane"
+    },
+    {
+      "id": "bio_mechanical_nest_exp_nerve_quiet",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Nerve Quiet",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 117,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Create a still chamber before the nest core's story reveal.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          445,
+          190,
+          18
+        ],
+        [
+          305,
+          385,
+          170,
+          18
+        ],
+        [
+          495,
+          315,
+          180,
+          18
+        ],
+        [
+          720,
+          390,
+          200,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_mechanical_nest_exp_hatchery_spasm",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_nest_core",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "bio_mechanical_nest_opt_gestation_record",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 144,
+      "map_cell": [
+        19,
+        12
+      ],
+      "layout_id": "bio_mechanical_nest_recovery_nerve_quiet",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "contracting sinew bridges wrapped around a pulsing central chamber",
+      "landmark": "living hatchery membrane"
+    },
+    {
+      "id": "abyssal_sanctuary_exp_null_procession",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Null Procession",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 103,
+        "expert_seconds": 26
+      },
+      "room_role": "teach",
+      "design_intent": "Teach sanctuary gravity reversals on a broad ceremonial route.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          85,
+          415,
+          180,
+          18
+        ],
+        [
+          300,
+          333,
+          160,
+          18
+        ],
+        [
+          535,
+          331,
+          155,
+          18
+        ],
+        [
+          765,
+          409,
+          165,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_conveyor",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.42
+        }
+      ],
+      "critical_path_index": 147,
+      "map_cell": [
+        16,
+        12
+      ],
+      "layout_id": "abyssal_sanctuary_teach_null_procession",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "ceremonial mirrored steps interrupted by gravity reversals",
+      "landmark": "null-energy reliquary"
+    },
+    {
+      "id": "abyssal_sanctuary_exp_reliquary_belt",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Reliquary Belt",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test position control on an ancient self-reversing procession belt.",
+      "mechanic_contract": "conveyor_reverse",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          355,
+          40
+        ],
+        [
+          635,
+          500,
+          325,
+          40
+        ],
+        [
+          75,
+          405,
+          150,
+          18
+        ],
+        [
+          315,
+          310,
+          135,
+          18
+        ],
+        [
+          530,
+          330,
+          130,
+          18
+        ],
+        [
+          775,
+          385,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_conveyor",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_gravity",
+          "target_connection": "west"
+        }
+      ],
+      "conveyors": [
+        {
+          "id": "abyssal_sanctuary_exp_reliquary_belt_belt_a",
+          "position": [
+            275,
+            480
+          ],
+          "size": [
+            310,
+            22
+          ],
+          "speed": 105,
+          "reversible": true,
+          "reverse_interval": 3.2
+        },
+        {
+          "id": "abyssal_sanctuary_exp_reliquary_belt_belt_b",
+          "position": [
+            700,
+            480
+          ],
+          "size": [
+            260,
+            22
+          ],
+          "speed": -115,
+          "reversible": true,
+          "reverse_interval": 3.2
+        }
+      ],
+      "critical_path_index": 149,
+      "map_cell": [
+        14,
+        12
+      ],
+      "layout_id": "abyssal_sanctuary_test_reliquary_belt",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "ceremonial mirrored steps interrupted by gravity reversals",
+      "landmark": "null-energy reliquary"
+    },
+    {
+      "id": "abyssal_sanctuary_exp_convergence_apse",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Convergence Apse",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 118,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Combine gravity drift with a rotating null-energy focus.",
+      "mechanic_contract": "rotating_laser",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          355,
+          40
+        ],
+        [
+          675,
+          500,
+          285,
+          40
+        ],
+        [
+          105,
+          370,
+          140,
+          18
+        ],
+        [
+          280,
+          335,
+          125,
+          18
+        ],
+        [
+          560,
+          295,
+          120,
+          18
+        ],
+        [
+          750,
+          420,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_gravity",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_heart_vigil",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            300
+          ],
+          "radius": 175,
+          "speed": 0.74,
+          "clockwise": true
+        }
+      ],
+      "critical_path_index": 151,
+      "map_cell": [
+        12,
+        12
+      ],
+      "layout_id": "abyssal_sanctuary_twist_convergence_apse",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "ceremonial mirrored steps interrupted by gravity reversals",
+      "landmark": "null-energy reliquary"
+    },
+    {
+      "id": "abyssal_sanctuary_exp_heart_vigil",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Heart Vigil",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 117,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Offer a final quiet threshold before the Heart district.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          85,
+          430,
+          195,
+          18
+        ],
+        [
+          305,
+          350,
+          175,
+          18
+        ],
+        [
+          530,
+          355,
+          170,
+          18
+        ],
+        [
+          755,
+          435,
+          185,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "abyssal_sanctuary_exp_convergence_apse",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_sanctuary_crown",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "abyssal_sanctuary_opt_pilgrim_cipher",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 152,
+      "map_cell": [
+        11,
+        12
+      ],
+      "layout_id": "abyssal_sanctuary_recovery_heart_vigil",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "ceremonial mirrored steps interrupted by gravity reversals",
+      "landmark": "null-energy reliquary"
+    },
+    {
+      "id": "heart_of_the_void_exp_ventricle_gate",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Ventricle Gate",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 115,
+        "expert_seconds": 30
+      },
+      "room_role": "teach",
+      "design_intent": "Review corruption-safe movement in a readable final-district threshold.",
+      "mechanic_contract": "corruption_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          440,
+          175,
+          18
+        ],
+        [
+          300,
+          353,
+          155,
+          18
+        ],
+        [
+          480,
+          261,
+          170,
+          18
+        ],
+        [
+          680,
+          349,
+          150,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_approach",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "heart_of_the_void_opt_discarded_future",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 0
+        }
+      ],
+      "critical_path_index": 155,
+      "map_cell": [
+        8,
+        12
+      ],
+      "layout_id": "heart_of_the_void_teach_ventricle_gate",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart"
+    },
+    {
+      "id": "heart_of_the_void_exp_arterial_crossing",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Arterial Crossing",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 126,
+        "expert_seconds": 33
+      },
+      "room_role": "test",
+      "design_intent": "Test sustained movement across living arterial platforms.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          325,
+          40
+        ],
+        [
+          605,
+          500,
+          355,
+          40
+        ],
+        [
+          90,
+          430,
+          145,
+          18
+        ],
+        [
+          315,
+          330,
+          130,
+          18
+        ],
+        [
+          475,
+          260,
+          145,
+          18
+        ],
+        [
+          690,
+          325,
+          130,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_approach",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_arena",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 100,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 157,
+      "map_cell": [
+        6,
+        12
+      ],
+      "layout_id": "heart_of_the_void_test_arterial_crossing",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart"
+    },
+    {
+      "id": "heart_of_the_void_exp_memory_collapse",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Memory Collapse",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 132,
+        "expert_seconds": 34
+      },
+      "room_role": "twist",
+      "design_intent": "Combine abyssal footing, corruption pressure, and final-route silhouettes.",
+      "mechanic_contract": "void_pit",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          325,
+          40
+        ],
+        [
+          645,
+          500,
+          315,
+          40
+        ],
+        [
+          120,
+          395,
+          135,
+          18
+        ],
+        [
+          280,
+          355,
+          120,
+          18
+        ],
+        [
+          505,
+          225,
+          135,
+          18
+        ],
+        [
+          665,
+          360,
+          125,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_arena",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_core_stillness",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            270,
+            44
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 159,
+      "map_cell": [
+        4,
+        12
+      ],
+      "layout_id": "heart_of_the_void_twist_memory_collapse",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart"
+    },
+    {
+      "id": "heart_of_the_void_exp_core_stillness",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Core Stillness",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 34
+      },
+      "room_role": "recovery",
+      "design_intent": "Resolve traversal pressure before the Heart of the Void arena.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          455,
+          190,
+          18
+        ],
+        [
+          305,
+          370,
+          170,
+          18
+        ],
+        [
+          475,
+          285,
+          185,
+          18
+        ],
+        [
+          680,
+          375,
+          170,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "heart_of_the_void_exp_memory_collapse",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_heart_exit",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "heart_of_the_void_opt_helix_origin",
+          "target_connection": "return"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 160,
+      "map_cell": [
+        3,
+        12
+      ],
+      "layout_id": "heart_of_the_void_recovery_core_stillness",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart"
+    },
+    {
+      "id": "corrupted_outpost_opt_evacuation_tape",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Evacuation Tape",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The evacuation order arrived after every recorded resident had already vanished.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          410,
+          175,
+          18
+        ],
+        [
+          280,
+          365,
+          150,
+          18
+        ],
+        [
+          515,
+          405,
+          155,
+          18
+        ],
+        [
+          715,
+          345,
+          165,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_corrupted_outpost_evacuation_tape",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The evacuation order arrived after every recorded resident had already vanished.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_corrupted_outpost_evacuation_tape",
+        "amount": 70,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "corrupted_outpost_exp_spore_threshold",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        40,
+        13
+      ],
+      "layout_id": "corrupted_outpost_optional_lore_evacuation_tape",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower"
+    },
+    {
+      "id": "corrupted_outpost_opt_sealed_well",
+      "region_id": "abyssal_night",
+      "district_id": "corrupted_outpost",
+      "display_name": "Corrupted Outpost — Sealed Well",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: The well cap bears Helix markings older than the surrounding settlement.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          305,
+          40
+        ],
+        [
+          545,
+          500,
+          415,
+          40
+        ],
+        [
+          65,
+          390,
+          150,
+          18
+        ],
+        [
+          310,
+          345,
+          125,
+          18
+        ],
+        [
+          490,
+          375,
+          130,
+          18
+        ],
+        [
+          750,
+          325,
+          140,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_corrupted_outpost_sealed_well",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The well cap bears Helix markings older than the surrounding settlement.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_corrupted_outpost_sealed_well",
+        "amount": 80,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "corrupted_outpost_exp_purifier_shadow",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 0
+        }
+      ],
+      "map_cell": [
+        35,
+        13
+      ],
+      "layout_id": "corrupted_outpost_optional_mastery_sealed_well",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broken shelter-to-shelter steps across exposed corruption",
+      "landmark": "collapsed purifier tower"
+    },
+    {
+      "id": "the_dark_chasm_opt_miners_echo",
+      "region_id": "abyssal_night",
+      "district_id": "the_dark_chasm",
+      "display_name": "The Dark Chasm — Miner's Echo",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: A miner's call returns in a voice that answers questions before they are spoken.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          135,
+          240,
+          155,
+          18
+        ],
+        [
+          325,
+          345,
+          150,
+          18
+        ],
+        [
+          560,
+          400,
+          160,
+          18
+        ],
+        [
+          740,
+          470,
+          155,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_the_dark_chasm_miners_echo",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A miner's call returns in a voice that answers questions before they are spoken.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_the_dark_chasm_miners_echo",
+        "amount": 70,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "the_dark_chasm_exp_lantern_shelf",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        27,
+        13
+      ],
+      "layout_id": "the_dark_chasm_optional_lore_miners_echo",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "blind descending ledges that resolve into a deep return shelf",
+      "landmark": "fossil lift suspended over the chasm"
+    },
+    {
+      "id": "bio_mechanical_nest_opt_gestation_record",
+      "region_id": "abyssal_night",
+      "district_id": "bio_mechanical_nest",
+      "display_name": "Bio-Mechanical Nest — Gestation Record",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The nest learned factory assembly order before any robot entered the abyss.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          410,
+          165,
+          18
+        ],
+        [
+          290,
+          375,
+          150,
+          18
+        ],
+        [
+          510,
+          280,
+          160,
+          18
+        ],
+        [
+          700,
+          380,
+          180,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_bio_mechanical_nest_gestation_record",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The nest learned factory assembly order before any robot entered the abyss.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_bio_mechanical_nest_gestation_record",
+        "amount": 70,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "bio_mechanical_nest_exp_nerve_quiet",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        19,
+        13
+      ],
+      "layout_id": "bio_mechanical_nest_optional_lore_gestation_record",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "contracting sinew bridges wrapped around a pulsing central chamber",
+      "landmark": "living hatchery membrane"
+    },
+    {
+      "id": "abyssal_sanctuary_opt_pilgrim_cipher",
+      "region_id": "abyssal_night",
+      "district_id": "abyssal_sanctuary",
+      "display_name": "Abyssal Sanctuary — Pilgrim Cipher",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The cipher calls the city, factory, moon, and abyss four organs of one machine.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          395,
+          170,
+          18
+        ],
+        [
+          290,
+          340,
+          155,
+          18
+        ],
+        [
+          545,
+          320,
+          150,
+          18
+        ],
+        [
+          745,
+          425,
+          165,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_abyssal_sanctuary_pilgrim_cipher",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The cipher calls the city, factory, moon, and abyss four organs of one machine.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_abyssal_sanctuary_pilgrim_cipher",
+        "amount": 70,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "abyssal_sanctuary_exp_heart_vigil",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        11,
+        13
+      ],
+      "layout_id": "abyssal_sanctuary_optional_lore_pilgrim_cipher",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "ceremonial mirrored steps interrupted by gravity reversals",
+      "landmark": "null-energy reliquary"
+    },
+    {
+      "id": "heart_of_the_void_opt_discarded_future",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Discarded Future",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: One discarded future shows the protagonist choosing never to leave Rooftop Alley.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          420,
+          165,
+          18
+        ],
+        [
+          290,
+          360,
+          150,
+          18
+        ],
+        [
+          490,
+          250,
+          165,
+          18
+        ],
+        [
+          660,
+          365,
+          150,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_heart_of_the_void_discarded_future",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "One discarded future shows the protagonist choosing never to leave Rooftop Alley.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_heart_of_the_void_discarded_future",
+        "amount": 70,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "heart_of_the_void_exp_ventricle_gate",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        8,
+        13
+      ],
+      "layout_id": "heart_of_the_void_optional_lore_discarded_future",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart"
+    },
+    {
+      "id": "heart_of_the_void_opt_helix_origin",
+      "region_id": "abyssal_night",
+      "district_id": "heart_of_the_void",
+      "display_name": "Heart of the Void — Helix Origin",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: The oldest Helix file is not a design document but a message sent backward from the Heart.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          345,
+          40
+        ],
+        [
+          585,
+          500,
+          375,
+          40
+        ],
+        [
+          80,
+          400,
+          140,
+          18
+        ],
+        [
+          320,
+          340,
+          125,
+          18
+        ],
+        [
+          465,
+          220,
+          140,
+          18
+        ],
+        [
+          695,
+          345,
+          125,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_heart_of_the_void_helix_origin",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The oldest Helix file is not a design document but a message sent backward from the Heart.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_heart_of_the_void_helix_origin",
+        "amount": 80,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "heart_of_the_void_exp_core_stillness",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "corruption_zone",
+          "position": [
+            480,
+            405
+          ],
+          "size": [
+            300,
+            110
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 0
+        }
+      ],
+      "map_cell": [
+        3,
+        13
+      ],
+      "layout_id": "heart_of_the_void_optional_mastery_helix_origin",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "pulsing concentric rises closing around the final core",
+      "landmark": "beating convergence heart"
+    }
+  ],
+  "district_expansion_version": 2
+}

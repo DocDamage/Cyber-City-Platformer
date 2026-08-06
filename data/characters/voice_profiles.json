@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {"id": "voice_01", "display_name": "Pulse", "performer": "Karen Cenon"},
+    {"id": "voice_02", "display_name": "Vector", "performer": "Meghan Christian"},
+    {"id": "voice_03", "display_name": "Cipher", "performer": "Alex Brodie"},
+    {"id": "voice_04", "display_name": "Relay", "performer": "Ian Lampert"},
+    {"id": "voice_05", "display_name": "Aegis", "performer": "Sean Lenhart"}
+  ],
+  "categories": ["confirmation", "greeting", "damage", "grunting"],
+  "clips": {
+    "voice_01": {
+      "confirmation": ["res://assets/runtime/audio/voices/voice_01/confirmation_01.wav"],
+      "greeting": ["res://assets/runtime/audio/voices/voice_01/greeting_01.wav"],
+      "damage": ["res://assets/runtime/audio/voices/voice_01/damage_01.wav"],
+      "grunting": ["res://assets/runtime/audio/voices/voice_01/grunting_01.wav"]
+    },
+    "voice_02": {
+      "confirmation": ["res://assets/runtime/audio/voices/voice_02/confirmation_01.wav"],
+      "greeting": ["res://assets/runtime/audio/voices/voice_02/greeting_01.wav"],
+      "damage": ["res://assets/runtime/audio/voices/voice_02/damage_01.wav"],
+      "grunting": ["res://assets/runtime/audio/voices/voice_02/grunting_01.wav"]
+    },
+    "voice_03": {
+      "confirmation": ["res://assets/runtime/audio/voices/voice_03/confirmation_01.wav"],
+      "greeting": ["res://assets/runtime/audio/voices/voice_03/greeting_01.wav"],
+      "damage": ["res://assets/runtime/audio/voices/voice_03/damage_01.wav"],
+      "grunting": ["res://assets/runtime/audio/voices/voice_03/grunting_01.wav"]
+    },
+    "voice_04": {
+      "confirmation": ["res://assets/runtime/audio/voices/voice_04/confirmation_01.wav"],
+      "greeting": ["res://assets/runtime/audio/voices/voice_04/greeting_01.wav"],
+      "damage": ["res://assets/runtime/audio/voices/voice_04/damage_01.wav"],
+      "grunting": ["res://assets/runtime/audio/voices/voice_04/grunting_01.wav"]
+    },
+    "voice_05": {
+      "confirmation": ["res://assets/runtime/audio/voices/voice_05/confirmation_01.wav"],
+      "greeting": ["res://assets/runtime/audio/voices/voice_05/greeting_01.wav"],
+      "damage": ["res://assets/runtime/audio/voices/voice_05/damage_01.wav"],
+      "grunting": ["res://assets/runtime/audio/voices/voice_05/grunting_01.wav"]
+    }
+  }
+}

@@ -1,0 +1,5019 @@
+{
+  "schema_version": 2,
+  "rooms": [
+    {
+      "id": "cyber_billboard_entry",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — West Gantry",
+      "map_cell": [
+        10,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 93,
+        "expert_seconds": 23
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          405,
+          150,
+          16
+        ],
+        [
+          410,
+          335,
+          140,
+          16
+        ],
+        [
+          680,
+          405,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            420
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              180,
+              0
+            ]
+          ],
+          "speed": 100
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_rooftop_guardian",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_photon_verge",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 10
+    },
+    {
+      "id": "cyber_billboard_express",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Express Signs",
+      "map_cell": [
+        12,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 121,
+        "expert_seconds": 30
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "lower": [
+          470,
+          430
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          240,
+          40
+        ],
+        [
+          720,
+          500,
+          240,
+          40
+        ],
+        [
+          110,
+          380,
+          130,
+          16
+        ],
+        [
+          720,
+          350,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            300,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              150,
+              -120
+            ]
+          ],
+          "speed": 105
+        },
+        {
+          "position": [
+            560,
+            300
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              130,
+              110
+            ]
+          ],
+          "speed": 115,
+          "wait": 0.15
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            486
+          ],
+          "size": [
+            400,
+            22
+          ],
+          "active": 1.0,
+          "inactive": 1.5
+        }
+      ],
+      "encounters": [
+        {
+          "id": "billboard_express_patrol",
+          "activation": [
+            250,
+            170,
+            470,
+            330
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  260,
+                  470
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  760,
+                  320
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  520,
+                  220
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_photon_verge",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_adrail_slalom",
+          "target_connection": "west"
+        },
+        {
+          "id": "lower",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "cyber_billboard_underdeck",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 12
+    },
+    {
+      "id": "cyber_billboard_underdeck",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Underdeck Cache",
+      "map_cell": [
+        13,
+        -1
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 150,
+        "expert_seconds": 40,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          470,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          380,
+          145,
+          200,
+          18
+        ],
+        [
+          180,
+          360,
+          160,
+          16
+        ],
+        [
+          610,
+          350,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            455
+          ],
+          "size": [
+            180,
+            70
+          ],
+          "active": 0.9,
+          "inactive": 1.5
+        }
+      ],
+      "reward": {
+        "id": "bow_voltage_arc",
+        "family": "bow",
+        "display_name": "Voltage Arc",
+        "position": [
+          480,
+          110
+        ],
+        "dialogue": "billboard_bow_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_billboard_express",
+          "target_connection": "lower"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_switchyard",
+          "target_connection": "lower_west"
+        }
+      ]
+    },
+    {
+      "id": "cyber_billboard_switchyard",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Signal Switchyard",
+      "map_cell": [
+        14,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 130,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "lower_west": [
+          70,
+          350
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          390,
+          180,
+          16
+        ],
+        [
+          370,
+          300,
+          180,
+          16
+        ],
+        [
+          690,
+          390,
+          170,
+          16
+        ]
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            300,
+            420
+          ],
+          "size": [
+            100,
+            18
+          ]
+        },
+        {
+          "position": [
+            610,
+            360
+          ],
+          "size": [
+            100,
+            18
+          ]
+        }
+      ],
+      "encounters": [
+        {
+          "id": "billboard_switchyard_crossfire",
+          "activation": [
+            180,
+            190,
+            600,
+            310
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "imp",
+                "position": [
+                  390,
+                  250
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  710,
+                  470
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "werewolf",
+                "position": [
+                  500,
+                  470
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_adrail_slalom",
+          "target_connection": "east"
+        },
+        {
+          "id": "lower_west",
+          "rect": [
+            0,
+            260,
+            16,
+            110
+          ],
+          "target_room": "cyber_billboard_underdeck",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_signal_canopy",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 14
+    },
+    {
+      "id": "cyber_billboard_crown",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Helix Crown",
+      "map_cell": [
+        17,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 158,
+        "expert_seconds": 39
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          140,
+          385,
+          160,
+          16
+        ],
+        [
+          400,
+          285,
+          160,
+          18
+        ],
+        [
+          675,
+          385,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 150,
+          "speed": 0.7
+        }
+      ],
+      "encounters": [
+        {
+          "id": "billboard_crown_guard",
+          "activation": [
+            210,
+            150,
+            550,
+            350
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  330,
+                  470
+                ]
+              },
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  620,
+                  260
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "centaur",
+                "position": [
+                  520,
+                  450
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "story_beat": "billboard_helix_clue",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_holo_toll_lull",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_spire_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 17
+    },
+    {
+      "id": "cyber_spire_entry",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Base Array",
+      "map_cell": [
+        18,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 100,
+        "expert_seconds": 25
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "north": [
+          480,
+          110
+        ],
+        "rooftop_backtrack": [
+          480,
+          105
+        ],
+        "recovery": [
+          790,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          405,
+          150,
+          16
+        ],
+        [
+          390,
+          320,
+          180,
+          16
+        ],
+        [
+          690,
+          400,
+          150,
+          16
+        ],
+        [
+          430,
+          145,
+          100,
+          16
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_crown",
+          "target_connection": "east"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_relay_vestibule",
+          "target_connection": "south"
+        },
+        {
+          "id": "rooftop_backtrack",
+          "rect": [
+            560,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_rooftop_guardian",
+          "target_connection": "magnetic_return",
+          "required_ability": "magnetic_rail",
+          "barrier_id": "barrier_spire_rooftop_rail",
+          "map_hidden": true
+        }
+      ],
+      "critical_path_index": 18
+    },
+    {
+      "id": "cyber_spire_lift",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Lift Spine",
+      "map_cell": [
+        20,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 129,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "south": [
+          480,
+          440
+        ],
+        "north": [
+          480,
+          105
+        ],
+        "east": [
+          850,
+          300
+        ]
+      },
+      "platforms": [
+        [
+          330,
+          500,
+          300,
+          40
+        ],
+        [
+          170,
+          405,
+          160,
+          16
+        ],
+        [
+          610,
+          325,
+          170,
+          16
+        ],
+        [
+          240,
+          240,
+          160,
+          16
+        ],
+        [
+          570,
+          155,
+          160,
+          16
+        ],
+        [
+          430,
+          110,
+          100,
+          16
+        ],
+        [
+          420,
+          235,
+          20,
+          265
+        ],
+        [
+          540,
+          235,
+          20,
+          265
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            350,
+            430
+          ],
+          "size": [
+            120,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -250
+            ]
+          ],
+          "speed": 90
+        }
+      ],
+      "encounters": [
+        {
+          "id": "spire_lift_airspace",
+          "activation": [
+            160,
+            90,
+            640,
+            390
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  310,
+                  280
+                ]
+              },
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  650,
+                  210
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_relay_vestibule",
+          "target_connection": "north"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_antenna_weave",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            245,
+            16,
+            110
+          ],
+          "target_room": "cyber_spire_recovery",
+          "target_connection": "west",
+          "one_way": true
+        }
+      ],
+      "critical_path_index": 20
+    },
+    {
+      "id": "cyber_spire_signal",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Signal Chambers",
+      "map_cell": [
+        22,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 139,
+        "expert_seconds": 36
+      },
+      "spawns": {
+        "south": [
+          480,
+          440
+        ],
+        "north": [
+          480,
+          105
+        ],
+        "east": [
+          850,
+          300
+        ]
+      },
+      "platforms": [
+        [
+          280,
+          500,
+          400,
+          40
+        ],
+        [
+          100,
+          400,
+          180,
+          16
+        ],
+        [
+          390,
+          325,
+          180,
+          16
+        ],
+        [
+          680,
+          400,
+          180,
+          16
+        ],
+        [
+          210,
+          220,
+          150,
+          16
+        ],
+        [
+          600,
+          160,
+          160,
+          16
+        ],
+        [
+          430,
+          110,
+          100,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            140,
+            80
+          ],
+          "active": 1.1,
+          "inactive": 1.3
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            520,
+            270
+          ],
+          "size": [
+            90,
+            100
+          ],
+          "active": 0.8,
+          "inactive": 1.7,
+          "phase": 0.7
+        }
+      ],
+      "encounters": [
+        {
+          "id": "spire_signal_intercept",
+          "activation": [
+            170,
+            120,
+            620,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "witch",
+                "position": [
+                  270,
+                  360
+                ]
+              },
+              {
+                "enemy": "harpy",
+                "position": [
+                  670,
+                  210
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  500,
+                  190
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "story_beat": "spire_orbital_reveal",
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_antenna_weave",
+          "target_connection": "north"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_storm_dial",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            245,
+            16,
+            110
+          ],
+          "target_room": "cyber_spire_recovery",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 22
+    },
+    {
+      "id": "cyber_spire_recovery",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Recovery Elevator",
+      "map_cell": [
+        20,
+        -1
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 85,
+        "expert_seconds": 22,
+        "optional": true
+      },
+      "spawns": {
+        "west": [
+          70,
+          300
+        ],
+        "south": [
+          480,
+          440
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          345,
+          220,
+          16
+        ],
+        [
+          370,
+          280,
+          220,
+          16
+        ],
+        [
+          650,
+          210,
+          220,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            140,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -250
+            ]
+          ],
+          "speed": 150
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            245,
+            16,
+            110
+          ],
+          "target_room": "cyber_spire_signal",
+          "target_connection": "east"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_entry",
+          "target_connection": "recovery",
+          "one_way": true
+        }
+      ]
+    },
+    {
+      "id": "cyber_spire_crown",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Orbital Crown",
+      "map_cell": [
+        25,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 169,
+        "expert_seconds": 43
+      },
+      "spawns": {
+        "south": [
+          480,
+          440
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          390,
+          170,
+          16
+        ],
+        [
+          390,
+          285,
+          180,
+          18
+        ],
+        [
+          680,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            540,
+            300
+          ],
+          "gravity": 0.45
+        }
+      ],
+      "encounters": [
+        {
+          "id": "spire_crown_guard",
+          "activation": [
+            190,
+            130,
+            580,
+            370
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "gryphon",
+                "position": [
+                  360,
+                  220
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  650,
+                  390
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "ability_reward": {
+        "ability": "magnetic_rail",
+        "display_name": "Magnetic Rail Grip",
+        "position": [
+          480,
+          245
+        ],
+        "dialogue": "magnetic_rail_acquired"
+      },
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_quiet_frequency",
+          "target_connection": "north"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 25
+    },
+    {
+      "id": "cyber_skybridge_entry",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Relay Exchange",
+      "map_cell": [
+        26,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 93,
+        "expert_seconds": 23
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "warp": [
+          480,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          180,
+          370,
+          180,
+          16
+        ],
+        [
+          590,
+          370,
+          180,
+          16
+        ]
+      ],
+      "warp_room": {
+        "id": "warp_skybridge",
+        "position": [
+          480,
+          445
+        ]
+      },
+      "story_beat": "skybridge_warp_intro",
+      "services": [
+        {
+          "type": "npc",
+          "id": "relay_keeper",
+          "display_name": "Relay Keeper",
+          "position": [
+            700,
+            450
+          ],
+          "dialogue_entries": [
+            "skybridge_keeper"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_spire_crown",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_crosswind_deck",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 26
+    },
+    {
+      "id": "cyber_skybridge_broken",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Broken Span",
+      "map_cell": [
+        28,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 122,
+        "expert_seconds": 30
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          210,
+          40
+        ],
+        [
+          750,
+          500,
+          210,
+          40
+        ],
+        [
+          90,
+          365,
+          140,
+          16
+        ],
+        [
+          730,
+          340,
+          150,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            430
+          ],
+          "size": [
+            100,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -120
+            ]
+          ],
+          "speed": 125
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            550,
+            300
+          ],
+          "size": [
+            100,
+            18
+          ]
+        },
+        {
+          "position": [
+            670,
+            390
+          ],
+          "size": [
+            90,
+            18
+          ]
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            505
+          ],
+          "size": [
+            520,
+            45
+          ]
+        }
+      ],
+      "encounters": [
+        {
+          "id": "skybridge_span_ambush",
+          "activation": [
+            210,
+            150,
+            540,
+            350
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "harpy",
+                "position": [
+                  390,
+                  250
+                ]
+              },
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  620,
+                  220
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_crosswind_deck",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_suspended_exchange",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "cyber_skybridge_challenge",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 28
+    },
+    {
+      "id": "cyber_skybridge_challenge",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Service Gauntlet",
+      "map_cell": [
+        29,
+        -1
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 180,
+        "expert_seconds": 48,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          190,
+          395,
+          160,
+          16
+        ],
+        [
+          410,
+          300,
+          140,
+          16
+        ],
+        [
+          650,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            486
+          ],
+          "size": [
+            240,
+            22
+          ],
+          "active": 0.9,
+          "inactive": 1.2
+        }
+      ],
+      "encounters": [
+        {
+          "id": "skybridge_service_gauntlet",
+          "activation": [
+            170,
+            170,
+            620,
+            330
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "goblin",
+                "position": [
+                  300,
+                  470
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  690,
+                  470
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "centaur",
+                "position": [
+                  500,
+                  450
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "reward": {
+        "id": "spear_arc_lance",
+        "family": "spear",
+        "display_name": "Arc Lance",
+        "position": [
+          480,
+          265
+        ],
+        "dialogue": "skybridge_spear_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_skybridge_broken",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_concourse",
+          "target_connection": "challenge"
+        }
+      ]
+    },
+    {
+      "id": "cyber_skybridge_concourse",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Transit Concourse",
+      "map_cell": [
+        30,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "challenge": [
+          70,
+          340
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          400,
+          180,
+          16
+        ],
+        [
+          390,
+          330,
+          180,
+          16
+        ],
+        [
+          680,
+          400,
+          170,
+          16
+        ]
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            310,
+            420
+          ],
+          "size": [
+            100,
+            18
+          ]
+        },
+        {
+          "position": [
+            610,
+            350
+          ],
+          "size": [
+            100,
+            18
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_suspended_exchange",
+          "target_connection": "east"
+        },
+        {
+          "id": "challenge",
+          "rect": [
+            0,
+            285,
+            16,
+            90
+          ],
+          "target_room": "cyber_skybridge_challenge",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_fracture_span",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 30
+    },
+    {
+      "id": "cyber_skybridge_east",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Executive Crossing",
+      "map_cell": [
+        33,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 159,
+        "expert_seconds": 39
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          180,
+          385,
+          170,
+          16
+        ],
+        [
+          420,
+          285,
+          140,
+          16
+        ],
+        [
+          680,
+          385,
+          170,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            120,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -170
+            ]
+          ],
+          "speed": 115
+        }
+      ],
+      "encounters": [
+        {
+          "id": "skybridge_executive_blockade",
+          "activation": [
+            190,
+            160,
+            580,
+            340
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "werewolf",
+                "position": [
+                  350,
+                  470
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  660,
+                  350
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "cyclops",
+                "position": [
+                  510,
+                  440
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_junction_shelter",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 33
+    },
+    {
+      "id": "cyber_helipad_entry",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Security Approach",
+      "map_cell": [
+        34,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 104,
+        "expert_seconds": 27
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          160,
+          16
+        ],
+        [
+          410,
+          315,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            455
+          ],
+          "size": [
+            120,
+            80
+          ],
+          "active": 1.0,
+          "inactive": 1.2
+        }
+      ],
+      "encounters": [
+        {
+          "id": "helipad_security_approach",
+          "activation": [
+            180,
+            160,
+            600,
+            340
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "skeleton_warrior",
+                "position": [
+                  350,
+                  470
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  680,
+                  350
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_east",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_executive_approach",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 34
+    },
+    {
+      "id": "cyber_helipad_checkpoint",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Operations Deck",
+      "map_cell": [
+        36,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 135,
+        "expert_seconds": 35
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          250,
+          370,
+          180,
+          18
+        ],
+        [
+          570,
+          370,
+          180,
+          18
+        ]
+      ],
+      "save_room": {
+        "id": "save_helipad_operations",
+        "position": [
+          480,
+          445
+        ]
+      },
+      "story_beat": "helix_warden_warning",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_executive_approach",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_drone_wake",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 36
+    },
+    {
+      "id": "cyber_helipad_arena",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Warden Arena",
+      "map_cell": [
+        38,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 146,
+        "expert_seconds": 38
+      },
+      "spawns": {
+        "west": [
+          90,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          365,
+          140,
+          16
+        ],
+        [
+          410,
+          300,
+          140,
+          16
+        ],
+        [
+          680,
+          365,
+          140,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            300,
+            486
+          ],
+          "size": [
+            100,
+            22
+          ],
+          "active": 1.0,
+          "inactive": 1.8
+        },
+        {
+          "type": "electrical_floor",
+          "position": [
+            660,
+            486
+          ],
+          "size": [
+            100,
+            22
+          ],
+          "active": 1.0,
+          "inactive": 1.8,
+          "phase": 0.9
+        }
+      ],
+      "boss": {
+        "id": "helix_warden",
+        "scene": "res://Characters/Bosses/Scenes/act1_helix_warden.tscn",
+        "position": [
+          650,
+          405
+        ],
+        "arena": [
+          120,
+          80,
+          760,
+          420
+        ],
+        "completion_flag": "helix_warden_defeated",
+        "reward_ability": "phase_barrier",
+        "intro_sequence": "helix_warden_warning",
+        "defeat_sequence": "cyber_city_complete"
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_drone_wake",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_rotor_crucible",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 38
+    },
+    {
+      "id": "cyber_helipad_descent",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Factory Descent",
+      "map_cell": [
+        41,
+        0
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 177,
+        "expert_seconds": 46
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          160,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "story_beat": "cyber_city_complete",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_warden_antechamber",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_intake_entry",
+          "target_connection": "west",
+          "required_ability": "phase_barrier",
+          "barrier_id": "barrier_city_factory_phase",
+          "map_hidden": true
+        }
+      ],
+      "critical_path_index": 41
+    },
+    {
+      "id": "billboard_highway_exp_photon_verge",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Photon Verge",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 98,
+        "expert_seconds": 24
+      },
+      "room_role": "teach",
+      "design_intent": "Read the traffic cadence from a protected ledge before committing.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          425,
+          200,
+          18
+        ],
+        [
+          320,
+          368,
+          145,
+          18
+        ],
+        [
+          535,
+          411,
+          160,
+          18
+        ],
+        [
+          760,
+          334,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_express",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 92,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 11,
+      "map_cell": [
+        11,
+        0
+      ],
+      "layout_id": "billboard_highway_teach_photon_verge",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "long lateral lanes broken by shallow advertising-rail rises",
+      "landmark": "suspended holographic billboard gantry"
+    },
+    {
+      "id": "billboard_highway_exp_adrail_slalom",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Adrail Slalom",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 107,
+        "expert_seconds": 26
+      },
+      "room_role": "test",
+      "design_intent": "Cross staggered ad rails while the floor pulses in an announced rhythm.",
+      "mechanic_contract": "electrical_floor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          315,
+          40
+        ],
+        [
+          595,
+          500,
+          365,
+          40
+        ],
+        [
+          80,
+          415,
+          170,
+          18
+        ],
+        [
+          335,
+          345,
+          120,
+          18
+        ],
+        [
+          530,
+          410,
+          135,
+          18
+        ],
+        [
+          770,
+          310,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_express",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_switchyard",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            220,
+            24
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 13,
+      "map_cell": [
+        13,
+        0
+      ],
+      "layout_id": "billboard_highway_test_adrail_slalom",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "long lateral lanes broken by shallow advertising-rail rises",
+      "landmark": "suspended holographic billboard gantry"
+    },
+    {
+      "id": "billboard_highway_exp_signal_canopy",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Signal Canopy",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 112,
+        "expert_seconds": 28
+      },
+      "room_role": "twist",
+      "design_intent": "Recontextualize the highway route above traffic with alternating sightline lasers.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          315,
+          40
+        ],
+        [
+          635,
+          500,
+          325,
+          40
+        ],
+        [
+          110,
+          380,
+          160,
+          18
+        ],
+        [
+          300,
+          370,
+          110,
+          18
+        ],
+        [
+          560,
+          375,
+          125,
+          18
+        ],
+        [
+          745,
+          345,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_switchyard",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_holo_toll_lull",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 15,
+      "map_cell": [
+        15,
+        0
+      ],
+      "layout_id": "billboard_highway_twist_signal_canopy",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "long lateral lanes broken by shallow advertising-rail rises",
+      "landmark": "suspended holographic billboard gantry"
+    },
+    {
+      "id": "billboard_highway_exp_holo_toll_lull",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Holo-Toll Lull",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 111,
+        "expert_seconds": 28
+      },
+      "room_role": "recovery",
+      "design_intent": "Offer a low-pressure precision descent and a clear view of the spire destination.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          440,
+          210,
+          18
+        ],
+        [
+          325,
+          385,
+          160,
+          18
+        ],
+        [
+          530,
+          435,
+          175,
+          18
+        ],
+        [
+          760,
+          360,
+          180,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "billboard_highway_exp_signal_canopy",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_billboard_crown",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "billboard_highway_opt_sponsor_archive",
+          "target_connection": "return"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 16,
+      "map_cell": [
+        16,
+        0
+      ],
+      "layout_id": "billboard_highway_recovery_holo_toll_lull",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "long lateral lanes broken by shallow advertising-rail rises",
+      "landmark": "suspended holographic billboard gantry"
+    },
+    {
+      "id": "communication_spire_exp_relay_vestibule",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Relay Vestibule",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 105,
+        "expert_seconds": 27
+      },
+      "room_role": "teach",
+      "design_intent": "Introduce the spire's vertical relay rhythm with a safe recovery shelf.",
+      "mechanic_contract": "moving_vertical",
+      "authored_expansion": true,
+      "spawns": {
+        "south": [
+          480,
+          446
+        ],
+        "north": [
+          480,
+          70
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          440,
+          170,
+          18
+        ],
+        [
+          330,
+          358,
+          155,
+          18
+        ],
+        [
+          520,
+          276,
+          140,
+          18
+        ],
+        [
+          710,
+          194,
+          170,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            522,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_entry",
+          "target_connection": "north"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_lift",
+          "target_connection": "south"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 88,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 19,
+      "map_cell": [
+        19,
+        0
+      ],
+      "layout_id": "communication_spire_teach_relay_vestibule",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "tight central ascent with alternating relay shelves",
+      "landmark": "storm-lit transmission mast"
+    },
+    {
+      "id": "communication_spire_exp_antenna_weave",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Antenna Weave",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 115,
+        "expert_seconds": 29
+      },
+      "room_role": "test",
+      "design_intent": "Thread between broadcast beams while maintaining upward momentum.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "south": [
+          480,
+          446
+        ],
+        "north": [
+          480,
+          70
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          360,
+          40
+        ],
+        [
+          640,
+          500,
+          320,
+          40
+        ],
+        [
+          110,
+          430,
+          140,
+          18
+        ],
+        [
+          345,
+          335,
+          130,
+          18
+        ],
+        [
+          515,
+          275,
+          115,
+          18
+        ],
+        [
+          720,
+          170,
+          150,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            522,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_lift",
+          "target_connection": "north"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_signal",
+          "target_connection": "south"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 21,
+      "map_cell": [
+        21,
+        0
+      ],
+      "layout_id": "communication_spire_test_antenna_weave",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "tight central ascent with alternating relay shelves",
+      "landmark": "storm-lit transmission mast"
+    },
+    {
+      "id": "communication_spire_exp_storm_dial",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Storm Dial",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 119,
+        "expert_seconds": 31
+      },
+      "room_role": "twist",
+      "design_intent": "Combine vertical teleport routes with a rotating interference sweep.",
+      "mechanic_contract": "rotating_laser",
+      "authored_expansion": true,
+      "spawns": {
+        "south": [
+          480,
+          446
+        ],
+        "north": [
+          480,
+          70
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          360,
+          40
+        ],
+        [
+          680,
+          500,
+          280,
+          40
+        ],
+        [
+          140,
+          395,
+          130,
+          18
+        ],
+        [
+          310,
+          360,
+          120,
+          18
+        ],
+        [
+          545,
+          240,
+          105,
+          18
+        ],
+        [
+          695,
+          205,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            522,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_signal",
+          "target_connection": "north"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_quiet_frequency",
+          "target_connection": "south"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            300
+          ],
+          "radius": 175,
+          "speed": 0.74,
+          "clockwise": true
+        }
+      ],
+      "critical_path_index": 23,
+      "map_cell": [
+        23,
+        0
+      ],
+      "layout_id": "communication_spire_twist_storm_dial",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "tight central ascent with alternating relay shelves",
+      "landmark": "storm-lit transmission mast"
+    },
+    {
+      "id": "communication_spire_exp_quiet_frequency",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Quiet Frequency",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 119,
+        "expert_seconds": 31
+      },
+      "room_role": "recovery",
+      "design_intent": "Release pressure before the crown and frame the citywide signal source.",
+      "mechanic_contract": "moving_vertical",
+      "authored_expansion": true,
+      "spawns": {
+        "south": [
+          480,
+          446
+        ],
+        "north": [
+          480,
+          70
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          120,
+          455,
+          185,
+          18
+        ],
+        [
+          335,
+          375,
+          170,
+          18
+        ],
+        [
+          515,
+          300,
+          155,
+          18
+        ],
+        [
+          710,
+          220,
+          190,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "south",
+          "rect": [
+            430,
+            522,
+            100,
+            18
+          ],
+          "target_room": "communication_spire_exp_storm_dial",
+          "target_connection": "north"
+        },
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "cyber_spire_crown",
+          "target_connection": "south"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "communication_spire_opt_numbers_station",
+          "target_connection": "return"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 112,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 24,
+      "map_cell": [
+        24,
+        0
+      ],
+      "layout_id": "communication_spire_recovery_quiet_frequency",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "tight central ascent with alternating relay shelves",
+      "landmark": "storm-lit transmission mast"
+    },
+    {
+      "id": "skybridge_junction_exp_crosswind_deck",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Crosswind Deck",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 98,
+        "expert_seconds": 24
+      },
+      "room_role": "teach",
+      "design_intent": "Teach crosswind timing across broad, readable gaps.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          400,
+          185,
+          18
+        ],
+        [
+          310,
+          338,
+          150,
+          18
+        ],
+        [
+          535,
+          396,
+          160,
+          18
+        ],
+        [
+          760,
+          319,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_broken",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 92,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 27,
+      "map_cell": [
+        27,
+        0
+      ],
+      "layout_id": "skybridge_junction_teach_crosswind_deck",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broad wind gaps linked by staggered suspended decks",
+      "landmark": "fractured transit exchange"
+    },
+    {
+      "id": "skybridge_junction_exp_suspended_exchange",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Suspended Exchange",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 108,
+        "expert_seconds": 26
+      },
+      "room_role": "test",
+      "design_intent": "Test route commitment on a chain of announced breakaway plates.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          335,
+          40
+        ],
+        [
+          615,
+          500,
+          345,
+          40
+        ],
+        [
+          80,
+          390,
+          155,
+          18
+        ],
+        [
+          325,
+          315,
+          125,
+          18
+        ],
+        [
+          530,
+          395,
+          135,
+          18
+        ],
+        [
+          770,
+          295,
+          120,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_broken",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_concourse",
+          "target_connection": "west"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 29,
+      "map_cell": [
+        29,
+        0
+      ],
+      "layout_id": "skybridge_junction_test_suspended_exchange",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broad wind gaps linked by staggered suspended decks",
+      "landmark": "fractured transit exchange"
+    },
+    {
+      "id": "skybridge_junction_exp_fracture_span",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Fracture Span",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 112,
+        "expert_seconds": 27
+      },
+      "room_role": "twist",
+      "design_intent": "Mix broken footing with timed electrical spill from the transit line.",
+      "mechanic_contract": "electrical_floor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          335,
+          40
+        ],
+        [
+          655,
+          500,
+          305,
+          40
+        ],
+        [
+          110,
+          355,
+          145,
+          18
+        ],
+        [
+          290,
+          340,
+          115,
+          18
+        ],
+        [
+          560,
+          360,
+          125,
+          18
+        ],
+        [
+          745,
+          330,
+          115,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_concourse",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_junction_shelter",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            220,
+            24
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 31,
+      "map_cell": [
+        31,
+        0
+      ],
+      "layout_id": "skybridge_junction_twist_fracture_span",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broad wind gaps linked by staggered suspended decks",
+      "landmark": "fractured transit exchange"
+    },
+    {
+      "id": "skybridge_junction_exp_junction_shelter",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Junction Shelter",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 112,
+        "expert_seconds": 27
+      },
+      "room_role": "recovery",
+      "design_intent": "Provide a protected overlook before the executive security perimeter.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          90,
+          415,
+          200,
+          18
+        ],
+        [
+          315,
+          355,
+          165,
+          18
+        ],
+        [
+          530,
+          420,
+          175,
+          18
+        ],
+        [
+          760,
+          345,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "skybridge_junction_exp_fracture_span",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_skybridge_east",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "skybridge_junction_opt_commuter_memorial",
+          "target_connection": "return"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 116,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 32,
+      "map_cell": [
+        32,
+        0
+      ],
+      "layout_id": "skybridge_junction_recovery_junction_shelter",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broad wind gaps linked by staggered suspended decks",
+      "landmark": "fractured transit exchange"
+    },
+    {
+      "id": "executive_helipad_exp_executive_approach",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Executive Approach",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 109,
+        "expert_seconds": 28
+      },
+      "room_role": "teach",
+      "design_intent": "Preview the helipad's security cadence from outside the lockdown zone.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          430,
+          200,
+          18
+        ],
+        [
+          365,
+          378,
+          170,
+          18
+        ],
+        [
+          590,
+          321,
+          155,
+          18
+        ],
+        [
+          775,
+          394,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_checkpoint",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "executive_helipad_opt_boardroom_overlook",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 35,
+      "map_cell": [
+        35,
+        0
+      ],
+      "layout_id": "executive_helipad_teach_executive_approach",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais"
+    },
+    {
+      "id": "executive_helipad_exp_drone_wake",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Drone Wake",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 119,
+        "expert_seconds": 31
+      },
+      "room_role": "test",
+      "design_intent": "Test movement through drone wash on shifting service platforms.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          380,
+          40
+        ],
+        [
+          660,
+          500,
+          300,
+          40
+        ],
+        [
+          105,
+          420,
+          170,
+          18
+        ],
+        [
+          380,
+          355,
+          145,
+          18
+        ],
+        [
+          585,
+          320,
+          130,
+          18
+        ],
+        [
+          785,
+          370,
+          115,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_checkpoint",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_arena",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 100,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 37,
+      "map_cell": [
+        37,
+        0
+      ],
+      "layout_id": "executive_helipad_test_drone_wake",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais"
+    },
+    {
+      "id": "executive_helipad_exp_rotor_crucible",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Rotor Crucible",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 125,
+        "expert_seconds": 32
+      },
+      "room_role": "twist",
+      "design_intent": "Combine crosswind gaps with synchronized perimeter shocks.",
+      "mechanic_contract": "electrical_floor",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          380,
+          40
+        ],
+        [
+          700,
+          500,
+          260,
+          40
+        ],
+        [
+          135,
+          385,
+          160,
+          18
+        ],
+        [
+          345,
+          380,
+          135,
+          18
+        ],
+        [
+          615,
+          285,
+          120,
+          18
+        ],
+        [
+          760,
+          405,
+          110,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_arena",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_warden_antechamber",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            220,
+            24
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 39,
+      "map_cell": [
+        39,
+        0
+      ],
+      "layout_id": "executive_helipad_twist_rotor_crucible",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais"
+    },
+    {
+      "id": "executive_helipad_exp_warden_antechamber",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Warden Antechamber",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 125,
+        "expert_seconds": 32
+      },
+      "room_role": "recovery",
+      "design_intent": "Lower the combat temperature and foreshadow the Helix Warden arena.",
+      "mechanic_contract": "breakaway",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          445,
+          210,
+          18
+        ],
+        [
+          370,
+          395,
+          185,
+          18
+        ],
+        [
+          585,
+          345,
+          170,
+          18
+        ],
+        [
+          775,
+          420,
+          155,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "executive_helipad_exp_rotor_crucible",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "cyber_helipad_descent",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "executive_helipad_opt_pilot_locker",
+          "target_connection": "return"
+        }
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            335,
+            370
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.75
+        },
+        {
+          "position": [
+            630,
+            325
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "collapse_delay": 0.65
+        }
+      ],
+      "critical_path_index": 40,
+      "map_cell": [
+        40,
+        0
+      ],
+      "layout_id": "executive_helipad_recovery_warden_antechamber",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais"
+    },
+    {
+      "id": "billboard_highway_opt_sponsor_archive",
+      "region_id": "cyber_city",
+      "district_id": "billboard_highway",
+      "display_name": "Billboard Highway — Sponsor Archive",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: Cancelled ads reveal Helix quietly buying every emergency broadcast channel.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          105,
+          405,
+          190,
+          18
+        ],
+        [
+          310,
+          375,
+          140,
+          18
+        ],
+        [
+          545,
+          400,
+          155,
+          18
+        ],
+        [
+          740,
+          350,
+          160,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_billboard_highway_sponsor_archive",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Cancelled ads reveal Helix quietly buying every emergency broadcast channel.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_billboard_highway_sponsor_archive",
+        "amount": 25,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "billboard_highway_exp_holo_toll_lull",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        16,
+        -1
+      ],
+      "layout_id": "billboard_highway_optional_lore_sponsor_archive",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "long lateral lanes broken by shallow advertising-rail rises",
+      "landmark": "suspended holographic billboard gantry"
+    },
+    {
+      "id": "communication_spire_opt_numbers_station",
+      "region_id": "cyber_city",
+      "district_id": "communication_spire",
+      "display_name": "Communication Spire — Numbers Station",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: A dead frequency repeats coordinates that match the factory freight lift.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          135,
+          420,
+          160,
+          18
+        ],
+        [
+          320,
+          365,
+          150,
+          18
+        ],
+        [
+          530,
+          265,
+          135,
+          18
+        ],
+        [
+          690,
+          210,
+          170,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_communication_spire_numbers_station",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A dead frequency repeats coordinates that match the factory freight lift.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_communication_spire_numbers_station",
+        "amount": 25,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "communication_spire_exp_quiet_frequency",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        24,
+        -1
+      ],
+      "layout_id": "communication_spire_optional_lore_numbers_station",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "tight central ascent with alternating relay shelves",
+      "landmark": "storm-lit transmission mast"
+    },
+    {
+      "id": "skybridge_junction_opt_commuter_memorial",
+      "region_id": "cyber_city",
+      "district_id": "skybridge_junction",
+      "display_name": "Skybridge Junction — Commuter Memorial",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: Names on the memorial stop exactly one day before Helix sealed the bridge.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          105,
+          380,
+          175,
+          18
+        ],
+        [
+          300,
+          345,
+          145,
+          18
+        ],
+        [
+          545,
+          385,
+          155,
+          18
+        ],
+        [
+          740,
+          335,
+          140,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_skybridge_junction_commuter_memorial",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Names on the memorial stop exactly one day before Helix sealed the bridge.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_skybridge_junction_commuter_memorial",
+        "amount": 25,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "skybridge_junction_exp_junction_shelter",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        32,
+        -1
+      ],
+      "layout_id": "skybridge_junction_optional_lore_commuter_memorial",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "broad wind gaps linked by staggered suspended decks",
+      "landmark": "fractured transit exchange"
+    },
+    {
+      "id": "executive_helipad_opt_boardroom_overlook",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Boardroom Overlook",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: A board vote authorizes the Warden to classify citizens as navigation hazards.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          410,
+          190,
+          18
+        ],
+        [
+          355,
+          385,
+          165,
+          18
+        ],
+        [
+          600,
+          310,
+          150,
+          18
+        ],
+        [
+          755,
+          410,
+          135,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_executive_helipad_boardroom_overlook",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A board vote authorizes the Warden to classify citizens as navigation hazards.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_executive_helipad_boardroom_overlook",
+        "amount": 25,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "executive_helipad_exp_executive_approach",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        35,
+        -1
+      ],
+      "layout_id": "executive_helipad_optional_lore_boardroom_overlook",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais"
+    },
+    {
+      "id": "executive_helipad_opt_pilot_locker",
+      "region_id": "cyber_city",
+      "district_id": "executive_helipad",
+      "display_name": "Executive Helipad — Pilot Locker",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: A grounded pilot hid evacuation codes after refusing Helix's final flight order.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          400,
+          40
+        ],
+        [
+          640,
+          500,
+          320,
+          40
+        ],
+        [
+          95,
+          390,
+          165,
+          18
+        ],
+        [
+          385,
+          365,
+          140,
+          18
+        ],
+        [
+          575,
+          280,
+          125,
+          18
+        ],
+        [
+          790,
+          390,
+          110,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_executive_helipad_pilot_locker",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A grounded pilot hid evacuation codes after refusing Helix's final flight order.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_executive_helipad_pilot_locker",
+        "amount": 35,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "executive_helipad_exp_warden_antechamber",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "electrical_floor",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            220,
+            24
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "map_cell": [
+        40,
+        -1
+      ],
+      "layout_id": "executive_helipad_optional_mastery_pilot_locker",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "perimeter approach circling a low exposed landing pad",
+      "landmark": "Helix executive rotor dais"
+    }
+  ],
+  "district_expansion_version": 2
+}

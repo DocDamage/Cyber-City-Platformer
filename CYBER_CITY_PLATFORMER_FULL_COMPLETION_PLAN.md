@@ -1,5 +1,7 @@
 # Cyber City Platformer — Full Completion Implementation Plan
 
+> Historical baseline and acceptance-criteria record. The implementation delivery is now documented in `docs/implementation/DELIVERY_SUMMARY.md`; this plan intentionally preserves the starting audit and task vocabulary used to reach that state.
+
 **Repository:** `DocDamage/Cyber-City-Platformer`  
 **Engine target:** Godot 4.7.x  
 **Primary platform:** Windows 11  
@@ -24,9 +26,9 @@ The project is complete only when all of the following are true:
 
 ---
 
-## 2. Current-State Summary
+## 2. Historical initial-state summary
 
-The repository already contains a useful foundation:
+At the time this plan was written, the repository contained a useful foundation:
 
 - Player movement, jumping, wall sliding, wall jumping, dash, melee, and shooting
 - Health, energy, damage, death, respawn, and invulnerability
@@ -41,7 +43,7 @@ The repository already contains a useful foundation:
 - Basic VFX hooks
 - Headless smoke-test scripts
 
-The project is not yet complete because:
+At that time, the project was not yet complete because:
 
 - Required runtime assets are ignored and absent from a clean clone
 - The active audio manager hard-preloads absent files

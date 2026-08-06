@@ -35,10 +35,19 @@ func _run() -> void:
 		return
 	player.died.emit()
 	await create_timer(0.8, true, false, true).timeout
-	if not _require(not encounter.is_active() and encounter.get_live_enemy_count() == 1, "Encounter did not rebuild after player death."):
+	if not _require(not encounter.is_active() and encounter.get_live_enemy_count() == 1, "Encounter did not rebuild after player death (active=%s live=%d wave_records=%d)." % [encounter.is_active(), encounter.get_live_enemy_count(), encounter.get_total_authored_enemy_count()]):
 		return
 	encounter.call(&"_on_body_entered", player)
 	await physics_frame
+	if not _require(not encounter.is_active(), "Encounter reactivated before the respawned player left its activation area."):
+		return
+	player.global_position = Vector2(-500.0, 0.0)
+	encounter.call(&"_on_body_exited", player)
+	player.global_position = Vector2.ZERO
+	encounter.call(&"_on_body_entered", player)
+	await physics_frame
+	if not _require(encounter.is_active(), "Encounter did not rearm after the player exited and re-entered."):
+		return
 	var rebuilt := encounter.get_live_enemies()[0] as EnemyBase
 	rebuilt.take_damage(rebuilt.health)
 	for _frame in range(20):

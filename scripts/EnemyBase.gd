@@ -34,6 +34,10 @@ const PROJECTILE_SCENE := preload("res://scenes/systems/security/EnemyProjectile
 @export var uses_gravity := true
 @export_range(0.0, 0.8, 0.05) var knockback_resistance := 0.0
 @export_range(0.0, 1200.0, 1.0) var detection_radius := 0.0
+@export_range(64.0, 1600.0, 1.0) var leash_distance := 430.0
+@export_range(0.0, 0.95, 0.01) var damage_resistance := 0.0
+@export_range(0.0, 0.95, 0.01) var stagger_resistance := 0.0
+@export_range(0.1, 20.0, 0.1) var stagger_threshold := 2.0
 @export var movement_animation: StringName
 @export var death_animation: StringName
 @export var sprite_visual_scale := Vector2.ONE
@@ -47,13 +51,27 @@ var is_dead := false
 var attack_damage := 1
 var attack_range := 52.0
 var attack_cooldown := 1.0
+var attack_telegraph_time := 0.38
+var attack_active_time := 0.14
+var attack_recovery_time := 0.32
+var attack_punish_window := 0.32
 var _attack_cooldown_remaining := 0.0
 var _idle_time_remaining := 0.0
 var _patrol_origin := Vector2.ZERO
 var _flight_phase := 0.0
 var _hurt_generation := 0
+var _stagger_damage := 0.0
+var _stagger_recovery_time := 0.48
+var _hurt_duration := 0.2
+var _attack_kind_override: StringName
 var _chase_target: Node2D
 var _attack_controller: EnemyAttackController
+var _drop_table: Array = []
+var _animation_map: Dictionary = {}
+var _audio_profile: Dictionary = {}
+var _vfx_profile: Dictionary = {}
+var _navigation_contract: Dictionary = {}
+var _difficulty_variants: Dictionary = {}
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
@@ -114,12 +132,17 @@ func take_damage(amount: int) -> bool:
 	var applied_damage := amount
 	if archetype == &"shielded_enemy":
 		applied_damage = maxi(amount - 1, 1)
+	applied_damage = maxi(roundi(float(applied_damage) * (1.0 - damage_resistance)), 1)
 	health = maxi(health - applied_damage, 0)
 	damaged.emit(applied_damage, health)
 	if health == 0:
 		_die()
 	else:
-		_enter_hurt_state()
+		_stagger_damage += maxf(float(amount) * (1.0 - stagger_resistance), 0.1)
+		if _stagger_damage >= stagger_threshold:
+			_enter_stunned_state()
+		else:
+			_enter_hurt_state()
 	return true
 
 
@@ -142,6 +165,41 @@ func get_archetype() -> StringName:
 
 func set_gravity_multiplier(value: float) -> void:
 	gravity_multiplier = clampf(value, -2.0, 3.0)
+
+
+func set_home_position(value: Vector2) -> void:
+	_patrol_origin = value
+
+
+func get_production_contract() -> Dictionary:
+	return {
+		"attack": get_attack_contract(),
+		"leash_distance": leash_distance,
+		"stagger_threshold": stagger_threshold,
+		"stagger_resistance": stagger_resistance,
+		"damage_resistance": damage_resistance,
+		"knockback_resistance": knockback_resistance,
+		"drop_table": _drop_table.duplicate(true),
+		"animation_map": _animation_map.duplicate(true),
+		"audio_profile": _audio_profile.duplicate(true),
+		"vfx_profile": _vfx_profile.duplicate(true),
+		"navigation": _navigation_contract.duplicate(true),
+		"difficulty_variants": _difficulty_variants.duplicate(true),
+	}
+
+
+func get_attack_contract() -> Dictionary:
+	return {
+		"kind": _attack_kind(),
+		"telegraph": attack_telegraph_time,
+		"active": attack_active_time,
+		"recovery": attack_recovery_time,
+		"punish_window": attack_punish_window,
+	}
+
+
+func get_difficulty_variant(variant_id: StringName) -> Dictionary:
+	return (_difficulty_variants.get(String(variant_id), {}) as Dictionary).duplicate(true)
 
 
 func get_default_detection_radius() -> float:
@@ -189,6 +247,10 @@ func _update_chase() -> void:
 	if _chase_target == null:
 		_change_state(State.IDLE)
 		return
+	if global_position.distance_to(_patrol_origin) > leash_distance or _chase_target.global_position.distance_to(_patrol_origin) > leash_distance * 1.15:
+		_chase_target = null
+		_change_state(State.PATROL)
+		return
 	var target_delta := _chase_target.global_position - global_position
 	if target_delta.length() <= attack_range and is_zero_approx(_attack_cooldown_remaining):
 		_begin_attack()
@@ -209,13 +271,14 @@ func _begin_attack() -> void:
 	if _attack_controller == null or state != State.CHASE:
 		return
 	_change_state(State.TELEGRAPH)
-	sprite.modulate = Color(1.0, 0.42, 0.24)
+	sprite.modulate = Color.from_string(String(_vfx_profile.get("telegraph_color", "ff6b45")), Color(1.0, 0.42, 0.24))
 	var kind := _attack_kind()
-	var telegraph := 0.2 if archetype == &"fast_melee_attacker" else 0.38
-	_attack_controller.start_attack(kind, telegraph, 0.14, 0.32)
+	_attack_controller.start_attack(kind, attack_telegraph_time, attack_active_time, attack_recovery_time)
 
 
 func _attack_kind() -> StringName:
+	if not _attack_kind_override.is_empty():
+		return _attack_kind_override
 	match archetype:
 		&"ranged_shooter", &"flying_shooter": return &"ranged"
 		&"leaping_enemy": return &"leap"
@@ -229,6 +292,7 @@ func _on_attack_committed(kind: StringName) -> void:
 	_change_state(State.ATTACK)
 	sprite.modulate = Color.WHITE
 	_play_first_available(_attack_candidates())
+	_play_profile_sfx(&"attack")
 	match kind:
 		&"ranged": _spawn_projectile(Vector2(direction, 0.0))
 		&"hazard":
@@ -237,9 +301,9 @@ func _on_attack_committed(kind: StringName) -> void:
 			_spawn_projectile(Vector2(direction, 0.28))
 		&"leap":
 			velocity = Vector2(direction * chase_speed * 1.65, -260.0)
-			contact_hitbox.activate(0.2)
+			contact_hitbox.activate(attack_active_time)
 		_:
-			contact_hitbox.activate(0.14)
+			contact_hitbox.activate(attack_active_time)
 
 
 func _on_recovery_started() -> void:
@@ -272,11 +336,32 @@ func _enter_hurt_state() -> void:
 	contact_hitbox.deactivate()
 	_change_state(State.HURT)
 	sprite.modulate = Color(1.0, 0.25, 0.45)
+	_play_profile_sfx(&"hurt")
 	_recover_from_hurt(generation)
 
 
 func _recover_from_hurt(generation: int) -> void:
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(_hurt_duration).timeout
+	if generation != _hurt_generation or is_dead:
+		return
+	sprite.modulate = Color.WHITE
+	_change_state(State.CHASE if _chase_target != null else State.IDLE)
+
+
+func _enter_stunned_state() -> void:
+	_hurt_generation += 1
+	var generation := _hurt_generation
+	_stagger_damage = 0.0
+	_attack_controller.cancel()
+	contact_hitbox.deactivate()
+	_change_state(State.STUNNED)
+	sprite.modulate = Color(1.0, 0.92, 0.35)
+	_play_profile_sfx(&"hurt")
+	_recover_from_stagger(generation)
+
+
+func _recover_from_stagger(generation: int) -> void:
+	await get_tree().create_timer(maxf(_stagger_recovery_time, attack_punish_window)).timeout
 	if generation != _hurt_generation or is_dead:
 		return
 	sprite.modulate = Color.WHITE
@@ -388,10 +473,9 @@ func _die() -> void:
 	var manager := get_node_or_null("/root/GameManager")
 	if manager != null and score_value > 0:
 		manager.call(&"add_score", score_value)
+	_grant_drops(manager)
 	_spawn_explosion_vfx()
-	var audio_manager := get_node_or_null("/root/AudioManager")
-	if audio_manager != null:
-		audio_manager.call(&"play_sfx", &"explosion", global_position, -2.0)
+	_play_profile_sfx(&"death", -2.0)
 	set_physics_process(false)
 	body_collision.set_deferred("disabled", true)
 	hurtbox.set_invincible(true)
@@ -405,7 +489,35 @@ func _spawn_explosion_vfx() -> void:
 	var vfx := get_node_or_null("/root/VFXSpawner")
 	if vfx != null:
 		vfx.call(&"spawn_one_shot", SMOKE_VFX, global_position + Vector2(0.0, -22.0))
-		vfx.call(&"spawn_effect", &"explosion_ring", global_position + Vector2(0.0, -22.0))
+		vfx.call(&"spawn_effect", StringName(_vfx_profile.get("death", "explosion_ring")), global_position + Vector2(0.0, -22.0))
+
+
+func _grant_drops(manager: Node) -> void:
+	if manager == null:
+		return
+	var inventory := manager.get("inventory") as InventoryState
+	if inventory == null:
+		return
+	for drop_value: Variant in _drop_table:
+		var drop := drop_value as Dictionary
+		if randf() > clampf(float(drop.get("chance", 0.0)), 0.0, 1.0):
+			continue
+		var minimum := maxi(int(drop.get("min", 1)), 1)
+		var maximum := maxi(int(drop.get("max", minimum)), minimum)
+		var amount := randi_range(minimum, maximum)
+		if String(drop.get("type", "")) == "currency":
+			inventory.currency += amount
+		elif String(drop.get("type", "")) == "item":
+			inventory.add_item(StringName(drop.get("id", "")), amount)
+
+
+func _play_profile_sfx(profile_key: StringName, volume_db := -5.0) -> void:
+	var cue := StringName(_audio_profile.get(String(profile_key), ""))
+	if cue.is_empty():
+		return
+	var audio_manager := get_node_or_null("/root/AudioManager")
+	if audio_manager != null:
+		audio_manager.call(&"play_sfx", cue, global_position, volume_db)
 
 
 func _apply_library_configuration() -> void:
@@ -417,26 +529,64 @@ func _apply_library_configuration() -> void:
 	attack_damage = int(info.get("attack_damage", attack_damage))
 	attack_range = float(info.get("attack_range", attack_range))
 	attack_cooldown = float(info.get("attack_cooldown", attack_cooldown))
+	patrol_speed = float(info.get("patrol_speed", patrol_speed))
 	chase_speed = float(info.get("chase_speed", chase_speed))
+	score_value = int(info.get("score_value", score_value))
+	var detection: Dictionary = info.get("detection", {})
+	detection_radius = float(detection.get("radius", info.get("detection_radius", detection_radius)))
+	leash_distance = float(detection.get("leash_distance", leash_distance))
+	var stagger: Dictionary = info.get("stagger", {})
+	stagger_threshold = float(stagger.get("threshold", stagger_threshold))
+	_stagger_recovery_time = float(stagger.get("recovery", _stagger_recovery_time))
+	stagger_resistance = float(stagger.get("resistance", stagger_resistance))
+	var resistances: Dictionary = info.get("resistances", {})
+	damage_resistance = float(resistances.get("damage", damage_resistance))
+	knockback_resistance = float(resistances.get("knockback", knockback_resistance))
+	var attack: Dictionary = info.get("attack", {})
+	_attack_kind_override = StringName(attack.get("kind", ""))
+	attack_telegraph_time = float(attack.get("telegraph", attack_telegraph_time))
+	attack_active_time = float(attack.get("active", attack_active_time))
+	attack_recovery_time = float(attack.get("recovery", attack_recovery_time))
+	attack_punish_window = float(attack.get("punish_window", attack_recovery_time))
+	var hurt: Dictionary = info.get("hurt", {})
+	_hurt_duration = float(hurt.get("duration", _hurt_duration))
+	_drop_table = (info.get("drop_table", []) as Array).duplicate(true)
+	_animation_map = (info.get("animation_map", {}) as Dictionary).duplicate(true)
+	_audio_profile = (info.get("audio_profile", {}) as Dictionary).duplicate(true)
+	_vfx_profile = (info.get("vfx_profile", {}) as Dictionary).duplicate(true)
+	_navigation_contract = (info.get("navigation", {}) as Dictionary).duplicate(true)
+	_difficulty_variants = (info.get("difficulty_variants", {}) as Dictionary).duplicate(true)
 	var body_size: Array = info.get("body_size", [])
 	if body_size.size() == 2 and body_collision.shape is RectangleShape2D:
 		(body_collision.shape as RectangleShape2D).size = Vector2(float(body_size[0]), float(body_size[1]))
+	var collision: Dictionary = info.get("collision", {})
+	_apply_rectangle_size(hurtbox.get_node_or_null("CollisionShape2D") as CollisionShape2D, collision.get("hurtbox_size", []))
+	_apply_rectangle_size(contact_hitbox.get_node_or_null("CollisionShape2D") as CollisionShape2D, collision.get("contact_hitbox_size", []))
+	var contact_offset: Array = collision.get("contact_offset", [])
+	if contact_offset.size() == 2:
+		contact_hitbox.position = Vector2(float(contact_offset[0]), float(contact_offset[1]))
+
+
+func _apply_rectangle_size(collision: CollisionShape2D, dimensions_value: Variant) -> void:
+	var dimensions := dimensions_value as Array
+	if collision != null and collision.shape is RectangleShape2D and dimensions.size() == 2:
+		(collision.shape as RectangleShape2D).size = Vector2(float(dimensions[0]), float(dimensions[1]))
 
 
 func _idle_candidates() -> Array[StringName]:
-	return [&"idle", &"idle_walk", movement_animation]
+	return [StringName(_animation_map.get("idle", "")), &"idle", &"idle_walk", movement_animation]
 
 
 func _movement_candidates() -> Array[StringName]:
-	return [movement_animation, &"run", &"walk", &"move", &"flying", &"idle"]
+	return [StringName(_animation_map.get("move", "")), movement_animation, &"run", &"walk", &"move", &"flying", &"idle"]
 
 
 func _attack_candidates() -> Array[StringName]:
-	return [&"attack", &"attack_1", &"attack1", &"fwd_swing", &"full_combo", movement_animation]
+	return [StringName(_animation_map.get("attack", "")), &"attack", &"attack_1", &"attack1", &"fwd_swing", &"full_combo", movement_animation]
 
 
 func _death_candidates() -> Array[StringName]:
-	return [death_animation, &"death", &"die", &"hurt", &"idle"]
+	return [StringName(_animation_map.get("death", "")), death_animation, &"death", &"die", &"hurt", &"idle"]
 
 
 func _play_first_available(candidates: Array[StringName]) -> StringName:

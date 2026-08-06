@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "world_id": "cyber_city_phasebound",
+  "start_room_id": "cyber_rooftop_entry",
+  "room_files": [
+    "res://data/world/rooms/rooftop_alley.json",
+    "res://data/world/rooms/cyber_city_districts.json",
+    "res://data/world/rooms/robot_factory_districts.json",
+    "res://data/world/rooms/neon_moon_districts.json",
+    "res://data/world/rooms/abyssal_night_districts.json"
+  ],
+  "regions": [
+    {"id":"cyber_city","display_name":"Cyber City","color":"27e8ff","districts":["rooftop_alley","billboard_highway","communication_spire","skybridge_junction","executive_helipad"]},
+    {"id":"robot_factory","display_name":"Mega Robot Factory","color":"ff9b42","districts":["sub_level_intake","conveyor_assembly","smelting_core","robotic_maintenance","assembly_engine"]},
+    {"id":"neon_moon","display_name":"Neon Moon Protocol","color":"a879ff","districts":["lunar_surface_arrival","research_cleanrooms","security_grid_shaft","bio_tech_labs","orbital_command"]},
+    {"id":"abyssal_night","display_name":"Abyssal Night","color":"ff4f88","districts":["corrupted_outpost","the_dark_chasm","bio_mechanical_nest","abyssal_sanctuary","heart_of_the_void"]}
+  ],
+  "districts": [
+    {"id":"rooftop_alley","region_id":"cyber_city","display_name":"Rooftop Alley"},
+    {"id":"billboard_highway","region_id":"cyber_city","display_name":"Billboard Highway"},
+    {"id":"communication_spire","region_id":"cyber_city","display_name":"Communication Spire"},
+    {"id":"skybridge_junction","region_id":"cyber_city","display_name":"Skybridge Junction"},
+    {"id":"executive_helipad","region_id":"cyber_city","display_name":"Executive Helipad"},
+    {"id":"sub_level_intake","region_id":"robot_factory","display_name":"Sub-Level Intake"},
+    {"id":"conveyor_assembly","region_id":"robot_factory","display_name":"Conveyor Assembly"},
+    {"id":"smelting_core","region_id":"robot_factory","display_name":"Smelting Core"},
+    {"id":"robotic_maintenance","region_id":"robot_factory","display_name":"Robotic Maintenance"},
+    {"id":"assembly_engine","region_id":"robot_factory","display_name":"Assembly Engine"},
+    {"id":"lunar_surface_arrival","region_id":"neon_moon","display_name":"Lunar Surface Arrival"},
+    {"id":"research_cleanrooms","region_id":"neon_moon","display_name":"Research Cleanrooms"},
+    {"id":"security_grid_shaft","region_id":"neon_moon","display_name":"Security Grid Shaft"},
+    {"id":"bio_tech_labs","region_id":"neon_moon","display_name":"Bio-Tech Labs"},
+    {"id":"orbital_command","region_id":"neon_moon","display_name":"Orbital Command"},
+    {"id":"corrupted_outpost","region_id":"abyssal_night","display_name":"Corrupted Outpost"},
+    {"id":"the_dark_chasm","region_id":"abyssal_night","display_name":"The Dark Chasm"},
+    {"id":"bio_mechanical_nest","region_id":"abyssal_night","display_name":"Bio-Mechanical Nest"},
+    {"id":"abyssal_sanctuary","region_id":"abyssal_night","display_name":"Abyssal Sanctuary"},
+    {"id":"heart_of_the_void","region_id":"abyssal_night","display_name":"Heart of the Void"}
+  ],
+  "fast_travel_nodes": [
+    {"id":"warp_rooftop_overlook","room_id":"cyber_rooftop_overlook","display_name":"Rooftop Relay"},
+    {"id":"warp_skybridge","room_id":"cyber_skybridge_entry","display_name":"Skybridge Exchange","required_story_flags":["rooftop_alley_complete"]},
+    {"id":"warp_factory_engine","room_id":"factory_engine_entry","display_name":"Assembly Relay","required_story_flags":["helix_warden_defeated"]},
+    {"id":"warp_moon_surface","room_id":"moon_surface_entry","display_name":"Lunar Transit","required_story_flags":["assembly_colossus_defeated"]},
+    {"id":"warp_void_sanctuary","room_id":"void_sanctuary_entry","display_name":"Abyssal Relay","required_story_flags":["lunar_oracle_defeated"]}
+  ]
+}

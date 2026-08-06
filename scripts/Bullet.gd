@@ -5,7 +5,7 @@ const SPARK_VFX := preload("res://scenes/vfx/SparkBurst.tscn")
 @export var speed := 400.0
 @export_range(0.1, 10.0, 0.1) var max_lifetime := 3.0
 
-var direction := 1
+var direction: Variant = Vector2.RIGHT
 var _spent := false
 var _lifetime := 0.0
 
@@ -20,7 +20,8 @@ func _physics_process(delta: float) -> void:
 	if _lifetime >= max_lifetime:
 		_consume()
 		return
-	position.x += speed * direction * delta
+	var travel_direction: Vector2 = (direction as Vector2).normalized() if direction is Vector2 else Vector2(float(direction), 0.0).normalized()
+	position += travel_direction * speed * delta
 
 
 func _on_body_entered(_body: Node) -> void:
@@ -45,7 +46,8 @@ func _consume(spawn_impact := false) -> void:
 func _spawn_sparks() -> void:
 	var vfx := get_node_or_null("/root/VFXSpawner")
 	if vfx != null:
-		vfx.call(&"spawn_one_shot", SPARK_VFX, global_position, Vector2(-direction, 0.0))
+		var travel_direction: Vector2 = (direction as Vector2).normalized() if direction is Vector2 else Vector2(float(direction), 0.0).normalized()
+		vfx.call(&"spawn_one_shot", SPARK_VFX, global_position, -travel_direction)
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

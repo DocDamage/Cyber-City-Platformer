@@ -12,6 +12,14 @@ enum PathMode { PING_PONG, LOOP }
 @export_range(0.0, 4.0, 0.05) var wait_time := 0.25
 @export var starts_active := true
 @export var platform_size := Vector2(112.0, 18.0)
+@export var presentation_id: StringName
+
+const PRESENTATION_ASSETS := {
+	&"city_elevator": {"path": "res://assets/runtime/props/TraversalKits/Generated/cyber_elevator_cage_v1.png", "scale": 0.29, "surface_y": 250.0},
+	&"spire_carriage": {"path": "res://assets/runtime/props/TraversalKits/Generated/cyber_elevator_cage_v1.png", "scale": 0.31, "surface_y": 250.0},
+	&"skybridge_carriage": {"path": "res://assets/runtime/props/TraversalKits/Generated/cyber_skybridge_truss_v1.png", "scale": 0.32, "surface_y": 48.0},
+	&"factory_cargo_lift": {"path": "res://assets/runtime/props/TraversalKits/Generated/factory_cargo_lift_v1.png", "scale": 0.42, "surface_y": 235.0},
+}
 
 var _origin := Vector2.ZERO
 var _route := PackedVector2Array()
@@ -106,9 +114,37 @@ func _ensure_components() -> void:
 		collision.shape = shape
 		add_child(collision)
 	if get_node_or_null("Visual") == null:
-		var visual := Polygon2D.new()
-		visual.name = "Visual"
-		var half := platform_size * 0.5
-		visual.polygon = PackedVector2Array([Vector2(-half.x, -half.y), Vector2(half.x, -half.y), Vector2(half.x, half.y), Vector2(-half.x, half.y)])
-		visual.color = Color("24d8ff")
-		add_child(visual)
+		var visual := TerrainPlatform.create_surface_art(platform_size, TerrainPlatform.region_for_node(self), 0, TerrainPlatform.prefers_traversal_skin(self))
+		if visual != null:
+			visual.name = "Visual"
+			visual.set_meta(&"mechanic_role", "moving_platform")
+			add_child(visual)
+	_ensure_architecture()
+
+
+func _ensure_architecture() -> void:
+	if presentation_id.is_empty() or get_node_or_null("MechanicArchitecture") != null:
+		return
+	var specification := PRESENTATION_ASSETS.get(presentation_id, {}) as Dictionary
+	var path := String(specification.get("path", ""))
+	if path.is_empty() or not ResourceLoader.exists(path, "Texture2D"):
+		push_error("Moving platform presentation is missing: %s" % presentation_id)
+		return
+	var texture := load(path) as Texture2D
+	if texture == null:
+		push_error("Moving platform presentation failed to load: %s" % path)
+		return
+	var scale_factor := float(specification.get("scale", 0.3))
+	var surface_y := float(specification.get("surface_y", 0.0))
+	var surface_anchor := Vector2(0.0, -platform_size.y * 0.5)
+	var sprite := Sprite2D.new()
+	sprite.name = "MechanicArchitecture"
+	sprite.texture = texture
+	sprite.centered = false
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite.z_index = -1
+	sprite.scale = Vector2(scale_factor, scale_factor)
+	sprite.position = Vector2(surface_anchor.x - texture.get_width() * scale_factor * 0.5, surface_anchor.y - surface_y * scale_factor)
+	sprite.set_meta(&"presentation_id", String(presentation_id))
+	sprite.set_meta(&"surface_anchor", surface_anchor)
+	add_child(sprite)

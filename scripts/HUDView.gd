@@ -13,10 +13,15 @@ extends CanvasLayer
 @onready var upgrade_label: Label = %UpgradeLabel
 @onready var objective_label: Label = %ObjectiveLabel
 @onready var interaction_prompt: Label = %InteractionPrompt
+@onready var stage_intro: PanelContainer = %StageIntro
+@onready var stage_intro_act_label: Label = %ActLabel
+@onready var stage_intro_title_label: Label = %TitleLabel
 
 var _manager: Node
 var _notice_tween: Tween
+var _stage_intro_tween: Tween
 var _boss: BossBase
+var _presented_stage_id := ""
 
 
 func _ready() -> void:
@@ -119,6 +124,42 @@ func bind_stage(controller: StageController) -> void:
 	for node: Node in controller.installed_mechanics:
 		if node.has_signal(&"focus_changed") and not node.is_connected(&"focus_changed", _on_interaction_focus_changed):
 			node.connect(&"focus_changed", _on_interaction_focus_changed)
+
+
+func show_stage_intro(stage_id: String, stage_metadata: Dictionary) -> void:
+	if stage_intro == null:
+		return
+	var act_number := int(stage_metadata.get("act", 0))
+	var act_name := {
+		1: "CYBER CITY",
+		2: "MEGA ROBOT FACTORY",
+		3: "NEON MOON PROTOCOL",
+		4: "ABYSSAL NIGHT",
+	}.get(act_number, "CAMPAIGN") as String
+	var display_name := String(stage_metadata.get("display_name", stage_metadata.get("name", stage_id))).to_upper()
+	_presented_stage_id = stage_id
+	stage_intro_act_label.text = "ACT %02d  //  %s" % [act_number, act_name]
+	stage_intro_title_label.text = display_name
+	stage_intro.visible = true
+	stage_intro.modulate = Color(1.0, 1.0, 1.0, 0.0)
+	stage_intro.scale = Vector2(0.96, 0.96)
+	stage_intro.pivot_offset = stage_intro.size * 0.5
+	if _stage_intro_tween != null and _stage_intro_tween.is_valid():
+		_stage_intro_tween.kill()
+	_stage_intro_tween = create_tween()
+	_stage_intro_tween.set_parallel(true)
+	_stage_intro_tween.tween_property(stage_intro, "modulate:a", 1.0, 0.22)
+	_stage_intro_tween.tween_property(stage_intro, "scale", Vector2.ONE, 0.22).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	# Keep the card through first render and input hand-off. Some content-heavy
+	# stages take longer to initialize than a lightweight scene, so a short
+	# cinematic hold would otherwise expire before the player can read it.
+	_stage_intro_tween.chain().tween_interval(3.8)
+	_stage_intro_tween.tween_property(stage_intro, "modulate:a", 0.0, 0.5)
+	_stage_intro_tween.tween_callback(func() -> void: stage_intro.visible = false)
+
+
+func get_presented_stage_id() -> String:
+	return _presented_stage_id
 
 
 func _on_objectives_completed(_stage_id: String) -> void:

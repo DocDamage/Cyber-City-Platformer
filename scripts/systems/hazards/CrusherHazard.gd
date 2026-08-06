@@ -11,6 +11,8 @@ var _origin := Vector2.ZERO
 var _elapsed := 0.0
 var _hazard: Hazard
 
+const FACTORY_CRUSHER_PATH := "res://assets/runtime/props/TraversalKits/Generated/factory_crusher_bay_v1.png"
+
 
 func _ready() -> void:
 	add_to_group(&"crushers")
@@ -25,6 +27,7 @@ func _ready() -> void:
 	_hazard.inactive_duration = 0.0
 	_hazard.telegraph_duration = 0.0
 	add_child(_hazard)
+	_ensure_architecture()
 
 
 func _physics_process(delta: float) -> void:
@@ -50,3 +53,26 @@ func reset_hazard() -> void:
 	if _hazard != null:
 		_hazard.reset_hazard()
 		_hazard.set_active(false)
+
+
+func _ensure_architecture() -> void:
+	if TerrainPlatform.region_for_node(self) != "robot_factory" or get_node_or_null("MechanicArchitecture") != null:
+		return
+	if not ResourceLoader.exists(FACTORY_CRUSHER_PATH, "Texture2D"):
+		push_error("Crusher presentation is missing: %s" % FACTORY_CRUSHER_PATH)
+		return
+	var texture := load(FACTORY_CRUSHER_PATH) as Texture2D
+	if texture == null:
+		push_error("Crusher presentation failed to load: %s" % FACTORY_CRUSHER_PATH)
+		return
+	var scale_factor := 0.40
+	var sprite := Sprite2D.new()
+	sprite.name = "MechanicArchitecture"
+	sprite.texture = texture
+	sprite.centered = false
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite.z_index = -1
+	sprite.scale = Vector2(scale_factor, scale_factor)
+	sprite.position = Vector2(-texture.get_width() * scale_factor * 0.5, -66.0 * scale_factor)
+	sprite.set_meta(&"presentation_id", "factory_crusher_bay")
+	add_child(sprite)

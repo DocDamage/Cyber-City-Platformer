@@ -1,0 +1,6466 @@
+{
+  "schema_version": 2,
+  "rooms": [
+    {
+      "id": "moon_surface_entry",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Transit Lock",
+      "map_cell": [
+        2,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 94,
+        "expert_seconds": 23
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "warp": [
+          480,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          260,
+          40
+        ],
+        [
+          350,
+          450,
+          160,
+          16
+        ],
+        [
+          610,
+          390,
+          180,
+          16
+        ],
+        [
+          850,
+          500,
+          110,
+          40
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            275
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.55
+        }
+      ],
+      "warp_room": {
+        "id": "warp_moon_surface",
+        "position": [
+          480,
+          395
+        ]
+      },
+      "tutorial": "LOW GRAVITY EXTENDS JUMPS AND PHASE ARCS • LAND BEFORE RE-AIMING",
+      "story_beat": "moon_surface_arrival",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "factory_engine_exit",
+          "target_connection": "east",
+          "map_hidden": true
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_regolith_step",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 82
+    },
+    {
+      "id": "moon_surface_crater",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Crater Span",
+      "map_cell": [
+        4,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 122,
+        "expert_seconds": 30
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          190,
+          40
+        ],
+        [
+          770,
+          500,
+          190,
+          40
+        ],
+        [
+          85,
+          365,
+          130,
+          16
+        ],
+        [
+          745,
+          335,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            270,
+            430
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -150
+            ]
+          ],
+          "speed": 105
+        },
+        {
+          "position": [
+            560,
+            250
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              170,
+              130
+            ]
+          ],
+          "speed": 100,
+          "wait": 0.15
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            440
+          ],
+          "gravity": 0.42
+        },
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            560,
+            44
+          ]
+        }
+      ],
+      "encounters": [
+        {
+          "id": "moon_crater_air_patrol",
+          "activation": [
+            160,
+            100,
+            650,
+            390
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "harpy",
+                "position": [
+                  360,
+                  260
+                ]
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  650,
+                  210
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "gargoyle",
+                "position": [
+                  520,
+                  190
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_regolith_step",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_crater_vector",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 84
+    },
+    {
+      "id": "moon_surface_airlocks",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Broken Airlocks",
+      "map_cell": [
+        6,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          390,
+          150,
+          16
+        ],
+        [
+          370,
+          300,
+          160,
+          16
+        ],
+        [
+          690,
+          390,
+          160,
+          16
+        ]
+      ],
+      "breakaway_platforms": [
+        {
+          "position": [
+            285,
+            410
+          ],
+          "size": [
+            100,
+            18
+          ],
+          "collapse_delay": 0.8
+        },
+        {
+          "position": [
+            610,
+            340
+          ],
+          "size": [
+            100,
+            18
+          ],
+          "collapse_delay": 0.8
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.58
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            115,
+            90
+          ],
+          "active": 0.9,
+          "inactive": 1.5
+        }
+      ],
+      "encounters": [
+        {
+          "id": "moon_airlock_quarantine",
+          "activation": [
+            150,
+            130,
+            670,
+            370
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "skeleton_warrior",
+                "position": [
+                  320,
+                  455
+                ]
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  680,
+                  260
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "gryphon",
+                "position": [
+                  520,
+                  220
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_crater_vector",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_solar_wake",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 86
+    },
+    {
+      "id": "moon_surface_transit",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Protocol Tram",
+      "map_cell": [
+        9,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 160,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            135,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              250,
+              0
+            ]
+          ],
+          "speed": 145
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.62
+        }
+      ],
+      "story_beat": "neon_moon_protocol_reveal",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_airlock_shadow",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 89
+    },
+    {
+      "id": "moon_cleanroom_entry",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Decontamination Airlock",
+      "map_cell": [
+        10,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 94,
+        "expert_seconds": 23
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          220,
+          390,
+          180,
+          16
+        ],
+        [
+          560,
+          320,
+          180,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            110,
+            90
+          ],
+          "active": 1.0,
+          "inactive": 1.5
+        }
+      ],
+      "services": [
+        {
+          "type": "npc",
+          "id": "protocol_ai",
+          "display_name": "Protocol Echo",
+          "position": [
+            690,
+            445
+          ],
+          "dialogue_entries": [
+            "moon_protocol_ai"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_transit",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_decon_buffer",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 90
+    },
+    {
+      "id": "moon_cleanroom_decon",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Sterile Circuit",
+      "map_cell": [
+        12,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 122,
+        "expert_seconds": 31
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          100,
+          390,
+          160,
+          16
+        ],
+        [
+          390,
+          300,
+          180,
+          16
+        ],
+        [
+          700,
+          390,
+          160,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            115,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -180
+            ]
+          ],
+          "speed": 110
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            90,
+            100
+          ],
+          "active": 0.8,
+          "inactive": 1.2
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            680,
+            440
+          ],
+          "size": [
+            90,
+            100
+          ],
+          "active": 0.8,
+          "inactive": 1.2,
+          "phase": 0.65
+        }
+      ],
+      "encounters": [
+        {
+          "id": "cleanroom_decon_security",
+          "activation": [
+            150,
+            130,
+            670,
+            370
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  310,
+                  360
+                ]
+              },
+              {
+                "enemy": "witch",
+                "position": [
+                  680,
+                  350
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  500,
+                  220
+                ]
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  620,
+                  250
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_decon_buffer",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_sterile_switchback",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "moon_cleanroom_specimen",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 92
+    },
+    {
+      "id": "moon_cleanroom_specimen",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Specimen Vault",
+      "map_cell": [
+        13,
+        7
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 150,
+        "expert_seconds": 38,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          160,
+          16
+        ],
+        [
+          405,
+          300,
+          150,
+          16
+        ],
+        [
+          680,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "toxic_pool",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            240,
+            44
+          ]
+        },
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            620,
+            360
+          ],
+          "gravity": 0.35
+        }
+      ],
+      "reward": {
+        "id": "bow_lunar_prism",
+        "family": "bow",
+        "display_name": "Lunar Prism",
+        "position": [
+          480,
+          265
+        ],
+        "dialogue": "moon_prism_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "moon_cleanroom_decon",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_security",
+          "target_connection": "specimen"
+        }
+      ]
+    },
+    {
+      "id": "moon_cleanroom_security",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Access Lattice",
+      "map_cell": [
+        14,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "specimen": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          380,
+          160,
+          16
+        ],
+        [
+          390,
+          285,
+          180,
+          16
+        ],
+        [
+          700,
+          380,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 155,
+          "speed": 0.75
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            690,
+            440
+          ],
+          "size": [
+            90,
+            100
+          ],
+          "active": 0.9,
+          "inactive": 1.3
+        }
+      ],
+      "security_gates": [
+        {
+          "id": "gate_cleanroom_access",
+          "position": [
+            760,
+            270
+          ],
+          "size": [
+            34,
+            540
+          ],
+          "required_switches": 2,
+          "persistence": "save"
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_cleanroom_alpha",
+          "kind": "switch",
+          "position": [
+            240,
+            345
+          ],
+          "targets": [
+            "gate_cleanroom_access"
+          ],
+          "persistence": "save"
+        },
+        {
+          "id": "terminal_cleanroom_beta",
+          "kind": "switch",
+          "position": [
+            500,
+            250
+          ],
+          "targets": [
+            "gate_cleanroom_access"
+          ],
+          "persistence": "save"
+        }
+      ],
+      "shortcut": {
+        "id": "shortcut_cleanroom_access",
+        "position": [
+          805,
+          330
+        ],
+        "size": [
+          24,
+          120
+        ],
+        "approach": "left",
+        "target_room": "moon_cleanroom_entry",
+        "target_connection": "east"
+      },
+      "encounters": [
+        {
+          "id": "cleanroom_access_guard",
+          "activation": [
+            150,
+            120,
+            680,
+            380
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "witch",
+                "position": [
+                  320,
+                  350
+                ]
+              },
+              {
+                "enemy": "flying_eye",
+                "position": [
+                  690,
+                  230
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "gryphon",
+                "position": [
+                  520,
+                  210
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_sterile_switchback",
+          "target_connection": "east"
+        },
+        {
+          "id": "specimen",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "moon_cleanroom_specimen",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_sample_transit",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 94
+    },
+    {
+      "id": "moon_cleanroom_dome",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Observation Dome",
+      "map_cell": [
+        17,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 160,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          140,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            720,
+            360
+          ],
+          "gravity": 0.48
+        }
+      ],
+      "story_beat": "moon_cleanroom_record",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_observation_rest",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 97
+    },
+    {
+      "id": "moon_security_entry",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Lower Node",
+      "map_cell": [
+        18,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 97,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          140,
+          410,
+          130,
+          16
+        ],
+        [
+          360,
+          330,
+          130,
+          16
+        ],
+        [
+          580,
+          250,
+          130,
+          16
+        ],
+        [
+          790,
+          350,
+          120,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.5
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 145,
+          "speed": 0.7
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_dome",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_vector_lobby",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 98
+    },
+    {
+      "id": "moon_security_lower",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Lower Ascent",
+      "map_cell": [
+        20,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 125,
+        "expert_seconds": 31
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          90,
+          405,
+          140,
+          16
+        ],
+        [
+          300,
+          325,
+          140,
+          16
+        ],
+        [
+          520,
+          245,
+          140,
+          16
+        ],
+        [
+          740,
+          345,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            110,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -260
+            ]
+          ],
+          "speed": 105
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.44
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            300,
+            325
+          ],
+          "radius": 115,
+          "speed": 0.9
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            710,
+            430
+          ],
+          "size": [
+            90,
+            110
+          ],
+          "active": 0.8,
+          "inactive": 1.35
+        }
+      ],
+      "encounters": [
+        {
+          "id": "security_lower_turrets",
+          "activation": [
+            140,
+            100,
+            690,
+            400
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  310,
+                  295
+                ]
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  650,
+                  200
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_vector_lobby",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_polar_ascent",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "moon_security_cache",
+          "target_connection": "north",
+          "required_ability": "gravity_anchor",
+          "barrier_id": "barrier_security_anchor_cache"
+        }
+      ],
+      "critical_path_index": 100
+    },
+    {
+      "id": "moon_security_cache",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Anchor Cache",
+      "map_cell": [
+        21,
+        7
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 155,
+        "expert_seconds": 36,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          180,
+          40
+        ],
+        [
+          780,
+          500,
+          180,
+          40
+        ],
+        [
+          120,
+          380,
+          130,
+          16
+        ],
+        [
+          400,
+          280,
+          150,
+          16
+        ],
+        [
+          700,
+          380,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            95,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -170
+            ]
+          ],
+          "speed": 135
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": -0.34
+        },
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            590,
+            44
+          ]
+        }
+      ],
+      "reward": {
+        "id": "spear_orbit_lance",
+        "family": "spear",
+        "display_name": "Orbit Lance",
+        "position": [
+          480,
+          245
+        ],
+        "dialogue": "moon_orbit_lance_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "moon_security_lower",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_upper",
+          "target_connection": "cache"
+        }
+      ]
+    },
+    {
+      "id": "moon_security_upper",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Upper Lattice",
+      "map_cell": [
+        22,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 135,
+        "expert_seconds": 33
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "cache": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          170,
+          40
+        ],
+        [
+          790,
+          500,
+          170,
+          40
+        ],
+        [
+          90,
+          400,
+          130,
+          16
+        ],
+        [
+          310,
+          310,
+          130,
+          16
+        ],
+        [
+          540,
+          220,
+          130,
+          16
+        ],
+        [
+          760,
+          350,
+          130,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -280
+            ]
+          ],
+          "speed": 120
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.38
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            430,
+            300
+          ],
+          "radius": 170,
+          "speed": 1.0
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            650,
+            230
+          ],
+          "radius": 110,
+          "speed": -0.8,
+          "clockwise": false
+        }
+      ],
+      "encounters": [
+        {
+          "id": "security_upper_intercept",
+          "activation": [
+            130,
+            80,
+            700,
+            420
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  330,
+                  260
+                ]
+              },
+              {
+                "enemy": "gryphon",
+                "position": [
+                  680,
+                  190
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "skeleton_warrior",
+                "position": [
+                  520,
+                  450
+                ]
+              },
+              {
+                "enemy": "satyr_archer",
+                "position": [
+                  760,
+                  320
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_polar_ascent",
+          "target_connection": "east"
+        },
+        {
+          "id": "cache",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "moon_security_cache",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_parallax_cage",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 102
+    },
+    {
+      "id": "moon_security_recovery",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Recovery Node",
+      "map_cell": [
+        25,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 164,
+        "expert_seconds": 41
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          160,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            430
+          ],
+          "size": [
+            130,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -210
+            ]
+          ],
+          "speed": 150
+        }
+      ],
+      "save_room": {
+        "id": "save_security_recovery",
+        "position": [
+          700,
+          445
+        ]
+      },
+      "shortcut": {
+        "id": "shortcut_security_shaft",
+        "position": [
+          250,
+          340
+        ],
+        "size": [
+          24,
+          120
+        ],
+        "approach": "right",
+        "target_room": "moon_security_entry",
+        "target_connection": "east"
+      },
+      "story_beat": "security_grid_mastered",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_grid_silence",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 105
+    },
+    {
+      "id": "moon_biotech_entry",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Observation",
+      "map_cell": [
+        26,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 98,
+        "expert_seconds": 24
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          190,
+          380,
+          180,
+          16
+        ],
+        [
+          590,
+          380,
+          180,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            720,
+            350
+          ],
+          "gravity": 0.6
+        }
+      ],
+      "story_beat": "biotech_corruption_glimpse",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_recovery",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_culture_walk",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 106
+    },
+    {
+      "id": "moon_biotech_gravity",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Gravity Chamber",
+      "map_cell": [
+        28,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 127,
+        "expert_seconds": 32
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          190,
+          40
+        ],
+        [
+          770,
+          500,
+          190,
+          40
+        ],
+        [
+          100,
+          380,
+          140,
+          16
+        ],
+        [
+          400,
+          280,
+          160,
+          16
+        ],
+        [
+          710,
+          380,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -160
+            ]
+          ],
+          "speed": 115
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            300,
+            270
+          ],
+          "size": [
+            340,
+            410
+          ],
+          "gravity": -0.42
+        },
+        {
+          "type": "gravity_zone",
+          "position": [
+            680,
+            270
+          ],
+          "size": [
+            340,
+            410
+          ],
+          "gravity": 0.3
+        },
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            510
+          ],
+          "size": [
+            560,
+            44
+          ]
+        }
+      ],
+      "encounters": [
+        {
+          "id": "biotech_gravity_ambush",
+          "activation": [
+            140,
+            100,
+            690,
+            400
+          ],
+          "lock_arena": false,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "mimic",
+                "position": [
+                  350,
+                  450
+                ]
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  670,
+                  220
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_culture_walk",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_gene_spindle",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 108
+    },
+    {
+      "id": "moon_biotech_specimens",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Living Specimens",
+      "map_cell": [
+        30,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 137,
+        "expert_seconds": 34
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "south": [
+          480,
+          110
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          390,
+          160,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          690,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "toxic_pool",
+          "position": [
+            300,
+            510
+          ],
+          "size": [
+            160,
+            44
+          ]
+        },
+        {
+          "type": "toxic_pool",
+          "position": [
+            660,
+            510
+          ],
+          "size": [
+            160,
+            44
+          ]
+        },
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            260
+          ],
+          "size": [
+            520,
+            330
+          ],
+          "gravity": 0.36
+        }
+      ],
+      "security_gates": [
+        {
+          "id": "gate_biotech_specimens",
+          "position": [
+            760,
+            270
+          ],
+          "size": [
+            34,
+            540
+          ],
+          "required_switches": 2,
+          "persistence": "save"
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_biotech_alpha",
+          "kind": "switch",
+          "position": [
+            250,
+            350
+          ],
+          "targets": [
+            "gate_biotech_specimens"
+          ],
+          "persistence": "save"
+        },
+        {
+          "id": "terminal_biotech_beta",
+          "kind": "switch",
+          "position": [
+            500,
+            265
+          ],
+          "targets": [
+            "gate_biotech_specimens"
+          ],
+          "persistence": "save"
+        }
+      ],
+      "encounters": [
+        {
+          "id": "biotech_specimen_breakout",
+          "activation": [
+            140,
+            110,
+            690,
+            390
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "mimic",
+                "position": [
+                  300,
+                  450
+                ]
+              },
+              {
+                "enemy": "medusa",
+                "position": [
+                  680,
+                  340
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "demon_boss",
+                "position": [
+                  510,
+                  430
+                ],
+                "elite": true
+              },
+              {
+                "enemy": "poison_skull",
+                "position": [
+                  620,
+                  230
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_gene_spindle",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_hybrid_breach",
+          "target_connection": "west"
+        },
+        {
+          "id": "south",
+          "rect": [
+            430,
+            500,
+            100,
+            18
+          ],
+          "target_room": "moon_biotech_archive",
+          "target_connection": "north"
+        }
+      ],
+      "critical_path_index": 110
+    },
+    {
+      "id": "moon_biotech_archive",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Sealed Archive",
+      "map_cell": [
+        33,
+        7
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 155,
+        "expert_seconds": 38,
+        "optional": true
+      },
+      "spawns": {
+        "north": [
+          480,
+          110
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          170,
+          390,
+          160,
+          16
+        ],
+        [
+          405,
+          300,
+          150,
+          16
+        ],
+        [
+          680,
+          390,
+          160,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            450
+          ],
+          "size": [
+            120,
+            90
+          ],
+          "active": 0.8,
+          "inactive": 1.25
+        }
+      ],
+      "story_beat": "oracle_origin_reveal",
+      "reward": {
+        "id": "staff_oracle_focus",
+        "family": "staff",
+        "display_name": "Oracle Focus",
+        "position": [
+          480,
+          265
+        ],
+        "dialogue": "moon_oracle_focus_found"
+      },
+      "connections": [
+        {
+          "id": "north",
+          "rect": [
+            430,
+            0,
+            100,
+            18
+          ],
+          "target_room": "moon_biotech_specimens",
+          "target_connection": "south"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_core",
+          "target_connection": "archive"
+        }
+      ]
+    },
+    {
+      "id": "moon_biotech_core",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Gravity Anchor Core",
+      "map_cell": [
+        33,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 167,
+        "expert_seconds": 42
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "archive": [
+          70,
+          330
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          390,
+          170,
+          16
+        ],
+        [
+          395,
+          285,
+          170,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            660,
+            370
+          ],
+          "gravity": -0.3
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 150,
+          "speed": 0.8
+        }
+      ],
+      "ability_reward": {
+        "ability": "gravity_anchor",
+        "display_name": "Gravity Anchor",
+        "position": [
+          480,
+          245
+        ],
+        "dialogue": "gravity_anchor_acquired"
+      },
+      "story_beat": "biotech_access_component",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_incubation_hush",
+          "target_connection": "east"
+        },
+        {
+          "id": "archive",
+          "rect": [
+            0,
+            275,
+            16,
+            100
+          ],
+          "target_room": "moon_biotech_archive",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_entry",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 113
+    },
+    {
+      "id": "moon_command_entry",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Operations",
+      "map_cell": [
+        34,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 29
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          280,
+          350,
+          400,
+          18
+        ]
+      ],
+      "save_room": {
+        "id": "save_orbital_command",
+        "position": [
+          350,
+          445
+        ]
+      },
+      "story_beat": "lunar_oracle_warning",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_core",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_command_causeway",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 114
+    },
+    {
+      "id": "moon_command_approach",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Oracle Lattice",
+      "map_cell": [
+        36,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 142,
+        "expert_seconds": 37
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          190,
+          40
+        ],
+        [
+          770,
+          500,
+          190,
+          40
+        ],
+        [
+          100,
+          380,
+          140,
+          16
+        ],
+        [
+          400,
+          285,
+          160,
+          16
+        ],
+        [
+          710,
+          380,
+          140,
+          16
+        ]
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            290,
+            440
+          ],
+          "size": [
+            105,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              190,
+              -150
+            ]
+          ],
+          "speed": 125
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            900,
+            430
+          ],
+          "gravity": 0.35
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            285
+          ],
+          "radius": 170,
+          "speed": 0.95
+        },
+        {
+          "type": "laser_grid",
+          "position": [
+            710,
+            430
+          ],
+          "size": [
+            90,
+            110
+          ],
+          "active": 0.8,
+          "inactive": 1.2
+        }
+      ],
+      "encounters": [
+        {
+          "id": "oracle_lattice_guard",
+          "activation": [
+            140,
+            100,
+            690,
+            400
+          ],
+          "lock_arena": true,
+          "persistent": true,
+          "waves": [
+            [
+              {
+                "enemy": "medusa",
+                "position": [
+                  330,
+                  350
+                ]
+              },
+              {
+                "enemy": "gryphon",
+                "position": [
+                  690,
+                  210
+                ]
+              }
+            ],
+            [
+              {
+                "enemy": "demon_boss",
+                "position": [
+                  510,
+                  430
+                ],
+                "elite": true
+              }
+            ]
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_command_causeway",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_telemetry_ring",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 116
+    },
+    {
+      "id": "moon_command_arena",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Lunar Oracle",
+      "map_cell": [
+        38,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 153,
+        "expert_seconds": 40
+      },
+      "spawns": {
+        "west": [
+          90,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          365,
+          150,
+          16
+        ],
+        [
+          405,
+          280,
+          150,
+          16
+        ],
+        [
+          680,
+          365,
+          150,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            300,
+            270
+          ],
+          "size": [
+            330,
+            390
+          ],
+          "gravity": 0.35
+        },
+        {
+          "type": "gravity_zone",
+          "position": [
+            680,
+            270
+          ],
+          "size": [
+            330,
+            390
+          ],
+          "gravity": -0.3
+        },
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            280
+          ],
+          "radius": 145,
+          "speed": 0.7
+        }
+      ],
+      "boss": {
+        "id": "lunar_oracle",
+        "scene": "res://Characters/Bosses/Scenes/act3_lunar_oracle.tscn",
+        "position": [
+          650,
+          390
+        ],
+        "arena": [
+          110,
+          70,
+          760,
+          430
+        ],
+        "completion_flag": "lunar_oracle_defeated",
+        "reward_ability": "chain_teleport",
+        "intro_sequence": "lunar_oracle_warning",
+        "defeat_sequence": "neon_moon_complete"
+      },
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_telemetry_ring",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_targeting_choir",
+          "target_connection": "west"
+        }
+      ],
+      "critical_path_index": 118
+    },
+    {
+      "id": "moon_command_exit",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Corruption Breach",
+      "map_cell": [
+        41,
+        8
+      ],
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 186,
+        "expert_seconds": 49
+      },
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          160,
+          390,
+          170,
+          16
+        ],
+        [
+          400,
+          300,
+          160,
+          16
+        ],
+        [
+          680,
+          390,
+          170,
+          16
+        ]
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            270
+          ],
+          "size": [
+            720,
+            350
+          ],
+          "gravity": 0.5
+        }
+      ],
+      "story_beat": "neon_moon_complete",
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_oracle_antechamber",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "void_outpost_entry",
+          "target_connection": "west",
+          "required_ability": "chain_teleport",
+          "barrier_id": "barrier_moon_abyss_chain",
+          "map_hidden": true
+        }
+      ],
+      "critical_path_index": 121
+    },
+    {
+      "id": "lunar_surface_arrival_exp_regolith_step",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Regolith Step",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 99,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Teach lunar gravity inside a wide, consequence-light basin.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          80,
+          440,
+          210,
+          18
+        ],
+        [
+          320,
+          373,
+          170,
+          18
+        ],
+        [
+          555,
+          326,
+          175,
+          18
+        ],
+        [
+          780,
+          394,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_crater",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "lunar_surface_arrival_opt_landing_blackbox",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.42
+        }
+      ],
+      "critical_path_index": 83,
+      "map_cell": [
+        3,
+        8
+      ],
+      "layout_id": "lunar_surface_arrival_teach_regolith_step",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander"
+    },
+    {
+      "id": "lunar_surface_arrival_exp_crater_vector",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Crater Vector",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 108,
+        "expert_seconds": 27
+      },
+      "room_role": "test",
+      "design_intent": "Test long low-gravity arcs over clearly telegraphed void pockets.",
+      "mechanic_contract": "void_pit",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          320,
+          40
+        ],
+        [
+          600,
+          500,
+          360,
+          40
+        ],
+        [
+          70,
+          430,
+          180,
+          18
+        ],
+        [
+          335,
+          350,
+          145,
+          18
+        ],
+        [
+          550,
+          325,
+          150,
+          18
+        ],
+        [
+          790,
+          370,
+          120,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_crater",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_airlocks",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            270,
+            44
+          ],
+          "active": 0.9,
+          "inactive": 1.47,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 85,
+      "map_cell": [
+        5,
+        8
+      ],
+      "layout_id": "lunar_surface_arrival_test_crater_vector",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander"
+    },
+    {
+      "id": "lunar_surface_arrival_exp_solar_wake",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Solar Wake",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "twist",
+      "design_intent": "Sweep the open route with a slow solar tracking beam.",
+      "mechanic_contract": "rotating_laser",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          320,
+          40
+        ],
+        [
+          640,
+          500,
+          320,
+          40
+        ],
+        [
+          100,
+          395,
+          170,
+          18
+        ],
+        [
+          300,
+          375,
+          135,
+          18
+        ],
+        [
+          580,
+          290,
+          140,
+          18
+        ],
+        [
+          765,
+          405,
+          115,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_airlocks",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_airlock_shadow",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            300
+          ],
+          "radius": 175,
+          "speed": 0.74,
+          "clockwise": true
+        }
+      ],
+      "critical_path_index": 87,
+      "map_cell": [
+        7,
+        8
+      ],
+      "layout_id": "lunar_surface_arrival_twist_solar_wake",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander"
+    },
+    {
+      "id": "lunar_surface_arrival_exp_airlock_shadow",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Airlock Shadow",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "recovery",
+      "design_intent": "Return gravity toward normal before the cleanroom seal.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          80,
+          455,
+          210,
+          18
+        ],
+        [
+          325,
+          390,
+          185,
+          18
+        ],
+        [
+          550,
+          350,
+          190,
+          18
+        ],
+        [
+          780,
+          420,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "lunar_surface_arrival_exp_solar_wake",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_surface_transit",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "lunar_surface_arrival_opt_survey_cairn",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.54
+        }
+      ],
+      "critical_path_index": 88,
+      "map_cell": [
+        8,
+        8
+      ],
+      "layout_id": "lunar_surface_arrival_recovery_airlock_shadow",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander"
+    },
+    {
+      "id": "research_cleanrooms_exp_decon_buffer",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Decon Buffer",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 99,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Teach security beam cadence through transparent safe cells.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          430,
+          170,
+          18
+        ],
+        [
+          350,
+          343,
+          150,
+          18
+        ],
+        [
+          570,
+          416,
+          160,
+          18
+        ],
+        [
+          760,
+          304,
+          150,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_decon",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 91,
+      "map_cell": [
+        11,
+        8
+      ],
+      "layout_id": "research_cleanrooms_teach_decon_buffer",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "sterile switchbacks threading transparent containment cells",
+      "landmark": "sealed specimen observation tank"
+    },
+    {
+      "id": "research_cleanrooms_exp_sterile_switchback",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Sterile Switchback",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 108,
+        "expert_seconds": 27
+      },
+      "room_role": "test",
+      "design_intent": "Test controlled direction changes under reduced gravity.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          365,
+          40
+        ],
+        [
+          645,
+          500,
+          315,
+          40
+        ],
+        [
+          100,
+          420,
+          140,
+          18
+        ],
+        [
+          365,
+          320,
+          125,
+          18
+        ],
+        [
+          565,
+          415,
+          135,
+          18
+        ],
+        [
+          770,
+          280,
+          130,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_decon",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_security",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.45999999999999996
+        }
+      ],
+      "critical_path_index": 93,
+      "map_cell": [
+        13,
+        8
+      ],
+      "layout_id": "research_cleanrooms_test_sterile_switchback",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "sterile switchbacks threading transparent containment cells",
+      "landmark": "sealed specimen observation tank"
+    },
+    {
+      "id": "research_cleanrooms_exp_sample_transit",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Sample Transit",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "twist",
+      "design_intent": "Move the safe floor beneath alternating sterilization beams.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          365,
+          40
+        ],
+        [
+          685,
+          500,
+          275,
+          40
+        ],
+        [
+          130,
+          385,
+          130,
+          18
+        ],
+        [
+          330,
+          345,
+          115,
+          18
+        ],
+        [
+          595,
+          380,
+          125,
+          18
+        ],
+        [
+          745,
+          315,
+          125,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_security",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_observation_rest",
+          "target_connection": "west"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 108,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 95,
+      "map_cell": [
+        15,
+        8
+      ],
+      "layout_id": "research_cleanrooms_twist_sample_transit",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "sterile switchbacks threading transparent containment cells",
+      "landmark": "sealed specimen observation tank"
+    },
+    {
+      "id": "research_cleanrooms_exp_observation_rest",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Observation Rest",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "recovery",
+      "design_intent": "Offer a quiet specimen overlook before the dome lockdown.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          445,
+          185,
+          18
+        ],
+        [
+          355,
+          360,
+          165,
+          18
+        ],
+        [
+          565,
+          440,
+          175,
+          18
+        ],
+        [
+          760,
+          330,
+          170,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "research_cleanrooms_exp_sample_transit",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_cleanroom_dome",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "research_cleanrooms_opt_ethics_archive",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 1.0,
+          "inactive": 1.31,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 96,
+      "map_cell": [
+        16,
+        8
+      ],
+      "layout_id": "research_cleanrooms_recovery_observation_rest",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "sterile switchbacks threading transparent containment cells",
+      "landmark": "sealed specimen observation tank"
+    },
+    {
+      "id": "security_grid_shaft_exp_vector_lobby",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Vector Lobby",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 101,
+        "expert_seconds": 25
+      },
+      "room_role": "teach",
+      "design_intent": "Introduce rotating grid timing from a protected central platform.",
+      "mechanic_contract": "rotating_laser",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          440,
+          165,
+          18
+        ],
+        [
+          350,
+          353,
+          150,
+          18
+        ],
+        [
+          535,
+          261,
+          140,
+          18
+        ],
+        [
+          700,
+          169,
+          165,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_lower",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            300
+          ],
+          "radius": 175,
+          "speed": 0.62,
+          "clockwise": true
+        }
+      ],
+      "critical_path_index": 99,
+      "map_cell": [
+        19,
+        8
+      ],
+      "layout_id": "security_grid_shaft_teach_vector_lobby",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "narrow vertical climb through offset security apertures",
+      "landmark": "polarized grid elevator core"
+    },
+    {
+      "id": "security_grid_shaft_exp_polar_ascent",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Polar Ascent",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 111,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test upward route control through alternating gravity bands.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          330,
+          40
+        ],
+        [
+          610,
+          500,
+          350,
+          40
+        ],
+        [
+          140,
+          430,
+          135,
+          18
+        ],
+        [
+          365,
+          330,
+          125,
+          18
+        ],
+        [
+          530,
+          260,
+          115,
+          18
+        ],
+        [
+          710,
+          145,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_lower",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_upper",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.45999999999999996
+        }
+      ],
+      "critical_path_index": 101,
+      "map_cell": [
+        21,
+        8
+      ],
+      "layout_id": "security_grid_shaft_test_polar_ascent",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "narrow vertical climb through offset security apertures",
+      "landmark": "polarized grid elevator core"
+    },
+    {
+      "id": "security_grid_shaft_exp_parallax_cage",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Parallax Cage",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 116,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Combine vertical drift with offset security apertures.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          330,
+          40
+        ],
+        [
+          650,
+          500,
+          310,
+          40
+        ],
+        [
+          170,
+          395,
+          125,
+          18
+        ],
+        [
+          330,
+          355,
+          115,
+          18
+        ],
+        [
+          560,
+          225,
+          105,
+          18
+        ],
+        [
+          685,
+          180,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_upper",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_grid_silence",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 103,
+      "map_cell": [
+        23,
+        8
+      ],
+      "layout_id": "security_grid_shaft_twist_parallax_cage",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "narrow vertical climb through offset security apertures",
+      "landmark": "polarized grid elevator core"
+    },
+    {
+      "id": "security_grid_shaft_exp_grid_silence",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Grid Silence",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 116,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Resolve the shaft rhythm in a quiet climb to biotech access.",
+      "mechanic_contract": "moving_vertical",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          150,
+          455,
+          180,
+          18
+        ],
+        [
+          355,
+          370,
+          165,
+          18
+        ],
+        [
+          530,
+          285,
+          155,
+          18
+        ],
+        [
+          700,
+          195,
+          185,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "security_grid_shaft_exp_parallax_cage",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_security_recovery",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "security_grid_shaft_opt_detention_index",
+          "target_connection": "return"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            440
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -270
+            ]
+          ],
+          "speed": 112,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 104,
+      "map_cell": [
+        24,
+        8
+      ],
+      "layout_id": "security_grid_shaft_recovery_grid_silence",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "narrow vertical climb through offset security apertures",
+      "landmark": "polarized grid elevator core"
+    },
+    {
+      "id": "bio_tech_labs_exp_culture_walk",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Culture Walk",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 103,
+        "expert_seconds": 26
+      },
+      "room_role": "teach",
+      "design_intent": "Teach movement around suspended culture tanks with safe lower footing.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          410,
+          175,
+          18
+        ],
+        [
+          320,
+          308,
+          150,
+          18
+        ],
+        [
+          540,
+          236,
+          160,
+          18
+        ],
+        [
+          750,
+          354,
+          165,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_gravity",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.42
+        }
+      ],
+      "critical_path_index": 107,
+      "map_cell": [
+        27,
+        8
+      ],
+      "layout_id": "bio_tech_labs_teach_culture_walk",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "orbiting ledges around suspended culture vessels",
+      "landmark": "breached hybrid incubation vat"
+    },
+    {
+      "id": "bio_tech_labs_exp_gene_spindle",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Gene Spindle",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 113,
+        "expert_seconds": 28
+      },
+      "room_role": "test",
+      "design_intent": "Test orbiting movement around a slow gene-scanning arm.",
+      "mechanic_contract": "rotating_laser",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          400,
+          40
+        ],
+        [
+          680,
+          500,
+          280,
+          40
+        ],
+        [
+          105,
+          400,
+          145,
+          18
+        ],
+        [
+          335,
+          285,
+          125,
+          18
+        ],
+        [
+          535,
+          235,
+          135,
+          18
+        ],
+        [
+          760,
+          330,
+          145,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_gravity",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_specimens",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            300
+          ],
+          "radius": 175,
+          "speed": 0.6799999999999999,
+          "clockwise": false
+        }
+      ],
+      "critical_path_index": 109,
+      "map_cell": [
+        29,
+        8
+      ],
+      "layout_id": "bio_tech_labs_test_gene_spindle",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "orbiting ledges around suspended culture vessels",
+      "landmark": "breached hybrid incubation vat"
+    },
+    {
+      "id": "bio_tech_labs_exp_hybrid_breach",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Hybrid Breach",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 118,
+        "expert_seconds": 29
+      },
+      "room_role": "twist",
+      "design_intent": "Combine broken containment floors with altered gravity arcs.",
+      "mechanic_contract": "void_pit",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          400,
+          40
+        ],
+        [
+          720,
+          500,
+          240,
+          40
+        ],
+        [
+          135,
+          365,
+          135,
+          18
+        ],
+        [
+          300,
+          310,
+          115,
+          18
+        ],
+        [
+          565,
+          200,
+          125,
+          18
+        ],
+        [
+          735,
+          365,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_specimens",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_incubation_hush",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_pit",
+          "position": [
+            480,
+            475
+          ],
+          "size": [
+            270,
+            44
+          ],
+          "active": 0.95,
+          "inactive": 1.3900000000000001,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 111,
+      "map_cell": [
+        31,
+        8
+      ],
+      "layout_id": "bio_tech_labs_twist_hybrid_breach",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "orbiting ledges around suspended culture vessels",
+      "landmark": "breached hybrid incubation vat"
+    },
+    {
+      "id": "bio_tech_labs_exp_incubation_hush",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Incubation Hush",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 117,
+        "expert_seconds": 29
+      },
+      "room_role": "recovery",
+      "design_intent": "Lower pressure while foreshadowing the Oracle's biological interface.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          115,
+          425,
+          190,
+          18
+        ],
+        [
+          325,
+          325,
+          165,
+          18
+        ],
+        [
+          535,
+          260,
+          175,
+          18
+        ],
+        [
+          750,
+          380,
+          185,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "bio_tech_labs_exp_hybrid_breach",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_biotech_core",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "bio_tech_labs_opt_donor_registry",
+          "target_connection": "return"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 116,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 112,
+      "map_cell": [
+        32,
+        8
+      ],
+      "layout_id": "bio_tech_labs_recovery_incubation_hush",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "orbiting ledges around suspended culture vessels",
+      "landmark": "breached hybrid incubation vat"
+    },
+    {
+      "id": "orbital_command_exp_command_causeway",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Command Causeway",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 115,
+        "expert_seconds": 30
+      },
+      "room_role": "teach",
+      "design_intent": "Preview command security through a wide multi-lane approach.",
+      "mechanic_contract": "laser_grid",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_1": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          400,
+          180,
+          18
+        ],
+        [
+          315,
+          308,
+          160,
+          18
+        ],
+        [
+          545,
+          306,
+          155,
+          18
+        ],
+        [
+          765,
+          394,
+          160,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_entry",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_approach",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_1",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "orbital_command_opt_mission_replay",
+          "target_connection": "return"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "laser_grid",
+          "position": [
+            480,
+            305
+          ],
+          "size": [
+            28,
+            285
+          ],
+          "active": 0.85,
+          "inactive": 1.55,
+          "damage": 1
+        }
+      ],
+      "critical_path_index": 115,
+      "map_cell": [
+        35,
+        8
+      ],
+      "layout_id": "orbital_command_teach_command_causeway",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe"
+    },
+    {
+      "id": "orbital_command_exp_telemetry_ring",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Telemetry Ring",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 126,
+        "expert_seconds": 33
+      },
+      "room_role": "test",
+      "design_intent": "Test precise orbit corrections around the telemetry hub.",
+      "mechanic_contract": "gravity_zone",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          340,
+          40
+        ],
+        [
+          620,
+          500,
+          340,
+          40
+        ],
+        [
+          85,
+          390,
+          150,
+          18
+        ],
+        [
+          330,
+          285,
+          135,
+          18
+        ],
+        [
+          540,
+          305,
+          130,
+          18
+        ],
+        [
+          775,
+          370,
+          140,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_approach",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_arena",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.45999999999999996
+        }
+      ],
+      "critical_path_index": 117,
+      "map_cell": [
+        37,
+        8
+      ],
+      "layout_id": "orbital_command_test_telemetry_ring",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe"
+    },
+    {
+      "id": "orbital_command_exp_targeting_choir",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Targeting Choir",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 132,
+        "expert_seconds": 34
+      },
+      "room_role": "twist",
+      "design_intent": "Layer synchronized targeting sweeps over lunar drift.",
+      "mechanic_contract": "rotating_laser",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          340,
+          40
+        ],
+        [
+          660,
+          500,
+          300,
+          40
+        ],
+        [
+          115,
+          355,
+          140,
+          18
+        ],
+        [
+          295,
+          310,
+          125,
+          18
+        ],
+        [
+          570,
+          270,
+          120,
+          18
+        ],
+        [
+          750,
+          405,
+          135,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_arena",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_oracle_antechamber",
+          "target_connection": "west"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "rotating_laser",
+          "position": [
+            480,
+            300
+          ],
+          "radius": 175,
+          "speed": 0.74,
+          "clockwise": true
+        }
+      ],
+      "critical_path_index": 119,
+      "map_cell": [
+        39,
+        8
+      ],
+      "layout_id": "orbital_command_twist_targeting_choir",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe"
+    },
+    {
+      "id": "orbital_command_exp_oracle_antechamber",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Oracle Antechamber",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 131,
+        "expert_seconds": 34
+      },
+      "room_role": "recovery",
+      "design_intent": "Give the player a composed final read before the Lunar Oracle.",
+      "mechanic_contract": "moving_horizontal",
+      "authored_expansion": true,
+      "spawns": {
+        "west": [
+          70,
+          446
+        ],
+        "east": [
+          875,
+          446
+        ],
+        "annex_2": [
+          70,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          415,
+          195,
+          18
+        ],
+        [
+          320,
+          325,
+          175,
+          18
+        ],
+        [
+          540,
+          330,
+          170,
+          18
+        ],
+        [
+          760,
+          420,
+          180,
+          18
+        ]
+      ],
+      "connections": [
+        {
+          "id": "west",
+          "rect": [
+            0,
+            385,
+            16,
+            115
+          ],
+          "target_room": "orbital_command_exp_targeting_choir",
+          "target_connection": "east"
+        },
+        {
+          "id": "east",
+          "rect": [
+            944,
+            385,
+            16,
+            115
+          ],
+          "target_room": "moon_command_exit",
+          "target_connection": "west"
+        },
+        {
+          "id": "annex_2",
+          "rect": [
+            0,
+            210,
+            16,
+            90
+          ],
+          "target_room": "orbital_command_opt_earth_window",
+          "target_connection": "return"
+        }
+      ],
+      "moving_platforms": [
+        {
+          "position": [
+            480,
+            410
+          ],
+          "size": [
+            116,
+            18
+          ],
+          "path": [
+            [
+              -190,
+              0
+            ],
+            [
+              190,
+              0
+            ]
+          ],
+          "speed": 116,
+          "wait": 0.35
+        }
+      ],
+      "critical_path_index": 120,
+      "map_cell": [
+        40,
+        8
+      ],
+      "layout_id": "orbital_command_recovery_oracle_antechamber",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe"
+    },
+    {
+      "id": "lunar_surface_arrival_opt_landing_blackbox",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Landing Blackbox",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The first lunar landing log reports a city signal already waiting on the surface.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          95,
+          420,
+          200,
+          18
+        ],
+        [
+          310,
+          380,
+          165,
+          18
+        ],
+        [
+          565,
+          315,
+          170,
+          18
+        ],
+        [
+          760,
+          410,
+          140,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_lunar_surface_arrival_landing_blackbox",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The first lunar landing log reports a city signal already waiting on the surface.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_lunar_surface_arrival_landing_blackbox",
+        "amount": 55,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "lunar_surface_arrival_exp_regolith_step",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        3,
+        7
+      ],
+      "layout_id": "lunar_surface_arrival_optional_lore_landing_blackbox",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander"
+    },
+    {
+      "id": "lunar_surface_arrival_opt_survey_cairn",
+      "region_id": "neon_moon",
+      "district_id": "lunar_surface_arrival",
+      "display_name": "Lunar Surface Arrival — Survey Cairn",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: Surveyors arranged stones around a phase scar that points back toward Earth.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          340,
+          40
+        ],
+        [
+          580,
+          500,
+          380,
+          40
+        ],
+        [
+          60,
+          400,
+          175,
+          18
+        ],
+        [
+          340,
+          360,
+          140,
+          18
+        ],
+        [
+          540,
+          285,
+          145,
+          18
+        ],
+        [
+          795,
+          390,
+          115,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_lunar_surface_arrival_survey_cairn",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Surveyors arranged stones around a phase scar that points back toward Earth.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_lunar_surface_arrival_survey_cairn",
+        "amount": 65,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "lunar_surface_arrival_exp_airlock_shadow",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.45999999999999996
+        }
+      ],
+      "map_cell": [
+        8,
+        7
+      ],
+      "layout_id": "lunar_surface_arrival_optional_mastery_survey_cairn",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "wide low-gravity arcs across shallow crater shelves",
+      "landmark": "half-buried lunar lander"
+    },
+    {
+      "id": "research_cleanrooms_opt_ethics_archive",
+      "region_id": "neon_moon",
+      "district_id": "research_cleanrooms",
+      "display_name": "Research Cleanrooms — Ethics Archive",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: Every ethics objection was reclassified as a contamination event.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          125,
+          410,
+          160,
+          18
+        ],
+        [
+          340,
+          350,
+          145,
+          18
+        ],
+        [
+          580,
+          405,
+          155,
+          18
+        ],
+        [
+          740,
+          320,
+          150,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_research_cleanrooms_ethics_archive",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "Every ethics objection was reclassified as a contamination event.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_research_cleanrooms_ethics_archive",
+        "amount": 55,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "research_cleanrooms_exp_observation_rest",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        16,
+        7
+      ],
+      "layout_id": "research_cleanrooms_optional_lore_ethics_archive",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "sterile switchbacks threading transparent containment cells",
+      "landmark": "sealed specimen observation tank"
+    },
+    {
+      "id": "security_grid_shaft_opt_detention_index",
+      "region_id": "neon_moon",
+      "district_id": "security_grid_shaft",
+      "display_name": "Security Grid Shaft — Detention Index",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The grid detained researchers for predicting the same future as the Oracle.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          165,
+          420,
+          155,
+          18
+        ],
+        [
+          340,
+          360,
+          145,
+          18
+        ],
+        [
+          545,
+          250,
+          135,
+          18
+        ],
+        [
+          680,
+          185,
+          165,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_security_grid_shaft_detention_index",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The grid detained researchers for predicting the same future as the Oracle.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_security_grid_shaft_detention_index",
+        "amount": 55,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "security_grid_shaft_exp_grid_silence",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        24,
+        7
+      ],
+      "layout_id": "security_grid_shaft_optional_lore_detention_index",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "narrow vertical climb through offset security apertures",
+      "landmark": "polarized grid elevator core"
+    },
+    {
+      "id": "bio_tech_labs_opt_donor_registry",
+      "region_id": "neon_moon",
+      "district_id": "bio_tech_labs",
+      "display_name": "Bio-Tech Labs — Donor Registry",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: The donor list contains no volunteers, only transit-card identifiers.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          130,
+          390,
+          165,
+          18
+        ],
+        [
+          310,
+          315,
+          145,
+          18
+        ],
+        [
+          550,
+          225,
+          155,
+          18
+        ],
+        [
+          730,
+          370,
+          165,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_bio_tech_labs_donor_registry",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "The donor list contains no volunteers, only transit-card identifiers.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_bio_tech_labs_donor_registry",
+        "amount": 55,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "bio_tech_labs_exp_incubation_hush",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        32,
+        7
+      ],
+      "layout_id": "bio_tech_labs_optional_lore_donor_registry",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "orbiting ledges around suspended culture vessels",
+      "landmark": "breached hybrid incubation vat"
+    },
+    {
+      "id": "orbital_command_opt_mission_replay",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Mission Replay",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 95,
+        "expert_seconds": 27,
+        "optional": true
+      },
+      "room_role": "optional_lore",
+      "design_intent": "Optional discovery route: A mission replay shows the Oracle correcting history before each prediction failed.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          960,
+          40
+        ],
+        [
+          110,
+          380,
+          170,
+          18
+        ],
+        [
+          305,
+          315,
+          155,
+          18
+        ],
+        [
+          555,
+          295,
+          150,
+          18
+        ],
+        [
+          745,
+          410,
+          160,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_orbital_command_mission_replay",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "A mission replay shows the Oracle correcting history before each prediction failed.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_orbital_command_mission_replay",
+        "amount": 55,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "orbital_command_exp_command_causeway",
+          "target_connection": "annex_1"
+        }
+      ],
+      "map_cell": [
+        35,
+        7
+      ],
+      "layout_id": "orbital_command_optional_lore_mission_replay",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe"
+    },
+    {
+      "id": "orbital_command_opt_earth_window",
+      "region_id": "neon_moon",
+      "district_id": "orbital_command",
+      "display_name": "Orbital Command — Earth Window",
+      "bounds": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "pacing": {
+        "first_pass_seconds": 110,
+        "expert_seconds": 31,
+        "optional": true
+      },
+      "room_role": "optional_mastery",
+      "design_intent": "Optional discovery route: From this angle every city light forms the same circuit etched into the abyssal samples.",
+      "authored_expansion": true,
+      "spawns": {
+        "return": [
+          875,
+          270
+        ]
+      },
+      "platforms": [
+        [
+          0,
+          500,
+          360,
+          40
+        ],
+        [
+          600,
+          500,
+          360,
+          40
+        ],
+        [
+          75,
+          360,
+          145,
+          18
+        ],
+        [
+          335,
+          295,
+          130,
+          18
+        ],
+        [
+          530,
+          265,
+          125,
+          18
+        ],
+        [
+          780,
+          390,
+          135,
+          18
+        ]
+      ],
+      "terminals": [
+        {
+          "id": "lore_orbital_command_earth_window",
+          "kind": "lore",
+          "persistence": "save",
+          "position": [
+            710,
+            430
+          ],
+          "text": "From this angle every city light forms the same circuit etched into the abyssal samples.",
+          "targets": []
+        }
+      ],
+      "cache": {
+        "id": "cache_orbital_command_earth_window",
+        "amount": 65,
+        "position": [
+          480,
+          255
+        ]
+      },
+      "connections": [
+        {
+          "id": "return",
+          "rect": [
+            944,
+            210,
+            16,
+            90
+          ],
+          "target_room": "orbital_command_exp_oracle_antechamber",
+          "target_connection": "annex_2"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "gravity_zone",
+          "position": [
+            480,
+            290
+          ],
+          "size": [
+            560,
+            300
+          ],
+          "gravity": 0.45999999999999996
+        }
+      ],
+      "map_cell": [
+        40,
+        7
+      ],
+      "layout_id": "orbital_command_optional_mastery_earth_window",
+      "layout_source": "district_layout_blueprint_v1",
+      "spatial_rhythm": "symmetrical command-ring lanes converging on a central hub",
+      "landmark": "Oracle telemetry globe"
+    }
+  ],
+  "district_expansion_version": 2
+}

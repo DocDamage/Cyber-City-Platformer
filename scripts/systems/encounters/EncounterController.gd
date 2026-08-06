@@ -2,6 +2,7 @@ class_name EncounterController
 extends Area2D
 
 const ACT_BALANCE := preload("res://scripts/campaign/ActBalanceProfile.gd")
+const LOCKDOWN_GATE_ART := preload("res://scripts/systems/security/LockdownGateArt.gd")
 
 signal activated
 signal wave_started(index: int, total: int)
@@ -19,6 +20,11 @@ var _complete := false
 var _wave_index := 0
 var _act_number := 1
 var _arena_barriers: Array[StaticBody2D] = []
+var _reset_pending := false
+var _requires_player_exit := false
+var _tracked_player: Node2D
+var _persist_completion := false
+var _persistence_key := ""
 
 
 func configure(id: StringName, activation_rect: Rect2, enemies: Array[EnemyBase]) -> void:
@@ -31,10 +37,12 @@ func configure(id: StringName, activation_rect: Rect2, enemies: Array[EnemyBase]
 		_track_enemy(enemy)
 
 
-func configure_blueprint(id: StringName, activation_rect: Rect2, waves: Array, enemy_parent: Node, registry: Node, should_lock_arena := true, act_number := 1) -> void:
+func configure_blueprint(id: StringName, activation_rect: Rect2, waves: Array, enemy_parent: Node, registry: Node, should_lock_arena := true, act_number := 1, persist_completion := false) -> void:
 	_enemy_parent = enemy_parent
 	lock_arena = should_lock_arena
 	_act_number = clampi(act_number, 1, 4)
+	_persist_completion = persist_completion
+	_persistence_key = "encounter::%s" % id
 	var resolved_waves: Array = []
 	for wave_value: Variant in waves:
 		var resolved_wave: Array[Dictionary] = []
@@ -77,6 +85,14 @@ func _configure_common(id: StringName, activation_rect: Rect2, waves: Array) -> 
 func _ready() -> void:
 	add_to_group(&"encounters")
 	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+	if _persist_completion and _is_persisted_complete():
+		_clear_live_enemies()
+		_complete = true
+		_active = false
+		monitoring = false
+		_set_barriers_active(false)
+		return
 	for enemy: EnemyBase in _live_enemies:
 		_set_enemy_active(enemy, false)
 
@@ -111,10 +127,7 @@ func get_total_authored_enemy_count() -> int:
 func force_complete_for_test() -> void:
 	if _complete:
 		return
-	_complete = true
-	_active = false
-	_set_barriers_active(false)
-	completed.emit()
+	_finish_encounter()
 
 
 func reset_encounter() -> void:
@@ -124,9 +137,12 @@ func reset_encounter() -> void:
 	_wave_index = 0
 	_spawn_wave(0, false)
 	_active = false
+	_reset_pending = false
 	monitoring = true
 	_set_barriers_active(false)
 	reset.emit()
+	if not is_instance_valid(_tracked_player) or not _is_inside_activation_area(_tracked_player):
+		_requires_player_exit = false
 
 
 func _spawn_wave(index: int, active: bool) -> void:
@@ -142,10 +158,12 @@ func _spawn_wave(index: int, active: bool) -> void:
 		_enemy_parent.add_child(enemy)
 		ACT_BALANCE.apply_to_enemy(enemy, _act_number)
 		enemy.global_position = record.get("position", _activation_rect.get_center())
+		enemy.set_home_position(enemy.global_position)
 		if bool(record.get("elite", false)):
-			enemy.max_health *= 2
+			var elite := enemy.get_difficulty_variant(&"elite")
+			enemy.max_health = maxi(roundi(enemy.max_health * float(elite.get("health_multiplier", 2.0))), 1)
 			enemy.health = enemy.max_health
-			enemy.sprite.modulate = Color(1.0, 0.35, 0.85)
+			enemy.sprite.modulate = Color.from_string(String(elite.get("palette", "ff59d4")), Color(1.0, 0.35, 0.85))
 		_track_enemy(enemy)
 		_set_enemy_active(enemy, active)
 	if active:
@@ -161,7 +179,10 @@ func _track_enemy(enemy: EnemyBase) -> void:
 
 
 func _on_body_entered(body: Node) -> void:
-	if _active or _complete or not body.is_in_group(&"player"):
+	if not body.is_in_group(&"player"):
+		return
+	_tracked_player = body as Node2D
+	if _active or _complete or _reset_pending or _requires_player_exit:
 		return
 	_active = true
 	set_deferred("monitoring", false)
@@ -174,6 +195,11 @@ func _on_body_entered(body: Node) -> void:
 	activated.emit()
 
 
+func _on_body_exited(body: Node) -> void:
+	if _requires_player_exit and body.is_in_group(&"player") and not _is_inside_activation_area(body as Node2D):
+		_requires_player_exit = false
+
+
 func _on_enemy_died(enemy: EnemyBase) -> void:
 	_live_enemies.erase(enemy)
 	if not _active or not _live_enemies.is_empty():
@@ -181,20 +207,41 @@ func _on_enemy_died(enemy: EnemyBase) -> void:
 	if _wave_index + 1 < _waves.size():
 		_spawn_wave(_wave_index + 1, true)
 		return
+	_finish_encounter()
+
+
+func _finish_encounter() -> void:
 	_complete = true
 	_active = false
 	_set_barriers_active(false)
+	if _persist_completion:
+		var manager := get_node_or_null("/root/GameManager")
+		if manager != null:
+			manager.world_progress.set_object_state(_persistence_key, true)
+			var save_manager := get_node_or_null("/root/SaveManager")
+			if save_manager != null:
+				save_manager.call_deferred(&"save_game")
 	completed.emit()
 
 
+func _is_persisted_complete() -> bool:
+	var manager := get_node_or_null("/root/GameManager")
+	return manager != null and bool(manager.world_progress.get_object_state(_persistence_key, false))
+
+
 func _on_player_died() -> void:
-	if _active and not _complete:
-		_reset_after_respawn()
+	if _active and not _complete and not _reset_pending:
+		_reset_pending = true
+		_requires_player_exit = true
+		var reset_timer := get_tree().create_timer(0.7, true, false, true)
+		reset_timer.timeout.connect(reset_encounter, CONNECT_ONE_SHOT)
 
 
-func _reset_after_respawn() -> void:
-	await get_tree().create_timer(0.7, true, false, true).timeout
-	reset_encounter()
+func _is_inside_activation_area(body: Node2D) -> bool:
+	if not is_instance_valid(body):
+		return false
+	var local_position := to_local(body.global_position)
+	return Rect2(-_activation_rect.size * 0.5, _activation_rect.size).has_point(local_position)
 
 
 func _set_enemy_active(enemy: EnemyBase, active: bool) -> void:
@@ -226,10 +273,9 @@ func _build_arena_barriers() -> void:
 		shape.size = Vector2(24.0, _activation_rect.size.y)
 		collision.shape = shape
 		barrier.add_child(collision)
-		var line := Line2D.new()
-		line.width = 5.0
-		line.default_color = Color(1.0, 0.1, 0.55, 0.75)
-		line.points = PackedVector2Array([Vector2(0, -_activation_rect.size.y * 0.5), Vector2(0, _activation_rect.size.y * 0.5)])
-		barrier.add_child(line)
+		var presentation := LOCKDOWN_GATE_ART.new()
+		presentation.configure(Vector2(24.0, _activation_rect.size.y), _act_number, &"encounter")
+		barrier.add_child(presentation)
+		barrier.set_meta(&"presentation", "framed_lockdown_gate")
 		add_child(barrier)
 		_arena_barriers.append(barrier)

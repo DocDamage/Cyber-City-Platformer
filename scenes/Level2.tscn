@@ -30,13 +30,13 @@ size = Vector2(1800, 120)
 script = ExtResource("1_level")
 stage_act = 2
 stage_sub = 1
-environment_tint = Color(0.13, 0.12, 0.23, 1)
+environment_tint = Color(0.72, 0.78, 0.88, 1)
 death_zone_path = NodePath("Death Zone")
 terrain_path = NodePath("Rooftop Terrain")
 ambient_root_path = NodePath("Background Skyline")
 layout_variant = 1
 campaign_act = 2
-background_texture_names = PackedStringArray("Mega Robot Factory/CENA (!)/BACKGROUD/BACKGROUND (1).png", "", "", "", "")
+background_texture_names = PackedStringArray("Generated/mega_robot_factory_panorama_v1.png", "", "", "", "")
 level_id = &"factory_approach_02"
 music_path = "res://assets/runtime/audio/music/Robot Factory/Mega Robot Factory – 1 .ogg"
 
@@ -48,7 +48,7 @@ repeat_times = 3
 
 [node name="Cyberpunk City Sunset" type="Sprite2D" parent="Background Skyline"]
 position = Vector2(480, 270)
-scale = Vector2(2, 2)
+scale = Vector2(0.5742, 0.5742)
 modulate = Color(0.72, 0.62, 0.95, 1)
 
 [node name="Distant Silhouette" type="Sprite2D" parent="Background Skyline"]
@@ -94,7 +94,7 @@ texture_scale = 2.0
 color = Color(0.65, 0.15, 1, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.13, 0.12, 0.23, 1)
+color = Color(0.72, 0.78, 0.88, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_player")]
 position = Vector2(145, 380)

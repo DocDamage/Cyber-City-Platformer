@@ -28,11 +28,19 @@ FORBIDDEN_PCK_MARKERS = (
     b"res://tests/",
     b"res://tools/",
     b"res://scripts/tools/",
+    b"res://scripts/testing/",
+    b"res://scenes/testing/",
     b"SourceArt/",
     b"addons/AsepriteWizard",
     b"FULL_COMPLETION_PLAN",
     b"GoalSmokeTest",
     b"SystemsSmokeTest",
+    b"EnemyRosterLab",
+    b"DistrictArtCapture",
+    b"LegacyActCapture",
+    b"district_art_contact_sheet",
+    b"legacy-acts-1-2",
+    b"prop-review",
 )
 ABSOLUTE_WINDOWS_PATH = re.compile(r"(?i)(?:^|[\s`'\"])[a-z]:\\")
 
@@ -138,9 +146,11 @@ def main() -> int:
     if not zipfile.is_zipfile(archive):
         print("PACKAGE_ERROR: output archive failed ZIP validation", file=sys.stderr)
         return 4
+    archive_sha256 = sha256(archive)
     print(
         "RELEASE_PACKAGE_OK "
-        f"version={version} sha={source_sha[:12]} bytes={archive.stat().st_size} "
+        f"version={version} source_sha={source_sha[:12]} archive_sha256={archive_sha256} "
+        f"bytes={archive.stat().st_size} "
         f"archive={archive.relative_to(ROOT)}"
     )
     return 0

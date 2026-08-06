@@ -22,7 +22,7 @@ var is_telegraphing := false
 var _elapsed := 0.0
 var _enabled := true
 var _damage_cooldowns: Dictionary = {}
-var _visual: Polygon2D
+var _visual: HazardPatternArt
 var _warning: Label
 
 
@@ -65,10 +65,9 @@ func set_active(value: bool) -> void:
 	if value:
 		set_telegraphing(false)
 	if _visual != null:
-		_visual.color = Color(1.0, 0.12, 0.3, 0.86) if value else Color(0.25, 0.3, 0.42, 0.35)
+		_visual.set_state(value, is_telegraphing)
 	if _warning != null:
-		_warning.text = "! ACTIVE !" if value else "SAFE WINDOW"
-		_warning.modulate.a = 1.0 if value else 0.55
+		_warning.visible = false
 	if value:
 		for body: Node2D in get_overlapping_bodies():
 			if body.is_in_group(&"player"):
@@ -84,9 +83,10 @@ func set_telegraphing(value: bool) -> void:
 		return
 	is_telegraphing = value
 	if _visual != null:
-		_visual.color = Color(1.0, 0.75, 0.08, 0.58) if value else Color(0.25, 0.3, 0.42, 0.35)
+		_visual.set_state(is_active, value)
 	if _warning != null:
-		_warning.text = "⚠ CHARGING" if value else "SAFE WINDOW"
+		_warning.text = "CHARGING"
+		_warning.visible = value
 	if value:
 		telegraph_started.emit()
 
@@ -140,13 +140,13 @@ func _build_components() -> void:
 	collision.shape = shape
 	add_child(collision)
 	var half := hazard_size * 0.5
-	_visual = Polygon2D.new()
+	_visual = HazardPatternArt.new()
 	_visual.name = "HazardVisual"
-	_visual.polygon = PackedVector2Array([Vector2(-half.x, -half.y), Vector2(half.x, -half.y), Vector2(half.x, half.y), Vector2(-half.x, half.y)])
-	_visual.color = Color(1.0, 0.12, 0.3, 0.86)
+	_visual.configure(hazard_size, String(hazard_id))
 	add_child(_visual)
 	_warning = Label.new()
 	_warning.position = Vector2(-42.0, -half.y - 25.0)
-	_warning.text = "! ACTIVE !"
+	_warning.text = "CHARGING"
+	_warning.visible = false
 	_warning.add_theme_color_override("font_color", Color.WHITE)
 	add_child(_warning)

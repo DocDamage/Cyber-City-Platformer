@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/metroidvania/PlayerVisual.gd" id="1_visual"]
+
+[sub_resource type="Shader" id="Shader_upper"]
+code = "shader_type canvas_item;\nvarying float local_y;\nvoid vertex(){ local_y = VERTEX.y; }\nvoid fragment(){ if(local_y > 1.0){ discard; } COLOR = texture(TEXTURE, UV) * COLOR; }"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_upper"]
+shader = SubResource("Shader_upper")
+
+[sub_resource type="Shader" id="Shader_lower"]
+code = "shader_type canvas_item;\nvarying float local_y;\nvoid vertex(){ local_y = VERTEX.y; }\nvoid fragment(){ if(local_y <= 1.0){ discard; } COLOR = texture(TEXTURE, UV) * COLOR; }"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lower"]
+shader = SubResource("Shader_lower")
+
+[node name="PlayerVisual" type="Node2D"]
+script = ExtResource("1_visual")
+
+[node name="BackLayers" type="Node2D" parent="."]
+
+[node name="HairBack" type="AnimatedSprite2D" parent="BackLayers"]
+centered = true
+
+[node name="BottomBack" type="AnimatedSprite2D" parent="BackLayers"]
+centered = true
+material = SubResource("ShaderMaterial_lower")
+
+[node name="TopBack" type="AnimatedSprite2D" parent="BackLayers"]
+centered = true
+material = SubResource("ShaderMaterial_upper")
+
+[node name="WeaponBack" type="AnimatedSprite2D" parent="BackLayers"]
+centered = true
+
+[node name="Body" type="AnimatedSprite2D" parent="."]
+centered = true
+
+[node name="Face" type="AnimatedSprite2D" parent="."]
+centered = true
+
+[node name="FrontLayers" type="Node2D" parent="."]
+
+[node name="BottomFront" type="AnimatedSprite2D" parent="FrontLayers"]
+centered = true
+material = SubResource("ShaderMaterial_lower")
+
+[node name="TopFront" type="AnimatedSprite2D" parent="FrontLayers"]
+centered = true
+material = SubResource("ShaderMaterial_upper")
+
+[node name="HairFront" type="AnimatedSprite2D" parent="FrontLayers"]
+centered = true
+
+[node name="WeaponFront" type="AnimatedSprite2D" parent="FrontLayers"]
+centered = true
+
+[node name="WeaponEffects" type="Node2D" parent="."]
+
+[node name="TeleportMarkerVisual" type="Node2D" parent="."]
+
+[node name="StatusEffects" type="Node2D" parent="."]

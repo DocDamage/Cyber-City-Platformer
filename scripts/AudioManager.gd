@@ -7,9 +7,18 @@ const SAMPLE_RATE := 22050
 const SFX_POOL_SIZE := 10
 const MUSIC_BUS := &"Music"
 const SFX_BUS := &"SFX"
+const UI_BUS := &"UI"
+const AMBIENCE_BUS := &"Ambience"
+const VOICE_BUS := &"Voice"
 const DEFAULT_MUSIC_VOLUME_DB := -9.0
 const DEFAULT_SFX_VOLUME_DB := -5.0
 const CROSSFADE_TIME := 0.55
+const AMBIENCE_PROFILES := {
+	"cyber_city": {"tone": 74.0, "pulse": 0.22, "noise": 0.05},
+	"robot_factory": {"tone": 48.0, "pulse": 0.48, "noise": 0.08},
+	"neon_moon": {"tone": 92.0, "pulse": 0.12, "noise": 0.025},
+	"abyssal_night": {"tone": 36.0, "pulse": 0.31, "noise": 0.1},
+}
 
 const SFX_PATHS := {
 	&"laser_shot": "res://assets/runtime/audio/sfx/FREE Retro Action Platformer Sound Effects/Weapon Discharge - Laser.mp3",
@@ -47,6 +56,7 @@ const SFX_ALIASES := {
 	&"melee": &"sword_slash",
 	&"hurt": &"player_hurt",
 }
+const UI_EFFECTS := {&"ui_confirm": true}
 const FALLBACK_DURATIONS := {
 	&"laser_shot": 0.14,
 	&"sword_slash": 0.12,
@@ -69,6 +79,8 @@ const FALLBACK_DURATIONS := {
 
 var _music_players: Array[AudioStreamPlayer] = []
 var _sfx_players: Array[AudioStreamPlayer] = []
+var _ambience_player: AudioStreamPlayer
+var _ambience_streams: Dictionary = {}
 var _sfx_streams: Dictionary = {}
 var _act_music: Dictionary = {}
 var _boss_music: Dictionary = {}
@@ -76,6 +88,7 @@ var _missing_audio: Array[String] = []
 var _active_music_index := 0
 var _sfx_cursor := 0
 var _current_music_key := ""
+var _current_ambience_region := ""
 var _music_tween: Tween
 
 
@@ -83,8 +96,12 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_ensure_audio_bus(MUSIC_BUS)
 	_ensure_audio_bus(SFX_BUS)
+	_ensure_audio_bus(UI_BUS)
+	_ensure_audio_bus(AMBIENCE_BUS)
+	_ensure_audio_bus(VOICE_BUS)
 	_load_audio_manifest()
 	_build_music_players()
+	_build_ambience_player()
 	_build_sfx_pool()
 
 
@@ -99,6 +116,7 @@ func play_sfx(effect_name: StringName, _world_position := Vector2.ZERO, volume_d
 	var player := _sfx_players[_sfx_cursor]
 	_sfx_cursor = (_sfx_cursor + 1) % _sfx_players.size()
 	player.stop()
+	player.bus = get_effect_bus(canonical_name)
 	player.stream = stream
 	player.volume_db = volume_db
 	player.pitch_scale = randf_range(0.96, 1.04)
@@ -149,6 +167,28 @@ func stop_all_sfx() -> void:
 		player.stream = null
 
 
+func play_region_ambience(region_id: String, volume_db := -18.0) -> void:
+	if not AMBIENCE_PROFILES.has(region_id) or region_id == _current_ambience_region:
+		return
+	_current_ambience_region = region_id
+	if _ambience_player == null or DisplayServer.get_name() == "headless":
+		return
+	var stream := _ambience_streams.get(region_id) as AudioStream
+	if stream == null:
+		return
+	_ambience_player.stop()
+	_ambience_player.stream = stream
+	_ambience_player.volume_db = volume_db
+	_ambience_player.play()
+
+
+func stop_ambience() -> void:
+	_current_ambience_region = ""
+	if _ambience_player != null:
+		_ambience_player.stop()
+		_ambience_player.stream = null
+
+
 func set_master_volume(linear_value: float) -> void:
 	_set_bus_volume(&"Master", linear_value)
 
@@ -159,6 +199,18 @@ func set_music_volume(linear_value: float) -> void:
 
 func set_sfx_volume(linear_value: float) -> void:
 	_set_bus_volume(SFX_BUS, linear_value)
+
+
+func set_ui_volume(linear_value: float) -> void:
+	_set_bus_volume(UI_BUS, linear_value)
+
+
+func set_ambience_volume(linear_value: float) -> void:
+	_set_bus_volume(AMBIENCE_BUS, linear_value)
+
+
+func set_voice_volume(linear_value: float) -> void:
+	_set_bus_volume(VOICE_BUS, linear_value)
 
 
 func set_muted(muted: bool) -> void:
@@ -172,8 +224,25 @@ func get_loaded_sfx_names() -> Array[StringName]:
 	return names
 
 
+func get_effect_bus(effect_name: StringName) -> StringName:
+	var canonical_name: StringName = SFX_ALIASES.get(effect_name, effect_name)
+	return UI_BUS if UI_EFFECTS.has(canonical_name) else SFX_BUS
+
+
 func get_configured_act_count() -> int:
 	return ACT_BGM_PATHS.size()
+
+
+func get_configured_ambience_count() -> int:
+	return _ambience_streams.size()
+
+
+func get_current_ambience_region() -> String:
+	return _current_ambience_region
+
+
+func get_ambience_player_bus() -> StringName:
+	return StringName(_ambience_player.bus) if _ambience_player != null else &""
 
 
 func get_missing_audio_paths() -> Array[String]:
@@ -189,6 +258,8 @@ func _load_audio_manifest() -> void:
 		_act_music[act_number] = _safe_load_audio(String(ACT_BGM_PATHS[act_number]))
 	for act_number: int in BOSS_BGM_PATHS:
 		_boss_music[act_number] = _safe_load_audio(String(BOSS_BGM_PATHS[act_number]))
+	for region_id: String in AMBIENCE_PROFILES:
+		_ambience_streams[region_id] = _make_ambience(region_id, AMBIENCE_PROFILES[region_id] as Dictionary)
 
 
 func _safe_load_audio(path: String) -> AudioStream:
@@ -252,6 +323,35 @@ func _make_effect(kind: StringName, duration: float) -> AudioStreamWAV:
 	return stream
 
 
+func _make_ambience(region_id: String, profile: Dictionary) -> AudioStreamWAV:
+	var duration := 3.0
+	var sample_count := int(SAMPLE_RATE * duration)
+	var bytes := PackedByteArray()
+	bytes.resize(sample_count * 2)
+	var random := RandomNumberGenerator.new()
+	random.seed = hash(region_id)
+	var base_frequency := float(profile.get("tone", 60.0))
+	var pulse_rate := float(profile.get("pulse", 0.2))
+	var noise_amount := float(profile.get("noise", 0.05))
+	var smoothed_noise := 0.0
+	for index: int in range(sample_count):
+		var time := float(index) / float(SAMPLE_RATE)
+		smoothed_noise = lerpf(smoothed_noise, random.randf_range(-1.0, 1.0), 0.015)
+		var drone := sin(TAU * base_frequency * time) * 0.08 + sin(TAU * base_frequency * 1.503 * time) * 0.035
+		var pulse := 0.72 + 0.28 * sin(TAU * pulse_rate * time)
+		var sample := (drone * pulse) + smoothed_noise * noise_amount
+		bytes.encode_s16(index * 2, int(clampf(sample, -1.0, 1.0) * 32767.0))
+	var stream := AudioStreamWAV.new()
+	stream.format = AudioStreamWAV.FORMAT_16_BITS
+	stream.mix_rate = SAMPLE_RATE
+	stream.stereo = false
+	stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	stream.loop_begin = 0
+	stream.loop_end = sample_count
+	stream.data = bytes
+	return stream
+
+
 func _set_looping(stream: AudioStream) -> void:
 	if stream is AudioStreamOggVorbis:
 		(stream as AudioStreamOggVorbis).loop = true
@@ -267,6 +367,13 @@ func _build_music_players() -> void:
 		player.volume_db = -45.0
 		add_child(player)
 		_music_players.append(player)
+
+
+func _build_ambience_player() -> void:
+	_ambience_player = AudioStreamPlayer.new()
+	_ambience_player.name = "AmbiencePlayer"
+	_ambience_player.bus = AMBIENCE_BUS
+	add_child(_ambience_player)
 
 
 func _build_sfx_pool() -> void:
@@ -292,7 +399,20 @@ func _ensure_audio_bus(bus_name: StringName) -> void:
 
 
 func _exit_tree() -> void:
+	if _music_tween != null and _music_tween.is_valid():
+		_music_tween.kill()
+	_music_tween = null
 	for player: AudioStreamPlayer in _music_players:
 		player.stop()
 		player.stream = null
+	stop_ambience()
 	stop_all_sfx()
+	# AudioStream dictionaries keep Ogg packet sequences alive after their
+	# players have stopped. Release those cached references during shutdown so
+	# renderer and automation captures terminate without false leak reports.
+	_sfx_streams.clear()
+	_act_music.clear()
+	_boss_music.clear()
+	_ambience_streams.clear()
+	_music_players.clear()
+	_sfx_players.clear()

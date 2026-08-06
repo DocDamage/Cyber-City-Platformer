@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "probes": [
+    {
+      "id": "rooftop_near_limit_jump",
+      "type": "standard_jump",
+      "room_id": "cyber_rooftop_lane",
+      "source_platform": 1,
+      "target_platform": 2,
+      "direction": 1,
+      "runup_frames": 16,
+      "minimum_apex_ratio": 0.8
+    },
+    {
+      "id": "spire_wall_jump_chimney",
+      "type": "wall_jump",
+      "room_id": "cyber_spire_lift",
+      "left_wall": 6,
+      "right_wall": 7,
+      "minimum_route_height": 250
+    },
+    {
+      "id": "nest_dash_followthrough",
+      "type": "dash_gap",
+      "room_id": "void_nest_veins",
+      "source_platform": 0,
+      "target_platform": 1,
+      "direction": 1,
+      "maximum_cross_seconds": 0.55
+    },
+    {
+      "id": "phase_range_clearance",
+      "type": "teleport",
+      "room_id": "cyber_rooftop_phase_tutorial",
+      "source_platform": 0,
+      "target_platform": 3,
+      "beyond_range_platform": 1
+    },
+    {
+      "id": "lunar_low_gravity_step",
+      "type": "low_gravity",
+      "room_id": "moon_surface_entry",
+      "source_platform": 1,
+      "target_platform": 2,
+      "direction": 1,
+      "runup_frames": 10,
+      "gravity_multiplier": 0.55
+    },
+    {
+      "id": "crater_platform_timing",
+      "type": "moving_platform",
+      "room_id": "moon_surface_crater",
+      "moving_platform": 0,
+      "maximum_leg_seconds": 2.75
+    },
+    {
+      "id": "spire_required_fall_recovery",
+      "type": "fall_recovery",
+      "room_id": "cyber_spire_recovery",
+      "fall_start": [335, 100],
+      "recovery_connection": "south",
+      "maximum_recovery_seconds": 2.0
+    }
+  ]
+}

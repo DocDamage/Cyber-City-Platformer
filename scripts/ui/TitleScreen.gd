@@ -1,11 +1,10 @@
 extends Control
 
 const CREDITS_SCENE := "res://scenes/ui/CreditsScreen.tscn"
-const STAGE_SELECT_SCENE := "res://scenes/ui/StageSelectScreen.tscn"
 
 var _save_manager: Node
 var _game_manager: Node
-var _new_game_dialog: ConfirmationDialog
+var _controls_label: Label
 
 
 func _ready() -> void:
@@ -53,30 +52,48 @@ func _build_menu() -> void:
 	title.add_theme_color_override("font_color", Color("27e8ff"))
 	menu.add_child(title)
 	var subtitle := Label.new()
-	subtitle.text = "NIGHT RUN PROTOCOL"
+	subtitle.text = "PHASEBOUND"
 	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	subtitle.modulate = Color("ff4fa3")
 	menu.add_child(subtitle)
 	menu.add_child(HSeparator.new())
-	var new_game := _menu_button(menu, "NEW GAME", _on_new_game_pressed)
-	var continue_button := _menu_button(menu, "CONTINUE", _on_continue_pressed)
-	continue_button.disabled = not _save_manager.call(&"has_valid_save")
-	var stage_select := _menu_button(menu, "STAGE SELECT", _open_stage_select)
-	stage_select.disabled = not _saved_campaign_is_complete()
+	var most_recent_slot := int(_save_manager.call(&"get_most_recent_slot"))
+	var continue_button := _menu_button(menu, "CONTINUE", _continue_latest)
+	continue_button.disabled = most_recent_slot < 0
+	var new_game := _menu_button(menu, "NEW GAME", func() -> void: _game_manager.call(&"open_save_slots", &"new_game"))
+	_menu_button(menu, "LOAD GAME", func() -> void: _game_manager.call(&"open_save_slots", &"load"))
 	_menu_button(menu, "SETTINGS", _open_settings)
 	_menu_button(menu, "CREDITS", func() -> void: _game_manager.call(&"change_level", CREDITS_SCENE))
 	_menu_button(menu, "QUIT", func() -> void: get_tree().quit())
-	var controls := Label.new()
-	controls.text = "MOVE: ARROWS / STICK   JUMP: SPACE / A\nMELEE: Z / A   SHOOT: X / X   DASH: C / B"
-	controls.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	controls.modulate = Color(0.66, 0.78, 0.95)
-	menu.add_child(controls)
-	new_game.grab_focus.call_deferred()
-	_new_game_dialog = ConfirmationDialog.new()
-	_new_game_dialog.title = "Overwrite Current Run?"
-	_new_game_dialog.dialog_text = "Starting a new game replaces the current campaign save."
-	_new_game_dialog.confirmed.connect(_begin_new_game)
-	add_child(_new_game_dialog)
+	_controls_label = Label.new()
+	_controls_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_controls_label.modulate = Color(0.66, 0.78, 0.95)
+	menu.add_child(_controls_label)
+	var settings := get_node_or_null("/root/SettingsManager")
+	if settings != null:
+		for signal_name: StringName in [&"input_device_changed", &"action_binding_changed"]:
+			var callback := Callable(self, &"_refresh_controls")
+			if settings.has_signal(signal_name) and not settings.is_connected(signal_name, callback):
+				settings.connect(signal_name, callback)
+	_refresh_controls()
+	(continue_button if not continue_button.disabled else new_game).grab_focus.call_deferred()
+
+
+func _refresh_controls(_unused: Variant = null) -> void:
+	if _controls_label == null:
+		return
+	var settings := get_node_or_null("/root/SettingsManager")
+	if settings == null:
+		_controls_label.text = "CONTROLS AVAILABLE IN SETTINGS"
+		return
+	var family := StringName(settings.call(&"get_active_input_family"))
+	var move := "LEFT STICK" if family == &"controller" else "%s / %s" % [_prompt(&"ui_left"), _prompt(&"ui_right")]
+	_controls_label.text = "MOVE: %s   JUMP: %s\nATTACK: %s   TECHNIQUE: %s   DASH: %s   PHASE: %s" % [move, _prompt(&"ui_accept"), _prompt(&"attack_melee"), _prompt(&"attack_shoot"), _prompt(&"slide_dash"), _prompt(&"teleport")]
+
+
+func _prompt(action: StringName) -> String:
+	var settings := get_node_or_null("/root/SettingsManager")
+	return String(settings.call(&"get_action_prompt", action)) if settings != null else "UNBOUND"
 
 
 func _menu_button(parent: Control, text: String, callback: Callable) -> Button:
@@ -93,31 +110,11 @@ func _menu_button(parent: Control, text: String, callback: Callable) -> Button:
 	return button
 
 
-func _on_new_game_pressed() -> void:
-	if _save_manager.call(&"has_valid_save"):
-		_new_game_dialog.popup_centered()
-	else:
-		_begin_new_game()
-
-
-func _begin_new_game() -> void:
-	_save_manager.call(&"reset_save")
-	_game_manager.call(&"start_new_game")
-
-
-func _on_continue_pressed() -> void:
-	_save_manager.call(&"load_game", true)
-
-
-func _open_stage_select() -> void:
-	if _save_manager.call(&"load_game", false):
-		_game_manager.call(&"change_level", STAGE_SELECT_SCENE)
-
-
-func _saved_campaign_is_complete() -> bool:
-	var summary: Dictionary = _save_manager.call(&"get_save_summary")
-	var progress: Dictionary = summary.get("campaign_progress", {})
-	return bool(progress.get("campaign_complete", false))
+func _continue_latest() -> void:
+	var slot := int(_save_manager.call(&"get_most_recent_slot"))
+	if slot > 0:
+		_save_manager.call(&"set_active_slot", slot)
+		_save_manager.call(&"load_game", true, slot)
 
 
 func _open_settings() -> void:

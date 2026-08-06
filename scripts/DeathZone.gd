@@ -2,6 +2,8 @@ extends Area2D
 
 
 func _ready() -> void:
+	add_to_group(&"kill_volume")
+	add_to_group(&"teleport_forbidden")
 	body_entered.connect(_on_body_entered)
 
 
